@@ -1,0 +1,37 @@
+[project]
+name = "cired-chatbot"
+version = "0.0.1"
+description = "Scripts and data for a chatbot with CIRED publications"
+authors = [
+  { name="Minh Ha-Duong", email="minh.ha-duong@cnrs.fr" },
+]
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "datasets",
+  "requests",
+]
+
+# development‑only dependencies
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.0.283,<1.0.0",
+  "pytest>=7.0,<8.0",
+]
+
+# Ruff configuration baked into pyproject.toml
+[tool.ruff]
+# which rules to enable/disable
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]                # e.g. ignore line‑length
+# match your code’s target Python versions
+target-version = ["py311", "py312"]
+# how Ruff should format
+line-length = 88
+show-source = true
+fix = true                      # allow `ruff --fix`
+
+# (Optionally) black config can go here too
+[tool.black]
+line-length = 88
+target-version = ["py311"]
