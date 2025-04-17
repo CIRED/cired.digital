@@ -13,28 +13,28 @@ L'outil vise à :
 - Dimensionner et connaître les coûts financiers et environnementaux d'un tel chatbot.
 - Analyser les pratiques de médiation scientifique via l'étude des interactions utilisateurs.
 
-Fonctionnalités
+Fonctionnalités :
 
 -    Interface conversationnelle : Posez des questions en français ou en anglais sur les publications (auteurs, méthodologies, résultats, etc.).
 -    Connexion à HAL : Interrogation dynamique de la collection HAL du CIRED.
 -    Open source : Code modulable pour s'adapter à d'autres collections ou disciplines.
 -    Hébergement durable : Déployé sur l'infrastructure de recherche d'une tutelle du CIRED.
 
-Stack technique
+Stack technique :
 
--    IA générative : Modèles de langage (LLM) open source ou API spécialisées (ex: OpenAI, Hugging Face).
--    Backend : Python/FastAPI ou Node.js pour la logique de recherche.
+-    IA générative : API vers des modèles de langage (LLM) open source ou commerciaux (ex: Mistral, OpenAI, Hugging Face).
+-    Backend RAG full-stack: Pour l'ingestion, la recherche, la réponse (ex. R2R, llamaindex, langchain, haystack...)
 -    Frontend : Framework web léger (Streamlit, Gradio, ou React).
--    Hébergement : Serveurs institutionnels ou solution cloud (Docker possible).
+-    Hébergement : Déploiement docker sur un VPS institutionnel ou commercial.
 
-Déploiement Un prototype sera testé en lignepour évaluer :
+Le prototype sera déployé en ligne auprès d'une audience progressivement élargie pour une durée de quelque mois, afin d'évaluer:
 
 -    L'expérience utilisateur
 -    La pertinence des réponses
 -    L'impact sur la diffusion scientifique
 
 
-## Organization du code
+## Organisation du code
 
 This project's goal is to implement a chatbot with CIRED publications.
 
