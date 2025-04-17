@@ -1,15 +1,16 @@
 # Chatbot IA pour les publications HAL du CIRED
 
-Un outil open source pour interroger les publications scientifiques de manière conversationnelle.
+Un outil open source pour examiner les couts et les bénéfices de pouvoir interroger les publications scientifiques d'un laboratoire de manière conversationnelle.
 
 ## Description
 
-Ce projet expérimental développe un chatbot interactif basé sur l'intelligence artificielle, permettant aux utilisateurs d'explorer les publications scientifiques du CIRED stockées dans la collection HAL via des requêtes en langage naturel.
+Nous développons ici un chatbot interactif permettant aux utilisateurs d'explorer les publications scientifiques du CIRED stockées dans la collection HAL via des requêtes en langage naturel.
 
 L'outil vise à :
 
 - Valoriser les travaux du laboratoire grâce à un accès intuitif et conversationnel.
 - Contribuer à la science ouverte en fournissant un code réutilisable pour d'autres collections HAL.
+- Dimensionner et connaître les coûts financiers et environnementaux d'un tel chatbot.
 - Analyser les pratiques de médiation scientifique via l'étude des interactions utilisateurs.
 
 Fonctionnalités
