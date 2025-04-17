@@ -39,7 +39,7 @@ env/
 
 # Data files
 data/pdfs/
-data/CIRED_numerisation_RAW/
+data/RAW_CIRED_numerisation/
 *.json
 *.csv
 *.xls
