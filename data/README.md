@@ -1,15 +1,29 @@
-# code/data directory organization
+# cired.digital/code/data directory organization
 
 Raw and processed data.
-Organization will be updated as we develop the processing.
-Not versionned in the git.
+Contents not versionned in the git.
 
-## CIRED_numerisation_RAW
+## raw
 
- Contains a read-only copy of pre-1998 publications, scanned OCRed. Remains to be processed.
+For the downloaded files
 
-## pdfs
- contents downloaded from HAL.
+**hal** contains contents automatically downloaded from HAL, along with metadata.
+
+**inari_data_CIRED_numerisation_zotero_www** contains a read-only copy of pre-1998 publications, scanned OCRed. Remains to be processed.
+
+**inari_recueil_50ans_CIRED** will contain the selected most representative articles.
+
+## processed
+
+Nothing at the moment. To start the project, focus on using the HAL collection to setup the proof of concept. We can always push the manually downloaded archives later.
+
+Ideally the manually downloaded archives should not exist. They should be sent into HAL.
+
+Nothing at the moment. But there will be a need to smart deduplicate, the files are properly named and organized.
+
+We should look if ENPC did anything to the data that is not on inari. Since zotero is mentionned there may be metadata indexing somewhere.
+
+---
 
 ## Note:
 

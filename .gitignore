@@ -38,8 +38,8 @@ env/
 .settings/
 
 # Data files
-data/pdfs/
-data/RAW_CIRED_numerisation/
+data/raw/*
+!data/raw/.gitkeep
 *.json
 *.csv
 *.xls
