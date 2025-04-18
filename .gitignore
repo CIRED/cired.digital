@@ -49,7 +49,7 @@ data/RAW_CIRED_numerisation/
 
 # Generated reports
 reports/*
-!reports/.gitkeep
+!reports/README.md
 
 # Jupyter Notebook
 .ipynb_checkpoints

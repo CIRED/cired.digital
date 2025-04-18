@@ -41,7 +41,7 @@ This project's goal is to implement a chatbot with CIRED publications.
 ### data/
 Raw and processed data.
 Organization will be updated as we develop the processing.
-Not versionned in the git.
+Data contents is not versionned in the git, only the directory structure and the README.md.
 
 **CIRED_numerisation_RAW** contains a read-only copy of pre-1998 publications, scanned OCRed. Remains to be processed.
 
@@ -54,7 +54,7 @@ Versionned.
 
 ### reports/
 Generated output.
-Not versionned.
+Contents is not versionned in the git, only the directory and the README.md.
 
 ### src/cired_chatbot/
 Our module. Python >= 3.11. Passes ```ruff checks``` with no errors or warnings.
@@ -72,5 +72,5 @@ unit & integration tests
 
 ### venv/
 The virtual environment.
-Not versionned.
+Not versionned: should not appear in the GitHub.
 Created by ```uv```.
