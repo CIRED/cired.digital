@@ -50,9 +50,11 @@ Not versionned in the git.
 ### docs/
 Human‑readable docs, diagrams, README extensions.
 Preferably markdown.
+Versionned.
 
 ### reports/
 Generated output.
+Not versionned.
 
 ### src/cired_chatbot/
 Our module. Python >= 3.11. Passes ```ruff checks``` with no errors or warnings.
@@ -67,3 +69,8 @@ We will use env‑vars (e.g. R2R_BASE_URL, R2R_API_KEY) to configure the client 
 
 ### tests/
 unit & integration tests
+
+## venv/
+The virtual environment.
+Not versionned.
+Created by ```uv```.
