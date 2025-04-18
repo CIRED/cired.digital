@@ -70,7 +70,7 @@ We will use env‑vars (e.g. R2R_BASE_URL, R2R_API_KEY) to configure the client 
 ### tests/
 unit & integration tests
 
-## venv/
+### venv/
 The virtual environment.
 Not versionned.
 Created by ```uv```.
