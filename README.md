@@ -39,16 +39,11 @@ Le prototype sera déployé en ligne auprès d'une audience progressivement éla
 This project's goal is to implement a chatbot with CIRED publications.
 
 ### data/
-Raw and processed data.
-Organization will be updated as we develop the processing.
+Raw (and someday processed) data.
 Data contents is not versionned in the git, only the directory structure and the README.md.
 
-**CIRED_numerisation_RAW** contains a read-only copy of pre-1998 publications, scanned OCRed. Remains to be processed.
-
-**pdfs** contents downloaded from HAL.
-
 ### docs/
-Human‑readable docs, diagrams, README extensions.
+Human‑readable technical documentations, diagrams, README extensions.
 Preferably markdown.
 Versionned.
 
