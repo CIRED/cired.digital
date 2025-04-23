@@ -1,3 +1,10 @@
+"""
+Download PDFs listed in a JSON file and store them in the local data directory.
+
+This script reads a publications JSON file, downloads missing PDFs, and skips already-downloaded files.
+It handles retries, temporary files, and logs a summary at the end.
+"""
+
 import hashlib
 import json
 import logging
@@ -19,29 +26,36 @@ TIMEOUT = 60  # seconds
 
 # Logging setup
 logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
 PDF_DIR.mkdir(parents=True, exist_ok=True)
 
+
 def sanitize_filename(text):
-    return "".join(c if c.isalnum() or c in (' ', '.', '_') else '_' for c in text).strip()
+    """Sanitize text to create a safe filename by removing or replacing unsafe characters."""
+    return "".join(
+        c if c.isalnum() or c in (" ", ".", "_") else "_" for c in text
+    ).strip()
+
 
 def get_pdf_filename(entry):
+    """Generate a safe filename for a publication entry, using HAL ID or URL hash."""
     if "halId_s" in entry:
         return PDF_DIR / f"{sanitize_filename(entry['halId_s'])}.pdf"
     else:
         hashname = hashlib.md5(entry["pdf_url"].encode()).hexdigest()
         return PDF_DIR / f"{hashname}.pdf"
 
+
 def download_pdf(url, target_path):
+    """Download a PDF from a URL to a temporary file, then rename to final path if successful."""
     temp_path = target_path.with_suffix(".tmp")
 
     try:
         with requests.get(url, stream=True, timeout=TIMEOUT) as r:
             r.raise_for_status()
-            with open(temp_path, 'wb') as f:
+            with open(temp_path, "wb") as f:
                 for chunk in r.iter_content(chunk_size=8192):
                     f.write(chunk)
         temp_path.rename(target_path)
@@ -53,12 +67,14 @@ def download_pdf(url, target_path):
             temp_path.unlink()
         return False
 
+
 def main():
+    """Main routine to load publications and download missing PDFs to the local pdfs/ directory."""
     if not os.path.exists(PUBLICATIONS_FILE):
         logging.error(f"Missing input file: {PUBLICATIONS_FILE}")
         return
 
-    with open(PUBLICATIONS_FILE, encoding='utf-8') as f:
+    with open(PUBLICATIONS_FILE, encoding="utf-8") as f:
         publications = json.load(f)
 
     total = 0
@@ -93,6 +109,6 @@ def main():
     logging.info(f"  Skipped: {skipped}")
     logging.info(f"  Failed: {failed}")
 
+
 if __name__ == "__main__":
     main()
-

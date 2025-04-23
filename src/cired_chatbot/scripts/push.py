@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-"""
-Safe PDF upload script with verification and test mode.
-"""
+"""Safe PDF upload script with verification and test mode."""
 
 import argparse
 import logging
@@ -12,18 +10,34 @@ from r2r import R2RClient
 from tqdm import tqdm
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s')
+logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
 
 
 def get_args() -> argparse.Namespace:
     """Parse command line arguments."""
-    parser = argparse.ArgumentParser(description='Safely load PDF files into R2R using official SDK.')
-    parser.add_argument('--dir', type=Path, required=True, help='Directory containing PDF files.')
-    parser.add_argument('--base-url', type=str, default="http://localhost:7272", help='R2R API URL.')
-    parser.add_argument('--collection', type=str, help='Collection name for uploaded documents.')
-    parser.add_argument('--recursive', action='store_true', help='Recursively search PDFs in subdirectories.')
-    parser.add_argument('--test', action='store_true', help='Test mode: Only upload the first PDF file found.')
+    parser = argparse.ArgumentParser(
+        description="Safely load PDF files into R2R using official SDK."
+    )
+    parser.add_argument(
+        "--dir", type=Path, required=True, help="Directory containing PDF files."
+    )
+    parser.add_argument(
+        "--base-url", type=str, default="http://localhost:7272", help="R2R API URL."
+    )
+    parser.add_argument(
+        "--collection", type=str, help="Collection name for uploaded documents."
+    )
+    parser.add_argument(
+        "--recursive",
+        action="store_true",
+        help="Recursively search PDFs in subdirectories.",
+    )
+    parser.add_argument(
+        "--test",
+        action="store_true",
+        help="Test mode: Only upload the first PDF file found.",
+    )
     return parser.parse_args()
 
 
@@ -46,7 +60,12 @@ def get_existing_titles(client: R2RClient) -> set:
         return set()
 
 
-def upload_pdfs(pdf_files: List[Path], client: R2RClient, existing_titles: set, collection: str = None) -> Tuple[int, int, List[Tuple[Path, str]]]:
+def upload_pdfs(
+    pdf_files: List[Path],
+    client: R2RClient,
+    existing_titles: set,
+    collection: str = None,
+) -> Tuple[int, int, List[Tuple[Path, str]]]:
     """Upload new PDFs and skip existing ones."""
     success_count = 0
     skipped_count = 0
@@ -71,6 +90,7 @@ def upload_pdfs(pdf_files: List[Path], client: R2RClient, existing_titles: set, 
 
 
 def main():
+    """Parse arguments and upload PDF files to the R2R API, with optional test mode."""
     args = get_args()
 
     try:
@@ -96,7 +116,9 @@ def main():
         pdf_files, client, existing_titles, args.collection
     )
 
-    logger.info(f"\nUpload summary: {success_count} successful, {skipped_count} skipped, {len(failed_files)} failed")
+    logger.info(
+        f"\nUpload summary: {success_count} successful, {skipped_count} skipped, {len(failed_files)} failed"
+    )
     if failed_files:
         logger.error("\nFailed files:")
         for file, error in failed_files:
@@ -105,4 +127,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

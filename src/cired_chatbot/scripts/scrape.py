@@ -1,5 +1,5 @@
 """
-scrape.py
+scrape.py.
 
 Query the HAL API to obtain the list of CIRED records
 Process the list to separate irrelevant ones related to the homonymous CIRED conference
@@ -41,6 +41,7 @@ QUERY = "CIRED"
 BATCH_SIZE = 100
 MAX_BATCHES = 50
 
+
 def process_publications(publications: List[Dict]) -> None:
     """Process the publication records and save them into separate JSON files."""
     related_publications = []
@@ -71,9 +72,13 @@ def process_publications(publications: List[Dict]) -> None:
     with open(OTHER_FILENAME, "w", encoding="utf-8") as file:
         json.dump(unrelated_cired_communications, file, ensure_ascii=False, indent=4)
 
-    logging.info(f"Found {len(related_publications)} CIRED lab publications saved to %s", OUT_FILENAME)
     logging.info(
-        f"Found {len(unrelated_cired_communications)} unrelated CIRED conference communications saved to %s", OTHER_FILENAME
+        f"Found {len(related_publications)} CIRED lab publications saved to %s",
+        OUT_FILENAME,
+    )
+    logging.info(
+        f"Found {len(unrelated_cired_communications)} unrelated CIRED conference communications saved to %s",
+        OTHER_FILENAME,
     )
 
 
@@ -90,8 +95,12 @@ def get_paginated_publications(base_params: Dict) -> List[Dict]:
         params["start"] = current_batch * BATCH_SIZE
 
         try:
-            logging.debug(f"Fetching batch {current_batch + 1}/{MAX_BATCHES} (records {params['start']}-{params['start'] + BATCH_SIZE - 1})")
-            logging.debug(f"Request URL: {HAL_API_URL}?{requests.compat.urlencode(params)}")
+            logging.debug(
+                f"Fetching batch {current_batch + 1}/{MAX_BATCHES} (records {params['start']}-{params['start'] + BATCH_SIZE - 1})"
+            )
+            logging.debug(
+                f"Request URL: {HAL_API_URL}?{requests.compat.urlencode(params)}"
+            )
             response = requests.get(HAL_API_URL, params=params, timeout=60)
             response.raise_for_status()
 
@@ -103,7 +112,9 @@ def get_paginated_publications(base_params: Dict) -> List[Dict]:
                 break
 
             all_publications.extend(batch_publications)
-            logging.info(f"Retrieved {len(batch_publications)} records in this batch. Total so far: {len(all_publications)}")
+            logging.info(
+                f"Retrieved {len(batch_publications)} records in this batch. Total so far: {len(all_publications)}"
+            )
 
             # Check if we've reached the end of available records
             if len(batch_publications) < BATCH_SIZE:
@@ -125,7 +136,9 @@ def get_paginated_publications(base_params: Dict) -> List[Dict]:
 
         current_batch += 1
 
-    logging.info(f"Pagination complete. Retrieved a total of {len(all_publications)} records.")
+    logging.info(
+        f"Pagination complete. Retrieved a total of {len(all_publications)} records."
+    )
     return all_publications
 
 
@@ -138,7 +151,7 @@ docid,halId_s,doiId_s,label_s,producedDate_tdate,authFullName_s,title_s,abstract
         "q": QUERY,
         # No time restriction
         "fl": fields.strip(),
-        "wt": "json"
+        "wt": "json",
     }
 
     publications = get_paginated_publications(params)
