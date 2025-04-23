@@ -25,7 +25,7 @@ dev = [
 select = ["E", "F", "W", "I"]
 ignore = ["E501"]                # e.g. ignore line‑length
 # match your code’s target Python versions
-target-version = ["py311", "py312"]
+target-version = "py311"
 # how Ruff should format
 line-length = 88
 show-source = true

@@ -11,12 +11,12 @@ minh.ha-duong@cnrs.fr, 2024 CC-BY-SA
 Modified version
 """
 
-import json
 import html
+import json
 import logging
-import time
 import os
-from typing import List, Dict
+import time
+from typing import Dict, List
 
 import requests
 
@@ -50,11 +50,11 @@ def process_publications(publications: List[Dict]) -> None:
         pub["label_s"] = html.unescape(pub["label_s"])
         if "producedDate_tdate" in pub:
             pub["producedDate_tdate"] = pub["producedDate_tdate"].split("T")[0]
-        
+
         # Add PDF URL if available
         if "fileMain_s" in pub:
             pub["pdf_url"] = pub["fileMain_s"]
-        
+
         lab_acronym_present = (
             "labStructAcronym_s" in pub and "CIRED" in pub["labStructAcronym_s"]
         )
@@ -81,38 +81,38 @@ def get_paginated_publications(base_params: Dict) -> List[Dict]:
     """Retrieve publication records with pagination from the HAL API."""
     all_publications = []
     current_batch = 0
-    
+
     # Set up pagination parameters
     params = base_params.copy()
     params["rows"] = BATCH_SIZE
-    
+
     while current_batch < MAX_BATCHES:
         params["start"] = current_batch * BATCH_SIZE
-        
+
         try:
             logging.debug(f"Fetching batch {current_batch + 1}/{MAX_BATCHES} (records {params['start']}-{params['start'] + BATCH_SIZE - 1})")
             logging.debug(f"Request URL: {HAL_API_URL}?{requests.compat.urlencode(params)}")
             response = requests.get(HAL_API_URL, params=params, timeout=60)
             response.raise_for_status()
-            
+
             response_data = response.json()
             batch_publications = response_data["response"]["docs"]
-            
+
             if not batch_publications:
                 logging.info("No more records found. Stopping pagination.")
                 break
-                
+
             all_publications.extend(batch_publications)
             logging.info(f"Retrieved {len(batch_publications)} records in this batch. Total so far: {len(all_publications)}")
-            
+
             # Check if we've reached the end of available records
             if len(batch_publications) < BATCH_SIZE:
                 logging.info("Reached end of available records.")
                 break
-                
+
             # Add a small delay to avoid overloading the API
             time.sleep(1)
-            
+
         except requests.exceptions.Timeout:
             logging.error("La requête HAL a timed out. Essayez plus tard svp.")
             break
@@ -122,9 +122,9 @@ def get_paginated_publications(base_params: Dict) -> List[Dict]:
         except requests.exceptions.RequestException as e:
             logging.error("Une exception s'est produite en scrapant HAL: %s", str(e))
             break
-            
+
         current_batch += 1
-    
+
     logging.info(f"Pagination complete. Retrieved a total of {len(all_publications)} records.")
     return all_publications
 
