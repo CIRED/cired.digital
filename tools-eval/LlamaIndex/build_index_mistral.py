@@ -34,7 +34,7 @@ index_dir = Path("./index")
 pdf_dir = Path("./pdfs")
 
 # Load existing index if present
-if (index_dir / "index.json").exists():
+if (index_dir / "index_store.json").exists():
     print("🧠 Loading existing index...")
     storage_context = StorageContext.from_defaults(persist_dir=str(index_dir))
     index = load_index_from_storage(storage_context)
