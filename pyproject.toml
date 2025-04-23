@@ -1,3 +1,19 @@
+# pyproject.toml — Project configuration for cired.digital project
+# Maintainer: Minh Ha-Duong <minh.ha-duong@cnrs.fr>
+#
+# Python 3.11+, using:
+# - Ruff for linting, formatting, and complexity checks
+#   See: https://docs.astral.sh/ruff/
+# - Pytest for testing
+#
+# This file defines project metadata, dependencies, and tool configurations.
+# It is the single source of truth for development standards.
+#
+# Best practices:
+# - Keep all tool configs here for consistency (e.g. Ruff, Pytest)
+# - Run `ruff check .` regularly, or set up a pre-commit hook
+# - Format code with `ruff format` (no need for Black)
+
 [project]
 name = "cired-chatbot"
 version = "0.0.1"
@@ -19,19 +35,13 @@ dev = [
   "pytest>=7.0,<8.0",
 ]
 
-# Ruff configuration baked into pyproject.toml
 [tool.ruff]
-# which rules to enable/disable
-select = ["E", "F", "W", "I"]
-ignore = ["E501"]                # e.g. ignore line‑length
-# match your code’s target Python versions
+select = ["E", "F", "W", "I", "C90", "D"]
+ignore = ["E501", "D203", "D212"]                # e.g. ignore line‑length
 target-version = "py311"
-# how Ruff should format
 line-length = 88
 show-source = true
 fix = true                      # allow `ruff --fix`
 
-# (Optionally) black config can go here too
-[tool.black]
-line-length = 88
-target-version = ["py311"]
+[tool.ruff.mccabe]
+max-complexity = 10
