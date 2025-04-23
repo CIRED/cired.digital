@@ -8,8 +8,8 @@ import logging
 from pathlib import Path
 from typing import List, Tuple
 
-from tqdm import tqdm
 from r2r import R2RClient
+from tqdm import tqdm
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s')
