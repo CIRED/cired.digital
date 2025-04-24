@@ -19,6 +19,67 @@ Write clear, maintainable Python code that reads like prose. Prioritize readabil
 
 ---
 
+### 📝 Type Annotations
+
+Type hint everything that crosses a function boundary. Since we're using Python >=3.11, use native type annotations:
+
+```python
+# ✅ DO:
+def process_data(items: list[str]) -> dict[str, int]:
+    ...
+
+# ❌ DON'T:
+from typing import List, Dict
+def process_data(items: List[str]) -> Dict[str, int]:
+    ...
+```
+
+#### Union Types
+Use the pipe (`|`) operator for union types:
+
+```python
+# ✅ DO:
+def get_value() -> int | float | None:
+    ...
+
+# ❌ DON'T:
+from typing import Union, Optional
+def get_value() -> Union[int, Union[float, None]]:
+    ...
+```
+
+#### Optional Values
+Use `| None` instead of `Optional`:
+
+```python
+# ✅ DO:
+def find_user(user_id: str) -> User | None:
+    ...
+
+# ❌ DON'T:
+from typing import Optional
+def find_user(user_id: str) -> Optional[User]:
+    ...
+```
+
+#### Type Aliases and TypedDict
+Import special types that are not built-in:
+
+```python
+from typing import TypedDict, Callable, TypeVar
+
+T = TypeVar('T')
+
+class UserData(TypedDict):
+    name: str
+    age: int
+
+def transform(func: Callable[[T], T], value: T) -> T:
+    ...
+```
+
+---
+
 ### 🧪 Testing
 
 - Write **unit tests** using `pytest`. Place them in a `tests/` directory.
@@ -36,16 +97,23 @@ Write clear, maintainable Python code that reads like prose. Prioritize readabil
 - Use this format:
 
 ```python
-  def foo(bar: int) -> str:
-      """Return a greeting using the input number.
+def foo(bar: int) -> str:
+    """Return a greeting using the input number.
 
-      Args:
-          bar: The number to greet with.
+    Args:
+        bar: The number to greet with.
 
-      Returns:
-          A greeting string.
-      """
+    Returns:
+        A greeting string.
+        
+    Raises:
+        ValueError: If input is negative
+    """
+    if bar < 0:
+        raise ValueError("Input must be non-negative")
+    return f"Hello, number {bar}!"
 ```
+
 - Multiline docstrings: one-line summary, then a blank line.
 - Class docstrings go directly under the definition (Ruff enforces `D211`).
 
@@ -53,12 +121,15 @@ Write clear, maintainable Python code that reads like prose. Prioritize readabil
 
 ### ⚙️ Tooling
 
-| Tool     | Command                      | Purpose                         |
-|----------|------------------------------|---------------------------------|
-| Ruff     | `ruff check .`               | Lint for errors & style issues  |
-| Ruff     | `ruff format .`              | Format code                     |
-| Pytest   | `pytest`                     | Run all tests                   |
-| Pre-commit (opt.) | `pre-commit run --all-files` | Auto-check before commit   |
+Ruff handles both linting and formatting for this project. It’s configured in `cired.digital/code/pyproject.toml`.
+
+| Tool        | Command                      | Purpose                         |
+|-------------|------------------------------|---------------------------------|
+| Ruff        | `ruff check .`               | Lint and fix errors & style  |
+| Ruff        | `ruff format .`              | Format code  (in lieu of `black`)                    |
+| Pytest      | `pytest`                     | Run all tests                   |
+| Mypy        | `mypy --strict .`            | Type checking                   |
+| Pre-commit  | `pre-commit run --all-files` | Auto-check before commit        |
 
 ---
 
@@ -71,7 +142,40 @@ Write clear, maintainable Python code that reads like prose. Prioritize readabil
 - Use type hints consistently.
 - Raise specific exceptions, not generic ones.
 
+Naming follows the conventions defined in [PEP 8 – Style Guide for Python Code](https://peps.python.org/pep-0008/#naming-conventions).  Choose English, meaningful, descriptive names that reflect the purpose of the item. No abbreviations.
+
+- snake_case for functions and variables
+- PascalCase for classes
+- UPPER_CASE for constants.
+- Modules and packages: short_snake_case
+- Private/internal names: Prefix with a single underscore (_)
+
 ---
 
-> Maintainer: Minh Ha-Duong (<minh.ha-duong@cnrs.fr>)
+### 🔄 Version Control
+
+#### Commit Messages
+- Use clear, descriptive commit messages
+- Start with a verb in the present tense (e.g., "Add user authentication", "Fix login bug")
+- Keep the first line under 50 characters if possible
+- For complex changes, add details after a blank line
+
+#### Branch Naming
+- Use descriptive branch names with hyphens (e.g., `feature-chatbot-api`, `fix-memory-leak`)
+- Include issue numbers when applicable (e.g., `issue-42-login-timeout`)
+
+#### Pull Requests
+- Include a clear description of changes
+- Reference related issues using keywords (e.g., "Fixes #123")
+- Ensure all CI checks pass before merging
+- Request review from appropriate team members
+
+---
+
+### Placeholder
+#### async
+#### CI/CD
+---
+
+> Maintainer: Minh Ha-Duong (<minh.ha-duong@cnrs.fr>)  
 > Last updated: April 2025
