@@ -31,6 +31,7 @@ Write clear, maintainable Python code that reads like prose. Prioritize readabil
 
 ### 📚 Docstrings
 
+- In English
 - All **public functions**, **classes**, and **modules** should have docstrings.
 - Use this format:
 
