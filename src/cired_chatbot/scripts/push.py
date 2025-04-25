@@ -108,6 +108,8 @@ def get_existing_documents(client: R2RClient) -> dict[str, str]:
                 break
             for doc in docs:
                 documents[doc.title] = getattr(doc, "ingestion_status", "unknown")
+            if len(docs) < limit:
+                break
             offset += limit
     except Exception as e:
         logger.error(f"Error fetching document list: {e}")
@@ -118,7 +120,7 @@ def get_existing_documents(client: R2RClient) -> dict[str, str]:
 def upload_pdfs(
     pdf_files: list[Path],
     client: R2RClient,
-    existing_documents: dict,
+    existing_documents: dict[str, str],
     collection: str = None,
     max_upload: int = 0,
 ) -> tuple[int, int, list[tuple[Path, str]]]:
@@ -136,23 +138,24 @@ def upload_pdfs(
             logger.debug(f"Processing file: {pdf_file}")
             ingestion_status = existing_documents.get(pdf_file.name)
 
-            if ingestion_status in ("success", "parsing", "embedding", "augmenting"):
+            if ingestion_status not in (None, "failed"):
                 logger.debug(
                     f"Skipping file with ingestion_status='{ingestion_status}': {pdf_file}"
                 )
                 skipped_count += 1
-            else:
-                if ingestion_status is not None:
-                    logger.warning(
-                        f"Re-uploading file with previous ingestion status '{ingestion_status}': {pdf_file}"
-                    )
-                else:
-                    logger.debug(f"Uploading new file: {pdf_file}")
+                continue
 
-                kwargs = {"collection_name": collection} if collection else {}
-                client.documents.create(file_path=str(pdf_file), **kwargs)
-                logger.info(f"Successfully uploaded file: {pdf_file}")
-                success_count += 1
+            if ingestion_status == "failed":
+                logger.warning(
+                    f"Re-uploading file with previous ingestion_status='failed': {pdf_file}"
+                )
+            else:
+                logger.debug(f"Uploading new file: {pdf_file}")
+
+            kwargs = {"collection_name": collection} if collection else {}
+            client.documents.create(file_path=str(pdf_file), **kwargs)
+            logger.info(f"Successfully uploaded file: {pdf_file}")
+            success_count += 1
 
         except Exception as e:
             logger.error(f"Failed to process file {pdf_file}: {str(e)}")
@@ -181,12 +184,12 @@ def main():
     )
     pdf_files = prepare_pdf_files(args)
     if not pdf_files:
-        sys.exit(1)
+        return 1
 
     pdf_files = exclude_oversized_pdfs(pdf_files)
     if not pdf_files:
         logger.error("No valid PDF files to upload after filtering oversized files.")
-        sys.exit(1)
+        return 1
 
     client = R2RClient(base_url=args.base_url)
 
@@ -212,10 +215,10 @@ def main():
         logger.error("\nFailed files:")
         for file, error in failed_files:
             logger.error(f"- {file}: {error}")
-        sys.exit(2)
+        return 2
 
-    sys.exit(0)
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
