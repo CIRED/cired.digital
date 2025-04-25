@@ -8,7 +8,6 @@ from os import sync
 from pathlib import Path
 
 from r2r import R2RClient
-from tqdm import tqdm
 
 logger = logging.getLogger(__name__)
 
@@ -19,10 +18,11 @@ MAX_FILE_SIZE = 30000000
 def get_args() -> argparse.Namespace:
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(
-        description="Push PDF files into R2R using the official SDK."
+        description="Push PDF files into R2R using the official SDK.",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument(
-        "--dir", type=Path, required=True, help="Directory containing PDF files."
+        "--dir", type=Path, required=True, help="Directory containing PDF files. (required)"
     )
     parser.add_argument(
         "--recursive",
@@ -39,7 +39,7 @@ def get_args() -> argparse.Namespace:
         "--max-upload",
         type=int,
         default=DEFAULT_MAX_UPLOAD,
-        help=f"Maximum number of PDFs to upload (0 = no limit). Default is {DEFAULT_MAX_UPLOAD}.",
+        help="Maximum number of PDFs to upload (0 = no upload).",
     )
     parser.add_argument(
         "--verbose",
@@ -125,39 +125,36 @@ def upload_pdfs(
     skipped_count = 0
     failed_files = []
 
-    with tqdm(total=len(pdf_files), desc="Uploading PDFs") as pbar:
-        for pdf_file in pdf_files:
-            if max_upload > 0 and success_count >= max_upload:
-                logger.info(f"Reached maximum upload limit: {max_upload} files.")
-                break
+    for pdf_file in pdf_files:
+        if success_count >= max_upload:
+            logger.info(f"Reached maximum upload limit: {max_upload} files.")
+            break
 
-            try:
-                logger.debug(f"Processing file: {pdf_file}")
-                ingestion_status = existing_documents.get(pdf_file.name)
+        try:
+            logger.debug(f"Processing file: {pdf_file}")
+            ingestion_status = existing_documents.get(pdf_file.name)
 
-                if ingestion_status in ("success", "augmenting", "parsing"):
-                    logger.debug(
-                        f"Skipping file with ingestion_status='{ingestion_status}': {pdf_file}"
+            if ingestion_status in ("success", "augmenting", "parsing"):
+                logger.debug(
+                    f"Skipping file with ingestion_status='{ingestion_status}': {pdf_file}"
+                )
+                skipped_count += 1
+            else:
+                if ingestion_status is not None:
+                    logger.warning(
+                        f"Re-uploading file with previous ingestion status '{ingestion_status}': {pdf_file}"
                     )
-                    skipped_count += 1
                 else:
-                    if ingestion_status is not None:
-                        logger.warning(
-                            f"Re-uploading file with previous ingestion status '{ingestion_status}': {pdf_file}"
-                        )
-                    else:
-                        logger.debug(f"Uploading new file: {pdf_file}")
+                    logger.debug(f"Uploading new file: {pdf_file}")
 
-                    kwargs = {"collection_name": collection} if collection else {}
-                    client.documents.create(file_path=str(pdf_file), **kwargs)
-                    logger.info(f"Successfully uploaded file: {pdf_file}")
-                    success_count += 1
+                kwargs = {"collection_name": collection} if collection else {}
+                client.documents.create(file_path=str(pdf_file), **kwargs)
+                logger.info(f"Successfully uploaded file: {pdf_file}")
+                success_count += 1
 
-            except Exception as e:
-                logger.error(f"Failed to process file {pdf_file}: {str(e)}")
-                failed_files.append((pdf_file, str(e)))
-            finally:
-                pbar.update(1)
+        except Exception as e:
+            logger.error(f"Failed to process file {pdf_file}: {str(e)}")
+            failed_files.append((pdf_file, str(e)))
 
     return success_count, skipped_count, failed_files
 
