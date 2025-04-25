@@ -3,7 +3,12 @@ import os
 import sys
 from pathlib import Path
 from tqdm import tqdm
-from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, StorageContext, load_index_from_storage
+from llama_index.core import (
+    VectorStoreIndex,
+    SimpleDirectoryReader,
+    StorageContext,
+    load_index_from_storage,
+)
 from llama_index.core.settings import Settings
 from llama_index.llms.mistralai import MistralAI
 from llama_index.embeddings.mistralai import MistralAIEmbedding
@@ -11,19 +16,21 @@ from llama_index.embeddings.mistralai import MistralAIEmbedding
 # Set up Mistral as the LLM
 mistral_api_key = os.environ.get("MISTRAL_API_KEY")
 if not mistral_api_key:
-    print("⚠️  MISTRAL_API_KEY environment variable not set. Please set it and try again.")
+    print(
+        "⚠️  MISTRAL_API_KEY environment variable not set. Please set it and try again."
+    )
     sys.exit(1)
 
 # Initialize Mistral LLM
 llm = MistralAI(
     api_key=mistral_api_key,
-    model="mistral-large-latest"  # or another Mistral model of your choice
+    model="mistral-large-latest",  # or another Mistral model of your choice
 )
 
 # Initialize Mistral Embeddings
 embed_model = MistralAIEmbedding(
     api_key=mistral_api_key,
-    model_name="mistral-embed"  # Mistral's embedding model
+    model_name="mistral-embed",  # Mistral's embedding model
 )
 
 # Configure global settings

@@ -3,7 +3,12 @@ import os
 import sys
 from pathlib import Path
 from tqdm import tqdm
-from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, StorageContext, load_index_from_storage
+from llama_index.core import (
+    VectorStoreIndex,
+    SimpleDirectoryReader,
+    StorageContext,
+    load_index_from_storage,
+)
 
 index_dir = Path("./index")
 pdf_dir = Path("./pdfs")
@@ -30,4 +35,3 @@ else:
 
 print("✅ Index ready. Launching chat...")
 index.as_query_engine().chat()
-
