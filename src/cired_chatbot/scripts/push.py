@@ -41,7 +41,7 @@ def get_args() -> argparse.Namespace:
         "--max-upload",
         type=int,
         default=DEFAULT_MAX_UPLOAD,
-        help="Maximum number of PDFs to upload (0 = no upload).",
+        help="Maximum number of PDFs to upload (0 = dry run no upload).",
     )
     parser.add_argument(
         "--verbose",
@@ -209,10 +209,10 @@ def main():
     )
 
     logger.info(
-        f"\nUpload summary: {success_count} successful, {skipped_count} skipped, {len(failed_files)} failed."
+        f"Upload summary: {success_count} successful, {skipped_count} skipped, {len(failed_files)} failed."
     )
     if failed_files:
-        logger.error("\nFailed files:")
+        logger.error("Failed files:")
         for file, error in failed_files:
             logger.error(f"- {file}: {error}")
         return 2
