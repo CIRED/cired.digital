@@ -1,7 +1,10 @@
 """Upload PDFs into an R2R instance."""
 
+import sys
 import argparse
 import logging
+from collections import Counter
+from os import sync
 from pathlib import Path
 
 from r2r import R2RClient
@@ -11,6 +14,7 @@ logger = logging.getLogger(__name__)
 
 DEFAULT_MAX_UPLOAD = 5
 MAX_FILE_SIZE = 30000000
+
 
 def get_args() -> argparse.Namespace:
     """Parse command line arguments."""
@@ -35,7 +39,7 @@ def get_args() -> argparse.Namespace:
         "--max-upload",
         type=int,
         default=DEFAULT_MAX_UPLOAD,
-        help=f"Maximum number of PDFs to upload (0 = no limit). Default is {DEFAULT_MAX_UPLOAD}."
+        help=f"Maximum number of PDFs to upload (0 = no limit). Default is {DEFAULT_MAX_UPLOAD}.",
     )
     parser.add_argument(
         "--verbose",
@@ -75,7 +79,9 @@ def exclude_oversized_pdfs(pdf_files: list[Path]) -> list[Path]:
 
     for pdf_file in pdf_files:
         if pdf_file.stat().st_size > MAX_FILE_SIZE:
-            logger.warning(f"Excluding oversized file (>{MAX_FILE_SIZE} bytes): {pdf_file}")
+            logger.warning(
+                f"Excluding oversized file (>{MAX_FILE_SIZE} bytes): {pdf_file}"
+            )
             excluded_files += 1
         else:
             filtered_files.append(pdf_file)
@@ -85,9 +91,10 @@ def exclude_oversized_pdfs(pdf_files: list[Path]) -> list[Path]:
 
     return filtered_files
 
-def get_existing_titles(client: R2RClient) -> set:
-    """Fetch the titles of all existing documents, handling pagination."""
-    titles = set()
+
+def get_existing_documents(client: R2RClient) -> dict[str, str]:
+    """Fetch the titles and ingestion statuses of all existing documents."""
+    documents = {}
     limit = 250
     offset = 0
 
@@ -97,18 +104,19 @@ def get_existing_titles(client: R2RClient) -> set:
             docs = response.results
             if not docs:
                 break
-            titles.update(doc.title for doc in docs)
+            for doc in docs:
+                documents[doc.title] = getattr(doc, "ingestion_status", "unknown")
             offset += limit
     except Exception as e:
         logger.error(f"Error fetching document list: {e}")
 
-    return titles
+    return documents
 
 
 def upload_pdfs(
     pdf_files: list[Path],
     client: R2RClient,
-    existing_titles: set,
+    existing_documents: dict,
     collection: str = None,
     max_upload: int = 0,
 ) -> tuple[int, int, list[tuple[Path, str]]]:
@@ -125,15 +133,26 @@ def upload_pdfs(
 
             try:
                 logger.debug(f"Processing file: {pdf_file}")
-                if pdf_file.name in existing_titles:
-                    logger.debug(f"Skipping already uploaded file: {pdf_file} (found in existing titles)")
+                ingestion_status = existing_documents.get(pdf_file.name)
+
+                if ingestion_status in ("success", "augmenting"):
+                    logger.debug(
+                        f"Skipping file with ingestion_status='{ingestion_status}': {pdf_file}"
+                    )
                     skipped_count += 1
                 else:
-                    logger.debug(f"Attempting to upload new file: {pdf_file}")
+                    if ingestion_status is not None:
+                        logger.warning(
+                            f"Re-uploading file with previous ingestion status '{ingestion_status}': {pdf_file}"
+                        )
+                    else:
+                        logger.debug(f"Uploading new file: {pdf_file}")
+
                     kwargs = {"collection_name": collection} if collection else {}
                     client.documents.create(file_path=str(pdf_file), **kwargs)
                     logger.info(f"Successfully uploaded file: {pdf_file}")
                     success_count += 1
+
             except Exception as e:
                 logger.error(f"Failed to process file {pdf_file}: {str(e)}")
                 failed_files.append((pdf_file, str(e)))
@@ -144,6 +163,17 @@ def upload_pdfs(
 
 
 def main():
+    """
+    Main entry point for uploading PDFs to an R2R instance.
+
+    This function:
+    - Parses command-line arguments.
+    - Prepares and filters the list of PDF files.
+    - Connects to the R2R server.
+    - Fetches existing documents and logs their ingestion status breakdown.
+    - Uploads new PDFs while skipping already ingested ones.
+    - Summarizes the upload process with counts of successful, skipped, and failed uploads.
+    """
     args = get_args()
 
     logging.basicConfig(
@@ -152,21 +182,26 @@ def main():
     )
     pdf_files = prepare_pdf_files(args)
     if not pdf_files:
-        return
+        sys.exit(1)
 
     pdf_files = exclude_oversized_pdfs(pdf_files)
     if not pdf_files:
         logger.error("No valid PDF files to upload after filtering oversized files.")
-        return
+        sys.exit(1)
 
     client = R2RClient(base_url=args.base_url)
-    existing_titles = get_existing_titles(client)
-    logger.info(f"Found {len(existing_titles)} documents already in R2R.")
+
+    existing_documents = get_existing_documents(client)
+    status_counter = Counter(existing_documents.values())
+
+    logger.info(f"Found {len(existing_documents)} documents already in R2R.")
+    for status, count in status_counter.items():
+        logger.info(f"- {count} document(s) with ingestion_status='{status}'")
 
     success_count, skipped_count, failed_files = upload_pdfs(
         pdf_files,
         client,
-        existing_titles,
+        existing_documents,
         collection=args.collection,
         max_upload=args.max_upload,
     )
@@ -178,7 +213,9 @@ def main():
         logger.error("\nFailed files:")
         for file, error in failed_files:
             logger.error(f"- {file}: {error}")
+        sys.exit(2)
 
+    sys.exit(0)
 
 if __name__ == "__main__":
     main()
