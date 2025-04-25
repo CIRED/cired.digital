@@ -1,10 +1,9 @@
 """Upload PDFs into an R2R instance."""
 
-import sys
 import argparse
 import logging
+import sys
 from collections import Counter
-from os import sync
 from pathlib import Path
 
 from r2r import R2RClient
@@ -22,7 +21,10 @@ def get_args() -> argparse.Namespace:
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument(
-        "--dir", type=Path, required=True, help="Directory containing PDF files. (required)"
+        "--dir",
+        type=Path,
+        required=True,
+        help="Directory containing PDF files. (required)",
     )
     parser.add_argument(
         "--recursive",
@@ -134,7 +136,7 @@ def upload_pdfs(
             logger.debug(f"Processing file: {pdf_file}")
             ingestion_status = existing_documents.get(pdf_file.name)
 
-            if ingestion_status in ("success", "augmenting", "parsing"):
+            if ingestion_status in ("success", "parsing", "embedding", "augmenting"):
                 logger.debug(
                     f"Skipping file with ingestion_status='{ingestion_status}': {pdf_file}"
                 )
@@ -213,6 +215,7 @@ def main():
         sys.exit(2)
 
     sys.exit(0)
+
 
 if __name__ == "__main__":
     main()
