@@ -3,6 +3,8 @@ REPO_URL := https://github.com/SciPhi-AI/R2R.git
 TEMP_DIR := .tmp_r2r_clone
 SUBDIR := docker
 TARGET_DIR := $(SUBDIR)
+COMPOSE_FILE := docker/compose.full.yaml
+PYTHON := venv/bin/python3
 
 # Declare phony targets (targets that don't create files)
 .PHONY: all fetch verify_keys clean cleaner hello venv/bin/activate
@@ -11,7 +13,7 @@ TARGET_DIR := $(SUBDIR)
 all: hello
 
 # Clone the R2R repository and extract only the docker subdirectory
-fetch:
+$(COMPOSE_FILE):
 	rm -rf $(TEMP_DIR)
 	git clone --filter=blob:none --no-checkout $(REPO_URL) $(TEMP_DIR)
 	cd $(TEMP_DIR) && git sparse-checkout init --cone && git sparse-checkout set $(SUBDIR) && git checkout
@@ -29,20 +31,25 @@ clean:
 	echo "Basic cleanup completed"
 
 # Create and set up Python virtual environment
-venv/bin/python3:
+$(PYTHON):
 	uv venv venv
 	uv pip install --python ./venv/bin/python r2r
 	echo "Virtual environment created and r2r installed"
 
 # Start R2R containers on localhost
-start:
+start: $(COMPOSE_FILE)
 	@echo "Starting R2R containers..."
 	./start.sh
 
 # Run the R2R hello world example
-hello: start venv/bin/python3
+hello: start $(PYTHON)
 	@echo "Running R2R hello world example..."
-	venv/bin/python3 hello_r2r.py
+	$(PYTHON) hello_r2r.py
+
+# Run R2R on different LLMs
+hello: start $(PYTHON)
+	@echo "Running R2R with different LLMs..."
+	$(PYTHON) test-varied-LLMs.py
 
 # Stop R2R containers
 stop:
