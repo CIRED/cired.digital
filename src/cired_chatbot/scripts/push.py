@@ -135,7 +135,7 @@ def upload_pdfs(
                 logger.debug(f"Processing file: {pdf_file}")
                 ingestion_status = existing_documents.get(pdf_file.name)
 
-                if ingestion_status in ("success", "augmenting"):
+                if ingestion_status in ("success", "augmenting", "parsing"):
                     logger.debug(
                         f"Skipping file with ingestion_status='{ingestion_status}': {pdf_file}"
                     )
