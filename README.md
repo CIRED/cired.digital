@@ -1,6 +1,6 @@
 # Chatbot IA pour les publications HAL du CIRED
 
-Un outil open source pour examiner les couts et les bénéfices de pouvoir interroger les publications scientifiques d'un laboratoire de manière conversationnelle.
+Un outil open source pour examiner les coûts et les bénéfices de pouvoir interroger les publications scientifiques d'un laboratoire de manière conversationnelle.
 
 ## Description
 
@@ -33,39 +33,30 @@ Le prototype sera déployé en ligne auprès d'une audience progressivement éla
 -    La pertinence des réponses
 -    L'impact sur la diffusion scientifique
 
-
-## Organisation du code
+## Organisation de `cired.digital/`
 
 This project's goal is to implement a chatbot with CIRED publications.
 
-### data/
-Raw (and someday processed) data.
+### `data/`
+raw PDFs, extracted text, metadata, summaries, chunks, vector indexes...
 Data contents is not versionned in the git, only the directory structure and the README.md.
 
-### docs/
-Human‑readable technical documentations, diagrams, README extensions.
-Preferably markdown.
+Reserved purely for artifact storage. Avoid placing processing scripts or metadata code there. All transformation logic should live under `src/`. Consider artefacts in `data/` as immutable: its state cannot be modified after it is created. Any “change” to an immutable yields a brand-new object, leaving the original intact.
+
+### `docs/`
+architecture docs, OpenAPI spec, runbooks, ethics guidelines,
+technical documentations, diagrams.
+Human‑readable, preferably markdown.
 Versionned.
 
-### reports/
+### `reports/`
 Generated output.
-Contents is not versionned in the git, only the directory and the README.md.
+Contents is not versionned, only the directory and the README.md.
 
-### src/cired_chatbot/
-Our module. Python >= 3.11. Passes ```ruff checks``` with no errors or warnings.
+### `src/`
 
-We plan to run a full RAG stack in docker as a separate service, and and deploy ours on the same machine as a use-case-specific layer.
+Project's code. See `src/README.md` for an architectural overview then `docs/blueprints.md` for details. Guidelines are in `docs/CODE_STYLE.md`.
 
-There will be thin HTTP/gRPC wrappers, e.g. ```r2r_client.py``` to communicate with the RAG stack: push documents, ask questions, get justified answer with sources citation and chunk quotes.
-
-We will use env‑vars (e.g. R2R_BASE_URL, R2R_API_KEY) to configure the client at runtime.
-
-**cli** Command line interface tools. Scripts.
-
-### tests/
+### `tests/`
 unit & integration tests
-
-### venv/
-The virtual environment.
-Not versionned: should not appear in the GitHub.
-Created by ```uv```.
+Mirrors the organisation of `src/`
