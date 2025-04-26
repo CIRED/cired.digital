@@ -88,6 +88,11 @@ def transform(func: Callable[[T], T], value: T) -> T:
 - Use `assert` statements directly.
 - Run tests with `pytest .` before committing.
 
+- Reflect any folder renames in `tests/` immediately, so other developers always find tests next to the code they test. 
+- If you move a module, update its test path in the same commit to avoid CI failures.
+
+
+
 ---
 
 ### 📚 Docstrings
