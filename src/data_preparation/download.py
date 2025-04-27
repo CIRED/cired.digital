@@ -1,9 +1,23 @@
 """
 Download PDFs listed in a JSON file and store them in the local data directory.
 
-This script reads a publications JSON file, downloads missing PDFs, and skips already-downloaded files.
-It handles retries, temporary files, and logs a summary at the end.
+This script reads a JSON file containing metadata for publications, checks if
+the associated PDFs are already downloaded, and downloads them if they are missing. The script also
+logs the download process and handles retries for failed downloads.
+
+Usage:
+    python download.py
+
+Dependencies:
+    - requests: For downloading PDFs from URLs.
+    - pathlib: For handling file paths.
+    - hashlib: For generating unique filenames when necessary.
+    - json: For reading the publication metadata.
+    - logging: For logging the process.
+    - time: For introducing delays between downloads.
 """
+
+from __future__ import annotations
 
 import hashlib
 import json
@@ -26,21 +40,42 @@ TIMEOUT = 60  # seconds
 
 # Logging setup
 logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
+# Create directories if they don't exist
 PDF_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def sanitize_filename(text):
-    """Sanitize text to create a safe filename by removing or replacing unsafe characters."""
-    return "".join(
-        c if c.isalnum() or c in (" ", ".", "_") else "_" for c in text
-    ).strip()
+def sanitize_filename(text: str) -> str:
+    """
+    Convertit un texte en un nom de fichier sécurisé.
+
+    Args:
+        text: Texte à convertir en nom de fichier.
+
+    Returns:
+        Nom de fichier sécurisé ne contenant que des caractères alphanumériques,
+        des espaces, des points et des underscores.
+
+    """
+    return "".join(c if c.isalnum() or c in (' ', '.', '_') else '_' for c in text).strip()
 
 
-def get_pdf_filename(entry):
-    """Generate a safe filename for a publication entry, using HAL ID or URL hash."""
+def get_pdf_filename(entry: dict) -> Path:
+    """
+    Génère un nom de fichier pour une publication.
+
+    Utilise l'ID HAL si disponible, sinon génère un hash à partir de l'URL du PDF.
+
+    Args:
+        entry: Dictionnaire contenant les informations d'une publication.
+
+    Returns:
+        Chemin du fichier PDF.
+
+    """
     if "halId_s" in entry:
         return PDF_DIR / f"{sanitize_filename(entry['halId_s'])}.pdf"
     else:
@@ -48,14 +83,24 @@ def get_pdf_filename(entry):
         return PDF_DIR / f"{hashname}.pdf"
 
 
-def download_pdf(url, target_path):
-    """Download a PDF from a URL to a temporary file, then rename to final path if successful."""
+def download_pdf(url: str, target_path: Path) -> bool:
+    """
+    Télécharge un PDF à partir d'une URL.
+
+    Args:
+        url: URL du PDF à télécharger.
+        target_path: Chemin où sauvegarder le PDF.
+
+    Returns:
+        True si le téléchargement a réussi, False sinon.
+
+    """
     temp_path = target_path.with_suffix(".tmp")
 
     try:
         with requests.get(url, stream=True, timeout=TIMEOUT) as r:
             r.raise_for_status()
-            with open(temp_path, "wb") as f:
+            with open(temp_path, 'wb') as f:
                 for chunk in r.iter_content(chunk_size=8192):
                     f.write(chunk)
         temp_path.rename(target_path)
@@ -68,13 +113,18 @@ def download_pdf(url, target_path):
         return False
 
 
-def main():
-    """Main routine to load publications and download missing PDFs to the local pdfs/ directory."""
+def main() -> None:
+    """
+    Fonction principale pour télécharger les PDFs des publications.
+
+    Lit le fichier des publications, parcourt chaque entrée, et télécharge
+    les PDFs correspondants s'ils ne sont pas déjà présents localement.
+    """
     if not os.path.exists(PUBLICATIONS_FILE):
         logging.error(f"Missing input file: {PUBLICATIONS_FILE}")
         return
 
-    with open(PUBLICATIONS_FILE, encoding="utf-8") as f:
+    with open(PUBLICATIONS_FILE, encoding='utf-8') as f:
         publications = json.load(f)
 
     total = 0
@@ -112,3 +162,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
