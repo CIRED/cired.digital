@@ -1,14 +1,11 @@
 # TODO for the R2R orchestration
 
-## Abstract the Makefile
-
-Model-specific scripts do the work, but the interface to
-fetch, start, populate, test and stop are the same.
-CLI is fine, there is no need for a clicky backend now.
 
 ## Try without the centralized logging service
 - The light version does not use it
 - Causes most bugs
+
+## docker network prune in  stop
 
 ## Use podman
 
