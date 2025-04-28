@@ -21,6 +21,7 @@ if timeout "${DOWN_TIMEOUT}s" \
      docker compose \
        -f "$COMPOSE_FILE" \
        --project-name "$PROJECT_NAME" \
+       --profile postgres \
        down; then
 
   echo "✅ Compose down completed within ${DOWN_TIMEOUT}s."
@@ -36,6 +37,7 @@ CONTAINERS_RAW=""
 if timeout "${GATHER_TIMEOUT}s" docker compose \
      -f "$COMPOSE_FILE" \
      --project-name "$PROJECT_NAME" \
+     --profile postgres \
      ps -q > /tmp/containers.raw 2>/dev/null; then
   CONTAINERS_RAW=$(< /tmp/containers.raw)
 else
@@ -105,4 +107,3 @@ done
 
 echo "❗ Ultimate escalation complete. Manual intervention may still be required."
 exit 99
-
