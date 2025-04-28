@@ -32,6 +32,9 @@ def process_data(items: list[str]) -> dict[str, int]:
 from typing import List, Dict
 def process_data(items: List[str]) -> Dict[str, int]:
     ...
+
+# ❌ ALSO DON'T:
+from __future__ import annotations
 ```
 
 #### Union Types
@@ -106,12 +109,15 @@ def foo(bar: int) -> str:
     """Return a greeting using the input number.
 
     Args:
+    ----
         bar: The number to greet with.
 
     Returns:
+    -------
         A greeting string.
         
     Raises:
+    ------
         ValueError: If input is negative
     """
     if bar < 0:
