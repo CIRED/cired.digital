@@ -1,7 +1,81 @@
+# Override to
+# - quiet some warnings related to volumes relabeling
+# - pass the secrets
+# - neuter the observability stack by assigning them the metrics profile
+#   and telling r2r to log to json
+# - Finally, safely remove incompatible extra_hosts clause
+# - Fully define paths to images (for security)
+# - not touching the upstream compose file.
+
+volumes:
+  postgres_data:
+    external: true
+
+  hatchet_rabbitmq_data:
+    external: true
+
+  hatchet_rabbitmq_conf:
+    external: true
+
+  hatchet_certs:
+    external: true
+
+  hatchet_config:
+    external: true
+
+  hatchet_api_key:
+    external: true
+
+  hatchet_postgres_data:
+    external: true
+
 services:
   r2r:
+    image: docker.io/sciphiai/r2r:latest
     environment:
       OPENAI_API_KEY: ${OPENAI_API_KEY}
       MISTRAL_API_KEY: ${MISTRAL_API_KEY}
       DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}
+    extra_hosts:
+      - host.docker.internal:[127.0.0.1]
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
 
+  r2r-dashboard:
+    image: docker.io/sciphiai/r2r-dashboard:1.0.3
+
+  hatchet-rabbitmq:
+    image: docker.io/library/rabbitmq:3-management
+
+  unstructured:
+    image: docker.io/ragtoriches/unst-prod:latest
+
+  graph_clustering:
+    image: docker.io/ragtoriches/cluster-prod
+
+  postgres:
+    image: docker.io/pgvector/pgvector:pg16
+
+  hatchet-postgres:
+    image: docker.io/library/postgres:latest
+
+  hatchet-create-db:
+    image: docker.io/library/postgres:latest
+
+  fluent-bit:
+    image: docker.io/fluent/fluent-bit:latest
+    profiles:
+      - metrics
+
+  grafana:
+    image: docker.io/grafana/grafana:latest
+    profiles:
+      - metrics
+
+  victoria-logs:
+    image: docker.io/victoriametrics/victoria-logs:v1.10.1-victorialogs
+    profiles:
+      - metrics
