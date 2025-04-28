@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #
-# Starts R2R 
+# Starts R2R
 #
 # Instead of adding the keys in clear into docker/env/r2r-full.env,
-# we use a local compose override file to pass the secrets 
+# we use a local compose override file to pass the secrets
 # from the file credentials/API_KEYS which contains
 #  OPENAI_API_KEY=sk_...
 #  MISTRAL_API_KEY=...
@@ -27,7 +27,7 @@ fi
 PROJECT_NAME="myrag"
 COMPOSE_FILE="./docker/compose.full.yaml"
 OVERRIDE_FILE="./compose.override.yaml"
-KEYS_FILE="../../../credentials/API_KEYS"
+KEYS_FILE="../../../../credentials/API_KEYS"
 
 if [[ ! -f "$COMPOSE_FILE" ]]; then
   echo "Error: Compose file '$COMPOSE_FILE' not found."
@@ -56,6 +56,5 @@ if docker compose -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" --project-name "$PROJEC
 else
   source "$KEYS_FILE"
   docker compose -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" --project-name "$PROJECT_NAME" --profile postgres up -d
-  log "✅ Docker Compose started successfully with profile 'postgres'."
+  log "✅ Docker Compose started successfully."
 fi
-
