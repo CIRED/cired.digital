@@ -26,6 +26,7 @@ def run_all_models() -> dict[str, str]:
     -------
     dict[str, str]
         A dictionary mapping model names to their generated answers.
+
     """
     answers: dict[str, str] = {}
     for model in MODEL_NAMES:
