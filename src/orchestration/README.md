@@ -39,9 +39,10 @@ Each engine should have its own directory structured like this:
 
 ```text
 my_engine/
+├── install.sh
+├── validate.sh
 ├── start.sh
 ├── stop.sh
-├── install.sh
 ├── clean.sh
 ├── env_dev.cfg
 └── env_prod.cfg
