@@ -206,7 +206,7 @@ class OpenAIMonitor(RateLimitMonitor):
 
 
 def main() -> None:
-    """Main command-line interface loop."""
+    """Select a service, a model, and loop CLI commands."""
     print("\n===== Rate Limit Monitor =====")
     print("Select service:")
     print("1. Mistral")

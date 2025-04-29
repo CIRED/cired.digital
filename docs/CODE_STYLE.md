@@ -127,6 +127,8 @@ def foo(bar: int) -> str:
 
 - Multiline docstrings: one-line summary, then a blank line.
 - Class docstrings go directly under the definition (Ruff enforces `D211`).
+- Main() docstring in imperative mode:  ✅ DO write "Upload PDFs..." ❌ DON'T write 
+"Entry point to upload PDFs..."
 
 ---
 
