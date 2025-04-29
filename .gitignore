@@ -36,6 +36,7 @@ env/
 .project
 .pydevproject
 .settings/
+.ropeproject/
 
 # Data files
 data/raw/*
