@@ -134,7 +134,8 @@ def foo(bar: int) -> str:
 
 ### ⚙️ Tooling
 
-Ruff handles both linting and formatting for this project. It’s configured in `cired.digital/code/pyproject.toml`.
+Ruff handles both linting and formatting for this project. It’s configured in `cired.digital/code/pyproject.toml`. Use the latest `ruff` pulled with `pipx`, not the old version shipped by Ubuntu.
+
 
 | Tool        | Command                      | Purpose                         |
 |-------------|------------------------------|---------------------------------|
@@ -174,13 +175,15 @@ Naming follows the conventions defined in [PEP 8 – Style Guide for Python Code
 - For complex changes, add details after a blank line
 
 #### Branch Naming
-- Use descriptive branch names with hyphens (e.g., `feature-chatbot-api`, `fix-memory-leak`)
+- Always work on a branch.
+- Use descriptive branch names with hyphens (e.g., `feature/chatbot-api`, `chore/fix-memory-leak`)
 - Include issue numbers when applicable (e.g., `issue-42-login-timeout`)
 
 #### Pull Requests
+- PR are mandatory. Never push to `main` - it is protected anyway.
 - Include a clear description of changes
 - Reference related issues using keywords (e.g., "Fixes #123")
-- Ensure all CI checks pass before merging
+- Ensure all CI checks pass before merging. GitHub will run `ruff check .` automatically.
 - Request review from appropriate team members
 
 ---
