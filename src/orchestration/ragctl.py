@@ -54,6 +54,7 @@ def discover_engines() -> list[str]:
     Returns
     -------
         A sorted list of engine names.
+
     """
     engines = []
     for entry in os.listdir(BASE_DIR):
@@ -82,6 +83,7 @@ def discover_commands(engine: str) -> list[str]:
     Returns:
     -------
         A list of available command names.
+
     """
     engine_dir = os.path.join(BASE_DIR, engine)
     if not os.path.isdir(engine_dir):
@@ -103,6 +105,7 @@ def load_env(engine: str, env: str) -> None:
     Raises:
     ------
         EnvironmentFileError: If an invalid line is found in the environment file.
+
     """
     env_file = os.path.join(BASE_DIR, engine, f"env_{env}.cfg")
     if not os.path.isfile(env_file):
@@ -143,6 +146,7 @@ def get_engine_dir(engine: str) -> str:
     Raises:
     ------
         EngineError: If the engine directory does not exist.
+
     """
     engine_dir = os.path.join(BASE_DIR, engine)
     if not os.path.isdir(engine_dir):
@@ -165,6 +169,7 @@ def run_script(engine: str, command: str, env: str, debug: bool) -> None:
     ------
         EngineError: If the script is not found.
         ScriptExecutionError: If the script execution fails.
+
     """
     engine_dir = get_engine_dir(engine)
     script_name = f"{command.replace('-', '_')}.sh"
@@ -205,6 +210,7 @@ def list_available_engines_and_commands(available_engines: list[str]) -> None:
     Raises:
     ------
         EngineError: If no engines are detected.
+
     """
     if not available_engines:
         raise EngineError("No engines detected.")
@@ -229,6 +235,7 @@ def main() -> None:
     Raises
     ------
         SystemExit: If an error occurs during CLI execution.
+
     """
     try:
         available_engines = discover_engines()

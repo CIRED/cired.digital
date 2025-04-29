@@ -23,6 +23,7 @@ def main() -> None:
     Raises
     ------
         RuntimeError: If document creation fails and no ID is returned.
+
     """
     write_test_file()
     document_id = create_or_get_document()

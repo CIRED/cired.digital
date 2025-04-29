@@ -24,6 +24,7 @@ def write_test_file(content: str = TEST_CONTENT) -> None:
     Args:
     ----
         content: The string content to write into the test file.
+
     """
     with open(TEST_FILE, "w") as file:
         file.write(content)
@@ -51,6 +52,7 @@ def find_document_by_title(title: str = TEST_FILE) -> str | None:
     Returns:
     -------
         The document ID if found, else None.
+
     """
     limit, offset = 100, 0
     while True:
@@ -71,6 +73,7 @@ def create_or_get_document() -> str | None:
     Returns
     -------
         The document ID if creation or extraction succeeds, else None.
+
     """
     try:
         response = client.documents.create(file_path=TEST_FILE)
@@ -99,6 +102,7 @@ def delete_document(doc_id: str) -> None:
     Args:
     ----
         doc_id: The ID of the document to delete.
+
     """
     try:
         client.documents.delete(doc_id)
