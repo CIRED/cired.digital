@@ -1,14 +1,24 @@
 # build_index.py
-import os
+"""
+Build or load a local PDF index using LlamaIndex.
+
+This script:
+- Loads existing index if available.
+- Otherwise scans PDFs in './pdfs', builds a new index, and saves it.
+- Launches a simple chat interface to query the indexed documents.
+"""
+
+
 import sys
 from pathlib import Path
-from tqdm import tqdm
+
 from llama_index.core import (
-    VectorStoreIndex,
     SimpleDirectoryReader,
     StorageContext,
+    VectorStoreIndex,
     load_index_from_storage,
 )
+from tqdm import tqdm
 
 index_dir = Path("./index")
 pdf_dir = Path("./pdfs")

@@ -1,17 +1,28 @@
 # build_index.py
+"""
+Build or load a local PDF index using LlamaIndex with Mistral models.
+
+This script:
+- Initializes Mistral LLM and Embedding models from environment variables.
+- Loads existing index if available.
+- Otherwise scans PDFs in './pdfs', builds a new index, and saves it.
+- Launches an interactive chat to query the indexed documents using Mistral.
+"""
+
 import os
 import sys
 from pathlib import Path
-from tqdm import tqdm
+
 from llama_index.core import (
-    VectorStoreIndex,
     SimpleDirectoryReader,
     StorageContext,
+    VectorStoreIndex,
     load_index_from_storage,
 )
 from llama_index.core.settings import Settings
-from llama_index.llms.mistralai import MistralAI
 from llama_index.embeddings.mistralai import MistralAIEmbedding
+from llama_index.llms.mistralai import MistralAI
+from tqdm import tqdm
 
 # Set up Mistral as the LLM
 mistral_api_key = os.environ.get("MISTRAL_API_KEY")
