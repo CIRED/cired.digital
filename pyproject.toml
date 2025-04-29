@@ -40,8 +40,6 @@ select = ["E", "F", "W", "I", "C90", "D", "UP"]
 ignore = ["E501", "D203", "D212"]                # e.g. ignore line‑length
 target-version = "py311"
 line-length = 88
-show-source = true
-fix = true                      # allow `ruff --fix`
 
 [tool.ruff.mccabe]
 max-complexity = 10
