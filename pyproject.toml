@@ -43,5 +43,5 @@ line-length = 88
 select = ["E", "F", "W", "I", "C90", "D", "UP"]
 ignore = ["E501", "D203", "D212"]                # e.g. ignore line‑length
 
-[tool.ruff.mccabe]
+[tool.ruff.lint.mccabe]
 max-complexity = 10
