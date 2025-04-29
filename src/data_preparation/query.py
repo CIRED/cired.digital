@@ -16,7 +16,6 @@ import json
 import logging
 import os
 import time
-from typing import Dict, List
 
 import requests
 
@@ -42,7 +41,7 @@ BATCH_SIZE = 100
 MAX_BATCHES = 50
 
 
-def process_publications(publications: List[Dict]) -> None:
+def process_publications(publications: list[dict]) -> None:
     """Process the publication records and save them into separate JSON files."""
     related_publications = []
     unrelated_cired_communications = []
@@ -82,7 +81,7 @@ def process_publications(publications: List[Dict]) -> None:
     )
 
 
-def get_paginated_publications(base_params: Dict) -> List[Dict]:
+def get_paginated_publications(base_params: dict) -> list[dict]:
     """Retrieve publication records with pagination from the HAL API."""
     all_publications = []
     current_batch = 0
