@@ -166,7 +166,7 @@ def upload_pdfs(
 
 def main():
     """
-    Main entry point for uploading PDFs to an R2R instance.
+    Upload PDFs to an R2R instance.
 
     This function:
     - Parses command-line arguments.

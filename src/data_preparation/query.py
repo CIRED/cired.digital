@@ -142,7 +142,7 @@ def get_paginated_publications(base_params: dict) -> list[dict]:
 
 
 def main() -> None:
-    """Main function to orchestrate the retrieval and processing of publications."""
+    """Orchestrate the retrieval and processing of publications."""
     fields = """
 docid,halId_s,doiId_s,label_s,producedDate_tdate,authFullName_s,title_s,abstract_s,submitType_s,docType_s,labStructAcronym_s,fileMain_s
 """
