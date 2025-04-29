@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
 #
-# Install R2R
-#
+# Install R2R:
+# 1. Validates a running docker installation
+# 2. Pull R2R docker configurations files from its GitHub repository
+# 3. Validates our local overrides files exist
+# 4. Pull R2R docker images
 
 set -euo pipefail
 log() { echo -e "[$(date +'%Y-%m-%d %H:%M:%S')] $*"; }
 trap 'log "❌ An unexpected error occurred."' ERR
 
-# Validate Docker installation
+#
+# 1. Validate Docker installation
+#
 if ! command -v docker &> /dev/null; then
   echo "Error: Docker is not installed. Please install Docker first."
   exit 1
@@ -25,7 +30,29 @@ log "✅ Docker test successful."
 log "🐳 Docker version:"
 docker --version
 
-# Project, compose and environment file settings
+#
+# 2. Clone the R2R repository and extract only the docker subdirectory
+#
+REPO_URL="https://github.com/SciPhi-AI/R2R.git"
+TEMP_DIR=".tmp_r2r_clone"
+SUBDIR="docker"
+TARGET_DIR="$SUBDIR"
+
+log "📥 Fetching $SUBDIR from $REPO_URL..."
+rm -rf "$TEMP_DIR"
+git clone --filter=blob:none --no-checkout "$REPO_URL" "$TEMP_DIR"
+cd "$TEMP_DIR"
+git sparse-checkout init --cone
+git sparse-checkout set "$SUBDIR"
+git checkout
+cd -
+mv "$TEMP_DIR/$SUBDIR" "./$TARGET_DIR"
+rm -rf "$TEMP_DIR"
+log "✅ Successfully fetched $SUBDIR from $REPO_URL."
+
+#
+# 3. Verify project, compose and environment files
+#
 PROJECT_NAME="myrag"
 COMPOSE_FILE="./docker/compose.full.yaml"
 OVERRIDE_FILE="./compose.override.yaml"
@@ -51,20 +78,10 @@ log "🔧 Compose file: $COMPOSE_FILE"
 log "🔧🔧 Override file: $OVERRIDE_FILE"
 log "🔑 Env file: $KEYS_FILE"
 
-# Pull images
+#
+# 4. Pull R2R images
+#
 log "📥 Pulling Docker images..."
 docker compose -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" pull
 
 log "✅ Images pulled successfully."
-
-# Prune dangling images, stopped containers, unused networks
-log "🧹 Cleaning up dangling Docker images..."
-docker image prune -f
-
-log "🧹 Cleaning up stopped containers..."
-docker container prune -f
-
-log "🧹 Cleaning up unused networks..."
-docker network prune -f
-
-log "✅ Dangling images, stopped containers, and unused networks cleaned up."

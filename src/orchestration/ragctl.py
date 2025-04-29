@@ -11,12 +11,11 @@ Features:
 - Includes validation, error handling, and optional debug output.
 
 Available Commands:
-  start                   Start the RAG engine.
-  stop                    Stop the RAG engine.
   install                 Install/setup the RAG engine.
-  clean                   Uninstall/cleanup the RAG engine.
-  validate-install        Validate that the engine is running correctly.
-  validate-functionality  Run a basic functionality test on the engine.
+  start                   Start the RAG engine.
+  validate                Validate that the engine is running correctly.
+  stop                    Stop the RAG engine.
+  clean                   Revert the directory to its clean state.
   push-index              Push the local index data to production.
 
 Integration:
