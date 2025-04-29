@@ -53,9 +53,11 @@ def sanitize_filename(text: str) -> str:
     Convertit un texte en un nom de fichier sécurisé.
 
     Args:
+    ----
         text: Texte à convertir en nom de fichier.
 
     Returns:
+    -------
         Nom de fichier sécurisé ne contenant que des caractères alphanumériques,
         des espaces, des points et des underscores.
 
@@ -70,9 +72,11 @@ def get_pdf_filename(entry: dict) -> Path:
     Utilise l'ID HAL si disponible, sinon génère un hash à partir de l'URL du PDF.
 
     Args:
+    ----
         entry: Dictionnaire contenant les informations d'une publication.
 
     Returns:
+    -------
         Chemin du fichier PDF.
 
     """
@@ -88,10 +92,12 @@ def download_pdf(url: str, target_path: Path) -> bool:
     Télécharge un PDF à partir d'une URL.
 
     Args:
+    ----
         url: URL du PDF à télécharger.
         target_path: Chemin où sauvegarder le PDF.
 
     Returns:
+    -------
         True si le téléchargement a réussi, False sinon.
 
     """
