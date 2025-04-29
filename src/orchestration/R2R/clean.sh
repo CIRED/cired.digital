@@ -21,6 +21,7 @@ rm -rf venv
 log "🧹 Removing Python cache..."
 rm -rf smoke-tests/__pycache__
 rm -rf smoke-tests/.ropeproject
+rm -rf .ropeproject
 
 # Prune dangling images, stopped containers, unused networks
 log "🧹 Cleaning up dangling Docker images..."
