@@ -9,38 +9,33 @@
 #  MISTRAL_API_KEY=...
 
 set -euo pipefail
-log() { echo -e "[$(date +'%Y-%m-%d %H:%M:%S')] $*"; }
+source "./common_config.sh"
 trap 'log "❌ An unexpected error occurred."' ERR
 
 # Validate we have docker
 if ! command -v docker &> /dev/null; then
-  echo "Error: Docker is not installed or not in PATH."
+  log "Error: Docker is not installed or not in PATH."
   exit 1
 fi
 
 if ! docker info > /dev/null 2>&1; then
-  echo "Error: Docker daemon is not running."
+  log "Error: Docker daemon is not running."
   exit 1
 fi
 
-# Project, compose and environment file settings
-PROJECT_NAME="myrag"
-COMPOSE_FILE="./docker/compose.full.yaml"
-OVERRIDE_FILE="./compose.override.yaml"
-KEYS_FILE="../../../../credentials/API_KEYS"
-
+# Verify configuration files exist
 if [[ ! -f "$COMPOSE_FILE" ]]; then
-  echo "Error: Compose file '$COMPOSE_FILE' not found."
+  log "Error: Compose file '$COMPOSE_FILE' not found."
   exit 1
 fi
 
 if [[ ! -f "$OVERRIDE_FILE" ]]; then
-  echo "Error: Override file '$OVERRIDE_FILE' not found."
+  log "Error: Override file '$OVERRIDE_FILE' not found."
   exit 1
 fi
 
 if [[ ! -f "$KEYS_FILE" ]]; then
-  echo "Error: Environment file '$KEYS_FILE' not found."
+  log "Error: Environment file '$KEYS_FILE' not found."
   exit 1
 fi
 

@@ -8,22 +8,22 @@
 # 3.2 Idem, calling different LLMs for generation
 # 3.3 TODO: Ingest and query scientific papers as PDFs
 
-# Log helper
-log() {
-  echo -e "[$(date +'%Y-%m-%d %H:%M:%S')] $*"
-}
+set -euo pipefail
+source "./common_config.sh"
+trap 'log "❌ An unexpected error occurred."' ERR
+
 
 # Query the R2R health endpoint and return success if it responds with the expected JSON
 query_health_endpoint() {
-  local url="http://localhost:7272/v3/health"
+  local url="$HEALTH_ENDPOINT"
   local expected='{"results":{"message":"ok"}}'
 
-  curl -s "$url"
+  curl -s --connect-timeout 5 "$url"
 }
 
 # Check R2R health, with retry logic
 check_r2r_health() {
-  log "🔍 Checking R2R health at http://localhost:7272/v3/health..."
+    log "🔍 Checking R2R health at $HEALTH_ENDPOINT..."
 
   local response
   response=$(query_health_endpoint)
@@ -49,7 +49,7 @@ check_r2r_health() {
 
 # Check for API keys in the R2R container
 check_api_keys() {
-  local container_name="myrag-r2r-1"
+  local container_name="${PROJECT_NAME}-r2r-1"
   log "🔍 Checking for API keys in container '$container_name'..."
 
   if docker ps --format '{{.Names}}' | grep -q "^${container_name}$"; then
@@ -67,25 +67,20 @@ check_api_keys() {
 check_r2r_health
 check_api_keys
 
-SCRIPT_DIR="$(dirname "$0")"
-SMOKE_DIR="$SCRIPT_DIR/smoke-tests"
-VENV_DIR="$SCRIPT_DIR/venv"
+# Run smoke tests
 
-# Create virtual environment if it doesn't exist
+# Verify the virtual environment exists
 if [ ! -d "$VENV_DIR" ]; then
-    uv venv "$VENV_DIR"
-    source "$VENV_DIR/bin/activate"
-    uv pip install -r "$SMOKE_DIR/requirements.txt"
-else
-    source "$VENV_DIR/bin/activate"
+    log "❌ Python virtual environment not found. Please run install.sh first."
+    exit 1
 fi
 
-# Run tests
-python "$SMOKE_DIR/hello_r2r.py"
-python "$SMOKE_DIR/LLM_swap.py"
+source "$VENV_DIR/bin/activate"
 
-# Optionally deactivate and clean up
+log "🚀 Running smoke tests..."
+python3 "$SMOKE_DIR/hello_r2r.py"
+python3 "$SMOKE_DIR/LLM_swap.py"
+
 deactivate
-# rm -rf "$VENV_DIR"  # Uncomment to delete venv after every run
 
-echo "R2R smoke tests passed."
+log "R2R smoke tests passed."
