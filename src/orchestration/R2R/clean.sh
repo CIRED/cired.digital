@@ -3,11 +3,8 @@
 # Revert the directory to git-only files
 
 set -euo pipefail
-log() { echo -e "[$(date +'%Y-%m-%d %H:%M:%S')] $*"; }
-
-
-SUBDIR="docker"
-TEST_FILE="test.txt"
+source "./common_config.sh"
+trap 'log "❌ An unexpected error occurred."' ERR
 
 log "🧹 Removing R2R upstream configuration files..."
 rm -rf "$SUBDIR"
@@ -16,11 +13,11 @@ log "🧹 Removing test file..."
 rm -f "$TEST_FILE"
 
 log "🧹 Removing any Python virtual environment..."
-rm -rf venv
+rm -rf "$VENV_DIR"
 
 log "🧹 Removing Python cache..."
-rm -rf smoke-tests/__pycache__
-rm -rf smoke-tests/.ropeproject
+rm -rf "$SMOKE_DIR"/__pycache__
+rm -rf "$SMOKE_DIR"/.ropeproject
 rm -rf .ropeproject
 
 # Prune dangling images, stopped containers, unused networks

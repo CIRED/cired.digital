@@ -4,13 +4,24 @@
 import os
 import re
 import time
+from pathlib import Path
 
 from r2r import R2RClient
 
-SERVER_URL = "http://localhost:7272"
-TEST_FILE = "test.txt"
-TEST_CONTENT = "QuetzalX is a person that works at CIRED."
-QUERY = "Who is QuetzalX?"
+# Load configuration from common file
+config_path = Path(__file__).parent.parent / "common_config.sh"
+config = {}
+if config_path.exists():
+    with open(config_path) as f:
+        for line in f:
+            if "=" in line and not line.strip().startswith("#"):
+                key, value = line.strip().split("=", 1)
+                config[key] = value.strip('"')
+
+SERVER_URL = config.get("SERVER_URL", "http://localhost:7272")
+TEST_FILE = config.get("TEST_FILE", "test.txt")
+TEST_CONTENT = config.get("TEST_CONTENT", "QuetzalX is a person that works at CIRED.")
+QUERY = config.get("TEST_QUERY", "Who is QuetzalX?")
 MODEL = "openai/gpt-4o-mini"
 TEMPERATURE = 0.0
 

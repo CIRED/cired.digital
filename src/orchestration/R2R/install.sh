@@ -7,21 +7,24 @@
 # 4. Pull R2R docker images
 
 set -euo pipefail
-log() { echo -e "[$(date +'%Y-%m-%d %H:%M:%S')] $*"; }
+source "./common_config.sh"
 trap 'log "❌ An unexpected error occurred."' ERR
 
 #
-# 1. Validate Docker installation
+# 1. Validate required tools
 #
+log "🔍 Checking required dependencies..."
+
+# Check for Docker
 if ! command -v docker &> /dev/null; then
-  echo "Error: Docker is not installed. Please install Docker first."
+  log "❌ Error: Docker is not installed. Please install Docker first."
   exit 1
 fi
 
 # Run a test container to validate Docker functionality
 log "🚀 Testing Docker installation..."
 if ! docker run --rm hello-world &> /dev/null; then
-  echo "Error: Docker is installed but not working correctly."
+  log "❌ Error: Docker is installed but not working correctly."
   exit 1
 fi
 log "✅ Docker test successful."
@@ -30,12 +33,18 @@ log "✅ Docker test successful."
 log "🐳 Docker version:"
 docker --version
 
+# Check for uv (required for validate.sh)
+if ! command -v uv &> /dev/null; then
+  log "❌ Error: 'uv' is not installed. Please install uv first."
+  log "   You can install it with: pipx install uv"
+  exit 1
+fi
+
 #
 # 2. Clone the R2R repository and extract only the docker subdirectory
 #
 REPO_URL="https://github.com/SciPhi-AI/R2R.git"
 TEMP_DIR=".tmp_r2r_clone"
-SUBDIR="docker"
 TARGET_DIR="$SUBDIR"
 
 log "📥 Fetching $SUBDIR from $REPO_URL..."
@@ -50,26 +59,19 @@ mv "$TEMP_DIR/$SUBDIR" "./$TARGET_DIR"
 rm -rf "$TEMP_DIR"
 log "✅ Successfully fetched $SUBDIR from $REPO_URL."
 
-#
-# 3. Verify project, compose and environment files
-#
-PROJECT_NAME="myrag"
-COMPOSE_FILE="./docker/compose.full.yaml"
-OVERRIDE_FILE="./compose.override.yaml"
-KEYS_FILE="../../../../credentials/API_KEYS"
-
+# Verify configuration files exist
 if [[ ! -f "$COMPOSE_FILE" ]]; then
-  echo "Error: Compose file '$COMPOSE_FILE' not found."
+  log "Error: Compose file '$COMPOSE_FILE' not found."
   exit 1
 fi
 
 if [[ ! -f "$OVERRIDE_FILE" ]]; then
-  echo "Error: Override file '$OVERRIDE_FILE' not found."
+  log "Error: Override file '$OVERRIDE_FILE' not found."
   exit 1
 fi
 
 if [[ ! -f "$KEYS_FILE" ]]; then
-  echo "Error: Environment file '$KEYS_FILE' not found."
+  log "Error: Environment file '$KEYS_FILE' not found."
   exit 1
 fi
 
@@ -85,3 +87,18 @@ log "📥 Pulling Docker images..."
 docker compose -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" pull
 
 log "✅ Images pulled successfully."
+
+#
+# 5. Creating Python virtual environment for smoke tests
+# Note: Alternative would be to use `uvx` which creates the venv on the fly
+#
+log "🔧 Creating Python virtual environment for smoke tests..."
+if [ ! -d "$VENV_DIR" ]; then
+    uv venv "$VENV_DIR"
+    source "$VENV_DIR/bin/activate"
+    uv pip install -r "$SMOKE_DIR/requirements.txt"
+    deactivate
+    log "✅ Virtual environment created and dependencies installed."
+else
+    log "✅ Virtual environment already exists."
+fi
