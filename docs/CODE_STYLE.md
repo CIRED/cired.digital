@@ -102,6 +102,11 @@ def transform(func: Callable[[T], T], value: T) -> T:
 
 - In English
 - All **public functions**, **classes**, and **modules** should have docstrings.
+- Multiline docstrings: one-line summary, then a blank line.
+- Class docstrings go directly under the definition (Ruff enforces `D211`).
+- Main() docstring in imperative mode:  ✅ DO write "Upload PDFs..." ❌ DON'T write 
+"Entry point to upload PDFs..."
+
 - Use this format:
 
 ```python
@@ -120,15 +125,8 @@ def foo(bar: int) -> str:
     ------
         ValueError: If input is negative
     """
-    if bar < 0:
-        raise ValueError("Input must be non-negative")
-    return f"Hello, number {bar}!"
+    ...
 ```
-
-- Multiline docstrings: one-line summary, then a blank line.
-- Class docstrings go directly under the definition (Ruff enforces `D211`).
-- Main() docstring in imperative mode:  ✅ DO write "Upload PDFs..." ❌ DON'T write 
-"Entry point to upload PDFs..."
 
 ---
 
@@ -169,17 +167,22 @@ Naming follows the conventions defined in [PEP 8 – Style Guide for Python Code
 ### 🔄 Version Control
 
 #### Commit Messages
-- Use clear, descriptive commit messages
-- Start with a verb in the present tense (e.g., "Add user authentication", "Fix login bug")
+
+- Use the format <type>: <description>. 
+- The type can be **fix:**, **feat:**, **build:**, **chore:**, **ci:**, **docs:**, **style:**, **refactor:**, **perf:**, **test:**...
+- Use clear, descriptive commits messages -- refer to [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
+- Start the description with a verb in the present tense (e.g., "Add user authentication", "Fix login bug")
 - Keep the first line under 50 characters if possible
 - For complex changes, add details after a blank line
 
 #### Branch Naming
-- Always work on a branch.
+
+- Always work on a branch -- never commit to main.
 - Use descriptive branch names with hyphens (e.g., `feature/chatbot-api`, `chore/fix-memory-leak`)
 - Include issue numbers when applicable (e.g., `issue-42-login-timeout`)
 
 #### Pull Requests
+
 - PR are mandatory. Never push to `main` - it is protected anyway.
 - Include a clear description of changes
 - Reference related issues using keywords (e.g., "Fixes #123")
