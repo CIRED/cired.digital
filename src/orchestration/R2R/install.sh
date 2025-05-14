@@ -7,7 +7,11 @@
 # 4. Pull R2R docker images
 
 set -euo pipefail
-source "./common_config.sh"
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+cd "$SCRIPT_DIR"
+
+source "$SCRIPT_DIR/common_config.sh"
+
 trap 'log "❌ An unexpected error occurred."' ERR
 
 #
@@ -54,7 +58,12 @@ cd "$TEMP_DIR"
 git sparse-checkout init --cone
 git sparse-checkout set "$SUBDIR"
 git checkout
-cd -
+cd "$SCRIPT_DIR"
+
+# Remove existing target directory if it exists
+if [[ -d "./$TARGET_DIR" ]]; then
+  rm -rf "./$TARGET_DIR"
+fi
 mv "$TEMP_DIR/$SUBDIR" "./$TARGET_DIR"
 rm -rf "$TEMP_DIR"
 log "✅ Successfully fetched $SUBDIR from $REPO_URL."
@@ -102,3 +111,6 @@ if [ ! -d "$VENV_DIR" ]; then
 else
     log "✅ Virtual environment already exists."
 fi
+
+log "🎉 Installation completed successfully!"
+log "📍 Script directory: $SCRIPT_DIR"
