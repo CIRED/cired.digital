@@ -39,11 +39,9 @@ BASE_DIR = Path(__file__).resolve().parent
 # Configure logging for operational/debug logs
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S',
-    handlers=[
-        logging.StreamHandler(sys.stderr)
-    ]
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+    handlers=[logging.StreamHandler(sys.stderr)],
 )
 logger = logging.getLogger(__name__)
 
@@ -116,7 +114,9 @@ def load_env(engine: str, env: str) -> None:
     """
     env_file = BASE_DIR / engine / f"env_{env}.cfg"
     if not env_file.is_file():
-        logger.warning('Environment file %s not found for engine "%s".', env_file, engine)
+        logger.warning(
+            'Environment file %s not found for engine "%s".', env_file, engine
+        )
         return
 
     logger.info("Loading environment variables from %s", env_file)
@@ -126,7 +126,7 @@ def load_env(engine: str, env: str) -> None:
         if line and not line.startswith("#"):
             if "=" not in line:
                 raise EnvironmentFileError(
-                    "Invalid line %d in %s: %s" % (line_number, env_file, line)
+                    f"Invalid line {line_number} in {env_file}: {line}"
                 )
             key, value = line.split("=", 1)
             key = key.strip()
@@ -134,7 +134,7 @@ def load_env(engine: str, env: str) -> None:
             if key in os.environ:
                 logger.warning(
                     "Overriding existing environment variable: %s (expected if reloading configs)",
-                    key
+                    key,
                 )
             os.environ[key] = value
 
@@ -158,7 +158,7 @@ def get_engine_dir(engine: str) -> Path:
     """
     engine_dir = BASE_DIR / engine
     if not engine_dir.is_dir():
-        raise EngineError('Engine "%s" not found under %s/' % (engine, BASE_DIR))
+        raise EngineError(f'Engine "{engine}" not found under {BASE_DIR}/')
     return engine_dir
 
 
@@ -186,9 +186,8 @@ def run_script(engine: str, command: str, env: str, debug: bool) -> None:
     if not script_path.is_file():
         available_scripts = [f.name for f in engine_dir.glob("*.sh")]
         raise EngineError(
-            'Script "%s" not found for engine "%s". '
-            "Available scripts: %s"
-            % (script_name, engine, available_scripts)
+            f'Script "{script_name}" not found for engine "{engine}". '
+            f"Available scripts: {available_scripts}"
         )
 
     load_env(engine, env)
@@ -203,9 +202,8 @@ def run_script(engine: str, command: str, env: str, debug: bool) -> None:
             logger.debug("STDERR:\n%s", result.stderr)
     except subprocess.CalledProcessError as e:
         raise ScriptExecutionError(
-            'Script "%s" failed with exit code %d\n'
-            "STDOUT:\n%s\nSTDERR:\n%s"
-            % (script_name, e.returncode, e.stdout, e.stderr)
+            f'Script "{script_name}" failed with exit code {e.returncode}\n'
+            f"STDOUT:\n{e.stdout}\nSTDERR:\n{e.stderr}"
         )
 
 
@@ -290,7 +288,7 @@ def main() -> None:
         if args.debug or os.environ.get("RAGCTL_DEBUG") == "1":
             logging.getLogger().setLevel(logging.DEBUG)
             logger.debug("Debug logging enabled")
-        
+
         if args.list_commands:
             if args.engine:
                 cmds = discover_commands(args.engine)
@@ -304,7 +302,7 @@ def main() -> None:
             sys.exit(1)
 
         if args.engine not in available_engines:
-            raise EngineError("Unknown engine: %s" % args.engine)
+            raise EngineError(f"Unknown engine: {args.engine}")
 
         run_script(args.engine, args.command, args.env, args.debug)
 
