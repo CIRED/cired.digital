@@ -1,21 +1,20 @@
 """
-scrape.py.
+Obtain the list of CIRED records from HAL.
 
-Query the HAL API to obtain the list of CIRED records
+Query archive-ouvertes.fr using the HAL API
+Use pagination to handle large result sets
 Process the list to separate irrelevant ones related to the homonymous CIRED conference
 Save into two JSON files
-Includes URL of PDF files when available
-Uses pagination to handle large result sets
+Include URL of PDF files when available
 
-minh.ha-duong@cnrs.fr, 2024 CC-BY-SA
-Modified version
+minh.ha-duong@cnrs.fr, 2024-2025 CC-BY-SA
 """
 
 import html
 import json
 import logging
-import os
 import time
+from pathlib import Path
 
 import requests
 
@@ -27,13 +26,15 @@ logging.basicConfig(
 logging.getLogger("requests").setLevel(logging.DEBUG)
 logging.getLogger("urllib3").setLevel(logging.DEBUG)
 
-
-BASE_DIR = os.path.dirname(__file__)
-OUT_FILENAME = os.path.join(BASE_DIR, "../data/publications.json")
-OTHER_FILENAME = os.path.join(BASE_DIR, "../data/conference.json")
+DATA_DIR = Path(__file__).parent.parent / "data"
+PUBLICATIONS_PATH = DATA_DIR / "publications.json"
+CONFERENCE_PATH = DATA_DIR / "conference.json"
 HAL_API_URL = "https://api.archives-ouvertes.fr/search/"
 
 # Query for all CIRED publications without time restriction
+# TODO: try other requests potentially avoiding the homonymous problem:
+#   lab= ...(by name(s), by reference(s)
+#   collection= ...
 QUERY = "CIRED"
 
 # Pagination settings
@@ -65,19 +66,28 @@ def process_publications(publications: list[dict]) -> None:
         else:
             related_publications.append(pub)
 
-    with open(OUT_FILENAME, "w", encoding="utf-8") as file:
-        json.dump(related_publications, file, ensure_ascii=False, indent=4)
+    # Ensure output directories exist
+    PUBLICATIONS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    CONFERENCE_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-    with open(OTHER_FILENAME, "w", encoding="utf-8") as file:
-        json.dump(unrelated_cired_communications, file, ensure_ascii=False, indent=4)
+    PUBLICATIONS_PATH.write_text(
+        json.dumps(related_publications, ensure_ascii=False, indent=4), encoding="utf-8"
+    )
+
+    CONFERENCE_PATH.write_text(
+        json.dumps(unrelated_cired_communications, ensure_ascii=False, indent=4),
+        encoding="utf-8",
+    )
 
     logging.info(
-        f"Found {len(related_publications)} CIRED lab publications saved to %s",
-        OUT_FILENAME,
+        "Found %d CIRED lab publications saved to %s",
+        len(related_publications),
+        PUBLICATIONS_PATH,
     )
     logging.info(
-        f"Found {len(unrelated_cired_communications)} unrelated CIRED conference communications saved to %s",
-        OTHER_FILENAME,
+        "Found %d unrelated CIRED conference communications saved to %s",
+        len(unrelated_cired_communications),
+        CONFERENCE_PATH,
     )
 
 
@@ -95,10 +105,14 @@ def get_paginated_publications(base_params: dict) -> list[dict]:
 
         try:
             logging.debug(
-                f"Fetching batch {current_batch + 1}/{MAX_BATCHES} (records {params['start']}-{params['start'] + BATCH_SIZE - 1})"
+                "Fetching batch %d/%d (records %d-%d)",
+                current_batch + 1,
+                MAX_BATCHES,
+                params["start"],
+                params["start"] + BATCH_SIZE - 1,
             )
             logging.debug(
-                f"Request URL: {HAL_API_URL}?{requests.compat.urlencode(params)}"
+                "Request URL: %s?%s", HAL_API_URL, requests.compat.urlencode(params)
             )
             response = requests.get(HAL_API_URL, params=params, timeout=60)
             response.raise_for_status()
@@ -112,9 +126,10 @@ def get_paginated_publications(base_params: dict) -> list[dict]:
 
             all_publications.extend(batch_publications)
             logging.info(
-                f"Retrieved {len(batch_publications)} records in this batch. Total so far: {len(all_publications)}"
+                "Retrieved %d records in this batch. Total so far: %d",
+                len(batch_publications),
+                len(all_publications),
             )
-
             # Check if we've reached the end of available records
             if len(batch_publications) < BATCH_SIZE:
                 logging.info("Reached end of available records.")
@@ -124,19 +139,19 @@ def get_paginated_publications(base_params: dict) -> list[dict]:
             time.sleep(1)
 
         except requests.exceptions.Timeout:
-            logging.error("La requête HAL a timed out. Essayez plus tard svp.")
+            logging.error("HAL request timed out. Please try again later.")
             break
         except requests.exceptions.HTTPError as err:
-            logging.error("HTTP error dans la requête à HAL %s: ", str(err))
+            logging.error("HTTP error in HAL request: %s", str(err))
             break
         except requests.exceptions.RequestException as e:
-            logging.error("Une exception s'est produite en scrapant HAL: %s", str(e))
+            logging.error("An exception occured while scraping HAL: %s", str(e))
             break
 
         current_batch += 1
 
     logging.info(
-        f"Pagination complete. Retrieved a total of {len(all_publications)} records."
+        "Pagination complete. Retrieved a total of %d records.", len(all_publications)
     )
     return all_publications
 

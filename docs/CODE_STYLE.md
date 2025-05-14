@@ -191,6 +191,15 @@ Naming follows the conventions defined in [PEP 8 – Style Guide for Python Code
 
 ---
 
+### 📁 File and I/O operations
+
+- Always use `pathlib` for file and directory operations instead of the old `os.path`.
+- Always specify `encoding="utf-8"` when creating, opening, reading or writing text files to avoid warnings and ensure consistent behavior across platforms.
+- Use logging, not printing
+- Use percent-style strings in logging, not f-strings.
+
+---
+
 ### Placeholder
 #### async
 #### CI/CD

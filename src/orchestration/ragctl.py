@@ -31,8 +31,9 @@ import argparse
 import os
 import subprocess
 import sys
+from pathlib import Path
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = Path(__file__).resolve().parent
 
 
 class EngineError(Exception):
@@ -57,18 +58,15 @@ def discover_engines() -> list[str]:
 
     """
     engines = []
-    for entry in os.listdir(BASE_DIR):
-        engine_dir = os.path.join(BASE_DIR, entry)
-        if (
-            os.path.isdir(engine_dir)
-            and not entry.startswith("_")
-            and entry not in {"__pycache__"}
-            and (
-                os.path.exists(os.path.join(engine_dir, "env_dev.cfg"))
-                or os.path.exists(os.path.join(engine_dir, "start.sh"))
-            )
-        ):
-            engines.append(entry)
+    for entry in BASE_DIR.iterdir():
+        if not entry.is_dir():
+            continue
+        if entry.name.startswith("_"):
+            continue
+        # must have at least one of these files
+        if not ((entry / "env_dev.cfg").exists() or (entry / "start.sh").exists()):
+            continue
+        engines.append(entry.name)
     return sorted(engines)
 
 
@@ -85,12 +83,10 @@ def discover_commands(engine: str) -> list[str]:
         A list of available command names.
 
     """
-    engine_dir = os.path.join(BASE_DIR, engine)
-    if not os.path.isdir(engine_dir):
+    engine_dir = BASE_DIR / engine
+    if not engine_dir.is_dir():
         return []
-    return sorted(
-        f[:-3].replace("_", "-") for f in os.listdir(engine_dir) if f.endswith(".sh")
-    )
+    return sorted(f.stem.replace("_", "-") for f in engine_dir.glob("*.sh"))
 
 
 def load_env(engine: str, env: str) -> None:
@@ -107,31 +103,31 @@ def load_env(engine: str, env: str) -> None:
         EnvironmentFileError: If an invalid line is found in the environment file.
 
     """
-    env_file = os.path.join(BASE_DIR, engine, f"env_{env}.cfg")
-    if not os.path.isfile(env_file):
+    env_file = BASE_DIR / engine / f"env_{env}.cfg"
+    if not env_file.is_file():
         print(f'[WARN] Environment file {env_file} not found for engine "{engine}".')
         return
 
     print(f"[INFO] Loading environment variables from {env_file}")
-    with open(env_file, encoding="utf-8") as f:
-        for line_number, line in enumerate(f, start=1):
-            line = line.strip()
-            if line and not line.startswith("#"):
-                if "=" not in line:
-                    raise EnvironmentFileError(
-                        f"Invalid line {line_number} in {env_file}: {line}"
-                    )
-                key, value = line.split("=", 1)
-                key = key.strip()
-                value = value.strip().strip('"').strip("'")
-                if key in os.environ:
-                    print(
-                        f"[WARN] Overriding existing environment variable: {key} (expected if reloading configs)"
-                    )
-                os.environ[key] = value
+    env_text = env_file.read_text(encoding="utf-8")
+    for line_number, line in enumerate(env_text.splitlines(), start=1):
+        line = line.strip()
+        if line and not line.startswith("#"):
+            if "=" not in line:
+                raise EnvironmentFileError(
+                    f"Invalid line {line_number} in {env_file}: {line}"
+                )
+            key, value = line.split("=", 1)
+            key = key.strip()
+            value = value.strip().strip('"').strip("'")
+            if key in os.environ:
+                print(
+                    f"[WARN] Overriding existing environment variable: {key} (expected if reloading configs)"
+                )
+            os.environ[key] = value
 
 
-def get_engine_dir(engine: str) -> str:
+def get_engine_dir(engine: str) -> Path:
     """
     Get the filesystem path for a given engine.
 
@@ -141,16 +137,16 @@ def get_engine_dir(engine: str) -> str:
 
     Returns:
     -------
-        The absolute path to the engine directory.
+        The Path object to the engine directory.
 
     Raises:
     ------
         EngineError: If the engine directory does not exist.
 
     """
-    engine_dir = os.path.join(BASE_DIR, engine)
-    if not os.path.isdir(engine_dir):
-        raise EngineError(f'Engine "{engine}" not found under orchestration/')
+    engine_dir = BASE_DIR / engine
+    if not engine_dir.is_dir():
+        raise EngineError(f'Engine "{engine}" not found under {BASE_DIR}/')
     return engine_dir
 
 
@@ -173,10 +169,10 @@ def run_script(engine: str, command: str, env: str, debug: bool) -> None:
     """
     engine_dir = get_engine_dir(engine)
     script_name = f"{command.replace('-', '_')}.sh"
-    script_path = os.path.join(engine_dir, script_name)
+    script_path = engine_dir / script_name
 
-    if not os.path.isfile(script_path):
-        available_scripts = [f for f in os.listdir(engine_dir) if f.endswith(".sh")]
+    if not script_path.is_file():
+        available_scripts = [f.name for f in engine_dir.glob("*.sh")]
         raise EngineError(
             f'Script "{script_name}" not found for engine "{engine}". '
             f"Available scripts: {available_scripts}"
@@ -187,7 +183,7 @@ def run_script(engine: str, command: str, env: str, debug: bool) -> None:
     print(f"[INFO] Running {script_name} for {engine} in {env} environment...")
     try:
         result = subprocess.run(
-            ["bash", script_path, env], check=True, capture_output=True, text=True
+            ["bash", str(script_path), env], check=True, capture_output=True, text=True
         )
         if debug:
             print(f"[DEBUG] STDOUT:\n{result.stdout}")
@@ -230,7 +226,7 @@ def main() -> None:
     """
     Entry point of the CLI tool.
 
-    Discover availableengines, parse arguments, and dispatch lifecycle commands.
+    Discover available engines, parse arguments, and dispatch lifecycle commands.
 
     Raises
     ------
@@ -267,7 +263,7 @@ def main() -> None:
         parser.add_argument(
             "--list-commands",
             action="store_true",
-            help="List available commands for the specified engine.",
+            help="List available commands for the specified engine (for all engines if none is given).",
         )
 
         if len(sys.argv) == 1:
@@ -277,7 +273,11 @@ def main() -> None:
         args = parser.parse_args()
 
         if args.list_commands:
-            list_available_engines_and_commands(available_engines)
+            if args.engine:
+                cmds = discover_commands(args.engine)
+                print(f"Commands for {args.engine}: {cmds or '(none)'}")
+            else:
+                list_available_engines_and_commands(available_engines)
             sys.exit(0)
 
         if not args.command or not args.engine:
