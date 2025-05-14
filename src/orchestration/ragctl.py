@@ -28,12 +28,24 @@ It uses only the standard Python library.
 """
 
 import argparse
+import logging
 import os
 import subprocess
 import sys
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
+
+# Configure logging for operational/debug logs
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S',
+    handlers=[
+        logging.StreamHandler(sys.stderr)
+    ]
+)
+logger = logging.getLogger(__name__)
 
 
 class EngineError(Exception):
@@ -63,8 +75,7 @@ def discover_engines() -> list[str]:
             continue
         if entry.name.startswith("_"):
             continue
-        # must have at least one of these files
-        if not ((entry / "env_dev.cfg").exists() or (entry / "start.sh").exists()):
+        if not (entry / "start.sh").exists():
             continue
         engines.append(entry.name)
     return sorted(engines)
@@ -105,24 +116,25 @@ def load_env(engine: str, env: str) -> None:
     """
     env_file = BASE_DIR / engine / f"env_{env}.cfg"
     if not env_file.is_file():
-        print(f'[WARN] Environment file {env_file} not found for engine "{engine}".')
+        logger.warning('Environment file %s not found for engine "%s".', env_file, engine)
         return
 
-    print(f"[INFO] Loading environment variables from {env_file}")
+    logger.info("Loading environment variables from %s", env_file)
     env_text = env_file.read_text(encoding="utf-8")
     for line_number, line in enumerate(env_text.splitlines(), start=1):
         line = line.strip()
         if line and not line.startswith("#"):
             if "=" not in line:
                 raise EnvironmentFileError(
-                    f"Invalid line {line_number} in {env_file}: {line}"
+                    "Invalid line %d in %s: %s" % (line_number, env_file, line)
                 )
             key, value = line.split("=", 1)
             key = key.strip()
             value = value.strip().strip('"').strip("'")
             if key in os.environ:
-                print(
-                    f"[WARN] Overriding existing environment variable: {key} (expected if reloading configs)"
+                logger.warning(
+                    "Overriding existing environment variable: %s (expected if reloading configs)",
+                    key
                 )
             os.environ[key] = value
 
@@ -146,7 +158,7 @@ def get_engine_dir(engine: str) -> Path:
     """
     engine_dir = BASE_DIR / engine
     if not engine_dir.is_dir():
-        raise EngineError(f'Engine "{engine}" not found under {BASE_DIR}/')
+        raise EngineError('Engine "%s" not found under %s/' % (engine, BASE_DIR))
     return engine_dir
 
 
@@ -174,24 +186,26 @@ def run_script(engine: str, command: str, env: str, debug: bool) -> None:
     if not script_path.is_file():
         available_scripts = [f.name for f in engine_dir.glob("*.sh")]
         raise EngineError(
-            f'Script "{script_name}" not found for engine "{engine}". '
-            f"Available scripts: {available_scripts}"
+            'Script "%s" not found for engine "%s". '
+            "Available scripts: %s"
+            % (script_name, engine, available_scripts)
         )
 
     load_env(engine, env)
 
-    print(f"[INFO] Running {script_name} for {engine} in {env} environment...")
+    logger.info("Running %s for %s in %s environment...", script_name, engine, env)
     try:
         result = subprocess.run(
             ["bash", str(script_path), env], check=True, capture_output=True, text=True
         )
         if debug:
-            print(f"[DEBUG] STDOUT:\n{result.stdout}")
-            print(f"[DEBUG] STDERR:\n{result.stderr}")
+            logger.debug("STDOUT:\n%s", result.stdout)
+            logger.debug("STDERR:\n%s", result.stderr)
     except subprocess.CalledProcessError as e:
         raise ScriptExecutionError(
-            f'Script "{script_name}" failed with exit code {e.returncode}\n'
-            f"STDOUT:\n{e.stdout}\nSTDERR:\n{e.stderr}"
+            'Script "%s" failed with exit code %d\n'
+            "STDOUT:\n%s\nSTDERR:\n%s"
+            % (script_name, e.returncode, e.stdout, e.stderr)
         )
 
 
@@ -258,7 +272,7 @@ def main() -> None:
         parser.add_argument(
             "--debug",
             action="store_true",
-            help="Enable debug output (show full script stdout/stderr).",
+            help="Enable debug logging level and show script output.",
         )
         parser.add_argument(
             "--list-commands",
@@ -272,6 +286,11 @@ def main() -> None:
 
         args = parser.parse_args()
 
+        # Set debug level based on arguments or environment variable
+        if args.debug or os.environ.get("RAGCTL_DEBUG") == "1":
+            logging.getLogger().setLevel(logging.DEBUG)
+            logger.debug("Debug logging enabled")
+        
         if args.list_commands:
             if args.engine:
                 cmds = discover_commands(args.engine)
@@ -285,13 +304,19 @@ def main() -> None:
             sys.exit(1)
 
         if args.engine not in available_engines:
-            raise EngineError(f"Unknown engine: {args.engine}")
+            raise EngineError("Unknown engine: %s" % args.engine)
 
         run_script(args.engine, args.command, args.env, args.debug)
 
     except (EngineError, EnvironmentFileError, ScriptExecutionError) as e:
-        print(f"[ERROR] {e}")
+        logger.error("%s", e)
         sys.exit(1)
+    except KeyboardInterrupt:
+        logger.info("Operation cancelled by user")
+        sys.exit(130)
+    except Exception as e:
+        logger.exception("Unexpected error: %s", e)
+        sys.exit(2)
 
 
 if __name__ == "__main__":

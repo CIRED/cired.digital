@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
-source "./common_config.sh"
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+cd "$SCRIPT_DIR"
+source "$SCRIPT_DIR/common_config.sh"
 trap 'log "❌ An unexpected error occurred."' ERR
 
 # Require root, we may have to restart dockerd and kill processes
