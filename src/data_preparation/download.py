@@ -17,22 +17,17 @@ Dependencies:
     - time: For introducing delays between downloads.
 """
 
-from __future__ import annotations
-
 import hashlib
 import json
 import logging
-import os
 import time
 from pathlib import Path
 
 import requests
 
-# Base path config
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-DATA_DIR = os.path.join(BASE_DIR, "../data")
-PDF_DIR = Path(os.path.join(DATA_DIR, "pdfs"))
-PUBLICATIONS_FILE = os.path.join(DATA_DIR, "publications.json")
+DATA_DIR = Path(__file__).parent / "../data"
+PDF_DIR = DATA_DIR / "pdfs"
+PUBLICATIONS_FILE = DATA_DIR / "publications.json"
 
 # Download settings
 DELAY_BETWEEN_DOWNLOADS = 1  # seconds
@@ -40,8 +35,7 @@ TIMEOUT = 60  # seconds
 
 # Logging setup
 logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
 # Create directories if they don't exist
@@ -50,34 +44,36 @@ PDF_DIR.mkdir(parents=True, exist_ok=True)
 
 def sanitize_filename(text: str) -> str:
     """
-    Convertit un texte en un nom de fichier sécurisé.
+    Converts text into a safe filename.
 
     Args:
     ----
-        text: Texte à convertir en nom de fichier.
+        text: Text to convert into a filename.
 
     Returns:
     -------
-        Nom de fichier sécurisé ne contenant que des caractères alphanumériques,
-        des espaces, des points et des underscores.
+        Safe filename containing only alphanumeric characters,
+        spaces, periods, and underscores.
 
     """
-    return "".join(c if c.isalnum() or c in (' ', '.', '_') else '_' for c in text).strip()
+    return "".join(
+        c if c.isalnum() or c in (" ", ".", "_") else "_" for c in text
+    ).strip()
 
 
 def get_pdf_filename(entry: dict) -> Path:
     """
-    Génère un nom de fichier pour une publication.
+    Generates a filename for a publication.
 
-    Utilise l'ID HAL si disponible, sinon génère un hash à partir de l'URL du PDF.
+    Uses the HAL ID if available, otherwise generates a hash from the PDF URL.
 
     Args:
     ----
-        entry: Dictionnaire contenant les informations d'une publication.
+        entry: Dictionary containing publication information.
 
     Returns:
     -------
-        Chemin du fichier PDF.
+        Path to the PDF file.
 
     """
     if "halId_s" in entry:
@@ -89,16 +85,16 @@ def get_pdf_filename(entry: dict) -> Path:
 
 def download_pdf(url: str, target_path: Path) -> bool:
     """
-    Télécharge un PDF à partir d'une URL.
+    Downloads a PDF from a URL.
 
     Args:
     ----
-        url: URL du PDF à télécharger.
-        target_path: Chemin où sauvegarder le PDF.
+        url: URL of the PDF to download.
+        target_path: Path where to save the PDF.
 
     Returns:
     -------
-        True si le téléchargement a réussi, False sinon.
+        True if the download was successful, False otherwise.
 
     """
     temp_path = target_path.with_suffix(".tmp")
@@ -106,14 +102,14 @@ def download_pdf(url: str, target_path: Path) -> bool:
     try:
         with requests.get(url, stream=True, timeout=TIMEOUT) as r:
             r.raise_for_status()
-            with open(temp_path, 'wb') as f:
+            with open(temp_path, "wb") as f:
                 for chunk in r.iter_content(chunk_size=8192):
                     f.write(chunk)
         temp_path.rename(target_path)
-        logging.info(f"Downloaded: {target_path.name}")
+        logging.info("Downloaded: %s", target_path.name)
         return True
     except Exception as e:
-        logging.warning(f"Failed to download {url}: {e}")
+        logging.warning("Failed to download %s: %s", url, e)
         if temp_path.exists():
             temp_path.unlink()
         return False
@@ -121,17 +117,16 @@ def download_pdf(url: str, target_path: Path) -> bool:
 
 def main() -> None:
     """
-    Fonction principale pour télécharger les PDFs des publications.
+    Main function for downloading publication PDFs.
 
-    Lit le fichier des publications, parcourt chaque entrée, et télécharge
-    les PDFs correspondants s'ils ne sont pas déjà présents localement.
+    Reads the publications file, iterates through each entry, and downloads
+    the corresponding PDFs if they are not already locally present.
     """
-    if not os.path.exists(PUBLICATIONS_FILE):
-        logging.error(f"Missing input file: {PUBLICATIONS_FILE}")
+    if not PUBLICATIONS_FILE.exists():
+        logging.error("Missing input file: %s", PUBLICATIONS_FILE)
         return
 
-    with open(PUBLICATIONS_FILE, encoding='utf-8') as f:
-        publications = json.load(f)
+    publications = json.loads(PUBLICATIONS_FILE.read_text(encoding="utf-8"))
 
     total = 0
     skipped = 0
@@ -146,7 +141,7 @@ def main() -> None:
         target_file = get_pdf_filename(entry)
 
         if target_file.exists():
-            logging.info(f"Already exists, skipping: {target_file.name}")
+            logging.info("Already exists, skipping: %s", target_file.name)
             skipped += 1
             continue
 
@@ -160,12 +155,11 @@ def main() -> None:
         time.sleep(DELAY_BETWEEN_DOWNLOADS)
 
     logging.info("Download summary:")
-    logging.info(f"  Total attempted: {total}")
-    logging.info(f"  Downloaded: {downloaded}")
-    logging.info(f"  Skipped: {skipped}")
-    logging.info(f"  Failed: {failed}")
+    logging.info("  Total attempted: %d", total)
+    logging.info("  Downloaded: %d", downloaded)
+    logging.info("  Skipped: %d", skipped)
+    logging.info("  Failed: %d", failed)
 
 
 if __name__ == "__main__":
     main()
-

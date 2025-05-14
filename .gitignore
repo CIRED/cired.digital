@@ -89,3 +89,4 @@ Thumbs.db
 # Keep certain files even if they match patterns above
 !data/.gitkeep
 !reports/.gitkeep
+.aider*
