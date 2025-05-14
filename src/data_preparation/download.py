@@ -44,7 +44,7 @@ PDF_DIR.mkdir(parents=True, exist_ok=True)
 
 def sanitize_filename(text: str) -> str:
     """
-    Converts text into a safe filename.
+    Convert text into a safe filename.
 
     Args:
     ----
@@ -63,7 +63,7 @@ def sanitize_filename(text: str) -> str:
 
 def get_pdf_filename(entry: dict) -> Path:
     """
-    Generates a filename for a publication.
+    Generate a filename for a publication.
 
     Uses the HAL ID if available, otherwise generates a hash from the PDF URL.
 
@@ -85,7 +85,7 @@ def get_pdf_filename(entry: dict) -> Path:
 
 def download_pdf(url: str, target_path: Path) -> bool:
     """
-    Downloads a PDF from a URL.
+    Download one PDF from a URL.
 
     Args:
     ----
@@ -117,7 +117,7 @@ def download_pdf(url: str, target_path: Path) -> bool:
 
 def main() -> None:
     """
-    Main function for downloading publication PDFs.
+    Download all publication PDFs.
 
     Reads the publications file, iterates through each entry, and downloads
     the corresponding PDFs if they are not already locally present.
