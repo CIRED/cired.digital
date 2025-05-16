@@ -39,8 +39,11 @@ env/
 .ropeproject/
 
 # Data files
-data/raw/*
-!data/raw/.gitkeep
+data/source/*
+data/prepared/*
+data/active/*
+!data/active/.gitkeep
+data/archived/*
 *.json
 *.csv
 *.xls
