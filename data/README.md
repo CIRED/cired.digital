@@ -1,31 +1,65 @@
-# cired.digital/code/data directory organization
+# cired.digital/data directory organization
 
-Raw and processed data.
-Contents not versionned in the git.
+CIRED publications data at various stages of cooking. The directory follows a lifecycle-oriented approach.
+Contents not versioned in git.
 
-## raw
+## source
 
-For the downloaded files
+Original files downloaded from various sources:
 
 **hal** contains contents automatically downloaded from HAL, along with metadata.
 
-**inari_data_CIRED_numerisation_zotero_www** contains a read-only copy of pre-1998 publications, scanned OCRed. Remains to be processed.
+**inari_data_CIRED_numerisation_zotero_www** contains a read-only copy of pre-1998 publications, scanned and OCRed. Remains to be processed. Note: This package includes documents with LEESU in the filename that are not relevant to CIRED.
 
-**inari_recueil_50ans_CIRED** will contain the selected most representative articles.
+**inari_recueil_50ans_CIRED** contains the collection of articles selected fifteen years ago by CIRED members as representative works, then refined into the 50th anniversary collection.
 
-## processed
+## prepared
 
-Nothing at the moment. To start the project, focus on using the HAL collection to setup the proof of concept. We can always push the manually downloaded archives later.
+Processed versions of source data ready for the RAG system:
 
-Ideally the manually downloaded archives should not exist. They should be sent into HAL.
+- Extracted text from PDFs (some is already available in HF dataset)
+- Text chunks, enriched
+- Metadata normalization
 
-Nothing at the moment. But there will be a need to smart deduplicate, the files are properly named and organized.
+*Currently empty.* Initial project focus is on the HAL collection for proof of concept.
 
-We should look if ENPC did anything to the data that is not on inari. Since zotero is mentionned there may be metadata indexing somewhere.
+## active
+
+Live operational data for the running chatbot:
+
+- Docker volume contents
+- Database files with  generated embeddings and vector indexes
+- Search indexes
+- Active caches
+
+*Managed by Docker containers.*
+
+## archived
+
+Timestamped snapshots of the active system state:
+
+- Used for backup and recovery
+- Used for deployment in production and rollback
+- Version history of the system state
+
+*Created by snapshot scripts for deployment.*
 
 ---
 
-## Note:
+## Implementation Notes:
+
+### Deduplication Strategy
+We need smart deduplication since some documents appear in multiple source collections with different filenames.
+
+### Pre-1998 Archives
+The manually scanned archives should ideally be uploaded to HAL rather than processed separately.
+
+### ENPC Processing
+We should investigate if École des Ponts et Chaussées applied any processing to the inari data, particularly metadata indexing via Zotero.
+
+---
+
+## Source Note:
 
 From:	Pottier Antonin <antonin.pottier@ehess.fr>
 To:	Minh Ha Duong <minh@haduong.com>
@@ -43,13 +77,11 @@ aussi sur inari:
 
 Attention dans ce paquet il y a des documents avec LEESU dans le nom de fichier qui ne concernent pas le CIRED.
 
-
 ensuite, la centaine d'articles sélectionnés il y a quinze ans par les membres du CIRED car considérés comme marquants. Nous les avons lus et avons choisis les articles qui figurent dans ce recueil.
 Ils sont disponibles sur inari:
 /var/www/html/Wehurei6-recueil_50ans_CIRED
 
 Certains documents se retrouvent dans les deux, éventuellement avec des noms de fichiers différents.
-
 
 A bientôt,
 

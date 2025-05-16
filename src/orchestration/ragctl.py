@@ -12,9 +12,9 @@ Features:
 
 Available Commands:
   install                 Install/setup the RAG engine.
-  start                   Start the RAG engine.
+  up                      Create the containers and start the RAG engine.
   validate                Validate that the engine is running correctly.
-  stop                    Stop the RAG engine.
+  down                    Stop the RAG engine, remove containers.
   clean                   Revert the directory to its clean state.
   push-index              Push the local index data to production.
 

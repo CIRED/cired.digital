@@ -4,7 +4,8 @@
 # 1. Validates a running docker installation
 # 2. Pull R2R docker configurations files from its GitHub repository
 # 3. Validates our local overrides files exist
-# 4. Pull R2R docker images
+# 4. Create required volume directories
+# 5. Pull R2R docker images
 
 set -euo pipefail
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
@@ -51,7 +52,7 @@ REPO_URL="https://github.com/SciPhi-AI/R2R.git"
 TEMP_DIR=".tmp_r2r_clone"
 TARGET_DIR="$SUBDIR"
 
-log "📥 Fetching $SUBDIR from $REPO_URL..."
+log "📥 Fetching directory $SUBDIR from $REPO_URL..."
 rm -rf "$TEMP_DIR"
 git clone --filter=blob:none --no-checkout "$REPO_URL" "$TEMP_DIR"
 cd "$TEMP_DIR"
@@ -88,6 +89,40 @@ log "📦 Project: $PROJECT_NAME"
 log "🔧 Compose file: $COMPOSE_FILE"
 log "🔧🔧 Override file: $OVERRIDE_FILE"
 log "🔑 Env file: $KEYS_FILE"
+
+#
+# 3. Create required volume directories
+#
+log "📁 Creating required volume directories..."
+
+# Check if VOLUMES_DIR exists
+if [[ ! -d "$VOLUMES_DIR" ]]; then
+  log "Creating volumes directory: $VOLUMES_DIR"
+  mkdir -p "$VOLUMES_DIR"
+fi
+
+# Create all required subdirectories for bind mounts
+REQUIRED_DIRS=(
+  "$VOLUMES_DIR/postgres_data"
+  "$VOLUMES_DIR/hatchet_rabbitmq_data"
+  "$VOLUMES_DIR/hatchet_rabbitmq_conf"
+  "$VOLUMES_DIR/hatchet_certs"
+  "$VOLUMES_DIR/hatchet_config"
+  "$VOLUMES_DIR/hatchet_api_key"
+  "$VOLUMES_DIR/hatchet_postgres_data"
+)
+
+for dir in "${REQUIRED_DIRS[@]}"; do
+  if [[ ! -d "$dir" ]]; then
+    log "Creating directory: $dir"
+    mkdir -p "$dir"
+    chmod 755 "$dir"
+  else
+    log "Directory already exists: $dir"
+  fi
+done
+
+log "✅ All required volume directories created."
 
 #
 # 4. Pull R2R images
