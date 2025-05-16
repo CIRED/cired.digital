@@ -73,7 +73,7 @@ def discover_engines() -> list[str]:
             continue
         if entry.name.startswith("_"):
             continue
-        if not (entry / "start.sh").exists():
+        if not (entry / "up.sh").exists():
             continue
         engines.append(entry.name)
     return sorted(engines)
