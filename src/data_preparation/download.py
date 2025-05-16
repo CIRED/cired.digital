@@ -24,19 +24,16 @@ import time
 from pathlib import Path
 
 import requests
-
-DATA_DIR = Path(__file__).parent / "../data"
-PDF_DIR = DATA_DIR / "pdfs"
-PUBLICATIONS_FILE = DATA_DIR / "publications.json"
-
-# Download settings
-DELAY_BETWEEN_DOWNLOADS = 1  # seconds
-TIMEOUT = 60  # seconds
-
-# Logging setup
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+from config import (
+    DOWNLOAD_CHUNK_SIZE,
+    DOWNLOAD_DELAY,
+    DOWNLOAD_TIMEOUT,
+    PDF_DIR,
+    PUBLICATIONS_FILE,
+    setup_logging,
 )
+
+setup_logging()
 
 # Create directories if they don't exist
 PDF_DIR.mkdir(parents=True, exist_ok=True)
@@ -100,10 +97,10 @@ def download_pdf(url: str, target_path: Path) -> bool:
     temp_path = target_path.with_suffix(".tmp")
 
     try:
-        with requests.get(url, stream=True, timeout=TIMEOUT) as r:
+        with requests.get(url, stream=True, timeout=DOWNLOAD_TIMEOUT) as r:
             r.raise_for_status()
             with open(temp_path, "wb") as f:
-                for chunk in r.iter_content(chunk_size=8192):
+                for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
                     f.write(chunk)
         temp_path.rename(target_path)
         logging.info("Downloaded: %s", target_path.name)
@@ -124,6 +121,7 @@ def main() -> None:
     """
     if not PUBLICATIONS_FILE.exists():
         logging.error("Missing input file: %s", PUBLICATIONS_FILE)
+        logging.error("Which is created by the query.py script.")
         return
 
     publications = json.loads(PUBLICATIONS_FILE.read_text(encoding="utf-8"))
@@ -152,7 +150,7 @@ def main() -> None:
         else:
             failed += 1
 
-        time.sleep(DELAY_BETWEEN_DOWNLOADS)
+        time.sleep(DOWNLOAD_DELAY)
 
     logging.info("Download summary:")
     logging.info("  Total attempted: %d", total)
