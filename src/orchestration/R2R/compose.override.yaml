@@ -6,28 +6,66 @@
 # - Finally, safely remove incompatible extra_hosts clause
 # - Fully define paths to images (for security)
 # - not touching the upstream compose file.
+# - Store volumes in ${VOLUMES_DIR} for snapshotting and rsync deployment
 
 volumes:
   postgres_data:
-    external: true
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${VOLUMES_DIR}/postgres_data
 
   hatchet_rabbitmq_data:
-    external: true
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${VOLUMES_DIR}/hatchet_rabbitmq_data
 
   hatchet_rabbitmq_conf:
-    external: true
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${VOLUMES_DIR}/hatchet_rabbitmq_conf
 
   hatchet_certs:
-    external: true
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${VOLUMES_DIR}/hatchet_certs
 
   hatchet_config:
-    external: true
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${VOLUMES_DIR}/hatchet_config
 
   hatchet_api_key:
-    external: true
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${VOLUMES_DIR}/hatchet_api_key
 
   hatchet_postgres_data:
-    external: true
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${VOLUMES_DIR}/hatchet_postgres_data
+
+  # NOTE: MinIO service exists in full compose but is not currently used
+  # If MinIO is ever needed, its volume should follow the same bind mount pattern:
+  # minio_data:
+  #   driver: local
+  #   driver_opts:
+  #     type: none
+  #     o: bind
+  #     device: ${VOLUMES_DIR}/minio_data
 
 services:
   r2r:

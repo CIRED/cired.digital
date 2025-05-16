@@ -15,6 +15,9 @@ OVERRIDE_FILE="${SCRIPT_DIR}/compose.override.yaml"
 KEYS_FILE="${SCRIPT_DIR}/../../../../credentials/API_KEYS"
 VENV_DIR="${SCRIPT_DIR}/venv"
 
+# Volume settings (exported, it needs to be available to docker compose)
+export VOLUMES_DIR="$(realpath "$SCRIPT_DIR/../../../data/active/R2R")"
+
 # Docker settings
 DOCKER_IMAGE="docker.io/sciphiai/r2r:latest"
 DASHBOARD_IMAGE="docker.io/sciphiai/r2r-dashboard:1.0.3"

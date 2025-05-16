@@ -15,6 +15,13 @@ cd "$SCRIPT_DIR"
 source "$SCRIPT_DIR/common_config.sh"
 trap 'log "❌ An unexpected error occurred."' ERR
 
+# Check if VOLUMES_DIR exists
+if [[ ! -d "$VOLUMES_DIR" ]]; then
+  log "Error: Volumes directory does not exist at $VOLUMES_DIR"
+  log "    Aborting, no need to start without the data."
+  exit 1
+fi
+
 # Validate we have docker
 if ! command -v docker &> /dev/null; then
   log "❌ Error: Docker is not installed or not in PATH."
