@@ -17,14 +17,6 @@ SNAPSHOT_FILE="${ARCHIVES_DIR}/${SNAPSHOT_PREFIX}.tar.gz"
 TEMP_DIR=$(mktemp -d)
 trap 'rm -rf "$TEMP_DIR"' EXIT
 
-# Logging function with timestamp and level
-log() {
-    local level="INFO"
-    if [[ "$1" == "-e" ]]; then level="ERROR"; shift
-    elif [[ "$1" == "-w" ]]; then level="WARN"; shift
-    elif [[ "$1" == "-d" ]]; then level="DEBUG"; shift; fi
-    echo -e "[$(date +'%Y-%m-%d %H:%M:%S')] [$level] $*" >&2
-}
 
 # Validate R2R state
 validate_r2r() {
