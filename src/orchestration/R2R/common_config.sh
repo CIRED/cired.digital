@@ -17,6 +17,9 @@ VENV_DIR="${SCRIPT_DIR}/venv"
 
 # Volume settings (exported, it needs to be available to docker compose)
 export VOLUMES_DIR="$(realpath "$SCRIPT_DIR/../../../data/active/R2R")"
+ARCHIVES_DIR="${VOLUMES_DIR}/archived/R2R"
+ACTIVE_DIR="${VOLUMES_DIR}/active/R2R"
+SNAPSHOT_PREFIX="snapshot_$(date +%F)"
 
 # Docker settings
 DOCKER_IMAGE="docker.io/sciphiai/r2r:latest"
