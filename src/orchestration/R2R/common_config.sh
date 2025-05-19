@@ -16,10 +16,33 @@ KEYS_FILE="${SCRIPT_DIR}/../../../../credentials/API_KEYS"
 VENV_DIR="${SCRIPT_DIR}/venv"
 
 # Volume settings (exported, it needs to be available to docker compose)
-export VOLUMES_DIR="$(realpath "$SCRIPT_DIR/../../../data/active/R2R")"
-ARCHIVES_DIR="${VOLUMES_DIR}/archived/R2R"
-ACTIVE_DIR="${VOLUMES_DIR}/active/R2R"
+export VOLUMES_BASE="$(realpath "$SCRIPT_DIR/../../../data")"
+export VOLUMES_DIR="${VOLUMES_BASE}/active/R2R"
+ARCHIVES_DIR="${VOLUMES_BASE}/archived/R2R"
+ACTIVE_DIR="${VOLUMES_DIR}"
 SNAPSHOT_PREFIX="snapshot_$(date +%F)"
+
+# Ensure directories exist
+mkdir -p "${VOLUMES_DIR}" "${ARCHIVES_DIR}"
+
+# Utility functions
+validate_dir() {
+    local dir="$1"
+    if [ ! -d "$dir" ]; then
+        log "ERROR: Directory $dir does not exist"
+        return 1
+    fi
+    return 0
+}
+
+validate_file() {
+    local file="$1"
+    if [ ! -f "$file" ]; then
+        log "ERROR: File $file does not exist"
+        return 1
+    fi
+    return 0
+}
 
 # Docker settings
 DOCKER_IMAGE="docker.io/sciphiai/r2r:latest"
