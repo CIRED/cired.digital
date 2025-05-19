@@ -59,3 +59,12 @@ SMOKE_DIR="${SCRIPT_DIR}/smoke-tests"
 TEST_FILE="test.txt"
 TEST_CONTENT="QuetzalX is a person that works at CIRED."
 TEST_QUERY="Who is QuetzalX?"
+
+# Enhanced logging function with levels (used by all scripts)
+log() {
+    local level="INFO"
+    if [[ "$1" == "-e" ]]; then level="ERROR"; shift
+    elif [[ "$1" == "-w" ]]; then level="WARN"; shift
+    elif [[ "$1" == "-d" ]]; then level="DEBUG"; shift; fi
+    echo -e "[$(date +'%Y-%m-%d %H:%M:%S')] [$level] $*" >&2
+}
