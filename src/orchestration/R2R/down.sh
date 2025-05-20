@@ -18,7 +18,7 @@ KILL_TIMEOUT=10       # how long to wait for `docker kill`
 FORCE_TIMEOUT=10
 
 log "1) Attempting graceful shutdown: docker compose down (timeout ${DOWN_TIMEOUT}s)…"
-if timeout "${DOWN_TIMEOUT}s" docker_compose_cmd down; then
+if timeout "${DOWN_TIMEOUT}s" docker compose --project-name "$PROJECT_NAME" -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" down; then
 
   log "✅ Compose down completed within ${DOWN_TIMEOUT}s."
   exit 0
@@ -29,7 +29,7 @@ fi
 log "2) Gathering still-running containers (timeout ${GATHER_TIMEOUT}s)…"
 # First try with docker compose ps
 CONTAINERS_RAW=""
-if timeout "${GATHER_TIMEOUT}s" docker_compose_cmd ps -q > /tmp/containers.raw 2>/dev/null; then
+if timeout "${GATHER_TIMEOUT}s" docker compose --project-name "$PROJECT_NAME" -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" ps -q > /tmp/containers.raw 2>/dev/null; then
   CONTAINERS_RAW=$(< /tmp/containers.raw)
 else
   log "⚠️  compose ps timed out or failed—falling back to 'docker ps' filter…"
