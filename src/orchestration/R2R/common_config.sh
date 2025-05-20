@@ -1,12 +1,20 @@
 #!/usr/bin/env bash
 # Common configuration for R2R orchestration scripts
+# Version: 1.1.0
+# Provides shared variables, functions and utilities for all R2R management scripts
 
-# Get the directory of this script
+# Strict mode and error handling
+set -o errexit
+set -o nounset
+set -o pipefail
+
+# Get the absolute path of this script
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-
-# Project settings
-export PROJECT_NAME="cidir2r"
+# --- Project Configuration ---
+# Change these values according to your deployment
+export PROJECT_NAME="cidir2r"  # Used as prefix for Docker resources
+export PROJECT_DESCRIPTION="CIRED R2R Deployment"
 SUBDIR="docker"
 COMPOSE_FILE="${SCRIPT_DIR}/docker/compose.full.yaml"
 OVERRIDE_FILE="${SCRIPT_DIR}/compose.override.yaml"
@@ -18,14 +26,28 @@ export VOLUMES_BASE="$(realpath "$SCRIPT_DIR/../../../data")"
 ARCHIVES_DIR="${VOLUMES_BASE}/archived/R2R"
 SNAPSHOT_PREFIX="snapshot_$(date +%F_%H%M%S)"
 
-# Docker compose command (used by all scripts)
+# Docker Compose Command Builder
+# Wrapper for consistent docker compose command usage across all scripts
 docker_compose_cmd() {
-  docker compose \
-    --project-name "$PROJECT_NAME" \
-    -f "$COMPOSE_FILE" \
-    -f "$OVERRIDE_FILE" \
-    --profile postgres \
-    "$@"
+    if ! validate_file "$COMPOSE_FILE" || ! validate_file "$OVERRIDE_FILE"; then
+        return 1
+    fi
+    
+    local cmd=(
+        docker compose
+        --project-name "$PROJECT_NAME"
+        -f "$COMPOSE_FILE" 
+        -f "$OVERRIDE_FILE"
+        --profile postgres
+    )
+    
+    # Add any passed arguments
+    cmd+=("$@")
+    
+    # Log the command in debug mode
+    log -d "Executing: ${cmd[*]}"
+    
+    "${cmd[@]}"
 }
 
 # Utility functions
@@ -65,11 +87,39 @@ TEST_FILE="test.txt"
 TEST_CONTENT="QuetzalX is a person that works at CIRED."
 TEST_QUERY="Who is QuetzalX?"
 
-# Enhanced logging function with levels (used by all scripts)
+# --- Logging Utilities ---
+# Usage: 
+#   log "info message"
+#   log -e "error message"
+#   log -w "warning message"
+#   log -d "debug message"
+#   log -s "success message" (green)
 log() {
     local level="INFO"
-    if [[ "$1" == "-e" ]]; then level="ERROR"; shift
-    elif [[ "$1" == "-w" ]]; then level="WARN"; shift
-    elif [[ "$1" == "-d" ]]; then level="DEBUG"; shift; fi
-    echo -e "[$(date +'%Y-%m-%d %H:%M:%S')] [$level] $*" >&2
+    local color="\033[0m"  # Default
+    
+    case "$1" in
+        -e) level="ERROR"; color="\033[0;31m"; shift ;;  # Red
+        -w) level="WARN"; color="\033[0;33m"; shift ;;   # Yellow
+        -d) level="DEBUG"; color="\033[0;36m"; shift ;;  # Cyan
+        -s) level="SUCCESS"; color="\033[0;32m"; shift ;; # Green
+    esac
+
+    echo -e "${color}[$(date +'%Y-%m-%d %H:%M:%S')] [$level] $*\033[0m" >&2
+}
+
+# Validate required environment variables
+validate_env() {
+    local missing=()
+    for var in "$@"; do
+        if [[ -z "${!var:-}" ]]; then
+            missing+=("$var")
+        fi
+    done
+    
+    if [[ ${#missing[@]} -gt 0 ]]; then
+        log -e "Missing required environment variables: ${missing[*]}"
+        return 1
+    fi
+    return 0
 }
