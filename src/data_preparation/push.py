@@ -1,6 +1,6 @@
 #!/usr/bin/env -S uvx --from r2r python3
 """
-Upload PDFs into an R2R instance.
+Upload PDFs with their metadata into an R2R instance.
 
 Requirements:
     - Python 3.8+
@@ -14,6 +14,8 @@ Exit codes:
 """
 
 import argparse
+import hashlib
+import json
 import logging
 import sys
 from collections import Counter
@@ -23,6 +25,7 @@ from config import (
     DEFAULT_MAX_UPLOAD,
     MAX_FILE_SIZE,
     PDF_DIR,
+    PUBLICATIONS_FILE,
     R2R_API_PAGINATION_LIMIT,
     R2R_DEFAULT_BASE_URL,
     setup_logging,
@@ -58,6 +61,17 @@ def get_args() -> argparse.Namespace:
         type=int,
         default=DEFAULT_MAX_UPLOAD,
         help="Maximum number of PDFs to upload (0 = dry run no upload).",
+    )
+    parser.add_argument(
+        "--metadata-file",
+        type=Path,
+        default=PUBLICATIONS_FILE,
+        help=f"JSON file containing metadata for publications. (default: {PUBLICATIONS_FILE})",
+    )
+    parser.add_argument(
+        "--no-metadata",
+        action="store_true",
+        help="Skip sending metadata with documents.",
     )
     parser.add_argument(
         "--verbose",
@@ -133,12 +147,103 @@ def get_existing_documents(client: R2RClient) -> dict[str, str]:
     return documents
 
 
+def load_metadata(metadata_file: Path) -> dict[str, dict]:
+    """
+    Load metadata from the publications JSON file.
+
+    Returns a dictionary where keys are filename stems (halId_s or hash) and
+    values are publication metadata dictionaries.
+    """
+    metadata_by_file = {}
+
+    if not metadata_file.exists():
+        logging.warning(f"Metadata file not found: {metadata_file}")
+        return metadata_by_file
+
+    try:
+        publications = json.loads(metadata_file.read_text(encoding="utf-8"))
+        for pub in publications:
+            # Generate the same filename as download.py does
+            if "halId_s" in pub:
+                # Create two keys - one with hyphen and one with underscore
+                hal_id = pub["halId_s"]
+                filename_hyphen = hal_id  # Original key with hyphen (hal-XXXXXX)
+                filename_underscore = hal_id.replace("-", "_")  # Alternative key with underscore (hal_XXXXXX)
+
+                metadata_by_file[filename_hyphen] = pub
+                metadata_by_file[filename_underscore] = pub
+            elif "pdf_url" in pub:
+                filename = hashlib.md5(pub["pdf_url"].encode()).hexdigest()
+                metadata_by_file[filename] = pub
+            else:
+                continue  # Skip if we can't determine filename
+
+        logging.info(f"Loaded metadata for {len(publications)} publications from {metadata_file}")
+    except Exception as e:
+        logging.error(f"Failed to load metadata file {metadata_file}: {str(e)}")
+
+    return metadata_by_file
+
+
+def first_if_list(value):
+    """
+    Return the string itself if it's a string, or the first element if it's a list of strings.
+
+    Use for potentially multilingual fields.
+    """
+    if isinstance(value, list) and value:
+        return value[0]
+    elif isinstance(value, str):
+        return value
+    return None
+
+
+def format_metadata_for_upload(metadata: dict) -> dict:
+    """
+    Format HAL metadata for R2R upload.
+
+    Convert HAL metadata fields to a format suitable for R2R.
+    """
+    r2r_metadata = {}
+
+    if (title := first_if_list(metadata.get("title_s"))):
+        r2r_metadata["title"] = title
+
+    if (citation := first_if_list(metadata.get("label_s"))):
+        r2r_metadata["citation"] = citation
+
+    if (abstract := first_if_list(metadata.get("abstract_s"))):
+        r2r_metadata["description"] = abstract
+
+    if (authors := metadata.get("authFullName_s")):
+        r2r_metadata["authors"] = authors if isinstance(authors, list) else [authors]
+
+    if (date := metadata.get("producedDate_tdate")):
+        r2r_metadata["publication_date"] = date
+
+    if (doi := metadata.get("doiId_s")):
+        r2r_metadata["doi"] = doi
+        r2r_metadata["source_url"] = f"https://doi.org/{doi}"
+
+    if (hal_id := metadata.get("halId_s")):
+        r2r_metadata["hal_id"] = hal_id
+        if "source_url" not in r2r_metadata:
+            r2r_metadata["source_url"] = f"https://hal.science/{hal_id}"
+
+    if (doc_type := metadata.get("docType_s")):
+        r2r_metadata["document_type"] = doc_type
+
+    return r2r_metadata
+
+
 def upload_pdfs(
     pdf_files: list[Path],
     client: R2RClient,
     existing_documents: dict[str, str],
+    metadata_by_file: dict[str, dict],
     collection: str = None,
     max_upload: int = 0,
+    include_metadata: bool = True,
 ) -> tuple[int, int, list[tuple[Path, str]]]:
     """Upload new PDFs and skip existing ones. Stop after max_upload successful uploads if set."""
     success_count = 0
@@ -146,7 +251,7 @@ def upload_pdfs(
     failed_files = []
 
     for pdf_file in pdf_files:
-        if success_count >= max_upload:
+        if max_upload > 0 and success_count >= max_upload:
             logging.info(f"Reached maximum upload limit: {max_upload} files.")
             break
 
@@ -168,8 +273,32 @@ def upload_pdfs(
             else:
                 logging.debug(f"Uploading new file: {pdf_file}")
 
-            kwargs = {"collection_name": collection} if collection else {}
-            client.documents.create(file_path=str(pdf_file), **kwargs)
+            # Prepare upload parameters
+            kwargs = {}
+            if collection:
+                kwargs["collection_name"] = collection
+
+            # Add metadata if available
+            metadata = None
+            if include_metadata:
+                file_stem = pdf_file.stem
+                if file_stem in metadata_by_file:
+                    raw_metadata = metadata_by_file[file_stem]
+                    formatted_metadata = format_metadata_for_upload(raw_metadata)
+
+                    # CHANGE: Pass metadata as a separate parameter, not mixed with other kwargs
+                    metadata = formatted_metadata
+                    logging.debug(f"Adding metadata to {pdf_file.name}: {formatted_metadata}")
+                else:
+                    logging.debug(f"No metadata found for file: {pdf_file.name}")
+
+            # Upload the document - CHANGE: Pass metadata as a separate parameter
+            client.documents.create(
+                file_path=str(pdf_file),
+                metadata=metadata,  # Pass metadata as a separate parameter
+                **kwargs  # Other parameters like collection_name
+            )
+
             logging.info(f"Successfully uploaded file: {pdf_file}")
             success_count += 1
 
@@ -200,14 +329,15 @@ def check_r2r_connection(client: R2RClient) -> bool:
 
 def main():
     """
-    Upload PDFs to an R2R instance.
+    Upload PDFs with metadata to an R2R instance.
 
     This function:
     - Parses command-line arguments.
     - Prepares and filters the list of PDF files.
+    - Loads metadata for publications if available.
     - Connects to the R2R server.
     - Fetches existing documents and logs their ingestion status breakdown.
-    - Uploads new PDFs while skipping already ingested ones.
+    - Uploads new PDFs with metadata while skipping already ingested ones.
     - Summarizes the upload process with counts of successful, skipped, and failed uploads.
     """
     args = get_args()
@@ -226,6 +356,11 @@ def main():
         logging.error("No valid PDF files to upload after filtering oversized files.")
         return 1
 
+    # Load metadata if needed
+    metadata_by_file = {}
+    if not args.no_metadata:
+        metadata_by_file = load_metadata(args.metadata_file)
+
     client = R2RClient(base_url=args.base_url)
     if not check_r2r_connection(client):
         logging.error("Cannot connect to R2R. Please check if the service is running.")
@@ -242,12 +377,14 @@ def main():
         pdf_files,
         client,
         existing_documents,
+        metadata_by_file,
         collection=args.collection,
         max_upload=args.max_upload,
+        include_metadata=not args.no_metadata,
     )
 
     logging.info(
-        f"Upload summary: {success_count} successful, {skipped_count} skipped, {len(failed_files)} failed."
+        f"Upload summary: {success_count} file(s) uploaded, {skipped_count} skipped, {len(failed_files)} failed."
     )
     if failed_files:
         logging.error("Failed files:")
@@ -260,3 +397,4 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
