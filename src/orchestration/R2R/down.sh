@@ -19,9 +19,7 @@ FORCE_TIMEOUT=10
 
 log "1) Attempting graceful shutdown: docker compose down (timeout ${DOWN_TIMEOUT}s)…"
 if timeout "${DOWN_TIMEOUT}s" \
-     docker compose \
-       -f "$COMPOSE_FILE" \
-       --project-name "$PROJECT_NAME" \
+     docker_compose_cmd \
        --profile postgres \
        down; then
 
