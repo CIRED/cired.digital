@@ -6,7 +6,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 
 # Project settings
-PROJECT_NAME="cidir2r"
+export PROJECT_NAME="cidir2r"
 SUBDIR="docker"
 COMPOSE_FILE="${SCRIPT_DIR}/docker/compose.full.yaml"
 OVERRIDE_FILE="${SCRIPT_DIR}/compose.override.yaml"
