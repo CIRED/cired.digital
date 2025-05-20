@@ -89,10 +89,6 @@ check_env_vars() {
   return 0         # Always return success
 }
 
-# Docker Compose helper function
-docker_compose_cmd() {
-  docker compose -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" --project-name "$PROJECT_NAME" "$@"
-}
 
 log "📦 Project: $PROJECT_NAME"
 log "🔧 Compose file: $COMPOSE_FILE"

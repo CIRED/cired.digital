@@ -18,6 +18,15 @@ export VOLUMES_BASE="$(realpath "$SCRIPT_DIR/../../../data")"
 ARCHIVES_DIR="${VOLUMES_BASE}/archived/R2R"
 SNAPSHOT_PREFIX="snapshot_$(date +%F_%H%M%S)"
 
+# Docker compose command (used by all scripts)
+docker_compose_cmd() {
+  docker compose \
+    -f "$COMPOSE_FILE" \
+    -f "$OVERRIDE_FILE" \
+    --project-name "$PROJECT_NAME" \
+    "$@"
+}
+
 # Utility functions
 validate_dir() {
     local dir="$1"

@@ -34,9 +34,7 @@ fi
 log "2) Gathering still-running containers (timeout ${GATHER_TIMEOUT}s)…"
 # First try with docker compose ps
 CONTAINERS_RAW=""
-if timeout "${GATHER_TIMEOUT}s" docker compose \
-     -f "$COMPOSE_FILE" \
-     --project-name "$PROJECT_NAME" \
+if timeout "${GATHER_TIMEOUT}s" docker_compose_cmd \
      --profile postgres \
      ps -q > /tmp/containers.raw 2>/dev/null; then
   CONTAINERS_RAW=$(< /tmp/containers.raw)
