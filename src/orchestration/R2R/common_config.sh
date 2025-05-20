@@ -21,9 +21,9 @@ SNAPSHOT_PREFIX="snapshot_$(date +%F_%H%M%S)"
 # Docker compose command (used by all scripts)
 docker_compose_cmd() {
   docker compose \
+    --project-name "$PROJECT_NAME" \
     -f "$COMPOSE_FILE" \
     -f "$OVERRIDE_FILE" \
-    --project-name "$PROJECT_NAME" \
     "$@"
 }
 
