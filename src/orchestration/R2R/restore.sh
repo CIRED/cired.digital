@@ -11,6 +11,14 @@ source "$SCRIPT_DIR/common_config.sh"
 # Verify archive argument
 if [ $# -lt 1 ]; then
     log -e "Usage: $0 <archive_file>"
+    log "Available archives in ${ARCHIVES_DIR}:"
+    if [ -d "${ARCHIVES_DIR}" ]; then
+        find "${ARCHIVES_DIR}" -name "*.tar.gz" -printf "%f\n" | sort | while read -r archive; do
+            log "  - ${archive}"
+        done
+    else
+        log "  (no archive directory found)"
+    fi
     exit 1
 fi
 
