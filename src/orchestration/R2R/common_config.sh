@@ -21,9 +21,9 @@ OVERRIDE_FILE="${SCRIPT_DIR}/compose.override.yaml"
 KEYS_FILE="${SCRIPT_DIR}/../../../../credentials/API_KEYS"
 VENV_DIR="${SCRIPT_DIR}/venv"
 
-# Volume settings (exported, it needs to be available to docker compose)
-export VOLUMES_BASE="$(realpath "$SCRIPT_DIR/../../../data")"
-ARCHIVES_DIR="${VOLUMES_BASE}/archived/R2R"
+# Volume settings
+DATA_BASE="$(realpath "$SCRIPT_DIR/../../../data")"
+ARCHIVES_DIR="${DATA_BASE}/archived/R2R"
 SNAPSHOT_PREFIX="snapshot_$(date +%F_%H%M%S)"
 
 # Docker Compose Command Builder
