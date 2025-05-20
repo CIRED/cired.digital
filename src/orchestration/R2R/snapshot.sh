@@ -13,9 +13,30 @@ BACKUP_DIR="${ARCHIVES_DIR}/${SNAPSHOT_NAME}"
 mkdir -p "$BACKUP_DIR"
 
 log "Checking for running containers..."
-if docker ps --format '{{.Names}}' | grep -E "${PROJECT_NAME}" | grep -q .; then
-    log -e "Aborting: Docker containers for $PROJECT_NAME are running. Please stop them before taking a snapshot."
-    exit 1
+running_containers=$(docker ps --format '{{.Names}}' | grep -E "${PROJECT_NAME}" || true)
+
+if [ -n "$running_containers" ]; then
+    log -w "Found running containers for $PROJECT_NAME, stopping them temporarily..."
+    
+    # Store container IDs and their start commands
+    container_info=$(docker ps --filter "name=${PROJECT_NAME}" --format '{{.ID}} {{.Command}}')
+    
+    # Stop containers
+    docker_compose_cmd stop
+    
+    # Wait for containers to stop
+    sleep 5
+    
+    # Verify they're stopped
+    if docker ps --format '{{.Names}}' | grep -E "${PROJECT_NAME}" | grep -q .; then
+        log -e "Failed to stop containers, aborting snapshot"
+        exit 1
+    fi
+    
+    # Set flag to restart containers later
+    should_restart=true
+else
+    should_restart=false
 fi
 
 log "📦 Creating snapshots for all volumes in project $PROJECT_NAME"
@@ -53,5 +74,19 @@ tar -czf "${ARCHIVES_DIR}/${SNAPSHOT_NAME}.tar.gz" -C "${ARCHIVES_DIR}" "${SNAPS
 
 # Cleanup individual volume backups
 rm -rf "$BACKUP_DIR"
+
+# Restart containers if they were running before
+if [ "$should_restart" = true ]; then
+    log "Restarting previously running containers..."
+    docker_compose_cmd start
+    
+    # Verify restart was successful
+    restarted_containers=$(docker_compose_cmd ps --services)
+    if [ -z "$restarted_containers" ]; then
+        log -e "Warning: Failed to restart containers"
+    else
+        log -s "Containers restarted successfully: $restarted_containers"
+    fi
+fi
 
 log "✅ Snapshot completed: ${ARCHIVES_DIR}/${SNAPSHOT_NAME}.tar.gz"
