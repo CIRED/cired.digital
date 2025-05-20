@@ -26,10 +26,16 @@ if [ ! -f "$ARCHIVE_FILE" ]; then
     exit 2
 fi
 
-# Check if containers are running
-if docker ps --format '{{.Names}}' | grep -E "${PROJECT_NAME}" | grep -q .; then
-    log -e "Docker containers for $PROJECT_NAME are running. Please stop them before restoring."
-    exit 5
+# Check and stop running containers
+running_containers=$(docker ps --format '{{.Names}}' | grep -E "${PROJECT_NAME}" || true)
+
+if [ -n "$running_containers" ]; then
+    log -w "Stopping running containers for $PROJECT_NAME..."
+    docker_compose_cmd stop
+    sleep 5
+    should_restart=true
+else
+    should_restart=false
 fi
 
 # Extract the archive to temp directory
@@ -85,5 +91,19 @@ for archive in $volume_archives; do
         exit 6
     fi
 done
+
+# Restart containers if they were running before
+if [ "$should_restart" = true ]; then
+    log "Restarting previously running containers..."
+    docker_compose_cmd start
+    
+    # Verify restart was successful
+    restarted_containers=$(docker_compose_cmd ps --services)
+    if [ -z "$restarted_containers" ]; then
+        log -e "Warning: Failed to restart containers"
+    else
+        log -s "Containers restarted successfully: $restarted_containers"
+    fi
+fi
 
 log "✅ All volumes have been restored successfully!"
