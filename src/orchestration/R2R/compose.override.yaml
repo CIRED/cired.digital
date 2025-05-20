@@ -1,71 +1,27 @@
 # Override to
-# - quiet some warnings related to volumes relabeling
+# - not touch the upstream compose.full.yaml file.
+# - prefix volume names, in case we someday run different rag stacks on the same host
 # - pass the secrets
-# - neuter the observability stack by assigning them the metrics profile
-#   and telling r2r to log to json
-# - Finally, safely remove incompatible extra_hosts clause
-# - Fully define paths to images (for security)
-# - not touching the upstream compose file.
-# - Store volumes in ${VOLUMES_DIR} for snapshotting and rsync deployment
+# - neuter the centralized logging observability stack by assigning them the metrics profile
+# - telling r2r to log to json instead of centralized logging
+# - safely remove the incompatible extra_hosts clause
+# - fully define paths to images (security practice)
 
 volumes:
-  postgres_data:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: ${VOLUMES_DIR}/postgres_data
-
-  hatchet_rabbitmq_data:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: ${VOLUMES_DIR}/hatchet_rabbitmq_data
-
-  hatchet_rabbitmq_conf:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: ${VOLUMES_DIR}/hatchet_rabbitmq_conf
-
   hatchet_certs:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: ${VOLUMES_DIR}/hatchet_certs
-
+    name: ${PROJECT_NAME}_hatchet_certs
   hatchet_config:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: ${VOLUMES_DIR}/hatchet_config
-
+    name: ${PROJECT_NAME}_hatchet_config
   hatchet_api_key:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: ${VOLUMES_DIR}/hatchet_api_key
-
+    name: ${PROJECT_NAME}_hatchet_api_key
+  hatchet_rabbitmq_data:
+    name: ${PROJECT_NAME}_hatchet_rabbitmq_data
+  hatchet_rabbitmq_conf:
+    name: ${PROJECT_NAME}_hatchet_rabbitmq_conf
   hatchet_postgres_data:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: ${VOLUMES_DIR}/hatchet_postgres_data
-
-  # NOTE: MinIO service exists in full compose but is not currently used
-  # If MinIO is ever needed, its volume should follow the same bind mount pattern:
-  # minio_data:
-  #   driver: local
-  #   driver_opts:
-  #     type: none
-  #     o: bind
-  #     device: ${VOLUMES_DIR}/minio_data
+    name: ${PROJECT_NAME}_hatchet_postgres_data
+  postgres_data:
+    name: ${PROJECT_NAME}_postgres_data
 
 services:
   r2r:
