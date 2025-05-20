@@ -6,7 +6,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 
 # Project settings
-PROJECT_NAME="myrag"
+PROJECT_NAME="cidir2r"
 SUBDIR="docker"
 COMPOSE_FILE="${SCRIPT_DIR}/docker/compose.full.yaml"
 OVERRIDE_FILE="${SCRIPT_DIR}/compose.override.yaml"
@@ -15,13 +15,8 @@ VENV_DIR="${SCRIPT_DIR}/venv"
 
 # Volume settings (exported, it needs to be available to docker compose)
 export VOLUMES_BASE="$(realpath "$SCRIPT_DIR/../../../data")"
-export VOLUMES_DIR="${VOLUMES_BASE}/active/R2R"
 ARCHIVES_DIR="${VOLUMES_BASE}/archived/R2R"
-ACTIVE_DIR="${VOLUMES_DIR}"
-SNAPSHOT_PREFIX="snapshot_$(date +%F)"
-
-# Ensure directories exist
-mkdir -p "${VOLUMES_DIR}" "${ARCHIVES_DIR}"
+SNAPSHOT_PREFIX="snapshot_$(date +%F_%H%M%S)"
 
 # Utility functions
 validate_dir() {
