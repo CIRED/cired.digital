@@ -8,7 +8,7 @@ cd "$SCRIPT_DIR"
 
 source "$SCRIPT_DIR/common_config.sh"
 
-# Verify archive argument
+# Verify archive argument and integrity first
 if [ $# -lt 1 ]; then
     log -e "Usage: $0 <archive_file>"
     log "Available archives in ${ARCHIVES_DIR}:"
@@ -23,17 +23,23 @@ if [ $# -lt 1 ]; then
 fi
 
 ARCHIVE_FILE="$1"
-TEMP_DIR="$(mktemp -d)"
 
-# Clean up temp directory on exit
-trap 'rm -rf "$TEMP_DIR"' EXIT
-
-# Verify archive exists
+# Verify archive exists and is readable
 if [ ! -f "$ARCHIVE_FILE" ]; then
     log -e "Archive file not found: $ARCHIVE_FILE"
     exit 2
 fi
 
+if ! tar -tzf "$ARCHIVE_FILE" >/dev/null 2>&1; then
+    log -e "Archive is corrupt or invalid: $ARCHIVE_FILE"
+    exit 3
+fi
+
+TEMP_DIR="$(mktemp -d)"
+# Clean up temp directory on exit
+trap 'rm -rf "$TEMP_DIR"' EXIT
+
+# Now safe to stop containers
 # Check and stop running containers
 running_containers=$(docker ps --format '{{.Names}}' | grep -E "${PROJECT_NAME}" || true)
 
@@ -46,12 +52,9 @@ else
     should_restart=false
 fi
 
-# Extract the archive to temp directory
+# Extract the archive to temp directory (already validated)
 log "Extracting archive: $ARCHIVE_FILE"
-if ! tar -xzf "$ARCHIVE_FILE" -C "$TEMP_DIR"; then
-    log -e "Failed to extract archive"
-    exit 3
-fi
+tar -xzf "$ARCHIVE_FILE" -C "$TEMP_DIR"
 
 # Find all .tar.gz files in the extracted directory
 archive_dir=$(find "$TEMP_DIR" -type d | head -1)
