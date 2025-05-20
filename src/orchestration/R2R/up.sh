@@ -119,6 +119,6 @@ else
   fi
 
   log "🚀 Starting services..."
-  docker_compose_cmd --profile postgres up -d
+  docker_compose_cmd up -d
   log "✅ Docker Compose started successfully."
 fi
