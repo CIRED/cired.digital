@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# docker_restore.sh - Restore Docker volumes for myrag project
+# docker_restore.sh - Restore Docker volumes for cired.digital project
 
 set -Eeuo pipefail
 
