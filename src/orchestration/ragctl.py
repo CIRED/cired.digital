@@ -15,6 +15,8 @@ Available Commands:
   up                      Create the containers and start the RAG engine.
   validate                Validate that the engine is running correctly.
   down                    Stop the RAG engine, remove containers.
+  backup                  Backup the state of the RAG engine.
+  restore                 Restore the state of the RAG engine, possibly on a different machine.
   clean                   Revert the directory to its clean state.
   push-index              Push the local index data to production.
 

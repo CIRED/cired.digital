@@ -1,91 +1,57 @@
 #!/usr/bin/env bash
-#
-# Creates a snapshot of R2R data with validation checks
-#
-# Exit codes:
-#   0 - Success
-#   1 - Initial state invalid
-#   2 - Final state invalid
+# docker_snapshot.sh - Snapshot Docker volumes for myrag project
 
 set -Eeuo pipefail
+
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 cd "$SCRIPT_DIR"
+
 source "$SCRIPT_DIR/common_config.sh"
 
-# Initialize variables
-SNAPSHOT_FILE="${ARCHIVES_DIR}/${SNAPSHOT_PREFIX}.tar.gz"
-TEMP_DIR=$(mktemp -d)
-trap 'rm -rf "$TEMP_DIR"' EXIT
+SNAPSHOT_NAME="${1:-${SNAPSHOT_PREFIX}}"
+BACKUP_DIR="${ARCHIVES_DIR}/${SNAPSHOT_NAME}"
+mkdir -p "$BACKUP_DIR"
 
+log "Checking for running containers..."
+if docker ps --format '{{.Names}}' | grep -E "${PROJECT_NAME}" | grep -q .; then
+    log -e "Aborting: Docker containers for $PROJECT_NAME are running. Please stop them before taking a snapshot."
+    exit 1
+fi
 
-# Validate R2R state
-validate_r2r() {
-    log "🔍 Validating R2R state..."
-    if ! "$SCRIPT_DIR/validate.sh" --quick; then
-        log -e "R2R validation failed"
-        return 1
-    fi
-    return 0
-}
+log "📦 Creating snapshots for all volumes in project $PROJECT_NAME"
 
-# Create snapshot archive
-create_snapshot() {
-    log "📦 Creating snapshot at $SNAPSHOT_FILE"
-    mkdir -p "$ARCHIVES_DIR"
-    
-    if ! tar -czf "$SNAPSHOT_FILE" -C "$VOLUMES_DIR" .; then
-        log -e "Failed to create snapshot archive"
-        return 1
-    fi
-    
-    # Verify archive integrity
-    if ! tar -tzf "$SNAPSHOT_FILE" >/dev/null 2>&1; then
-        log -e "Snapshot archive verification failed"
-        return 1
-    fi
-    
-    log "✅ Snapshot created successfully ($(du -h "$SNAPSHOT_FILE" | cut -f1))"
-    return 0
-}
+# Get all volumes for this project
+project_volumes=$(docker volume ls --filter "name=${PROJECT_NAME}" -q)
 
-# Main execution
-main() {
-    log "🚀 Starting R2R snapshot process"
-    
-    # Step 1: Validate initial state
-    if ! validate_r2r; then
-        log -e "Aborting snapshot - R2R is not in a valid state"
-        exit 1
-    fi
-    
-    # Step 2: Stop R2R
-    log "🛑 Stopping R2R services..."
-    if ! "$SCRIPT_DIR/down.sh"; then
-        log -e "Failed to stop R2R services"
-        exit 1
-    fi
-    
-    # Step 3: Create snapshot
-    if ! create_snapshot; then
-        log -e "Snapshot creation failed"
-        exit 1
-    fi
-    
-    # Step 4: Restart R2R
-    log "🔁 Restarting R2R services..."
-    if ! "$SCRIPT_DIR/up.sh"; then
-        log -e "Failed to restart R2R services"
-        exit 1
-    fi
-    
-    # Step 5: Validate final state
-    if ! validate_r2r; then
-        log -e "R2R is not in a valid state after restart"
-        exit 2
-    fi
-    
-    log "🎉 Snapshot process completed successfully"
-    exit 0
-}
+if [ -z "$project_volumes" ]; then
+    log -e "No volumes found for project $PROJECT_NAME"
+    exit 2
+fi
 
-main "$@"
+# Backup each volume
+for volume in $project_volumes; do
+    log "Backing up volume: $volume"
+
+    # Extract the short name (without project prefix)
+    volume_short_name=$(echo "$volume" | sed "s/${PROJECT_NAME}_//")
+
+    # Create tar.gz of the volume
+    if docker run --rm \
+        -v "$volume:/source" \
+        -v "$BACKUP_DIR:/backup" \
+        alpine tar -czf "/backup/${volume_short_name}.tar.gz" -C /source .; then
+        log "✅ Successfully backed up $volume to ${BACKUP_DIR}/${volume_short_name}.tar.gz"
+    else
+        log -e "Failed to backup volume $volume"
+        exit 3
+    fi
+done
+
+# Create a single archive of all volume backups
+log "Creating consolidated archive..."
+tar -czf "${ARCHIVES_DIR}/${SNAPSHOT_NAME}.tar.gz" -C "${ARCHIVES_DIR}" "${SNAPSHOT_NAME}"
+
+# Cleanup individual volume backups
+rm -rf "$BACKUP_DIR"
+
+log "✅ Snapshot completed: ${ARCHIVES_DIR}/${SNAPSHOT_NAME}.tar.gz"

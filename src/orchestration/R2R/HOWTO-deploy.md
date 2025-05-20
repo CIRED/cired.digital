@@ -59,51 +59,8 @@ Warning: R2R tends to display the login popup even when one is already logged in
 
 ## Update the distant production data from local development data
 
-1. Prendre un snapshot.
-2. Transférer le snapshot sur le VPS
-3. Restaurer à partir du snapshot transféré.
+1. Dans dev: stop/snapshot/start R2R.
+2. Transférer le snapshot sur le VPS.
+3. Sur le VPS: stop/replace/start R2R en utilisant du snapshot transféré.
 
-On va écrire une paire de scripts snapshot,sh et restore.sh, qui tournent dans les deux environnements dev et prod.
-
-On va ajouter une option --quick au script de validation.
-
-### Script pour prendre un snapshot
-
-Codes de sortie:
-
-. 0 succès
-. 1 aborted because the state of a running R2R seems invalid
-. 2 error: R2R fails validity test after relaunch
-
-Séquence:
-
-1. Vérifier l'état du moteur `validate.sh --quick`, si up et invalide: exit 1
-2. Arrêter `down.sh`
-3. Archiver `tar -czvf $(VOLUMES_DIR)/archived/R2R/snapshot_$(date +%F).tar.gz $(VOLUMES_DIR)/active/R2R`
-4. Relancer `up.sh`
-5. Vérifier l'état du moteur `validate.sh  --quick`, si invalide: exit 2
-6. exit 0
-
-### Script pour restaurer
-
-C'est avec un rollback intégré.
- 
-Codes de sortie:
-
-. 0 Succès
-. 1 Tarball pas trouvée
-. 2 Tarball pas décompressée
-. 3 Tarball contenu suspect invalide
-. 4 Échec de mise à jour, rollback valide
-. 5 Échec de mise à jour et du rollback
-
-Séquence:
- 
-1. Faire une copie sauvegade de `$(VOLUMES_DIR)/active/R2R/` par sécurité.
-2. Décompresser la tarball dans un répertoire temporaire. Exit 1. si pas trouvée, 2. si pas décompressée, 3. si contenu suspect.
-3. Arrêter `down.sh`
-4. Remplacer `$(VOLUMES_DIR)/active/R2R/` 
-5. Relancer `up.sh`
-6. Vérifier l'état du moteur `validate.sh  --quick`, si OK, exit 0 et nettoyage du répertoire temporaire
-7. Sinon `down.sh` ,  restaurer à partir de la copie de sauvegarde, `up.sh`, 
-8. Vérifier l'état du moteur `validate.sh  --quick`, si OK, exit 4 et nettoyage du répertoire temporaire, sinon exit 5.
+The scripts pair snapshot.sh / restore.sh can also be used for recovery.
