@@ -24,6 +24,7 @@ docker_compose_cmd() {
     --project-name "$PROJECT_NAME" \
     -f "$COMPOSE_FILE" \
     -f "$OVERRIDE_FILE" \
+    --profile postgres \
     "$@"
 }
 
