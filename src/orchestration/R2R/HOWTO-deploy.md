@@ -59,8 +59,13 @@ Warning: R2R tends to display the login popup even when one is already logged in
 
 ## Update the distant production data from local development data
 
-1. Dans dev: stop/snapshot/start R2R.
-2. Transférer le snapshot sur le VPS.
-3. Sur le VPS: stop/replace/start R2R en utilisant du snapshot transféré.
+1. Run snapshot.sh on the local development server.
+2. Transfer the snapshot to VPS. It is timestapped in cired.digital/data/archived/R2R/ .
+3. Ensure that the VPS (production server) can be stopped, nobody is connected.
+4. Run restore.sh on the VPS.
 
 The scripts pair snapshot.sh / restore.sh can also be used for recovery.
+
+Note: 
+The restore.sh script does not inject the secret API_KEYS to the environment before calling docker compose.
+Warnings about these are normal.
