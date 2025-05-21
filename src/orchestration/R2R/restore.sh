@@ -22,16 +22,30 @@ if [ $# -lt 1 ]; then
     exit 1
 fi
 
-ARCHIVE_FILE="$1"
+SNAPSHOT_FILE="$1"
+
+# Resolve snapshot file path
+if [[ "$SNAPSHOT_FILE" != */* ]]; then
+  log "📂 No path in argument. Looking for snapshot in $ARCHIVES_DIR..."
+  SNAPSHOT_FILE="$ARCHIVES_DIR/$SNAPSHOT_FILE"
+fi
+
+# Check if the snapshot file exists
+if [[ ! -f "$SNAPSHOT_FILE" ]]; then
+  log "❌ Snapshot not found: $SNAPSHOT_FILE"
+  exit 1
+else
+  log "📦 Using snapshot file: $SNAPSHOT_FILE"
+fi
 
 # Verify archive exists and is readable
-if [ ! -f "$ARCHIVE_FILE" ]; then
-    log -e "Archive file not found: $ARCHIVE_FILE"
+if [ ! -f "$SNAPSHOT_FILE" ]; then
+    log -e "Archive file not found: $SNAPSHOT_FILE"
     exit 2
 fi
 
-if ! tar -tzf "$ARCHIVE_FILE" >/dev/null 2>&1; then
-    log -e "Archive is corrupt or invalid: $ARCHIVE_FILE"
+if ! tar -tzf "$SNAPSHOT_FILE" >/dev/null 2>&1; then
+    log -e "Archive is corrupt or invalid: $SNAPSHOT_FILE"
     exit 3
 fi
 
@@ -53,8 +67,8 @@ else
 fi
 
 # Extract the archive to temp directory (already validated)
-log "Extracting archive: $ARCHIVE_FILE"
-tar -xzf "$ARCHIVE_FILE" -C "$TEMP_DIR"
+log "Extracting archive: $SNAPSHOT_FILE"
+tar -xzf "$SNAPSHOT_FILE" -C "$TEMP_DIR"
 
 # Find all .tar.gz files in the extracted directory
 archive_dir=$(find "$TEMP_DIR" -type d | head -1)
@@ -109,6 +123,8 @@ if [ "$should_restart" = true ]; then
     docker_compose_cmd start
     
     # Verify restart was successful
+    # TODO: never executed if the start failed ?
+    # TODO: suspect rabbitmq may fail to restart if a browser is still connected
     restarted_containers=$(docker_compose_cmd ps --services)
     if [ -z "$restarted_containers" ]; then
         log -e "Warning: Failed to restart containers"
