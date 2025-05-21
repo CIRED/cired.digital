@@ -15,13 +15,6 @@ cd "$SCRIPT_DIR"
 source "$SCRIPT_DIR/common_config.sh"
 trap 'log "❌ An unexpected error occurred."' ERR
 
-# Check if VOLUMES_DIR exists
-if [[ ! -d "$VOLUMES_DIR" ]]; then
-  log "Error: Volumes directory does not exist at $VOLUMES_DIR"
-  log "    Aborting, no need to start without the data."
-  exit 1
-fi
-
 # Validate we have docker
 if ! command -v docker &> /dev/null; then
   log "❌ Error: Docker is not installed or not in PATH."
@@ -96,10 +89,6 @@ check_env_vars() {
   return 0         # Always return success
 }
 
-# Docker Compose helper function
-docker_compose_cmd() {
-  docker compose -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" --project-name "$PROJECT_NAME" "$@"
-}
 
 log "📦 Project: $PROJECT_NAME"
 log "🔧 Compose file: $COMPOSE_FILE"
@@ -130,6 +119,6 @@ else
   fi
 
   log "🚀 Starting services..."
-  docker_compose_cmd --profile postgres up -d
+  docker_compose_cmd up -d
   log "✅ Docker Compose started successfully."
 fi

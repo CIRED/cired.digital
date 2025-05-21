@@ -15,20 +15,12 @@ source "$SCRIPT_DIR/common_config.sh"
 trap 'log "❌ An unexpected error occurred."' ERR
 
 
-# Query the R2R health endpoint and return success if it responds with the expected JSON
-query_health_endpoint() {
-  local url="$HEALTH_ENDPOINT"
-  local expected='{"results":{"message":"ok"}}'
-
-  curl -s --connect-timeout 5 "$url"
-}
-
 # Check R2R health, with retry logic
 check_r2r_health() {
     log "🔍 Checking R2R health at $HEALTH_ENDPOINT..."
 
   local response
-  response=$(query_health_endpoint)
+  response=$(curl -s --connect-timeout 5 "$HEALTH_ENDPOINT")
 
   if [[ "$response" == '{"results":{"message":"ok"}}' ]]; then
     log "✅ R2R is healthy."
@@ -38,7 +30,7 @@ check_r2r_health() {
   log "⚠️ R2R did not respond as expected. Retrying in 10 seconds..."
   sleep 10
 
-  response=$(query_health_endpoint)
+  response=$(curl -s --connect-timeout 5 "$HEALTH_ENDPOINT")
   if [[ "$response" == '{"results":{"message":"ok"}}' ]]; then
     log "✅ R2R is healthy (after retry)."
     return 0
