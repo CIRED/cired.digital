@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2R Chatbot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .message-content {
+            word-wrap: break-word;
+            white-space: pre-wrap;
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        .line-clamp-2 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+        .line-clamp-3 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="app" class="flex flex-col h-screen">
+        <!-- Header -->
+        <div class="bg-white border-b border-gray-200 px-4 py-3 shadow-sm">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-semibold text-gray-900">R2R Assistant</h1>
+                        <p class="text-sm text-gray-500" id="status-text">
+                            Connected to <span id="api-url-display">http://localhost:7272</span> • <span id="model-display">openai/gpt-4o-mini</span>
+                        </p>
+                    </div>
+                </div>
+                <button id="config-btn" class="px-3 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors">
+                    Config
+                </button>
+            </div>
+        </div>
+
+        <!-- Configuration Panel -->
+        <div id="config-panel" class="bg-white border-b border-gray-200 p-4 hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">R2R API URL</label>
+                    <input type="text" id="api-url" value="http://localhost:7272" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Model</label>
+                    <select id="model" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="openai/gpt-4.1-nano">GPT-4.1 Nano</option>
+                        <option value="openai/gpt-4.1-mini">GPT-4.1 Mini</option>
+                        <option value="deepseek/deepseek-chat">Deepseek chat</option>
+                        <option value="mistral/open-mistral-7b">Open mistral 7b</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Search Mode</label>
+                    <select id="search-mode" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="basic">Basic (Semantic)</option>
+                        <option value="advanced" selected>Advanced (Hybrid)</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Temperature</label>
+                    <input type="number" id="temperature" min="0" max="2" step="0.1" value="0.1" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Max Tokens</label>
+                    <input type="number" id="max-tokens" min="100" max="4000" step="100" value="1000" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="flex items-center">
+                    <input type="checkbox" id="streaming" checked class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                    <label for="streaming" class="ml-2 block text-sm text-gray-700">Enable Streaming</label>
+                </div>
+            </div>
+            <div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                <p class="text-sm text-blue-800">
+                    <strong>Debug Mode:</strong> Response data will be logged to console for troubleshooting.
+                </p>
+            </div>
+        </div>
+
+        <!-- Messages -->
+        <div id="messages-container" class="flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth">
+            <div class="flex justify-start">
+                <div class="flex max-w-3xl">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 text-gray-600 mr-3 flex items-center justify-center">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <div class="bg-white text-gray-800 border border-gray-200 px-4 py-3 rounded-lg">
+                            <div class="message-content">Hello! I’m the CIRED.digital chatbot. Ask me anything — I’ll search the CIRED (Centre International de Recherche sur l’Environnement et le Développement) archive on HAL to give you accurate, cited answers. This is an alpha version, currently limited to a selection of 120 documents.</div>
+                            <div class="message-content">Bonjour ! Je suis le chatbot CIRED.digital. Posez-moi une question — je chercherai dans les archives HAL du CIRED (Centre International de Recherche sur l’Environnement et le Développement) pour vous fournir une réponse exacte et sourcée. Ceci est une version alpha, limitée pour l’instant à 120 documents sélectionnés.</div>
+                        </div>
+                        <div class="text-xs text-gray-500 mt-1" id="initial-timestamp"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Display -->
+        <div id="error-container" class="mx-4 mb-2 p-3 bg-red-50 border border-red-200 rounded-lg items-center text-red-800 hidden">
+            <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+            </svg>
+            <span class="text-sm" id="error-text"></span>
+        </div>
+
+        <!-- Input -->
+        <div class="bg-white border-t border-gray-200 p-4">
+            <div class="flex space-x-3 max-w-4xl mx-auto">
+                <div class="flex-1 relative">
+                    <textarea id="message-input" 
+                              placeholder="Ask me anything about the documents in the knowledge base..."
+                              class="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                              rows="1" style="min-height: 48px; max-height: 120px;"></textarea>
+                </div>
+                <button id="send-btn" 
+                        class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="text-center mt-2">
+                <span class="text-xs text-gray-500">Press Enter to send, Shift+Enter for new line</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global state
+        let isLoading = false;
+        let messageIdCounter = 1;
+
+        // DOM elements
+        const configBtn = document.getElementById('config-btn');
+        const configPanel = document.getElementById('config-panel');
+        const messagesContainer = document.getElementById('messages-container');
+        const messageInput = document.getElementById('message-input');
+        const sendBtn = document.getElementById('send-btn');
+        const errorContainer = document.getElementById('error-container');
+        const errorText = document.getElementById('error-text');
+
+        // Configuration elements
+        const apiUrlInput = document.getElementById('api-url');
+        const modelSelect = document.getElementById('model');
+        const searchModeSelect = document.getElementById('search-mode');
+        const temperatureInput = document.getElementById('temperature');
+        const maxTokensInput = document.getElementById('max-tokens');
+        const streamingCheckbox = document.getElementById('streaming');
+
+        // Status display elements
+        const apiUrlDisplay = document.getElementById('api-url-display');
+        const modelDisplay = document.getElementById('model-display');
+
+        // Initialize
+        document.getElementById('initial-timestamp').textContent = formatTimestamp(new Date());
+        updateStatusDisplay();
+
+        // Event listeners
+        configBtn.addEventListener('click', () => {
+            configPanel.classList.toggle('hidden');
+        });
+
+        sendBtn.addEventListener('click', sendMessage);
+
+        messageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // Auto-resize textarea
+        messageInput.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+        });
+
+        // Update status display when config changes
+        [apiUrlInput, modelSelect].forEach(element => {
+            element.addEventListener('change', updateStatusDisplay);
+        });
+
+        function updateStatusDisplay() {
+            apiUrlDisplay.textContent = apiUrlInput.value;
+            modelDisplay.textContent = modelSelect.value;
+        }
+
+        function formatTimestamp(timestamp) {
+            return new Intl.DateTimeFormat('en-US', {
+                hour: '2-digit',
+                minute: '2-digit'
+            }).format(timestamp);
+        }
+
+        function showError(message) {
+            errorText.textContent = message;
+            errorContainer.classList.remove('hidden');
+            errorContainer.classList.add('flex');
+        }
+
+        function hideError() {
+            errorContainer.classList.add('hidden');
+            errorContainer.classList.remove('flex');
+        }
+
+        function createMessage(type, content, timestamp, isError = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `flex ${type === 'user' ? 'justify-end' : 'justify-start'}`;
+            messageDiv.id = `message-${messageIdCounter++}`;
+
+            const avatarIcon = type === 'user' 
+                ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>'
+                : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>';
+
+            const messageClass = type === 'user'
+                ? 'bg-blue-600 text-white'
+                : isError 
+                ? 'bg-red-50 text-red-800 border border-red-200'
+                : 'bg-white text-gray-800 border border-gray-200';
+
+            messageDiv.innerHTML = `
+                <div class="flex max-w-3xl ${type === 'user' ? 'flex-row-reverse' : 'flex-row'}">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
+                        type === 'user' 
+                            ? 'bg-blue-600 text-white ml-3' 
+                            : 'bg-gray-200 text-gray-600 mr-3'
+                    }">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            ${avatarIcon}
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <div class="${messageClass} px-4 py-3 rounded-lg">
+                            <div class="message-content">${content}</div>
+                        </div>
+                        <div class="citations-container"></div>
+                        <div class="text-xs text-gray-500 mt-1">${formatTimestamp(timestamp)}</div>
+                    </div>
+                </div>
+            `;
+
+            return messageDiv;
+        }
+
+        function addMessage(type, content, isError = false) {
+            const message = createMessage(type, content, new Date(), isError);
+            messagesContainer.appendChild(message);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            return message;
+        }
+
+        function showTyping() {
+            const typingDiv = document.createElement('div');
+            typingDiv.id = 'typing-indicator';
+            typingDiv.className = 'flex justify-start';
+            typingDiv.innerHTML = `
+                <div class="flex max-w-3xl">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 text-gray-600 mr-3 flex items-center justify-center">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="bg-white border border-gray-200 px-4 py-3 rounded-lg">
+                        <div class="flex items-center text-gray-500">
+                            <svg class="w-4 h-4 animate-spin mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                            </svg>
+                            <span>Searching knowledge base...</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+            messagesContainer.appendChild(typingDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function hideTyping() {
+            const typing = document.getElementById('typing-indicator');
+            if (typing) {
+                typing.remove();
+            }
+        }
+
+        function addCitations(messageElement, citations) {
+            const citationsContainer = messageElement.querySelector('.citations-container');
+            if (citations && citations.length > 0) {
+                console.log('Processing citations:', citations);
+                
+                const citationsHtml = `
+                    <div class="mt-3 text-sm">
+                        <div class="font-semibold text-gray-700 mb-2 flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                            Sources Referenced:
+                        </div>
+                        ${citations.map((citation, idx) => {
+                            // Extract data from R2R citation format
+                            const payload = citation.payload || citation;
+                            const metadata = payload.metadata || {};
+                            
+                            const title = metadata.title || payload.title || 'Untitled Document';
+                            const authors = metadata.authors || [];
+                            const year = metadata.publication_date ? new Date(metadata.publication_date).getFullYear() : '';
+                            const doi = metadata.doi || '';
+                            const pageNum = metadata.unstructured_page_number || metadata.page_num || '';
+                            const text = payload.text || citation.text || '';
+                            const score = payload.score || citation.score || 0;
+                            const citationId = citation.id || payload.id || '';
+                           
+                            return `
+                                <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 mb-2 hover:bg-gray-100 transition-colors">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <div class="flex-1">
+                                            <h4 class="font-medium text-gray-900 text-sm leading-tight">
+                                                ${title}
+                                            </h4>
+                                            ${authors.length > 0 ? `
+                                                <p class="text-xs text-gray-600 mt-1">
+                                                    ${authors.join(', ')} ${year ? `(${year})` : ''}
+                                                </p>
+                                            ` : ''}
+                                        </div>
+                                        <div class="ml-2 text-xs text-gray-500">
+                                            [${citationId}]
+                                        </div>
+                                    </div>
+                                  
+                                    <div class="flex flex-wrap gap-2 text-xs">
+                                        ${doi ? `
+                                            <a href="https://doi.org/${doi}" target="_blank" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                                <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                                </svg>
+                                                DOI: ${doi}
+                                            </a>
+                                        ` : ''}
+                                        ${pageNum ? `
+                                            <span class="text-gray-500">
+                                                Page ${pageNum}
+                                            </span>
+                                        ` : ''}
+                                        <span class="text-gray-500">
+                                            Relevance: ${(score * 100).toFixed(1)}%
+                                        </span>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                `;
+                citationsContainer.innerHTML = citationsHtml;
+            }
+        }
+
+        async function sendMessage() {
+            const query = messageInput.value.trim();
+            if (!query || isLoading) return;
+
+            isLoading = true;
+            sendBtn.disabled = true;
+            hideError();
+
+            // Add user message
+            addMessage('user', query);
+            messageInput.value = '';
+            messageInput.style.height = 'auto';
+
+            // Show typing indicator
+            showTyping();
+
+            try {
+                const config = {
+                    apiUrl: apiUrlInput.value,
+                    model: modelSelect.value,
+                    searchMode: searchModeSelect.value,
+                    temperature: parseFloat(temperatureInput.value),
+                    maxTokens: parseInt(maxTokensInput.value),
+                    useStreaming: streamingCheckbox.checked
+                };
+
+                const requestBody = {
+                    query: query,
+                    search_settings: {
+                        search_mode: config.searchMode,
+                        use_hybrid_search: config.searchMode === 'advanced',
+                        limit: 10
+                    },
+                    rag_generation_config: {
+                        model: config.model,
+                        temperature: config.temperature,
+                        max_tokens: config.maxTokens,
+                        stream: config.useStreaming
+                    }
+                };
+
+                console.log('Sending request:', requestBody);
+
+                const response = await fetch(`${config.apiUrl}/v3/retrieval/rag`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestBody)
+                });
+
+                hideTyping();
+
+                if (!response.ok) {
+                    const errorData = await response.text();
+                    console.error('API Error Response:', errorData);
+                    throw new Error(`API Error: ${response.status} ${response.statusText}`);
+                }
+
+                if (config.useStreaming) {
+                    await handleStreamingResponse(response);
+                } else {
+                    const data = await response.json();
+                    console.log('Non-streaming response:', data);
+                    handleNonStreamingResponse(data);
+                }
+
+            } catch (err) {
+                hideTyping();
+                console.error('Error sending message:', err);
+                showError(err.message);
+                addMessage('bot', `I apologize, but I encountered an error: ${err.message}. Please check your R2R configuration and try again.`, true);
+            } finally {
+                isLoading = false;
+                sendBtn.disabled = false;
+                messageInput.focus();
+            }
+        }
+
+        async function handleStreamingResponse(response) {
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder();
+            
+            const botMessage = addMessage('bot', '');
+            const contentDiv = botMessage.querySelector('.message-content');
+            
+            let buffer = '';
+            let citations = [];
+            let fullContent = '';
+            
+            try {
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    
+                    buffer += decoder.decode(value, { stream: true });
+                    const lines = buffer.split('\n');
+                    
+                    // Keep the last line in buffer if it's incomplete
+                    buffer = lines.pop() || '';
+                    
+                    for (const line of lines) {
+                        if (line.trim() === '') continue;
+                        
+                        if (line.startsWith('data: ')) {
+                            const dataStr = line.slice(6).trim();
+                            
+                            // Skip [DONE] message
+                            if (dataStr === '[DONE]') continue;
+                            
+                            try {
+                                const data = JSON.parse(dataStr);
+                                console.log('Streaming data:', data);
+                                
+                                // Handle different event types based on R2R's streaming format
+                                if (data.type === 'search_results' && data.data) {
+                                    citations = data.data.chunk_search_results || [];
+                                } else if (data.type === 'citation' && data.data) {
+                                    // R2R citation format
+                                    citations.push(data.data);
+                                } else if (data.type === 'answer_chunk' && data.data) {
+                                    // R2R answer chunk format
+                                    fullContent += data.data;
+                                    contentDiv.textContent = fullContent;
+                                    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                                } else if (data.generated_answer) {
+                                    // Complete answer format
+                                    fullContent = data.generated_answer;
+                                    contentDiv.textContent = fullContent;
+                                    if (data.citations) {
+                                        citations = data.citations;
+                                    }
+                                    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                                } else if (data.type === 'completion_chunk' && data.data) {
+                                    // R2R v3 format
+                                    const chunk = data.data.choices?.[0]?.delta?.content || '';
+                                    if (chunk) {
+                                        fullContent += chunk;
+                                        contentDiv.textContent = fullContent;
+                                        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                                    }
+                                } else if (data.choices) {
+                                    // Direct OpenAI format
+                                    const chunk = data.choices[0]?.delta?.content || '';
+                                    if (chunk) {
+                                        fullContent += chunk;
+                                        contentDiv.textContent = fullContent;
+                                        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                                    }
+                                } else if (typeof data === 'string') {
+                                    // Plain text chunk
+                                    fullContent += data;
+                                    contentDiv.textContent = fullContent;
+                                    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                                }
+                            } catch (e) {
+                                console.error('Error parsing streaming data:', e, 'Line:', line);
+                            }
+                        }
+                    }
+                }
+                
+                // Process any remaining buffer
+                if (buffer.trim() && buffer.startsWith('data: ')) {
+                    try {
+                        const dataStr = buffer.slice(6).trim();
+                        if (dataStr !== '[DONE]') {
+                            const data = JSON.parse(dataStr);
+                            console.log('Final streaming data:', data);
+                        }
+                    } catch (e) {
+                        console.error('Error parsing final buffer:', e);
+                    }
+                }
+                
+            } catch (error) {
+                console.error('Streaming error:', error);
+                if (!fullContent) {
+                    contentDiv.textContent = 'Sorry, I encountered an error while generating the response.';
+                }
+            } finally {
+                if (!fullContent) {
+                    contentDiv.textContent = 'No response generated. Please check your R2R configuration.';
+                }
+                addCitations(botMessage, citations);
+            }
+        }
+
+        function handleNonStreamingResponse(data) {
+            console.log('Processing non-streaming response:', data);
+            
+            let content = 'No response generated.';
+            let citations = [];
+            
+            // Check for direct generated_answer format (R2R specific)
+            if (data.generated_answer) {
+                content = data.generated_answer;
+                citations = data.citations || [];
+            }
+            // Try different possible response structures
+            else if (data.results) {
+                // R2R v3 format with results wrapper
+                if (data.results.completion?.choices?.[0]?.message?.content) {
+                    content = data.results.completion.choices[0].message.content;
+                } else if (data.results.choices?.[0]?.message?.content) {
+                    content = data.results.choices[0].message.content;
+                } else if (typeof data.results === 'string') {
+                    content = data.results;
+                }
+                
+                if (data.results.search_results?.chunk_search_results) {
+                    citations = data.results.search_results.chunk_search_results;
+                }
+            } else if (data.completion) {
+                // Direct completion format
+                if (data.completion.choices?.[0]?.message?.content) {
+                    content = data.completion.choices[0].message.content;
+                } else if (typeof data.completion === 'string') {
+                    content = data.completion;
+                }
+                
+                if (data.search_results?.chunk_search_results) {
+                    citations = data.search_results.chunk_search_results;
+                }
+            } else if (data.choices) {
+                // OpenAI format
+                content = data.choices[0]?.message?.content || content;
+            } else if (data.message) {
+                // Simple message format
+                content = data.message;
+            } else if (typeof data === 'string') {
+                // Plain string response
+                content = data;
+            }
+            
+            const botMessage = addMessage('bot', content);
+            addCitations(botMessage, citations);
+        }
+    </script>
+</body>
+</html>
