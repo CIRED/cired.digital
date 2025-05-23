@@ -12,17 +12,18 @@ set -o pipefail
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 # --- Project Configuration ---
-# Change these values according to your deployment
 export PROJECT_NAME="cidir2r"  # Used as prefix for Docker resources
 export PROJECT_DESCRIPTION="CIRED R2R Deployment"
 SUBDIR="docker"
 COMPOSE_FILE="${SCRIPT_DIR}/docker/compose.full.yaml"
 OVERRIDE_FILE="${SCRIPT_DIR}/compose.override.yaml"
-KEYS_FILE="${SCRIPT_DIR}/../../../../credentials/API_KEYS"
+# Secrets are stored out of the repository
+KEYS_FILE="${SCRIPT_DIR}/../../../credentials/API_KEYS"
 VENV_DIR="${SCRIPT_DIR}/venv"
 
 # Volume settings
-DATA_BASE="$(realpath "$SCRIPT_DIR/../../../data")"
+# data/ is at the same level as src/ but in .gitignore 
+DATA_BASE="$(realpath "$SCRIPT_DIR/../../data")"
 ARCHIVES_DIR="${DATA_BASE}/archived/R2R"
 SNAPSHOT_PREFIX="snapshot_$(date +%F_%H%M%S)"
 

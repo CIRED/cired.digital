@@ -63,6 +63,13 @@ check_env_vars() {
   local vars_set=0
   local total_vars=3
 
+  if [[ -n "${ANTHROPIC_API_KEY:-}" ]]; then
+    log "  ✅ ANTHROPIC_API_KEY: SET (${#ANTHROPIC_API_KEY} characters)"
+    ((vars_set++))
+  else
+    log "  ❌ ANTHROPIC_API_KEY: NOT SET"
+  fi
+
   if [[ -n "${OPENAI_API_KEY:-}" ]]; then
     log "  ✅ OPENAI_API_KEY: SET (${#OPENAI_API_KEY} characters)"
     ((vars_set++))
