@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.8.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversations avec le documentaliste scientifique CIRED.digital - VERSION ALPHA</title>
+    <title>
+      Conversations avec le documentaliste scientifique CIRED.digital - VERSION ALPHA
+    </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .message-content {
@@ -33,122 +36,109 @@
             animation: spin-slow 2s linear infinite;
         }
     </style>
-</head>
-<body class="bg-gray-50">
+  </head>
+  <body class="bg-gray-50">
     <div id="app" class="flex flex-col h-screen">
-        <!-- Header -->
-        <div class="bg-white border-b border-gray-200 px-4 py-3 shadow-sm">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">🤖</span>
-                    </div>
-                    <div>
-                        <h1 class="text-lg font-semibold text-gray-900">Conversations avec le documentaliste scientifique CIRED.digital - VERSION ALPHA</h1>
-                        <p class="text-sm text-gray-500" id="status-text">
-                            Connecté à <span id="api-url-display">http://cired.digital:7272</span> • <span id="model-display">openai/gpt-4o-mini</span>
-                        </p>
-                    </div>
-                </div>
-                <button id="config-btn" class="px-3 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors">
-                    Config
-                </button>
+      <!-- Header -->
+      <div class="bg-white border-b border-gray-200 px-4 py-3 shadow-sm">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+              <span class="text-white font-bold text-lg">🤖</span>
             </div>
+            <div>
+              <h1 class="text-lg font-semibold text-gray-900">
+                Conversations avec le documentaliste scientifique CIRED.digital - VERSION ALPHA
+              </h1>
+              <p class="text-sm text-gray-500" id="status-text">
+                Connecté à <span id="api-url-display">http://cired.digital:7272</span> • <span id="model-display">openai/gpt-4o-mini</span>
+              </p>
+            </div>
+          </div><button id="config-btn" class="px-3 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors">Config</button>
         </div>
-
-        <!-- Configuration Panel -->
-        <div id="config-panel" class="bg-white border-b border-gray-200 p-4 hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">R2R API URL</label>
-                    <input type="text" id="api-url"
-                           class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Model</label>
-                    <select id="model" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option value="openai/gpt-4.1-nano">GPT-4.1 Nano</option>
-                        <option value="openai/gpt-4.1-mini">GPT-4.1 Mini</option>
-                        <option value="deepseek/deepseek-chat">Deepseek chat</option>
-                        <option value="mistral/open-mistral-7b">Open mistral 7b</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Search Mode</label>
-                    <select id="search-mode" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option value="basic">Basic (Semantic)</option>
-                        <option value="advanced" selected>Advanced (Hybrid)</option>
-                        <option value="custom">Custom</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Temperature</label>
-                    <input type="number" id="temperature" min="0" max="2" step="0.1" value="0.1" 
-                           class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Max Tokens</label>
-                    <input type="number" id="max-tokens" min="100" max="4000" step="100" value="1000" 
-                           class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                </div>
-                <div class="flex items-center">
-                    <input type="checkbox" id="streaming" checked class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                    <label for="streaming" class="ml-2 block text-sm text-gray-700">Enable Streaming</label>
-                </div>
-            </div>
-            <div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                <p class="text-sm text-blue-800">
-                    <strong>Debug Mode:</strong> Response data will be logged to console for troubleshooting.
-                </p>
-            </div>
+      </div><!-- Configuration Panel -->
+      <div id="config-panel" class="bg-white border-b border-gray-200 p-4 hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">R2R API URL</label> <input type="text" id="api-url" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Model</label> <select id="model" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="openai/gpt-4.1-nano">
+                GPT-4.1 Nano
+              </option>
+              <option value="openai/gpt-4.1-mini">
+                GPT-4.1 Mini
+              </option>
+              <option value="deepseek/deepseek-chat">
+                Deepseek chat
+              </option>
+              <option value="mistral/open-mistral-7b">
+                Open mistral 7b
+              </option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Search Mode</label> <select id="search-mode" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="basic">
+                Basic (Semantic)
+              </option>
+              <option value="advanced" selected>
+                Advanced (Hybrid)
+              </option>
+              <option value="custom">
+                Custom
+              </option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Temperature</label> <input type="number" id="temperature" min="0" max="2" step="0.1" value="0.1" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Max Tokens</label> <input type="number" id="max-tokens" min="100" max="4000" step="100" value="1000" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" id="streaming" checked class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"> <label for="streaming" class="ml-2 block text-sm text-gray-700">Enable Streaming</label>
+          </div>
         </div>
-
-        <!-- Messages -->
-        <div id="messages-container" class="flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth">
-            <div class="flex justify-start">
-                <div class="flex max-w-3xl">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 text-gray-600 mr-3 flex items-center justify-center">
-                        <span class="font-bold text-lg">🤖</span>
-                    </div>
-                    <div class="flex-1">
-                        <div class="bg-white text-gray-800 border border-gray-200 px-4 py-3 rounded-lg">
-                            <div class="message-content">Bonjour !<br />Je suis CIRED.digital, documentaliste scientifique. Mon rôle consiste à analyser les écrits du Centre International de Recherche sur l'Environnement et le Développement (le CIRED) pour vous fournir des micro-synthèses sourcées. Le fonds documentaire compte 120 documents issus de l'archive ouverte française Hyper Articles en Ligne (HAL). Ceci est une version alpha, merci de ne pas rediffuser ce fichier.</div>
-                        </div>
-                        <div class="text-xs text-gray-500 mt-1" id="initial-timestamp"></div>
-                        <div class="bg-white text-gray-800 border border-gray-200 px-4 py-3 rounded-lg">
-                            <div class="message-content">En première analyse, les principales thématiques couvertes par le corpus englobent: le changement climatique, la transition énergétique, la politique climatique, la taxe carbone et le prix du carbone, la modélisation macro-économique (CGE, IMACLIM), les émissions de CO₂, l’efficacité énergétique, les scénarios prospectifs, l’atténuation (mitigation) et l’adaptation, l’équité et la justice distributive, la fiscalité environnementale, les marchés de l’électricité, la sécurité énergétique, la capture et le stockage du carbone (CCS), la mobilité électrique, l’agriculture et l’usage des terres, les bioénergies et biocarburants, les coûts de l’atténuation, les investissements bas-carbone, les marchés internationaux du carbone, les tableaux input-output hybrides, le risque et l’incertitude, la précarité énergétique, la gouvernance européenne de l’énergie, les modèles d’équilibre général calculable, le développement durable, les réformes des prix de l’énergie, l’analyse de répartition des impacts et les stratégies nationales bas-carbone...</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+          <p class="text-sm text-blue-800">
+            <strong>Debug Mode:</strong> Response data will be logged to console for troubleshooting.
+          </p>
         </div>
-
-        <!-- Error Display -->
-        <div id="error-container" class="mx-4 mb-2 p-3 bg-red-50 border border-red-200 rounded-lg items-center text-red-800 hidden">
-            <span class="mr-2">⚠️</span>
-            <span class="text-sm" id="error-text"></span>
-        </div>
-
-        <!-- Input -->
-        <div class="bg-white border-t border-gray-200 p-4">
-            <div class="flex space-x-3 max-w-4xl mx-auto">
-                <div class="flex-1 relative">
-                    <textarea id="message-input" 
-                              placeholder="Posez votre question sur les documents de la base..."
-                              class="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                              rows="1" style="min-height: 48px; max-height: 120px;"></textarea>
-                </div>
-                <button id="send-btn" 
-                        class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center transition-colors">
-                    <span class="font-bold text-lg">➤</span>
-                </button>
+      </div><!-- Messages -->
+      <div id="messages-container" class="flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth">
+        <div class="flex justify-start">
+          <div class="flex max-w-3xl">
+            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 text-gray-600 mr-3 flex items-center justify-center">
+              <span class="font-bold text-lg">🤖</span>
             </div>
-            <div class="text-center mt-2">
-                <span class="text-xs text-gray-500">Appuyez sur Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne</span>
+            <div class="flex-1">
+              <div class="bg-white text-gray-800 border border-gray-200 px-4 py-3 rounded-lg">
+                <div class="message-content">Bonjour !<br />Je suis CIRED.digital, documentaliste scientifique. Mon rôle consiste à analyser les écrits du Centre International de Recherche sur l'Environnement et le Développement (le CIRED) pour vous fournir des micro-synthèses sourcées. Le fonds documentaire compte 120 documents issus de l'archive ouverte française Hyper Articles en Ligne (HAL). Ceci est une version alpha, merci de ne pas rediffuser ce fichier.</div>
+              </div>
+              <div class="text-xs text-gray-500 mt-1" id="initial-timestamp"></div>
+              <div class="bg-white text-gray-800 border border-gray-200 px-4 py-3 rounded-lg">
+                <div class="message-content">En première analyse, les principales thématiques couvertes par le corpus englobent:<br />le changement climatique, la transition énergétique, la politique climatique, la taxe carbone et le prix du carbone, la modélisation macro-économique (CGE, IMACLIM), les émissions de CO₂, l’efficacité énergétique, les scénarios prospectifs, l’atténuation (mitigation) et l’adaptation, l’équité et la justice distributive, la fiscalité environnementale, les marchés de l’électricité, la sécurité énergétique, la capture et le stockage du carbone (CCS), la mobilité électrique, l’agriculture et l’usage des terres, les bioénergies et biocarburants, les coûts de l’atténuation, les investissements bas-carbone, les marchés internationaux du carbone, les tableaux input-output hybrides, le risque et l’incertitude, la précarité énergétique, la gouvernance européenne de l’énergie, les modèles d’équilibre général calculable, le développement durable, les réformes des prix de l’énergie, l’analyse de répartition des impacts et les stratégies nationales bas-carbone...</div>
+              </div>
             </div>
+          </div>
         </div>
+      </div><!-- Error Display -->
+      <div id="error-container" class="mx-4 mb-2 p-3 bg-red-50 border border-red-200 rounded-lg items-center text-red-800 hidden">
+        <span class="mr-2">⚠️</span> <span class="text-sm" id="error-text"></span>
+      </div><!-- Input -->
+      <div class="bg-white border-t border-gray-200 p-4">
+        <div class="flex space-x-3 max-w-4xl mx-auto">
+          <div class="flex-1 relative">
+            <textarea id="message-input" placeholder="Posez votre question sur les documents de la base..." class="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" rows="1" style="min-height: 48px; max-height: 120px;"></textarea>
+          </div><button id="send-btn" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center transition-colors"><span class="font-bold text-lg">➤</span></button>
+        </div>
+        <div class="text-center mt-2">
+          <span class="text-xs text-gray-500">Appuyez sur Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne</span>
+        </div>
+      </div>
     </div>
-
     <script>
         // Configuration constants
         const DEFAULT_HOST = 'http://cired.digital:7272';
@@ -278,16 +268,16 @@
             return message;
         }
 
-function showTyping () {
-  const msg = createMessage(
+    function showTyping () {
+    const msg = createMessage(
     'bot',
     `<span class="mr-2 animate-spin-slow text-blue-500">⟳</span>Recherche dans la base documentaire…`
     );
-  msg.id = 'typing-indicator';
-  messagesContainer.appendChild(msg);
-  messagesContainer.scrollTop = messagesContainer.scrollHeight;
-  return msg;
-}
+    msg.id = 'typing-indicator';
+    messagesContainer.appendChild(msg);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    return msg;
+    }
 
 
         function hideTyping() {
@@ -602,5 +592,5 @@ function showTyping () {
             addCitations(botMessage, citations);
         }
     </script>
-</body>
+  </body>
 </html>
