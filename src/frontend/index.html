@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R2R Chatbot</title>
+    <title>Conversations avec le documentaliste scientifique CIRED.digital - VERSION ALPHA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .message-content {
@@ -25,6 +25,13 @@
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 3;
         }
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 2s linear infinite;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -34,14 +41,12 @@
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-3">
                     <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
+                        <span class="text-white font-bold text-lg">🤖</span>
                     </div>
                     <div>
-                        <h1 class="text-lg font-semibold text-gray-900">R2R Assistant</h1>
+                        <h1 class="text-lg font-semibold text-gray-900">Conversations avec le documentaliste scientifique CIRED.digital - VERSION ALPHA</h1>
                         <p class="text-sm text-gray-500" id="status-text">
-                            Connected to <span id="api-url-display">http://localhost:7272</span> • <span id="model-display">openai/gpt-4o-mini</span>
+                            Connecté à <span id="api-url-display">http://cired.digital:7272</span> • <span id="model-display">openai/gpt-4o-mini</span>
                         </p>
                     </div>
                 </div>
@@ -56,7 +61,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">R2R API URL</label>
-                    <input type="text" id="api-url" value="http://localhost:7272" 
+                    <input type="text" id="api-url"
                            class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div>
@@ -103,14 +108,11 @@
             <div class="flex justify-start">
                 <div class="flex max-w-3xl">
                     <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 text-gray-600 mr-3 flex items-center justify-center">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
+                        <span class="font-bold text-lg">🤖</span>
                     </div>
                     <div class="flex-1">
                         <div class="bg-white text-gray-800 border border-gray-200 px-4 py-3 rounded-lg">
-                            <div class="message-content">Hello! I’m the CIRED.digital chatbot. Ask me anything — I’ll search the CIRED (Centre International de Recherche sur l’Environnement et le Développement) archive on HAL to give you accurate, cited answers. This is an alpha version, currently limited to a selection of 120 documents.</div>
-                            <div class="message-content">Bonjour ! Je suis le chatbot CIRED.digital. Posez-moi une question — je chercherai dans les archives HAL du CIRED (Centre International de Recherche sur l’Environnement et le Développement) pour vous fournir une réponse exacte et sourcée. Ceci est une version alpha, limitée pour l’instant à 120 documents sélectionnés.</div>
+                            <div class="message-content">Bonjour !<br />Je suis CIRED.digital, documentaliste scientifique. Mon rôle consiste à analyser les écrits du Centre International de Recherche sur l'Environnement et le Développement (le CIRED) pour vous fournir des réponses exactes et sourcées. Le fonds documentaire compte 120 documents issus de l'archive ouverte française Hyper Articles en Ligne (HAL). Ceci est une version alpha, merci de ne pas rediffuser ce fichier.</div>
                         </div>
                         <div class="text-xs text-gray-500 mt-1" id="initial-timestamp"></div>
                     </div>
@@ -120,9 +122,7 @@
 
         <!-- Error Display -->
         <div id="error-container" class="mx-4 mb-2 p-3 bg-red-50 border border-red-200 rounded-lg items-center text-red-800 hidden">
-            <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
-            </svg>
+            <span class="mr-2">⚠️</span>
             <span class="text-sm" id="error-text"></span>
         </div>
 
@@ -131,24 +131,25 @@
             <div class="flex space-x-3 max-w-4xl mx-auto">
                 <div class="flex-1 relative">
                     <textarea id="message-input" 
-                              placeholder="Ask me anything about the documents in the knowledge base..."
+                              placeholder="Posez votre question sur les documents de la base..."
                               class="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                               rows="1" style="min-height: 48px; max-height: 120px;"></textarea>
                 </div>
                 <button id="send-btn" 
                         class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center transition-colors">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-                    </svg>
+                    <span class="font-bold text-lg">➤</span>
                 </button>
             </div>
             <div class="text-center mt-2">
-                <span class="text-xs text-gray-500">Press Enter to send, Shift+Enter for new line</span>
+                <span class="text-xs text-gray-500">Appuyez sur Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne</span>
             </div>
         </div>
     </div>
 
     <script>
+        // Configuration constants
+        const DEFAULT_HOST = 'http://cired.digital:7272';
+        
         // Global state
         let isLoading = false;
         let messageIdCounter = 1;
@@ -176,6 +177,10 @@
 
         // Initialize
         document.getElementById('initial-timestamp').textContent = formatTimestamp(new Date());
+        
+        // Set default values using constants
+        apiUrlInput.value = DEFAULT_HOST;
+        
         updateStatusDisplay();
 
         // Event listeners
@@ -232,8 +237,8 @@
             messageDiv.id = `message-${messageIdCounter++}`;
 
             const avatarIcon = type === 'user' 
-                ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>'
-                : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>';
+                ? '👤'
+                : '🤖';
 
             const messageClass = type === 'user'
                 ? 'bg-blue-600 text-white'
@@ -248,9 +253,7 @@
                             ? 'bg-blue-600 text-white ml-3' 
                             : 'bg-gray-200 text-gray-600 mr-3'
                     }">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            ${avatarIcon}
-                        </svg>
+                        <span class="font-bold text-lg">${avatarIcon}</span>
                     </div>
                     <div class="flex-1">
                         <div class="${messageClass} px-4 py-3 rounded-lg">
@@ -272,30 +275,17 @@
             return message;
         }
 
-        function showTyping() {
-            const typingDiv = document.createElement('div');
-            typingDiv.id = 'typing-indicator';
-            typingDiv.className = 'flex justify-start';
-            typingDiv.innerHTML = `
-                <div class="flex max-w-3xl">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 text-gray-600 mr-3 flex items-center justify-center">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <div class="bg-white border border-gray-200 px-4 py-3 rounded-lg">
-                        <div class="flex items-center text-gray-500">
-                            <svg class="w-4 h-4 animate-spin mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
-                            </svg>
-                            <span>Searching knowledge base...</span>
-                        </div>
-                    </div>
-                </div>
-            `;
-            messagesContainer.appendChild(typingDiv);
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-        }
+function showTyping () {
+  const msg = createMessage(
+    'bot',
+    `<span class="mr-2 animate-spin-slow text-blue-500">⟳</span>Recherche dans la base documentaire…`
+    );
+  msg.id = 'typing-indicator';
+  messagesContainer.appendChild(msg);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  return msg;
+}
+
 
         function hideTyping() {
             const typing = document.getElementById('typing-indicator');
@@ -312,10 +302,8 @@
                 const citationsHtml = `
                     <div class="mt-3 text-sm">
                         <div class="font-semibold text-gray-700 mb-2 flex items-center">
-                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                            </svg>
-                            Sources Referenced:
+                            <span class="mr-1">📚</span>
+                            Sources citées:
                         </div>
                         ${citations.map((citation, idx) => {
                             // Extract data from R2R citation format
@@ -352,9 +340,7 @@
                                     <div class="flex flex-wrap gap-2 text-xs">
                                         ${doi ? `
                                             <a href="https://doi.org/${doi}" target="_blank" class="text-blue-600 hover:text-blue-800 flex items-center">
-                                                <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                                </svg>
+                                                <span class="mr-1">🔗</span>
                                                 DOI: ${doi}
                                             </a>
                                         ` : ''}
@@ -390,7 +376,7 @@
             messageInput.style.height = 'auto';
 
             // Show typing indicator
-            showTyping();
+            const typingMSG = showTyping();
 
             try {
                 const config = {
@@ -427,7 +413,6 @@
                     body: JSON.stringify(requestBody)
                 });
 
-                hideTyping();
 
                 if (!response.ok) {
                     const errorData = await response.text();
@@ -436,7 +421,7 @@
                 }
 
                 if (config.useStreaming) {
-                    await handleStreamingResponse(response);
+                    await handleStreamingResponse(response, typingMSG);
                 } else {
                     const data = await response.json();
                     console.log('Non-streaming response:', data);
@@ -444,7 +429,6 @@
                 }
 
             } catch (err) {
-                hideTyping();
                 console.error('Error sending message:', err);
                 showError(err.message);
                 addMessage('bot', `I apologize, but I encountered an error: ${err.message}. Please check your R2R configuration and try again.`, true);
@@ -455,11 +439,10 @@
             }
         }
 
-        async function handleStreamingResponse(response) {
+        async function handleStreamingResponse(response, botMessage) {
             const reader = response.body.getReader();
             const decoder = new TextDecoder();
             
-            const botMessage = addMessage('bot', '');
             const contentDiv = botMessage.querySelector('.message-content');
             
             let buffer = '';
@@ -499,7 +482,8 @@
                                 } else if (data.type === 'answer_chunk' && data.data) {
                                     // R2R answer chunk format
                                     fullContent += data.data;
-                                    contentDiv.textContent = fullContent;
+                                    //contentDiv.textContent = fullContent;
+                                    contentDiv.insertAdjacentText('beforeend', data.data);   // ajoute juste le token
                                     messagesContainer.scrollTop = messagesContainer.scrollHeight;
                                 } else if (data.generated_answer) {
                                     // Complete answer format
