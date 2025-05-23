@@ -15,19 +15,15 @@ CIRED.digital/
     ├── docs/               # Technical documentation and guidelines
     ├── reports/            # Analytical outputs
     ├── src/                # Application source code **YOU ARE HERE**
-    │   ├── data_preparation/  # Data retrieval and preparation
-    │   ├── rag_engines/       # Integrated RAG engines
-    │   ├── api/               # Backend API service
-    │   ├── frontend/          # Frontend chatbot user interface
     │   ├── analytics/         # Performance and user metrics
-    │   ├── libs/              # Shared libraries
-    │   └── orchestration/     # Workflow automation scripts
+    │   ├── data_preparation/  # Data retrieval and preparation
+    │   ├── engine/            # Scripts to manage the backend (R2R)
+    │   └── frontend/          # Frontend chatbot user interface (Single page app)
     └── tests/              # Automated tests, mirroring the src/ directory structure
+        ├── analytics/
         ├── data_preparation/
-        ├── rag_engines/
-        ├── api/
-        ├── frontend/
-        └── analytics/
+        ├── engine/
+        └── frontend/
 ```
 > Note: The cired.digital/ repository is a subdirectory of the top-level CIRED.digital/ project directory, not versionned. The tests/ directory inside cired.digital/ mirrors the structure of src/ to facilitate targeted and modular testing.
 
