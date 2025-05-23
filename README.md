@@ -22,10 +22,10 @@ Fonctionnalités :
 
 Stack technique :
 
--    IA générative : API vers des modèles de langage (LLM) open source ou commerciaux (ex: Mistral, OpenAI, Hugging Face).
--    Backend RAG full-stack: Pour l'ingestion, la recherche, la réponse (ex. R2R, llamaindex, langchain, haystack...)
--    Frontend : Framework web léger (Streamlit, Gradio, ou React).
--    Hébergement : Déploiement docker sur un VPS institutionnel ou commercial.
+-    IA générative : API vers des modèles de langage (LLM) open source ou commerciaux (ex: Mistral, OpenAI, DeepSeek).
+-    Backend RAG full-stack: Pour l'ingestion, la recherche, la réponse: R2R.
+-    Frontend : Single page modern vanilla JavaScript with Tailwind CSS.
+-    Hébergement : Déploiement docker sur un VPS commercial.
 
 Le prototype sera déployé en ligne auprès d'une audience progressivement élargie pour une durée de quelque mois, afin d'évaluer:
 
