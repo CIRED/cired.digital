@@ -49,15 +49,16 @@ fi
 # 2. Clone the R2R repository and extract only the docker subdirectory
 #
 REPO_URL="https://github.com/SciPhi-AI/R2R.git"
+SOURCE_DIR="docker"
 TEMP_DIR=".tmp_r2r_clone"
-TARGET_DIR="$SUBDIR"
+TARGET_DIR="$CONFIG_UPSTREAM_DIR"
 
-log "📥 Fetching directory $SUBDIR from $REPO_URL..."
+log "📥 Fetching directory $SOURCE_DIR from $REPO_URL..."
 rm -rf "$TEMP_DIR"
 git clone --filter=blob:none --no-checkout "$REPO_URL" "$TEMP_DIR"
 cd "$TEMP_DIR"
 git sparse-checkout init --cone
-git sparse-checkout set "$SUBDIR"
+git sparse-checkout set "$SOURCE_DIR"
 git checkout
 cd "$SCRIPT_DIR"
 
@@ -65,9 +66,9 @@ cd "$SCRIPT_DIR"
 if [[ -d "./$TARGET_DIR" ]]; then
   rm -rf "./$TARGET_DIR"
 fi
-mv "$TEMP_DIR/$SUBDIR" "./$TARGET_DIR"
+mv "$TEMP_DIR/$SOURCE_DIR" "./$TARGET_DIR"
 rm -rf "$TEMP_DIR"
-log "✅ Successfully fetched $SUBDIR from $REPO_URL."
+log "✅ Successfully fetched $SOURCE_DIR from $REPO_URL into $TARGET_DIR."
 
 # Verify configuration files exist
 if [[ ! -f "$COMPOSE_FILE" ]]; then

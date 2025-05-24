@@ -14,8 +14,8 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 # --- Project Configuration ---
 export PROJECT_NAME="cidir2r"  # Used as prefix for Docker resources
 export PROJECT_DESCRIPTION="CIRED R2R Deployment"
-SUBDIR="docker"
-COMPOSE_FILE="${SCRIPT_DIR}/docker/compose.full.yaml"
+CONFIG_UPSTREAM_DIR="config.upstream"
+COMPOSE_FILE="${SCRIPT_DIR}/${CONFIG_UPSTREAM_DIR}/compose.full.yaml"
 OVERRIDE_FILE="${SCRIPT_DIR}/compose.override.yaml"
 # Secrets are stored out of the repository
 KEYS_FILE="${SCRIPT_DIR}/../../../credentials/API_KEYS"
