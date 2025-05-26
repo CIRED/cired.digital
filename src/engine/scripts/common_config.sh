@@ -10,20 +10,21 @@ set -o pipefail
 
 # Get the absolute path of this script
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+BASE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 # --- Project Configuration ---
 export PROJECT_NAME="cidir2r"  # Used as prefix for Docker resources
 export PROJECT_DESCRIPTION="CIRED R2R Deployment"
 CONFIG_UPSTREAM_DIR="config.upstream"
-COMPOSE_FILE="${SCRIPT_DIR}/${CONFIG_UPSTREAM_DIR}/compose.full.yaml"
-OVERRIDE_FILE="${SCRIPT_DIR}/compose.override.yaml"
+COMPOSE_FILE="${BASE_DIR}/compose.yaml"
+OVERRIDE_FILE="${BASE_DIR}/compose.override.yaml"
 # Secrets are stored out of the repository
-KEYS_FILE="${SCRIPT_DIR}/../../../credentials/API_KEYS"
-VENV_DIR="${SCRIPT_DIR}/venv"
+KEYS_FILE="${BASE_DIR}/../../../credentials/API_KEYS"
+VENV_DIR="${BASE_DIR}/venv"
 
 # Volume settings
 # data/ is at the same level as src/ but in .gitignore 
-DATA_BASE="$(realpath "$SCRIPT_DIR/../../data")"
+DATA_BASE="$(realpath "$BASE_DIR/../../data")"
 ARCHIVES_DIR="${DATA_BASE}/archived/R2R"
 SNAPSHOT_PREFIX="snapshot_$(date +%F_%H%M%S)"
 
@@ -83,7 +84,7 @@ HEALTH_CHECK_TIMEOUT=10
 DOCKER_STOP_TIMEOUT=15
 
 # Test settings
-SMOKE_DIR="${SCRIPT_DIR}/smoke-tests"
+SMOKE_DIR="${BASE_DIR}/smoke-tests"
 TEST_FILE="test.txt"
 TEST_CONTENT="QuetzalX is a person that works at CIRED."
 TEST_QUERY="Who is QuetzalX?"

@@ -103,20 +103,5 @@ docker compose -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" pull
 
 log "✅ Images pulled successfully."
 
-#
-# 5. Creating Python virtual environment for smoke tests
-# Note: Alternative would be to use `uvx` which creates the venv on the fly
-#
-log "🔧 Creating Python virtual environment for smoke tests..."
-if [ ! -d "$VENV_DIR" ]; then
-    uv venv "$VENV_DIR"
-    source "$VENV_DIR/bin/activate"
-    uv pip install -r "$SMOKE_DIR/requirements.txt"
-    deactivate
-    log "✅ Virtual environment created and dependencies installed."
-else
-    log "✅ Virtual environment already exists."
-fi
-
 log "🎉 Installation completed successfully!"
 log "📍 Script directory: $SCRIPT_DIR"
