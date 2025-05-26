@@ -4,26 +4,24 @@
 
 set -euo pipefail
 
-# Get the absolute directory of this script
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-
-# Change to the script directory to ensure all relative paths work
-cd "$SCRIPT_DIR"
-
-# Source common configuration
 source "$SCRIPT_DIR/common_config.sh"
 
 trap 'log "❌ An unexpected error occurred."' ERR
 
-log "🧹 Cleaning up R2R project files..."
-log "📍 Working in directory: $SCRIPT_DIR"
+# Change to the base directory to ensure all relative paths work
+cd "$BASE_DIR"
+
+
+log "🧹 Cleaning up files to revert to a fresh-from-repo state..."
+log "📍 Working in directory: $BASE_DIR"
 
 log "🧹 Removing R2R upstream configuration files..."
-if [[ -d "$SUBDIR" ]]; then
-    rm -rf "$SUBDIR"
-    log "✅ Removed $SUBDIR directory"
+if [[ -d "$CONFIG_UPSTREAM_DIR" ]]; then
+    rm -rf "$CONFIG_UPSTREAM_DIR"
+    log "✅ Removed $CONFIG_UPSTREAM_DIR directory"
 else
-    log "ℹ️  $SUBDIR directory not found (already clean)"
+    log "ℹ️  $CONFIG_UPSTREAM_DIR directory not found (already clean)"
 fi
 
 log "🧹 Removing test file..."
@@ -32,14 +30,6 @@ if [[ -f "$TEST_FILE" ]]; then
     log "✅ Removed $TEST_FILE"
 else
     log "ℹ️  $TEST_FILE not found (already clean)"
-fi
-
-log "🧹 Removing any Python virtual environment..."
-if [[ -d "$VENV_DIR" ]]; then
-    rm -rf "$VENV_DIR"
-    log "✅ Removed virtual environment at $VENV_DIR"
-else
-    log "ℹ️  Virtual environment not found (already clean)"
 fi
 
 log "🧹 Removing Python cache files..."
@@ -52,7 +42,7 @@ else
     log "ℹ️  Smoke-tests directory not found"
 fi
 
-# Remove ropeproject in the script directory (use absolute path)
+# Remove ropeproject in the script directory
 if [[ -d "$SCRIPT_DIR/.ropeproject" ]]; then
     rm -rf "$SCRIPT_DIR/.ropeproject"
     log "✅ Removed .ropeproject in script directory"
@@ -80,4 +70,3 @@ else
 fi
 
 log "🎉 Cleanup completed successfully!"
-log "📍 Script directory: $SCRIPT_DIR"

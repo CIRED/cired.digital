@@ -69,3 +69,4 @@ The scripts pair snapshot.sh / restore.sh can also be used for recovery.
 Note: 
 The restore.sh script does not inject the secret API_KEYS to the environment before calling docker compose.
 Warnings about these are normal.
+

@@ -22,8 +22,54 @@ volumes:
     name: ${PROJECT_NAME}_hatchet_postgres_data
   postgres_data:
     name: ${PROJECT_NAME}_postgres_data
+  minio_data:
+    name: ${PROJECT_NAME}_minio_data
 
 services:
+  postgres:
+    image: docker.io/pgvector/pgvector:pg16
+
+  minio:
+    image: docker.io/minio/minio
+    profiles:
+      - metrics
+      
+  hatchet-postgres:
+    image: docker.io/library/postgres:latest
+
+  hatchet-rabbitmq:
+    image: docker.io/library/rabbitmq:3-management
+
+  hatchet-create-db:
+    image: docker.io/library/postgres:latest
+
+  hatchet-migration:
+    image: ghcr.io/hatchet-dev/hatchet/hatchet-migrate:v0.53.15
+
+  setup-token:
+    image: ghcr.io/hatchet-dev/hatchet/hatchet-admin:v0.53.15
+
+  fluent-bit:
+    image: docker.io/fluent/fluent-bit:latest
+    profiles:
+      - metrics
+
+  grafana:
+    image: docker.io/grafana/grafana:latest
+    profiles:
+      - metrics
+
+  victoria-logs:
+    image: docker.io/victoriametrics/victoria-logs:v1.10.1-victorialogs
+    profiles:
+      - metrics
+      
+  unstructured:
+    image: docker.io/ragtoriches/unst-prod:latest
+
+  graph_clustering:
+    image: docker.io/ragtoriches/cluster-prod
+
   r2r:
     image: docker.io/sciphiai/r2r:latest
     environment:
@@ -42,35 +88,4 @@ services:
   r2r-dashboard:
     image: docker.io/sciphiai/r2r-dashboard:1.0.3
 
-  hatchet-rabbitmq:
-    image: docker.io/library/rabbitmq:3-management
 
-  unstructured:
-    image: docker.io/ragtoriches/unst-prod:latest
-
-  graph_clustering:
-    image: docker.io/ragtoriches/cluster-prod
-
-  postgres:
-    image: docker.io/pgvector/pgvector:pg16
-
-  hatchet-postgres:
-    image: docker.io/library/postgres:latest
-
-  hatchet-create-db:
-    image: docker.io/library/postgres:latest
-
-  fluent-bit:
-    image: docker.io/fluent/fluent-bit:latest
-    profiles:
-      - metrics
-
-  grafana:
-    image: docker.io/grafana/grafana:latest
-    profiles:
-      - metrics
-
-  victoria-logs:
-    image: docker.io/victoriametrics/victoria-logs:v1.10.1-victorialogs
-    profiles:
-      - metrics
