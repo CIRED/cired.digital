@@ -31,8 +31,6 @@ services:
 
   minio:
     image: docker.io/minio/minio
-    profiles:
-      - metrics
       
   hatchet-postgres:
     image: docker.io/library/postgres:latest
