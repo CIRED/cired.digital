@@ -1,5 +1,5 @@
 """
-feedback_server.py
+Collect and display user feedback.
 
 A simple FastAPI application to collect and display user feedback
 on chatbot answers. Feedback is stored in a local CSV file and
@@ -32,6 +32,7 @@ app.add_middleware(
 
 class Feedback(BaseModel):
     """Schema for incoming feedback data."""
+
     question: str
     answer: str
     feedback: Literal["up", "down"]
@@ -42,11 +43,14 @@ async def receive_feedback(fb: Feedback):
     """
     Save user feedback to a CSV file.
 
-    Parameters:
+    Parameters
+    ----------
     - fb: Feedback object containing question, answer, feedback type, and timestamp.
 
-    Returns:
+    Returns
+    -------
     - A JSON response indicating successful storage.
+
     """
     file_exists = os.path.exists("feedback.csv")
     with open("feedback.csv", "a", newline='', encoding='utf-8') as f:
@@ -63,6 +67,7 @@ async def view_feedback():
 
     Returns:
     - An HTML page showing feedback in tabular format, or a message if no data exists.
+
     """
     if not os.path.exists("feedback.csv"):
         return "<h3>No feedback recorded yet.</h3>"
