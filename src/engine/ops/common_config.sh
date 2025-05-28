@@ -15,7 +15,7 @@ BASE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 # --- Project Configuration ---
 export PROJECT_NAME="cidir2r"  # Used as prefix for Docker resources
 export PROJECT_DESCRIPTION="CIRED R2R Deployment"
-CONFIG_UPSTREAM_DIR="config.upstream"
+CONFIG_UPSTREAM_DIR="${BASE_DIR}/config.upstream"
 COMPOSE_FILE="${BASE_DIR}/compose.yaml"
 OVERRIDE_FILE="${BASE_DIR}/compose.override.yaml"
 # Secrets are stored out of the repository
