@@ -69,4 +69,14 @@ services:
   r2r-dashboard:
     image: docker.io/sciphiai/r2r-dashboard:1.0.3
 
+  feedback:
+    build:
+      context: ../analytics
+    ports:
+      - "7275:7275"
+    volumes:
+      - ../analytics/feedback_server.py:/app/feedback_server.py
+    command: uvicorn feedback_server:app --host 0.0.0.0 --port 7275 --reload
+    restart: unless-stopped
+
 
