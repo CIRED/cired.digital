@@ -144,6 +144,8 @@ def get_existing_documents(client: R2RClient) -> dict[str, str]:
     except Exception as e:
         logging.error(f"Error fetching document list: {e}")
 
+    print(documents)
+
     return documents
 
 
