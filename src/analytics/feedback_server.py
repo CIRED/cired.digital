@@ -45,11 +45,13 @@ async def receive_feedback(fb: Feedback):
 
     Parameters
     ----------
-    - fb: Feedback object containing question, answer, feedback type, and timestamp.
+    fb : Feedback
+       Feedback object containing question, answer, feedback type, and timestamp.
 
     Returns
     -------
-    - A JSON response indicating successful storage.
+    dict
+        A JSON response indicating successful storage.
 
     """
     file_exists = os.path.exists("feedback.csv")
