@@ -136,6 +136,7 @@
     <script>
         // Configuration constants
         const DEFAULT_HOST = 'http://cired.digital:7272';
+        const FEEDBACK_HOST = 'http://localhost:7275';
         
         // Global state
         let isLoading = false;
@@ -413,8 +414,7 @@
                 }
 
                     const data = await response.json();
-                    console.log('Response:', data);
-                    handleResponse(data);
+                    handleResponse(requestBody, data);
 
             } catch (err) {
                 console.error('Error sending message:', err);
@@ -429,7 +429,7 @@
         }
 
 
-        function handleResponse(data) {
+        function handleResponse(requestBody, data) {
             console.log('Processing response:', data);
             
             let content = 'No response generated.';
@@ -440,7 +440,55 @@
             
             const botMessage = addMessage('bot', content);
             addCitations(botMessage, citations);
+            
+            const feedbackDiv = document.createElement('div');
+
+feedbackDiv.className = 'flex gap-2 mt-2';
+
+feedbackDiv.innerHTML = `
+  <button class="thumb-up text-green-600 hover:text-green-800" title="Bonne réponse.">👍</button>
+  <button class="thumb-down text-red-600 hover:text-red-800" title="Réponse insuffisante.">👎</button>
+`;
+
+botMessage.querySelector('.message-content').after(feedbackDiv);
+
+feedbackDiv.querySelector('.thumb-up').addEventListener('click', () => {
+    sendFeedback(requestBody, data.results, 'up');
+    feedbackDiv.remove();
+});
+feedbackDiv.querySelector('.thumb-down').addEventListener('click', () => {
+    sendFeedback(requestBody, data.results, 'down');
+    feedbackDiv.remove();
+});
+
         }
+        
+        function sendFeedback(requestBody, results, feedback) {
+    const feedbackData = {
+        question: requestBody.query,
+        answer: results.generated_answer,
+        feedback: feedback,
+        timestamp: new Date().toISOString()
+    };
+
+    fetch(`${FEEDBACK_HOST}/v1/feedback`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(feedbackData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            console.error('Feedback not accepted by server:', response.status);
+        } else {
+            console.log('Feedback successfully sent.');
+        }
+    })
+    .catch(error => {
+        console.error('Error sending feedback:', error);
+    });
+}
     </script>
   </body>
 </html>
