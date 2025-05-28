@@ -41,9 +41,9 @@ This project's goal is to implement a chatbot with CIRED publications.
 raw PDFs, extracted text, metadata, summaries, chunks, vector indexes...
 Data contents is not versionned in the git, only the directory structure and the README.md.
 
-data/source, data/prepared and data/archived are reserved purely for artifact storage. Do not place processing scripts or metadata code there. All transformation logic should live under `src/`. 
+data/source, data/prepared and data/archived are reserved purely for storage. Do not place processing scripts or metadata code there. All transformation logic should live under `src/`. 
 
-Consider artefacts in `data/source` `data/prepared` and `data/achived`  as immutable: its state cannot be modified after it is created. Any “change” to an immutable yields a brand-new object, leaving the original intact.
+Consider files in `data/source` `data/prepared` and `data/achived`  as immutable: its state cannot be modified after it is created. Any “change” to an immutable yields a brand-new object, leaving the original intact.
 
 ### `docs/`
 architecture docs, OpenAPI spec, runbooks, ethics guidelines,

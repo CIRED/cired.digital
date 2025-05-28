@@ -16,7 +16,7 @@ CIRED.digital/
     ├── reports/            # Analytical outputs
     ├── src/                # Application source code **YOU ARE HERE**
     │   ├── analytics/         # Performance and user metrics
-    │   ├── data_preparation/  # Data retrieval and preparation
+    │   ├── intake/            # Data retrieval and preparation
     │   ├── engine/            # Scripts to manage the backend (R2R)
     │   └── frontend/          # Frontend chatbot user interface (Single page app)
     └── tests/              # Automated tests, mirroring the src/ directory structure
@@ -25,35 +25,27 @@ CIRED.digital/
 
 ## Source Code Organization (`src/`)
 
-The `src/` directory is organized into specific subdirectories: `ingestion/`, `storage/`, `rag_engines/`, `api/`, `frontend/`, `analytics/`, `libs/`, and `orchestration/`.
+The `src/` directory is organized into specific subdirectories: `intake/`, `engine/`, `frontend/`, and `analytics/`.
 
-### Data Preparation (`data_preparation/`)
+### Data Preparation (`intake/`)
 
-The ingestion pipeline retrieves research papers from the HAL database, processes them, and segments the content for indexing and storage.
-
-### RAG Engines (`rag_engines/`)
-
-The system integrates multiple RAG engines using a standardized interface, allowing efficient performance comparisons.
-
-### Backend API Service (`api/`)
-
-The API manages incoming user queries, interacts with RAG engines for response retrieval, and coordinates system communication.
+The ingestion pipeline retrieves the catalog of CIRED publications from the HAL database (there is need to filter out some records unrelated to CIRED), download the PDF files, processes them (currently, we plan to just compress oversized files), and push them to the RAG engine.
 
 ### Frontend Interface (`frontend/`)
 
-A Next.js and React-based interactive chat interface enables real-time querying, user feedback, and side-by-side comparison of different engines.
+A standalone web page interactive chat interface. Enables real-time querying. Planned: user feedback, and side-by-side comparison of different engines.
 
 ### Analytics (`analytics/`)
 
-Costs, performance and user satisfaction are tracked via clearly defined metrics, guiding future enhancements.
+Planned: Costs, performance and user satisfaction are tracked via clearly defined metrics, guiding future enhancements.
 
-### Workflow Automation (`orchestration/`)
+### RAG engine (`engine/`)
 
-Routine processes, including data updates, testing, and reporting, are automated to streamline operations.
+The docker configuration files and scripts to manage the R2R stack.
 
 ## Testing Strategy
 
-Automated tests verify functionality across ingestion, storage, RAG integration, frontend interactions, and API responses, ensuring robustness and reliability.
+Planned: Automated tests verify functionality across ingestion, storage, RAG integration, frontend interactions, and API responses, ensuring robustness and reliability.
 
 ## Operational and Ethical Guidelines
 
@@ -62,5 +54,4 @@ The project strictly adheres to GDPR, promotes transparency, and maintains compr
 ## Sensitive Information Handling
 
 Credentials and sensitive data are stored securely, separate from the project repository, ensuring confidentiality and security.
-
 

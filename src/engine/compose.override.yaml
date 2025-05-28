@@ -2,8 +2,6 @@
 # - not touch the upstream compose.full.yaml file.
 # - prefix volume names, in case we someday run different rag stacks on the same host
 # - pass the secrets
-# - neuter the centralized logging observability stack by assigning them the metrics profile
-# - telling r2r to log to json instead of centralized logging
 # - safely remove the incompatible extra_hosts clause
 # - fully define paths to images (security practice)
 
@@ -46,21 +44,6 @@ services:
 
   setup-token:
     image: ghcr.io/hatchet-dev/hatchet/hatchet-admin:v0.53.15
-
-  fluent-bit:
-    image: docker.io/fluent/fluent-bit:latest
-    profiles:
-      - metrics
-
-  grafana:
-    image: docker.io/grafana/grafana:latest
-    profiles:
-      - metrics
-
-  victoria-logs:
-    image: docker.io/victoriametrics/victoria-logs:v1.10.1-victorialogs
-    profiles:
-      - metrics
       
   unstructured:
     image: docker.io/ragtoriches/unst-prod:latest
