@@ -259,7 +259,12 @@ def upload_pdfs(
 
         try:
             logging.debug(f"Processing file: {pdf_file}")
-            ingestion_status = existing_documents.get(pdf_file.name)
+            # Utiliser le titre du document pour la recherche d’existant
+            file_stem = pdf_file.stem
+            raw_metadata_for_title = metadata_by_file.get(file_stem, {})
+            formatted_for_title = format_metadata_for_upload(raw_metadata_for_title) if raw_metadata_for_title else {}
+            doc_title = formatted_for_title.get("title", file_stem)
+            ingestion_status = existing_documents.get(doc_title)
 
             if ingestion_status not in (None, "failed"):
                 logging.debug(
