@@ -64,9 +64,6 @@
           </div>
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-1">Model</label> <select id="model" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="openai/gpt-4.1-nano">
-                GPT-4.1 Nano
-              </option>
               <option value="openai/gpt-4.1-mini">
                 GPT-4.1 Mini
               </option>
@@ -96,9 +93,6 @@
           </div>
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-1">Max Tokens</label> <input type="number" id="max-tokens" min="100" max="4000" step="100" value="1000" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div class="flex items-center">
-            <input type="checkbox" id="streaming" checked class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"> <label for="streaming" class="ml-2 block text-sm text-gray-700">Enable Streaming</label>
           </div>
         </div>
         <div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
@@ -162,7 +156,6 @@
         const searchModeSelect = document.getElementById('search-mode');
         const temperatureInput = document.getElementById('temperature');
         const maxTokensInput = document.getElementById('max-tokens');
-        const streamingCheckbox = document.getElementById('streaming');
 
         // Status display elements
         const apiUrlDisplay = document.getElementById('api-url-display');
@@ -271,7 +264,7 @@
     function showTyping () {
     const msg = createMessage(
     'bot',
-    `<span class="mr-2 animate-spin-slow text-blue-500">⟳</span>Recherche dans la base documentaire…`
+    `<span class="mr-2 inline-block animate-spin-slow text-blue-500">⟳</span>Recherche dans la base documentaire…`
     );
     msg.id = 'typing-indicator';
     messagesContainer.appendChild(msg);
@@ -303,10 +296,11 @@
                             const payload = citation.payload || citation;
                             const metadata = payload.metadata || {};
                             
-                            const title = metadata.title || payload.title || 'Untitled Document';
+                            const title = metadata.title || payload.title || 'No title (sorry, we are working on it.).';
                             const authors = metadata.authors || [];
                             const year = metadata.publication_date ? new Date(metadata.publication_date).getFullYear() : '';
                             const doi = metadata.doi || '';
+                            const halid = metadata.hal_id || '';
                             const pageNum = metadata.unstructured_page_number || metadata.page_num || '';
                             const text = payload.text || citation.text || '';
                             const score = payload.score || citation.score || 0;
@@ -337,9 +331,15 @@
                                                 DOI: ${doi}
                                             </a>
                                         ` : ''}
+                                        ${halid ? `
+                                            <a href="https://hal.science/${halid}" target="_blank" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                                <span class="mr-1">🔗</span>
+                                                HALId: ${halid}
+                                            </a>
+                                        ` : ''}
                                         ${pageNum ? `
-                                            <span class="text-gray-500">
-                                                Page ${pageNum}
+                                            <span class="text-gray-500"  title="${text.replace(/"/g, '&quot;')}">
+                                                Page ${pageNum} 🛈
                                             </span>
                                         ` : ''}
                                         <span class="text-gray-500">
@@ -377,8 +377,7 @@
                     model: modelSelect.value,
                     searchMode: searchModeSelect.value,
                     temperature: parseFloat(temperatureInput.value),
-                    maxTokens: parseInt(maxTokensInput.value),
-                    useStreaming: streamingCheckbox.checked
+                    maxTokens: parseInt(maxTokensInput.value)
                 };
 
                 const requestBody = {
@@ -392,7 +391,7 @@
                         model: config.model,
                         temperature: config.temperature,
                         max_tokens: config.maxTokens,
-                        stream: config.useStreaming
+                        stream: false
                     }
                 };
 
@@ -413,180 +412,31 @@
                     throw new Error(`API Error: ${response.status} ${response.statusText}`);
                 }
 
-                if (config.useStreaming) {
-                    await handleStreamingResponse(response, typingMSG);
-                } else {
                     const data = await response.json();
-                    console.log('Non-streaming response:', data);
-                    handleNonStreamingResponse(data);
-                }
+                    console.log('Response:', data);
+                    handleResponse(data);
 
             } catch (err) {
                 console.error('Error sending message:', err);
                 showError(err.message);
                 addMessage('bot', `I apologize, but I encountered an error: ${err.message}. Please check your R2R configuration and try again.`, true);
             } finally {
+                hideTyping();
                 isLoading = false;
                 sendBtn.disabled = false;
                 messageInput.focus();
             }
         }
 
-        async function handleStreamingResponse(response, botMessage) {
-            const reader = response.body.getReader();
-            const decoder = new TextDecoder();
-            
-            const contentDiv = botMessage.querySelector('.message-content');
-            
-            let buffer = '';
-            let citations = [];
-            let fullContent = '';
-            
-            try {
-                while (true) {
-                    const { done, value } = await reader.read();
-                    if (done) break;
-                    
-                    buffer += decoder.decode(value, { stream: true });
-                    const lines = buffer.split('\n');
-                    
-                    // Keep the last line in buffer if it's incomplete
-                    buffer = lines.pop() || '';
-                    
-                    for (const line of lines) {
-                        if (line.trim() === '') continue;
-                        
-                        if (line.startsWith('data: ')) {
-                            const dataStr = line.slice(6).trim();
-                            
-                            // Skip [DONE] message
-                            if (dataStr === '[DONE]') continue;
-                            
-                            try {
-                                const data = JSON.parse(dataStr);
-                                console.log('Streaming data:', data);
-                                
-                                // Handle different event types based on R2R's streaming format
-                                if (data.type === 'search_results' && data.data) {
-                                    citations = data.data.chunk_search_results || [];
-                                } else if (data.type === 'citation' && data.data) {
-                                    // R2R citation format
-                                    citations.push(data.data);
-                                } else if (data.type === 'answer_chunk' && data.data) {
-                                    // R2R answer chunk format
-                                    fullContent += data.data;
-                                    //contentDiv.textContent = fullContent;
-                                    contentDiv.insertAdjacentText('beforeend', data.data);   // ajoute juste le token
-                                    messagesContainer.scrollTop = messagesContainer.scrollHeight;
-                                } else if (data.generated_answer) {
-                                    // Complete answer format
-                                    fullContent = data.generated_answer;
-                                    contentDiv.textContent = fullContent;
-                                    if (data.citations) {
-                                        citations = data.citations;
-                                    }
-                                    messagesContainer.scrollTop = messagesContainer.scrollHeight;
-                                } else if (data.type === 'completion_chunk' && data.data) {
-                                    // R2R v3 format
-                                    const chunk = data.data.choices?.[0]?.delta?.content || '';
-                                    if (chunk) {
-                                        fullContent += chunk;
-                                        contentDiv.textContent = fullContent;
-                                        messagesContainer.scrollTop = messagesContainer.scrollHeight;
-                                    }
-                                } else if (data.choices) {
-                                    // Direct OpenAI format
-                                    const chunk = data.choices[0]?.delta?.content || '';
-                                    if (chunk) {
-                                        fullContent += chunk;
-                                        contentDiv.textContent = fullContent;
-                                        messagesContainer.scrollTop = messagesContainer.scrollHeight;
-                                    }
-                                } else if (typeof data === 'string') {
-                                    // Plain text chunk
-                                    fullContent += data;
-                                    contentDiv.textContent = fullContent;
-                                    messagesContainer.scrollTop = messagesContainer.scrollHeight;
-                                }
-                            } catch (e) {
-                                console.error('Error parsing streaming data:', e, 'Line:', line);
-                            }
-                        }
-                    }
-                }
-                
-                // Process any remaining buffer
-                if (buffer.trim() && buffer.startsWith('data: ')) {
-                    try {
-                        const dataStr = buffer.slice(6).trim();
-                        if (dataStr !== '[DONE]') {
-                            const data = JSON.parse(dataStr);
-                            console.log('Final streaming data:', data);
-                        }
-                    } catch (e) {
-                        console.error('Error parsing final buffer:', e);
-                    }
-                }
-                
-            } catch (error) {
-                console.error('Streaming error:', error);
-                if (!fullContent) {
-                    contentDiv.textContent = 'Sorry, I encountered an error while generating the response.';
-                }
-            } finally {
-                if (!fullContent) {
-                    contentDiv.textContent = 'No response generated. Please check your R2R configuration.';
-                }
-                addCitations(botMessage, citations);
-            }
-        }
 
-        function handleNonStreamingResponse(data) {
-            console.log('Processing non-streaming response:', data);
+        function handleResponse(data) {
+            console.log('Processing response:', data);
             
             let content = 'No response generated.';
             let citations = [];
             
-            // Check for direct generated_answer format (R2R specific)
-            if (data.generated_answer) {
-                content = data.generated_answer;
-                citations = data.citations || [];
-            }
-            // Try different possible response structures
-            else if (data.results) {
-                // R2R v3 format with results wrapper
-                if (data.results.completion?.choices?.[0]?.message?.content) {
-                    content = data.results.completion.choices[0].message.content;
-                } else if (data.results.choices?.[0]?.message?.content) {
-                    content = data.results.choices[0].message.content;
-                } else if (typeof data.results === 'string') {
-                    content = data.results;
-                }
-                
-                if (data.results.search_results?.chunk_search_results) {
-                    citations = data.results.search_results.chunk_search_results;
-                }
-            } else if (data.completion) {
-                // Direct completion format
-                if (data.completion.choices?.[0]?.message?.content) {
-                    content = data.completion.choices[0].message.content;
-                } else if (typeof data.completion === 'string') {
-                    content = data.completion;
-                }
-                
-                if (data.search_results?.chunk_search_results) {
-                    citations = data.search_results.chunk_search_results;
-                }
-            } else if (data.choices) {
-                // OpenAI format
-                content = data.choices[0]?.message?.content || content;
-            } else if (data.message) {
-                // Simple message format
-                content = data.message;
-            } else if (typeof data === 'string') {
-                // Plain string response
-                content = data;
-            }
+            content = data.results.generated_answer;
+            citations = data.results.citations || [];
             
             const botMessage = addMessage('bot', content);
             addCitations(botMessage, citations);
