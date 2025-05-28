@@ -63,10 +63,10 @@ git checkout
 cd "$SCRIPT_DIR"
 
 # Remove existing target directory if it exists
-if [[ -d "./$TARGET_DIR" ]]; then
-  rm -rf "./$TARGET_DIR"
+if [[ -d "$TARGET_DIR" ]]; then
+  rm -rf "$TARGET_DIR"
 fi
-mv "$TEMP_DIR/$SOURCE_DIR" "./$TARGET_DIR"
+mv "$TEMP_DIR/$SOURCE_DIR" "$TARGET_DIR"
 rm -rf "$TEMP_DIR"
 log "✅ Successfully fetched $SOURCE_DIR from $REPO_URL into $TARGET_DIR."
 
