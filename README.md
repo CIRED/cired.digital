@@ -2,6 +2,8 @@
 
 Un outil open source pour examiner les coûts et les bénéfices de pouvoir interroger les publications scientifiques d'un laboratoire de manière conversationnelle.
 
+For the systematic description of this repository in English, see: [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/MinhHaDuong/cired.digital)
+
 ## Description
 
 Nous développons ici un chatbot interactif permettant aux utilisateurs d'explorer les publications scientifiques du CIRED stockées dans la collection HAL via des requêtes en langage naturel.
@@ -62,3 +64,5 @@ Project's code. See `src/README.md` for an architectural overview then `docs/blu
 ### `tests/`
 unit & integration tests
 Mirrors the organisation of `src/`
+
+Pour en savoir plus: (https://deepwiki.com/MinhHaDuong/cired.digital)
