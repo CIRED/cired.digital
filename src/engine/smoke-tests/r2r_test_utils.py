@@ -98,15 +98,14 @@ def create_or_get_document() -> str | None:
             try:
                 doc_info = client.documents.retrieve(document_id)
                 ingestion_status = getattr(doc_info.results, 'ingestion_status', 'unknown')
-                extraction_status = getattr(doc_info.results, 'extraction_status', 'unknown')
 
-                print(f"Document status: ingestion={ingestion_status}, extraction={extraction_status}")
+                print(f"Document status: ingestion={ingestion_status}")
 
-                if ingestion_status == "success" and extraction_status == "success":
+                if ingestion_status == "success":
                     print("Document is ready.")
                     return document_id
-                elif ingestion_status == "failed" or extraction_status == "failed":
-                    print(f"Document processing failed: ingestion={ingestion_status}, extraction={extraction_status}")
+                elif ingestion_status == "failed":
+                    print(f"Document processing failed: ingestion={ingestion_status}")
                     return None
 
                 time.sleep(DOCUMENT_POLLING_INTERVAL)
