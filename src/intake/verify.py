@@ -234,7 +234,6 @@ COMMANDS = {
 
 def get_help_lines() -> str:
     """Fetch the help from the functions docstrings."""
-    
     max_len = max(len(cmd) for cmd in COMMANDS)
     lines = [
         f"  {cmd.ljust(max_len)}  {fn.__doc__.strip().splitlines()[0]}"
@@ -245,7 +244,6 @@ def get_help_lines() -> str:
 
 def main():
     """Inspect the state of the R2R documents store."""
-
     parser = argparse.ArgumentParser(
         description=f"Inspect the state of the R2R documents store at {R2R_DEFAULT_BASE_URL}.",
         formatter_class=argparse.RawTextHelpFormatter
