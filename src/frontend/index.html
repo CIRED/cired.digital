@@ -48,7 +48,7 @@
             </div>
             <div>
               <h1 class="text-lg font-semibold text-gray-900">
-                Conversations avec le documentaliste scientifique CIRED.digital - VERSION ALPHA
+                Conversations avec CIRED.digital, documentaliste scientifique  - VERSION ALPHA
               </h1>
               <p class="text-sm text-gray-500" id="status-text">
                 Connecté à <span id="api-url-display">http://cired.digital:7272</span> • <span id="model-display">openai/gpt-4o-mini</span>
@@ -75,20 +75,7 @@
               </option>
             </select>
           </div>
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">Search Mode</label> <select id="search-mode" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="basic">
-                Basic (Semantic)
-              </option>
-              <option value="advanced" selected>
-                Advanced (Hybrid)
-              </option>
-              <option value="custom">
-                Custom
-              </option>
-            </select>
-          </div>
-          <div>
+           <div>
             <label class="block text-sm font-medium text-gray-700 mb-1">Temperature</label> <input type="number" id="temperature" min="0" max="2" step="0.1" value="0.1" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
           </div>
           <div>
@@ -109,7 +96,7 @@
             </div>
             <div class="flex-1">
               <div class="bg-white text-gray-800 border border-gray-200 px-4 py-3 rounded-lg">
-                <div class="message-content">Bonjour !<br />Je suis CIRED.digital, documentaliste scientifique. Mon rôle consiste à analyser les écrits du Centre International de Recherche sur l'Environnement et le Développement (le CIRED) pour vous fournir des micro-synthèses sourcées. Le fonds documentaire compte 120 documents issus de l'archive ouverte française Hyper Articles en Ligne (HAL). Ceci est une version alpha, merci de ne pas rediffuser ce fichier. Vous êtes anonyme, mais tout ce que vous saisissez peut être enregistré pour contribuer à m'améliorer.</div>
+                <div class="message-content">Bonjour !<br />Je suis CIRED.digital, documentaliste scientifique. Mon rôle consiste à analyser les écrits du Centre International de Recherche sur l'Environnement et le Développement (le CIRED) pour vous fournir des micro-synthèses sourcées. Le fonds documentaire compte 1197 documents issus de l'archive ouverte française Hyper Articles en Ligne (HAL). Ceci est une version alpha. Ne pas rediffuser ce fichier. Merci de donner votre feedback anonyme sur la qualité des réponses en cliquant sur 👍 ou 👎.</div>
               </div>
               <div class="text-xs text-gray-500 mt-1" id="initial-timestamp"></div>
               <div class="bg-white text-gray-800 border border-gray-200 px-4 py-3 rounded-lg">
@@ -125,7 +112,7 @@
       <div class="bg-white border-t border-gray-200 p-4">
         <div class="flex space-x-3 max-w-4xl mx-auto">
           <div class="flex-1 relative">
-            <textarea id="message-input" placeholder="Posez votre question sur les documents de la base..." class="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" rows="1" style="min-height: 48px; max-height: 120px;"></textarea>
+            <textarea id="message-input" placeholder="Posez votre question sur les thèmes du CIRED..." class="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" rows="1" style="min-height: 48px; max-height: 120px;"></textarea>
           </div><button id="send-btn" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center transition-colors"><span class="font-bold text-lg">➤</span></button>
         </div>
         <div class="text-center mt-2">
@@ -136,7 +123,7 @@
     <script>
         // Configuration constants
         const DEFAULT_HOST = 'http://cired.digital:7272';
-        const FEEDBACK_HOST = 'http://localhost:7275';
+        const FEEDBACK_HOST = 'http://cired.digital:7275';
         
         // Global state
         let isLoading = false;
@@ -154,7 +141,6 @@
         // Configuration elements
         const apiUrlInput = document.getElementById('api-url');
         const modelSelect = document.getElementById('model');
-        const searchModeSelect = document.getElementById('search-mode');
         const temperatureInput = document.getElementById('temperature');
         const maxTokensInput = document.getElementById('max-tokens');
 
@@ -320,8 +306,8 @@
                                                 </p>
                                             ` : ''}
                                         </div>
-                                        <div class="ml-2 text-xs text-gray-500">
-                                            [${citationId}]
+                                        <div class="ml-2 text-xs text-gray-500" title="${text.replace(/"/g, '&quot;')}">
+                                            [${citationId}] 🛈
                                         </div>
                                     </div>
                                   
@@ -339,8 +325,8 @@
                                             </a>
                                         ` : ''}
                                         ${pageNum ? `
-                                            <span class="text-gray-500"  title="${text.replace(/"/g, '&quot;')}">
-                                                Page ${pageNum} 🛈
+                                            <span class="text-gray-500">
+                                                Page ${pageNum}
                                             </span>
                                         ` : ''}
                                         <span class="text-gray-500">
@@ -376,7 +362,6 @@
                 const config = {
                     apiUrl: apiUrlInput.value,
                     model: modelSelect.value,
-                    searchMode: searchModeSelect.value,
                     temperature: parseFloat(temperatureInput.value),
                     maxTokens: parseInt(maxTokensInput.value)
                 };
@@ -384,8 +369,7 @@
                 const requestBody = {
                     query: query,
                     search_settings: {
-                        search_mode: config.searchMode,
-                        use_hybrid_search: config.searchMode === 'advanced',
+                        search_mode: 'advanced',
                         limit: 10
                     },
                     rag_generation_config: {
@@ -448,6 +432,7 @@ feedbackDiv.className = 'flex gap-2 mt-2';
 feedbackDiv.innerHTML = `
   <button class="thumb-up text-green-600 hover:text-green-800" title="Bonne réponse.">👍</button>
   <button class="thumb-down text-red-600 hover:text-red-800" title="Réponse insuffisante.">👎</button>
+  <a href="${FEEDBACK_HOST}/v1/feedback/view" title="Ouvrir la table des feedbacks.">📊</a>
 `;
 
 botMessage.querySelector('.message-content').after(feedbackDiv);
