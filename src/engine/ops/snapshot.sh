@@ -56,12 +56,12 @@ for volume in $project_volumes; do
     # Extract the short name (without project prefix)
     volume_short_name=$(echo "$volume" | sed "s/${PROJECT_NAME}_//")
 
-    # Create tar.gz of the volume
+    # Create tar of the volume
     if docker run --rm \
         -v "$volume:/source" \
         -v "$BACKUP_DIR:/backup" \
-        alpine tar -czf "/backup/${volume_short_name}.tar.gz" -C /source .; then
-        log "✅ Successfully backed up $volume to ${BACKUP_DIR}/${volume_short_name}.tar.gz"
+        alpine tar -cf "/backup/${volume_short_name}.tar" -C /source .; then
+        log "✅ Successfully backed up $volume to ${BACKUP_DIR}/${volume_short_name}.tar"
     else
         log -e "Failed to backup volume $volume"
         exit 3
@@ -70,7 +70,7 @@ done
 
 # Create a single archive of all volume backups
 log "Creating consolidated archive..."
-tar -czf "${ARCHIVES_DIR}/${SNAPSHOT_NAME}.tar.gz" -C "${ARCHIVES_DIR}" "${SNAPSHOT_NAME}"
+tar -cf "${ARCHIVES_DIR}/${SNAPSHOT_NAME}.tar" -C "${ARCHIVES_DIR}" "${SNAPSHOT_NAME}"
 
 # Cleanup individual volume backups
 rm -rf "$BACKUP_DIR"
@@ -89,4 +89,4 @@ if [ "$should_restart" = true ]; then
     fi
 fi
 
-log "✅ Snapshot completed: ${ARCHIVES_DIR}/${SNAPSHOT_NAME}.tar.gz"
+log "✅ Snapshot completed: ${ARCHIVES_DIR}/${SNAPSHOT_NAME}.tar"

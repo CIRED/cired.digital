@@ -13,7 +13,7 @@ if [ $# -lt 1 ]; then
     log -e "Usage: $0 <archive_file>"
     log "Available archives in ${ARCHIVES_DIR}:"
     if [ -d "${ARCHIVES_DIR}" ]; then
-        find "${ARCHIVES_DIR}" -name "*.tar.gz" -printf "%f\n" | sort | while read -r archive; do
+        find "${ARCHIVES_DIR}" -name "*.tar" -printf "%f\n" | sort | while read -r archive; do
             log "  - ${archive}"
         done
     else
@@ -44,12 +44,16 @@ if [ ! -f "$SNAPSHOT_FILE" ]; then
     exit 2
 fi
 
-if ! tar -tzf "$SNAPSHOT_FILE" >/dev/null 2>&1; then
+if ! tar -tf "$SNAPSHOT_FILE" >/dev/null 2>&1; then
     log -e "Archive is corrupt or invalid: $SNAPSHOT_FILE"
     exit 3
 fi
 
-TEMP_DIR="$(mktemp -d)"
+# Use disk-based local tmp rather than RAM-based default mktemp
+# because archives will be big.
+TEMP_DIR="$(mktemp -d -p .)"
+TEMP_DIR="$(realpath "$TEMP_DIR")"
+
 # Clean up temp directory on exit
 trap 'rm -rf "$TEMP_DIR"' EXIT
 
@@ -68,11 +72,11 @@ fi
 
 # Extract the archive to temp directory (already validated)
 log "Extracting archive: $SNAPSHOT_FILE"
-tar -xzf "$SNAPSHOT_FILE" -C "$TEMP_DIR"
+tar -xf "$SNAPSHOT_FILE" -C "$TEMP_DIR"
 
-# Find all .tar.gz files in the extracted directory
+# Find all .tar files in the extracted directory
 archive_dir=$(find "$TEMP_DIR" -type d | head -1)
-volume_archives=$(find "$archive_dir" -name "*.tar.gz")
+volume_archives=$(find "$archive_dir" -name "*.tar")
 
 if [ -z "$volume_archives" ]; then
     log -e "No volume archives found in the extracted directory"
@@ -82,7 +86,7 @@ fi
 # Restore each volume
 for archive in $volume_archives; do
     # Get volume name from archive filename
-    volume_name=$(basename "$archive" .tar.gz)
+    volume_name=$(basename "$archive" .tar)
     full_volume_name="${PROJECT_NAME}_${volume_name}"
 
     log "Restoring volume: $full_volume_name"
@@ -108,8 +112,8 @@ for archive in $volume_archives; do
     # Restore from archive
     if docker run --rm \
         -v "$full_volume_name:/volume" \
-        -v "$archive:/backup.tar.gz" \
-        alpine sh -c "tar -xzf /backup.tar.gz -C /volume"; then
+        -v "$archive:/backup.tar" \
+        alpine sh -c "tar -xf /backup.tar -C /volume"; then
         log "✅ Successfully restored $full_volume_name"
     else
         log -e "Failed to restore volume $full_volume_name"
