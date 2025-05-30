@@ -5,7 +5,7 @@ from unittest.mock import MagicMock, mock_open, patch
 
 import pytest
 
-from src.engine.smoke-tests.hello_r2r import main as hello_r2r_main
+from src.engine.smoke_tests.hello_r2r import main as hello_r2r_main
 
 
 @pytest.fixture

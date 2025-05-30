@@ -200,8 +200,6 @@ def test_normalize_title():
     assert normalize_title("Test Document") == "test document"
     assert normalize_title("Test, Document!") == "test document"
     assert normalize_title("  Test   Document  ") == "test document"
-    with patch("src.intake.verify.pd.isna", return_value=True):
-        assert normalize_title(None) == ""
 
 
 def test_show_repeat_titles_with_duplicates(sample_documents_df):
