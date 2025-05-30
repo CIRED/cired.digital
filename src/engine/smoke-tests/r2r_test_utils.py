@@ -92,31 +92,30 @@ def create_or_get_document() -> str | None:
         response = client.documents.create(file_path=TEST_FILE)
         document_id = response.results.document_id
         print("Document created.")
-        
+
         start_time = time.time()
         while time.time() - start_time < DOCUMENT_POLLING_TIMEOUT:
             try:
                 doc_info = client.documents.retrieve(document_id)
                 ingestion_status = getattr(doc_info.results, 'ingestion_status', 'unknown')
                 extraction_status = getattr(doc_info.results, 'extraction_status', 'unknown')
-                
+
                 print(f"Document status: ingestion={ingestion_status}, extraction={extraction_status}")
-                
+
                 if ingestion_status == "success" and extraction_status == "success":
                     print("Document is ready.")
                     return document_id
                 elif ingestion_status == "failed" or extraction_status == "failed":
                     print(f"Document processing failed: ingestion={ingestion_status}, extraction={extraction_status}")
                     return None
-                    
+
                 time.sleep(DOCUMENT_POLLING_INTERVAL)
             except Exception as poll_error:
                 print(f"Error checking document status: {poll_error}")
                 time.sleep(DOCUMENT_POLLING_INTERVAL)
-        
+
         print(f"Timeout waiting for document to be ready after {DOCUMENT_POLLING_TIMEOUT} seconds")
         return document_id
-        
     except Exception as e:
         error_msg = str(e)
         if "already exists" in error_msg:
