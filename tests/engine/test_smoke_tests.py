@@ -5,7 +5,11 @@ from unittest.mock import MagicMock, mock_open, patch
 
 import pytest
 
-from src.engine.smoke_tests.hello_r2r import main as hello_r2r_main
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
+
+from engine.smoke_tests.hello_r2r import main as hello_r2r_main
 
 
 @pytest.fixture

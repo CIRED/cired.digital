@@ -9,7 +9,11 @@ from unittest.mock import MagicMock, mock_open, patch
 import pytest
 import requests
 
-from src.intake.download import (
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
+
+from intake.download import (
     download_pdf,
     get_pdf_filename,
     main,

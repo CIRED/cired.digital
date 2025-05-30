@@ -7,7 +7,11 @@ from unittest.mock import MagicMock, mock_open, patch
 import pytest
 from fastapi.testclient import TestClient
 
-from src.analytics.feedback_server import app, receive_feedback, view_feedback
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
+
+from analytics.feedback_server import app, receive_feedback, view_feedback
 
 
 @pytest.fixture

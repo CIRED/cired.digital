@@ -7,7 +7,11 @@ from unittest.mock import MagicMock, mock_open, patch
 
 import pytest
 
-from src.intake.push import (
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
+
+from intake.push import (
     check_r2r_connection,
     exclude_oversized_pdfs,
     first_if_list,

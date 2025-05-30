@@ -8,7 +8,11 @@ from unittest.mock import MagicMock, mock_open, patch
 import pandas as pd
 import pytest
 
-from src.intake.verify import (
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
+
+from intake.verify import (
     check_r2r,
     describe_table,
     get_existing_documents,
