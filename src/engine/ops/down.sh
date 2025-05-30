@@ -10,10 +10,11 @@
 #   fails or hangs, requiring more forceful intervention.
 #
 # USAGE:
-#   sudo ./down.sh
+#   ./down.sh                    # Try without root first
+#   sudo ./down.sh               # If escalation to stages 4-5 is needed
 #
 # REQUIREMENTS:
-#   - Must be run as root (uses systemctl and kill -9)
+#   - User must be in docker group OR have sudo access for escalation
 #   - Requires common_config.sh in the same directory
 #   - Docker and Docker Compose must be installed
 #
@@ -24,9 +25,13 @@
 #   4. Daemon restart: Restart Docker daemon via systemctl (30s timeout)
 #   5. Process kill: Host-level `kill -9` on container processes
 #
+#   1-3: Can run as regular user (if in docker group)
+#   4-5: Require root privileges (systemctl, kill -9)
+#
 # EXIT CODES:
 #   0  - Success (containers stopped gracefully or forcefully)
-#   1  - Permission error (not run as root)
+#   1  - Permission error for escalation stages
+#   2  - Docker access denied (user not in docker group)
 #   99 - Ultimate escalation completed (manual intervention may be needed)
 #   Other - Unexpected error occurred
 #
@@ -68,11 +73,26 @@ cd "$SCRIPT_DIR"
 source "$SCRIPT_DIR/common_config.sh"
 trap 'log "❌ An unexpected error occurred."' ERR
 
-# Require root, we may have to restart dockerd and kill processes
-if [ "$EUID" -ne 0 ]; then
-  log "⚠️  Please run this script as root: sudo $0"
-  exit 1
-fi
+
+# Check if we can access Docker without sudo
+check_docker_access() {
+    if ! docker ps >/dev/null 2>&1; then
+        log "❌ Cannot access Docker daemon. Please:"
+        log "   - Add your user to the docker group: sudo usermod -aG docker $USER"
+        log "   - Then log out and back in, or run: newgrp docker"
+        log "   - Or run this script with sudo"
+        exit 2
+    fi
+}
+
+# Check if we need root for escalation stages
+check_root_for_escalation() {
+    if [ "$EUID" -ne 0 ]; then
+        log "⚠️  Escalation to stages 4-5 requires root privileges."
+        log "   Please run: sudo $0"
+        exit 1
+    fi
+}
 
 # Timeouts (in seconds)
 DOWN_TIMEOUT=15       # how long to wait for `compose down`
@@ -107,6 +127,10 @@ cleanup_zombie() {
     
     log "   ✅ Zombie cleanup done."
 }
+
+
+# Initial Docker access check
+check_docker_access
 
 ########################################
 # STAGE 1: docker compose down
@@ -165,9 +189,13 @@ else
   log "❌ docker rm -f failed."
 fi
 
+
 ########################################
-# STAGE 4: Restart Docker daemon
+# STAGE 4: Restart Docker daemon (requires root)
 ########################################
+
+check_root_for_escalation
+
 if command -v systemctl &>/dev/null; then
   log "4) Restarting Docker daemon via systemctl…"
   if timeout 30s systemctl restart docker; then
