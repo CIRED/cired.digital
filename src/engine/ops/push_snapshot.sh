@@ -49,20 +49,20 @@ if [ -z "$SNAPSHOT_NAME" ]; then
     fi
     
     # Find the latest snapshot file
-    LATEST_SNAPSHOT=$(find "$ARCHIVES_DIR" -name "*.tar.gz" -type f -print0 | xargs -0 ls -t | head -n 1)
+    LATEST_SNAPSHOT=$(find "$ARCHIVES_DIR" -name "*.tar" -type f -print0 | xargs -0 ls -t | head -n 1)
     
     if [ -z "$LATEST_SNAPSHOT" ]; then
         log -e "No snapshots found in $ARCHIVES_DIR"
         exit 1
     fi
     
-    SNAPSHOT_NAME=$(basename "$LATEST_SNAPSHOT" .tar.gz)
+    SNAPSHOT_NAME=$(basename "$LATEST_SNAPSHOT" .tar)
     SNAPSHOT_FILE="$LATEST_SNAPSHOT"
     
     log "Found latest snapshot: $SNAPSHOT_NAME"
 else
     # Construct snapshot file path from provided name
-    SNAPSHOT_FILE="${ARCHIVES_DIR}/${SNAPSHOT_NAME}.tar.gz"
+    SNAPSHOT_FILE="${ARCHIVES_DIR}/${SNAPSHOT_NAME}.tar"
     
     # Check if specified snapshot exists
     if [ ! -f "$SNAPSHOT_FILE" ]; then
