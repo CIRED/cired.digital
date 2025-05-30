@@ -2,13 +2,11 @@
 
 import hashlib
 import json
-from pathlib import Path
-from unittest.mock import MagicMock, mock_open, patch
-
-import pytest
-
-import sys
 import os
+import sys
+from pathlib import Path
+from unittest.mock import MagicMock, patch
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
 
 from intake.push import (
@@ -37,9 +35,9 @@ def test_get_args_defaults():
             no_metadata=False,
             verbose=False
         )
-        
+
         args = get_args()
-        
+
         assert args.dir == Path("/test/dir")
         assert args.recursive is False
         assert args.base_url == "http://localhost:7272"
@@ -53,12 +51,12 @@ def test_get_args_defaults():
 def test_prepare_pdf_files_directory_not_found():
     """Test prepare_pdf_files when directory doesn't exist."""
     args = MagicMock(dir=Path("/nonexistent"), recursive=False)
-    
+
     with patch.object(Path, "is_dir", return_value=False), \
          patch("src.intake.push.logging") as mock_logging:
-        
+
         result = prepare_pdf_files(args)
-        
+
         assert result == []
         mock_logging.error.assert_called_once()
 
@@ -66,13 +64,13 @@ def test_prepare_pdf_files_directory_not_found():
 def test_prepare_pdf_files_no_pdfs():
     """Test prepare_pdf_files when no PDFs are found."""
     args = MagicMock(dir=Path("/test/dir"), recursive=False, max_upload=5)
-    
+
     with patch.object(Path, "is_dir", return_value=True), \
          patch.object(Path, "glob", return_value=[]), \
          patch("src.intake.push.logging") as mock_logging:
-        
+
         result = prepare_pdf_files(args)
-        
+
         assert result == []
         mock_logging.warning.assert_called_once()
 
@@ -81,13 +79,13 @@ def test_prepare_pdf_files_with_pdfs():
     """Test prepare_pdf_files with PDFs found."""
     args = MagicMock(dir=Path("/test/dir"), recursive=False, max_upload=5)
     pdf_files = [Path("/test/dir/file1.pdf"), Path("/test/dir/file2.pdf")]
-    
+
     with patch.object(Path, "is_dir", return_value=True), \
          patch.object(Path, "glob", return_value=pdf_files), \
          patch("src.intake.push.logging") as mock_logging:
-        
+
         result = prepare_pdf_files(args)
-        
+
         assert result == pdf_files
         assert mock_logging.info.call_count == 2
 
@@ -95,13 +93,13 @@ def test_prepare_pdf_files_with_pdfs():
 def test_prepare_pdf_files_recursive():
     """Test prepare_pdf_files with recursive option."""
     args = MagicMock(dir=Path("/test/dir"), recursive=True, max_upload=5)
-    
+
     with patch.object(Path, "is_dir", return_value=True), \
          patch.object(Path, "glob", return_value=[]), \
          patch("src.intake.push.logging"):
-        
+
         prepare_pdf_files(args)
-        
+
         Path.glob.assert_called_once_with("**/*.pdf")
 
 
@@ -112,18 +110,18 @@ def test_exclude_oversized_pdfs():
         Path("/test/dir/large.pdf"),
         Path("/test/dir/medium.pdf")
     ]
-    
+
     def mock_stat(path):
         if "large" in str(path):
             return MagicMock(st_size=31_000_000)  # Over the limit
         return MagicMock(st_size=1_000_000)  # Under the limit
-    
+
     with patch.object(Path, "stat", side_effect=mock_stat), \
          patch("src.intake.push.MAX_FILE_SIZE", 30_000_000), \
          patch("src.intake.push.logging") as mock_logging:
-        
+
         result = exclude_oversized_pdfs(pdf_files)
-        
+
         assert len(result) == 2
         assert Path("/test/dir/large.pdf") not in result
         assert Path("/test/dir/small.pdf") in result
@@ -137,15 +135,15 @@ def test_get_existing_documents():
     mock_client = MagicMock()
     mock_doc1 = MagicMock(title="Doc1", ingestion_status="success")
     mock_doc2 = MagicMock(title="Doc2", ingestion_status="failed")
-    
+
     mock_client.documents.list.side_effect = [
         MagicMock(results=[mock_doc1, mock_doc2]),
         MagicMock(results=[])
     ]
-    
+
     with patch("src.intake.push.logging"):
         result = get_existing_documents(mock_client)
-        
+
         assert len(result) == 2
         assert result["Doc1"] == "success"
         assert result["Doc2"] == "failed"
@@ -156,10 +154,10 @@ def test_get_existing_documents_error():
     """Test error handling in get_existing_documents."""
     mock_client = MagicMock()
     mock_client.documents.list.side_effect = Exception("API error")
-    
+
     with patch("src.intake.push.logging") as mock_logging:
         result = get_existing_documents(mock_client)
-        
+
         assert result == {}
         mock_logging.error.assert_called_once()
 
@@ -168,9 +166,9 @@ def test_load_metadata_file_not_found():
     """Test load_metadata when file doesn't exist."""
     with patch.object(Path, "exists", return_value=False), \
          patch("src.intake.push.logging") as mock_logging:
-        
+
         result = load_metadata(Path("/nonexistent.json"))
-        
+
         assert result == {}
         mock_logging.warning.assert_called_once()
 
@@ -182,19 +180,19 @@ def test_load_metadata_with_valid_file():
         {"pdf_url": "http://example.com/paper.pdf", "title": "Test Paper 2"},
         {"title": "Test Paper 3"}  # No halId_s or pdf_url
     ]
-    
+
     with patch.object(Path, "exists", return_value=True), \
          patch.object(Path, "read_text", return_value=json.dumps(publications)), \
          patch("src.intake.push.logging"):
-        
+
         result = load_metadata(Path("/test/metadata.json"))
-        
+
         assert "hal-12345" in result
         assert "hal_12345" in result  # Also creates underscore version
-        
-        hash_key = hashlib.md5("http://example.com/paper.pdf".encode()).hexdigest()
+
+        hash_key = hashlib.md5(b"http://example.com/paper.pdf").hexdigest()
         assert hash_key in result
-        
+
         assert len(result) == 3  # 2 keys for halId_s + 1 for pdf_url
 
 
@@ -203,9 +201,9 @@ def test_load_metadata_invalid_json():
     with patch.object(Path, "exists", return_value=True), \
          patch.object(Path, "read_text", return_value="invalid json"), \
          patch("src.intake.push.logging") as mock_logging:
-        
+
         result = load_metadata(Path("/test/metadata.json"))
-        
+
         assert result == {}
         mock_logging.error.assert_called_once()
 
@@ -242,9 +240,9 @@ def test_format_metadata_for_upload():
         "halId_s": "hal-12345",
         "docType_s": "ART"
     }
-    
+
     result = format_metadata_for_upload(hal_metadata)
-    
+
     assert result["title"] == "Test Title"
     assert result["citation"] == "Test Citation"
     assert result["description"] == "Test Abstract"
@@ -262,9 +260,9 @@ def test_format_metadata_for_upload_single_author():
         "title_s": "Test Title",
         "authFullName_s": "Single Author"
     }
-    
+
     result = format_metadata_for_upload(hal_metadata)
-    
+
     assert result["authors"] == ["Single Author"]
 
 
@@ -273,9 +271,9 @@ def test_format_metadata_for_upload_hal_url():
     hal_metadata = {
         "halId_s": "hal-12345"
     }
-    
+
     result = format_metadata_for_upload(hal_metadata)
-    
+
     assert result["source_url"] == "https://hal.science/hal-12345"
 
 
@@ -288,19 +286,19 @@ def test_upload_pdfs_success():
         "file1": {"title_s": "Test Title 1"},
         "file2": {"title_s": "Test Title 2"}
     }
-    
+
     with patch("src.intake.push.format_metadata_for_upload") as mock_format, \
          patch("src.intake.push.logging"):
-        
+
         mock_format.side_effect = [
             {"title": "Test Title 1"},
             {"title": "Test Title 2"}
         ]
-        
+
         success, skipped, failed = upload_pdfs(
             pdf_files, client, existing_documents, metadata_by_file
         )
-        
+
         assert success == 2
         assert skipped == 0
         assert len(failed) == 0
@@ -316,19 +314,19 @@ def test_upload_pdfs_skip_existing():
         "file1": {"title_s": "Test Title 1"},
         "file2": {"title_s": "Test Title 2"}
     }
-    
+
     with patch("src.intake.push.format_metadata_for_upload") as mock_format, \
          patch("src.intake.push.logging"):
-        
+
         mock_format.side_effect = [
             {"title": "Test Title 1"},
             {"title": "Test Title 2"}
         ]
-        
+
         success, skipped, failed = upload_pdfs(
             pdf_files, client, existing_documents, metadata_by_file
         )
-        
+
         assert success == 1
         assert skipped == 1
         assert len(failed) == 0
@@ -343,16 +341,16 @@ def test_upload_pdfs_retry_failed():
     metadata_by_file = {
         "file1": {"title_s": "Test Title 1"}
     }
-    
+
     with patch("src.intake.push.format_metadata_for_upload") as mock_format, \
          patch("src.intake.push.logging"):
-        
+
         mock_format.return_value = {"title": "Test Title 1"}
-        
+
         success, skipped, failed = upload_pdfs(
             pdf_files, client, existing_documents, metadata_by_file
         )
-        
+
         assert success == 1
         assert skipped == 0
         assert len(failed) == 0
@@ -368,14 +366,14 @@ def test_upload_pdfs_with_error():
     metadata_by_file = {
         "file1": {"title_s": "Test Title 1"}
     }
-    
+
     with patch("src.intake.push.format_metadata_for_upload"), \
          patch("src.intake.push.logging") as mock_logging:
-        
+
         success, skipped, failed = upload_pdfs(
             pdf_files, client, existing_documents, metadata_by_file
         )
-        
+
         assert success == 0
         assert skipped == 0
         assert len(failed) == 1
@@ -389,12 +387,12 @@ def test_upload_pdfs_max_upload_limit():
     client = MagicMock()
     existing_documents = {}
     metadata_by_file = {}
-    
+
     with patch("src.intake.push.logging"):
         success, skipped, failed = upload_pdfs(
             pdf_files, client, existing_documents, metadata_by_file, max_upload=2
         )
-        
+
         assert success == 2
         assert client.documents.create.call_count == 2
 
@@ -402,10 +400,10 @@ def test_upload_pdfs_max_upload_limit():
 def test_check_r2r_connection_success():
     """Test successful R2R connection check."""
     client = MagicMock()
-    
+
     with patch("src.intake.push.logging"):
         result = check_r2r_connection(client)
-        
+
         assert result is True
         client.documents.list.assert_called_once_with(limit=1)
 
@@ -414,9 +412,9 @@ def test_check_r2r_connection_failure():
     """Test failed R2R connection check."""
     client = MagicMock()
     client.documents.list.side_effect = Exception("Connection error")
-    
+
     with patch("src.intake.push.logging") as mock_logging:
         result = check_r2r_connection(client)
-        
+
         assert result is False
         mock_logging.error.assert_called_once()

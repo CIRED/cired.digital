@@ -2,15 +2,14 @@
 
 import hashlib
 import json
-import logging
+import os
+import sys
 from pathlib import Path
 from unittest.mock import MagicMock, mock_open, patch
 
 import pytest
 import requests
 
-import sys
-import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
 
 from intake.download import (
@@ -53,7 +52,7 @@ def test_get_pdf_filename_without_halid():
     """Test get_pdf_filename with an entry without halId_s."""
     entry = {"pdf_url": "http://example.com/paper.pdf"}
     expected_hash = hashlib.md5(entry["pdf_url"].encode()).hexdigest()
-    
+
     with patch("src.intake.download.PDF_DIR", Path("/test/dir")):
         result = get_pdf_filename(entry)
         assert result == Path(f"/test/dir/{expected_hash}.pdf")
@@ -72,15 +71,15 @@ def test_download_pdf_success(mock_response):
     """Test successful PDF download."""
     url = "http://example.com/paper.pdf"
     target_path = Path("/test/dir/paper.pdf")
-    
+
     with patch("src.intake.download.requests.get", return_value=mock_response) as mock_get, \
          patch("builtins.open", mock_open()) as mock_file, \
          patch("src.intake.download.logging") as mock_logging, \
          patch.object(Path, "rename") as mock_rename, \
          patch.object(Path, "with_suffix", return_value=Path("/test/dir/paper.tmp")):
-        
+
         result = download_pdf(url, target_path)
-        
+
         mock_get.assert_called_once_with(url, stream=True, timeout=60)
         mock_file.assert_called_once_with(Path("/test/dir/paper.tmp"), "wb")
         mock_rename.assert_called_once()
@@ -92,14 +91,14 @@ def test_download_pdf_request_error():
     """Test PDF download with request error."""
     url = "http://example.com/paper.pdf"
     target_path = Path("/test/dir/paper.pdf")
-    
+
     with patch("src.intake.download.requests.get", side_effect=requests.exceptions.RequestException("Error")), \
          patch("src.intake.download.logging") as mock_logging, \
          patch.object(Path, "exists", return_value=False), \
          patch.object(Path, "with_suffix", return_value=Path("/test/dir/paper.tmp")):
-        
+
         result = download_pdf(url, target_path)
-        
+
         mock_logging.warning.assert_called_once()
         assert result is False
 
@@ -108,16 +107,16 @@ def test_download_pdf_file_error(mock_response):
     """Test PDF download with file writing error."""
     url = "http://example.com/paper.pdf"
     target_path = Path("/test/dir/paper.pdf")
-    
+
     with patch("src.intake.download.requests.get", return_value=mock_response), \
-         patch("builtins.open", side_effect=IOError("File error")), \
+         patch("builtins.open", side_effect=OSError("File error")), \
          patch("src.intake.download.logging") as mock_logging, \
          patch.object(Path, "exists", return_value=True), \
          patch.object(Path, "unlink") as mock_unlink, \
          patch.object(Path, "with_suffix", return_value=Path("/test/dir/paper.tmp")):
-        
+
         result = download_pdf(url, target_path)
-        
+
         mock_logging.warning.assert_called_once()
         mock_unlink.assert_called_once()
         assert result is False
@@ -125,13 +124,13 @@ def test_download_pdf_file_error(mock_response):
 
 def test_main_missing_publications_file():
     """Test main function when publications file is missing."""
-    with patch("src.intake.download.PUBLICATIONS_FILE") as mock_file, \
+    with patch("src.intake.download.PUBLICATIONS_FILE"), \
          patch("src.intake.download.logging") as mock_logging, \
          patch.object(Path, "exists", return_value=False):
-        
+
         main()
-        
-        mock_logging.error.assert_called()
+
+        mock_logging.error.assert_called_once()
 
 
 def test_main_with_publications():
@@ -141,18 +140,18 @@ def test_main_with_publications():
         {"pdf_url": "http://example.com/2.pdf"},
         {"title": "No PDF URL"}
     ]
-    
-    with patch("src.intake.download.PUBLICATIONS_FILE") as mock_file, \
+
+    with patch("src.intake.download.PUBLICATIONS_FILE"), \
          patch.object(Path, "exists", return_value=True), \
          patch.object(Path, "read_text", return_value=json.dumps(publications)), \
          patch("src.intake.download.get_pdf_filename") as mock_get_filename, \
          patch("src.intake.download.download_pdf", return_value=True) as mock_download, \
          patch("src.intake.download.logging"), \
          patch("src.intake.download.time.sleep"):
-        
+
         mock_get_filename.side_effect = [Path("/test/1.pdf"), Path("/test/2.pdf")]
-        
+
         with patch.object(Path, "exists", side_effect=[True, False]):
             main()
-            
+
             assert mock_download.call_count == 1
