@@ -264,11 +264,11 @@ def main():
 
     _, documents = setup()
 
-    if args.command == "all":
+    if args.what == "all":
         for fn in COMMANDS.values():
             fn(documents)
     else:
-        COMMANDS[args.command](documents)
+        COMMANDS[args.what](documents)
 
 
 if __name__ == "__main__":
