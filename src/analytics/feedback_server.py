@@ -30,6 +30,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 class Feedback(BaseModel):
     """Schema for incoming feedback data."""
 
@@ -38,8 +39,9 @@ class Feedback(BaseModel):
     feedback: Literal["up", "down"]
     timestamp: str
 
+
 @app.post("/v1/feedback")
-async def receive_feedback(fb: Feedback):
+async def receive_feedback(fb: Feedback) -> dict[str, str]:
     """
     Save user feedback to a CSV file.
 
@@ -55,19 +57,21 @@ async def receive_feedback(fb: Feedback):
 
     """
     file_exists = os.path.exists("feedback.csv")
-    with open("feedback.csv", "a", newline='', encoding='utf-8') as f:
+    with open("feedback.csv", "a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         if not file_exists:
             writer.writerow(["timestamp", "feedback", "question", "answer"])
         writer.writerow([fb.timestamp, fb.feedback, fb.question, fb.answer])
     return {"message": "Feedback saved"}
 
+
 @app.get("/v1/feedback/view", response_class=HTMLResponse)
-async def view_feedback():
+async def view_feedback() -> str:
     """
     Render stored feedback as an HTML table.
 
-    Returns:
+    Returns
+    -------
     - An HTML page showing feedback in tabular format, or a message if no data exists.
 
     """
@@ -75,13 +79,14 @@ async def view_feedback():
         return "<h3>No feedback recorded yet.</h3>"
 
     html = ["<h2>Feedback Table</h2>", "<table border='1' cellpadding='5'>"]
-    with open("feedback.csv", newline='', encoding='utf-8') as f:
+    with open("feedback.csv", newline="", encoding="utf-8") as f:
         reader = csv.reader(f)
         rows = list(reader)
 
     for i, row in enumerate(rows):
         tag = "th" if i == 0 else "td"
-        html.append("<tr>" + "".join(f"<{tag}>{cell}</{tag}>" for cell in row) + "</tr>")
+        html.append(
+            "<tr>" + "".join(f"<{tag}>{cell}</{tag}>" for cell in row) + "</tr>"
+        )
     html.append("</table>")
     return "\n".join(html)
-

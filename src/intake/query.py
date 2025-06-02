@@ -7,6 +7,11 @@ Process the list to separate irrelevant ones related to the homonymous CIRED con
 Save into two JSON files
 Include URL of PDF files when available
 
+Pagination is not strictly required since we expect <10000 results,
+but the docs says to kindly avoid asking for more than 500/1000 at a time.
+
+API specifications: https://api.archives-ouvertes.fr/docs/search
+
 minh.ha-duong@cnrs.fr, 2024-2025 CC-BY-SA
 """
 
@@ -14,9 +19,12 @@ import html
 import json
 import logging
 import time
+from typing import Any
 
 import requests
-from config import (
+
+from intake.config import (
+    CATALOG_FILE,
     CONFERENCE_FILE,
     HAL_API_REQUEST_DELAY,
     HAL_API_TIMEOUT,
@@ -24,14 +32,13 @@ from config import (
     HAL_BATCH_SIZE,
     HAL_MAX_BATCHES,
     HAL_QUERY,
-    PUBLICATIONS_FILE,
     setup_logging,
 )
 
 setup_logging(level=logging.DEBUG, enable_requests_debug=True)
 
 
-def process_publications(publications: list[dict]) -> None:
+def process_publications(publications: list[dict[str, Any]]) -> None:
     """Process the publication records and save them into separate JSON files."""
     related_publications = []
     unrelated_cired_communications = []
@@ -56,10 +63,10 @@ def process_publications(publications: list[dict]) -> None:
             related_publications.append(pub)
 
     # Ensure output directories exist
-    PUBLICATIONS_FILE.parent.mkdir(parents=True, exist_ok=True)
+    CATALOG_FILE.parent.mkdir(parents=True, exist_ok=True)
     CONFERENCE_FILE.parent.mkdir(parents=True, exist_ok=True)
 
-    PUBLICATIONS_FILE.write_text(
+    CATALOG_FILE.write_text(
         json.dumps(related_publications, ensure_ascii=False, indent=4), encoding="utf-8"
     )
 
@@ -71,7 +78,7 @@ def process_publications(publications: list[dict]) -> None:
     logging.info(
         "Found %d CIRED lab publications saved to %s",
         len(related_publications),
-        PUBLICATIONS_FILE,
+        CATALOG_FILE,
     )
     logging.info(
         "Found %d unrelated CIRED conference communications saved to %s",
@@ -80,7 +87,9 @@ def process_publications(publications: list[dict]) -> None:
     )
 
 
-def get_paginated_publications(base_params: dict) -> list[dict]:
+def get_paginated_publications(
+    base_params: dict[str, str | int]
+) -> list[dict[str, Any]]:
     """Retrieve publication records with pagination from the HAL API."""
     all_publications = []
     current_batch = 0
@@ -90,15 +99,16 @@ def get_paginated_publications(base_params: dict) -> list[dict]:
     params["rows"] = HAL_BATCH_SIZE
 
     while current_batch < HAL_MAX_BATCHES:
-        params["start"] = current_batch * HAL_BATCH_SIZE
+        start_index = current_batch * HAL_BATCH_SIZE
+        params["start"] = start_index
 
         try:
             logging.debug(
                 "Fetching batch %d/%d (records %d-%d)",
                 current_batch + 1,
                 HAL_MAX_BATCHES,
-                params["start"],
-                params["start"] + HAL_BATCH_SIZE - 1,
+                start_index,
+                start_index + HAL_BATCH_SIZE - 1,
             )
             logging.debug(
                 "Request URL: %s?%s", HAL_API_URL, requests.compat.urlencode(params)
@@ -150,7 +160,7 @@ def main() -> None:
     fields = """
 docid,halId_s,doiId_s,label_s,producedDate_tdate,authFullName_s,title_s,abstract_s,submitType_s,docType_s,labStructAcronym_s,fileMain_s
 """
-    params = {
+    params: dict[str, str | int] = {
         "q": HAL_QUERY,
         # No time restriction
         "fl": fields.strip(),

@@ -4,6 +4,7 @@
 import os
 import re
 import time
+import uuid
 from pathlib import Path
 
 from r2r import R2RClient
@@ -53,30 +54,13 @@ def delete_test_file() -> None:
         print(f"Warning: Failed to delete local file: {e}")
 
 
-# Deprecated: Not currently used
-def find_document_by_title(title: str = TEST_FILE) -> str | None:
-    """
-    Search for a document by title and return its ID if found.
-
-    Args:
-    ----
-        title: Title of the document to find.
-
-    Returns:
-    -------
-        The document ID if found, else None.
-
-    """
-    limit, offset = 100, 0
-    while True:
-        response, _ = client.documents.list(limit=limit, offset=offset)
-        for doc in response[1]:
-            if doc.title == title:
-                return doc.id
-        if len(response[1]) < limit:
-            break
-        offset += limit
-    return None
+def is_valid_uuid(value: str) -> bool:
+    """Check if a string is a valid UUID."""
+    try:
+        uuid.UUID(str(value))
+        return True
+    except (ValueError, TypeError):
+        return False
 
 
 def create_or_get_document() -> str | None:
@@ -91,13 +75,22 @@ def create_or_get_document() -> str | None:
     try:
         response = client.documents.create(file_path=TEST_FILE)
         document_id = response.results.document_id
+
+        assert isinstance(
+            document_id, str
+        ), f"Expected document_id to be str, got {type(document_id)}"
+        assert is_valid_uuid(
+            document_id
+        ), f"Expected document_id to be a valid UUID, got: {document_id}"
         print("Document created.")
 
         start_time = time.time()
         while time.time() - start_time < DOCUMENT_POLLING_TIMEOUT:
             try:
                 doc_info = client.documents.retrieve(document_id)
-                ingestion_status = getattr(doc_info.results, 'ingestion_status', 'unknown')
+                ingestion_status = getattr(
+                    doc_info.results, "ingestion_status", "unknown"
+                )
 
                 print(f"Document status: ingestion={ingestion_status}")
 
@@ -113,8 +106,11 @@ def create_or_get_document() -> str | None:
                 print(f"Error checking document status: {poll_error}")
                 time.sleep(DOCUMENT_POLLING_INTERVAL)
 
-        print(f"Timeout waiting for document to be ready after {DOCUMENT_POLLING_TIMEOUT} seconds")
+        print(
+            f"Timeout waiting for document to be ready after {DOCUMENT_POLLING_TIMEOUT} seconds"
+        )
         return document_id
+
     except Exception as e:
         error_msg = str(e)
         if "already exists" in error_msg:
@@ -123,7 +119,7 @@ def create_or_get_document() -> str | None:
             if match:
                 document_id = match.group(1)
                 print(f"Found existing document ID: {document_id}")
-                return document_id
+                return str(document_id)
             print("Error: Could not parse document ID from error message.")
         else:
             print(f"Unexpected creation error: {e}")

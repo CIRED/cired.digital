@@ -54,4 +54,3 @@ The project strictly adheres to GDPR, promotes transparency, and maintains compr
 ## Sensitive Information Handling
 
 Credentials and sensitive data are stored securely, separate from the project repository, ensuring confidentiality and security.
-

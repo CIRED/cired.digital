@@ -66,7 +66,7 @@ To:	Minh Ha Duong <minh@haduong.com>
 Cc:	Naceur Chaabane <naceur.chaabane@cnrs.fr>, christophe cassen <christophe.cassen@cnrs.fr>
 Subject:	Re: Archives du CIRED
 Date:	Thu, 17 Apr 2025 09:49:51 +0200 (CEST)
- 
+
 Bonjour Minh,
 
 il y a plusieurs choses différentes:

@@ -21,16 +21,17 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-from config import (
+from r2r import R2RClient
+
+from intake.config import (
+    CATALOG_FILE,
     DEFAULT_MAX_UPLOAD,
     MAX_FILE_SIZE,
     PDF_DIR,
-    PUBLICATIONS_FILE,
     R2R_API_PAGINATION_LIMIT,
     R2R_DEFAULT_BASE_URL,
     setup_logging,
 )
-from r2r import R2RClient
 
 
 def get_args() -> argparse.Namespace:
@@ -65,8 +66,8 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--metadata-file",
         type=Path,
-        default=PUBLICATIONS_FILE,
-        help=f"JSON file containing metadata for publications. (default: {PUBLICATIONS_FILE})",
+        default=CATALOG_FILE,
+        help=f"JSON file containing metadata for publications. (default: {CATALOG_FILE})",
     )
     parser.add_argument(
         "--no-metadata",
@@ -149,14 +150,14 @@ def get_existing_documents(client: R2RClient) -> dict[str, str]:
     return documents
 
 
-def load_metadata(metadata_file: Path) -> dict[str, dict]:
+def load_metadata(metadata_file: Path) -> dict[str, dict[str, object]]:
     """
     Load metadata from the publications JSON file.
 
     Returns a dictionary where keys are filename stems (halId_s or hash) and
     values are publication metadata dictionaries.
     """
-    metadata_by_file = {}
+    metadata_by_file: dict[str, dict[str, object]] = {}
 
     if not metadata_file.exists():
         logging.warning(f"Metadata file not found: {metadata_file}")
@@ -170,7 +171,9 @@ def load_metadata(metadata_file: Path) -> dict[str, dict]:
                 # Create two keys - one with hyphen and one with underscore
                 hal_id = pub["halId_s"]
                 filename_hyphen = hal_id  # Original key with hyphen (hal-XXXXXX)
-                filename_underscore = hal_id.replace("-", "_")  # Alternative key with underscore (hal_XXXXXX)
+                filename_underscore = hal_id.replace(
+                    "-", "_"
+                )  # Alternative key with underscore (hal_XXXXXX)
 
                 metadata_by_file[filename_hyphen] = pub
                 metadata_by_file[filename_underscore] = pub
@@ -180,70 +183,70 @@ def load_metadata(metadata_file: Path) -> dict[str, dict]:
             else:
                 continue  # Skip if we can't determine filename
 
-        logging.info(f"Loaded metadata for {len(publications)} publications from {metadata_file}")
+        logging.info(
+            f"Loaded metadata for {len(publications)} publications from {metadata_file}"
+        )
     except Exception as e:
         logging.error(f"Failed to load metadata file {metadata_file}: {str(e)}")
 
     return metadata_by_file
 
 
-def first_if_list(value):
+def first_if_list(value: object) -> str | None:
     """
     Return the string itself if it's a string, or the first element if it's a list of strings.
 
     Use for potentially multilingual fields.
     """
-    if isinstance(value, list) and value:
-        return value[0]
-    elif isinstance(value, str):
+    if isinstance(value, str):
         return value
+    elif isinstance(value, list) and value and isinstance(value[0], str):
+        return value[0]
     return None
 
 
-def format_metadata_for_upload(metadata: dict) -> dict:
-    """
-    Format HAL metadata for R2R upload.
+def format_metadata_for_upload(metadata: dict[str, object]) -> dict[str, str]:
+    """Format HAL metadata for R2R upload."""
+    # Define field mappings: HAL field -> R2R field
+    field_mapping = {
+        "title_s": "title",
+        "label_s": "citation",
+        "abstract_s": "description",
+        "producedDate_tdate": "publication_date",
+        "doiId_s": "doi",
+        "halId_s": "hal_id",
+        "docType_s": "document_type",
+    }
 
-    Convert HAL metadata fields to a format suitable for R2R.
-    """
-    r2r_metadata = {}
+    result: dict[str, str] = {}
 
-    if (title := first_if_list(metadata.get("title_s"))):
-        r2r_metadata["title"] = title
+    # Copy mapped fields
+    for hal_field, r2r_field in field_mapping.items():
+        if value := first_if_list(metadata.get(hal_field)):
+            result[r2r_field] = str(value)
 
-    if (citation := first_if_list(metadata.get("label_s"))):
-        r2r_metadata["citation"] = citation
+    # Handle authors specially (join list into string)
+    if authors := metadata.get("authFullName_s"):
+        if isinstance(authors, list):
+            result["authors"] = ", ".join(str(a) for a in authors)
+        else:
+            result["authors"] = str(authors)
 
-    if (abstract := first_if_list(metadata.get("abstract_s"))):
-        r2r_metadata["description"] = abstract
+    # Add source URL
+    if "doi" in result:
+        result["source_url"] = f"https://doi.org/{result['doi']}"
+    elif "hal_id" in result:
+        result["source_url"] = f"https://hal.science/{result['hal_id']}"
 
-    if (authors := metadata.get("authFullName_s")):
-        r2r_metadata["authors"] = authors if isinstance(authors, list) else [authors]
-
-    if (date := metadata.get("producedDate_tdate")):
-        r2r_metadata["publication_date"] = date
-
-    if (doi := metadata.get("doiId_s")):
-        r2r_metadata["doi"] = doi
-        r2r_metadata["source_url"] = f"https://doi.org/{doi}"
-
-    if (hal_id := metadata.get("halId_s")):
-        r2r_metadata["hal_id"] = hal_id
-        if "source_url" not in r2r_metadata:
-            r2r_metadata["source_url"] = f"https://hal.science/{hal_id}"
-
-    if (doc_type := metadata.get("docType_s")):
-        r2r_metadata["document_type"] = doc_type
-
-    return r2r_metadata
+    return result
 
 
 def upload_pdfs(
     pdf_files: list[Path],
     client: R2RClient,
     existing_documents: dict[str, str],
-    metadata_by_file: dict[str, dict],
-    collection: str = None,
+    metadata_by_file: dict[str, dict[str, object]],
+    collection: str | None = None,
     max_upload: int = 0,
     include_metadata: bool = True,
 ) -> tuple[int, int, list[tuple[Path, str]]]:
@@ -262,7 +265,11 @@ def upload_pdfs(
             # Utiliser le titre du document pour la recherche d’existant
             file_stem = pdf_file.stem
             raw_metadata_for_title = metadata_by_file.get(file_stem, {})
-            formatted_for_title = format_metadata_for_upload(raw_metadata_for_title) if raw_metadata_for_title else {}
+            formatted_for_title = (
+                format_metadata_for_upload(raw_metadata_for_title)
+                if raw_metadata_for_title
+                else {}
+            )
             doc_title = formatted_for_title.get("title", file_stem)
             ingestion_status = existing_documents.get(doc_title)
 
@@ -295,7 +302,9 @@ def upload_pdfs(
 
                     # CHANGE: Pass metadata as a separate parameter, not mixed with other kwargs
                     metadata = formatted_metadata
-                    logging.debug(f"Adding metadata to {pdf_file.name}: {formatted_metadata}")
+                    logging.debug(
+                        f"Adding metadata to {pdf_file.name}: {formatted_metadata}"
+                    )
                 else:
                     logging.debug(f"No metadata found for file: {pdf_file.name}")
 
@@ -303,7 +312,7 @@ def upload_pdfs(
             client.documents.create(
                 file_path=str(pdf_file),
                 metadata=metadata,  # Pass metadata as a separate parameter
-                **kwargs  # Other parameters like collection_name
+                **kwargs,  # Other parameters like collection_name
             )
 
             logging.info(f"Successfully uploaded file: {pdf_file}")
@@ -320,7 +329,8 @@ def check_r2r_connection(client: R2RClient) -> bool:
     """
     Check if R2R is accessible before starting uploads.
 
-    Returns:
+    Returns
+    -------
         True if R2R responds, False otherwise.
 
     """
@@ -334,7 +344,7 @@ def check_r2r_connection(client: R2RClient) -> bool:
         return False
 
 
-def main():
+def main() -> int:
     """
     Upload PDFs with metadata to an R2R instance.
 
@@ -404,4 +414,3 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
-

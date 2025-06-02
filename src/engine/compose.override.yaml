@@ -29,7 +29,7 @@ services:
 
   minio:
     image: docker.io/minio/minio
-      
+
   hatchet-postgres:
     image: docker.io/library/postgres:latest
 
@@ -44,7 +44,7 @@ services:
 
   setup-token:
     image: ghcr.io/hatchet-dev/hatchet/hatchet-admin:v0.53.15
-      
+
   unstructured:
     image: docker.io/ragtoriches/unst-prod:latest
 

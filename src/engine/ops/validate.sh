@@ -55,7 +55,7 @@ check_r2r_health() {
     sleep 10
 
     response=$(curl -s --connect-timeout 5 --max-time 10 "$HEALTH_ENDPOINT" 2>/dev/null || echo "CURL_FAILED")
-    
+
     if [[ "$response" == "CURL_FAILED" ]]; then
         log "❌ Failed to get response from R2R health endpoint (retry)"
         return 1

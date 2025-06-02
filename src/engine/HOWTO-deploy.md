@@ -34,7 +34,7 @@ Install extra tools:
 
 Transfer secrets:
 
-- Created the directory `/home/admin/credentials` 
+- Created the directory `/home/admin/credentials`
 - Transfered the secrets file to `credentials/API_KEYS`
 - Chmod 600 the secrets file
 
@@ -50,12 +50,12 @@ Transfer secrets:
 ## Manual smoketesting
 
 1. open http://157.180.70.232:7273/auth/login
-2. login using the prod backend http://157.180.70.232:7273 and default identifiers admin@example.com / change_me_immediately 
+2. login using the prod backend http://157.180.70.232:7273 and default identifiers admin@example.com / change_me_immediately
 3. Go to the Documents tab, click "+ New", add a document.
 4. Wait and refresh the page untill you see Ingestion success and Extraction success
 5. Go to the Chat tab, choose the mode "Question and Answer", ask questions about the document
- 
-Warning: R2R tends to display the login popup even when one is already logged in. 
+
+Warning: R2R tends to display the login popup even when one is already logged in.
 
 ## Update the distant production data from local development data
 
@@ -66,7 +66,6 @@ Warning: R2R tends to display the login popup even when one is already logged in
 
 The scripts pair snapshot.sh / restore.sh can also be used for recovery.
 
-Note: 
+Note:
 The restore.sh script does not inject the secret API_KEYS to the environment before calling docker compose.
 Warnings about these are normal.
-

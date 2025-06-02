@@ -125,7 +125,7 @@ done
 if [ "$should_restart" = true ]; then
     log "Restarting previously running containers..."
     docker_compose_cmd start
-    
+
     # Verify restart was successful
     # TODO: never executed if the start failed ?
     # TODO: suspect rabbitmq may fail to restart if a browser is still connected

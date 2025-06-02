@@ -1,0 +1,42 @@
+# .pre-commit-config.yaml
+# Pre-commit hooks for the cired-chatbot project
+# See https://pre-commit.com for more information
+
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version should match the one in pyproject.toml
+    rev: v0.0.290
+    hooks:
+      # Run the linter
+      - id: ruff
+        args: [--fix]
+      # Run the formatter
+      - id: ruff-format
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      # Check for merge conflicts
+      - id: check-merge-conflict
+      # Check YAML files
+      - id: check-yaml
+      # Check TOML files (like pyproject.toml)
+      - id: check-toml
+      # Trim trailing whitespace
+      - id: trailing-whitespace
+      # Ensure files end with newline
+      - id: end-of-file-fixer
+      # Check for large files
+      - id: check-added-large-files
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.8.0
+    hooks:
+      - id: mypy
+        files: ^src/
+        additional_dependencies:
+          - pydantic
+          - pandas-stubs
+          - types-requests
+          - r2r
+        # MyPy config is in pyproject.toml
