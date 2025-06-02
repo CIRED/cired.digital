@@ -51,32 +51,6 @@ def delete_test_file() -> None:
         print(f"Warning: Failed to delete local file: {e}")
 
 
-# Deprecated: Not currently used
-def find_document_by_title(title: str = TEST_FILE) -> str | None:
-    """
-    Search for a document by title and return its ID if found.
-
-    Args:
-    ----
-        title: Title of the document to find.
-
-    Returns:
-    -------
-        The document ID if found, else None.
-
-    """
-    limit, offset = 100, 0
-    while True:
-        response, _ = client.documents.list(limit=limit, offset=offset)
-        for doc in response[1]:
-            if doc.title == title:
-                return doc.id
-        if len(response[1]) < limit:
-            break
-        offset += limit
-    return None
-
-
 def create_or_get_document() -> str | None:
     """
     Create a document from the test file or retrieve its existing ID.
@@ -90,7 +64,7 @@ def create_or_get_document() -> str | None:
         response = client.documents.create(file_path=TEST_FILE)
         print("Document created.")
         time.sleep(4)  # Allow time for ingestion
-        return response.results.document_id
+        return str(response.results.document_id)
     except Exception as e:
         error_msg = str(e)
         if "already exists" in error_msg:
@@ -99,7 +73,7 @@ def create_or_get_document() -> str | None:
             if match:
                 document_id = match.group(1)
                 print(f"Found existing document ID: {document_id}")
-                return document_id
+                return str(document_id)
             print("Error: Could not parse document ID from error message.")
         else:
             print(f"Unexpected creation error: {e}")

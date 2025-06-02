@@ -91,7 +91,7 @@ def transform(func: Callable[[T], T], value: T) -> T:
 - Use `assert` statements directly.
 - Run tests with `pytest .` before committing.
 
-- Reflect any folder renames in `tests/` immediately, so other developers always find tests next to the code they test. 
+- Reflect any folder renames in `tests/` immediately, so other developers always find tests next to the code they test.
 - If you move a module, update its test path in the same commit to avoid CI failures.
 
 
@@ -104,7 +104,7 @@ def transform(func: Callable[[T], T], value: T) -> T:
 - All **public functions**, **classes**, and **modules** should have docstrings.
 - Multiline docstrings: one-line summary, then a blank line.
 - Class docstrings go directly under the definition (Ruff enforces `D211`).
-- Main() docstring in imperative mode:  ✅ DO write "Upload PDFs..." ❌ DON'T write 
+- Main() docstring in imperative mode:  ✅ DO write "Upload PDFs..." ❌ DON'T write
 "Entry point to upload PDFs..."
 
 - Use this format:
@@ -120,7 +120,7 @@ def foo(bar: int) -> str:
     Returns:
     -------
         A greeting string.
-        
+
     Raises:
     ------
         ValueError: If input is negative
@@ -168,7 +168,7 @@ Naming follows the conventions defined in [PEP 8 – Style Guide for Python Code
 
 #### Commit Messages
 
-- Use the format <type>: <description>. 
+- Use the format <type>: <description>.
 - The type can be **fix:**, **feat:**, **build:**, **chore:**, **ci:**, **docs:**, **style:**, **refactor:**, **perf:**, **test:**...
 - Use clear, descriptive commits messages -- refer to [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
 - Start the description with a verb in the present tense (e.g., "Add user authentication", "Fix login bug")
@@ -205,5 +205,5 @@ Naming follows the conventions defined in [PEP 8 – Style Guide for Python Code
 #### CI/CD
 ---
 
-> Maintainer: Minh Ha-Duong (<minh.ha-duong@cnrs.fr>)  
+> Maintainer: Minh Ha-Duong (<minh.ha-duong@cnrs.fr>)
 > Last updated: April 2025

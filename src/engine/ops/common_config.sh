@@ -23,7 +23,7 @@ KEYS_FILE="${BASE_DIR}/../../../credentials/API_KEYS"
 VENV_DIR="${BASE_DIR}/venv"
 
 # Volume settings
-# data/ is at the same level as src/ but in .gitignore 
+# data/ is at the same level as src/ but in .gitignore
 DATA_BASE="$(realpath "$BASE_DIR/../../data")"
 ARCHIVES_DIR="${DATA_BASE}/archived/R2R"
 SNAPSHOT_PREFIX="snapshot_$(date +%F_%H%M%S)"
@@ -34,21 +34,21 @@ docker_compose_cmd() {
     if ! validate_file "$COMPOSE_FILE" || ! validate_file "$OVERRIDE_FILE"; then
         return 1
     fi
-    
+
     local cmd=(
         docker compose
         --project-name "$PROJECT_NAME"
-        -f "$COMPOSE_FILE" 
+        -f "$COMPOSE_FILE"
         -f "$OVERRIDE_FILE"
         --profile postgres
     )
-    
+
     # Add any passed arguments
     cmd+=("$@")
-    
+
     # Log the command in debug mode
     log -d "Executing: ${cmd[*]}"
-    
+
     "${cmd[@]}"
 }
 
@@ -90,7 +90,7 @@ TEST_CONTENT="QuetzalX is a person that works at CIRED."
 TEST_QUERY="Who is QuetzalX?"
 
 # --- Logging Utilities ---
-# Usage: 
+# Usage:
 #   log "info message"
 #   log -e "error message"
 #   log -w "warning message"
@@ -99,7 +99,7 @@ TEST_QUERY="Who is QuetzalX?"
 log() {
     local level="INFO"
     local color="\033[0m"  # Default
-    
+
     case "$1" in
         -e) level="ERROR"; color="\033[0;31m"; shift ;;  # Red
         -w) level="WARN"; color="\033[0;33m"; shift ;;   # Yellow
@@ -118,7 +118,7 @@ validate_env() {
             missing+=("$var")
         fi
     done
-    
+
     if [[ ${#missing[@]} -gt 0 ]]; then
         log -e "Missing required environment variables: ${missing[*]}"
         return 1

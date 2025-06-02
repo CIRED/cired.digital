@@ -103,28 +103,28 @@ FORCE_TIMEOUT=10
 cleanup_zombie() {
     local step_name="$1"
     log "$step_name) Removing 'created' or 'exited' containers with broken references…"
-    
+
     local removed_count=0
     local containers
     containers=$(docker ps -aq -f status=created -f status=exited 2>/dev/null || true)
-    
+
     if [ -n "$containers" ]; then
         for cid in $containers; do
             local cname
             cname=$(docker inspect --format='{{.Name}}' "$cid" 2>/dev/null | cut -c2- || echo "unknown")
             log "   🧹 Removing container: $cname ($cid)"
-            
+
             if docker rm "$cid" >/dev/null 2>&1; then
                 removed_count=$((removed_count + 1))
             fi
         done
     fi
-    
+
     log "   ✅ Removed $removed_count container(s)."
-    
+
     log "   🌐 Cleaning up unused networks…"
     docker network prune -f >/dev/null 2>&1 || true
-    
+
     log "   ✅ Zombie cleanup done."
 }
 
@@ -159,7 +159,7 @@ if [ ${#CONTAINERS[@]} -eq 0 ]; then
   cleanup_zombie "finally"
   exit 0
 else
-  log "Found ${#CONTAINERS[@]} surviving container(s): ${CONTAINERS[*]}"  
+  log "Found ${#CONTAINERS[@]} surviving container(s): ${CONTAINERS[*]}"
 fi
 
 

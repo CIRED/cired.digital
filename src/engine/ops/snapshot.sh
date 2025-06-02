@@ -17,22 +17,22 @@ running_containers=$(docker ps --format '{{.Names}}' | grep -E "${PROJECT_NAME}"
 
 if [ -n "$running_containers" ]; then
     log -w "Found running containers for $PROJECT_NAME, stopping them temporarily..."
-    
+
     # Store container IDs and their start commands
     container_info=$(docker ps --filter "name=${PROJECT_NAME}" --format '{{.ID}} {{.Command}}')
-    
+
     # Stop containers
     docker_compose_cmd stop
-    
+
     # Wait for containers to stop
     sleep 5
-    
+
     # Verify they're stopped
     if docker ps --format '{{.Names}}' | grep -E "${PROJECT_NAME}" | grep -q .; then
         log -e "Failed to stop containers, aborting snapshot"
         exit 1
     fi
-    
+
     # Set flag to restart containers later
     should_restart=true
 else
@@ -79,7 +79,7 @@ rm -rf "$BACKUP_DIR"
 if [ "$should_restart" = true ]; then
     log "Restarting previously running containers..."
     docker_compose_cmd start
-    
+
     # Verify restart was successful
     restarted_containers=$(docker_compose_cmd ps --services)
     if [ -z "$restarted_containers" ]; then

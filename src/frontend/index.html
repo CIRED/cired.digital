@@ -124,7 +124,7 @@
         // Configuration constants
         const DEFAULT_HOST = 'http://cired.digital:7272';
         const FEEDBACK_HOST = 'http://cired.digital:7275';
-        
+
         // Global state
         let isLoading = false;
         let messageIdCounter = 1;
@@ -150,10 +150,10 @@
 
         // Initialize
         document.getElementById('initial-timestamp').textContent = formatTimestamp(new Date());
-        
+
         // Set default values using constants
         apiUrlInput.value = DEFAULT_HOST;
-        
+
         updateStatusDisplay();
 
         // Event listeners
@@ -209,21 +209,21 @@
             messageDiv.className = `flex ${type === 'user' ? 'justify-end' : 'justify-start'}`;
             messageDiv.id = `message-${messageIdCounter++}`;
 
-            const avatarIcon = type === 'user' 
+            const avatarIcon = type === 'user'
                 ? '👤'
                 : '🤖';
 
             const messageClass = type === 'user'
                 ? 'bg-blue-600 text-white'
-                : isError 
+                : isError
                 ? 'bg-red-50 text-red-800 border border-red-200'
                 : 'bg-white text-gray-800 border border-gray-200';
 
             messageDiv.innerHTML = `
                 <div class="flex max-w-3xl ${type === 'user' ? 'flex-row-reverse' : 'flex-row'}">
                     <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
-                        type === 'user' 
-                            ? 'bg-blue-600 text-white ml-3' 
+                        type === 'user'
+                            ? 'bg-blue-600 text-white ml-3'
                             : 'bg-gray-200 text-gray-600 mr-3'
                     }">
                         <span class="font-bold text-lg">${avatarIcon}</span>
@@ -271,7 +271,7 @@
             const citationsContainer = messageElement.querySelector('.citations-container');
             if (citations && citations.length > 0) {
                 console.log('Processing citations:', citations);
-                
+
                 const citationsHtml = `
                     <div class="mt-3 text-sm">
                         <div class="font-semibold text-gray-700 mb-2 flex items-center">
@@ -282,7 +282,7 @@
                             // Extract data from R2R citation format
                             const payload = citation.payload || citation;
                             const metadata = payload.metadata || {};
-                            
+
                             const title = metadata.title || payload.title || 'No title (sorry, we are working on it.).';
                             const authors = metadata.authors || [];
                             const year = metadata.publication_date ? new Date(metadata.publication_date).getFullYear() : '';
@@ -292,7 +292,7 @@
                             const text = payload.text || citation.text || '';
                             const score = payload.score || citation.score || 0;
                             const citationId = citation.id || payload.id || '';
-                           
+
                             return `
                                 <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 mb-2 hover:bg-gray-100 transition-colors">
                                     <div class="flex justify-between items-start mb-2">
@@ -310,7 +310,7 @@
                                             [${citationId}] 🛈
                                         </div>
                                     </div>
-                                  
+
                                     <div class="flex flex-wrap gap-2 text-xs">
                                         ${doi ? `
                                             <a href="https://doi.org/${doi}" target="_blank" class="text-blue-600 hover:text-blue-800 flex items-center">
@@ -415,16 +415,16 @@
 
         function handleResponse(requestBody, data) {
             console.log('Processing response:', data);
-            
+
             let content = 'No response generated.';
             let citations = [];
-            
+
             content = data.results.generated_answer;
             citations = data.results.citations || [];
-            
+
             const botMessage = addMessage('bot', content);
             addCitations(botMessage, citations);
-            
+
             const feedbackDiv = document.createElement('div');
 
 feedbackDiv.className = 'flex gap-2 mt-2';
@@ -447,7 +447,7 @@ feedbackDiv.querySelector('.thumb-down').addEventListener('click', () => {
 });
 
         }
-        
+
         function sendFeedback(requestBody, results, feedback) {
     const feedbackData = {
         question: requestBody.query,

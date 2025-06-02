@@ -50,7 +50,7 @@ DATA_ROOT = BASE_DIR / "data" / "source" / "hal"
 
 # File paths
 PDF_DIR = DATA_ROOT / "pdfs"
-PUBLICATIONS_FILE = DATA_ROOT / "catalog.json"
+CATALOG_FILE = DATA_ROOT / "catalog.json"
 CONFERENCE_FILE = DATA_ROOT / "conference.json"
 
 # HAL Query settings
@@ -84,11 +84,16 @@ LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
 LOG_FORMAT_SIMPLE = "[%(levelname)s] %(message)s"  # For simpler output
 
 
-def setup_logging(level=None, simple_format=False, enable_requests_debug=False):
+def setup_logging(
+    level: int | None = None,
+    simple_format: bool = False,
+    enable_requests_debug: bool = False,
+) -> None:
     """
     Configure logging with consistent settings across all modules.
 
     Args:
+    ----
         level: Logging level (default: LOG_LEVEL from config)
         simple_format: Use simple format without timestamp (default: False)
         enable_requests_debug: Enable debug logging for requests library (default: False)

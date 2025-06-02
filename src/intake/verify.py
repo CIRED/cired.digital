@@ -12,26 +12,36 @@ import json
 import logging
 import re
 import sys
+from collections.abc import Hashable, Mapping
 
 import pandas as pd
-from config import R2R_DEFAULT_BASE_URL, setup_logging
 from r2r import R2RClient
+
+from intake.config import R2R_DEFAULT_BASE_URL, setup_logging
 
 DOCUMENTS_FILE = "documents.csv"
 DOCUMENTS_COLUMNS = [
-    "id", "title", "size_in_bytes", "ingestion_status", "extraction_status",
-    "created_at", "updated_at", "type", "metadata"
+    "id",
+    "title",
+    "size_in_bytes",
+    "ingestion_status",
+    "extraction_status",
+    "created_at",
+    "updated_at",
+    "type",
+    "metadata",
 ]
-COLUMNS_TYPES = {
+COLUMNS_TYPES: Mapping[Hashable, str] = {
     "id": "string",
     "title": "string",
     "size_in_bytes": "int64",
     "ingestion_status": "string",
     "extraction_status": "string",
     "type": "string",
-    "metadata": "string"
+    "metadata": "string",
 }
 DATE_COLUMNS = ["created_at", "updated_at"]
+
 
 def check_r2r(client: R2RClient) -> bool:
     """Check that R2R is up and replying."""
@@ -43,6 +53,7 @@ def check_r2r(client: R2RClient) -> bool:
         logging.warning(f"Failed to get reply from R2R: {e}")
         return False
 
+
 def get_existing_documents(client: R2RClient) -> pd.DataFrame | None:
     """
     Retrieve all documents from the R2R service as a structured DataFrame.
@@ -53,31 +64,47 @@ def get_existing_documents(client: R2RClient) -> pd.DataFrame | None:
     - Parses the 'metadata' column as JSON and flattens it into prefixed columns.
 
     Args:
+    ----
         client (R2RClient): The connected R2R client instance.
 
     Returns:
+    -------
         pd.DataFrame | None: A DataFrame with one row per document and enriched metadata columns,
         or None if retrieval or parsing fails.
 
     """
     try:
-        logging.debug(f"Exporting documents known to R2R into {DOCUMENTS_FILE}...")
+        # 1. Export documents from the R2R server to a local CSV file
+        logging.debug(f"Exporting document metadata to '{DOCUMENTS_FILE}'...")
         client.documents.export(output_path=DOCUMENTS_FILE, columns=DOCUMENTS_COLUMNS)
-        response = pd.read_csv(DOCUMENTS_FILE, dtype=COLUMNS_TYPES, parse_dates=DATE_COLUMNS)
-        response["metadata"] = response["metadata"].apply(json.loads)
-        metadata_df = pd.json_normalize(response["metadata"]).add_prefix("meta_")
-        response = response.drop(columns=["metadata"]).join(metadata_df)
-        logging.info(f"Successfully obtained {len(response)} document records from R2R")
-        return response
+
+        # 2. Load the CSV into a DataFrame with typed columns and date parsing
+        df = pd.read_csv(DOCUMENTS_FILE, dtype=COLUMNS_TYPES, parse_dates=DATE_COLUMNS)
+
+        # 3. Parse the 'metadata' column (a JSON string per row) into Python dicts
+        df["metadata"] = df["metadata"].apply(json.loads)
+
+        # 4. Flatten the nested metadata into separate columns, prefixed with 'meta_'
+        metadata_flat = pd.json_normalize(df["metadata"].tolist()).add_prefix("meta_")
+
+        # 5. Drop the original 'metadata' column and merge the flattened metadata
+        df = df.drop(columns=["metadata"]).join(metadata_flat)
+
+        # 6. Done
+        logging.info(f"Loaded {len(df)} document records with enriched metadata.")
+        return df
+
     except Exception as e:
-        logging.error(f"Error fetching document list: {e}")
+        logging.error(f"Failed to load document data: {e}")
         return None
+
 
 def describe_table(documents: pd.DataFrame) -> None:
     """
     Print basic description of the R2R document store contents.
 
-    Returns:
+    Returns
+    -------
         None
 
     """
@@ -91,11 +118,13 @@ def describe_table(documents: pd.DataFrame) -> None:
     obj_stats = documents.describe(include=[object, "string"]).transpose()
     print(obj_stats)
 
+
 def show_short_titles(documents: pd.DataFrame) -> int:
     """
     Print and count documents with null or one word title.
 
-    Returns:
+    Returns
+    -------
         int: Total number of documents with suspiciously short title.
 
     """
@@ -106,7 +135,7 @@ def show_short_titles(documents: pd.DataFrame) -> int:
         print("⚠️ No 'meta_title' column found.")
         return 2
 
-    def is_anomalous(title):
+    def is_anomalous(title: str | float | None) -> bool:
         if pd.isna(title):
             return True
         title = str(title).strip()
@@ -116,14 +145,18 @@ def show_short_titles(documents: pd.DataFrame) -> int:
     anomalies = anomalies.sort_values("title", na_position="first")
     print(f"\n🚨 Found {len(anomalies)} anomalous title(s):")
     for _, row in anomalies.iterrows():
-        print(f"• ID: {row['id']} — Title: '{row['title']}' — Meta_title: '{row['meta_title']}' — Meta_source_url: '{row['meta_source_url']}'")
+        print(
+            f"• ID: {row['id']} — Title: '{row['title']}' — Meta_title: '{row['meta_title']}' — Meta_source_url: '{row['meta_source_url']}'"
+        )
     return len(anomalies)
+
 
 def show_failed_ingestions(documents: pd.DataFrame) -> int:
     """
     Print and count documents with unsuccessfull ingestion status.
 
-    Returns:
+    Returns
+    -------
         int: Total number of documents with unsuccessfull ingestion status.
 
     """
@@ -136,14 +169,18 @@ def show_failed_ingestions(documents: pd.DataFrame) -> int:
         return 0
     print(f"\n❌ Found {len(failures)} documents with failed ingestion:")
     for _, row in failures.iterrows():
-        print(f"• ID: {row['id']}\n  Status: {row['ingestion_status']}\n  Failure: {row.get('meta_failure', 'N/A')}")
+        print(
+            f"• ID: {row['id']}\n  Status: {row['ingestion_status']}\n  Failure: {row.get('meta_failure', 'N/A')}"
+        )
     return len(failures)
+
 
 def show_repeat_halid(documents: pd.DataFrame) -> int:
     """
     Print and count sets of documents with repeated HAL Id.
 
-    Returns:
+    Returns
+    -------
         int: Total number of documents with repeated HAL Ids.
 
     """
@@ -151,7 +188,9 @@ def show_repeat_halid(documents: pd.DataFrame) -> int:
         print("⚠️ No 'meta_hal_id' column found.")
         return 0
     dup_mask = documents["meta_hal_id"].duplicated(keep=False)
-    duplicates = documents[dup_mask & documents["meta_hal_id"].notna()].sort_values("meta_hal_id")
+    duplicates = documents[dup_mask & documents["meta_hal_id"].notna()].sort_values(
+        "meta_hal_id"
+    )
     if duplicates.empty:
         print("✅ No repeated HAL IDs found.")
         return 0
@@ -160,17 +199,21 @@ def show_repeat_halid(documents: pd.DataFrame) -> int:
     for hal_id, group in grouped:
         print(f"\n• HAL ID: {hal_id}")
         for _, row in group.iterrows():
-            print(f"  - ID: {row['id']} - Ingestion: {row['ingestion_status']}, Extraction: {row['extraction_status']}")
+            print(
+                f"  - ID: {row['id']} - Ingestion: {row['ingestion_status']}, Extraction: {row['extraction_status']}"
+            )
     return len(duplicates)
 
-def normalize_title(title: str) -> str:
+
+def normalize_title(title: str | float | None) -> str:
     """Normalize title by lowercasing, stripping punctuation, and collapsing spaces."""
     if pd.isna(title):
         return ""
     title = str(title).lower()
-    title = re.sub(r'[^\w\s]', '', title)
-    title = re.sub(r'\s+', ' ', title).strip()
+    title = re.sub(r"[^\w\s]", "", title)
+    title = re.sub(r"\s+", " ", title).strip()
     return title
+
 
 def show_repeat_titles(documents: pd.DataFrame) -> int:
     """
@@ -178,7 +221,8 @@ def show_repeat_titles(documents: pd.DataFrame) -> int:
 
     Ignores casing, spacing and punctuation when comparing titles.
 
-    Returns:
+    Returns
+    -------
         int: Total number of documents with non-unique normalized titles.
 
     """
@@ -206,7 +250,8 @@ def show_repeat_titles(documents: pd.DataFrame) -> int:
             )
     return len(duplicates)
 
-def setup() -> tuple[R2RClient, object]:
+
+def setup() -> tuple[R2RClient, pd.DataFrame]:
     """Retrieve the documents in store."""
     setup_logging()
     logging.info(f"Connecting to R2R at {R2R_DEFAULT_BASE_URL}...")
@@ -232,25 +277,30 @@ COMMANDS = {
     "repeat-titles": show_repeat_titles,
 }
 
+
 def get_help_lines() -> str:
-    """Fetch the help from the functions docstrings."""
+    """Fetch the help from the functions' docstrings for CLI help display."""
     max_len = max(len(cmd) for cmd in COMMANDS)
-    lines = [
-        f"  {cmd.ljust(max_len)}  {fn.__doc__.strip().splitlines()[0]}"
-        for cmd, fn in COMMANDS.items()
-    ]
+    lines = []
+
+    for cmd, fn in COMMANDS.items():
+        doc = fn.__doc__ or "[no doc]"
+        first_line = doc.strip().splitlines()[0]
+        lines.append(f"  {cmd.ljust(max_len)}  {first_line}")
+
     lines.append(f"  {'all'.ljust(max_len)}  Run all checks in sequence.")
     return "\n".join(lines)
 
-def main():
+
+def main() -> None:
     """Inspect the state of the R2R documents store."""
     parser = argparse.ArgumentParser(
         description=f"Inspect the state of the R2R documents store at {R2R_DEFAULT_BASE_URL}.",
-        formatter_class=argparse.RawTextHelpFormatter
+        formatter_class=argparse.RawTextHelpFormatter,
     )
     parser.add_argument(
         "what",
-        help="What to inspect, must be one of the following:\n" + get_help_lines()
+        help="What to inspect, must be one of the following:\n" + get_help_lines(),
     )
 
     if len(sys.argv) == 1:
@@ -273,4 +323,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

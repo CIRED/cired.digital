@@ -9,7 +9,7 @@ CIRED.digital/
   ├ data/               # Raw and processed research documents
   ├ docs/               # Technical documentation and guidelines
   ├ reports/            # Analytical outputs
-  ├ tests/              # Automated tests, mirroring the src/ directory structure 
+  ├ tests/              # Automated tests, mirroring the src/ directory structure
   └ src/                # Application source code
     ├ analytics/         # Performance and user metrics
     ├ data_preparation/  # Data retrieval and preparation
@@ -30,5 +30,3 @@ CIRED.digital/
 . Scripts in `smoke-tests/` require `uv` since it uses `uvx` to pull the `r2r` SDK.
 
 . This `engine/` directory started as a copy of `docker/` directory from R2R repository, with our own scripts and configuration files. If upstream changes, we have to manually review and sync. To that end, the dir `config.upstream` can be created by `ops/install.sh` and deleted by `ops/clean.sh`. In particular, `compose.yaml` is a copy of `config.upstream/compose.full.yaml` .
-
-
