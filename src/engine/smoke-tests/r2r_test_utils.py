@@ -4,6 +4,7 @@
 import os
 import re
 import time
+import uuid
 from pathlib import Path
 
 from r2r import R2RClient
@@ -24,6 +25,8 @@ TEST_CONTENT = config.get("TEST_CONTENT", "QuetzalX is a person that works at CI
 QUERY = config.get("TEST_QUERY", "Who is QuetzalX?")
 MODEL = "openai/gpt-4o-mini"
 TEMPERATURE = 0.0
+DOCUMENT_POLLING_TIMEOUT = 30  # seconds
+DOCUMENT_POLLING_INTERVAL = 2  # seconds
 
 client = R2RClient(SERVER_URL)
 
@@ -51,6 +54,15 @@ def delete_test_file() -> None:
         print(f"Warning: Failed to delete local file: {e}")
 
 
+def is_valid_uuid(value: str) -> bool:
+    """Check if a string is a valid UUID."""
+    try:
+        uuid.UUID(str(value))
+        return True
+    except (ValueError, TypeError):
+        return False
+
+
 def create_or_get_document() -> str | None:
     """
     Create a document from the test file or retrieve its existing ID.
@@ -62,9 +74,43 @@ def create_or_get_document() -> str | None:
     """
     try:
         response = client.documents.create(file_path=TEST_FILE)
+        document_id = response.results.document_id
+
+        assert isinstance(
+            document_id, str
+        ), f"Expected document_id to be str, got {type(document_id)}"
+        assert is_valid_uuid(
+            document_id
+        ), f"Expected document_id to be a valid UUID, got: {document_id}"
         print("Document created.")
-        time.sleep(4)  # Allow time for ingestion
-        return str(response.results.document_id)
+
+        start_time = time.time()
+        while time.time() - start_time < DOCUMENT_POLLING_TIMEOUT:
+            try:
+                doc_info = client.documents.retrieve(document_id)
+                ingestion_status = getattr(
+                    doc_info.results, "ingestion_status", "unknown"
+                )
+
+                print(f"Document status: ingestion={ingestion_status}")
+
+                if ingestion_status == "success":
+                    print("Document is ready.")
+                    return document_id
+                elif ingestion_status == "failed":
+                    print(f"Document processing failed: ingestion={ingestion_status}")
+                    return None
+
+                time.sleep(DOCUMENT_POLLING_INTERVAL)
+            except Exception as poll_error:
+                print(f"Error checking document status: {poll_error}")
+                time.sleep(DOCUMENT_POLLING_INTERVAL)
+
+        print(
+            f"Timeout waiting for document to be ready after {DOCUMENT_POLLING_TIMEOUT} seconds"
+        )
+        return document_id
+
     except Exception as e:
         error_msg = str(e)
         if "already exists" in error_msg:
