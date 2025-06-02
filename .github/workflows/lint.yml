@@ -1,4 +1,4 @@
-name: Lint with Ruff
+name: Lint and Type Check
 
 on:
   pull_request:
@@ -19,9 +19,13 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install Ruff
-        run: pip install ruff
+      - name: Install dependencies
+        run: |
+          # Install project with dev dependencies (includes ruff, mypy, type stubs)
+          pip install -e ".[dev]"
 
       - name: Run Ruff
         run: ruff check .
 
+      - name: Run mypy
+        run: mypy src/

@@ -1,7 +1,7 @@
 """
 Download PDFs listed in a JSON file and store them in the local data directory.
 
-This script reads a JSON file containing metadata for publications, checks if
+This script reads a JSON file containing publications metadata, checks if
 the associated PDFs are already downloaded, and downloads them if they are missing. The script also
 logs the download process and handles retries for failed downloads.
 
@@ -24,12 +24,13 @@ import time
 from pathlib import Path
 
 import requests
-from config import (
+
+from intake.config import (
+    CATALOG_FILE,
     DOWNLOAD_CHUNK_SIZE,
     DOWNLOAD_DELAY,
     DOWNLOAD_TIMEOUT,
     PDF_DIR,
-    PUBLICATIONS_FILE,
     setup_logging,
 )
 
@@ -56,28 +57,6 @@ def sanitize_filename(text: str) -> str:
     return "".join(
         c if c.isalnum() or c in (" ", ".", "_") else "_" for c in text
     ).strip()
-
-
-def get_pdf_filename(entry: dict) -> Path:
-    """
-    Generate a filename for a publication.
-
-    Uses the HAL ID if available, otherwise generates a hash from the PDF URL.
-
-    Args:
-    ----
-        entry: Dictionary containing publication information.
-
-    Returns:
-    -------
-        Path to the PDF file.
-
-    """
-    if "halId_s" in entry:
-        return PDF_DIR / f"{sanitize_filename(entry['halId_s'])}.pdf"
-    else:
-        hashname = hashlib.md5(entry["pdf_url"].encode()).hexdigest()
-        return PDF_DIR / f"{hashname}.pdf"
 
 
 def download_pdf(url: str, target_path: Path) -> bool:
@@ -116,27 +95,31 @@ def main() -> None:
     """
     Download all publication PDFs.
 
-    Reads the publications file, iterates through each entry, and downloads
+    Reads the CATALOG file, iterates through each entry, and downloads
     the corresponding PDFs if they are not already locally present.
     """
-    if not PUBLICATIONS_FILE.exists():
-        logging.error("Missing input file: %s", PUBLICATIONS_FILE)
+    if not CATALOG_FILE.exists():
+        logging.error("Missing input file: %s", CATALOG_FILE)
         logging.error("Which is created by the query.py script.")
         return
 
-    publications = json.loads(PUBLICATIONS_FILE.read_text(encoding="utf-8"))
+    CATALOG = json.loads(CATALOG_FILE.read_text(encoding="utf-8"))
 
     total = 0
     skipped = 0
     downloaded = 0
     failed = 0
 
-    for entry in publications:
+    for entry in CATALOG:
         url = entry.get("pdf_url")
         if not url:
             continue
 
-        target_file = get_pdf_filename(entry)
+        if "halId_s" in entry:
+            target_file = PDF_DIR / f"{sanitize_filename(entry['halId_s'])}.pdf"
+        else:
+            hashname = hashlib.md5(entry["pdf_url"].encode()).hexdigest()
+            target_file = PDF_DIR / f"{hashname}.pdf"
 
         if target_file.exists():
             logging.info("Already exists, skipping: %s", target_file.name)

@@ -12,4 +12,3 @@ default_admin_password="QX9TstK7~N+TgwW"
 
 [ingestion]
 automatic_extraction = false
-

@@ -152,4 +152,3 @@ curl http://localhost:7272/v3/health
 ### App is Up Check
 
 A typical app consists of a frontend connected to a backend through an API endpoint. For `r2r`, visit [http://localhost:7273](http://localhost:7273) to confirm the frontend is running. Also, check [http://localhost:7272](http://localhost:7272) to confirm backend availability, indicating successful deployment.
-
