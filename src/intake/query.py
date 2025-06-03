@@ -88,7 +88,7 @@ def process_publications(publications: list[dict[str, Any]]) -> None:
 
 
 def get_paginated_publications(
-    base_params: dict[str, str | int]
+    base_params: dict[str, str | int],
 ) -> list[dict[str, Any]]:
     """Retrieve publication records with pagination from the HAL API."""
     all_publications = []

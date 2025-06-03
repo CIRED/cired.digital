@@ -63,7 +63,7 @@ def is_valid_uuid(value: str) -> bool:
         return False
 
 
-def create_or_get_document() -> str | None:
+def create_or_get_document() -> uuid.UUID | None:
     """
     Create a document from the test file or retrieve its existing ID.
 
@@ -76,12 +76,9 @@ def create_or_get_document() -> str | None:
         response = client.documents.create(file_path=TEST_FILE)
         document_id = response.results.document_id
 
-        assert isinstance(
-            document_id, str
-        ), f"Expected document_id to be str, got {type(document_id)}"
-        assert is_valid_uuid(
-            document_id
-        ), f"Expected document_id to be a valid UUID, got: {document_id}"
+        assert isinstance(document_id, uuid.UUID), (
+            f"Expected document_id to be a valid UUID, got: {document_id}"
+        )
         print("Document created.")
 
         start_time = time.time()
@@ -117,22 +114,22 @@ def create_or_get_document() -> str | None:
             print("Document already exists. Extracting ID...")
             match = re.search(r"Document ([\w-]+) already exists", error_msg)
             if match:
-                document_id = match.group(1)
+                document_id = uuid.UUID(match.group(1))
                 print(f"Found existing document ID: {document_id}")
-                return str(document_id)
+                return document_id
             print("Error: Could not parse document ID from error message.")
         else:
             print(f"Unexpected creation error: {e}")
     return None
 
 
-def delete_document(doc_id: str) -> None:
+def delete_document(doc_id: uuid.UUID) -> None:
     """
     Delete a document from the R2R server by ID.
 
     Args:
     ----
-        doc_id: The ID of the document to delete.
+        doc_id: The UUID of the document to delete.
 
     """
     try:

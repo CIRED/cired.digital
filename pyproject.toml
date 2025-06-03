@@ -34,9 +34,9 @@ dependencies = [
 #
 [project.optional-dependencies]
 dev = [
-  "ruff>=0.0.283,<1.0.0",
+  "ruff>=0.11.12,<1.0.0",
   "pytest>=7.0,<8.0",
-  "mypy>=1.8,<2.0",
+  "mypy>=1.16,<2.0",
   "pre-commit>=3.0,<4.0",
   "types-requests",
   "pandas-stubs",
@@ -45,10 +45,12 @@ dev = [
 [tool.ruff]
 target-version = "py311"
 line-length = 88
+
+[tool.ruff.lint]
 select = ["E", "F", "W", "I", "C90", "D", "UP"]
 ignore = ["E501", "D203", "D212"]
 
-[tool.ruff.mccabe]
+[tool.ruff.lint.mccabe]
 max-complexity = 10
 
 [tool.mypy]
