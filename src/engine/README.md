@@ -6,6 +6,7 @@ The RAG engine is R2R, the stack including Postgress and Hatchett is managed wit
 
 CIRED.digital/
 └ cired.digital/
+  ├ credentials/        # Secrets like API keys, default logins
   ├ data/               # Raw and processed research documents
   ├ docs/               # Technical documentation and guidelines
   ├ reports/            # Analytical outputs

@@ -61,13 +61,6 @@ validate_dir() {
     return 0
 }
 
-# Validate required configuration files
-validate_config_files() {
-    validate_file "$COMPOSE_FILE" || exit 1
-    validate_file "$OVERRIDE_FILE" || exit 1
-    validate_file "$SECRETS_FILE" || exit 1
-}
-
 validate_file() {
     local file="$1"
     if [ ! -f "$file" ]; then
@@ -75,6 +68,12 @@ validate_file() {
         return 1
     fi
     return 0
+}
+
+validate_config_files() {
+    validate_file "$COMPOSE_FILE" || exit 1
+    validate_file "$OVERRIDE_FILE" || exit 1
+    validate_file "$SECRETS_FILE" || exit 1
 }
 
 # Docker settings
