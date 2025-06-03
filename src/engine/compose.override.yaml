@@ -53,11 +53,9 @@ services:
 
   r2r:
     image: docker.io/sciphiai/r2r:latest
-    environment:
-      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
-      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}
-      MISTRAL_API_KEY: ${MISTRAL_API_KEY}
-      OPENAI_API_KEY: ${OPENAI_API_KEY}
+    env_file:
+#      - ../../credentials/r2r_admin.env
+      - ../../credentials/API_KEYS.env
     extra_hosts:
       - host.docker.internal:[127.0.0.1]
     logging:
