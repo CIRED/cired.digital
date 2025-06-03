@@ -19,7 +19,7 @@ CONFIG_UPSTREAM_DIR="${BASE_DIR}/config.upstream"
 COMPOSE_FILE="${BASE_DIR}/compose.yaml"
 OVERRIDE_FILE="${BASE_DIR}/compose.override.yaml"
 # Secrets are stored out of the repository
-KEYS_FILE="${BASE_DIR}/../../../credentials/API_KEYS"
+KEYS_FILE="${BASE_DIR}/../../credentials/API_KEYS"
 VENV_DIR="${BASE_DIR}/venv"
 
 # Volume settings

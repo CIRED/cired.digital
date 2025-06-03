@@ -39,6 +39,15 @@ Le prototype sera déployé en ligne auprès d'une audience progressivement éla
 
 This project's goal is to implement a chatbot with CIRED publications.
 
+### credentials
+
+Project's secret keys and passwords.
+
+- Contents not versionned on GitHub because secret.
+- Contents not synced by Nextcloud.
+- Developer should populate their own local copy.
+- For deployment, transfer keys separately
+
 ### `data/`
 raw PDFs, extracted text, metadata, summaries, chunks, vector indexes...
 Data contents is not versionned in the git, only the directory structure and the README.md.
