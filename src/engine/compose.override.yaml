@@ -58,6 +58,8 @@ services:
       DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}
       MISTRAL_API_KEY: ${MISTRAL_API_KEY}
       OPENAI_API_KEY: ${OPENAI_API_KEY}
+    env_file:
+      - ../../credentials/r2r_admin.env
     extra_hosts:
       - host.docker.internal:[127.0.0.1]
     logging:
