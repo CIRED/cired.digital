@@ -81,15 +81,15 @@ if [[ ! -f "$OVERRIDE_FILE" ]]; then
   exit 1
 fi
 
-if [[ ! -f "$KEYS_FILE" ]]; then
-  log "Error: Environment file '$KEYS_FILE' not found."
+if [[ ! -f "$SECRETS_FILE" ]]; then
+  log "Error: Secrets environment file '$SECRETS_FILE' not found."
   exit 1
 fi
 
 log "📦 Project: $PROJECT_NAME"
 log "🔧 Compose file: $COMPOSE_FILE"
 log "🔧🔧 Override file: $OVERRIDE_FILE"
-log "🔑 Env file: $KEYS_FILE"
+log "🔑 Env file: $SECRETS_FILE"
 
 #
 # 3. Not used. We use Docker volumes for persistence.
