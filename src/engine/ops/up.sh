@@ -34,20 +34,7 @@ if ! docker info > /dev/null 2>&1; then
 fi
 
 # Verify configuration files exist
-if [[ ! -f "$COMPOSE_FILE" ]]; then
-  log "Error: Compose file '$COMPOSE_FILE' not found."
-  exit 1
-fi
-
-if [[ ! -f "$OVERRIDE_FILE" ]]; then
-  log "Error: Override file '$OVERRIDE_FILE' not found."
-  exit 1
-fi
-
-if [[ ! -f "$SECRETS_FILE" ]]; then
-  log "Error: Environment file '$SECRETS_FILE' not found."
-  exit 1
-fi
+validate_config_files
 
 
 log "📦 Project: $PROJECT_NAME"
