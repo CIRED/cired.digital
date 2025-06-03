@@ -85,7 +85,11 @@ Thumbs.db
 *.env.test.local
 *.env.production.local
 
+# Secrets
+credentials/*
+
 # Keep certain files even if they match patterns above
 !data/.gitkeep
 !reports/.gitkeep
+!credentials/*.template
 .aider*
