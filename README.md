@@ -54,7 +54,7 @@ Data contents is not versionned in the git, only the directory structure and the
 
 data/source, data/prepared and data/archived are reserved purely for storage. Do not place processing scripts or metadata code there. All transformation logic should live under `src/`.
 
-Consider files in `data/source` `data/prepared` and `data/achived`  as immutable: its state cannot be modified after it is created. Any “change” to an immutable yields a brand-new object, leaving the original intact.
+Consider files in `data/source` `data/prepared` and `data/archived`  as immutable: its state cannot be modified after it is created. Any “change” to an immutable yields a brand-new object, leaving the original intact.
 
 ### `docs/`
 architecture docs, OpenAPI spec, runbooks, ethics guidelines,
