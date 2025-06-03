@@ -18,8 +18,7 @@ export PROJECT_DESCRIPTION="CIRED R2R Deployment"
 CONFIG_UPSTREAM_DIR="${BASE_DIR}/config.upstream"
 COMPOSE_FILE="${BASE_DIR}/compose.yaml"
 OVERRIDE_FILE="${BASE_DIR}/compose.override.yaml"
-# Secrets are stored out of the repository
-KEYS_FILE="${BASE_DIR}/../../../credentials/API_KEYS"
+SECRETS_FILE="${BASE_DIR}/../../credentials/API_KEYS.env"
 VENV_DIR="${BASE_DIR}/venv"
 
 # Volume settings
@@ -69,6 +68,12 @@ validate_file() {
         return 1
     fi
     return 0
+}
+
+validate_config_files() {
+    validate_file "$COMPOSE_FILE" || exit 1
+    validate_file "$OVERRIDE_FILE" || exit 1
+    validate_file "$SECRETS_FILE" || exit 1
 }
 
 # Docker settings

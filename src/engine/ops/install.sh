@@ -71,25 +71,12 @@ rm -rf "$TEMP_DIR"
 log "✅ Successfully fetched $SOURCE_DIR from $REPO_URL into $TARGET_DIR."
 
 # Verify configuration files exist
-if [[ ! -f "$COMPOSE_FILE" ]]; then
-  log "Error: Compose file '$COMPOSE_FILE' not found."
-  exit 1
-fi
-
-if [[ ! -f "$OVERRIDE_FILE" ]]; then
-  log "Error: Override file '$OVERRIDE_FILE' not found."
-  exit 1
-fi
-
-if [[ ! -f "$KEYS_FILE" ]]; then
-  log "Error: Environment file '$KEYS_FILE' not found."
-  exit 1
-fi
+validate_config_files
 
 log "📦 Project: $PROJECT_NAME"
 log "🔧 Compose file: $COMPOSE_FILE"
 log "🔧🔧 Override file: $OVERRIDE_FILE"
-log "🔑 Env file: $KEYS_FILE"
+log "🔑 Env file: $SECRETS_FILE"
 
 #
 # 3. Not used. We use Docker volumes for persistence.
