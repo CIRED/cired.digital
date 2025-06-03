@@ -4,17 +4,16 @@
 
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    # Ruff version should match the one in pyproject.toml
-    rev: v0.0.290
+    rev: v0.11.12
     hooks:
       # Run the linter
-      - id: ruff
+      - id: ruff-check
         args: [--fix]
       # Run the formatter
       - id: ruff-format
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v5.0.0
     hooks:
       # Check for merge conflicts
       - id: check-merge-conflict
@@ -30,7 +29,7 @@ repos:
       - id: check-added-large-files
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.8.0
+    rev: v1.16.0
     hooks:
       - id: mypy
         files: ^src/
