@@ -7,15 +7,13 @@ as a static image that can be served by the analytics server.
 """
 
 from pathlib import Path
-
+import logging
 import matplotlib.pyplot as plt
-import pandas as pd
 from wordcloud import WordCloud, STOPWORDS as ENGLISH_STOPWORDS
 
 from intake.config import R2R_DEFAULT_BASE_URL, setup_logging
 from intake.verify import get_existing_documents
 from r2r import R2RClient
-import logging
 
 FRENCH_STOPWORDS = {
     "le",
@@ -239,8 +237,6 @@ def main() -> None:
         text = CIRED_THEMES
 
     create_wordcloud(text, output_path)
-
-    print("\nGenerated wordcloud from R2R titles (or fallback themes).")
 
 
 if __name__ == "__main__":
