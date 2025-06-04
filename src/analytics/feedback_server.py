@@ -8,15 +8,20 @@ can be retrieved in HTML table format for review.
 Endpoints:
 - POST /v1/feedback: Accepts user feedback and appends it to a CSV file.
 - GET /v1/feedback/view: Displays the collected feedback as an HTML table.
+- GET /static/*: Serves static files including the wordcloud image.
+- POST /v1/wordcloud/regenerate: Regenerates the wordcloud image.
 """
 
 import csv
 import os
+import subprocess
+from pathlib import Path
 from typing import Literal
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 app = FastAPI()
@@ -29,6 +34,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+static_dir = Path(__file__).parent / "static"
+static_dir.mkdir(exist_ok=True)
+app.mount("/static", StaticFiles(directory=static_dir), name="static")
 
 
 class Feedback(BaseModel):
@@ -90,3 +99,22 @@ async def view_feedback() -> str:
         )
     html.append("</table>")
     return "\n".join(html)
+
+
+@app.post("/v1/wordcloud/regenerate")
+async def regenerate_wordcloud() -> dict[str, str]:
+    """
+    Regenerate the wordcloud image.
+
+    Returns
+    -------
+    dict
+        A JSON response indicating successful regeneration.
+
+    """
+    try:
+        script_path = Path(__file__).parent / "generate_wordcloud.py"
+        subprocess.run(["python", str(script_path)], check=True)
+        return {"message": "Wordcloud regenerated successfully"}
+    except subprocess.CalledProcessError as e:
+        return {"error": f"Failed to regenerate wordcloud: {e}"}
