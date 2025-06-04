@@ -10,7 +10,7 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 import pandas as pd
-from wordcloud import WordCloud
+from wordcloud import WordCloud, STOPWORDS as ENGLISH_STOPWORDS
 
 from intake.config import R2R_DEFAULT_BASE_URL
 from intake.verify import get_existing_documents
@@ -87,6 +87,8 @@ FRENCH_STOPWORDS = {
     "corpus",
     "englobent",
 }
+
+ALL_STOPWORDS = FRENCH_STOPWORDS.union(ENGLISH_STOPWORDS)
 
 CIRED_THEMES = """
 changement climatique transition énergétique politique climatique taxe carbone
@@ -181,7 +183,7 @@ def create_wordcloud(text: str, output_path: Path) -> None:
         height=400,
         background_color="white",
         max_words=100,
-        stopwords=FRENCH_STOPWORDS,
+        stopwords=ALL_STOPWORDS,
         colormap="viridis",
         relative_scaling=0.5,
         min_font_size=10,
