@@ -1,10 +1,10 @@
-#!/usr/bin/env -S uvx --from r2r python3
+#!/usr/bin/env python
 """
 Upload PDFs with their metadata into an R2R instance.
 
 Requirements:
-    - Python 3.8+
-    - r2r-sdk (the shebang above will use uvx install it in a temporary virtual environment)
+    - Python 3.11+
+    - r2r-sdk (normally installed in the virtual environment)
 
 Exit codes:
     0 - Success (all operations completed successfully)

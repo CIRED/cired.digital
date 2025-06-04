@@ -1,4 +1,4 @@
-#!/usr/bin/env -S uvx --with-requirements requirements.txt python
+#!/usr/bin/env python
 """
 Inspect the contents of R2R document store.
 
