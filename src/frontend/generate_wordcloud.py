@@ -6,7 +6,19 @@ This script creates a wordcloud visualization from document themes and saves it
 as a static image that can be served by the analytics server.
 """
 
+import sys
 from pathlib import Path
+sys.path.append(str((Path(__file__).parent.parent / "intake").resolve()))
+
+import pandas as pd
+import config
+import verify
+from r2r import R2RClient
+from config import R2R_DEFAULT_BASE_URL
+
+# Patch sys.modules so 'intake' is recognized for relative imports in verify.py
+import types
+sys.modules['intake'] = types.SimpleNamespace(config=config)
 
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
@@ -199,18 +211,31 @@ def create_wordcloud(text: str, output_path: Path) -> None:
     print(f"Wordcloud saved to: {output_path}")
 
 
+def get_titles_from_r2r() -> list[str]:
+    """Fetch the list of document titles from the R2R server using verify.py logic."""
+    client = R2RClient(base_url=R2R_DEFAULT_BASE_URL)
+    df = verify.get_existing_documents(client)
+    if df is None or "title" not in df.columns:
+        return []
+    return df["title"].dropna().astype(str).tolist()
+
+
 def main() -> None:
-    """Generate the CIRED themes wordcloud."""
+    """Generate the CIRED themes wordcloud from R2R titles."""
     static_dir = Path(__file__).parent / "static"
     static_dir.mkdir(exist_ok=True)
     output_path = static_dir / "cired_wordcloud.png"
 
-    create_wordcloud(CIRED_THEMES, output_path)
+    # Pull titles from R2R
+    titles = get_titles_from_r2r()
+    if titles:
+        text = " ".join(titles)
+    else:
+        text = CIRED_THEMES
 
-    print("\nGenerated wordcloud with themes including:")
-    print("Climate change, energy transition, carbon pricing, economic modeling,")
-    print("renewable energy, sustainable development, environmental policy,")
-    print("and carbon capture technologies.")
+    create_wordcloud(text, output_path)
+
+    print("\nGenerated wordcloud from R2R titles (or fallback themes).")
 
 
 if __name__ == "__main__":
