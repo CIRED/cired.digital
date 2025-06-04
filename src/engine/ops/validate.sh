@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 #
 # Validate a running r2r instance
-# 1. Check health endpoint
-# 2. Check API keys
-# 3. Run the smoke tests using uvx
-# 3.1 Ingest and query a simple test file
-# 3.2 Idem, calling different LLMs for generation
-# 3.3 TODO: Ingest and query scientific papers as PDFs
+# 1. Check container logs for errors and warnings
+# 2. Check health endpoint
+# 3. Check API keys
+# 4. Run the smoke tests using uvx
+# 4.1 Ingest and query a simple test file
+# 4.2 Idem, calling different LLMs for generation
+# 4.3 TODO: Ingest and query scientific papers as PDFs
 
 set -euo pipefail
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
@@ -92,6 +93,39 @@ check_api_keys() {
     fi
 }
 
+check_container_logs() {
+    local container_name="$1"
+    local full_container_name="${PROJECT_NAME}-${container_name}-1"
+    
+    log "🔍 Checking logs for container '$full_container_name'..."
+    
+    # Check if container exists and is running
+    if ! docker ps --format '{{.Names}}' | grep -q "^${full_container_name}$"; then
+        log "❌ Container '$full_container_name' is not running."
+        return 3
+    fi
+    
+    local logs
+    logs=$(docker logs "$full_container_name" 2>&1)
+    
+    # Check for ERROR messages
+    if echo "$logs" | grep -i "ERROR" >/dev/null 2>&1; then
+        log "❌ Found ERROR messages in $full_container_name logs:"
+        echo "$logs" | grep -i "ERROR" | sed 's/^/   /'
+        return 1
+    fi
+    
+    # Check for WARNING messages
+    if echo "$logs" | grep -i "WARNING" >/dev/null 2>&1; then
+        log "⚠️ Found WARNING messages in $full_container_name logs:"
+        echo "$logs" | grep -i "WARNING" | sed 's/^/   /'
+        return 2
+    fi
+    
+    log "✅ No ERROR or WARNING messages found in $full_container_name logs."
+    return 0
+}
+
 # Check if uvx is available
 check_uvx() {
     if ! command -v uvx >/dev/null 2>&1; then
@@ -114,6 +148,20 @@ fi
 
 # Check if uvx is available
 check_uvx
+
+log "🔍 Checking container logs for errors and warnings..."
+if ! check_container_logs "r2r"; then
+    exit_code=$?
+    if [ $exit_code -eq 1 ]; then
+        log "❌ Container logs contain ERROR messages. Exiting."
+        exit 1
+    elif [ $exit_code -eq 2 ]; then
+        log "⚠️ Container logs contain WARNING messages. Continuing with validation."
+    elif [ $exit_code -eq 3 ]; then
+        log "❌ Container is not running. Exiting."
+        exit 1
+    fi
+fi
 
 # Run health and API key checks
 if ! check_r2r_health; then
