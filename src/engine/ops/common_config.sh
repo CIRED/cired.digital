@@ -27,6 +27,8 @@ DATA_BASE="$(realpath "$BASE_DIR/../../data")"
 ARCHIVES_DIR="${DATA_BASE}/archived/R2R"
 SNAPSHOT_PREFIX="snapshot_$(date +%F_%H%M%S)"
 
+BACKUP_RETENTION_COUNT=1  # Number of backup volumes to keep per volume type
+
 # Docker Compose Command Builder
 # Wrapper for consistent docker compose command usage across all scripts
 docker_compose_cmd() {
