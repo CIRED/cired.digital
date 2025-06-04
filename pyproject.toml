@@ -26,6 +26,8 @@ dependencies = [
   "uvicorn[standard]",
   "r2r",
   "pydantic>=2.0,<3.0",
+  "matplotlib",
+  "wordcloud",
 ]
 
 # Note: Ubuntu distro version of `ruff`, `pytest`, `mypy` tend to be old.
@@ -63,6 +65,8 @@ show_error_codes = true
 [[tool.mypy.overrides]]
 module = [
     "r2r.*",
+    "matplotlib.*",
+    "wordcloud.*",
     # Add other modules without types here
 ]
 ignore_missing_imports = true
