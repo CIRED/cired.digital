@@ -6,22 +6,15 @@ This script creates a wordcloud visualization from document themes and saves it
 as a static image that can be served by the analytics server.
 """
 
-import sys
 from pathlib import Path
-sys.path.append(str((Path(__file__).parent.parent / "intake").resolve()))
-
-import pandas as pd
-import config
-import verify
-from r2r import R2RClient
-from config import R2R_DEFAULT_BASE_URL
-
-# Patch sys.modules so 'intake' is recognized for relative imports in verify.py
-import types
-sys.modules['intake'] = types.SimpleNamespace(config=config)
 
 import matplotlib.pyplot as plt
+import pandas as pd
 from wordcloud import WordCloud
+
+from intake.config import R2R_DEFAULT_BASE_URL
+from intake.verify import get_existing_documents
+from r2r import R2RClient
 
 FRENCH_STOPWORDS = {
     "le",
@@ -214,7 +207,7 @@ def create_wordcloud(text: str, output_path: Path) -> None:
 def get_titles_from_r2r() -> list[str]:
     """Fetch the list of document titles from the R2R server using verify.py logic."""
     client = R2RClient(base_url=R2R_DEFAULT_BASE_URL)
-    df = verify.get_existing_documents(client)
+    df = get_existing_documents(client)
     if df is None or "title" not in df.columns:
         return []
     return df["title"].dropna().astype(str).tolist()

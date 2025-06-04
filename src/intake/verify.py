@@ -17,7 +17,7 @@ from collections.abc import Hashable, Mapping
 import pandas as pd
 from r2r import R2RClient
 
-from config import R2R_DEFAULT_BASE_URL, setup_logging
+from intake import config
 
 DOCUMENTS_FILE = "documents.csv"
 DOCUMENTS_COLUMNS = [
