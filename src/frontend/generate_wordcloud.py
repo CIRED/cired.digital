@@ -202,6 +202,7 @@ def create_wordcloud(text: str, output_path: Path) -> None:
 def main() -> None:
     """Generate the CIRED themes wordcloud."""
     static_dir = Path(__file__).parent / "static"
+    static_dir.mkdir(exist_ok=True)
     output_path = static_dir / "cired_wordcloud.png"
 
     create_wordcloud(CIRED_THEMES, output_path)
