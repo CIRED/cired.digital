@@ -12,9 +12,10 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from wordcloud import WordCloud, STOPWORDS as ENGLISH_STOPWORDS
 
-from intake.config import R2R_DEFAULT_BASE_URL
+from intake.config import R2R_DEFAULT_BASE_URL, setup_logging
 from intake.verify import get_existing_documents
 from r2r import R2RClient
+import logging
 
 FRENCH_STOPWORDS = {
     "le",
@@ -207,7 +208,7 @@ def create_wordcloud(text: str, output_path: Path) -> None:
     )
     plt.close()
 
-    print(f"Wordcloud saved to: {output_path}")
+    logging.info(f"Wordcloud saved to: {output_path}")
 
 
 def get_titles_from_r2r() -> list[str]:
@@ -215,21 +216,26 @@ def get_titles_from_r2r() -> list[str]:
     client = R2RClient(base_url=R2R_DEFAULT_BASE_URL)
     df = get_existing_documents(client)
     if df is None or "title" not in df.columns:
+        logging.error("Could not find publication titles from the R2R server")
         return []
     return df["title"].dropna().astype(str).tolist()
 
 
 def main() -> None:
-    """Generate the CIRED themes wordcloud from R2R titles."""
+    setup_logging()
     static_dir = Path(__file__).parent / "static"
     static_dir.mkdir(exist_ok=True)
     output_path = static_dir / "cired_wordcloud.png"
 
-    # Pull titles from R2R
     titles = get_titles_from_r2r()
     if titles:
         text = " ".join(titles)
+        logging.info(
+            "Generating wordcloud from a bag of %d titles (%d words)",
+            len(titles), len(text.split())
+        )
     else:
+        logging.warning("Using hardcoded themes to generate wordcloud.")
         text = CIRED_THEMES
 
     create_wordcloud(text, output_path)
