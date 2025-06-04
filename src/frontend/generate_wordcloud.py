@@ -88,7 +88,11 @@ FRENCH_STOPWORDS = {
     "englobent",
 }
 
-ALL_STOPWORDS = FRENCH_STOPWORDS.union(ENGLISH_STOPWORDS)
+EXTRA_STOPWORDS = {
+    "pdf", "l", "using", "use", "s", "d", "low", "new", "toward", "approach", "co", "framework", "based", "multi", "Rapport", "study", "entre", "review"
+}
+
+ALL_STOPWORDS = FRENCH_STOPWORDS.union(ENGLISH_STOPWORDS).union(EXTRA_STOPWORDS)
 
 CIRED_THEMES = """
 changement climatique transition énergétique politique climatique taxe carbone
