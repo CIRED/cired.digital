@@ -31,16 +31,27 @@ DOCUMENTS_COLUMNS = [
     "type",
     "metadata",
 ]
-COLUMNS_TYPES: Mapping[Hashable, str] = {
-    "id": "string",
-    "title": "string",
-    "size_in_bytes": "int64",
-    "ingestion_status": "string",
-    "extraction_status": "string",
-    "type": "string",
-    "metadata": "string",
+COLUMN_CONFIG: Mapping[str, Mapping[str, str | bool]] = {
+    "id": {"dtype": "string", "parse_dates": False},
+    "title": {"dtype": "string", "parse_dates": False},
+    "size_in_bytes": {"dtype": "int64", "parse_dates": False},
+    "ingestion_status": {"dtype": "string", "parse_dates": False},
+    "extraction_status": {"dtype": "string", "parse_dates": False},
+    "created_at": {"dtype": "string", "parse_dates": True},
+    "updated_at": {"dtype": "string", "parse_dates": True},
+    "type": {"dtype": "string", "parse_dates": False},
+    "metadata": {"dtype": "string", "parse_dates": False},
 }
-DATE_COLUMNS = ["created_at", "updated_at"]
+
+
+def get_column_dtypes() -> Mapping[Hashable, str]:
+    """Extract dtype mapping from column configuration."""
+    return {col: str(config["dtype"]) for col, config in COLUMN_CONFIG.items()}
+
+
+def get_date_columns() -> list[str]:
+    """Extract list of columns that should be parsed as dates."""
+    return [col for col, config in COLUMN_CONFIG.items() if config["parse_dates"]]
 
 
 def check_r2r(client: R2RClient) -> bool:
@@ -79,7 +90,9 @@ def get_existing_documents(client: R2RClient) -> pd.DataFrame | None:
         client.documents.export(output_path=DOCUMENTS_FILE, columns=DOCUMENTS_COLUMNS)
 
         # 2. Load the CSV into a DataFrame with typed columns and date parsing
-        df = pd.read_csv(DOCUMENTS_FILE, dtype=COLUMNS_TYPES, parse_dates=DATE_COLUMNS)
+        df = pd.read_csv(
+            DOCUMENTS_FILE, dtype=get_column_dtypes(), parse_dates=get_date_columns()
+        )
 
         # 3. Parse the 'metadata' column (a JSON string per row) into Python dicts
         df["metadata"] = df["metadata"].apply(json.loads)
