@@ -18,38 +18,32 @@ import hashlib
 import json
 import logging
 import sys
-from collections import Counter
 from pathlib import Path
+from typing import Any
 
 from r2r import R2RClient
 
 from intake.config import (
     CATALOG_FILE,
-    DEFAULT_MAX_UPLOAD,
     MAX_FILE_SIZE,
     PDF_DIR,
-    R2R_API_PAGINATION_LIMIT,
     R2R_DEFAULT_BASE_URL,
     setup_logging,
 )
+from intake.verify import get_existing_documents as get_existing_documents_from_verify
 
 
 def get_args() -> argparse.Namespace:
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(
-        description="Push PDF files into R2R using the official SDK.",
+        description="Push PDF files into R2R using catalog-based discovery.",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument(
         "--dir",
         type=Path,
-        default=PDF_DIR,  # Set PDF_DIR from config as default
-        help=f"Directory containing PDF files. (default: {PDF_DIR})",
-    )
-    parser.add_argument(
-        "--recursive",
-        action="store_true",
-        help="Recursively search PDFs in subdirectories.",
+        default=PDF_DIR,
+        help="Directory containing PDF files for verification.",
     )
     parser.add_argument(
         "--base-url", type=str, default=R2R_DEFAULT_BASE_URL, help="R2R API URL."
@@ -60,49 +54,88 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--max-upload",
         type=int,
-        default=DEFAULT_MAX_UPLOAD,
-        help="Maximum number of PDFs to upload (0 = dry run no upload).",
+        default=0,
+        help="Maximum number of PDFs to upload (0 = dry run).",
     )
     parser.add_argument(
         "--metadata-file",
         type=Path,
         default=CATALOG_FILE,
-        help=f"JSON file containing metadata for publications. (default: {CATALOG_FILE})",
+        help="Catalog JSON file containing metadata for publications.)",
     )
     parser.add_argument(
-        "--no-metadata",
-        action="store_true",
-        help="Skip sending metadata with documents.",
-    )
-    parser.add_argument(
-        "--verbose",
-        action="store_true",
-        help="Enable detailed debug output.",
+        "--log-level",
+        choices=["debug", "info", "warning", "error"],
+        default="info",
+        help="Set logging level.",
     )
     return parser.parse_args()
 
 
-def prepare_pdf_files(args: argparse.Namespace) -> list[Path]:
-    """Prepare and validate the list of PDF files based on user arguments."""
-    directory = args.dir
-    recursive = args.recursive
+def load_catalog_local(catalog_file: Path) -> dict[str, dict[str, Any]]:
+    """Load catalog data and index by hal_id."""
+    if not catalog_file.exists():
+        logging.error("Catalog file not found: %s", catalog_file)
+        logging.error("Run query.py first to create the catalog.")
+        return {}
 
-    if not directory.is_dir():
-        logging.error(f"Provided path is not a directory: {directory}")
-        return []
+    try:
+        publications = json.loads(catalog_file.read_text(encoding="utf-8"))
+        catalog_by_hal_id = {}
 
-    pattern = "**/*.pdf" if recursive else "*.pdf"
-    pdf_files = list(directory.glob(pattern))
+        for pub in publications:
+            if "halId_s" in pub:
+                hal_id = pub["halId_s"]
+                catalog_by_hal_id[hal_id] = pub
 
-    if not pdf_files:
-        logging.warning(f"No PDF files found in {directory}")
-        return []
+        logging.info("Loaded %d publications from catalog", len(catalog_by_hal_id))
+        return catalog_by_hal_id
 
-    if args.max_upload > 0:
-        logging.info(f"Maximum upload limit set to {args.max_upload} PDFs.")
+    except Exception as e:
+        logging.error("Failed to load catalog: %s", e)
+        return {}
 
-    logging.info(f"Found {len(pdf_files)} PDF files in {directory}.")
-    return pdf_files
+
+def establish_available_documents(
+    catalog_file: Path, pdf_dir: Path
+) -> tuple[dict[str, dict[str, Any]], int, int]:
+    """
+    Walk the catalog and verify PDF files exist in the pdfs directory.
+
+    Returns:
+        - Dictionary of available documents (hal_id -> metadata)
+        - Total number of records in catalog
+        - Number of missing PDF files
+
+    """
+    catalog_by_hal_id = load_catalog_local(catalog_file)
+
+    available_docs = {}
+    missing_count = 0
+
+    for hal_id, metadata in catalog_by_hal_id.items():
+        if "pdf_url" not in metadata and "fileMain_s" not in metadata:
+            logging.debug("Skipping %s: No PDF available on HAL", hal_id)
+            continue
+
+        pdf_file_hyphen = pdf_dir / f"{hal_id}.pdf"
+        pdf_file_underscore = pdf_dir / f"{hal_id.replace('-', '_')}.pdf"
+
+        if pdf_file_hyphen.exists() or pdf_file_underscore.exists():
+            available_docs[hal_id] = metadata
+        else:
+            logging.error("Missing PDF file for %s", hal_id)
+            missing_count += 1
+
+    logging.info(
+        "Available documents: %d, Missing files: %d, Total records: %d",
+        len(available_docs),
+        missing_count,
+        len(catalog_by_hal_id),
+    )
+    logging.debug("Available docs: %s", list(available_docs.keys()))
+
+    return available_docs, len(catalog_by_hal_id), missing_count
 
 
 def exclude_oversized_pdfs(pdf_files: list[Path]) -> list[Path]:
@@ -113,41 +146,51 @@ def exclude_oversized_pdfs(pdf_files: list[Path]) -> list[Path]:
     for pdf_file in pdf_files:
         if pdf_file.stat().st_size > MAX_FILE_SIZE:
             logging.warning(
-                f"Excluding oversized file (>{MAX_FILE_SIZE} bytes): {pdf_file}"
+                "Excluding oversized file (>%d bytes): %s", MAX_FILE_SIZE, pdf_file
             )
             excluded_files += 1
         else:
             filtered_files.append(pdf_file)
 
     if excluded_files:
-        logging.info(f"Excluded {excluded_files} oversized file(s) from upload list.")
+        logging.info("Excluded %d oversized file(s) from upload list.", excluded_files)
 
     return filtered_files
 
 
-def get_existing_documents(client: R2RClient) -> dict[str, str]:
-    """Fetch the titles and ingestion statuses of all existing documents."""
-    documents = {}
-    limit = R2R_API_PAGINATION_LIMIT
-    offset = 0
+def get_uploadable_documents(
+    available_docs: dict[str, dict[str, Any]],
+    existing_documents: dict[str, str],
+    pdf_dir: Path,
+) -> list[Path]:
+    """
+    Get documents that are available locally but not successfully uploaded to server.
 
-    try:
-        while True:
-            response = client.documents.list(limit=limit, offset=offset)
-            docs = response.results
-            if not docs:
-                break
-            for doc in docs:
-                documents[doc.title] = getattr(doc, "ingestion_status", "unknown")
-            if len(docs) < limit:
-                break
-            offset += limit
-    except Exception as e:
-        logging.error(f"Error fetching document list: {e}")
+    Returns list of PDF file paths that should be uploaded.
+    """
+    uploadable_files = []
 
-    print(documents)
+    for hal_id, metadata in available_docs.items():
+        formatted_metadata = format_metadata_for_upload(metadata)
+        doc_title = formatted_metadata.get("title", hal_id)
 
-    return documents
+        ingestion_status = existing_documents.get(doc_title)
+
+        if ingestion_status not in (None, "failed"):
+            continue
+
+        pdf_file_hyphen = pdf_dir / f"{hal_id}.pdf"
+        pdf_file_underscore = pdf_dir / f"{hal_id.replace('-', '_')}.pdf"
+
+        if pdf_file_hyphen.exists():
+            uploadable_files.append(pdf_file_hyphen)
+        elif pdf_file_underscore.exists():
+            uploadable_files.append(pdf_file_underscore)
+
+    logging.info("Uploadable documents: %d", len(uploadable_files))
+    logging.debug("Uploadable files: %s", [f.name for f in uploadable_files])
+
+    return uploadable_files
 
 
 def load_metadata(metadata_file: Path) -> dict[str, dict[str, object]]:
@@ -160,7 +203,7 @@ def load_metadata(metadata_file: Path) -> dict[str, dict[str, object]]:
     metadata_by_file: dict[str, dict[str, object]] = {}
 
     if not metadata_file.exists():
-        logging.warning(f"Metadata file not found: {metadata_file}")
+        logging.warning("Metadata file not found: %s", metadata_file)
         return metadata_by_file
 
     try:
@@ -184,10 +227,12 @@ def load_metadata(metadata_file: Path) -> dict[str, dict[str, object]]:
                 continue  # Skip if we can't determine filename
 
         logging.info(
-            f"Loaded metadata for {len(publications)} publications from {metadata_file}"
+            "Loaded metadata for %d publications from %s",
+            len(publications),
+            metadata_file,
         )
     except Exception as e:
-        logging.error(f"Failed to load metadata file {metadata_file}: {str(e)}")
+        logging.error("Failed to load metadata file %s: %s", metadata_file, str(e))
 
     return metadata_by_file
 
@@ -250,21 +295,28 @@ def upload_pdfs(
     metadata_by_file: dict[str, dict[str, object]],
     collection: str | None = None,
     max_upload: int = 0,
-    include_metadata: bool = True,
 ) -> tuple[int, int, list[tuple[Path, str]]]:
     """Upload new PDFs and skip existing ones. Stop after max_upload successful uploads if set."""
     success_count = 0
     skipped_count = 0
-    failed_files = []
+    failed_files: list[tuple[Path, str]] = []
+
+    if max_upload == 0:
+        logging.info(
+            "Dry run mode: No files will be uploaded. Try using --max-upload 3."
+        )
+        return success_count, skipped_count, failed_files
 
     for pdf_file in pdf_files:
         if max_upload > 0 and success_count >= max_upload:
-            logging.info(f"Reached maximum upload limit: {max_upload} files.")
+            logging.info("Reached maximum upload limit: %d files.", max_upload)
             break
 
         try:
-            logging.debug(f"Processing file: {pdf_file}")
-            # Utiliser le titre du document pour la recherche d’existant
+            logging.info(
+                "Uploading %d/%d: %s", success_count + 1, len(pdf_files), pdf_file.name
+            )
+            # Utiliser le titre du document pour la recherche d'existant
             file_stem = pdf_file.stem
             raw_metadata_for_title = metadata_by_file.get(file_stem, {})
             formatted_for_title = (
@@ -277,51 +329,48 @@ def upload_pdfs(
 
             if ingestion_status not in (None, "failed"):
                 logging.debug(
-                    f"Skipping file with ingestion_status='{ingestion_status}': {pdf_file}"
+                    "Skipping file with ingestion_status='%s': %s",
+                    ingestion_status,
+                    pdf_file,
                 )
                 skipped_count += 1
                 continue
 
             if ingestion_status == "failed":
                 logging.warning(
-                    f"Re-uploading file with previous ingestion_status='failed': {pdf_file}"
+                    "Re-uploading file with previous ingestion_status='failed': %s",
+                    pdf_file,
                 )
             else:
-                logging.debug(f"Uploading new file: {pdf_file}")
+                logging.debug("Uploading new file: %s", pdf_file)
 
             # Prepare upload parameters
             kwargs = {}
             if collection:
                 kwargs["collection_name"] = collection
 
-            # Add metadata if available
             metadata = None
-            if include_metadata:
-                file_stem = pdf_file.stem
-                if file_stem in metadata_by_file:
-                    raw_metadata = metadata_by_file[file_stem]
-                    formatted_metadata = format_metadata_for_upload(raw_metadata)
+            file_stem = pdf_file.stem
+            if file_stem in metadata_by_file:
+                raw_metadata = metadata_by_file[file_stem]
+                metadata = format_metadata_for_upload(raw_metadata)
 
-                    # CHANGE: Pass metadata as a separate parameter, not mixed with other kwargs
-                    metadata = formatted_metadata
-                    logging.debug(
-                        f"Adding metadata to {pdf_file.name}: {formatted_metadata}"
-                    )
-                else:
-                    logging.debug(f"No metadata found for file: {pdf_file.name}")
+                logging.debug("Adding metadata to %s: %s", pdf_file.name, metadata)
+            else:
+                logging.debug("No metadata found for file: %s", pdf_file.name)
 
-            # Upload the document - CHANGE: Pass metadata as a separate parameter
+            # Upload
             client.documents.create(
                 file_path=str(pdf_file),
-                metadata=metadata,  # Pass metadata as a separate parameter
+                metadata=metadata,
                 **kwargs,  # Other parameters like collection_name
             )
 
-            logging.info(f"Successfully uploaded file: {pdf_file}")
+            logging.info("Successfully uploaded file: %s", pdf_file)
             success_count += 1
 
         except Exception as e:
-            logging.error(f"Failed to process file {pdf_file}: {str(e)}")
+            logging.error("Failed to process file %s: %s", pdf_file, str(e))
             failed_files.append((pdf_file, str(e)))
 
     return success_count, skipped_count, failed_files
@@ -342,74 +391,97 @@ def check_r2r_connection(client: R2RClient) -> bool:
         logging.info("R2R connection successful.")
         return True
     except Exception as e:
-        logging.error(f"Failed to connect to R2R: {e}")
+        logging.error("Failed to connect to R2R: %s", e)
         return False
 
 
 def main() -> int:
     """
-    Upload PDFs with metadata to an R2R instance.
+    Upload PDFs with metadata to an R2R instance using catalog-based discovery.
 
-    This function:
-    - Parses command-line arguments.
-    - Prepares and filters the list of PDF files.
-    - Loads metadata for publications if available.
-    - Connects to the R2R server.
-    - Fetches existing documents and logs their ingestion status breakdown.
-    - Uploads new PDFs with metadata while skipping already ingested ones.
-    - Summarizes the upload process with counts of successful, skipped, and failed uploads.
+    This function implements a 5-step process:
+    1. Establish available documents from catalog
+    2. Get existing documents from server
+    3. Find uploadable documents (available but not on server)
+    4. Upload documents respecting limits
+    5. Print statistics
     """
     args = get_args()
 
+    log_levels = {
+        "debug": logging.DEBUG,
+        "info": logging.INFO,
+        "warning": logging.WARNING,
+        "error": logging.ERROR,
+    }
+
     setup_logging(
-        level=logging.DEBUG if args.verbose else None,
+        level=log_levels[args.log_level],
         simple_format=True,
     )
 
-    pdf_files = prepare_pdf_files(args)
-    if not pdf_files:
-        return 1
+    available_docs, total_records, missing_files = establish_available_documents(
+        args.metadata_file, args.dir
+    )
 
-    pdf_files = exclude_oversized_pdfs(pdf_files)
-    if not pdf_files:
-        logging.error("No valid PDF files to upload after filtering oversized files.")
+    if not available_docs:
+        logging.error("No documents available for upload")
         return 1
-
-    # Load metadata if needed
-    metadata_by_file = {}
-    if not args.no_metadata:
-        metadata_by_file = load_metadata(args.metadata_file)
 
     client = R2RClient(base_url=args.base_url)
     if not check_r2r_connection(client):
         logging.error("Cannot connect to R2R. Please check if the service is running.")
+        return 2
+
+    documents_df = get_existing_documents_from_verify(client)
+    if documents_df is None:
+        logging.error("Failed to retrieve documents from R2R.")
         return 3
 
-    existing_documents = get_existing_documents(client)
-    status_counter = Counter(existing_documents.values())
+    existing_documents = {}
+    for _, doc in documents_df.iterrows():
+        existing_documents[doc["title"]] = doc["ingestion_status"]
 
-    logging.info(f"Found {len(existing_documents)} documents already in R2R.")
-    for status, count in status_counter.items():
-        logging.info(f"- {count} document(s) with ingestion_status='{status}'")
+    uploadable_files = get_uploadable_documents(
+        available_docs, existing_documents, args.dir
+    )
+
+    if not uploadable_files:
+        logging.info("No new documents to upload")
+        return 0
+
+    uploadable_files = exclude_oversized_pdfs(uploadable_files)
+    if not uploadable_files:
+        logging.error("No valid PDF files to upload after filtering oversized files.")
+        return 4
+
+    metadata_by_file = {}
+    metadata_by_file = load_metadata(args.metadata_file)
 
     success_count, skipped_count, failed_files = upload_pdfs(
-        pdf_files,
+        uploadable_files,
         client,
         existing_documents,
         metadata_by_file,
         collection=args.collection,
         max_upload=args.max_upload,
-        include_metadata=not args.no_metadata,
     )
 
-    logging.info(
-        f"Upload summary: {success_count} file(s) uploaded, {skipped_count} skipped, {len(failed_files)} failed."
-    )
+    logging.info("=== UPLOAD STATISTICS ===")
+    logging.info("Total catalog records: %d", total_records)
+    logging.info("Available documents: %d", len(available_docs))
+    logging.info("Missing PDF files: %d", missing_files)
+    logging.info("Documents on server: %d", len(existing_documents))
+    logging.info("Uploadable documents: %d", len(uploadable_files))
+    logging.info("Successfully uploaded: %d", success_count)
+    logging.info("Skipped: %d", skipped_count)
+    logging.info("Failed: %d", len(failed_files))
+
     if failed_files:
         logging.error("Failed files:")
         for file, error in failed_files:
-            logging.error(f"- {file}: {error}")
-        return 2
+            logging.error("- %s: %s", file, error)
+        return 5
 
     return 0
 

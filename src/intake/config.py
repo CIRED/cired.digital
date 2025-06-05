@@ -73,9 +73,7 @@ HAL_API_REQUEST_DELAY = 1  # seconds between API requests
 
 # Upload settings
 R2R_DEFAULT_BASE_URL = "http://localhost:7272"
-DEFAULT_MAX_UPLOAD = 5
 MAX_FILE_SIZE = 30_000_000  # bytes
-R2R_API_PAGINATION_LIMIT = 250  # For client.documents.list()
 
 
 # Logging configuration
