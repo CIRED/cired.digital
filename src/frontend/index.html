@@ -297,7 +297,14 @@
                 }
                 
                 const doc = documentMap.get(docKey);
-                const pageNum = metadata.unstructured_page_number || metadata.page_num || '';
+                let pageNum = metadata.unstructured_page_number || metadata.page_num || '';
+                
+                if (!pageNum && metadata.citation) {
+                    const pageMatch = metadata.citation.match(/pp?\.?\s*(\d+(?:-\d+)?)/i);
+                    if (pageMatch) {
+                        pageNum = pageMatch[1];
+                    }
+                }
                 const citationId = citation.id || payload.id || '';
                 
                 doc.citations.push({
