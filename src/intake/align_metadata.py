@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 """
-Update metadata for documents in R2R from HAL catalog.
+Align R2R documents with metadata on the HAL catalog by deleting offenders.
 
 This script:
 - Reads source/hal/catalog.json
 - Gets existing documents from the server using verify.py
 - Matches each document with catalog records by hal_id or title
 - Compares meta_ columns with catalog data
-- Updates missing metadata using R2R patch API
+- Delete documents with inconsistent meta
 """
 
 import argparse
@@ -41,7 +41,7 @@ def load_catalog(catalog_file: Path) -> dict[str, dict[str, Any]]:
                 hal_id = pub["halId_s"]
                 catalog_by_hal_id[hal_id] = pub
 
-        logging.info(f"Loaded {len(catalog_by_hal_id)} publications from catalog")
+        logging.info("Loaded %d publications from catalog", len(catalog_by_hal_id))
         return catalog_by_hal_id
 
     except Exception as e:
@@ -69,7 +69,10 @@ def match_documents_to_catalog(
 
         elif title and title.endswith(".pdf"):
             potential_hal_id = title[:-4]  # Remove .pdf extension
+            potential_hal_id = potential_hal_id.replace("_", "-")
+            logging.debug(f"Looking for key '{potential_hal_id}'")
             if potential_hal_id in catalog_by_hal_id:
+                logging.debug("Found")
                 catalog_entry = catalog_by_hal_id[potential_hal_id]
                 match_method = "title_pattern"
 
@@ -84,15 +87,26 @@ def match_documents_to_catalog(
                     "document_row": doc,
                 }
             )
+        else:
+            logging.warning("Unable to match doc_id %s (%s)", doc_id, title)
 
-    logging.info(f"Matched {len(matches)} documents to catalog entries")
+    logging.info(
+        "Matched %d documents to catalog entries, %d documents remain orphan",
+        len(matches),
+        len(documents_df) - len(matches),
+    )
     return matches
 
 
 def needs_metadata_update(
-    document_row: Any, catalog_metadata: dict[str, Any]
+    document_row: pd.Series[Any], catalog_metadata: dict[str, Any]
 ) -> dict[str, Any]:
-    """Check if document needs metadata updates."""
+    """Return the metadata that need to be aligned on the catalog."""
+    logging.debug("Inspecting for unaligned metadata")
+    logging.debug("Document: %s", str(document_row))
+    catalog_metadata = format_metadata_for_upload(catalog_metadata)
+    logging.debug("Catalog:  %s", str(catalog_metadata))
+
     updates_needed = {}
 
     field_mapping = {
@@ -108,35 +122,48 @@ def needs_metadata_update(
     }
 
     for catalog_field, meta_column in field_mapping.items():
-        catalog_value = catalog_metadata.get(catalog_field)
         current_value = document_row.get(meta_column)
+        catalog_value = catalog_metadata.get(catalog_field)
 
-        if catalog_value and (
-            current_value is None or str(current_value).strip() == ""
+        if catalog_field == "authors":
+            logging.debug("Authors comparison.")
+            logging.debug("Values are %s == %s", current_value, catalog_value)
+            logging.debug("Types %s == %s", type(current_value), type(catalog_value))
+            same = str(current_value) == catalog_value
+            logging.debug("Comparison %s", str(same))
+            if same:
+                continue
+
+        if pd.isna(current_value) or (
+            isinstance(current_value, str) and current_value.strip() == ""
         ):
-            updates_needed[catalog_field] = catalog_value
+            current_value = None
+
+        if current_value == catalog_value:
+            continue
+
+        updates_needed[catalog_field] = catalog_value
+
+    if updates_needed != {}:
+        logging.debug("Updates needed = %s", str(updates_needed))
 
     return updates_needed
 
 
-def update_document_metadata(
-    client: R2RClient, doc_id: str, metadata_updates: dict[str, Any]
-) -> bool:
-    """Update document metadata using R2R patch API."""
-    try:
-        metadata_list = [
-            {"key": key, "value": str(value)} for key, value in metadata_updates.items()
-        ]
+def delete_document(doc_id: str, client: R2RClient, execute_mode: bool) -> bool:
+    """Delete a document."""
+    logging.debug("Trying to delete document %s", doc_id)
 
-        client.documents.append_metadata(id=doc_id, metadata=metadata_list)
-
-        logging.info(
-            f"Updated metadata for document {doc_id}: {list(metadata_updates.keys())}"
-        )
+    if not execute_mode:
+        logging.info("DRY RUN: not really doing it.")
         return True
 
-    except Exception as e:
-        logging.error(f"Failed to update metadata for document {doc_id}: {e}")
+    try:
+        response = client.documents.delete(id=doc_id)
+        logging.debug("Response for %s", str(response))
+        return True
+    except Exception:
+        logging.error("Failed to delete document")
         return False
 
 
@@ -148,8 +175,8 @@ def setup_argument_parser() -> argparse.ArgumentParser:
         epilog="""
 Examples:
   %(prog)s --help                    Show this help message
-  %(prog)s                          Dry run - show what would be updated
-  %(prog)s --execute                Actually update the metadata
+  %(prog)s                           Dry run - show what would be deleted
+  %(prog)s --execute                 Actually delete unaligned documents
   %(prog)s --log-level debug         Enable debug logging
   %(prog)s --catalog-file /path/to/catalog.json  Use custom catalog file
         """,
@@ -169,7 +196,7 @@ Examples:
     parser.add_argument(
         "--execute",
         action="store_true",
-        help="Actually update metadata (default is dry-run mode)",
+        help="Actually delete documents (default is dry-run mode)",
     )
     parser.add_argument(
         "--log-level",
@@ -183,8 +210,8 @@ Examples:
 def process_matches(
     matches: list[dict[str, Any]], client: R2RClient, execute_mode: bool
 ) -> tuple[int, int]:
-    """Process document matches and update metadata."""
-    update_count = 0
+    """Process document matches and delete misdescribed documents."""
+    delete_count = 0
     skip_count = 0
 
     for match in matches:
@@ -192,33 +219,30 @@ def process_matches(
         catalog_entry = match["catalog_entry"]
         document_row = match["document_row"]
 
-        catalog_metadata = format_metadata_for_upload(catalog_entry)
-        updates_needed = needs_metadata_update(document_row, catalog_metadata)
+        updates_needed = needs_metadata_update(document_row, catalog_entry)
 
         if not updates_needed:
-            logging.debug(f"Document {doc_id} already has complete metadata")
+            logging.debug(f"Document {doc_id} metadata match the catalog")
             skip_count += 1
             continue
 
-        logging.info(f"Document {doc_id} needs updates: {list(updates_needed.keys())}")
+        logging.info(
+            f"Document {doc_id} metadata mismatch: {list(updates_needed.keys())}"
+        )
+        if delete_document(doc_id, client, execute_mode):
+            delete_count += 1
 
-        if not execute_mode:
-            logging.info(f"DRY RUN: Would update {doc_id} with: {updates_needed}")
-            update_count += 1
-        else:
-            if update_document_metadata(client, doc_id, updates_needed):
-                update_count += 1
-
-    return update_count, skip_count
+    return delete_count, skip_count
 
 
 def main() -> int:
     """
-    Update R2R document metadata from HAL catalog.
+    Align R2R document metadata on the HAL catalog.
 
     This script reads the HAL catalog, retrieves documents from R2R server,
-    matches them by hal_id or title pattern, and updates missing metadata.
-    By default runs in dry-run mode to show what would be updated.
+    matches them by hal_id or title pattern, compares the metadata and
+    DELETE DOCUMENTS with unaligned metadata.
+    By default runs in dry-run mode to show what would be deleted.
     """
     parser = setup_argument_parser()
     args = parser.parse_args()
@@ -233,13 +257,13 @@ def main() -> int:
     setup_logging(level=log_levels[args.log_level], simple_format=True)
 
     if args.execute:
-        logging.info("Running in EXECUTE mode - will actually update metadata")
+        logging.info("Running in EXECUTE mode - will actually delete documents")
     else:
-        logging.info("Running in DRY-RUN mode - will show what would be updated")
-        logging.info("Use --execute to actually update metadata")
+        logging.info("Running in DRY-RUN mode - will show what would be deleted")
 
     catalog_by_hal_id = load_catalog(args.catalog_file)
     if not catalog_by_hal_id:
+        logging.error("Metadata alignment abort: Failed to load catalog.")
         return 1
 
     client = R2RClient(base_url=args.base_url)
@@ -247,25 +271,29 @@ def main() -> int:
     try:
         documents_df = get_existing_documents(client)
         if documents_df is None:
-            logging.error("Failed to retrieve documents from R2R")
-            return 1
+            logging.error(
+                "Metadata alignment abort: Failed to retrieve documents from R2R."
+            )
+            return 2
     except Exception as e:
-        logging.error(f"Failed to connect to R2R: {e}")
-        return 1
+        logging.error("Metadata alignment abort: Failed to connect to R2R: %s", str(e))
+        return 3
 
     matches = match_documents_to_catalog(documents_df, catalog_by_hal_id)
 
     if not matches:
-        logging.info("No documents matched to catalog entries")
-        return 0
+        logging.error(
+            "Metadata alignment abort: No documents matched to catalog entries"
+        )
+        return 4
 
-    update_count, skip_count = process_matches(matches, client, args.execute)
+    delete_count, skip_count = process_matches(matches, client, args.execute)
 
-    logging.info(f"Summary: {update_count} documents updated, {skip_count} skipped")
+    logging.info(f"Summary: {delete_count} documents deleted, {skip_count} skipped")
 
     if not args.execute:
         logging.info("This was a dry run - no actual changes were made")
-        logging.info("Use --execute to actually update metadata")
+        logging.info("Use --execute to actually delete unaligned documents")
 
     return 0
 
