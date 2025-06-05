@@ -23,7 +23,6 @@ from typing import Any
 
 from r2r import R2RClient
 
-
 from intake.config import (
     CATALOG_FILE,
     DEFAULT_MAX_UPLOAD,
