@@ -157,7 +157,9 @@ def exclude_oversized_pdfs(pdf_files: list[Path]) -> list[Path]:
 
 
 def get_uploadable_documents(
-    available_docs: dict[str, dict[str, Any]], existing_documents: dict[str, str], pdf_dir: Path
+    available_docs: dict[str, dict[str, Any]],
+    existing_documents: dict[str, str],
+    pdf_dir: Path,
 ) -> list[Path]:
     """
     Get documents that are available locally but not successfully uploaded to server.
