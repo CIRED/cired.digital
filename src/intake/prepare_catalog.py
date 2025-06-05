@@ -10,7 +10,7 @@ filtering to create a clean catalog of CIRED publications. Filtering includes:
 - Working paper deduplication
 
 Usage:
-    python prepare_catalog.py [--raw-file PATH]
+    python prepare_catalog.py [--raw-file PATH] [--log-level LEVEL]
 
 The filtered catalog is saved to data/prepared/ with timestamps.
 """
@@ -29,8 +29,6 @@ from intake.config import (
     setup_logging,
 )
 from intake.utils import get_latest_raw_hal_file, normalize_title
-
-setup_logging()
 
 
 def load_blacklist() -> set[str]:
@@ -117,6 +115,12 @@ def filter_working_papers(
                     len(working_papers),
                     normalized_title[:50],
                 )
+                for wp in working_papers:
+                    wp_hal_id = wp.get("halId_s", "unknown")
+                    logging.debug("  Working paper excluded: %s", wp_hal_id)
+                for pa in published_with_fulltext:
+                    pa_hal_id = pa.get("halId_s", "unknown")
+                    logging.debug("  Published article kept: %s", pa_hal_id)
         else:
             filtered_publications.extend(group)
 
@@ -208,7 +212,7 @@ def save_prepared_catalog(catalog_data: dict[str, Any]) -> Path:
     filepath = PREPARED_DIR / filename
 
     filepath.write_text(
-        json.dumps(catalog_data, ensure_ascii=False, indent=4), encoding="utf-8"
+        json.dumps(catalog_data, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
     logging.info("Saved prepared catalog to %s", filepath)
@@ -225,8 +229,23 @@ def main() -> None:
         type=Path,
         help="Path to raw HAL response file (default: latest in raw directory)",
     )
+    parser.add_argument(
+        "--log-level",
+        choices=["debug", "info", "warning", "error"],
+        default="info",
+        help="Set logging level (default: info)",
+    )
 
     args = parser.parse_args()
+
+    log_levels = {
+        "debug": logging.DEBUG,
+        "info": logging.INFO,
+        "warning": logging.WARNING,
+        "error": logging.ERROR,
+    }
+
+    setup_logging(level=log_levels[args.log_level])
 
     if args.raw_file:
         raw_file = args.raw_file

@@ -6,11 +6,12 @@ raw API responses to timestamped files for later processing. No filtering
 or processing is applied - the raw HAL data is preserved exactly as received.
 
 Usage:
-    python hal_query.py
+    python hal_query.py [--log-level LEVEL]
 
 The raw responses are saved to data/source/hal/ with timestamps.
 """
 
+import argparse
 import json
 import logging
 import time
@@ -30,8 +31,6 @@ from intake.config import (
     RAW_HAL_DIR,
     setup_logging,
 )
-
-setup_logging(level=logging.DEBUG, enable_requests_debug=True)
 
 
 def get_paginated_publications(
@@ -115,7 +114,7 @@ def save_raw_response(response_data: dict[str, Any]) -> Path:
     filepath = RAW_HAL_DIR / filename
 
     filepath.write_text(
-        json.dumps(response_data, ensure_ascii=False, indent=4), encoding="utf-8"
+        json.dumps(response_data, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
     logging.info("Saved raw HAL response to %s", filepath)
@@ -124,6 +123,28 @@ def save_raw_response(response_data: dict[str, Any]) -> Path:
 
 def main() -> None:
     """Query HAL API and save raw response."""
+    parser = argparse.ArgumentParser(description="Query HAL API and save raw responses")
+    parser.add_argument(
+        "--log-level",
+        choices=["debug", "info", "warning", "error"],
+        default="info",
+        help="Set logging level (default: info)",
+    )
+
+    args = parser.parse_args()
+
+    log_levels = {
+        "debug": logging.DEBUG,
+        "info": logging.INFO,
+        "warning": logging.WARNING,
+        "error": logging.ERROR,
+    }
+
+    enable_requests_debug = args.log_level == "debug"
+    setup_logging(
+        level=log_levels[args.log_level], enable_requests_debug=enable_requests_debug
+    )
+
     fields = """
 docid,halId_s,doiId_s,label_s,producedDate_tdate,authFullName_s,title_s,abstract_s,submitType_s,docType_s,labStructAcronym_s,fileMain_s
 """
