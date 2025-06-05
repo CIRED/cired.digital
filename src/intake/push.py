@@ -30,6 +30,7 @@ from intake.config import (
     R2R_DEFAULT_BASE_URL,
     setup_logging,
 )
+from intake.utils import get_catalog_file, get_catalog_publications
 from intake.verify import get_existing_documents as get_existing_documents_from_verify
 
 
@@ -58,10 +59,9 @@ def get_args() -> argparse.Namespace:
         help="Maximum number of PDFs to upload (0 = dry run).",
     )
     parser.add_argument(
-        "--metadata-file",
+        "--catalog",
         type=Path,
-        default=CATALOG_FILE,
-        help="Catalog JSON file containing metadata for publications.)",
+        help="Catalog JSON file containing metadata for publications (default: latest prepared catalog)",
     )
     parser.add_argument(
         "--log-level",
@@ -76,11 +76,14 @@ def load_catalog_local(catalog_file: Path) -> dict[str, dict[str, Any]]:
     """Load catalog data and index by hal_id."""
     if not catalog_file.exists():
         logging.error("Catalog file not found: %s", catalog_file)
-        logging.error("Run query.py first to create the catalog.")
+        logging.error(
+            "Run hal_query.py and prepare_catalog.py first to create the catalog."
+        )
         return {}
 
     try:
-        publications = json.loads(catalog_file.read_text(encoding="utf-8"))
+        catalog_data = json.loads(catalog_file.read_text(encoding="utf-8"))
+        publications = get_catalog_publications(catalog_data)
         catalog_by_hal_id = {}
 
         for pub in publications:
@@ -207,7 +210,8 @@ def load_metadata(metadata_file: Path) -> dict[str, dict[str, object]]:
         return metadata_by_file
 
     try:
-        publications = json.loads(metadata_file.read_text(encoding="utf-8"))
+        catalog_data = json.loads(metadata_file.read_text(encoding="utf-8"))
+        publications = get_catalog_publications(catalog_data)
         for pub in publications:
             # Generate the same filename as download.py does
             if "halId_s" in pub:
@@ -395,6 +399,53 @@ def check_r2r_connection(client: R2RClient) -> bool:
         return False
 
 
+def setup_catalog_file(args: argparse.Namespace) -> tuple[Path | None, int]:
+    """Determine which catalog file to use based on arguments."""
+    catalog_file = get_catalog_file(args.catalog)
+    if not catalog_file:
+        logging.error(
+            "No catalog file found. Run hal_query.py and prepare_catalog.py first."
+        )
+        return None, 1
+
+    if catalog_file == CATALOG_FILE:
+        logging.info("Using legacy catalog file: %s", CATALOG_FILE)
+    else:
+        logging.info("Using catalog file: %s", catalog_file)
+
+    return catalog_file, 0
+
+
+def print_upload_statistics(
+    total_records: int,
+    available_docs: list[dict[str, Any]],
+    missing_files: int,
+    existing_documents: dict[str, str],
+    uploadable_files: list[Path],
+    success_count: int,
+    skipped_count: int,
+    failed_files: list[tuple[Path, str]],
+) -> int:
+    """Print upload statistics and return appropriate exit code."""
+    logging.info("=== UPLOAD STATISTICS ===")
+    logging.info("Total catalog records: %d", total_records)
+    logging.info("Available documents: %d", len(available_docs))
+    logging.info("Missing PDF files: %d", missing_files)
+    logging.info("Documents on server: %d", len(existing_documents))
+    logging.info("Uploadable documents: %d", len(uploadable_files))
+    logging.info("Successfully uploaded: %d", success_count)
+    logging.info("Skipped: %d", skipped_count)
+    logging.info("Failed: %d", len(failed_files))
+
+    if failed_files:
+        logging.error("Failed files:")
+        for file, error in failed_files:
+            logging.error("- %s: %s", file, error)
+        return 5
+
+    return 0
+
+
 def main() -> int:
     """
     Upload PDFs with metadata to an R2R instance using catalog-based discovery.
@@ -420,8 +471,16 @@ def main() -> int:
         simple_format=True,
     )
 
+    catalog_file, exit_code = setup_catalog_file(args)
+    if exit_code != 0:
+        return exit_code
+
+    if catalog_file is None:
+        logging.error("No catalog file available")
+        return 1
+
     available_docs, total_records, missing_files = establish_available_documents(
-        args.metadata_file, args.dir
+        catalog_file, args.dir
     )
 
     if not available_docs:
@@ -455,8 +514,7 @@ def main() -> int:
         logging.error("No valid PDF files to upload after filtering oversized files.")
         return 4
 
-    metadata_by_file = {}
-    metadata_by_file = load_metadata(args.metadata_file)
+    metadata_by_file = load_metadata(catalog_file)
 
     success_count, skipped_count, failed_files = upload_pdfs(
         uploadable_files,
@@ -467,23 +525,16 @@ def main() -> int:
         max_upload=args.max_upload,
     )
 
-    logging.info("=== UPLOAD STATISTICS ===")
-    logging.info("Total catalog records: %d", total_records)
-    logging.info("Available documents: %d", len(available_docs))
-    logging.info("Missing PDF files: %d", missing_files)
-    logging.info("Documents on server: %d", len(existing_documents))
-    logging.info("Uploadable documents: %d", len(uploadable_files))
-    logging.info("Successfully uploaded: %d", success_count)
-    logging.info("Skipped: %d", skipped_count)
-    logging.info("Failed: %d", len(failed_files))
-
-    if failed_files:
-        logging.error("Failed files:")
-        for file, error in failed_files:
-            logging.error("- %s: %s", file, error)
-        return 5
-
-    return 0
+    return print_upload_statistics(
+        total_records,
+        list(available_docs.values()),
+        missing_files,
+        existing_documents,
+        uploadable_files,
+        success_count,
+        skipped_count,
+        failed_files,
+    )
 
 
 if __name__ == "__main__":
