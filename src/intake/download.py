@@ -6,7 +6,7 @@ the associated PDFs are already downloaded, and downloads them if they are missi
 logs the download process and handles retries for failed downloads.
 
 Usage:
-    python download.py
+    python download.py [--catalog PATH]
 
 Dependencies:
     - requests: For downloading PDFs from URLs.
@@ -17,6 +17,7 @@ Dependencies:
     - time: For introducing delays between downloads.
 """
 
+import argparse
 import hashlib
 import json
 import logging
@@ -33,6 +34,7 @@ from intake.config import (
     PDF_DIR,
     setup_logging,
 )
+from intake.utils import get_catalog_file, get_catalog_publications
 
 setup_logging()
 
@@ -95,15 +97,34 @@ def main() -> None:
     """
     Download all publication PDFs.
 
-    Reads the CATALOG file, iterates through each entry, and downloads
+    Reads the catalog file, iterates through each entry, and downloads
     the corresponding PDFs if they are not already locally present.
     """
-    if not CATALOG_FILE.exists():
-        logging.error("Missing input file: %s", CATALOG_FILE)
-        logging.error("Which is created by the query.py script.")
+    parser = argparse.ArgumentParser(
+        description="Download PDFs from catalog publications"
+    )
+    parser.add_argument(
+        "--catalog",
+        type=Path,
+        help="Path to catalog file (default: latest prepared catalog)",
+    )
+
+    args = parser.parse_args()
+
+    catalog_file = get_catalog_file(args.catalog)
+    if not catalog_file:
+        logging.error(
+            "No catalog file found. Run hal_query.py and prepare_catalog.py first."
+        )
         return
 
-    CATALOG = json.loads(CATALOG_FILE.read_text(encoding="utf-8"))
+    if catalog_file == CATALOG_FILE:
+        logging.info("Using legacy catalog file: %s", CATALOG_FILE)
+    else:
+        logging.info("Using catalog file: %s", catalog_file)
+
+    catalog_data = json.loads(catalog_file.read_text(encoding="utf-8"))
+    CATALOG = get_catalog_publications(catalog_data)
 
     total = 0
     skipped = 0
