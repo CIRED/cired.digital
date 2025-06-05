@@ -23,7 +23,6 @@ from typing import Any
 
 from r2r import R2RClient
 
-from intake.catalog_utils import get_catalog_publications, get_latest_prepared_catalog
 from intake.config import (
     CATALOG_FILE,
     MAX_FILE_SIZE,
@@ -31,6 +30,7 @@ from intake.config import (
     R2R_DEFAULT_BASE_URL,
     setup_logging,
 )
+from intake.utils import get_catalog_file, get_catalog_publications
 from intake.verify import get_existing_documents as get_existing_documents_from_verify
 
 
@@ -59,15 +59,9 @@ def get_args() -> argparse.Namespace:
         help="Maximum number of PDFs to upload (0 = dry run).",
     )
     parser.add_argument(
-        "--metadata-file",
+        "--catalog",
         type=Path,
         help="Catalog JSON file containing metadata for publications (default: latest prepared catalog)",
-    )
-    parser.add_argument(
-        "--use-prepared",
-        action="store_true",
-        default=True,
-        help="Use prepared catalog from data/prepared/ (default: True)",
     )
     parser.add_argument(
         "--log-level",
@@ -407,19 +401,19 @@ def check_r2r_connection(client: R2RClient) -> bool:
 
 def setup_catalog_file(args: argparse.Namespace) -> tuple[Path | None, int]:
     """Determine which catalog file to use based on arguments."""
-    if args.metadata_file:
-        return args.metadata_file, 0
-    elif args.use_prepared:
-        catalog_file = get_latest_prepared_catalog()
-        if not catalog_file:
-            logging.error(
-                "No prepared catalog found. Run hal_query.py and prepare_catalog.py first."
-            )
-            return None, 1
-        logging.info("Using latest prepared catalog: %s", catalog_file)
-        return catalog_file, 0
+    catalog_file = get_catalog_file(args.catalog)
+    if not catalog_file:
+        logging.error(
+            "No catalog file found. Run hal_query.py and prepare_catalog.py first."
+        )
+        return None, 1
+
+    if catalog_file == CATALOG_FILE:
+        logging.info("Using legacy catalog file: %s", CATALOG_FILE)
     else:
-        return CATALOG_FILE, 0
+        logging.info("Using catalog file: %s", catalog_file)
+
+    return catalog_file, 0
 
 
 def print_upload_statistics(

@@ -19,7 +19,6 @@ import argparse
 import html
 import json
 import logging
-import re
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -27,23 +26,11 @@ from typing import Any
 from intake.config import (
     BLACKLIST_FILE,
     PREPARED_DIR,
-    RAW_HAL_DIR,
     setup_logging,
 )
+from intake.utils import get_latest_raw_hal_file, normalize_title
 
 setup_logging()
-
-
-def get_latest_raw_hal_file() -> Path | None:
-    """Find the most recent raw HAL response file."""
-    if not RAW_HAL_DIR.exists():
-        return None
-
-    hal_files = list(RAW_HAL_DIR.glob("hal_response_*.json"))
-    if not hal_files:
-        return None
-
-    return max(hal_files, key=lambda f: f.stat().st_mtime)
 
 
 def load_blacklist() -> set[str]:
@@ -60,20 +47,6 @@ def load_blacklist() -> set[str]:
         return set()
 
 
-def normalize_title(title: str | list[str]) -> str:
-    """Normalize title for comparison using the same logic as verify.py."""
-    if not title:
-        return ""
-
-    if isinstance(title, list):
-        title = title[0] if title else ""
-
-    title = str(title)
-    normalized = re.sub(r"[^\w\s]", "", title.lower())
-    normalized = re.sub(r"\s+", " ", normalized).strip()
-    return normalized
-
-
 def is_working_paper(doc_type: str) -> bool:
     """Check if document type indicates a working paper."""
     if not doc_type:
@@ -86,11 +59,6 @@ def is_working_paper(doc_type: str) -> bool:
 def has_open_access(pub: dict[str, Any]) -> bool:
     """Check if publication has open access (PDF available)."""
     return "fileMain_s" in pub and pub["fileMain_s"]
-
-
-def is_oversized_file(pub: dict[str, Any]) -> bool:
-    """Check if file would be oversized based on MAX_FILE_SIZE limit."""
-    return False
 
 
 def group_by_normalized_title(
@@ -164,7 +132,6 @@ def process_publications(raw_data: dict[str, Any]) -> dict[str, Any]:
         "cired_conference_excluded": 0,
         "blacklisted_excluded": 0,
         "no_open_access_excluded": 0,
-        "oversized_excluded": 0,
         "working_papers_excluded": 0,
         "final_count": 0,
     }
@@ -207,10 +174,6 @@ def process_publications(raw_data: dict[str, Any]) -> dict[str, Any]:
             stats["no_open_access_excluded"] += 1
             continue
 
-        if is_oversized_file(pub):
-            stats["oversized_excluded"] += 1
-            continue
-
         filtered_publications.append(pub)
 
     final_publications, working_papers_excluded = filter_working_papers(
@@ -224,7 +187,6 @@ def process_publications(raw_data: dict[str, Any]) -> dict[str, Any]:
     logging.info("  CIRED conference excluded: %d", stats["cired_conference_excluded"])
     logging.info("  Blacklisted excluded: %d", stats["blacklisted_excluded"])
     logging.info("  No open access excluded: %d", stats["no_open_access_excluded"])
-    logging.info("  Oversized excluded: %d", stats["oversized_excluded"])
     logging.info("  Working papers excluded: %d", stats["working_papers_excluded"])
     logging.info("  Final catalog count: %d", stats["final_count"])
 

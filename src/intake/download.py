@@ -6,7 +6,7 @@ the associated PDFs are already downloaded, and downloads them if they are missi
 logs the download process and handles retries for failed downloads.
 
 Usage:
-    python download.py
+    python download.py [--catalog PATH]
 
 Dependencies:
     - requests: For downloading PDFs from URLs.
@@ -17,6 +17,7 @@ Dependencies:
     - time: For introducing delays between downloads.
 """
 
+import argparse
 import hashlib
 import json
 import logging
@@ -25,7 +26,6 @@ from pathlib import Path
 
 import requests
 
-from intake.catalog_utils import get_catalog_publications, get_latest_prepared_catalog
 from intake.config import (
     CATALOG_FILE,
     DOWNLOAD_CHUNK_SIZE,
@@ -34,6 +34,7 @@ from intake.config import (
     PDF_DIR,
     setup_logging,
 )
+from intake.utils import get_catalog_file, get_catalog_publications
 
 setup_logging()
 
@@ -96,21 +97,31 @@ def main() -> None:
     """
     Download all publication PDFs.
 
-    Reads the latest prepared catalog, iterates through each entry, and downloads
+    Reads the catalog file, iterates through each entry, and downloads
     the corresponding PDFs if they are not already locally present.
     """
-    catalog_file = get_latest_prepared_catalog()
+    parser = argparse.ArgumentParser(
+        description="Download PDFs from catalog publications"
+    )
+    parser.add_argument(
+        "--catalog",
+        type=Path,
+        help="Path to catalog file (default: latest prepared catalog)",
+    )
+
+    args = parser.parse_args()
+
+    catalog_file = get_catalog_file(args.catalog)
     if not catalog_file:
-        if CATALOG_FILE.exists():
-            catalog_file = CATALOG_FILE
-            logging.info("Using legacy catalog file: %s", CATALOG_FILE)
-        else:
-            logging.error(
-                "No catalog file found. Run hal_query.py and prepare_catalog.py first."
-            )
-            return
+        logging.error(
+            "No catalog file found. Run hal_query.py and prepare_catalog.py first."
+        )
+        return
+
+    if catalog_file == CATALOG_FILE:
+        logging.info("Using legacy catalog file: %s", CATALOG_FILE)
     else:
-        logging.info("Using latest prepared catalog: %s", catalog_file)
+        logging.info("Using catalog file: %s", catalog_file)
 
     catalog_data = json.loads(catalog_file.read_text(encoding="utf-8"))
     CATALOG = get_catalog_publications(catalog_data)

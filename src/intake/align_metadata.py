@@ -20,9 +20,9 @@ from typing import Any
 import pandas as pd
 from r2r import R2RClient
 
-from intake.catalog_utils import get_catalog_publications, get_latest_prepared_catalog
 from intake.config import CATALOG_FILE, R2R_DEFAULT_BASE_URL, setup_logging
 from intake.push import format_metadata_for_upload
+from intake.utils import get_catalog_file, get_catalog_publications
 from intake.verify import get_existing_documents
 
 
@@ -182,11 +182,11 @@ Examples:
   %(prog)s                           Dry run - show what would be deleted
   %(prog)s --execute                 Actually delete unaligned documents
   %(prog)s --log-level debug         Enable debug logging
-  %(prog)s --catalog-file /path/to/catalog.json  Use custom catalog file
+  %(prog)s --catalog /path/to/catalog.json  Use custom catalog file
         """,
     )
     parser.add_argument(
-        "--catalog-file",
+        "--catalog",
         type=Path,
         help="Path to catalog.json file (default: latest prepared catalog)",
     )
@@ -264,15 +264,17 @@ def main() -> int:
     else:
         logging.info("Running in DRY-RUN mode - will show what would be deleted")
 
-    if args.catalog_file:
-        catalog_file = args.catalog_file
+    catalog_file = get_catalog_file(args.catalog)
+    if not catalog_file:
+        logging.error(
+            "No catalog file found. Run hal_query.py and prepare_catalog.py first."
+        )
+        return 1
+
+    if catalog_file == CATALOG_FILE:
+        logging.info("Using legacy catalog file: %s", CATALOG_FILE)
     else:
-        catalog_file = get_latest_prepared_catalog()
-        if not catalog_file:
-            catalog_file = CATALOG_FILE
-            logging.info("Using legacy catalog file: %s", CATALOG_FILE)
-        else:
-            logging.info("Using latest prepared catalog: %s", catalog_file)
+        logging.info("Using catalog file: %s", catalog_file)
 
     catalog_by_hal_id = load_catalog(catalog_file)
     if not catalog_by_hal_id:

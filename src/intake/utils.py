@@ -1,16 +1,20 @@
 """
-Utility functions for catalog management.
+Utility functions for catalog management and title normalization.
 
 This module provides helper functions for finding and working with
-timestamped catalog files in the new split workflow.
+timestamped catalog files in the new split workflow, as well as
+unified utility functions for title normalization.
 """
 
 import json
 import logging
+import re
 from pathlib import Path
 from typing import Any
 
-from intake.config import PREPARED_DIR, RAW_HAL_DIR
+import pandas as pd
+
+from intake.config import CATALOG_FILE, PREPARED_DIR, RAW_HAL_DIR
 
 
 def get_latest_raw_hal_file() -> Path | None:
@@ -63,3 +67,32 @@ def get_catalog_publications(catalog_data: dict[str, Any]) -> list[dict[str, Any
         return publications_list
     else:
         return []
+
+
+def get_catalog_file(catalog_arg: Path | None = None) -> Path | None:
+    """Get catalog file path with unified fallback logic."""
+    if catalog_arg:
+        return catalog_arg
+
+    catalog_file = get_latest_prepared_catalog()
+    if catalog_file:
+        return catalog_file
+
+    if CATALOG_FILE.exists():
+        return CATALOG_FILE
+
+    return None
+
+
+def normalize_title(title: str | list[str] | float | None) -> str:
+    """Normalize title for comparison, handling various input types."""
+    if not title or (isinstance(title, float) and pd.isna(title)):
+        return ""
+
+    if isinstance(title, list):
+        title = title[0] if title else ""
+
+    title = str(title).lower()
+    title = re.sub(r"[^\w\s]", "", title)
+    title = re.sub(r"\s+", " ", title).strip()
+    return title

@@ -8,7 +8,7 @@ or processing is applied - the raw HAL data is preserved exactly as received.
 Usage:
     python hal_query.py
 
-The raw responses are saved to data/source/hal/raw/ with timestamps.
+The raw responses are saved to data/source/hal/ with timestamps.
 """
 
 import json
