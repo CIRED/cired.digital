@@ -1,554 +1,102 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.8.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
+<head>
+<meta content="HTML Tidy for HTML5 for Linux version 5.8.0" name="generator"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
       Conversations avec le documentaliste scientifique CIRED.digital - VERSION ALPHA
     </title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .message-content {
-            word-wrap: break-word;
-            white-space: pre-wrap;
-        }
-        .scroll-smooth {
-            scroll-behavior: smooth;
-        }
-        .line-clamp-2 {
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
-        }
-        .line-clamp-3 {
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
-        }
-        @keyframes spin-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        .animate-spin-slow {
-            animation: spin-slow 2s linear infinite;
-        }
-    </style>
-  </head>
-  <body class="bg-gray-50">
-    <div id="app" class="flex flex-col h-screen">
-      <!-- Header -->
-      <div class="bg-white border-b border-gray-200 px-4 py-3 shadow-sm">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center space-x-3">
-            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-              <span class="text-white font-bold text-lg">🤖</span>
-            </div>
-            <div>
-              <h1 class="text-lg font-semibold text-gray-900">
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gray-50">
+<div class="flex flex-col h-screen" id="app">
+<!-- Header -->
+<div class="bg-white border-b border-gray-200 px-4 py-3 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+<span class="text-white font-bold text-lg">🤖</span>
+</div>
+<div>
+<h1 class="text-lg font-semibold text-gray-900">
                 Conversations avec CIRED.digital, documentaliste scientifique  - VERSION ALPHA
               </h1>
-              <p class="text-sm text-gray-500" id="status-text">
+<p class="text-sm text-gray-500" id="status-text">
                 Connecté à <span id="api-url-display">http://cired.digital:7272</span> • <span id="model-display">openai/gpt-4o-mini</span>
-              </p>
-            </div>
-          </div><button id="config-btn" class="px-3 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors">Config</button>
-        </div>
-      </div><!-- Configuration Panel -->
-      <div id="config-panel" class="bg-white border-b border-gray-200 p-4 hidden">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">R2R API URL</label> <input type="text" id="api-url" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">Model</label> <select id="model" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="openai/gpt-4.1-mini">
+</p>
+</div>
+</div><button class="px-3 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors" id="config-btn">Config</button>
+</div>
+</div><!-- Configuration Panel -->
+<div class="bg-white border-b border-gray-200 p-4 hidden" id="config-panel">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">R2R API URL</label> <input class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="api-url" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">Model</label> <select class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="model">
+<option value="openai/gpt-4.1-mini">
                 GPT-4.1 Mini
               </option>
-              <option value="deepseek/deepseek-chat">
+<option value="deepseek/deepseek-chat">
                 Deepseek chat
               </option>
-              <option value="mistral/open-mistral-7b">
+<option value="mistral/open-mistral-7b">
                 Open mistral 7b
               </option>
-            </select>
-          </div>
-           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">Temperature</label> <input type="number" id="temperature" min="0" max="2" step="0.1" value="0.1" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">Max Tokens</label> <input type="number" id="max-tokens" min="100" max="4000" step="100" value="1000" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-        </div>
-        <div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-          <p class="text-sm text-blue-800">
-            <strong>Debug Mode:</strong> Response data will be logged to console for troubleshooting.
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">Temperature</label> <input class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="temperature" max="2" min="0" step="0.1" type="number" value="0.1"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">Max Tokens</label> <input class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="max-tokens" max="4000" min="100" step="100" type="number" value="1000"/>
+</div>
+</div>
+<div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+<p class="text-sm text-blue-800">
+<strong>Debug Mode:</strong> Response data will be logged to console for troubleshooting.
           </p>
-        </div>
-      </div><!-- Messages -->
-      <div id="messages-container" class="flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth">
-        <div class="flex justify-start">
-          <div class="flex max-w-3xl">
-            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 text-gray-600 mr-3 flex items-center justify-center">
-              <span class="font-bold text-lg">🤖</span>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white text-gray-800 border border-gray-200 px-4 py-3 rounded-lg">
-                <div class="message-content">Bonjour !<br />Je suis CIRED.digital, documentaliste scientifique. Mon rôle consiste à analyser les écrits du Centre International de Recherche sur l'Environnement et le Développement (le CIRED) pour vous fournir des micro-synthèses sourcées. Le fonds documentaire compte 1197 documents issus de l'archive ouverte française Hyper Articles en Ligne (HAL). Ceci est une version alpha. Ne pas rediffuser ce fichier. Merci de donner votre feedback anonyme sur la qualité des réponses en cliquant sur 👍 ou 👎.
+</div>
+</div><!-- Messages -->
+<div class="flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth" id="messages-container">
+<div class="flex justify-start">
+<div class="flex max-w-3xl">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 text-gray-600 mr-3 flex items-center justify-center">
+<span class="font-bold text-lg">🤖</span>
+</div>
+<div class="flex-1">
+<div class="bg-white text-gray-800 border border-gray-200 px-4 py-3 rounded-lg">
+<div class="message-content">Bonjour !<br/>Je suis CIRED.digital, documentaliste scientifique. J'analyse les écrits du Centre International de Recherche sur l'Environnement et le Développement (le CIRED) pour vous fournir des micro-synthèses sourcées. Le fonds documentaire compte plus de 1000 documents consultables sur l'archive ouverte Hyper Articles en Ligne (HAL).<br />Vous pourrez donner un feedback en cliquant 👍 ou 👎 sous chaque réponse.
 
-                  <img src="static/cired_wordcloud.png"
-                       alt="Nuage de mots représentant les principales thématiques de recherche CIRED : changement climatique, transition énergétique, politique climatique, modélisation économique, énergies renouvelables, développement durable, et politiques environnementales"
-                       class="w-full h-auto max-w-full rounded-lg shadow-sm"
-                       style="max-height: 300px; object-fit: contain;">
-               </div>
-              </div>
-              <div class="text-xs text-gray-500 mt-1" id="initial-timestamp"></div>
-            </div>
-          </div>
-        </div>
-      </div><!-- Error Display -->
-      <div id="error-container" class="mx-4 mb-2 p-3 bg-red-50 border border-red-200 rounded-lg items-center text-red-800 hidden">
-        <span class="mr-2">⚠️</span> <span class="text-sm" id="error-text"></span>
-      </div><!-- Input -->
-      <div class="bg-white border-t border-gray-200 p-4">
-        <div class="flex space-x-3 max-w-4xl mx-auto">
-          <div class="flex-1 relative">
-            <textarea id="message-input" placeholder="Posez votre question sur les thèmes du CIRED..." class="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" rows="1" style="min-height: 48px; max-height: 120px;"></textarea>
-          </div><button id="send-btn" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center transition-colors"><span class="font-bold text-lg">➤</span></button>
-        </div>
-        <div class="text-center mt-2">
-          <span class="text-xs text-gray-500">Appuyez sur Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne</span>
-        </div>
-      </div>
-    </div>
-    <script>
-        // Configuration constants
-        const DEFAULT_HOST = 'http://cired.digital:7272';
-        const FEEDBACK_HOST = 'http://cired.digital:7275';
+                  <img alt="Nuage de mots représentant les principales thématiques de recherche CIRED : changement climatique, transition énergétique, politique climatique, modélisation économique, énergies renouvelables, développement durable, et politiques environnementales" class="w-full h-auto max-w-full rounded-lg shadow-sm" src="static/cired_wordcloud.png" style="max-height: 300px; object-fit: contain;"/>
+</div>
+</div>
+<div class="text-xs text-gray-500 mt-1" id="initial-timestamp"></div>
+</div>
+</div>
+</div>
+</div><!-- Error Display -->
+<div class="mx-4 mb-2 p-3 bg-red-50 border border-red-200 rounded-lg items-center text-red-800 hidden" id="error-container">
+<span class="mr-2">⚠️</span> <span class="text-sm" id="error-text"></span>
+</div><!-- Input -->
+<div class="bg-white border-t border-gray-200 p-4">
+<div class="flex space-x-3 max-w-4xl mx-auto">
+<div class="flex-1 relative">
+<textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="message-input" placeholder="Posez votre question sur les thèmes du CIRED..." rows="1" style="min-height: 48px; max-height: 120px;"></textarea>
+</div><button class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center transition-colors" id="send-btn"><span class="font-bold text-lg">➤</span></button>
+</div>
+<div class="text-center mt-2">
+<span class="text-xs text-gray-500">Appuyez sur Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne</span>
+</div>
+</div>
+</div>
 
-        // Global state
-        let isLoading = false;
-        let messageIdCounter = 1;
-
-        // DOM elements
-        const configBtn = document.getElementById('config-btn');
-        const configPanel = document.getElementById('config-panel');
-        const messagesContainer = document.getElementById('messages-container');
-        const messageInput = document.getElementById('message-input');
-        const sendBtn = document.getElementById('send-btn');
-        const errorContainer = document.getElementById('error-container');
-        const errorText = document.getElementById('error-text');
-
-        // Configuration elements
-        const apiUrlInput = document.getElementById('api-url');
-        const modelSelect = document.getElementById('model');
-        const temperatureInput = document.getElementById('temperature');
-        const maxTokensInput = document.getElementById('max-tokens');
-
-        // Status display elements
-        const apiUrlDisplay = document.getElementById('api-url-display');
-        const modelDisplay = document.getElementById('model-display');
-
-        // Initialize
-        document.getElementById('initial-timestamp').textContent = formatTimestamp(new Date());
-
-        // Set default values using constants
-        apiUrlInput.value = DEFAULT_HOST;
-
-        updateStatusDisplay();
-
-        // Event listeners
-        configBtn.addEventListener('click', () => {
-            configPanel.classList.toggle('hidden');
-        });
-
-        sendBtn.addEventListener('click', sendMessage);
-
-        messageInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault();
-                sendMessage();
-            }
-        });
-
-        // Auto-resize textarea
-        messageInput.addEventListener('input', function() {
-            this.style.height = 'auto';
-            this.style.height = Math.min(this.scrollHeight, 120) + 'px';
-        });
-
-        // Update status display when config changes
-        [apiUrlInput, modelSelect].forEach(element => {
-            element.addEventListener('change', updateStatusDisplay);
-        });
-
-        function updateStatusDisplay() {
-            apiUrlDisplay.textContent = apiUrlInput.value;
-            modelDisplay.textContent = modelSelect.value;
-        }
-
-        function formatTimestamp(timestamp) {
-            return new Intl.DateTimeFormat('en-US', {
-                hour: '2-digit',
-                minute: '2-digit'
-            }).format(timestamp);
-        }
-
-        function showError(message) {
-            errorText.textContent = message;
-            errorContainer.classList.remove('hidden');
-            errorContainer.classList.add('flex');
-        }
-
-        function hideError() {
-            errorContainer.classList.add('hidden');
-            errorContainer.classList.remove('flex');
-        }
-
-        function createMessage(type, content, timestamp, isError = false) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `flex ${type === 'user' ? 'justify-end' : 'justify-start'}`;
-            messageDiv.id = `message-${messageIdCounter++}`;
-
-            const avatarIcon = type === 'user'
-                ? '👤'
-                : '🤖';
-
-            const messageClass = type === 'user'
-                ? 'bg-blue-600 text-white'
-                : isError
-                ? 'bg-red-50 text-red-800 border border-red-200'
-                : 'bg-white text-gray-800 border border-gray-200';
-
-            messageDiv.innerHTML = `
-                <div class="flex max-w-3xl ${type === 'user' ? 'flex-row-reverse' : 'flex-row'}">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
-                        type === 'user'
-                            ? 'bg-blue-600 text-white ml-3'
-                            : 'bg-gray-200 text-gray-600 mr-3'
-                    }">
-                        <span class="font-bold text-lg">${avatarIcon}</span>
-                    </div>
-                    <div class="flex-1">
-                        <div class="${messageClass} px-4 py-3 rounded-lg">
-                            <div class="message-content">${content}</div>
-                        </div>
-                        <div class="citations-container"></div>
-                        <div class="text-xs text-gray-500 mt-1">${formatTimestamp(timestamp)}</div>
-                    </div>
-                </div>
-            `;
-
-            return messageDiv;
-        }
-
-        function addMessage(type, content, isError = false) {
-            const message = createMessage(type, content, new Date(), isError);
-            messagesContainer.appendChild(message);
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-            return message;
-        }
-
-    function showTyping () {
-    const msg = createMessage(
-    'bot',
-    `<span class="mr-2 inline-block animate-spin-slow text-blue-500">⟳</span>Recherche dans la base documentaire…`
-    );
-    msg.id = 'typing-indicator';
-    messagesContainer.appendChild(msg);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
-    return msg;
-    }
-
-
-        function hideTyping() {
-            const typing = document.getElementById('typing-indicator');
-            if (typing) {
-                typing.remove();
-            }
-        }
-
-        function processVancouverCitations(content, citations) {
-            const documentMap = new Map();
-            const citationToDoc = new Map();
-            let docNumber = 1;
-            
-            citations.forEach(citation => {
-                const payload = citation.payload || citation;
-                const metadata = payload.metadata || {};
-                const title = metadata.title || payload.title || 'No title (sorry, we are working on it.).';
-                const doi = metadata.doi || '';
-                const halid = metadata.hal_id || '';
-                
-                const docKey = doi || halid || title;
-                
-                if (!documentMap.has(docKey)) {
-                    documentMap.set(docKey, {
-                        docNumber: docNumber++,
-                        title: title,
-                        authors: metadata.authors || [],
-                        year: metadata.publication_date ? new Date(metadata.publication_date).getFullYear() : '',
-                        doi: doi,
-                        halid: halid,
-                        citations: []
-                    });
-                }
-                
-                const doc = documentMap.get(docKey);
-                let pageNum = metadata.unstructured_page_number || metadata.page_num || '';
-                
-                if (!pageNum && metadata.citation) {
-                    const pageMatch = metadata.citation.match(/pp?\.?\s*(\d+(?:-\d+)?)/i);
-                    if (pageMatch) {
-                        pageNum = pageMatch[1];
-                    }
-                }
-                const citationId = citation.id || payload.id || '';
-                
-                doc.citations.push({
-                    id: citationId,
-                    pageNum: pageNum,
-                    text: payload.text || citation.text || '',
-                    score: payload.score || citation.score || 0
-                });
-                
-                citationToDoc.set(citationId, {
-                    docNumber: doc.docNumber,
-                    pageNum: pageNum
-                });
-            });
-            
-            let processedContent = content;
-            citationToDoc.forEach((docInfo, citationId) => {
-                const oldMark = `[${citationId}]`;
-                const newMark = docInfo.pageNum ? 
-                    `[${docInfo.docNumber}, p. ${docInfo.pageNum}]` : 
-                    `[${docInfo.docNumber}]`;
-                processedContent = processedContent.replace(new RegExp(`\\[${citationId}\\]`, 'g'), newMark);
-            });
-            
-            return {
-                processedContent: processedContent,
-                documentBibliography: Array.from(documentMap.values())
-            };
-        }
-
-        function addVancouverCitations(messageElement, documentBibliography) {
-            const citationsContainer = messageElement.querySelector('.citations-container');
-            if (documentBibliography && documentBibliography.length > 0) {
-                console.log('Processing Vancouver bibliography:', documentBibliography);
-
-                const bibliographyHtml = `
-                    <div class="mt-3 text-sm">
-                        <div class="font-semibold text-gray-700 mb-2 flex items-center">
-                            <span class="mr-1">📚</span>
-                            Bibliographie:
-                        </div>
-                        ${documentBibliography.map(doc => {
-                            const authorsText = doc.authors.length > 0 ? 
-                                `${doc.authors.join(', ')} ${doc.year ? `(${doc.year})` : ''}` : '';
-                            
-                            return `
-                                <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 mb-2 hover:bg-gray-100 transition-colors">
-                                    <div class="flex justify-between items-start mb-2">
-                                        <div class="flex-1">
-                                            <h4 class="font-medium text-gray-900 text-sm leading-tight" 
-                                                title="${doc.title}"
-                                                onmouseover="showTooltip(event, '${doc.title.replace(/'/g, "\\'")}', '${authorsText.replace(/'/g, "\\'")}', '${doc.year}')"
-                                                onmouseout="hideTooltip()">
-                                                ${doc.title}
-                                            </h4>
-                                            ${authorsText ? `
-                                                <p class="text-xs text-gray-600 mt-1">
-                                                    ${authorsText}
-                                                </p>
-                                            ` : ''}
-                                        </div>
-                                        <div class="ml-2 text-xs text-gray-500 font-bold">
-                                            [${doc.docNumber}]
-                                        </div>
-                                    </div>
-
-                                    <div class="flex flex-wrap gap-2 text-xs">
-                                        ${doc.doi ? `
-                                            <a href="https://doi.org/${doc.doi}" target="_blank" class="text-blue-600 hover:text-blue-800 flex items-center">
-                                                <span class="mr-1">🔗</span>
-                                                DOI: ${doc.doi}
-                                            </a>
-                                        ` : ''}
-                                        ${doc.halid ? `
-                                            <a href="https://hal.science/${doc.halid}" target="_blank" class="text-blue-600 hover:text-blue-800 flex items-center">
-                                                <span class="mr-1">🔗</span>
-                                                HALId: ${doc.halid}
-                                            </a>
-                                        ` : ''}
-                                    </div>
-                                </div>
-                            `;
-                        }).join('')}
-                    </div>
-                `;
-                citationsContainer.innerHTML = bibliographyHtml;
-            }
-        }
-
-        function showTooltip(event, title, authors, year) {
-            const tooltip = document.createElement('div');
-            tooltip.id = 'document-tooltip';
-            tooltip.className = 'absolute z-50 bg-gray-800 text-white text-xs rounded py-2 px-3 max-w-xs';
-            tooltip.style.left = event.pageX + 10 + 'px';
-            tooltip.style.top = event.pageY - 10 + 'px';
-            
-            const summary = `${title}${authors ? `\n${authors}` : ''}${year ? `\nAnnée: ${year}` : ''}`;
-            tooltip.textContent = summary;
-            tooltip.style.whiteSpace = 'pre-line';
-            
-            document.body.appendChild(tooltip);
-        }
-
-        function hideTooltip() {
-            const tooltip = document.getElementById('document-tooltip');
-            if (tooltip) {
-                tooltip.remove();
-            }
-        }
-
-        async function sendMessage() {
-            const query = messageInput.value.trim();
-            if (!query || isLoading) return;
-
-            isLoading = true;
-            sendBtn.disabled = true;
-            hideError();
-
-            // Add user message
-            addMessage('user', query);
-            messageInput.value = '';
-            messageInput.style.height = 'auto';
-
-            // Show typing indicator
-            const typingMSG = showTyping();
-
-            try {
-                const config = {
-                    apiUrl: apiUrlInput.value,
-                    model: modelSelect.value,
-                    temperature: parseFloat(temperatureInput.value),
-                    maxTokens: parseInt(maxTokensInput.value)
-                };
-
-                const requestBody = {
-                    query: query,
-                    search_settings: {
-                        search_mode: 'advanced',
-                        limit: 10
-                    },
-                    rag_generation_config: {
-                        model: config.model,
-                        temperature: config.temperature,
-                        max_tokens: config.maxTokens,
-                        stream: false
-                    }
-                };
-
-                console.log('Sending request:', requestBody);
-
-                const response = await fetch(`${config.apiUrl}/v3/retrieval/rag`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(requestBody)
-                });
-
-
-                if (!response.ok) {
-                    const errorData = await response.text();
-                    console.error('API Error Response:', errorData);
-                    throw new Error(`API Error: ${response.status} ${response.statusText}`);
-                }
-
-                    const data = await response.json();
-                    handleResponse(requestBody, data);
-
-            } catch (err) {
-                console.error('Error sending message:', err);
-                showError(err.message);
-                addMessage('bot', `I apologize, but I encountered an error: ${err.message}. Please check your R2R configuration and try again.`, true);
-            } finally {
-                hideTyping();
-                isLoading = false;
-                sendBtn.disabled = false;
-                messageInput.focus();
-            }
-        }
-
-
-        function handleResponse(requestBody, data) {
-            console.log('Processing response:', data);
-
-            let content = 'No response generated.';
-            let citations = [];
-
-            content = data.results.generated_answer;
-            citations = data.results.citations || [];
-
-            const { processedContent, documentBibliography } = processVancouverCitations(content, citations);
-            
-            const botMessage = addMessage('bot', processedContent);
-            addVancouverCitations(botMessage, documentBibliography);
-
-            const feedbackDiv = document.createElement('div');
-
-feedbackDiv.className = 'flex gap-2 mt-2';
-
-feedbackDiv.innerHTML = `
-  <button class="thumb-up text-green-600 hover:text-green-800" title="Bonne réponse.">👍</button>
-  <button class="thumb-down text-red-600 hover:text-red-800" title="Réponse insuffisante.">👎</button>
-  <a href="${FEEDBACK_HOST}/v1/feedback/view" title="Ouvrir la table des feedbacks.">📊</a>
-`;
-
-botMessage.querySelector('.message-content').after(feedbackDiv);
-
-feedbackDiv.querySelector('.thumb-up').addEventListener('click', () => {
-    sendFeedback(requestBody, data.results, 'up');
-    feedbackDiv.remove();
-});
-feedbackDiv.querySelector('.thumb-down').addEventListener('click', () => {
-    sendFeedback(requestBody, data.results, 'down');
-    feedbackDiv.remove();
-});
-
-        }
-
-        function sendFeedback(requestBody, results, feedback) {
-    const feedbackData = {
-        question: requestBody.query,
-        answer: results.generated_answer,
-        feedback: feedback,
-        timestamp: new Date().toISOString()
-    };
-
-    fetch(`${FEEDBACK_HOST}/v1/feedback`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(feedbackData)
-    })
-    .then(response => {
-        if (!response.ok) {
-            console.error('Feedback not accepted by server:', response.status);
-        } else {
-            console.log('Feedback successfully sent.');
-        }
-    })
-    .catch(error => {
-        console.error('Error sending feedback:', error);
-    });
-}
-    </script>
-  </body>
+<script src="config.js"></script>
+<script src="ui.js"></script>
+<script src="api.js"></script>
+</body>
 </html>
