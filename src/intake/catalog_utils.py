@@ -42,9 +42,11 @@ def load_latest_prepared_catalog() -> dict[str, Any] | None:
     catalog_file = get_latest_prepared_catalog()
     if not catalog_file:
         return None
-    
+
     try:
-        catalog_data: dict[str, Any] = json.loads(catalog_file.read_text(encoding="utf-8"))
+        catalog_data: dict[str, Any] = json.loads(
+            catalog_file.read_text(encoding="utf-8")
+        )
         return catalog_data
     except Exception as e:
         logging.error("Failed to load prepared catalog %s: %s", catalog_file, e)

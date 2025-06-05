@@ -26,7 +26,6 @@ from typing import Any
 
 from intake.config import (
     BLACKLIST_FILE,
-    MAX_FILE_SIZE,
     PREPARED_DIR,
     RAW_HAL_DIR,
     setup_logging,
@@ -65,10 +64,10 @@ def normalize_title(title: str | list[str]) -> str:
     """Normalize title for comparison using the same logic as verify.py."""
     if not title:
         return ""
-    
+
     if isinstance(title, list):
         title = title[0] if title else ""
-    
+
     title = str(title)
     normalized = re.sub(r"[^\w\s]", "", title.lower())
     normalized = re.sub(r"\s+", " ", normalized).strip()
@@ -79,7 +78,7 @@ def is_working_paper(doc_type: str) -> bool:
     """Check if document type indicates a working paper."""
     if not doc_type:
         return False
-    
+
     working_paper_types = {"UNDEFINED", "OTHER", "REPORT"}
     return doc_type.upper() in working_paper_types
 

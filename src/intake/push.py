@@ -405,6 +405,53 @@ def check_r2r_connection(client: R2RClient) -> bool:
         return False
 
 
+def setup_catalog_file(args: argparse.Namespace) -> tuple[Path | None, int]:
+    """Determine which catalog file to use based on arguments."""
+    if args.metadata_file:
+        return args.metadata_file, 0
+    elif args.use_prepared:
+        catalog_file = get_latest_prepared_catalog()
+        if not catalog_file:
+            logging.error(
+                "No prepared catalog found. Run hal_query.py and prepare_catalog.py first."
+            )
+            return None, 1
+        logging.info("Using latest prepared catalog: %s", catalog_file)
+        return catalog_file, 0
+    else:
+        return CATALOG_FILE, 0
+
+
+def print_upload_statistics(
+    total_records: int,
+    available_docs: list[dict[str, Any]],
+    missing_files: int,
+    existing_documents: dict[str, str],
+    uploadable_files: list[Path],
+    success_count: int,
+    skipped_count: int,
+    failed_files: list[tuple[Path, str]],
+) -> int:
+    """Print upload statistics and return appropriate exit code."""
+    logging.info("=== UPLOAD STATISTICS ===")
+    logging.info("Total catalog records: %d", total_records)
+    logging.info("Available documents: %d", len(available_docs))
+    logging.info("Missing PDF files: %d", missing_files)
+    logging.info("Documents on server: %d", len(existing_documents))
+    logging.info("Uploadable documents: %d", len(uploadable_files))
+    logging.info("Successfully uploaded: %d", success_count)
+    logging.info("Skipped: %d", skipped_count)
+    logging.info("Failed: %d", len(failed_files))
+
+    if failed_files:
+        logging.error("Failed files:")
+        for file, error in failed_files:
+            logging.error("- %s: %s", file, error)
+        return 5
+
+    return 0
+
+
 def main() -> int:
     """
     Upload PDFs with metadata to an R2R instance using catalog-based discovery.
@@ -430,18 +477,13 @@ def main() -> int:
         simple_format=True,
     )
 
-    if args.metadata_file:
-        catalog_file = args.metadata_file
-    elif args.use_prepared:
-        catalog_file = get_latest_prepared_catalog()
-        if not catalog_file:
-            logging.error(
-                "No prepared catalog found. Run hal_query.py and prepare_catalog.py first."
-            )
-            return 1
-        logging.info("Using latest prepared catalog: %s", catalog_file)
-    else:
-        catalog_file = CATALOG_FILE
+    catalog_file, exit_code = setup_catalog_file(args)
+    if exit_code != 0:
+        return exit_code
+
+    if catalog_file is None:
+        logging.error("No catalog file available")
+        return 1
 
     available_docs, total_records, missing_files = establish_available_documents(
         catalog_file, args.dir
@@ -478,7 +520,6 @@ def main() -> int:
         logging.error("No valid PDF files to upload after filtering oversized files.")
         return 4
 
-    metadata_by_file = {}
     metadata_by_file = load_metadata(catalog_file)
 
     success_count, skipped_count, failed_files = upload_pdfs(
@@ -490,23 +531,16 @@ def main() -> int:
         max_upload=args.max_upload,
     )
 
-    logging.info("=== UPLOAD STATISTICS ===")
-    logging.info("Total catalog records: %d", total_records)
-    logging.info("Available documents: %d", len(available_docs))
-    logging.info("Missing PDF files: %d", missing_files)
-    logging.info("Documents on server: %d", len(existing_documents))
-    logging.info("Uploadable documents: %d", len(uploadable_files))
-    logging.info("Successfully uploaded: %d", success_count)
-    logging.info("Skipped: %d", skipped_count)
-    logging.info("Failed: %d", len(failed_files))
-
-    if failed_files:
-        logging.error("Failed files:")
-        for file, error in failed_files:
-            logging.error("- %s: %s", file, error)
-        return 5
-
-    return 0
+    return print_upload_statistics(
+        total_records,
+        list(available_docs.values()),
+        missing_files,
+        existing_documents,
+        uploadable_files,
+        success_count,
+        skipped_count,
+        failed_files,
+    )
 
 
 if __name__ == "__main__":
