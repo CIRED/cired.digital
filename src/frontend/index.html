@@ -56,6 +56,14 @@
 <label class="block text-sm font-medium text-gray-700 mb-1">Max Tokens</label> <input class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="max-tokens" max="4000" min="100" step="100" type="number" value="1000"/>
 </div>
 </div>
+<div class="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+  <label class="flex items-center text-sm">
+    <input type="checkbox" id="privacy-mode" class="mr-2">
+    <span class="text-yellow-800">
+      <strong>Mode sans trace</strong> - Aucun enregistrement des conversations
+    </span>
+  </label>
+</div>
 <div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
 <p class="text-sm text-blue-800">
 <strong>Debug Mode:</strong> Response data will be logged to console for troubleshooting.
@@ -71,6 +79,10 @@
 <div class="flex-1">
 <div class="bg-white text-gray-800 border border-gray-200 px-4 py-3 rounded-lg">
 <div class="message-content">Bonjour !<br/>Je suis CIRED.digital, documentaliste scientifique. J'analyse les écrits du Centre International de Recherche sur l'Environnement et le Développement (le CIRED) pour vous fournir des micro-synthèses sourcées. Le fonds documentaire compte plus de 1000 documents consultables sur l'archive ouverte Hyper Articles en Ligne (HAL).<br />Vous pourrez donner un feedback en cliquant 👍 ou 👎 sous chaque réponse.
+<br/><br/>
+⚠️ <strong>Les conversations sont enregistrées pour améliorer le service.</strong><br/>
+📊 <a href="#" id="view-analytics-link" class="text-blue-600 hover:text-blue-800">Voir les données collectées</a> | 
+🔒 <a href="#" id="privacy-policy-link" class="text-blue-600 hover:text-blue-800">Politique de confidentialité</a>
 
                   <img alt="Nuage de mots représentant les principales thématiques de recherche CIRED : changement climatique, transition énergétique, politique climatique, modélisation économique, énergies renouvelables, développement durable, et politiques environnementales" class="w-full h-auto max-w-full rounded-lg shadow-sm" src="static/cired_wordcloud.png" style="max-height: 300px; object-fit: contain;"/>
 </div>

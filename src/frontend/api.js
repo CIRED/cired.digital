@@ -143,6 +143,22 @@ function sendFeedback(requestBody, results, feedback) {
 // ==========================================
 // APPLICATION STARTUP
 // ==========================================
+
+function initialize() {
+    // Initialize privacy mode
+    initializePrivacyMode();
+    
+    document.getElementById('view-analytics-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(FEEDBACK_HOST + '/v1/feedback/view', '_blank');
+    });
+    
+    document.getElementById('privacy-policy-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('Privacy policy coming soon!');
+    });
+}
+
 // Initialize when DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initialize);

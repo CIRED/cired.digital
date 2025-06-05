@@ -504,7 +504,7 @@ function addFeedbackButtons(botMessage, requestBody, results) {
     feedbackDiv.innerHTML = `
         <button class="thumb-up text-green-600 hover:text-green-800" title="Bonne réponse.">👍</button>
         <button class="thumb-down text-red-600 hover:text-red-800" title="Réponse insuffisante.">👎</button>
-        <a href="${FEEDBACK_HOST}/v1/feedback/view" title="Ouvrir la table des feedbacks.">📊</a>
+
     `;
 
     botMessage.querySelector('.message-content').after(feedbackDiv);
@@ -519,4 +519,39 @@ function addFeedbackButtons(botMessage, requestBody, results) {
         sendFeedback(requestBody, results, 'down');
         feedbackDiv.remove();
     });
+}
+
+// ==========================================
+// ==========================================
+
+function initializePrivacyMode() {
+    const privacyCheckbox = document.getElementById('privacy-mode');
+    const statusText = document.getElementById('status-text');
+    
+    const privacyMode = localStorage.getItem('privacy-mode') === 'true';
+    privacyCheckbox.checked = privacyMode;
+    updatePrivacyStatus();
+    
+    privacyCheckbox.addEventListener('change', function() {
+        localStorage.setItem('privacy-mode', this.checked);
+        updatePrivacyStatus();
+    });
+}
+
+function updatePrivacyStatus() {
+    const privacyMode = localStorage.getItem('privacy-mode') === 'true';
+    const statusText = document.getElementById('status-text');
+    const originalContent = statusText.innerHTML;
+    
+    if (privacyMode) {
+        if (!statusText.innerHTML.includes('🔒 Mode sans trace activé')) {
+            statusText.innerHTML = originalContent + ' • <span class="text-orange-600">🔒 Mode sans trace activé</span>';
+        }
+    } else {
+        statusText.innerHTML = originalContent.replace(/ • <span class="text-orange-600">🔒 Mode sans trace activé<\/span>/, '');
+    }
+}
+
+function isPrivacyModeEnabled() {
+    return localStorage.getItem('privacy-mode') === 'true';
 }
