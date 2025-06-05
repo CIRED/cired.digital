@@ -104,7 +104,7 @@ def get_paginated_publications(
 
         try:
             logging.debug(
-                "Fetching batch %d/%d (records %d-%d)",
+                "Fetching batch %d / max %d (records %d-%d)",
                 current_batch + 1,
                 HAL_MAX_BATCHES,
                 start_index,
