@@ -10,6 +10,8 @@ This script:
 - Delete documents with inconsistent meta
 """
 
+from __future__ import annotations   # Needed for pd.Series[Any]
+
 import argparse
 import json
 import logging
