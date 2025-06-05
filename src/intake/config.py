@@ -62,7 +62,7 @@ CONFERENCE_FILE = DATA_ROOT / "conference.json"
 HAL_API_URL = "https://api.archives-ouvertes.fr/search/"
 HAL_QUERY = "CIRED"
 HAL_BATCH_SIZE = 100
-HAL_MAX_BATCHES = 50
+HAL_MAX_BATCHES = 50  # Fetch a maximum of 5000 publications
 
 # Download settings
 DOWNLOAD_DELAY = 1  # seconds

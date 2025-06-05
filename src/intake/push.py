@@ -208,6 +208,11 @@ def first_if_list(value: object) -> str | None:
 def format_metadata_for_upload(metadata: dict[str, object]) -> dict[str, str]:
     """Format HAL metadata for R2R upload."""
     # Define field mappings: HAL field -> R2R field
+    # TODO: refactor
+    #   Reread HAL API doc and distinguish three kind  of fields:
+    #   multi-valued to be kept entirely (authors)
+    #   multi-valued to be truncated to first element (supposedly English)
+    #   guaranteed scalar fields
     field_mapping = {
         "title_s": "title",
         "label_s": "citation",
@@ -220,17 +225,14 @@ def format_metadata_for_upload(metadata: dict[str, object]) -> dict[str, str]:
 
     result: dict[str, str] = {}
 
-    # Copy mapped fields
+    # Keep only the first in possibly multi-valued
     for hal_field, r2r_field in field_mapping.items():
         if value := first_if_list(metadata.get(hal_field)):
             result[r2r_field] = str(value)
 
-    # Handle authors specially (join list into string)
+    # For authors, keep all the list
     if authors := metadata.get("authFullName_s"):
-        if isinstance(authors, list):
-            result["authors"] = ", ".join(str(a) for a in authors)
-        else:
-            result["authors"] = str(authors)
+        result["authors"] = str(authors)
 
     # Add source URL
     if "doi" in result:
