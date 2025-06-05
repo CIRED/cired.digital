@@ -28,6 +28,7 @@ dependencies = [
   "pydantic>=2.0,<3.0",
   "matplotlib",
   "wordcloud",
+  "pandas",
 ]
 
 # Note: Ubuntu distro version of `ruff`, `pytest`, `mypy` tend to be old.
