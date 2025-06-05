@@ -1,0 +1,11 @@
+{
+  "description": "HAL IDs to exclude from catalog (Laurent Lamy astronomy publications)",
+  "excluded_hal_ids": [
+    "hal-00973222",
+    "hal-01163077",
+    "hal-01919880",
+    "hal-02515763",
+    "hal-02544434",
+    "tel_02426578"
+  ]
+}

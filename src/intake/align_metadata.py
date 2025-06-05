@@ -20,6 +20,7 @@ from typing import Any
 import pandas as pd
 from r2r import R2RClient
 
+from intake.catalog_utils import get_catalog_publications, get_latest_prepared_catalog
 from intake.config import CATALOG_FILE, R2R_DEFAULT_BASE_URL, setup_logging
 from intake.push import format_metadata_for_upload
 from intake.verify import get_existing_documents
@@ -29,11 +30,14 @@ def load_catalog(catalog_file: Path) -> dict[str, dict[str, Any]]:
     """Load catalog data and index by hal_id."""
     if not catalog_file.exists():
         logging.error(f"Catalog file not found: {catalog_file}")
-        logging.error("Run query.py first to create the catalog.")
+        logging.error(
+            "Run hal_query.py and prepare_catalog.py first to create the catalog."
+        )
         return {}
 
     try:
-        publications = json.loads(catalog_file.read_text(encoding="utf-8"))
+        catalog_data = json.loads(catalog_file.read_text(encoding="utf-8"))
+        publications = get_catalog_publications(catalog_data)
         catalog_by_hal_id = {}
 
         for pub in publications:
@@ -184,8 +188,7 @@ Examples:
     parser.add_argument(
         "--catalog-file",
         type=Path,
-        default=CATALOG_FILE,
-        help=f"Path to catalog.json file (default: {CATALOG_FILE})",
+        help="Path to catalog.json file (default: latest prepared catalog)",
     )
     parser.add_argument(
         "--base-url",
@@ -261,7 +264,17 @@ def main() -> int:
     else:
         logging.info("Running in DRY-RUN mode - will show what would be deleted")
 
-    catalog_by_hal_id = load_catalog(args.catalog_file)
+    if args.catalog_file:
+        catalog_file = args.catalog_file
+    else:
+        catalog_file = get_latest_prepared_catalog()
+        if not catalog_file:
+            catalog_file = CATALOG_FILE
+            logging.info("Using legacy catalog file: %s", CATALOG_FILE)
+        else:
+            logging.info("Using latest prepared catalog: %s", catalog_file)
+
+    catalog_by_hal_id = load_catalog(catalog_file)
     if not catalog_by_hal_id:
         logging.error("Metadata alignment abort: Failed to load catalog.")
         return 1

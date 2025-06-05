@@ -52,6 +52,9 @@ DATA_ROOT = BASE_DIR / "data" / "source" / "hal"
 PDF_DIR = DATA_ROOT / "pdfs"
 CATALOG_FILE = DATA_ROOT / "catalog.json"
 CONFERENCE_FILE = DATA_ROOT / "conference.json"
+RAW_HAL_DIR = DATA_ROOT / "raw"
+PREPARED_DIR = BASE_DIR / "data" / "prepared"
+BLACKLIST_FILE = BASE_DIR / "data" / "source" / "blacklist.json"
 
 # HAL Query settings
 #

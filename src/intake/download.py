@@ -25,6 +25,7 @@ from pathlib import Path
 
 import requests
 
+from intake.catalog_utils import get_catalog_publications, get_latest_prepared_catalog
 from intake.config import (
     CATALOG_FILE,
     DOWNLOAD_CHUNK_SIZE,
@@ -95,15 +96,24 @@ def main() -> None:
     """
     Download all publication PDFs.
 
-    Reads the CATALOG file, iterates through each entry, and downloads
+    Reads the latest prepared catalog, iterates through each entry, and downloads
     the corresponding PDFs if they are not already locally present.
     """
-    if not CATALOG_FILE.exists():
-        logging.error("Missing input file: %s", CATALOG_FILE)
-        logging.error("Which is created by the query.py script.")
-        return
+    catalog_file = get_latest_prepared_catalog()
+    if not catalog_file:
+        if CATALOG_FILE.exists():
+            catalog_file = CATALOG_FILE
+            logging.info("Using legacy catalog file: %s", CATALOG_FILE)
+        else:
+            logging.error(
+                "No catalog file found. Run hal_query.py and prepare_catalog.py first."
+            )
+            return
+    else:
+        logging.info("Using latest prepared catalog: %s", catalog_file)
 
-    CATALOG = json.loads(CATALOG_FILE.read_text(encoding="utf-8"))
+    catalog_data = json.loads(catalog_file.read_text(encoding="utf-8"))
+    CATALOG = get_catalog_publications(catalog_data)
 
     total = 0
     skipped = 0

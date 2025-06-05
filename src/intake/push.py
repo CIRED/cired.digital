@@ -23,6 +23,7 @@ from typing import Any
 
 from r2r import R2RClient
 
+from intake.catalog_utils import get_catalog_publications, get_latest_prepared_catalog
 from intake.config import (
     CATALOG_FILE,
     MAX_FILE_SIZE,
@@ -60,8 +61,13 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--metadata-file",
         type=Path,
-        default=CATALOG_FILE,
-        help="Catalog JSON file containing metadata for publications.)",
+        help="Catalog JSON file containing metadata for publications (default: latest prepared catalog)",
+    )
+    parser.add_argument(
+        "--use-prepared",
+        action="store_true",
+        default=True,
+        help="Use prepared catalog from data/prepared/ (default: True)",
     )
     parser.add_argument(
         "--log-level",
@@ -76,11 +82,14 @@ def load_catalog_local(catalog_file: Path) -> dict[str, dict[str, Any]]:
     """Load catalog data and index by hal_id."""
     if not catalog_file.exists():
         logging.error("Catalog file not found: %s", catalog_file)
-        logging.error("Run query.py first to create the catalog.")
+        logging.error(
+            "Run hal_query.py and prepare_catalog.py first to create the catalog."
+        )
         return {}
 
     try:
-        publications = json.loads(catalog_file.read_text(encoding="utf-8"))
+        catalog_data = json.loads(catalog_file.read_text(encoding="utf-8"))
+        publications = get_catalog_publications(catalog_data)
         catalog_by_hal_id = {}
 
         for pub in publications:
@@ -207,7 +216,8 @@ def load_metadata(metadata_file: Path) -> dict[str, dict[str, object]]:
         return metadata_by_file
 
     try:
-        publications = json.loads(metadata_file.read_text(encoding="utf-8"))
+        catalog_data = json.loads(metadata_file.read_text(encoding="utf-8"))
+        publications = get_catalog_publications(catalog_data)
         for pub in publications:
             # Generate the same filename as download.py does
             if "halId_s" in pub:
@@ -420,8 +430,21 @@ def main() -> int:
         simple_format=True,
     )
 
+    if args.metadata_file:
+        catalog_file = args.metadata_file
+    elif args.use_prepared:
+        catalog_file = get_latest_prepared_catalog()
+        if not catalog_file:
+            logging.error(
+                "No prepared catalog found. Run hal_query.py and prepare_catalog.py first."
+            )
+            return 1
+        logging.info("Using latest prepared catalog: %s", catalog_file)
+    else:
+        catalog_file = CATALOG_FILE
+
     available_docs, total_records, missing_files = establish_available_documents(
-        args.metadata_file, args.dir
+        catalog_file, args.dir
     )
 
     if not available_docs:
@@ -456,7 +479,7 @@ def main() -> int:
         return 4
 
     metadata_by_file = {}
-    metadata_by_file = load_metadata(args.metadata_file)
+    metadata_by_file = load_metadata(catalog_file)
 
     success_count, skipped_count, failed_files = upload_pdfs(
         uploadable_files,
