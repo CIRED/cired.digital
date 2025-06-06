@@ -117,12 +117,60 @@ function generateDocumentId(documentInfo, questionNumber) {
 }
 
 function extractDocumentInfo(metadata, payload) {
+    // Ensure authors is always an array
+    let authors = metadata.authors || [];
+
+    // Debug logging
+    console.log('Debug - extractDocumentInfo - original metadata.authors:', metadata.authors, 'Type:', typeof metadata.authors);
+
+    if (typeof authors === 'string') {
+        // Check if the string looks like a JSON array
+        if (authors.trim().startsWith('[') && authors.trim().endsWith(']')) {
+            try {
+                // Try to parse as JSON array
+                authors = JSON.parse(authors);
+            } catch (e) {
+                // If JSON parsing fails, try to extract content between brackets
+                const match = authors.match(/\[(.*)\]/);
+                if (match) {
+                    // Extract content inside brackets and split
+                    const content = match[1];
+                    authors = content.split(/[,;]/).map(author => {
+                        // Remove quotes and trim
+                        return author.replace(/['"]/g, '').trim();
+                    }).filter(author => author.length > 0);
+                } else {
+                    // Regular string split
+                    authors = authors.split(/[,;]/).map(author => author.trim()).filter(author => author.length > 0);
+                }
+            }
+        } else {
+            // Regular string, split by common separators
+            authors = authors.split(/[,;]/).map(author => author.trim()).filter(author => author.length > 0);
+        }
+    } else if (!Array.isArray(authors)) {
+        // If authors is neither string nor array, default to empty array
+        authors = [];
+    }
+
+    // Final cleanup: remove any remaining quotes from array elements
+    if (Array.isArray(authors)) {
+        authors = authors.map(author => {
+            if (typeof author === 'string') {
+                return author.replace(/['"]/g, '').trim();
+            }
+            return String(author).replace(/['"]/g, '').trim();
+        }).filter(author => author.length > 0);
+    }
+
+    console.log('Debug - extractDocumentInfo - processed authors:', authors, 'Type:', typeof authors, 'IsArray:', Array.isArray(authors));
+
     return {
         title: metadata.title || payload.title || 'No title (sorry, we are working on it.).',
         description: metadata.description || '',
         doi: metadata.doi || '',
         halid: metadata.hal_id || '',
-        authors: metadata.authors || [],
+        authors: authors,
         year: metadata.publication_date ? new Date(metadata.publication_date).getFullYear() : ''
     };
 }
@@ -175,12 +223,30 @@ function createBibliographyHtml(documentBibliography) {
 }
 
 function createDocumentHtml(doc) {
-    // Build authors text
+    // Build authors text with robust safety checks
     let authorsText = '';
-    if (doc.authors.length > 0) {
-        authorsText = doc.authors.join(', ');
-        if (doc.year) {
-            authorsText += ' (' + doc.year + ')';
+
+    // Debug logging to understand what we're getting
+    console.log('Debug - doc.authors:', doc.authors, 'Type:', typeof doc.authors);
+
+    if (doc.authors) {
+        let authorsArray = [];
+
+        if (Array.isArray(doc.authors)) {
+            authorsArray = doc.authors;
+        } else if (typeof doc.authors === 'string') {
+            // Split string by common separators
+            authorsArray = doc.authors.split(/[,;]/).map(author => author.trim()).filter(author => author.length > 0);
+        } else {
+            // Convert any other type to string and wrap in array
+            authorsArray = [String(doc.authors)];
+        }
+
+        if (authorsArray.length > 0) {
+            authorsText = authorsArray.join(', ');
+            if (doc.year) {
+                authorsText += ' (' + doc.year + ')';
+            }
         }
     }
 
