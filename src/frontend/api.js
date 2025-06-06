@@ -166,7 +166,9 @@ function sendFeedback(requestBody, results, feedback, comment = '') {
         feedback,
         questionLength: requestBody.query.length,
         answerLength: results.generated_answer?.length || 0,
-        commentLength: comment.length
+        commentLength: comment.length,
+        comment: comment,
+        hasComment: comment.length > 0
     });
     const feedbackData = {
         question: requestBody.query,
@@ -175,6 +177,8 @@ function sendFeedback(requestBody, results, feedback, comment = '') {
         timestamp: new Date().toISOString(),
         comment: comment || null
     };
+
+    debugLog('Feedback data being sent to server', feedbackData);
 
     fetch(`${FEEDBACK_HOST}/v1/feedback`, {
         method: 'POST',
