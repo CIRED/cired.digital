@@ -8,7 +8,23 @@ function renderSafeLLMContent(markdown) {
         sanitize: false // We'll use DOMPurify instead
     });
     
-    const rawHtml = marked.parse(markdown);
+    let processedMarkdown = markdown.replace(/```\s*\n(\|.*\|[\s\S]*?\|.*\|)\s*\n```/g, (match, tableContent) => {
+        const lines = tableContent.trim().split('\n');
+        if (lines.length >= 2 && lines[1].match(/^\|[\s\-\|:]+\|$/)) {
+            return tableContent;
+        }
+        return match;
+    });
+    
+    processedMarkdown = processedMarkdown.replace(/`([^`]*\|[^`]*\|[^`]*)`/g, (match, content) => {
+        const lines = content.trim().split('\n');
+        if (lines.length >= 2 && lines[1].match(/^[\s\-\|:]+$/)) {
+            return content;
+        }
+        return match;
+    });
+    
+    const rawHtml = marked.parse(processedMarkdown);
     return DOMPurify.sanitize(rawHtml);
 }
 
