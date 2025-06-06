@@ -11,7 +11,6 @@ let isLoading = false;
 let messageIdCounter = 1;
 let debugMode = false;
 let sessionId = null;
-let conversationId = null;
 
 // ==========================================
 // DOM ELEMENTS
