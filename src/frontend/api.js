@@ -177,41 +177,71 @@ async function createConversation(apiUrl) {
 }
 
 async function makeApiRequest(apiUrl, requestBody) {
-    const endpoint = conversationId ? '/v3/retrieval/agent' : '/v3/retrieval/rag';
-    
-    let finalRequestBody = requestBody;
-    if (endpoint === '/v3/retrieval/rag') {
-        finalRequestBody = {
-            query: requestBody.message.content,
-            search_settings: {
-                search_mode: 'advanced',
-                limit: 10
-            },
-            rag_generation_config: {
-                model: requestBody.ragGenerationConfig.model,
-                temperature: requestBody.ragGenerationConfig.temperature,
-                max_tokens: requestBody.ragGenerationConfig.maxTokens,
-                stream: requestBody.ragGenerationConfig.stream
+    if (conversationId) {
+        try {
+            debugLog('Attempting agent endpoint with conversation context', { conversationId });
+            const agentResponse = await fetch(`${apiUrl}/v3/retrieval/agent`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestBody)
+            });
+
+            if (agentResponse.ok) {
+                const agentData = await agentResponse.json();
+                debugLog('Agent endpoint response', { 
+                    hasGeneratedAnswer: !!agentData.results?.generated_answer,
+                    citationsCount: agentData.results?.citations?.length || 0
+                });
+                
+                if (agentData.results?.generated_answer) {
+                    debugLog('Agent endpoint successful, using agent response');
+                    return agentResponse;
+                } else {
+                    debugLog('Agent endpoint returned no content, falling back to rag');
+                }
+            } else {
+                debugLog('Agent endpoint failed, falling back to rag', {
+                    status: agentResponse.status,
+                    statusText: agentResponse.statusText
+                });
             }
-        };
+        } catch (err) {
+            debugLog('Agent endpoint error, falling back to rag', { error: err.message });
+        }
     }
 
-    const response = await fetch(`${apiUrl}${endpoint}`, {
+    debugLog('Using RAG endpoint as fallback');
+    const ragRequestBody = {
+        query: requestBody.message.content,
+        search_settings: {
+            search_mode: 'advanced',
+            limit: 10
+        },
+        rag_generation_config: {
+            model: requestBody.ragGenerationConfig.model,
+            temperature: requestBody.ragGenerationConfig.temperature,
+            max_tokens: requestBody.ragGenerationConfig.maxTokens,
+            stream: requestBody.ragGenerationConfig.stream
+        }
+    };
+
+    const response = await fetch(`${apiUrl}/v3/retrieval/rag`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(finalRequestBody)
+        body: JSON.stringify(ragRequestBody)
     });
 
     if (!response.ok) {
         const errorData = await response.text();
-        debugLog('API request failed', {
+        debugLog('RAG endpoint failed', {
             status: response.status,
             statusText: response.statusText,
             errorData,
-            url: apiUrl,
-            endpoint
+            url: apiUrl
         });
         throw new Error(`API Error: ${response.status} ${response.statusText}`);
     }
