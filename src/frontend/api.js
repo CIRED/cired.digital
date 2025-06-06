@@ -5,7 +5,10 @@ async function sendMessage() {
     const query = messageInput.value.trim();
     if (!query || isLoading) return;
 
-    debugLog('Starting message send process', { query, isLoading });
+    const queryId = 'query_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    const startTime = Date.now();
+
+    debugLog('Starting message send process', { query, queryId, isLoading });
 
     // Set loading state
     setLoadingState(true);
@@ -24,6 +27,13 @@ async function sendMessage() {
         const requestBody = buildRequestBody(query, config);
         debugLog('Request body built:', requestBody);
 
+        logQuery(queryId, query, {
+            model: config.model,
+            temperature: config.temperature,
+            max_tokens: config.maxTokens,
+            search_mode: 'advanced'
+        });
+
         const startTime = Date.now();
         const response = await makeApiRequest(config.apiUrl, requestBody);
         const responseTime = Date.now() - startTime;
@@ -40,7 +50,9 @@ async function sendMessage() {
             citationsCount: data.results?.citations?.length || 0
         });
 
-        handleResponse(requestBody, data);
+        const processingTime = Date.now() - startTime;
+
+        handleResponse(requestBody, data, queryId, processingTime);
 
     } catch (err) {
         console.error('Error sending message:', err);
@@ -123,7 +135,7 @@ function handleError(err) {
 // ==========================================
 // RESPONSE HANDLING
 // ==========================================
-function handleResponse(requestBody, data) {
+function handleResponse(requestBody, data, queryId, processingTime) {
     debugLog('Starting response processing', {
         hasContent: !!data.results.generated_answer,
         citationsCount: data.results.citations?.length || 0
@@ -142,6 +154,8 @@ function handleResponse(requestBody, data) {
     const botMessage = addMessage('bot', processedContent);
     addVancouverCitations(botMessage, documentBibliography);
     addFeedbackButtons(botMessage, requestBody, data.results);
+
+    logResponse(queryId, processedContent, processingTime);
 }
 
 // ==========================================
@@ -184,18 +198,7 @@ function sendFeedback(requestBody, results, feedback) {
 // ==========================================
 
 function initializeAPI() {
-    // Initialize privacy mode
-    initializePrivacyMode();
-
-    document.getElementById('view-analytics-link').addEventListener('click', function(e) {
-        e.preventDefault();
-        window.open(FEEDBACK_HOST + '/v1/feedback/view', '_blank');
-    });
-
-    document.getElementById('privacy-policy-link').addEventListener('click', function(e) {
-        e.preventDefault();
-        alert('Privacy policy coming soon!');
-    });
+    debugLog('API module initialized');
 }
 
 // Initialize when DOM is ready
