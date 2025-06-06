@@ -48,6 +48,7 @@ async function sendMessage() {
         const requestBody = buildRequestBody(query, config);
         debugLog('Request body built:', requestBody);
 
+
         logQuery(queryId, query, {
             model: config.model,
             temperature: config.temperature,
@@ -66,9 +67,11 @@ async function sendMessage() {
 
         const data = await response.json();
         debugLog('Raw server response', data);
+
         debugLog('Response data parsed', {
             hasGeneratedAnswer: !!data.results?.generated_answer,
-            citationsCount: data.results?.citations?.length || 0
+            citationsCount: data.results?.citations?.length || 0,
+            hasConversationId: !!data.results?.conversation_id
         });
 
         const processingTime = Date.now() - startTime;
@@ -106,7 +109,7 @@ function getConfiguration() {
 }
 
 function buildRequestBody(query, config) {
-    return {
+    const requestBody = {
         query: query,
         search_settings: {
             search_mode: 'advanced',
@@ -119,6 +122,12 @@ function buildRequestBody(query, config) {
             stream: false
         }
     };
+    
+    if (conversationId) {
+        requestBody.conversation_id = conversationId;
+    }
+    
+    return requestBody;
 }
 
 async function makeApiRequest(apiUrl, requestBody) {
@@ -161,6 +170,11 @@ function handleResponse(requestBody, data, queryId, processingTime) {
         hasContent: !!data.results.generated_answer,
         citationsCount: data.results.citations?.length || 0
     });
+
+    if (data.results.conversation_id) {
+        conversationId = data.results.conversation_id;
+        debugLog('Conversation ID stored for context continuity', { conversationId });
+    }
 
     const content = data.results.generated_answer || 'No response generated.';
     const citations = data.results.citations || [];

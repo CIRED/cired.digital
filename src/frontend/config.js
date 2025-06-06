@@ -11,6 +11,7 @@ let isLoading = false;
 let messageIdCounter = 1;
 let debugMode = false;
 let sessionId = null;
+let conversationId = null;
 
 // ==========================================
 // DOM ELEMENTS
@@ -290,6 +291,11 @@ function initializeConfig() {
     // Initialize debug mode state
     debugMode = debugModeCheckbox.checked;
     debugLog('Configuration initialized');
+}
+
+function resetConversation() {
+    conversationId = null;
+    debugLog('Conversation context reset');
 }
 
 if (document.readyState === 'loading') {
