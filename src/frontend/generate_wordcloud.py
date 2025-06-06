@@ -14,7 +14,7 @@ from r2r import R2RClient
 from wordcloud import STOPWORDS, WordCloud
 
 from intake.config import R2R_DEFAULT_BASE_URL, setup_logging
-from intake.verify import get_existing_documents
+from intake.utils import get_existing_documents
 
 setup_logging()
 
