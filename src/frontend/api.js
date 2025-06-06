@@ -49,7 +49,7 @@ async function sendMessage() {
         const config = getConfiguration();
         debugLog('Configuration retrieved', config);
 
-        if (!conversationId) {
+        if (!window.conversationId) {
             await createConversation(config.apiUrl);
         }
 
@@ -130,8 +130,8 @@ function buildRequestBody(query, config) {
         }
     };
     
-    if (conversationId) {
-        requestBody.conversationId = conversationId;
+    if (window.conversationId) {
+        requestBody.conversationId = window.conversationId;
     }
     
     return requestBody;
@@ -167,8 +167,8 @@ async function createConversation(apiUrl) {
         const data = await response.json();
         debugLog('Conversation creation data', data);
         if (data.results && data.results.id) {
-            conversationId = data.results.id;
-            debugLog('Conversation created successfully', { conversationId });
+            window.conversationId = data.results.id;
+            debugLog('Conversation created successfully', { conversationId: window.conversationId });
         } else {
             debugLog('Conversation creation response missing results.id', { data });
         }
@@ -181,9 +181,9 @@ async function createConversation(apiUrl) {
 }
 
 async function makeApiRequest(apiUrl, requestBody) {
-    if (conversationId) {
+    if (window.conversationId) {
         try {
-            debugLog('Attempting agent endpoint with conversation context', { conversationId });
+            debugLog('Attempting agent endpoint with conversation context', { conversationId: window.conversationId });
             const agentResponse = await fetch(`${apiUrl}/v3/retrieval/agent`, {
                 method: 'POST',
                 headers: {
