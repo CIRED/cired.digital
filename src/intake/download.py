@@ -78,7 +78,7 @@ def verify_existing_files() -> None:
     total_files = 0
 
     for file_path in PDF_DIR.iterdir():
-        if file_path.is_file() and not file_path.name.endswith('.tmp'):
+        if file_path.is_file() and not file_path.name.endswith(".tmp"):
             total_files += 1
 
             guessed_type, _ = mimetypes.guess_type(str(file_path))
@@ -87,21 +87,27 @@ def verify_existing_files() -> None:
                 current_extension = file_path.suffix
 
                 if correct_extension and correct_extension != current_extension:
-                    mismatches.append({
-                        'file': file_path.name,
-                        'current_ext': current_extension,
-                        'correct_ext': correct_extension,
-                        'content_type': guessed_type
-                    })
+                    mismatches.append(
+                        {
+                            "file": file_path.name,
+                            "current_ext": current_extension,
+                            "correct_ext": correct_extension,
+                            "content_type": guessed_type,
+                        }
+                    )
 
     logging.info("File verification complete:")
     logging.info("  Total files checked: %d", total_files)
     logging.info("  Extension mismatches found: %d", len(mismatches))
 
     for mismatch in mismatches:
-        logging.warning("Mismatch: %s (has %s, should be %s, type: %s)",
-                       mismatch['file'], mismatch['current_ext'],
-                       mismatch['correct_ext'], mismatch['content_type'])
+        logging.warning(
+            "Mismatch: %s (has %s, should be %s, type: %s)",
+            mismatch["file"],
+            mismatch["current_ext"],
+            mismatch["correct_ext"],
+            mismatch["content_type"],
+        )
 
 
 def download_file(url: str, target_path: Path) -> bool:
@@ -124,15 +130,21 @@ def download_file(url: str, target_path: Path) -> bool:
         with requests.get(url, stream=True, timeout=DOWNLOAD_TIMEOUT) as r:
             r.raise_for_status()
 
-            content_type = r.headers.get('content-type', '').split(';')[0].strip()
+            content_type = r.headers.get("content-type", "").split(";")[0].strip()
             if content_type:
                 extension = mimetypes.guess_extension(content_type)
                 if extension:
                     target_path = target_path.with_suffix(extension)
                     temp_path = target_path.with_suffix(".tmp")
-                    logging.debug("Detected content-type: %s, using extension: %s", content_type, extension)
+                    logging.debug(
+                        "Detected content-type: %s, using extension: %s",
+                        content_type,
+                        extension,
+                    )
                 else:
-                    logging.warning("Unknown content-type: %s, keeping .pdf extension", content_type)
+                    logging.warning(
+                        "Unknown content-type: %s, keeping .pdf extension", content_type
+                    )
             else:
                 logging.warning("No content-type header, keeping .pdf extension")
 
@@ -179,7 +191,9 @@ def setup_argument_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def process_downloads(catalog: list[dict[str, Any]], max_download: int) -> tuple[int, int, int, int]:
+def process_downloads(
+    catalog: list[dict[str, Any]], max_download: int
+) -> tuple[int, int, int, int]:
     """Process downloads from catalog entries."""
     total = 0
     skipped = 0
@@ -203,7 +217,7 @@ def process_downloads(catalog: list[dict[str, Any]], max_download: int) -> tuple
             continue
 
         total += 1
-        
+
         if max_download == 0:
             logging.info("DRY RUN: Would download %s to %s", url, target_file.name)
             continue
