@@ -24,8 +24,11 @@ from r2r import R2RClient
 
 from intake.config import CATALOG_FILE, R2R_DEFAULT_BASE_URL, setup_logging
 from intake.push import format_metadata_for_upload
-from intake.utils import get_catalog_file, get_catalog_publications
-from intake.verify import get_existing_documents
+from intake.utils import (
+    get_catalog_file,
+    get_catalog_publications,
+    get_existing_documents,
+)
 
 
 def load_catalog(catalog_file: Path) -> dict[str, dict[str, Any]]:
