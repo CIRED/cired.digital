@@ -1,28 +1,19 @@
-// ==========================================
-// ==========================================
-function renderSafeLLMContent(markdown) {
-    marked.setOptions({
-        breaks: true,    // Convert \n to <br>
-        gfm: true,      // GitHub Flavored Markdown
-        tables: true,   // Table support
-        sanitize: false // We'll use DOMPurify instead
-    });
+ // ==========================================
+ // ==========================================
+ 
+ marked.setOptions({
+     breaks: true,    // Convert \n to <br>
+     gfm: true,       // GitHub Flavored Markdown
+     tables: true,    // Table support
+     sanitize: false  // We'll use DOMPurify instead
+ });
+ 
+ // fenced tables avec optional language tag (```lang\n|...|\n```)
+ const FENCED_TABLE_REGEX = /```(?:\w+)?\s*\n(\|[\s\S]*?\|)\s*\n```/g;
+ 
+ function renderSafeLLMContent(markdown) {
     
-    let processedMarkdown = markdown.replace(/```\s*\n(\|.*\|[\s\S]*?\|.*\|)\s*\n```/g, (match, tableContent) => {
-        const lines = tableContent.trim().split('\n');
-        if (lines.length >= 2 && lines[1].match(/^\|[\s\-\|:]+\|$/)) {
-            return tableContent;
-        }
-        return match;
-    });
-    
-    processedMarkdown = processedMarkdown.replace(/`([^`]*\|[^`]*\|[^`]*)`/g, (match, content) => {
-        const lines = content.trim().split('\n');
-        if (lines.length >= 2 && lines[1].match(/^[\s\-\|:]+$/)) {
-            return content;
-        }
-        return match;
-    });
+    const processedMarkdown = markdown.replace(FENCED_TABLE_REGEX, (_, tableContent) => tableContent);
     
     const rawHtml = marked.parse(processedMarkdown);
     return DOMPurify.sanitize(rawHtml);
