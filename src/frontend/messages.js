@@ -85,9 +85,9 @@ function addFeedbackButtons(botMessage, requestBody, results) {
     const feedbackDiv = document.createElement('div');
     feedbackDiv.className = 'flex gap-2 mt-2 items-center';
     feedbackDiv.innerHTML = `
+        <input type="text" class="flex-1 px-2 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Donnez votre avis sur cette réponse." maxlength="500">
         <button class="thumb-up text-green-600 hover:text-green-800" title="Bonne réponse.">👍</button>
         <button class="thumb-down text-red-600 hover:text-red-800" title="Réponse insuffisante.">👎</button>
-        <input type="text" class="flex-1 px-2 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Donnez votre avis sur cette réponse." maxlength="500">
     `;
 
     botMessage.querySelector('.message-content').after(feedbackDiv);
