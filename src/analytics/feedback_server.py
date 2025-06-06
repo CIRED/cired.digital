@@ -42,6 +42,7 @@ class Feedback(BaseModel):
     answer: str
     feedback: Literal["up", "down"]
     timestamp: str
+    comment: str | None = None
 
 
 class SessionLog(BaseModel):
@@ -172,8 +173,10 @@ async def receive_feedback(fb: Feedback) -> dict[str, str]:
     with open("feedback.csv", "a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         if not file_exists:
-            writer.writerow(["timestamp", "feedback", "question", "answer"])
-        writer.writerow([fb.timestamp, fb.feedback, fb.question, fb.answer])
+            writer.writerow(["timestamp", "feedback", "question", "answer", "comment"])
+        writer.writerow(
+            [fb.timestamp, fb.feedback, fb.question, fb.answer, fb.comment or ""]
+        )
     return {"message": "Feedback saved"}
 
 
