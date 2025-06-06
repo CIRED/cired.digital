@@ -121,7 +121,7 @@ function extractDocumentInfo(metadata, payload) {
     let authors = metadata.authors || [];
 
     // Debug logging
-    console.log('Debug - extractDocumentInfo - original metadata.authors:', metadata.authors, 'Type:', typeof metadata.authors);
+    debugLog('Debug - extractDocumentInfo - original metadata.authors:', metadata.authors, 'Type:', typeof metadata.authors);
 
     if (typeof authors === 'string') {
         // Check if the string looks like a JSON array
@@ -163,7 +163,7 @@ function extractDocumentInfo(metadata, payload) {
         }).filter(author => author.length > 0);
     }
 
-    console.log('Debug - extractDocumentInfo - processed authors:', authors, 'Type:', typeof authors, 'IsArray:', Array.isArray(authors));
+    debugLog('Debug - extractDocumentInfo - processed authors:', authors, 'Type:', typeof authors, 'IsArray:', Array.isArray(authors));
 
     return {
         title: metadata.title || payload.title || 'No title (sorry, we are working on it.).',
@@ -227,7 +227,7 @@ function createDocumentHtml(doc) {
     let authorsText = '';
 
     // Debug logging to understand what we're getting
-    console.log('Debug - doc.authors:', doc.authors, 'Type:', typeof doc.authors);
+    debugLog('Debug - doc.authors:', doc.authors, 'Type:', typeof doc.authors);
 
     if (doc.authors) {
         let authorsArray = [];

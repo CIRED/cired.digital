@@ -1,3 +1,24 @@
+ // ==========================================
+ // ==========================================
+ 
+ marked.setOptions({
+     breaks: true,    // Convert \n to <br>
+     gfm: true,       // GitHub Flavored Markdown
+     tables: true,    // Table support
+     sanitize: false  // We'll use DOMPurify instead
+ });
+ 
+ // fenced tables avec optional language tag (```lang\n|...|\n```)
+ const FENCED_TABLE_REGEX = /```(?:\w+)?\s*\n(\|[\s\S]*?\|)\s*\n```/g;
+ 
+ function renderSafeLLMContent(markdown) {
+    
+    const processedMarkdown = markdown.replace(FENCED_TABLE_REGEX, (_, tableContent) => tableContent);
+    
+    const rawHtml = marked.parse(processedMarkdown);
+    return DOMPurify.sanitize(rawHtml);
+}
+
 // ==========================================
 // MESSAGE SENDING AND API COMMUNICATION
 // ==========================================
@@ -151,7 +172,9 @@ function handleResponse(requestBody, data, queryId, processingTime) {
         bibliographyCount: Object.keys(documentBibliography).length
     });
 
-    const botMessage = addMessage('bot', processedContent);
+    const htmlContent = renderSafeLLMContent(processedContent);
+
+    const botMessage = addMessage('bot', htmlContent);
     addVancouverCitations(botMessage, documentBibliography);
     addFeedbackButtons(botMessage, requestBody, data.results);
 
