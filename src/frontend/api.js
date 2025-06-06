@@ -1,4 +1,18 @@
 // ==========================================
+// ==========================================
+function renderSafeLLMContent(markdown) {
+    marked.setOptions({
+        breaks: true,    // Convert \n to <br>
+        gfm: true,      // GitHub Flavored Markdown
+        tables: true,   // Table support
+        sanitize: false // We'll use DOMPurify instead
+    });
+    
+    const rawHtml = marked.parse(markdown);
+    return DOMPurify.sanitize(rawHtml);
+}
+
+// ==========================================
 // MESSAGE SENDING AND API COMMUNICATION
 // ==========================================
 async function sendMessage() {
@@ -151,7 +165,9 @@ function handleResponse(requestBody, data, queryId, processingTime) {
         bibliographyCount: Object.keys(documentBibliography).length
     });
 
-    const botMessage = addMessage('bot', processedContent);
+    const htmlContent = renderSafeLLMContent(processedContent);
+
+    const botMessage = addMessage('bot', htmlContent);
     addVancouverCitations(botMessage, documentBibliography);
     addFeedbackButtons(botMessage, requestBody, data.results);
 
