@@ -161,18 +161,24 @@ function handleResponse(requestBody, data, queryId, processingTime) {
 // ==========================================
 // FEEDBACK SYSTEM
 // ==========================================
-function sendFeedback(requestBody, results, feedback) {
+function sendFeedback(requestBody, results, feedback, comment = '') {
     debugLog('Sending feedback', {
         feedback,
         questionLength: requestBody.query.length,
-        answerLength: results.generated_answer?.length || 0
+        answerLength: results.generated_answer?.length || 0,
+        commentLength: comment.length,
+        comment: comment,
+        hasComment: comment.length > 0
     });
     const feedbackData = {
         question: requestBody.query,
         answer: results.generated_answer,
         feedback: feedback,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        comment: comment || null
     };
+
+    debugLog('Feedback data being sent to server', feedbackData);
 
     fetch(`${FEEDBACK_HOST}/v1/feedback`, {
         method: 'POST',
