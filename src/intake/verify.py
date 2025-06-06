@@ -8,50 +8,15 @@ Requirements:
 """
 
 import argparse
-import json
 import logging
 import re
 import sys
-from collections.abc import Hashable, Mapping
 
 import pandas as pd
 from r2r import R2RClient
 
 from intake.config import R2R_DEFAULT_BASE_URL, setup_logging
-
-DOCUMENTS_FILE = "documents.csv"
-DOCUMENTS_COLUMNS = [
-    "id",
-    "title",
-    "size_in_bytes",
-    "ingestion_status",
-    "extraction_status",
-    "created_at",
-    "updated_at",
-    "type",
-    "metadata",
-]
-COLUMN_CONFIG: Mapping[str, Mapping[str, str | bool]] = {
-    "id": {"dtype": "string", "parse_dates": False},
-    "title": {"dtype": "string", "parse_dates": False},
-    "size_in_bytes": {"dtype": "int64", "parse_dates": False},
-    "ingestion_status": {"dtype": "string", "parse_dates": False},
-    "extraction_status": {"dtype": "string", "parse_dates": False},
-    "created_at": {"dtype": "string", "parse_dates": True},
-    "updated_at": {"dtype": "string", "parse_dates": True},
-    "type": {"dtype": "string", "parse_dates": False},
-    "metadata": {"dtype": "string", "parse_dates": False},
-}
-
-
-def get_column_dtypes() -> Mapping[Hashable, str]:
-    """Extract dtype mapping from column configuration."""
-    return {col: str(config["dtype"]) for col, config in COLUMN_CONFIG.items()}
-
-
-def get_date_columns() -> list[str]:
-    """Extract list of columns that should be parsed as dates."""
-    return [col for col, config in COLUMN_CONFIG.items() if config["parse_dates"]]
+from intake.utils import get_existing_documents
 
 
 def check_r2r(client: R2RClient) -> bool:
@@ -65,62 +30,20 @@ def check_r2r(client: R2RClient) -> bool:
         return False
 
 
-def get_existing_documents(client: R2RClient) -> pd.DataFrame | None:
+def overview(documents: pd.DataFrame) -> int:
     """
-    Retrieve all documents from the R2R service as a structured DataFrame.
-
-    This function:
-    - Exports document metadata from the R2R client to a CSV file.
-    - Loads the CSV file into a pandas DataFrame with proper type and date parsing.
-    - Parses the 'metadata' column as JSON and flattens it into prefixed columns.
-
-    Args:
-    ----
-        client (R2RClient): The connected R2R client instance.
-
-    Returns:
-    -------
-        pd.DataFrame | None: A DataFrame with one row per document and enriched metadata columns,
-        or None if retrieval or parsing fails.
-
-    """
-    try:
-        # 1. Export documents from the R2R server to a local CSV file
-        logging.debug(f"Exporting document metadata to '{DOCUMENTS_FILE}'...")
-        client.documents.export(output_path=DOCUMENTS_FILE, columns=DOCUMENTS_COLUMNS)
-
-        # 2. Load the CSV into a DataFrame with typed columns and date parsing
-        df = pd.read_csv(
-            DOCUMENTS_FILE, dtype=get_column_dtypes(), parse_dates=get_date_columns()
-        )
-
-        # 3. Parse the 'metadata' column (a JSON string per row) into Python dicts
-        df["metadata"] = df["metadata"].apply(json.loads)
-
-        # 4. Flatten the nested metadata into separate columns, prefixed with 'meta_'
-        metadata_flat = pd.json_normalize(df["metadata"].tolist()).add_prefix("meta_")
-
-        # 5. Drop the original 'metadata' column and merge the flattened metadata
-        df = df.drop(columns=["metadata"]).join(metadata_flat)
-
-        # 6. Done
-        logging.info(f"Loaded {len(df)} document records with enriched metadata.")
-        return df
-
-    except Exception as e:
-        logging.error(f"Failed to load document data: {e}")
-        return None
-
-
-def describe_table(documents: pd.DataFrame) -> None:
-    """
-    Print basic description of the R2R document store contents.
+    Print comprehensive overview including basic stats and all issue counts.
 
     Returns
     -------
         None
 
     """
+    print("=" * 60)
+    print("📋 R2R DOCUMENT STORE OVERVIEW")
+    print("=" * 60)
+
+    # Basic info
     documents.info()
     print("\n📊 Summary statistics (numerical columns):")
     num_stats = documents.describe(include=[float, int]).round(0).astype("Int64")
@@ -130,6 +53,59 @@ def describe_table(documents: pd.DataFrame) -> None:
     print("\n📝 Summary statistics (object/string columns):")
     obj_stats = documents.describe(include=[object, "string"]).transpose()
     print(obj_stats)
+
+    # Issue counts summary
+    print("\n" + "=" * 60)
+    print("🔍 ISSUE SUMMARY")
+    print("=" * 60)
+
+    # Count each type of issue directly using helper functions
+    short_title_count = len(_find_short_titles(documents))
+    failed_ingestion_count = len(_find_failed_ingestions(documents))
+    repeat_halid_count = len(_find_repeat_halid(documents))
+    repeat_doi_count = len(_find_repeat_dois(documents))
+    repeat_title_count = len(_find_repeat_titles(documents))
+
+    print(f"🚨 Documents with short/missing titles: {short_title_count:,}")
+    print(f"❌ Documents with failed ingestion: {failed_ingestion_count:,}")
+    print(f"🔁 Documents with duplicate HAL IDs: {repeat_halid_count:,}")
+    print(f"🔁 Documents with duplicate DOIs: {repeat_doi_count:,}")
+    print(f"🔁 Documents with duplicate titles: {repeat_title_count:,}")
+
+    total_issues = (
+        short_title_count
+        + failed_ingestion_count
+        + repeat_halid_count
+        + repeat_doi_count
+        + repeat_title_count
+    )
+    print(f"⚠️  Total number of issues: {total_issues:,}")
+    print(f"📋 Total documents: {len(documents):,}")
+
+    if total_issues == 0:
+        print("✅ No issues detected!")
+    else:
+        issue_rate = (total_issues / len(documents)) * 100 if len(documents) > 0 else 0
+        print(f"📊 Issue rate: {issue_rate:.1f}%")
+
+    return total_issues
+
+
+def _is_anomalous_title(title: str | float | None) -> bool:
+    """Check if a title is anomalous (null, empty, or single word)."""
+    if pd.isna(title):
+        return True
+    title = str(title).strip()
+    return title == "" or len(title.split()) <= 1
+
+
+def _find_short_titles(documents: pd.DataFrame) -> pd.DataFrame:
+    """Find documents with null or one word titles."""
+    if "title" not in documents.columns:
+        return pd.DataFrame()
+
+    anomalies = documents[documents["title"].apply(_is_anomalous_title)]
+    return anomalies.sort_values("title", na_position="first")
 
 
 def show_short_titles(documents: pd.DataFrame) -> int:
@@ -148,20 +124,20 @@ def show_short_titles(documents: pd.DataFrame) -> int:
         print("⚠️ No 'meta_title' column found.")
         return 2
 
-    def is_anomalous(title: str | float | None) -> bool:
-        if pd.isna(title):
-            return True
-        title = str(title).strip()
-        return title == "" or len(title.split()) <= 1
-
-    anomalies = documents[documents["title"].apply(is_anomalous)]
-    anomalies = anomalies.sort_values("title", na_position="first")
+    anomalies = _find_short_titles(documents)
     print(f"\n🚨 Found {len(anomalies)} anomalous title(s):")
     for _, row in anomalies.iterrows():
         print(
             f"• ID: {row['id']} — Title: '{row['title']}' — Meta_title: '{row['meta_title']}' — Meta_source_url: '{row['meta_source_url']}'"
         )
     return len(anomalies)
+
+
+def _find_failed_ingestions(documents: pd.DataFrame) -> pd.DataFrame:
+    """Find documents with unsuccessful ingestion status."""
+    if "ingestion_status" not in documents.columns:
+        return pd.DataFrame()
+    return documents[documents["ingestion_status"] != "success"]
 
 
 def show_failed_ingestions(documents: pd.DataFrame) -> int:
@@ -176,7 +152,8 @@ def show_failed_ingestions(documents: pd.DataFrame) -> int:
     if "ingestion_status" not in documents.columns:
         print("⚠️ No 'ingestion_status' column found.")
         return 0
-    failures = documents[documents["ingestion_status"] != "success"]
+
+    failures = _find_failed_ingestions(documents)
     if failures.empty:
         print("✅ All documents were successfully ingested.")
         return 0
@@ -186,6 +163,15 @@ def show_failed_ingestions(documents: pd.DataFrame) -> int:
             f"• ID: {row['id']}\n  Status: {row['ingestion_status']}\n  Failure: {row.get('meta_failure', 'N/A')}"
         )
     return len(failures)
+
+
+def _find_repeat_halid(documents: pd.DataFrame) -> pd.DataFrame:
+    """Find documents with repeated HAL Id."""
+    if "meta_hal_id" not in documents.columns:
+        return pd.DataFrame()
+    dup_mask = documents["meta_hal_id"].duplicated(keep=False)
+    duplicates = documents[dup_mask & documents["meta_hal_id"].notna()]
+    return duplicates.sort_values("meta_hal_id")
 
 
 def show_repeat_halid(documents: pd.DataFrame) -> int:
@@ -200,10 +186,8 @@ def show_repeat_halid(documents: pd.DataFrame) -> int:
     if "meta_hal_id" not in documents.columns:
         print("⚠️ No 'meta_hal_id' column found.")
         return 0
-    dup_mask = documents["meta_hal_id"].duplicated(keep=False)
-    duplicates = documents[dup_mask & documents["meta_hal_id"].notna()].sort_values(
-        "meta_hal_id"
-    )
+
+    duplicates = _find_repeat_halid(documents)
     if duplicates.empty:
         print("✅ No repeated HAL IDs found.")
         return 0
@@ -218,6 +202,56 @@ def show_repeat_halid(documents: pd.DataFrame) -> int:
     return len(duplicates)
 
 
+def _find_repeat_dois(documents: pd.DataFrame) -> pd.DataFrame:
+    """Find documents with repeated DOIs."""
+    if "meta_doi" not in documents.columns:
+        return pd.DataFrame()
+
+    # Filter out null/empty DOIs and find duplicates
+    valid_dois = documents[
+        documents["meta_doi"].notna() & (documents["meta_doi"] != "")
+    ]
+    dup_mask = valid_dois["meta_doi"].duplicated(keep=False)
+    duplicates = valid_dois[dup_mask]
+    return duplicates.sort_values("meta_doi")
+
+
+def show_repeat_dois(documents: pd.DataFrame) -> int:
+    """
+    Print and count sets of documents with repeated DOIs.
+
+    Returns
+    -------
+        int: Total number of documents with repeated DOIs.
+
+    """
+    if "meta_doi" not in documents.columns:
+        print("⚠️ No 'meta_doi' column found.")
+        return 0
+
+    duplicates = _find_repeat_dois(documents)
+    if duplicates.empty:
+        print("✅ No repeated DOIs found.")
+        return 0
+
+    print(f"\n🔁 Found {len(duplicates)} documents with repeated DOIs:")
+    grouped = duplicates.groupby("meta_doi")
+
+    for doi, group in grouped:
+        print(f"\n• DOI: {doi}")
+        for _, row in group.iterrows():
+            print(
+                f"  - ID: {row['id']}\n"
+                f"    Title: '{row['title']}'\n"
+                f"    Size: {row['size_in_bytes']:,} bytes\n"
+                f"    Ingestion: {row['ingestion_status']}, Extraction: {row['extraction_status']}\n"
+                f"    HAL ID: {row.get('meta_hal_id', 'N/A')}\n"
+                f"    Citation: {row.get('meta_citation', 'N/A')}"
+            )
+
+    return len(duplicates)
+
+
 def normalize_title(title: str | float | None) -> str:
     """Normalize title by lowercasing, stripping punctuation, and collapsing spaces."""
     if pd.isna(title):
@@ -226,6 +260,19 @@ def normalize_title(title: str | float | None) -> str:
     title = re.sub(r"[^\w\s]", "", title)
     title = re.sub(r"\s+", " ", title).strip()
     return title
+
+
+def _find_repeat_titles(documents: pd.DataFrame) -> pd.DataFrame:
+    """Find documents with repeated titles (normalized)."""
+    if "title" not in documents.columns:
+        return pd.DataFrame()
+
+    # Create a copy to avoid modifying the original
+    docs_copy = documents.copy()
+    docs_copy["normalized_title"] = docs_copy["title"].apply(normalize_title)
+    dup_mask = docs_copy.duplicated("normalized_title", keep=False)
+    duplicates = docs_copy[dup_mask]
+    return duplicates.sort_values("normalized_title")
 
 
 def show_repeat_titles(documents: pd.DataFrame) -> int:
@@ -242,9 +289,8 @@ def show_repeat_titles(documents: pd.DataFrame) -> int:
     if "title" not in documents.columns:
         print("⚠️ No 'title' column found.")
         return 0
-    documents["normalized_title"] = documents["title"].apply(normalize_title)
-    dup_mask = documents.duplicated("normalized_title", keep=False)
-    duplicates = documents[dup_mask].sort_values("normalized_title")
+
+    duplicates = _find_repeat_titles(documents)
     if duplicates.empty:
         print("✅ No repeated titles found.")
         return 0
@@ -283,11 +329,12 @@ def setup() -> tuple[R2RClient, pd.DataFrame]:
 
 
 COMMANDS = {
-    "overview": describe_table,
+    "overview": overview,
     "short-titles": show_short_titles,
     "failed-ingestions": show_failed_ingestions,
-    "repeat-halid": show_repeat_halid,
-    "repeat-titles": show_repeat_titles,
+    "halids": show_repeat_halid,
+    "titles": show_repeat_titles,
+    "dois": show_repeat_dois,
 }
 
 
@@ -301,11 +348,10 @@ def get_help_lines() -> str:
         first_line = doc.strip().splitlines()[0]
         lines.append(f"  {cmd.ljust(max_len)}  {first_line}")
 
-    lines.append(f"  {'all'.ljust(max_len)}  Run all checks in sequence.")
     return "\n".join(lines)
 
 
-def main() -> None:
+def main() -> int:
     """Inspect the state of the R2R documents store."""
     parser = argparse.ArgumentParser(
         description=f"Inspect the state of the R2R documents store at {R2R_DEFAULT_BASE_URL}.",
@@ -317,21 +363,20 @@ def main() -> None:
     )
 
     if len(sys.argv) == 1:
-        parser.print_help(sys.stderr)
-        sys.exit(2)
+        print("\nNo argument given. Here is the overview:\n")
+        _, documents = setup()
+        issues = overview(documents)
+        return issues
+    else:
+        args = parser.parse_args()
 
-    args = parser.parse_args()
-
-    if args.what not in COMMANDS and args.what != "all":
+    if args.what not in COMMANDS:
         parser.error(f"Unknown command: {args.what}")
 
     _, documents = setup()
 
-    if args.what == "all":
-        for fn in COMMANDS.values():
-            fn(documents)
-    else:
-        COMMANDS[args.what](documents)
+    issues = COMMANDS[args.what](documents)
+    return issues
 
 
 if __name__ == "__main__":

@@ -9,10 +9,12 @@ unified utility functions for title normalization.
 import json
 import logging
 import re
+from collections.abc import Hashable, Mapping
 from pathlib import Path
 from typing import Any
 
 import pandas as pd
+from r2r import R2RClient
 
 from intake.config import CATALOG_FILE, PREPARED_DIR, RAW_HAL_DIR
 
@@ -96,3 +98,76 @@ def normalize_title(title: str | list[str] | float | None) -> str:
     title = re.sub(r"[^\w\s]", "", title)
     title = re.sub(r"\s+", " ", title).strip()
     return title
+
+
+DOCUMENTS_FILE = "documents.csv"
+COLUMN_CONFIG: Mapping[str, Mapping[str, str | bool]] = {
+    "id": {"dtype": "string", "parse_dates": False},
+    "title": {"dtype": "string", "parse_dates": False},
+    "size_in_bytes": {"dtype": "int64", "parse_dates": False},
+    "ingestion_status": {"dtype": "string", "parse_dates": False},
+    "extraction_status": {"dtype": "string", "parse_dates": False},
+    "created_at": {"dtype": "string", "parse_dates": True},
+    "updated_at": {"dtype": "string", "parse_dates": True},
+    "type": {"dtype": "string", "parse_dates": False},
+    "metadata": {"dtype": "string", "parse_dates": False},
+}
+
+
+def get_existing_documents(client: R2RClient) -> pd.DataFrame | None:
+    """
+    Retrieve all documents from the R2R service as a structured DataFrame.
+
+    This function:
+    - Exports document metadata from the R2R client to a CSV file.
+    - Loads the CSV file into a pandas DataFrame with proper type and date parsing.
+    - Parses the 'metadata' column as JSON and flattens it into prefixed columns.
+
+    Args:
+    ----
+        client (R2RClient): The connected R2R client instance.
+
+    Returns:
+    -------
+        pd.DataFrame | None: A DataFrame with one row per document and enriched metadata columns,
+        or None if retrieval or parsing fails.
+
+    """
+    try:
+        # 1. Export documents from the R2R server to a local CSV file
+        logging.debug(f"Exporting document metadata to '{DOCUMENTS_FILE}'...")
+        client.documents.export(
+            output_path=DOCUMENTS_FILE, columns=list(COLUMN_CONFIG.keys())
+        )
+
+        # 2. Load the CSV into a DataFrame with typed columns and date parsing
+        df = pd.read_csv(
+            DOCUMENTS_FILE, dtype=get_column_dtypes(), parse_dates=get_date_columns()
+        )
+
+        # 3. Parse the 'metadata' column (a JSON string per row) into Python dicts
+        df["metadata"] = df["metadata"].apply(json.loads)
+
+        # 4. Flatten the nested metadata into separate columns, prefixed with 'meta_'
+        metadata_flat = pd.json_normalize(df["metadata"].tolist()).add_prefix("meta_")
+
+        # 5. Drop the original 'metadata' column and merge the flattened metadata
+        df = df.drop(columns=["metadata"]).join(metadata_flat)
+
+        # 6. Done
+        logging.info(f"Loaded {len(df)} document records with enriched metadata.")
+        return df
+
+    except Exception as e:
+        logging.error(f"Failed to load document data: {e}")
+        return None
+
+
+def get_column_dtypes() -> Mapping[Hashable, str]:
+    """Extract dtype mapping from column configuration."""
+    return {col: str(config["dtype"]) for col, config in COLUMN_CONFIG.items()}
+
+
+def get_date_columns() -> list[str]:
+    """Extract list of columns that should be parsed as dates."""
+    return [col for col, config in COLUMN_CONFIG.items() if config["parse_dates"]]

@@ -30,8 +30,11 @@ from intake.config import (
     R2R_DEFAULT_BASE_URL,
     setup_logging,
 )
-from intake.utils import get_catalog_file, get_catalog_publications
-from intake.verify import get_existing_documents as get_existing_documents_from_verify
+from intake.utils import (
+    get_catalog_file,
+    get_catalog_publications,
+    get_existing_documents,
+)
 
 
 def get_args() -> argparse.Namespace:
@@ -492,7 +495,7 @@ def main() -> int:
         logging.error("Cannot connect to R2R. Please check if the service is running.")
         return 2
 
-    documents_df = get_existing_documents_from_verify(client)
+    documents_df = get_existing_documents(client)
     if documents_df is None:
         logging.error("Failed to retrieve documents from R2R.")
         return 3
