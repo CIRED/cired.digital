@@ -88,9 +88,9 @@ function handleDebugModeToggle() {
     debugMode = debugModeCheckbox.checked;
 
     if (debugMode) {
-        console.log('🐛 Debug mode enabled - API responses will be logged to console');
+        debugLog('🐛 Debug mode enabled - API responses will be logged to console');
     } else {
-        console.log('🐛 Debug mode disabled');
+        debugLog('🐛 Debug mode disabled');
     }
 }
 // ==========================================
@@ -209,7 +209,7 @@ async function logSessionStart() {
         });
         
         if (response.ok) {
-            console.log('Session logged successfully');
+            debugLog('Session logged successfully');
         } else {
             console.warn('Session logging failed:', response.status);
         }
@@ -240,7 +240,7 @@ async function logQuery(queryId, question, queryParameters) {
         });
         
         if (response.ok) {
-            console.log('Query logged successfully');
+            debugLog('Query logged successfully');
         } else {
             console.warn('Query logging failed:', response.status);
         }
@@ -270,7 +270,7 @@ async function logResponse(queryId, response, processingTime) {
         });
         
         if (responseResult.ok) {
-            console.log('Response logged successfully');
+            debugLog('Response logged successfully');
         } else {
             console.warn('Response logging failed:', responseResult.status);
         }
