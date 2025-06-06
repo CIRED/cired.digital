@@ -45,6 +45,10 @@ async function sendMessage() {
         const config = getConfiguration();
         debugLog('Configuration retrieved', config);
 
+        if (!conversationId) {
+            await createConversation(config.apiUrl);
+        }
+
         const requestBody = buildRequestBody(query, config);
         debugLog('Request body built:', requestBody);
 
@@ -71,7 +75,7 @@ async function sendMessage() {
         debugLog('Response data parsed', {
             hasGeneratedAnswer: !!data.results?.generated_answer,
             citationsCount: data.results?.citations?.length || 0,
-            hasConversationId: !!data.results?.conversation_id
+            hasConversationId: !!conversationId
         });
 
         const processingTime = Date.now() - startTime;
@@ -110,33 +114,94 @@ function getConfiguration() {
 
 function buildRequestBody(query, config) {
     const requestBody = {
-        query: query,
-        search_settings: {
-            search_mode: 'advanced',
-            limit: 10
+        message: {
+            role: "user",
+            content: query
         },
-        rag_generation_config: {
+        ragGenerationConfig: {
             model: config.model,
             temperature: config.temperature,
-            max_tokens: config.maxTokens,
+            maxTokens: config.maxTokens,
             stream: false
         }
     };
     
     if (conversationId) {
-        requestBody.conversation_id = conversationId;
+        requestBody.conversationId = conversationId;
     }
     
     return requestBody;
 }
 
+async function createConversation(apiUrl) {
+    try {
+        debugLog('Attempting to create conversation', { apiUrl });
+        const response = await fetch(`${apiUrl}/v3/conversations`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({})
+        });
+
+        debugLog('Conversation creation response received', {
+            status: response.status,
+            statusText: response.statusText,
+            ok: response.ok
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            debugLog('Conversation creation failed, falling back to rag endpoint', {
+                status: response.status,
+                statusText: response.statusText,
+                errorText
+            });
+            return;
+        }
+
+        const data = await response.json();
+        debugLog('Conversation creation data', data);
+        if (data.results && data.results.id) {
+            conversationId = data.results.id;
+            debugLog('Conversation created successfully', { conversationId });
+        } else {
+            debugLog('Conversation creation response missing results.id', { data });
+        }
+    } catch (err) {
+        debugLog('Conversation creation error, falling back to rag endpoint', { 
+            error: err.message,
+            stack: err.stack 
+        });
+    }
+}
+
 async function makeApiRequest(apiUrl, requestBody) {
-    const response = await fetch(`${apiUrl}/v3/retrieval/rag`, {
+    const endpoint = conversationId ? '/v3/retrieval/agent' : '/v3/retrieval/rag';
+    
+    let finalRequestBody = requestBody;
+    if (endpoint === '/v3/retrieval/rag') {
+        finalRequestBody = {
+            query: requestBody.message.content,
+            search_settings: {
+                search_mode: 'advanced',
+                limit: 10
+            },
+            rag_generation_config: {
+                model: requestBody.ragGenerationConfig.model,
+                temperature: requestBody.ragGenerationConfig.temperature,
+                max_tokens: requestBody.ragGenerationConfig.maxTokens,
+                stream: requestBody.ragGenerationConfig.stream
+            }
+        };
+    }
+
+    const response = await fetch(`${apiUrl}${endpoint}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(requestBody)
+        body: JSON.stringify(finalRequestBody)
     });
 
     if (!response.ok) {
@@ -145,7 +210,8 @@ async function makeApiRequest(apiUrl, requestBody) {
             status: response.status,
             statusText: response.statusText,
             errorData,
-            url: apiUrl
+            url: apiUrl,
+            endpoint
         });
         throw new Error(`API Error: ${response.status} ${response.statusText}`);
     }
@@ -170,11 +236,6 @@ function handleResponse(requestBody, data, queryId, processingTime) {
         hasContent: !!data.results.generated_answer,
         citationsCount: data.results.citations?.length || 0
     });
-
-    if (data.results.conversation_id) {
-        conversationId = data.results.conversation_id;
-        debugLog('Conversation ID stored for context continuity', { conversationId });
-    }
 
     const content = data.results.generated_answer || 'No response generated.';
     const citations = data.results.citations || [];
@@ -201,14 +262,14 @@ function handleResponse(requestBody, data, queryId, processingTime) {
 function sendFeedback(requestBody, results, feedback, comment = '') {
     debugLog('Sending feedback', {
         feedback,
-        questionLength: requestBody.query.length,
+        questionLength: requestBody.message?.content?.length || requestBody.query?.length || 0,
         answerLength: results.generated_answer?.length || 0,
         commentLength: comment.length,
         comment: comment,
         hasComment: comment.length > 0
     });
     const feedbackData = {
-        question: requestBody.query,
+        question: requestBody.message?.content || requestBody.query,
         answer: results.generated_answer,
         feedback: feedback,
         timestamp: new Date().toISOString(),
