@@ -2,7 +2,7 @@
 // CONFIGURATION CONSTANTS
 // ==========================================
 const DEFAULT_HOST = 'http://cired.digital:7272';
-const FEEDBACK_HOST = 'http://cired.digital:7275';
+const FEEDBACK_HOST = 'http://localhost:7275';
 
 // ==========================================
 // GLOBAL STATE
@@ -10,6 +10,7 @@ const FEEDBACK_HOST = 'http://cired.digital:7275';
 let isLoading = false;
 let messageIdCounter = 1;
 let debugMode = false;
+let sessionId = null;
 
 // ==========================================
 // DOM ELEMENTS
@@ -56,6 +57,19 @@ function setupEventListeners() {
 
     // Debug mode
     debugModeCheckbox.addEventListener('change', handleDebugModeToggle);
+
+    initializePrivacyMode();
+    initializeSession();
+    
+    document.getElementById('view-analytics-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(FEEDBACK_HOST + '/v1/analytics/view', '_blank');
+    });
+    
+    document.getElementById('privacy-policy-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('Privacy policy coming soon!');
+    });
 }
 
 function handleKeyPress(e) {
@@ -158,6 +172,111 @@ function updatePrivacyStatus() {
 
 function isPrivacyModeEnabled() {
     return localStorage.getItem('privacy-mode') === 'true';
+}
+
+// ==========================================
+// ==========================================
+function generateSessionId() {
+    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+}
+
+function initializeSession() {
+    sessionId = localStorage.getItem('session-id');
+    if (!sessionId) {
+        sessionId = generateSessionId();
+        localStorage.setItem('session-id', sessionId);
+    }
+    
+    logSessionStart();
+}
+
+async function logSessionStart() {
+    try {
+        const privacyMode = isPrivacyModeEnabled();
+        
+        const sessionData = {
+            session_id: sessionId,
+            start_time: new Date().toISOString(),
+            privacy_mode: privacyMode
+        };
+        
+        const response = await fetch(`${FEEDBACK_HOST}/v1/log/session`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(sessionData)
+        });
+        
+        if (response.ok) {
+            console.log('Session logged successfully');
+        } else {
+            console.warn('Session logging failed:', response.status);
+        }
+    } catch (error) {
+        console.error('Error logging session:', error);
+    }
+}
+
+async function logQuery(queryId, question, queryParameters) {
+    try {
+        const privacyMode = isPrivacyModeEnabled();
+        
+        const queryData = {
+            session_id: sessionId,
+            query_id: queryId,
+            question: question,
+            query_parameters: queryParameters,
+            timestamp: new Date().toISOString(),
+            privacy_mode: privacyMode
+        };
+        
+        const response = await fetch(`${FEEDBACK_HOST}/v1/log/query`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(queryData)
+        });
+        
+        if (response.ok) {
+            console.log('Query logged successfully');
+        } else {
+            console.warn('Query logging failed:', response.status);
+        }
+    } catch (error) {
+        console.error('Error logging query:', error);
+    }
+}
+
+async function logResponse(queryId, response, processingTime) {
+    try {
+        const privacyMode = isPrivacyModeEnabled();
+        
+        const responseData = {
+            query_id: queryId,
+            response: response,
+            processing_time: processingTime,
+            timestamp: new Date().toISOString(),
+            privacy_mode: privacyMode
+        };
+        
+        const responseResult = await fetch(`${FEEDBACK_HOST}/v1/log/response`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(responseData)
+        });
+        
+        if (responseResult.ok) {
+            console.log('Response logged successfully');
+        } else {
+            console.warn('Response logging failed:', responseResult.status);
+        }
+    } catch (error) {
+        console.error('Error logging response:', error);
+    }
 }
 // ==========================================
 // INITIALIZATION
