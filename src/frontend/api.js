@@ -5,8 +5,11 @@ async function sendMessage() {
     const query = messageInput.value.trim();
     if (!query || isLoading) return;
 
+    debugLog('Starting message send process', { query, isLoading });
+
     // Set loading state
     setLoadingState(true);
+    debugLog('Loading state set to true');
     hideError();
 
     // Add user message and show typing indicator
@@ -16,12 +19,26 @@ async function sendMessage() {
 
     try {
         const config = getConfiguration();
+        debugLog('Configuration retrieved', config);
+
         const requestBody = buildRequestBody(query, config);
+        debugLog('Request body built:', requestBody);
 
-        console.log('Sending request:', requestBody);
-
+        const startTime = Date.now();
         const response = await makeApiRequest(config.apiUrl, requestBody);
+        const responseTime = Date.now() - startTime;
+        debugLog('API request completed', {
+            status: response.status,
+            responseTime: `${responseTime}ms`,
+            url: config.apiUrl
+        });
+
         const data = await response.json();
+        debugLog('Raw server response', data);
+        debugLog('Response data parsed', {
+            hasGeneratedAnswer: !!data.results?.generated_answer,
+            citationsCount: data.results?.citations?.length || 0
+        });
 
         handleResponse(requestBody, data);
 
@@ -82,7 +99,12 @@ async function makeApiRequest(apiUrl, requestBody) {
 
     if (!response.ok) {
         const errorData = await response.text();
-        console.error('API Error Response:', errorData);
+        debugLog('API request failed', {
+            status: response.status,
+            statusText: response.statusText,
+            errorData,
+            url: apiUrl
+        });
         throw new Error(`API Error: ${response.status} ${response.statusText}`);
     }
 
@@ -90,6 +112,10 @@ async function makeApiRequest(apiUrl, requestBody) {
 }
 
 function handleError(err) {
+    debugLog('Error occurred in sendMessage', {
+        errorMessage: err.message,
+        errorStack: err.stack
+    });
     showError(err.message);
     addMessage('bot', `I apologize, but I encountered an error: ${err.message}. Please check your R2R configuration and try again.`, true);
 }
@@ -98,12 +124,20 @@ function handleError(err) {
 // RESPONSE HANDLING
 // ==========================================
 function handleResponse(requestBody, data) {
-    console.log('Processing response:', data);
+    debugLog('Starting response processing', {
+        hasContent: !!data.results.generated_answer,
+        citationsCount: data.results.citations?.length || 0
+    });
 
     const content = data.results.generated_answer || 'No response generated.';
     const citations = data.results.citations || [];
 
     const { processedContent, documentBibliography } = processVancouverCitations(content, citations);
+    debugLog('Citations processed', {
+        originalLength: content.length,
+        processedLength: processedContent.length,
+        bibliographyCount: Object.keys(documentBibliography).length
+    });
 
     const botMessage = addMessage('bot', processedContent);
     addVancouverCitations(botMessage, documentBibliography);
@@ -114,6 +148,11 @@ function handleResponse(requestBody, data) {
 // FEEDBACK SYSTEM
 // ==========================================
 function sendFeedback(requestBody, results, feedback) {
+    debugLog('Sending feedback', {
+        feedback,
+        questionLength: requestBody.query.length,
+        answerLength: results.generated_answer?.length || 0
+    });
     const feedbackData = {
         question: requestBody.query,
         answer: results.generated_answer,
@@ -130,13 +169,13 @@ function sendFeedback(requestBody, results, feedback) {
     })
     .then(response => {
         if (!response.ok) {
-            console.error('Feedback not accepted by server:', response.status);
+            debugLog('Feedback request failed', { status: response.status });
         } else {
-            console.log('Feedback successfully sent.');
+            debugLog('Feedback successfully sent.');
         }
     })
     .catch(error => {
-        console.error('Error sending feedback:', error);
+        debugLog('Error sending feedback:', error);
     });
 }
 
@@ -144,15 +183,15 @@ function sendFeedback(requestBody, results, feedback) {
 // APPLICATION STARTUP
 // ==========================================
 
-function initialize() {
+function initializeAPI() {
     // Initialize privacy mode
     initializePrivacyMode();
-    
+
     document.getElementById('view-analytics-link').addEventListener('click', function(e) {
         e.preventDefault();
         window.open(FEEDBACK_HOST + '/v1/feedback/view', '_blank');
     });
-    
+
     document.getElementById('privacy-policy-link').addEventListener('click', function(e) {
         e.preventDefault();
         alert('Privacy policy coming soon!');
@@ -161,7 +200,7 @@ function initialize() {
 
 // Initialize when DOM is ready
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initialize);
+    document.addEventListener('DOMContentLoaded', initializeAPI);
 } else {
-    initialize();
+    initializeAPI();
 }

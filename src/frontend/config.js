@@ -9,6 +9,7 @@ const FEEDBACK_HOST = 'http://cired.digital:7275';
 // ==========================================
 let isLoading = false;
 let messageIdCounter = 1;
+let debugMode = false;
 
 // ==========================================
 // DOM ELEMENTS
@@ -26,20 +27,11 @@ const apiUrlInput = document.getElementById('api-url');
 const modelSelect = document.getElementById('model');
 const temperatureInput = document.getElementById('temperature');
 const maxTokensInput = document.getElementById('max-tokens');
+const debugModeCheckbox = document.getElementById('debug-mode');
 
 // Status display elements
 const apiUrlDisplay = document.getElementById('api-url-display');
 const modelDisplay = document.getElementById('model-display');
-
-// ==========================================
-// INITIALIZATION
-// ==========================================
-function initialize() {
-    document.getElementById('initial-timestamp').textContent = formatTimestamp(new Date());
-    apiUrlInput.value = DEFAULT_HOST;
-    updateStatusDisplay();
-    setupEventListeners();
-}
 
 // ==========================================
 // EVENT LISTENERS SETUP
@@ -61,6 +53,9 @@ function setupEventListeners() {
     [apiUrlInput, modelSelect].forEach(element => {
         element.addEventListener('change', updateStatusDisplay);
     });
+
+    // Debug mode
+    debugModeCheckbox.addEventListener('change', handleDebugModeToggle);
 }
 
 function handleKeyPress(e) {
@@ -75,6 +70,15 @@ function handleTextAreaResize() {
     this.style.height = Math.min(this.scrollHeight, 120) + 'px';
 }
 
+function handleDebugModeToggle() {
+    debugMode = debugModeCheckbox.checked;
+
+    if (debugMode) {
+        console.log('🐛 Debug mode enabled - API responses will be logged to console');
+    } else {
+        console.log('🐛 Debug mode disabled');
+    }
+}
 // ==========================================
 // UTILITY FUNCTIONS
 // ==========================================
@@ -91,6 +95,15 @@ function formatTimestamp(timestamp) {
     }).format(timestamp);
 }
 
+function debugLog(message, data = null) {
+    if (debugMode) {
+        if (data) {
+            console.log(`🐛 ${message}`, data);
+        } else {
+            console.log(`🐛 ${message}`);
+        }
+    }
+}
 // ==========================================
 // ERROR HANDLING
 // ==========================================
@@ -103,4 +116,65 @@ function showError(message) {
 function hideError() {
     errorContainer.classList.add('hidden');
     errorContainer.classList.remove('flex');
+}
+// ==========================================
+// PRIVACY MODE FUNCTIONALITY
+// ==========================================
+function initializePrivacyMode() {
+    debugLog('Initializing privacy mode');
+
+    const privacyCheckbox = document.getElementById('privacy-mode');
+    const statusText = document.getElementById('status-text');
+
+    const privacyMode = localStorage.getItem('privacy-mode') === 'true';
+    privacyCheckbox.checked = privacyMode;
+
+    debugLog('Privacy mode state loaded', { privacyMode });
+
+    updatePrivacyStatus();
+
+    privacyCheckbox.addEventListener('change', function() {
+        localStorage.setItem('privacy-mode', this.checked);
+        debugLog('Privacy mode toggled', { enabled: this.checked });
+        updatePrivacyStatus();
+    });
+}
+
+function updatePrivacyStatus() {
+    const privacyMode = localStorage.getItem('privacy-mode') === 'true';
+    const statusText = document.getElementById('status-text');
+    const originalContent = statusText.innerHTML;
+
+    if (privacyMode) {
+        if (!statusText.innerHTML.includes('🔒 Mode sans trace activé')) {
+            statusText.innerHTML = originalContent + ' • <span class="text-orange-600">🔒 Mode sans trace activé</span>';
+        }
+    } else {
+        statusText.innerHTML = originalContent.replace(/ • <span class="text-orange-600">🔒 Mode sans trace activé<\/span>/, '');
+    }
+
+    debugLog('Privacy status updated', { privacyMode });
+}
+
+function isPrivacyModeEnabled() {
+    return localStorage.getItem('privacy-mode') === 'true';
+}
+// ==========================================
+// INITIALIZATION
+// ==========================================
+function initializeConfig() {
+    document.getElementById('initial-timestamp').textContent = formatTimestamp(new Date());
+    apiUrlInput.value = DEFAULT_HOST;
+    updateStatusDisplay();
+    setupEventListeners();
+
+    // Initialize debug mode state
+    debugMode = debugModeCheckbox.checked;
+    debugLog('Configuration initialized');
+}
+
+if (document.readyState === 'loading') {
+     document.addEventListener('DOMContentLoaded', initializeConfig);
+} else {
+    initializeConfig();
 }
