@@ -88,9 +88,9 @@ function handleDebugModeToggle() {
     debugMode = debugModeCheckbox.checked;
 
     if (debugMode) {
-        debugLog('🐛 Debug mode enabled - API responses will be logged to console');
+        console.log('🐛 Debug mode enabled - API responses will be logged to console');
     } else {
-        debugLog('🐛 Debug mode disabled');
+        console.log('🐛 Debug mode disabled');
     }
 }
 // ==========================================
