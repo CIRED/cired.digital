@@ -63,7 +63,7 @@ BLACKLIST_FILE = BASE_DIR / "data" / "source" / "blacklist.json"
 #   collection= ...
 
 HAL_API_URL = "https://api.archives-ouvertes.fr/search/"
-HAL_QUERY = "CIRED"
+HAL_QUERY = "labStructAcronym_s:CIRED"
 HAL_BATCH_SIZE = 100
 HAL_MAX_BATCHES = 50  # Fetch a maximum of 5000 publications
 
