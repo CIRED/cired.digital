@@ -133,17 +133,13 @@ def process_publications(raw_data: dict[str, Any]) -> dict[str, Any]:
 
     stats = {
         "total_retrieved": len(publications),
-        "cired_conference_excluded": 0,
-        "blacklisted_excluded": 0,
         "no_open_access_excluded": 0,
         "working_papers_excluded": 0,
         "final_count": 0,
     }
 
-    blacklist = load_blacklist()
 
     related_publications = []
-    unrelated_cired_communications = []
 
     for pub in publications:
         pub["label_s"] = html.unescape(pub["label_s"])
@@ -153,27 +149,11 @@ def process_publications(raw_data: dict[str, Any]) -> dict[str, Any]:
         if "fileMain_s" in pub:
             pub["pdf_url"] = pub["fileMain_s"]
 
-        lab_acronym_present = (
-            "labStructAcronym_s" in pub and "CIRED" in pub["labStructAcronym_s"]
-        )
-        cired_in_citation = "CIRED" in pub.get("label_s", "")
-
-        if not lab_acronym_present and cired_in_citation:
-            unrelated_cired_communications.append(pub)
-            stats["cired_conference_excluded"] += 1
-        else:
-            related_publications.append(pub)
+        related_publications.append(pub)
 
     filtered_publications = []
 
     for pub in related_publications:
-        hal_id = pub.get("halId_s", "")
-
-        if hal_id in blacklist:
-            stats["blacklisted_excluded"] += 1
-            logging.debug("Excluded blacklisted publication: %s", hal_id)
-            continue
-
         if not has_open_access(pub):
             stats["no_open_access_excluded"] += 1
             continue
@@ -188,8 +168,6 @@ def process_publications(raw_data: dict[str, Any]) -> dict[str, Any]:
 
     logging.info("Filtering statistics:")
     logging.info("  Total retrieved: %d", stats["total_retrieved"])
-    logging.info("  CIRED conference excluded: %d", stats["cired_conference_excluded"])
-    logging.info("  Blacklisted excluded: %d", stats["blacklisted_excluded"])
     logging.info("  No open access excluded: %d", stats["no_open_access_excluded"])
     logging.info("  Working papers excluded: %d", stats["working_papers_excluded"])
     logging.info("  Final catalog count: %d", stats["final_count"])
