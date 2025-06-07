@@ -320,33 +320,33 @@ def format_metadata_for_upload(metadata: dict[str, object]) -> dict[str, str]:
     return result
 
 
-def upload_pdfs(
-    pdf_files: list[Path],
+def upload_documents(
+    document_paths: list[Path],
     client: R2RClient,
     server_documents: dict[str, str],
     metadata_by_file: dict[str, dict[str, object]],
     collection: str | None = None,
     max_upload: int = 0,
 ) -> tuple[int, int, list[tuple[Path, str]]]:
-    """Upload new PDFs, skipping those already present or failed on the server. Stop after max_upload successful uploads if set."""
+    """Upload documents, skipping those already present or failed on the server. Stop after max_upload successful uploads if set."""
     success_count = 0
     skipped_count = 0
-    failed_files: list[tuple[Path, str]] = []
+    failed_documents: list[tuple[Path, str]] = []
 
     if max_upload == 0:
         logging.info(
             "Dry run mode: No files will be uploaded. Try using --max-upload 3."
         )
-        return success_count, skipped_count, failed_files
+        return success_count, skipped_count, failed_documents
 
-    for pdf_file in pdf_files:
+    for doc_path in document_paths:
         if max_upload > 0 and success_count >= max_upload:
             logging.info("Reached maximum upload limit: %d files.", max_upload)
             break
 
         try:
             logging.info(
-                "Uploading %d/%d: %s", success_count + 1, len(pdf_files), pdf_file.name
+                "Uploading %d/%d: %s", success_count + 1, len(document_paths), doc_path.name
             )
             # Utiliser le titre du document pour la recherche d'existant
             file_stem = pdf_file.stem
@@ -361,9 +361,9 @@ def upload_pdfs(
 
             if ingestion_status not in (None, "failed"):
                 logging.debug(
-                    "Skipping file with ingestion_status='%s': %s",
+                    "Skipping document with ingestion_status='%s': %s",
                     ingestion_status,
-                    pdf_file,
+                    doc_path,
                 )
                 skipped_count += 1
                 continue
@@ -403,9 +403,9 @@ def upload_pdfs(
 
         except Exception as e:
             logging.error("Failed to process file %s: %s", pdf_file, str(e))
-            failed_files.append((pdf_file, str(e)))
+            failed_documents.append((doc_path, str(e)))
 
-    return success_count, skipped_count, failed_files
+    return success_count, skipped_count, failed_documents
 
 
 def check_r2r_connection(client: R2RClient) -> bool:
@@ -554,7 +554,7 @@ def main() -> int:
 
     metadata_by_file = load_metadata(catalog_file)
 
-    success_count, skipped_count, failed_files = upload_pdfs(
+    success_count, skipped_count, failed_documents = upload_documents(
         uploadable_pdfs,
         client,
         server_documents,
@@ -571,7 +571,7 @@ def main() -> int:
         uploadable_pdfs,
         success_count,
         skipped_count,
-        failed_files,
+        failed_documents,
     )
 
 
