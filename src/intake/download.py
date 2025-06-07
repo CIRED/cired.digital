@@ -82,20 +82,20 @@ def verify_existing_files() -> None:
         if file_path.is_file() and not file_path.name.endswith(".tmp"):
             total_files += 1
 
-            guessed_type, _ = mimetypes.guess_type(str(file_path))
-            if guessed_type:
-                correct_extension = mimetypes.guess_extension(guessed_type)
-                current_extension = file_path.suffix
+            # Détection du type de fichier via libmagic au lieu de mimetypes
+            detected_mime = magic.from_file(str(file_path), mime=True)
+            correct_extension = mimetypes.guess_extension(detected_mime) or file_path.suffix
+            current_extension = file_path.suffix
 
-                if correct_extension and correct_extension != current_extension:
-                    mismatches.append(
-                        {
-                            "file": file_path.name,
-                            "current_ext": current_extension,
-                            "correct_ext": correct_extension,
-                            "content_type": guessed_type,
-                        }
-                    )
+            if correct_extension and correct_extension != current_extension:
+                mismatches.append(
+                    {
+                        "file": file_path.name,
+                        "current_ext": current_extension,
+                        "correct_ext": correct_extension,
+                        "content_type": detected_mime,
+                    }
+                )
 
     logging.info("File verification complete:")
     logging.info("  Total files checked: %d", total_files)
