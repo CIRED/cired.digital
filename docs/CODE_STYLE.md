@@ -107,7 +107,7 @@ def transform(func: Callable[[T], T], value: T) -> T:
 - Main() docstring in imperative mode:  ✅ DO write "Upload PDFs..." ❌ DON'T write
 "Entry point to upload PDFs..."
 
-- Use this format:
+- Use this format (but don't fight the linter on it):
 
 ```python
 def foo(bar: int) -> str:
@@ -135,19 +135,19 @@ def foo(bar: int) -> str:
 Ruff handles both linting and formatting for this project. It’s configured in `cired.digital/code/pyproject.toml`. Use the latest `ruff` pulled with `pipx`, not the old version shipped by Ubuntu.
 
 
-| Tool        | Command                      | Purpose                         |
-|-------------|------------------------------|---------------------------------|
-| Ruff        | `ruff check .`               | Lint and fix errors & style  |
-| Ruff        | `ruff format .`              | Format code  (in lieu of `black`)                    |
-| Pytest      | `pytest`                     | Run all tests                   |
-| Mypy        | `mypy --strict .`            | Type checking                   |
-| Pre-commit  | `pre-commit run --all-files` | Auto-check before commit        |
+| Tool        | Command                      | Purpose                           |
+|-------------|------------------------------|-----------------------------------|
+| Ruff        | `ruff check .`               | Lint and fix errors & style       |
+| Ruff        | `ruff format .`              | Format code  (in lieu of `black`) |
+| Pytest      | `pytest`                     | Run all tests                     |
+| Mypy        | `mypy --strict .`            | Type checking                     |
+| Pre-commit  | `pre-commit run --all-files` | Auto-check before commit          |
 
 ---
 
 ### ✅ Good Practices
 
-- Commit only clean code: no lint warnings, tests passing.
+- Commit only clean code: no lint warnings, tests passing. The PR will be tested.
 - Comment *why*, not what — code should explain the *what*.
 - Keep functions small and focused.
 - Avoid global state unless necessary.
@@ -177,17 +177,23 @@ Naming follows the conventions defined in [PEP 8 – Style Guide for Python Code
 
 #### Branch Naming
 
-- Always work on a branch -- never commit to main.
+- Always work on a branch `git checkout -b feat/shorted-table-display`
 - Use descriptive branch names with hyphens (e.g., `feature/chatbot-api`, `chore/fix-memory-leak`)
 - Include issue numbers when applicable (e.g., `issue-42-login-timeout`)
+- Never commit to main, only update by `git checkout main && git pull`
+- Delete merged branches `git branch -D feat/shorted-table-display`
 
 #### Pull Requests
 
 - PR are mandatory. Never push to `main` - it is protected anyway.
 - Include a clear description of changes
 - Reference related issues using keywords (e.g., "Fixes #123")
-- Ensure all CI checks pass before merging. GitHub will run `ruff check .` automatically.
 - Request review from appropriate team members
+
+#### CI/CD
+
+- GitHub automatically runs `ruff`, `mypy`, and other CI checks.
+- Wait for all CI checks to pass before merging a PR.
 
 ---
 
@@ -195,14 +201,14 @@ Naming follows the conventions defined in [PEP 8 – Style Guide for Python Code
 
 - Always use `pathlib` for file and directory operations instead of the old `os.path`.
 - Always specify `encoding="utf-8"` when creating, opening, reading or writing text files to avoid warnings and ensure consistent behavior across platforms.
-- Use logging, not printing
-- Use percent-style strings in logging, not f-strings.
+- Use logging for info, warning, errors and other messages
+- Use %-strings when logging, not f-strings.
+- Use printing only for help messages or structured script output
 
 ---
 
 ### Placeholder
 #### async
-#### CI/CD
 ---
 
 > Maintainer: Minh Ha-Duong (<minh.ha-duong@cnrs.fr>)
