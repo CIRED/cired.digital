@@ -170,8 +170,9 @@ def get_uploadable_documents(
     pdf_dir: Path,
 ) -> list[Path]:
     """
+    Ne traiter ici que des fichiers PDF.
     Get documents that are available locally but not successfully uploaded to server.
-
+    
     Returns list of PDF file paths that should be uploaded.
     """
     uploadable_pdfs = []
