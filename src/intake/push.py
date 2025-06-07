@@ -370,8 +370,8 @@ def upload_documents(
 
             if ingestion_status == "failed":
                 logging.warning(
-                    "Re-uploading file with previous ingestion_status='failed': %s",
-                    pdf_file,
+                    "Re-uploading document with previous ingestion_status='failed': %s",
+                    doc_path,
                 )
             else:
                 logging.debug("Uploading new file: %s", pdf_file)
