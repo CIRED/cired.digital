@@ -35,7 +35,7 @@ from intake.config import (
     DOWNLOAD_CHUNK_SIZE,
     DOWNLOAD_DELAY,
     DOWNLOAD_TIMEOUT,
-    PDF_DIR,
+    DOCUMENTS_DIR,
     MAX_FILE_SIZE,
     setup_logging,
 )
@@ -44,7 +44,7 @@ from intake.utils import get_catalog_file, get_catalog_publications
 setup_logging()
 
 # Create directories if they don't exist
-PDF_DIR.mkdir(parents=True, exist_ok=True)
+DOCUMENTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def sanitize_filename(text: str) -> str:
@@ -78,7 +78,7 @@ def verify_existing_files() -> None:
     mismatches = []
     total_files = 0
 
-    for file_path in PDF_DIR.iterdir():
+    for file_path in DOCUMENTS_DIR.iterdir():
         if file_path.is_file() and not file_path.name.endswith(".tmp"):
             total_files += 1
 
@@ -113,7 +113,7 @@ def verify_existing_files() -> None:
         response = input("\nDetected incorrect extensions. Do you want to automatically correct them? [y/N]: ")
         if response.lower() in ("y", "yes"):
             for mismatch in mismatches:
-                old_path = PDF_DIR / mismatch["file"]
+                old_path = DOCUMENTS_DIR / mismatch["file"]
                 new_path = old_path.with_suffix(mismatch["correct_ext"])
                 old_path.rename(new_path)
                 logging.info("Renamed %s to %s", mismatch["file"], new_path.name)
@@ -129,7 +129,7 @@ def verify_file_sizes() -> None:
     """
     oversized = []
     total_files = 0
-    for file_path in PDF_DIR.iterdir():
+    for file_path in DOCUMENTS_DIR.iterdir():
         if file_path.is_file():
             total_files += 1
             size = file_path.stat().st_size
@@ -243,10 +243,10 @@ def process_downloads(
             continue
 
         if "halId_s" in entry:
-            target_file = PDF_DIR / f"{sanitize_filename(entry['halId_s'])}.pdf"
+            target_file = DOCUMENTS_DIR / f"{sanitize_filename(entry['halId_s'])}.pdf"
         else:
             hashname = hashlib.md5(entry["pdf_url"].encode()).hexdigest()
-            target_file = PDF_DIR / f"{hashname}.pdf"
+            target_file = DOCUMENTS_DIR / f"{hashname}.pdf"
 
         if target_file.exists():
             logging.info("Already exists, skipping: %s", target_file.name)

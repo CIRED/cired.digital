@@ -26,7 +26,7 @@ from r2r import R2RClient
 from intake.config import (
     CATALOG_FILE,
     MAX_FILE_SIZE,
-    PDF_DIR,
+    DOCUMENTS_DIR,
     R2R_DEFAULT_BASE_URL,
     setup_logging,
 )
@@ -46,7 +46,7 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--dir",
         type=Path,
-        default=PDF_DIR,
+        default=DOCUMENTS_DIR,
         help="Directory containing PDF files for upload and verification.",
     )
     parser.add_argument(
