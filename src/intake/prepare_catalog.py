@@ -177,7 +177,6 @@ def process_publications(raw_data: dict[str, Any]) -> dict[str, Any]:
         "source_file": str(raw_data.get("source_file", "unknown")),
         "filtering_statistics": stats,
         "publications": final_publications,
-        "excluded_communications": unrelated_cired_communications,
     }
 
 
