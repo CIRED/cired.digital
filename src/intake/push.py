@@ -130,7 +130,12 @@ def establish_available_documents(
         if pdf_file_hyphen.exists() or pdf_file_underscore.exists():
             available_docs[hal_id] = metadata
         else:
-            logging.error("Missing PDF file for %s", hal_id)
+            # Check for non-PDF files with this hal_id
+            other_files = list(pdf_dir.glob(f"{hal_id}.*")) + list(pdf_dir.glob(f"{hal_id.replace('-', '_')}.*"))
+            if other_files:
+                logging.warning("Excluded non-PDF file(s) for %s: %s", hal_id, [f.name for f in other_files])
+            else:
+                logging.error("Missing PDF file for %s", hal_id)
             missing_count += 1
 
     logging.info(
