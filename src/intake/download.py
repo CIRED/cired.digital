@@ -27,15 +27,15 @@ import time
 from pathlib import Path
 from typing import Any
 
-import requests
 import magic
+import requests
 
 from intake.config import (
     CATALOG_FILE,
+    DOCUMENTS_DIR,
     DOWNLOAD_CHUNK_SIZE,
     DOWNLOAD_DELAY,
     DOWNLOAD_TIMEOUT,
-    DOCUMENTS_DIR,
     MAX_FILE_SIZE,
     setup_logging,
 )
@@ -69,6 +69,7 @@ def sanitize_filename(text: str) -> str:
 def verify_existing_files() -> None:
     """
     Verify file types of existing downloads.
+
     Prompt user to automatically correct incorrect extensions upon confirmation.
     """
     if not DOCUMENTS_DIR.exists():
@@ -84,7 +85,9 @@ def verify_existing_files() -> None:
 
             # Détection du type de fichier via libmagic au lieu de mimetypes
             detected_mime = magic.from_file(str(file_path), mime=True)
-            correct_extension = mimetypes.guess_extension(detected_mime) or file_path.suffix
+            correct_extension = (
+                mimetypes.guess_extension(detected_mime) or file_path.suffix
+            )
             current_extension = file_path.suffix
 
             if correct_extension and correct_extension != current_extension:
@@ -110,7 +113,9 @@ def verify_existing_files() -> None:
             mismatch["content_type"],
         )
     if mismatches:
-        response = input("\nDetected incorrect extensions. Do you want to automatically correct them? [y/N]: ")
+        response = input(
+            "\nDetected incorrect extensions. Do you want to automatically correct them? [y/N]: "
+        )
         if response.lower() in ("y", "yes"):
             for mismatch in mismatches:
                 old_path = DOCUMENTS_DIR / mismatch["file"]
@@ -124,9 +129,7 @@ def verify_existing_files() -> None:
 
 
 def verify_file_sizes() -> None:
-    """
-    Verify that existing files do not exceed MAX_FILE_SIZE.
-    """
+    """Verify that existing files do not exceed MAX_FILE_SIZE."""
     oversized = []
     total_files = 0
     for file_path in DOCUMENTS_DIR.iterdir():
@@ -147,6 +150,7 @@ def verify_file_sizes() -> None:
         )
     if not oversized:
         logging.info("All files within size limit.")
+
 
 def download_file(url: str, target_path: Path) -> bool:
     """

@@ -25,8 +25,8 @@ from r2r import R2RClient
 
 from intake.config import (
     CATALOG_FILE,
-    MAX_FILE_SIZE,
     DOCUMENTS_DIR,
+    MAX_FILE_SIZE,
     R2R_DEFAULT_BASE_URL,
     setup_logging,
 )
@@ -94,7 +94,6 @@ def load_catalog_local(catalog_file: Path) -> dict[str, dict[str, Any]]:
                 hal_id = pub["halId_s"]
                 catalog_by_hal_id[hal_id] = pub
 
-        
         logging.info(
             "Catalog loaded: %d records",
             len(catalog_by_hal_id),
@@ -144,27 +143,28 @@ def establish_available_documents(
             if candidate.stat().st_size > MAX_FILE_SIZE:
                 logging.warning(
                     "File too large for %s: %s (> %d bytes)",
-                    hal_id, candidate.name, MAX_FILE_SIZE
+                    hal_id,
+                    candidate.name,
+                    MAX_FILE_SIZE,
                 )
                 oversized_count += 1
             else:
                 available_docs[hal_id] = metadata
         else:
-            other_files = (
-                list(pdf_dir.glob(f"{hal_id}.*"))
-                + list(pdf_dir.glob(f"{hal_id.replace('-', '_')}.*"))
+            other_files = list(pdf_dir.glob(f"{hal_id}.*")) + list(
+                pdf_dir.glob(f"{hal_id.replace('-', '_')}.*")
             )
             if other_files:
                 logging.warning(
                     "Excluded non-PDF file(s) for %s: %s",
-                    hal_id, [f.name for f in other_files]
+                    hal_id,
+                    [f.name for f in other_files],
                 )
                 non_pdf_count += 1
             else:
                 logging.error("Missing PDF file for %s", hal_id)
                 missing_count += 1
 
-    
     logging.info(
         "Local summary: %d valid | %d missing | %d oversized | %d non-PDF | out of %d catalog entries",
         len(available_docs),
@@ -210,9 +210,8 @@ def get_uploadable_documents(
     pdf_dir: Path,
 ) -> list[Path]:
     """
-    Ne traiter ici que des fichiers PDF.
-    Get documents that are available locally but not successfully uploaded to server.
-    
+    Get documents that are available locally but not existing on server.
+
     Returns list of PDF file paths that should be uploaded.
     """
     uploadable_pdfs = []
@@ -234,7 +233,6 @@ def get_uploadable_documents(
         elif pdf_file_underscore.exists():
             uploadable_pdfs.append(pdf_file_underscore)
 
-    
     logging.info(
         "Ready to upload: %d PDFs (valid locally but missing or failed on server)",
         len(uploadable_pdfs),
@@ -476,7 +474,7 @@ def print_upload_statistics(
 ) -> int:
     """Print upload statistics and return appropriate exit code."""
     logging.info("=== UPLOAD STATISTICS ===")
-    
+
     logging.info(
         "Catalog records loaded: %d",
         total_records,
