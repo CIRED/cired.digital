@@ -184,24 +184,6 @@ def establish_available_documents(
     )
 
 
-def exclude_oversized_pdfs(pdf_files: list[Path]) -> list[Path]:
-    """Exclude PDF files exceeding the maximum allowed size."""
-    filtered_files = []
-    excluded_files = 0
-
-    for pdf_file in pdf_files:
-        if pdf_file.stat().st_size > MAX_FILE_SIZE:
-            logging.warning(
-                "Excluding oversized file (>%d bytes): %s", MAX_FILE_SIZE, pdf_file
-            )
-            excluded_files += 1
-        else:
-            filtered_files.append(pdf_file)
-
-    if excluded_files:
-        logging.info("Excluded %d oversized file(s) from upload list.", excluded_files)
-
-    return filtered_files
 
 
 def get_uploadable_documents(
