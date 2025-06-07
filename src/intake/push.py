@@ -47,7 +47,7 @@ def get_args() -> argparse.Namespace:
         "--dir",
         type=Path,
         default=PDF_DIR,
-        help="Directory containing PDF files for verification.",
+        help="Directory containing PDF files for upload and verification.",
     )
     parser.add_argument(
         "--base-url", type=str, default=R2R_DEFAULT_BASE_URL, help="R2R API URL."
@@ -106,7 +106,7 @@ def establish_available_documents(
     catalog_file: Path, pdf_dir: Path
 ) -> tuple[dict[str, dict[str, Any]], int, int]:
     """
-    Walk the catalog and verify PDF files exist in the pdfs directory.
+    Walk the catalog and verify PDF files exist in the documents directory.
 
     Returns:
         - Dictionary of available documents (hal_id -> metadata)
