@@ -49,7 +49,7 @@ if not (BASE_DIR / "data").is_dir():
 DATA_ROOT = BASE_DIR / "data" / "source" / "hal"
 
 # File paths
-PDF_DIR = DATA_ROOT / "pdfs"
+PDF_DIR = DATA_ROOT / "documents"
 CATALOG_FILE = DATA_ROOT / "catalog.json"
 CONFERENCE_FILE = DATA_ROOT / "conference.json"
 RAW_HAL_DIR = BASE_DIR / "data" / "source" / "hal"
