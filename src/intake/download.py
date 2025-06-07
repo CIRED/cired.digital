@@ -6,7 +6,7 @@ the associated files are already downloaded, and downloads them if they are miss
 The script detects file types from HTTP headers and applies correct extensions.
 
 Usage:
-    python download.py [--catalog PATH] [--log-level LEVEL] [--max-download N] [--verify-existing]
+    python download.py [--catalog PATH] [--log-level LEVEL] [--max-download N] [--verify-types]
 
 Dependencies:
     - requests: For downloading files from URLs.
@@ -179,7 +179,7 @@ def setup_argument_parser() -> argparse.ArgumentParser:
         help="Maximum number of files to download (0 = dry run)",
     )
     parser.add_argument(
-        "--verify-existing",
+        "--verify-types",
         action="store_true",
         help="Verify and report file type mismatches for existing downloads",
     )
@@ -249,7 +249,7 @@ def main() -> None:
     }
     setup_logging(level=log_levels[args.log_level])
 
-    if args.verify_existing:
+    if args.verify_types:
         verify_existing_files()
         return
 
