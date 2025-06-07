@@ -174,7 +174,7 @@ def get_uploadable_documents(
 
     Returns list of PDF file paths that should be uploaded.
     """
-    uploadable_files = []
+    uploadable_pdfs = []
 
     for hal_id, metadata in available_docs.items():
         formatted_metadata = format_metadata_for_upload(metadata)
@@ -193,10 +193,10 @@ def get_uploadable_documents(
         elif pdf_file_underscore.exists():
             uploadable_files.append(pdf_file_underscore)
 
-    logging.info("Uploadable documents: %d", len(uploadable_files))
-    logging.debug("Uploadable files: %s", [f.name for f in uploadable_files])
+    logging.info("Uploadable PDF documents: %d", len(uploadable_pdfs))
+    logging.debug("Uploadable PDFs: %s", [f.name for f in uploadable_pdfs])
 
-    return uploadable_files
+    return uploadable_pdfs
 
 
 def load_metadata(metadata_file: Path) -> dict[str, dict[str, object]]:
@@ -504,15 +504,15 @@ def main() -> int:
     for _, doc in documents_df.iterrows():
         existing_documents[doc["title"]] = doc["ingestion_status"]
 
-    uploadable_files = get_uploadable_documents(
+    uploadable_pdfs = get_uploadable_documents(
         available_docs, existing_documents, args.dir
     )
 
-    if not uploadable_files:
-        logging.info("No new documents to upload")
+    if not uploadable_pdfs:
+        logging.info("No new PDF documents to upload")
         return 0
 
-    uploadable_files = exclude_oversized_pdfs(uploadable_files)
+    uploadable_pdfs = exclude_oversized_pdfs(uploadable_pdfs)
     if not uploadable_files:
         logging.error("No valid PDF files to upload after filtering oversized files.")
         return 4
@@ -533,7 +533,7 @@ def main() -> int:
         list(available_docs.values()),
         missing_files,
         existing_documents,
-        uploadable_files,
+        uploadable_pdfs,
         success_count,
         skipped_count,
         failed_files,
