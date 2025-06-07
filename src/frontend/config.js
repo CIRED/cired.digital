@@ -60,6 +60,7 @@ function setupEventListeners() {
 
     initializePrivacyMode();
     initializeSession();
+    initializeProfile();
     
     document.getElementById('view-analytics-link').addEventListener('click', function(e) {
         e.preventDefault();
@@ -290,6 +291,119 @@ function initializeConfig() {
     // Initialize debug mode state
     debugMode = debugModeCheckbox.checked;
     debugLog('Configuration initialized');
+}
+
+// ==========================================
+// ==========================================
+function initializeProfile() {
+    debugLog('Initializing profile management');
+    
+    const profileBanner = document.getElementById('profile-banner');
+    const profileBtn = document.getElementById('profile-btn');
+    const fillProfileBtn = document.getElementById('fill-profile-btn');
+    const profileModal = document.getElementById('profile-modal');
+    const profileForm = document.getElementById('profile-form');
+    const profileCancel = document.getElementById('profile-cancel');
+    
+    const hasProfile = localStorage.getItem('user-profile') !== null;
+    const profileConsentDenied = localStorage.getItem('profile-consent') === 'false';
+    
+    if (!hasProfile && !profileConsentDenied) {
+        profileBanner.classList.remove('hidden');
+    }
+    
+    if (hasProfile) {
+        profileBtn.classList.remove('hidden');
+    }
+    
+    fillProfileBtn.addEventListener('click', openProfileModal);
+    profileBtn.addEventListener('click', openProfileModal);
+    profileCancel.addEventListener('click', closeProfileModal);
+    profileForm.addEventListener('submit', handleProfileSubmit);
+    
+    profileModal.addEventListener('click', (e) => {
+        if (e.target === profileModal) {
+            closeProfileModal();
+        }
+    });
+}
+
+function openProfileModal() {
+    debugLog('Opening profile modal');
+    const profileModal = document.getElementById('profile-modal');
+    profileModal.classList.remove('hidden');
+    
+    const existingProfile = getStoredProfile();
+    if (existingProfile) {
+        document.getElementById('profession').value = existingProfile.profession || '';
+        document.getElementById('domaine').value = existingProfile.domaine || '';
+        document.getElementById('affiliation').value = existingProfile.affiliation || '';
+        document.getElementById('anciennete').value = existingProfile.anciennete || '';
+        document.getElementById('profile-consent').checked = true;
+    }
+}
+
+function closeProfileModal() {
+    debugLog('Closing profile modal');
+    const profileModal = document.getElementById('profile-modal');
+    profileModal.classList.add('hidden');
+}
+
+async function handleProfileSubmit(e) {
+    e.preventDefault();
+    debugLog('Handling profile form submission');
+    
+    const profileData = {
+        session_id: sessionId,
+        profession: document.getElementById('profession').value,
+        domaine: document.getElementById('domaine').value,
+        affiliation: document.getElementById('affiliation').value,
+        anciennete: document.getElementById('anciennete').value,
+        timestamp: new Date().toISOString(),
+        consent_given: document.getElementById('profile-consent').checked
+    };
+    
+    try {
+        localStorage.setItem('user-profile', JSON.stringify(profileData));
+        localStorage.setItem('profile-consent', 'true');
+        
+        const response = await fetch(`${FEEDBACK_HOST}/v1/profile`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(profileData)
+        });
+        
+        if (response.ok) {
+            debugLog('Profile saved successfully');
+            closeProfileModal();
+            updateProfileUI();
+        } else {
+            debugLog('Profile save failed', { status: response.status });
+            alert('Erreur lors de la sauvegarde du profil');
+        }
+    } catch (error) {
+        debugLog('Error saving profile:', error);
+        alert('Erreur lors de la sauvegarde du profil');
+    }
+}
+
+function updateProfileUI() {
+    const profileBanner = document.getElementById('profile-banner');
+    const profileBtn = document.getElementById('profile-btn');
+    
+    profileBanner.classList.add('hidden');
+    profileBtn.classList.remove('hidden');
+}
+
+function getStoredProfile() {
+    const profileData = localStorage.getItem('user-profile');
+    return profileData ? JSON.parse(profileData) : null;
+}
+
+function hasUserProfile() {
+    return localStorage.getItem('user-profile') !== null;
 }
 
 if (document.readyState === 'loading') {

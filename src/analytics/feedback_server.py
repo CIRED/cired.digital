@@ -73,6 +73,38 @@ class ResponseLog(BaseModel):
     privacy_mode: bool = False
 
 
+class UserProfile(BaseModel):
+    """Schema for user profile data."""
+
+    session_id: str
+    profession: Literal[
+        "étudiant/stagiaire",
+        "doctorant",
+        "ITA",
+        "enseignant/chercheur",
+        "journaliste/écrivain",
+        "autre",
+    ]
+    domaine: Literal[
+        "environnement/développement",
+        "communication/médiation",
+        "informatique",
+        "autre",
+    ]
+    affiliation: Literal[
+        "CIRED",
+        "ParisTech",
+        "CNRS",
+        "établissement d'enseignement supérieur ou de recherche",
+        "entreprise",
+        "média",
+        "indépendant",
+    ]
+    anciennete: Literal["des semaines", "des mois", "des années"]
+    timestamp: str
+    consent_given: bool = True
+
+
 def classify_network(ip_address: str) -> str:
     """
     Classify network type based on IP address.
@@ -225,6 +257,7 @@ async def view_analytics() -> str:
     html.extend(render_csv_table("queries.csv", "Requêtes Utilisateur"))
     html.extend(render_csv_table("responses.csv", "Réponses du Bot"))
     html.extend(render_csv_table("feedback.csv", "Feedback Utilisateur"))
+    html.extend(render_csv_table("profiles.csv", "Profils Utilisateur"))
 
     html.extend(["</body></html>"])
     return "\n".join(html)
@@ -328,3 +361,30 @@ async def log_response(response_log: ResponseLog) -> dict[str, str]:
     )
 
     return {"message": "Response logged"}
+
+
+@app.post("/v1/profile")
+async def store_profile(profile: UserProfile) -> dict[str, str]:
+    """Store user profile data."""
+    write_to_csv(
+        "profiles.csv",
+        [
+            "session_id",
+            "profession",
+            "domaine",
+            "affiliation",
+            "anciennete",
+            "timestamp",
+            "consent_given",
+        ],
+        [
+            profile.session_id,
+            profile.profession,
+            profile.domaine,
+            profile.affiliation,
+            profile.anciennete,
+            profile.timestamp,
+            profile.consent_given,
+        ],
+    )
+    return {"message": "Profile saved"}

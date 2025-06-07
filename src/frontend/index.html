@@ -29,8 +29,17 @@
 </p>
 </div>
 </div><button class="px-3 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors" id="config-btn">Config</button>
+<button class="px-3 py-2 text-sm font-medium text-blue-700 bg-blue-50 rounded-md hover:bg-blue-100 transition-colors ml-2 hidden" id="profile-btn">👤 Profil</button>
 </div>
-</div><!-- Configuration Panel -->
+</div>
+<!-- Profile Banner (Test Phase) -->
+<div class="bg-blue-50 border-b border-blue-200 px-4 py-2 text-sm text-blue-800 hidden" id="profile-banner">
+  <div class="flex items-center justify-between">
+    <span>🧪 <strong>Phase de test :</strong> Aidez-nous à améliorer le service en renseignant votre profil</span>
+    <button class="text-blue-600 hover:text-blue-800 underline" id="fill-profile-btn">Remplir mon profil</button>
+  </div>
+</div>
+<!-- Configuration Panel -->
 <div class="bg-white border-b border-gray-200 p-4 hidden" id="config-panel">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 <div>
@@ -74,7 +83,74 @@
     </label>
   </div>
   </div>
-</div><!-- Messages -->
+</div>
+
+<!-- Profile Modal -->
+<div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50" id="profile-modal">
+  <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4">
+    <h2 class="text-lg font-semibold text-gray-900 mb-4">Profil utilisateur</h2>
+    <form id="profile-form">
+      <div class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Profession</label>
+          <select class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="profession" required>
+            <option value="">Sélectionnez...</option>
+            <option value="étudiant/stagiaire">Étudiant/Stagiaire</option>
+            <option value="doctorant">Doctorant</option>
+            <option value="ITA">ITA</option>
+            <option value="enseignant/chercheur">Enseignant/Chercheur</option>
+            <option value="journaliste/écrivain">Journaliste/Écrivain</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Domaine d'expertise</label>
+          <select class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="domaine" required>
+            <option value="">Sélectionnez...</option>
+            <option value="environnement/développement">Environnement/Développement</option>
+            <option value="communication/médiation">Communication/Médiation</option>
+            <option value="informatique">Informatique</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Affiliation</label>
+          <select class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="affiliation" required>
+            <option value="">Sélectionnez...</option>
+            <option value="CIRED">CIRED</option>
+            <option value="ParisTech">ParisTech</option>
+            <option value="CNRS">CNRS</option>
+            <option value="établissement d'enseignement supérieur ou de recherche">Établissement d'enseignement supérieur ou de recherche</option>
+            <option value="entreprise">Entreprise</option>
+            <option value="média">Média</option>
+            <option value="indépendant">Indépendant</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Ancienneté dans le poste</label>
+          <select class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="anciennete" required>
+            <option value="">Sélectionnez...</option>
+            <option value="des semaines">Des semaines</option>
+            <option value="des mois">Des mois</option>
+            <option value="des années">Des années</option>
+          </select>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" id="profile-consent" class="mr-2" required>
+          <label for="profile-consent" class="text-sm text-gray-700">
+            J'accepte que mes données de profil soient stockées pour améliorer le service
+          </label>
+        </div>
+      </div>
+      <div class="flex justify-end space-x-3 mt-6">
+        <button type="button" class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200" id="profile-cancel">Annuler</button>
+        <button type="submit" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Messages -->
 <div class="flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth" id="messages-container">
 <div class="flex justify-start">
 <div class="flex max-w-3xl">

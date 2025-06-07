@@ -167,6 +167,18 @@ function sendFeedback(requestBody, results, feedback) {
         questionLength: requestBody.query.length,
         answerLength: results.generated_answer?.length || 0
     });
+    
+    if (!hasUserProfile()) {
+        const shouldContinue = confirm(
+            'Votre retour est précieux ! Pour nous aider à mieux comprendre nos utilisateurs, ' +
+            'souhaitez-vous remplir votre profil ? (Vous pouvez aussi envoyer votre feedback anonymement)'
+        );
+        if (shouldContinue) {
+            openProfileModal();
+            return;
+        }
+    }
+    
     const feedbackData = {
         question: requestBody.query,
         answer: results.generated_answer,
