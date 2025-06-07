@@ -136,6 +136,16 @@ def download_file(url: str, target_path: Path) -> bool:
             with open(temp_path, "wb") as f:
                 for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
                     f.write(chunk)
+        # Détection du type de fichier via libmagic
+        detected_mime = magic.from_file(temp_path, mime=True)
+        extension = mimetypes.guess_extension(detected_mime) or target_path.suffix
+        target_path = target_path.with_suffix(extension)
+        temp_path = target_path.with_suffix(".tmp")
+        logging.debug(
+            "Detected MIME via magic: %s, using extension: %s",
+            detected_mime,
+            extension,
+        )
         temp_path.rename(target_path)
         logging.info("Downloaded: %s", target_path.name)
         return True
