@@ -190,9 +190,9 @@ def get_uploadable_documents(
         pdf_file_underscore = pdf_dir / f"{hal_id.replace('-', '_')}.pdf"
 
         if pdf_file_hyphen.exists():
-            uploadable_files.append(pdf_file_hyphen)
+            uploadable_pdfs.append(pdf_file_hyphen)
         elif pdf_file_underscore.exists():
-            uploadable_files.append(pdf_file_underscore)
+            uploadable_pdfs.append(pdf_file_underscore)
 
     logging.info("Uploadable PDF documents: %d", len(uploadable_pdfs))
     logging.debug("Uploadable PDFs: %s", [f.name for f in uploadable_pdfs])
@@ -514,14 +514,14 @@ def main() -> int:
         return 0
 
     uploadable_pdfs = exclude_oversized_pdfs(uploadable_pdfs)
-    if not uploadable_files:
+    if not uploadable_pdfs:
         logging.error("No valid PDF files to upload after filtering oversized files.")
         return 4
 
     metadata_by_file = load_metadata(catalog_file)
 
     success_count, skipped_count, failed_files = upload_pdfs(
-        uploadable_files,
+        uploadable_pdfs,
         client,
         existing_documents,
         metadata_by_file,
