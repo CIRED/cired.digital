@@ -184,8 +184,6 @@ def establish_available_documents(
     )
 
 
-
-
 def get_uploadable_documents(
     available_docs: dict[str, dict[str, Any]],
     server_documents: dict[str, str],
@@ -346,7 +344,10 @@ def upload_documents(
 
         try:
             logging.info(
-                "Uploading %d/%d: %s", success_count + 1, len(document_paths), doc_path.name
+                "Uploading %d/%d: %s",
+                success_count + 1,
+                len(document_paths),
+                doc_path.name,
             )
             # Utiliser le titre du document pour la recherche d'existant
             file_stem = doc_path.stem
@@ -550,7 +551,6 @@ def main() -> int:
     if not uploadable_pdfs:
         logging.info("No new PDF documents to upload")
         return 0
-
 
     metadata_by_file = load_metadata(catalog_file)
 
