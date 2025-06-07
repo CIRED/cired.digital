@@ -118,6 +118,7 @@ def establish_available_documents(
 
     available_docs = {}
     missing_count = 0
+    ignored_count = 0
 
     for hal_id, metadata in catalog_by_hal_id.items():
         if "pdf_url" not in metadata and "fileMain_s" not in metadata:
@@ -134,14 +135,16 @@ def establish_available_documents(
             other_files = list(pdf_dir.glob(f"{hal_id}.*")) + list(pdf_dir.glob(f"{hal_id.replace('-', '_')}.*"))
             if other_files:
                 logging.warning("Excluded non-PDF file(s) for %s: %s", hal_id, [f.name for f in other_files])
+                ignored_count += 1
             else:
                 logging.error("Missing PDF file for %s", hal_id)
-            missing_count += 1
+                missing_count += 1
 
     logging.info(
-        "Available documents: %d, Missing files: %d, Total records: %d",
+        "Available documents: %d, Missing PDF files: %d, Ignored non-PDF files: %d, Total records: %d",
         len(available_docs),
         missing_count,
+        ignored_count,
         len(catalog_by_hal_id),
     )
     logging.debug("Available docs: %s", list(available_docs.keys()))
