@@ -109,7 +109,7 @@ def verify_existing_files() -> None:
             mismatch["content_type"],
         )
     if mismatches:
-        response = input("Detected incorrect extensions. Do you want to automatically correct them? [y/N]: ")
+        response = input("\nDetected incorrect extensions. Do you want to automatically correct them? [y/N]: ")
         if response.lower() in ("y", "yes"):
             for mismatch in mismatches:
                 old_path = PDF_DIR / mismatch["file"]
