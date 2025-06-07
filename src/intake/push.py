@@ -568,10 +568,6 @@ def main() -> int:
         logging.info("No new PDF documents to upload")
         return 0
 
-    uploadable_pdfs = exclude_oversized_pdfs(uploadable_pdfs)
-    if not uploadable_pdfs:
-        logging.error("No valid PDF files to upload after filtering oversized files.")
-        return 4
 
     metadata_by_file = load_metadata(catalog_file)
 
