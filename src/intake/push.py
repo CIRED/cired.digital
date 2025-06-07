@@ -161,10 +161,11 @@ def establish_available_documents(
                 missing_count += 1
 
     logging.info(
-        "Available documents: %d, Missing PDF files: %d, Ignored non-PDF files: %d, Total records: %d",
+        "Available: %d | Missing: %d | Oversized: %d | Non-PDF: %d | Total: %d",
         len(available_docs),
         missing_count,
-        ignored_count,
+        oversized_count,
+        non_pdf_count,
         len(catalog_by_hal_id),
     )
     logging.debug("Available docs: %s", list(available_docs.keys()))
