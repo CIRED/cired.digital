@@ -36,6 +36,7 @@ from intake.config import (
     DOWNLOAD_DELAY,
     DOWNLOAD_TIMEOUT,
     PDF_DIR,
+    MAX_FILE_SIZE,
     setup_logging,
 )
 from intake.utils import get_catalog_file, get_catalog_publications
@@ -122,6 +123,31 @@ def verify_existing_files() -> None:
         logging.info("All extensions are correct.")
 
 
+def verify_file_sizes() -> None:
+    """
+    Verify that existing files do not exceed MAX_FILE_SIZE.
+    """
+    oversized = []
+    total_files = 0
+    for file_path in PDF_DIR.iterdir():
+        if file_path.is_file():
+            total_files += 1
+            size = file_path.stat().st_size
+            if size > MAX_FILE_SIZE:
+                oversized.append({"file": file_path.name, "size": size})
+    logging.info("File size verification complete:")
+    logging.info("  Total files checked: %d", total_files)
+    logging.info("  Oversized files found: %d", len(oversized))
+    for entry in oversized:
+        logging.warning(
+            "Oversized: %s (%d bytes > %d bytes)",
+            entry["file"],
+            entry["size"],
+            MAX_FILE_SIZE,
+        )
+    if not oversized:
+        logging.info("All files within size limit.")
+
 def download_file(url: str, target_path: Path) -> bool:
     """
     Download one file from a URL with proper file type detection.
@@ -194,6 +220,11 @@ def setup_argument_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Verify and report file type mismatches for existing downloads",
     )
+    parser.add_argument(
+        "--verify-sizes",
+        action="store_true",
+        help="Verify file size limits for existing downloads",
+    )
     return parser
 
 
@@ -260,6 +291,9 @@ def main() -> None:
     }
     setup_logging(level=log_levels[args.log_level])
 
+    if args.verify_sizes:
+        verify_file_sizes()
+        return
     if args.verify_types:
         verify_existing_files()
         return
