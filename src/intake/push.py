@@ -188,11 +188,11 @@ def establish_available_documents(
 
 def get_uploadable_documents(
     available_docs: dict[str, dict[str, Any]],
-    existing_documents: dict[str, str],
+    server_documents: dict[str, str],
     pdf_dir: Path,
 ) -> list[Path]:
     """
-    Get documents that are available locally but not existing on server.
+    Get documents that are available locally but not present or 'failed' on the server.
 
     Returns list of PDF file paths that should be uploaded.
     """
@@ -202,7 +202,7 @@ def get_uploadable_documents(
         formatted_metadata = format_metadata_for_upload(metadata)
         doc_title = formatted_metadata.get("title", hal_id)
 
-        ingestion_status = existing_documents.get(doc_title)
+        ingestion_status = server_documents.get(doc_title)
 
         if ingestion_status not in (None, "failed"):
             continue
@@ -323,12 +323,12 @@ def format_metadata_for_upload(metadata: dict[str, object]) -> dict[str, str]:
 def upload_pdfs(
     pdf_files: list[Path],
     client: R2RClient,
-    existing_documents: dict[str, str],
+    server_documents: dict[str, str],
     metadata_by_file: dict[str, dict[str, object]],
     collection: str | None = None,
     max_upload: int = 0,
 ) -> tuple[int, int, list[tuple[Path, str]]]:
-    """Upload new PDFs and skip existing ones. Stop after max_upload successful uploads if set."""
+    """Upload new PDFs, skipping those already present or failed on the server. Stop after max_upload successful uploads if set."""
     success_count = 0
     skipped_count = 0
     failed_files: list[tuple[Path, str]] = []
@@ -357,7 +357,7 @@ def upload_pdfs(
                 else {}
             )
             doc_title = formatted_for_title.get("title", file_stem)
-            ingestion_status = existing_documents.get(doc_title)
+            ingestion_status = server_documents.get(doc_title)
 
             if ingestion_status not in (None, "failed"):
                 logging.debug(
@@ -448,7 +448,7 @@ def print_upload_statistics(
     total_records: int,
     available_docs: list[dict[str, Any]],
     missing_files: int,
-    existing_documents: dict[str, str],
+    server_documents: dict[str, str],
     uploadable_files: list[Path],
     success_count: int,
     skipped_count: int,
@@ -463,7 +463,7 @@ def print_upload_statistics(
     )
     logging.info("Available documents: %d", len(available_docs))
     logging.info("Missing PDF files: %d", missing_files)
-    logging.info("Documents on server: %d", len(existing_documents))
+    logging.info("Documents on server: %d", len(server_documents))
     logging.info("Uploadable documents: %d", len(uploadable_files))
     logging.info("Successfully uploaded: %d", success_count)
     logging.info("Skipped: %d", skipped_count)
@@ -533,17 +533,18 @@ def main() -> int:
         logging.error("Failed to retrieve documents from R2R.")
         return 3
 
-    existing_documents = {}
-    for _, doc in documents_df.iterrows():
-        existing_documents[doc["title"]] = doc["ingestion_status"]
+    # Rename to reflect server-side documents
+    server_documents: dict[str, str] = {
+        row["title"]: row["ingestion_status"] for _, row in documents_df.iterrows()
+    }
 
     logging.info(
         "Server summary: %d documents present",
-        len(existing_documents),
+        len(server_documents),
     )
 
     uploadable_pdfs = get_uploadable_documents(
-        available_docs, existing_documents, args.dir
+        available_docs, server_documents, args.dir
     )
 
     if not uploadable_pdfs:
@@ -556,7 +557,7 @@ def main() -> int:
     success_count, skipped_count, failed_files = upload_pdfs(
         uploadable_pdfs,
         client,
-        existing_documents,
+        server_documents,
         metadata_by_file,
         collection=args.collection,
         max_upload=args.max_upload,
@@ -566,7 +567,7 @@ def main() -> int:
         total_records,
         list(available_docs.values()),
         missing_files,
-        existing_documents,
+        server_documents,
         uploadable_pdfs,
         success_count,
         skipped_count,
