@@ -22,6 +22,7 @@ readme = "README.md"
 requires-python = ">=3.11,<3.14"
 dependencies = [
   "requests",
+  "python-magic>=0.4.27",
   "fastapi",
   "uvicorn[standard]",
   "r2r",
