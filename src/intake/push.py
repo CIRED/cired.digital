@@ -94,7 +94,11 @@ def load_catalog_local(catalog_file: Path) -> dict[str, dict[str, Any]]:
                 hal_id = pub["halId_s"]
                 catalog_by_hal_id[hal_id] = pub
 
-        logging.info("Loaded %d publications from catalog", len(catalog_by_hal_id))
+        
+        logging.info(
+            "Catalog loaded: %d records",
+            len(catalog_by_hal_id),
+        )
         return catalog_by_hal_id
 
     except Exception as e:
@@ -160,8 +164,9 @@ def establish_available_documents(
                 logging.error("Missing PDF file for %s", hal_id)
                 missing_count += 1
 
+    
     logging.info(
-        "Available: %d | Missing: %d | Oversized: %d | Non-PDF: %d | Total: %d",
+        "Local summary: %d valid | %d missing | %d oversized | %d non-PDF | out of %d catalog entries",
         len(available_docs),
         missing_count,
         oversized_count,
@@ -229,7 +234,11 @@ def get_uploadable_documents(
         elif pdf_file_underscore.exists():
             uploadable_pdfs.append(pdf_file_underscore)
 
-    logging.info("Uploadable PDF documents: %d", len(uploadable_pdfs))
+    
+    logging.info(
+        "Ready to upload: %d PDFs (valid locally but missing or failed on server)",
+        len(uploadable_pdfs),
+    )
     logging.debug("Uploadable PDFs: %s", [f.name for f in uploadable_pdfs])
 
     return uploadable_pdfs
@@ -467,7 +476,11 @@ def print_upload_statistics(
 ) -> int:
     """Print upload statistics and return appropriate exit code."""
     logging.info("=== UPLOAD STATISTICS ===")
-    logging.info("Total catalog records: %d", total_records)
+    
+    logging.info(
+        "Catalog records loaded: %d",
+        total_records,
+    )
     logging.info("Available documents: %d", len(available_docs))
     logging.info("Missing PDF files: %d", missing_files)
     logging.info("Documents on server: %d", len(existing_documents))
@@ -543,6 +556,11 @@ def main() -> int:
     existing_documents = {}
     for _, doc in documents_df.iterrows():
         existing_documents[doc["title"]] = doc["ingestion_status"]
+
+    logging.info(
+        "Server summary: %d documents present",
+        len(existing_documents),
+    )
 
     uploadable_pdfs = get_uploadable_documents(
         available_docs, existing_documents, args.dir
