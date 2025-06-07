@@ -104,7 +104,7 @@ def load_catalog_local(catalog_file: Path) -> dict[str, dict[str, Any]]:
 
 def establish_available_documents(
     catalog_file: Path, pdf_dir: Path
-) -> tuple[dict[str, dict[str, Any]], int, int]:
+) -> tuple[dict[str, dict[str, Any]], int, int, int, int]:
     """
     Walk the catalog and verify PDF files exist in the documents directory.
 
@@ -118,7 +118,8 @@ def establish_available_documents(
 
     available_docs = {}
     missing_count = 0
-    ignored_count = 0
+    oversized_count = 0
+    non_pdf_count = 0
 
     for hal_id, metadata in catalog_by_hal_id.items():
         if "pdf_url" not in metadata and "fileMain_s" not in metadata:
@@ -128,14 +129,33 @@ def establish_available_documents(
         pdf_file_hyphen = pdf_dir / f"{hal_id}.pdf"
         pdf_file_underscore = pdf_dir / f"{hal_id.replace('-', '_')}.pdf"
 
-        if pdf_file_hyphen.exists() or pdf_file_underscore.exists():
-            available_docs[hal_id] = metadata
+        # Check existence and size
+        candidate = None
+        if pdf_file_hyphen.exists():
+            candidate = pdf_file_hyphen
+        elif pdf_file_underscore.exists():
+            candidate = pdf_file_underscore
+
+        if candidate:
+            if candidate.stat().st_size > MAX_FILE_SIZE:
+                logging.warning(
+                    "File too large for %s: %s (> %d bytes)",
+                    hal_id, candidate.name, MAX_FILE_SIZE
+                )
+                oversized_count += 1
+            else:
+                available_docs[hal_id] = metadata
         else:
-            # Check for non-PDF files with this hal_id
-            other_files = list(pdf_dir.glob(f"{hal_id}.*")) + list(pdf_dir.glob(f"{hal_id.replace('-', '_')}.*"))
+            other_files = (
+                list(pdf_dir.glob(f"{hal_id}.*"))
+                + list(pdf_dir.glob(f"{hal_id.replace('-', '_')}.*"))
+            )
             if other_files:
-                logging.warning("Excluded non-PDF file(s) for %s: %s", hal_id, [f.name for f in other_files])
-                ignored_count += 1
+                logging.warning(
+                    "Excluded non-PDF file(s) for %s: %s",
+                    hal_id, [f.name for f in other_files]
+                )
+                non_pdf_count += 1
             else:
                 logging.error("Missing PDF file for %s", hal_id)
                 missing_count += 1
@@ -149,7 +169,13 @@ def establish_available_documents(
     )
     logging.debug("Available docs: %s", list(available_docs.keys()))
 
-    return available_docs, len(catalog_by_hal_id), missing_count
+    return (
+        available_docs,
+        len(catalog_by_hal_id),
+        missing_count,
+        oversized_count,
+        non_pdf_count,
+    )
 
 
 def exclude_oversized_pdfs(pdf_files: list[Path]) -> list[Path]:
@@ -491,9 +517,13 @@ def main() -> int:
         logging.error("No catalog file available")
         return 1
 
-    available_docs, total_records, missing_files = establish_available_documents(
-        catalog_file, args.dir
-    )
+    (
+        available_docs,
+        total_records,
+        missing_files,
+        oversized_files,
+        non_pdf_files,
+    ) = establish_available_documents(catalog_file, args.dir)
 
     if not available_docs:
         logging.error("No documents available for upload")
