@@ -25,8 +25,8 @@ from r2r import R2RClient
 
 from intake.config import (
     CATALOG_FILE,
+    DOCUMENTS_DIR,
     MAX_FILE_SIZE,
-    PDF_DIR,
     R2R_DEFAULT_BASE_URL,
     setup_logging,
 )
@@ -46,8 +46,8 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--dir",
         type=Path,
-        default=PDF_DIR,
-        help="Directory containing PDF files for verification.",
+        default=DOCUMENTS_DIR,
+        help="Directory containing PDF files for upload and verification.",
     )
     parser.add_argument(
         "--base-url", type=str, default=R2R_DEFAULT_BASE_URL, help="R2R API URL."
@@ -94,7 +94,10 @@ def load_catalog_local(catalog_file: Path) -> dict[str, dict[str, Any]]:
                 hal_id = pub["halId_s"]
                 catalog_by_hal_id[hal_id] = pub
 
-        logging.info("Loaded %d publications from catalog", len(catalog_by_hal_id))
+        logging.info(
+            "Catalog loaded: %d records",
+            len(catalog_by_hal_id),
+        )
         return catalog_by_hal_id
 
     except Exception as e:
@@ -104,9 +107,9 @@ def load_catalog_local(catalog_file: Path) -> dict[str, dict[str, Any]]:
 
 def establish_available_documents(
     catalog_file: Path, pdf_dir: Path
-) -> tuple[dict[str, dict[str, Any]], int, int]:
+) -> tuple[dict[str, dict[str, Any]], int, int, int, int]:
     """
-    Walk the catalog and verify PDF files exist in the pdfs directory.
+    Walk the catalog and verify PDF files exist in the documents directory.
 
     Returns:
         - Dictionary of available documents (hal_id -> metadata)
@@ -118,6 +121,8 @@ def establish_available_documents(
 
     available_docs = {}
     missing_count = 0
+    oversized_count = 0
+    non_pdf_count = 0
 
     for hal_id, metadata in catalog_by_hal_id.items():
         if "pdf_url" not in metadata and "fileMain_s" not in metadata:
@@ -127,60 +132,75 @@ def establish_available_documents(
         pdf_file_hyphen = pdf_dir / f"{hal_id}.pdf"
         pdf_file_underscore = pdf_dir / f"{hal_id.replace('-', '_')}.pdf"
 
-        if pdf_file_hyphen.exists() or pdf_file_underscore.exists():
-            available_docs[hal_id] = metadata
+        # Check existence and size
+        candidate = None
+        if pdf_file_hyphen.exists():
+            candidate = pdf_file_hyphen
+        elif pdf_file_underscore.exists():
+            candidate = pdf_file_underscore
+
+        if candidate:
+            if candidate.stat().st_size > MAX_FILE_SIZE:
+                logging.warning(
+                    "File too large for %s: %s (> %d bytes)",
+                    hal_id,
+                    candidate.name,
+                    MAX_FILE_SIZE,
+                )
+                oversized_count += 1
+            else:
+                available_docs[hal_id] = metadata
         else:
-            logging.error("Missing PDF file for %s", hal_id)
-            missing_count += 1
+            other_files = list(pdf_dir.glob(f"{hal_id}.*")) + list(
+                pdf_dir.glob(f"{hal_id.replace('-', '_')}.*")
+            )
+            if other_files:
+                logging.warning(
+                    "Excluded non-PDF file(s) for %s: %s",
+                    hal_id,
+                    [f.name for f in other_files],
+                )
+                non_pdf_count += 1
+            else:
+                logging.error("Missing PDF file for %s", hal_id)
+                missing_count += 1
 
     logging.info(
-        "Available documents: %d, Missing files: %d, Total records: %d",
+        "Local summary: %d valid | %d missing | %d oversized | %d non-PDF | out of %d catalog entries",
         len(available_docs),
         missing_count,
+        oversized_count,
+        non_pdf_count,
         len(catalog_by_hal_id),
     )
     logging.debug("Available docs: %s", list(available_docs.keys()))
 
-    return available_docs, len(catalog_by_hal_id), missing_count
-
-
-def exclude_oversized_pdfs(pdf_files: list[Path]) -> list[Path]:
-    """Exclude PDF files exceeding the maximum allowed size."""
-    filtered_files = []
-    excluded_files = 0
-
-    for pdf_file in pdf_files:
-        if pdf_file.stat().st_size > MAX_FILE_SIZE:
-            logging.warning(
-                "Excluding oversized file (>%d bytes): %s", MAX_FILE_SIZE, pdf_file
-            )
-            excluded_files += 1
-        else:
-            filtered_files.append(pdf_file)
-
-    if excluded_files:
-        logging.info("Excluded %d oversized file(s) from upload list.", excluded_files)
-
-    return filtered_files
+    return (
+        available_docs,
+        len(catalog_by_hal_id),
+        missing_count,
+        oversized_count,
+        non_pdf_count,
+    )
 
 
 def get_uploadable_documents(
     available_docs: dict[str, dict[str, Any]],
-    existing_documents: dict[str, str],
+    server_documents: dict[str, str],
     pdf_dir: Path,
 ) -> list[Path]:
     """
-    Get documents that are available locally but not successfully uploaded to server.
+    Get documents that are available locally but not present or 'failed' on the server.
 
     Returns list of PDF file paths that should be uploaded.
     """
-    uploadable_files = []
+    uploadable_pdfs = []
 
     for hal_id, metadata in available_docs.items():
         formatted_metadata = format_metadata_for_upload(metadata)
         doc_title = formatted_metadata.get("title", hal_id)
 
-        ingestion_status = existing_documents.get(doc_title)
+        ingestion_status = server_documents.get(doc_title)
 
         if ingestion_status not in (None, "failed"):
             continue
@@ -189,14 +209,17 @@ def get_uploadable_documents(
         pdf_file_underscore = pdf_dir / f"{hal_id.replace('-', '_')}.pdf"
 
         if pdf_file_hyphen.exists():
-            uploadable_files.append(pdf_file_hyphen)
+            uploadable_pdfs.append(pdf_file_hyphen)
         elif pdf_file_underscore.exists():
-            uploadable_files.append(pdf_file_underscore)
+            uploadable_pdfs.append(pdf_file_underscore)
 
-    logging.info("Uploadable documents: %d", len(uploadable_files))
-    logging.debug("Uploadable files: %s", [f.name for f in uploadable_files])
+    logging.info(
+        "Ready to upload: %d PDFs (valid locally but missing or failed on server)",
+        len(uploadable_pdfs),
+    )
+    logging.debug("Uploadable PDFs: %s", [f.name for f in uploadable_pdfs])
 
-    return uploadable_files
+    return uploadable_pdfs
 
 
 def load_metadata(metadata_file: Path) -> dict[str, dict[str, object]]:
@@ -295,36 +318,39 @@ def format_metadata_for_upload(metadata: dict[str, object]) -> dict[str, str]:
     return result
 
 
-def upload_pdfs(
-    pdf_files: list[Path],
+def upload_documents(
+    document_paths: list[Path],
     client: R2RClient,
-    existing_documents: dict[str, str],
+    server_documents: dict[str, str],
     metadata_by_file: dict[str, dict[str, object]],
     collection: str | None = None,
     max_upload: int = 0,
 ) -> tuple[int, int, list[tuple[Path, str]]]:
-    """Upload new PDFs and skip existing ones. Stop after max_upload successful uploads if set."""
+    """Upload documents, skipping those already present or failed on the server. Stop after max_upload successful uploads if set."""
     success_count = 0
     skipped_count = 0
-    failed_files: list[tuple[Path, str]] = []
+    failed_documents: list[tuple[Path, str]] = []
 
     if max_upload == 0:
         logging.info(
             "Dry run mode: No files will be uploaded. Try using --max-upload 3."
         )
-        return success_count, skipped_count, failed_files
+        return success_count, skipped_count, failed_documents
 
-    for pdf_file in pdf_files:
+    for doc_path in document_paths:
         if max_upload > 0 and success_count >= max_upload:
             logging.info("Reached maximum upload limit: %d files.", max_upload)
             break
 
         try:
             logging.info(
-                "Uploading %d/%d: %s", success_count + 1, len(pdf_files), pdf_file.name
+                "Uploading %d/%d: %s",
+                success_count + 1,
+                len(document_paths),
+                doc_path.name,
             )
             # Utiliser le titre du document pour la recherche d'existant
-            file_stem = pdf_file.stem
+            file_stem = doc_path.stem
             raw_metadata_for_title = metadata_by_file.get(file_stem, {})
             formatted_for_title = (
                 format_metadata_for_upload(raw_metadata_for_title)
@@ -332,24 +358,24 @@ def upload_pdfs(
                 else {}
             )
             doc_title = formatted_for_title.get("title", file_stem)
-            ingestion_status = existing_documents.get(doc_title)
+            ingestion_status = server_documents.get(doc_title)
 
             if ingestion_status not in (None, "failed"):
                 logging.debug(
-                    "Skipping file with ingestion_status='%s': %s",
+                    "Skipping document with ingestion_status='%s': %s",
                     ingestion_status,
-                    pdf_file,
+                    doc_path,
                 )
                 skipped_count += 1
                 continue
 
             if ingestion_status == "failed":
                 logging.warning(
-                    "Re-uploading file with previous ingestion_status='failed': %s",
-                    pdf_file,
+                    "Re-uploading document with previous ingestion_status='failed': %s",
+                    doc_path,
                 )
             else:
-                logging.debug("Uploading new file: %s", pdf_file)
+                logging.debug("Uploading new document: %s", doc_path)
 
             # Prepare upload parameters
             kwargs = {}
@@ -357,30 +383,30 @@ def upload_pdfs(
                 kwargs["collection_name"] = collection
 
             metadata = None
-            file_stem = pdf_file.stem
+            file_stem = doc_path.stem
             if file_stem in metadata_by_file:
                 raw_metadata = metadata_by_file[file_stem]
                 metadata = format_metadata_for_upload(raw_metadata)
 
-                logging.debug("Adding metadata to %s: %s", pdf_file.name, metadata)
+                logging.debug("Adding metadata to %s: %s", doc_path.name, metadata)
             else:
-                logging.debug("No metadata found for file: %s", pdf_file.name)
+                logging.debug("No metadata found for file: %s", doc_path.name)
 
             # Upload
             client.documents.create(
-                file_path=str(pdf_file),
+                file_path=str(doc_path),
                 metadata=metadata,
                 **kwargs,  # Other parameters like collection_name
             )
 
-            logging.info("Successfully uploaded file: %s", pdf_file)
+            logging.info("Successfully uploaded document: %s", doc_path)
             success_count += 1
 
         except Exception as e:
-            logging.error("Failed to process file %s: %s", pdf_file, str(e))
-            failed_files.append((pdf_file, str(e)))
+            logging.error("Failed to process document %s: %s", doc_path, str(e))
+            failed_documents.append((doc_path, str(e)))
 
-    return success_count, skipped_count, failed_files
+    return success_count, skipped_count, failed_documents
 
 
 def check_r2r_connection(client: R2RClient) -> bool:
@@ -423,7 +449,7 @@ def print_upload_statistics(
     total_records: int,
     available_docs: list[dict[str, Any]],
     missing_files: int,
-    existing_documents: dict[str, str],
+    server_documents: dict[str, str],
     uploadable_files: list[Path],
     success_count: int,
     skipped_count: int,
@@ -431,10 +457,14 @@ def print_upload_statistics(
 ) -> int:
     """Print upload statistics and return appropriate exit code."""
     logging.info("=== UPLOAD STATISTICS ===")
-    logging.info("Total catalog records: %d", total_records)
+
+    logging.info(
+        "Catalog records loaded: %d",
+        total_records,
+    )
     logging.info("Available documents: %d", len(available_docs))
     logging.info("Missing PDF files: %d", missing_files)
-    logging.info("Documents on server: %d", len(existing_documents))
+    logging.info("Documents on server: %d", len(server_documents))
     logging.info("Uploadable documents: %d", len(uploadable_files))
     logging.info("Successfully uploaded: %d", success_count)
     logging.info("Skipped: %d", skipped_count)
@@ -482,9 +512,13 @@ def main() -> int:
         logging.error("No catalog file available")
         return 1
 
-    available_docs, total_records, missing_files = establish_available_documents(
-        catalog_file, args.dir
-    )
+    (
+        available_docs,
+        total_records,
+        missing_files,
+        oversized_files,
+        non_pdf_files,
+    ) = establish_available_documents(catalog_file, args.dir)
 
     if not available_docs:
         logging.error("No documents available for upload")
@@ -500,29 +534,30 @@ def main() -> int:
         logging.error("Failed to retrieve documents from R2R.")
         return 3
 
-    existing_documents = {}
-    for _, doc in documents_df.iterrows():
-        existing_documents[doc["title"]] = doc["ingestion_status"]
+    # Rename to reflect server-side documents
+    server_documents: dict[str, str] = {
+        row["title"]: row["ingestion_status"] for _, row in documents_df.iterrows()
+    }
 
-    uploadable_files = get_uploadable_documents(
-        available_docs, existing_documents, args.dir
+    logging.info(
+        "Server summary: %d documents present",
+        len(server_documents),
     )
 
-    if not uploadable_files:
-        logging.info("No new documents to upload")
-        return 0
+    uploadable_pdfs = get_uploadable_documents(
+        available_docs, server_documents, args.dir
+    )
 
-    uploadable_files = exclude_oversized_pdfs(uploadable_files)
-    if not uploadable_files:
-        logging.error("No valid PDF files to upload after filtering oversized files.")
-        return 4
+    if not uploadable_pdfs:
+        logging.info("No new PDF documents to upload")
+        return 0
 
     metadata_by_file = load_metadata(catalog_file)
 
-    success_count, skipped_count, failed_files = upload_pdfs(
-        uploadable_files,
+    success_count, skipped_count, failed_documents = upload_documents(
+        uploadable_pdfs,
         client,
-        existing_documents,
+        server_documents,
         metadata_by_file,
         collection=args.collection,
         max_upload=args.max_upload,
@@ -532,11 +567,11 @@ def main() -> int:
         total_records,
         list(available_docs.values()),
         missing_files,
-        existing_documents,
-        uploadable_files,
+        server_documents,
+        uploadable_pdfs,
         success_count,
         skipped_count,
-        failed_files,
+        failed_documents,
     )
 
 

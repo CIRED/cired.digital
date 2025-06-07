@@ -8,7 +8,7 @@ query.py, push.py, etc.) can import them without hard-coding values.
 Constants provided:
   • BASE_DIR            – Project root directory (Path)
   • DATA_ROOT           – Root of your HAL data (Path)
-  • PDF_DIR             – Directory for downloaded PDFs (Path)
+  • DOCUMENTS_DIR       – Directory for downloaded documents (Path)
   • PUBLICATIONS_FILE   – Path to catalog.json (Path)
   • CONFERENCE_FILE     – Path to conference.json (Path)
   • HAL_API_URL         – Base URL for the HAL API (str)
@@ -49,7 +49,7 @@ if not (BASE_DIR / "data").is_dir():
 DATA_ROOT = BASE_DIR / "data" / "source" / "hal"
 
 # File paths
-PDF_DIR = DATA_ROOT / "pdfs"
+DOCUMENTS_DIR = DATA_ROOT / "documents"
 CATALOG_FILE = DATA_ROOT / "catalog.json"
 CONFERENCE_FILE = DATA_ROOT / "conference.json"
 RAW_HAL_DIR = BASE_DIR / "data" / "source" / "hal"
