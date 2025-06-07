@@ -71,8 +71,8 @@ def verify_existing_files() -> None:
     Verify file types of existing downloads.
     Prompt user to automatically correct incorrect extensions upon confirmation.
     """
-    if not PDF_DIR.exists():
-        logging.info("PDF directory does not exist: %s", PDF_DIR)
+    if not DOCUMENTS_DIR.exists():
+        logging.info("Documents directory does not exist: %s", DOCUMENTS_DIR)
         return
 
     mismatches = []
