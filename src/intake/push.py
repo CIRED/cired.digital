@@ -349,7 +349,7 @@ def upload_documents(
                 "Uploading %d/%d: %s", success_count + 1, len(document_paths), doc_path.name
             )
             # Utiliser le titre du document pour la recherche d'existant
-            file_stem = pdf_file.stem
+            file_stem = doc_path.stem
             raw_metadata_for_title = metadata_by_file.get(file_stem, {})
             formatted_for_title = (
                 format_metadata_for_upload(raw_metadata_for_title)
@@ -374,7 +374,7 @@ def upload_documents(
                     doc_path,
                 )
             else:
-                logging.debug("Uploading new file: %s", pdf_file)
+                logging.debug("Uploading new document: %s", doc_path)
 
             # Prepare upload parameters
             kwargs = {}
@@ -382,27 +382,27 @@ def upload_documents(
                 kwargs["collection_name"] = collection
 
             metadata = None
-            file_stem = pdf_file.stem
+            file_stem = doc_path.stem
             if file_stem in metadata_by_file:
                 raw_metadata = metadata_by_file[file_stem]
                 metadata = format_metadata_for_upload(raw_metadata)
 
-                logging.debug("Adding metadata to %s: %s", pdf_file.name, metadata)
+                logging.debug("Adding metadata to %s: %s", doc_path.name, metadata)
             else:
-                logging.debug("No metadata found for file: %s", pdf_file.name)
+                logging.debug("No metadata found for file: %s", doc_path.name)
 
             # Upload
             client.documents.create(
-                file_path=str(pdf_file),
+                file_path=str(doc_path),
                 metadata=metadata,
                 **kwargs,  # Other parameters like collection_name
             )
 
-            logging.info("Successfully uploaded file: %s", pdf_file)
+            logging.info("Successfully uploaded document: %s", doc_path)
             success_count += 1
 
         except Exception as e:
-            logging.error("Failed to process file %s: %s", pdf_file, str(e))
+            logging.error("Failed to process document %s: %s", doc_path, str(e))
             failed_documents.append((doc_path, str(e)))
 
     return success_count, skipped_count, failed_documents
