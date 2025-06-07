@@ -67,8 +67,8 @@ def sanitize_filename(text: str) -> str:
 
 def verify_existing_files() -> None:
     """
-    Vérifie les types de fichiers des téléchargements existants.
-    Propose de corriger automatiquement les extensions incorrectes après confirmation.
+    Verify file types of existing downloads.
+    Prompt user to automatically correct incorrect extensions upon confirmation.
     """
     if not PDF_DIR.exists():
         logging.info("PDF directory does not exist: %s", PDF_DIR)
@@ -109,17 +109,17 @@ def verify_existing_files() -> None:
             mismatch["content_type"],
         )
     if mismatches:
-        response = input("Extensions incorrectes détectées. Voulez-vous corriger automatiquement ? [y/N]: ")
-        if response.lower() in ("y", "yes", "o", "oui"):
+        response = input("Detected incorrect extensions. Do you want to automatically correct them? [y/N]: ")
+        if response.lower() in ("y", "yes"):
             for mismatch in mismatches:
                 old_path = PDF_DIR / mismatch["file"]
                 new_path = old_path.with_suffix(mismatch["correct_ext"])
                 old_path.rename(new_path)
-                logging.info("Renommé %s en %s", mismatch["file"], new_path.name)
+                logging.info("Renamed %s to %s", mismatch["file"], new_path.name)
         else:
-            logging.info("Corrections annulées par l'utilisateur.")
+            logging.info("User cancelled corrections.")
     else:
-        logging.info("Toutes les extensions sont correctes.")
+        logging.info("All extensions are correct.")
 
 
 def download_file(url: str, target_path: Path) -> bool:
