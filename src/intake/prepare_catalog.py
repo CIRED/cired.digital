@@ -133,7 +133,6 @@ def process_publications(raw_data: dict[str, Any]) -> dict[str, Any]:
 
     stats = {
         "total_retrieved": len(publications),
-        "no_open_access_excluded": 0,
         "working_papers_excluded": 0,
         "final_count": 0,
     }
@@ -151,14 +150,7 @@ def process_publications(raw_data: dict[str, Any]) -> dict[str, Any]:
 
         related_publications.append(pub)
 
-    filtered_publications = []
-
-    for pub in related_publications:
-        if not has_open_access(pub):
-            stats["no_open_access_excluded"] += 1
-            continue
-
-        filtered_publications.append(pub)
+    filtered_publications = related_publications
 
     final_publications, working_papers_excluded = filter_working_papers(
         filtered_publications
@@ -168,7 +160,6 @@ def process_publications(raw_data: dict[str, Any]) -> dict[str, Any]:
 
     logging.info("Filtering statistics:")
     logging.info("  Total retrieved: %d", stats["total_retrieved"])
-    logging.info("  No open access excluded: %d", stats["no_open_access_excluded"])
     logging.info("  Working papers excluded: %d", stats["working_papers_excluded"])
     logging.info("  Final catalog count: %d", stats["final_count"])
 
