@@ -28,6 +28,7 @@ from pathlib import Path
 from typing import Any
 
 import requests
+import magic
 
 from intake.config import (
     CATALOG_FILE,
@@ -130,23 +131,7 @@ def download_file(url: str, target_path: Path) -> bool:
         with requests.get(url, stream=True, timeout=DOWNLOAD_TIMEOUT) as r:
             r.raise_for_status()
 
-            content_type = r.headers.get("content-type", "").split(";")[0].strip()
-            if content_type:
-                extension = mimetypes.guess_extension(content_type)
-                if extension:
-                    target_path = target_path.with_suffix(extension)
-                    temp_path = target_path.with_suffix(".tmp")
-                    logging.debug(
-                        "Detected content-type: %s, using extension: %s",
-                        content_type,
-                        extension,
-                    )
-                else:
-                    logging.warning(
-                        "Unknown content-type: %s, keeping .pdf extension", content_type
-                    )
-            else:
-                logging.warning("No content-type header, keeping .pdf extension")
+            # Libmagic déterminera le type de fichier après téléchargement ; l’extension sera gérée ci-dessous
 
             with open(temp_path, "wb") as f:
                 for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
