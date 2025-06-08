@@ -50,7 +50,7 @@ def process_publications(
     # Extraction du premier titre si liste et normalisation
     def first_str(x: Any) -> str:
         if isinstance(x, list) and x:
-            return x[0]
+            return str(x[0])
         if isinstance(x, str):
             return x
         return ""
