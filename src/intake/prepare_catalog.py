@@ -150,7 +150,7 @@ def main() -> None:
         catalog_data = process_publications(raw_data, str(raw_file))
 
         # Nettoyage des NaN pour l'enregistrement
-        def _clean(pub):
+        def _clean(pub: dict[str, Any]) -> dict[str, Any]:
             return {
                 k: v for k, v in pub.items() if not (isinstance(v, float) and isnan(v))
             }
