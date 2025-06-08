@@ -146,7 +146,7 @@ def main() -> None:
     )
 
     fields = """
-docid,halId_s,doiId_s,label_s,producedDate_tdate,authFullName_s,title_s,abstract_s,submitType_s,docType_s,labStructAcronym_s,fileMain_s
+docid,halId_s,doiId_s,label_s,producedDate_tdate,authFullName_s,title_s,abstract_s,submitType_s,docType_s,peerReviewing_t,labStructAcronym_s,fileMain_s
 """
     params: dict[str, str | int] = {
         "q": HAL_QUERY,
