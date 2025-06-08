@@ -34,6 +34,7 @@ from intake.utils import (
     get_catalog_file,
     get_catalog_publications,
     get_server_documents,
+    get_latest_prepared_catalog,
 )
 
 
@@ -64,6 +65,7 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--catalog",
         type=Path,
+        default=get_latest_prepared_catalog(),
         help="Catalog JSON file containing metadata for publications (default: latest prepared catalog)",
     )
     parser.add_argument(
