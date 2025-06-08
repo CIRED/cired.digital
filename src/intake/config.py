@@ -57,15 +57,11 @@ PREPARED_DIR = BASE_DIR / "data" / "prepared"
 BLACKLIST_FILE = BASE_DIR / "data" / "source" / "blacklist.json"
 
 # HAL Query settings
-#
-# TODO: try other requests potentially avoiding the homonymous problem:
-#   lab= ...(by name(s), by reference(s)
-#   collection= ...
 
 HAL_API_URL = "https://api.archives-ouvertes.fr/search/"
-HAL_QUERY = "CIRED"
-HAL_BATCH_SIZE = 100
-HAL_MAX_BATCHES = 50  # Fetch a maximum of 5000 publications
+HAL_QUERY = "labStructAcronym_s:CIRED"
+HAL_BATCH_SIZE = 500
+HAL_MAX_BATCHES = 10  # Fetch a maximum of 5000 publications
 
 # Download settings
 DOWNLOAD_DELAY = 1  # seconds

@@ -33,7 +33,7 @@ from intake.config import (
 from intake.utils import (
     get_catalog_file,
     get_catalog_publications,
-    get_existing_documents,
+    get_server_documents,
 )
 
 
@@ -125,7 +125,7 @@ def establish_available_documents(
     non_pdf_count = 0
 
     for hal_id, metadata in catalog_by_hal_id.items():
-        if "pdf_url" not in metadata and "fileMain_s" not in metadata:
+        if "fileMain_s" not in metadata:
             logging.debug("Skipping %s: No PDF available on HAL", hal_id)
             continue
 
@@ -190,9 +190,9 @@ def get_uploadable_documents(
     pdf_dir: Path,
 ) -> list[Path]:
     """
-    Get documents that are available locally but not present or 'failed' on the server.
+    Get documents that are available locally, type PDF, not oversized.
 
-    Returns list of PDF file paths that should be uploaded.
+    Returns a list of PDF file paths that could be uploaded.
     """
     uploadable_pdfs = []
 
@@ -250,8 +250,8 @@ def load_metadata(metadata_file: Path) -> dict[str, dict[str, object]]:
 
                 metadata_by_file[filename_hyphen] = pub
                 metadata_by_file[filename_underscore] = pub
-            elif "pdf_url" in pub:
-                filename = hashlib.md5(pub["pdf_url"].encode()).hexdigest()
+            elif "fileMain_s" in pub:
+                filename = hashlib.md5(pub["fileMain_s"].encode()).hexdigest()
                 metadata_by_file[filename] = pub
             else:
                 continue  # Skip if we can't determine filename
@@ -453,7 +453,7 @@ def print_upload_statistics(
     uploadable_files: list[Path],
     success_count: int,
     skipped_count: int,
-    failed_files: list[tuple[Path, str]],
+    failed_documents: list[tuple[Path, str]],
 ) -> int:
     """Print upload statistics and return appropriate exit code."""
     logging.info("=== UPLOAD STATISTICS ===")
@@ -468,11 +468,11 @@ def print_upload_statistics(
     logging.info("Uploadable documents: %d", len(uploadable_files))
     logging.info("Successfully uploaded: %d", success_count)
     logging.info("Skipped: %d", skipped_count)
-    logging.info("Failed: %d", len(failed_files))
+    logging.info("Failed: %d", len(failed_documents))
 
-    if failed_files:
+    if failed_documents:
         logging.error("Failed files:")
-        for file, error in failed_files:
+        for file, error in failed_documents:
             logging.error("- %s: %s", file, error)
         return 5
 
@@ -529,12 +529,11 @@ def main() -> int:
         logging.error("Cannot connect to R2R. Please check if the service is running.")
         return 2
 
-    documents_df = get_existing_documents(client)
+    documents_df = get_server_documents(client)
     if documents_df is None:
         logging.error("Failed to retrieve documents from R2R.")
         return 3
 
-    # Rename to reflect server-side documents
     server_documents: dict[str, str] = {
         row["title"]: row["ingestion_status"] for _, row in documents_df.iterrows()
     }

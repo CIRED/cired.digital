@@ -114,7 +114,7 @@ COLUMN_CONFIG: Mapping[str, Mapping[str, str | bool]] = {
 }
 
 
-def get_existing_documents(client: R2RClient) -> pd.DataFrame | None:
+def get_server_documents(client: R2RClient) -> pd.DataFrame | None:
     """
     Retrieve all documents from the R2R service as a structured DataFrame.
 
