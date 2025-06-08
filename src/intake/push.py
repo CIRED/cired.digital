@@ -84,7 +84,7 @@ def load_catalog_local(catalog_file: Path) -> tuple[dict[str, dict[str, Any]], i
         logging.error(
             "Run hal_query.py and prepare_catalog.py first to create the catalog."
         )
-        return {}
+        return {}, 0
 
     try:
         catalog_data = json.loads(catalog_file.read_text(encoding="utf-8"))
