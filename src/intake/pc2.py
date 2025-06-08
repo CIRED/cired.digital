@@ -29,7 +29,7 @@ from intake.config import (
 from intake.utils import get_latest_raw_hal_file, normalize_title
 
 
-def process_publications(raw_data: dict[str, Any]) -> dict[str, Any]:
+def process_publications(raw_data: dict[str, Any], source_filename: str) -> dict[str, Any]:
     """Process publications with comprehensive filtering and statistics via pandas."""
     # Charger en DataFrame
     df = pd.DataFrame(raw_data["response"]["docs"])
@@ -73,7 +73,7 @@ def process_publications(raw_data: dict[str, Any]) -> dict[str, Any]:
     # Construction du résultat
     result = {
         "processing_timestamp": datetime.now().isoformat(),
-        "source_file": raw_data.get("source_file", "unknown"),
+        "source_file": source_filename,
         "filtering_statistics": {
             "total_retrieved": total,
             "working_papers_excluded": excluded,
@@ -138,21 +138,13 @@ def main() -> None:
 
     try:
         raw_data = json.loads(raw_file.read_text(encoding="utf-8"))
-        raw_data["source_file"] = str(raw_file)
-        catalog_data = process_publications(raw_data)
+        catalog_data = process_publications(raw_data, str(raw_file))
         # Nettoyage des NaN pour l'enregistrement
         from math import isnan
         def _clean(pub):
             return {k: v for k, v in pub.items() if not (isinstance(v, float) and isnan(v))}
         catalog_data["publications"] = [_clean(p) for p in catalog_data["publications"]]
         save_prepared_catalog(catalog_data)
-        # Afficher les deux premières et les deux dernières entrées pour débogage
-        pubs = catalog_data["publications"]
-        # Nettoyer les NaN avant affichage debug
-        from math import isnan
-        def _clean(pub):
-            return {k: v for k, v in pub.items() if not (isinstance(v, float) and isnan(v))}
-        clean_pubs = [_clean(p) for p in pubs]
     except Exception as e:
         logging.error("Failed to process raw HAL file: %s", e)
 
