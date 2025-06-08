@@ -74,6 +74,7 @@ def process_publications(
     df_filtered = df.groupby("norm_title", group_keys=False).apply(filter_group)
 
     excluded = total - len(df_filtered)
+    duplicates_excluded = 0
 
     # Détection des doublons de halId_s
     pubs_list = df_filtered.drop(columns="norm_title").to_dict(orient="records")
@@ -93,6 +94,7 @@ def process_publications(
                         "Doublon détecté pour halId_s=%s, métadonnées différentes",
                         hal_id,
                     )
+                duplicates_excluded += 1
                 continue
             seen[hal_id] = pub
             unique_pubs.append(pub)
@@ -106,7 +108,7 @@ def process_publications(
         "filtering_statistics": {
             "total_retrieved": total,
             "working_papers_excluded": excluded,
-            "duplicates_excluded": len(df_filtered) - len(unique_pubs),
+            "duplicates_excluded": duplicates_excluded,
             "final_count": len(unique_pubs),
         },
         "publications": sorted(
