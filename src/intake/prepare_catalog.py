@@ -75,6 +75,30 @@ def process_publications(
 
     excluded = total - len(df_filtered)
 
+    # Détection des doublons de halId_s
+    pubs_list = df_filtered.drop(columns="norm_title").to_dict(orient="records")
+    unique_pubs = []
+    seen = {}
+    for pub in pubs_list:
+        hal_id = pub.get("halId_s")
+        if hal_id:
+            if hal_id in seen:
+                if pub == seen[hal_id]:
+                    logging.warning(
+                        "Doublon détecté pour halId_s=%s, métadonnées identiques, suppression du doublon",
+                        hal_id,
+                    )
+                else:
+                    logging.warning(
+                        "Doublon détecté pour halId_s=%s, métadonnées différentes",
+                        hal_id,
+                    )
+                continue
+            seen[hal_id] = pub
+            unique_pubs.append(pub)
+        else:
+            unique_pubs.append(pub)
+
     # Construction du résultat
     result = {
         "processing_timestamp": datetime.now().isoformat(),
@@ -85,7 +109,7 @@ def process_publications(
             "final_count": len(df_filtered),
         },
         "publications": sorted(
-            df_filtered.drop(columns="norm_title").to_dict(orient="records"),
+            unique_pubs,
             key=lambda pub: pub.get("halId_s", ""),
         ),
     }
