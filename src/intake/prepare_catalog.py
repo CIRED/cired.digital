@@ -149,7 +149,7 @@ def save_prepared_catalog(catalog_data: dict[str, Any]) -> Path:
     filepath = PREPARED_DIR / filename
 
     filepath.write_text(
-        json.dumps(catalog_data, ensure_ascii=False, indent=2), encoding="utf-8"
+        json.dumps(catalog_data, ensure_ascii=False, indent=2, sort_keys=True), encoding="utf-8"
     )
 
     logging.info("Saved prepared catalog to %s", filepath)
@@ -204,9 +204,9 @@ def main() -> None:
         # Afficher les deux premières et les deux dernières entrées pour débogage
         pubs = catalog_data["publications"]
         print("Deux premières entrées :")
-        print(json.dumps(pubs[:2], ensure_ascii=False, indent=2))
+        print(json.dumps(pubs[:2], ensure_ascii=False, indent=2, sort_keys=True))
         print("Deux dernières entrées :")
-        print(json.dumps(pubs[-2:], ensure_ascii=False, indent=2))
+        print(json.dumps(pubs[-2:], ensure_ascii=False, indent=2, sort_keys=True))
 
     except Exception as e:
         logging.error("Failed to process raw HAL file: %s", e)
