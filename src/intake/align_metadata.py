@@ -27,7 +27,7 @@ from intake.push import format_metadata_for_upload
 from intake.utils import (
     get_catalog_file,
     get_catalog_publications,
-    get_existing_documents,
+    get_server_documents,
 )
 
 
@@ -289,7 +289,7 @@ def main() -> int:
     client = R2RClient(base_url=args.base_url)
 
     try:
-        documents_df = get_existing_documents(client)
+        documents_df = get_server_documents(client)
         if documents_df is None:
             logging.error(
                 "Metadata alignment abort: Failed to retrieve documents from R2R."

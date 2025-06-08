@@ -16,7 +16,7 @@ import pandas as pd
 from r2r import R2RClient
 
 from intake.config import R2R_DEFAULT_BASE_URL, setup_logging
-from intake.utils import get_existing_documents
+from intake.utils import get_server_documents
 
 
 def check_r2r(client: R2RClient) -> bool:
@@ -320,7 +320,7 @@ def setup() -> tuple[R2RClient, pd.DataFrame]:
         logging.error("R2R service is unreachable.")
         exit(3)
 
-    documents = get_existing_documents(client)
+    documents = get_server_documents(client)
     if documents is None:
         logging.error("Could not retrieve documents from R2R.")
         exit(1)

@@ -242,14 +242,14 @@ def process_downloads(
     failed = 0
 
     for entry in catalog:
-        url = entry.get("pdf_url")
+        url = entry.get("fileMain_s")
         if not url:
             continue
 
         if "halId_s" in entry:
             target_file = DOCUMENTS_DIR / f"{sanitize_filename(entry['halId_s'])}.pdf"
         else:
-            hashname = hashlib.md5(entry["pdf_url"].encode()).hexdigest()
+            hashname = hashlib.md5(url.encode()).hexdigest()
             target_file = DOCUMENTS_DIR / f"{hashname}.pdf"
 
         if target_file.exists():
