@@ -203,10 +203,6 @@ def main() -> None:
         save_prepared_catalog(catalog_data)
         # Afficher les deux premières et les deux dernières entrées pour débogage
         pubs = catalog_data["publications"]
-        print("Deux premières entrées :")
-        print(json.dumps(pubs[:2], ensure_ascii=False, indent=2, sort_keys=True))
-        print("Deux dernières entrées :")
-        print(json.dumps(pubs[-2:], ensure_ascii=False, indent=2, sort_keys=True))
 
     except Exception as e:
         logging.error("Failed to process raw HAL file: %s", e)

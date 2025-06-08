@@ -153,10 +153,6 @@ def main() -> None:
         def _clean(pub):
             return {k: v for k, v in pub.items() if not (isinstance(v, float) and isnan(v))}
         clean_pubs = [_clean(p) for p in pubs]
-        print("Deux premières entrées :")
-        print(json.dumps(clean_pubs[:2], ensure_ascii=False, indent=2, sort_keys=True))
-        print("Deux dernières entrées :")
-        print(json.dumps(clean_pubs[-2:], ensure_ascii=False, indent=2, sort_keys=True))
     except Exception as e:
         logging.error("Failed to process raw HAL file: %s", e)
 
