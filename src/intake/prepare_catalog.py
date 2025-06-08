@@ -74,34 +74,24 @@ def process_publications(
     df_filtered = df.groupby("norm_title", group_keys=False).apply(filter_group)
 
     excluded = total - len(df_filtered)
-    duplicates_excluded = 0
 
-    # Détection des doublons de halId_s
-    pubs_list = df_filtered.drop(columns="norm_title").to_dict(orient="records")
-    unique_pubs = []
-    seen = {}
-    for pub in pubs_list:
-        hal_id = pub.get("halId_s")
-        if hal_id:
-            if hal_id in seen:
-                if pub == seen[hal_id]:
-                    logging.warning(
-                        "Doublon détecté pour halId_s=%s, métadonnées identiques, suppression du doublon",
-                        hal_id,
-                    )
-                else:
-                    logging.warning(
-                        "Doublon détecté pour halId_s=%s, métadonnées différentes",
-                        hal_id,
-                    )
-                duplicates_excluded += 1
-                continue
-            seen[hal_id] = pub
-            unique_pubs.append(pub)
-        else:
-            unique_pubs.append(pub)
+    # Deduplicate halId_s using pandas
+    mask_no_id = df_filtered["halId_s"].isna()
+    df_no_id = df_filtered[mask_no_id]
+    df_with_id = df_filtered[~mask_no_id]
 
-    # Construction du résultat
+    # Keep first record per halId_s
+    df_unique_id = (
+        df_with_id
+        .sort_values("halId_s")
+        .drop_duplicates(subset="halId_s", keep="first")
+    )
+    duplicates_excluded = len(df_with_id) - len(df_unique_id)
+
+    # Reassemble final (with records without IDs)
+    df_final = pd.concat([df_unique_id, df_no_id], ignore_index=True)
+    pubs_list = df_final.drop(columns="norm_title").to_dict(orient="records")
+
     result = {
         "processing_timestamp": datetime.now().isoformat(),
         "source_file": source_filename,
@@ -109,10 +99,10 @@ def process_publications(
             "total_retrieved": total,
             "working_papers_excluded": excluded,
             "duplicates_excluded": duplicates_excluded,
-            "final_count": len(unique_pubs),
+            "final_count": len(pubs_list),
         },
         "publications": sorted(
-            unique_pubs,
+            pubs_list,
             key=lambda pub: pub.get("halId_s", ""),
         ),
     }
