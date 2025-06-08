@@ -140,6 +140,11 @@ def main() -> None:
         raw_data = json.loads(raw_file.read_text(encoding="utf-8"))
         raw_data["source_file"] = str(raw_file)
         catalog_data = process_publications(raw_data)
+        # Nettoyage des NaN pour l'enregistrement
+        from math import isnan
+        def _clean(pub):
+            return {k: v for k, v in pub.items() if not (isinstance(v, float) and isnan(v))}
+        catalog_data["publications"] = [_clean(p) for p in catalog_data["publications"]]
         save_prepared_catalog(catalog_data)
         # Afficher les deux premières et les deux dernières entrées pour débogage
         pubs = catalog_data["publications"]
