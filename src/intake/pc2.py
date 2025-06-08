@@ -141,8 +141,12 @@ def main() -> None:
         raw_data["source_file"] = str(raw_file)
         catalog_data = process_publications(raw_data)
         save_prepared_catalog(catalog_data)
-        # Afficher la première entrée pour débogage
-        print(json.dumps(catalog_data["publications"][0], ensure_ascii=False, indent=2))
+        # Afficher les deux premières et les deux dernières entrées pour débogage
+        pubs = catalog_data["publications"]
+        print("Deux premières entrées :")
+        print(json.dumps(pubs[:2], ensure_ascii=False, indent=2))
+        print("Deux dernières entrées :")
+        print(json.dumps(pubs[-2:], ensure_ascii=False, indent=2))
     except Exception as e:
         logging.error("Failed to process raw HAL file: %s", e)
 
