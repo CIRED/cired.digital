@@ -33,8 +33,8 @@ from intake.config import (
 from intake.utils import (
     get_catalog_file,
     get_catalog_publications,
-    get_server_documents,
     get_latest_prepared_catalog,
+    get_server_documents,
 )
 
 
