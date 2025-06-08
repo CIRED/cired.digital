@@ -79,7 +79,7 @@ def process_publications(raw_data: dict[str, Any]) -> dict[str, Any]:
             "working_papers_excluded": excluded,
             "final_count": len(df_filtered),
         },
-        "publications": df_filtered.drop(columns="norm_title").to_dict(orient="records"),
+        "publications": sorted(df_filtered.drop(columns="norm_title").to_dict(orient="records"), key=lambda pub: pub.get("halId_s", "")),
     }
 
     return result

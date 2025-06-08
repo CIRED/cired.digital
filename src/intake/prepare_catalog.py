@@ -136,7 +136,7 @@ def process_publications(raw_data: dict[str, Any]) -> dict[str, Any]:
         "processing_timestamp": datetime.now().isoformat(),
         "source_file": str(raw_data.get("source_file", "unknown")),
         "filtering_statistics": stats,
-        "publications": final_publications,
+        "publications": sorted(final_publications, key=lambda pub: pub.get("halId_s", "")),
     }
 
 
