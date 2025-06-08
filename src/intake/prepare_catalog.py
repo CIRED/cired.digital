@@ -128,6 +128,13 @@ def save_prepared_catalog(catalog_data: dict[str, Any]) -> Path:
         encoding="utf-8",
     )
     logging.info("Saved prepared catalog to %s", filepath)
+    stats = catalog_data.get("filtering_statistics", {})
+    logging.info(
+        "Statistiques catalogue préparé : récupérés=%d, exclus_working_papers=%d, final=%d",
+        stats.get("total_retrieved", 0),
+        stats.get("working_papers_excluded", 0),
+        stats.get("final_count", 0),
+    )
     return filepath
 
 
