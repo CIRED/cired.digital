@@ -17,8 +17,11 @@ import html
 import json
 import logging
 from datetime import datetime
+from math import isnan
 from pathlib import Path
 from typing import Any
+
+import pandas as pd
 
 from intake.config import (
     PREPARED_DIR,
@@ -27,132 +30,105 @@ from intake.config import (
 from intake.utils import get_latest_raw_hal_file, normalize_title
 
 
-def is_working_paper(doc_type: str) -> bool:
-    """Check if document type indicates a working paper."""
-    if not doc_type:
-        return False
+def process_publications(
+    raw_data: dict[str, Any], source_filename: str
+) -> dict[str, Any]:
+    """Process publications with comprehensive filtering and statistics via pandas."""
+    # Charger en DataFrame
+    df = pd.DataFrame(raw_data["response"]["docs"])
 
-    working_paper_types = {"UNDEFINED", "OTHER", "REPORT"}
-    return doc_type.upper() in working_paper_types
+    # Statistiques initiales
+    total = len(df)
 
+    # Nettoyage des champs
+    df["label_s"] = df["label_s"].apply(html.unescape)
+    if "producedDate_tdate" in df.columns:
+        df["producedDate_tdate"] = (
+            df["producedDate_tdate"].astype(str).str.split("T").str[0]
+        )
 
-def group_by_normalized_title(
-    publications: list[dict[str, Any]],
-) -> dict[str, list[dict[str, Any]]]:
-    """Group publications by normalized title."""
-    groups: dict[str, list[dict[str, Any]]] = {}
+    # Extraction du premier titre si liste et normalisation
+    def first_str(x: Any) -> str:
+        if isinstance(x, list) and x:
+            return str(x[0])
+        if isinstance(x, str):
+            return x
+        return ""
 
-    for pub in publications:
-        title = pub.get("title_s", "")
-        if isinstance(title, list):
-            title = title[0] if title else ""
-        normalized = normalize_title(title)
-
-        if normalized:
-            if normalized not in groups:
-                groups[normalized] = []
-            groups[normalized].append(pub)
-
-    return groups
-
-
-def filter_working_papers(
-    publications: list[dict[str, Any]],
-) -> tuple[list[dict[str, Any]], int]:
-    """Filter out working papers when published articles with same title exist."""
-    title_groups = group_by_normalized_title(publications)
-    filtered_publications = []
-    excluded_count = 0
-
-    for normalized_title, group in title_groups.items():
-        if len(group) == 1:
-            filtered_publications.extend(group)
-            continue
-
-        published_articles = []
-        working_papers = []
-
-        for pub in group:
-            doc_type = pub.get("docType_s", "")
-            if is_working_paper(doc_type):
-                working_papers.append(pub)
-            else:
-                published_articles.append(pub)
-
-        if published_articles:
-            filtered_publications.extend(published_articles)
-            excluded_count += len(working_papers)
-            if working_papers:
-                logging.debug(
-                    "Excluded %d working papers for title: %s (published version available)",
-                    len(working_papers),
-                    normalized_title[:50],
-                )
-                for wp in working_papers:
-                    wp_hal_id = wp.get("halId_s", "unknown")
-                    logging.debug("  Working paper excluded: %s", wp_hal_id)
-                for pa in published_articles:
-                    pa_hal_id = pa.get("halId_s", "unknown")
-                    logging.debug("  Published article kept: %s", pa_hal_id)
-        else:
-            filtered_publications.extend(group)
-
-    return filtered_publications, excluded_count
-
-
-def process_publications(raw_data: dict[str, Any]) -> dict[str, Any]:
-    """Process publications with comprehensive filtering and statistics."""
-    publications = raw_data["response"]["docs"]
-
-    stats = {
-        "total_retrieved": len(publications),
-        "working_papers_excluded": 0,
-        "final_count": 0,
-    }
-
-    related_publications = []
-
-    for pub in publications:
-        pub["label_s"] = html.unescape(pub["label_s"])
-        if "producedDate_tdate" in pub:
-            pub["producedDate_tdate"] = pub["producedDate_tdate"].split("T")[0]
-
-        related_publications.append(pub)
-
-    filtered_publications = related_publications
-
-    final_publications, working_papers_excluded = filter_working_papers(
-        filtered_publications
+    df["norm_title"] = (
+        df.get("title_s", df["label_s"]).apply(first_str).apply(normalize_title)
     )
-    stats["working_papers_excluded"] = working_papers_excluded
-    stats["final_count"] = len(final_publications)
 
-    logging.info("Filtering statistics:")
-    logging.info("  Total retrieved: %d", stats["total_retrieved"])
-    logging.info("  Working papers excluded: %d", stats["working_papers_excluded"])
-    logging.info("  Final catalog count: %d", stats["final_count"])
+    # Filtrage des working papers dans chaque groupe
+    def is_working_paper(doc_type: Any) -> bool:
+        if not isinstance(doc_type, str):
+            return False
+        return doc_type.upper() in {"UNDEFINED", "OTHER", "REPORT"}
 
-    return {
+    def filter_group(group: pd.DataFrame) -> pd.DataFrame:
+        mask_wp = group["docType_s"].apply(is_working_paper)
+        if (~mask_wp).any():
+            return group[~mask_wp]
+        return group
+
+    df_filtered = df.groupby("norm_title", group_keys=False).apply(filter_group)
+
+    excluded = total - len(df_filtered)
+
+    # Deduplicate halId_s using pandas
+    mask_no_id = df_filtered["halId_s"].isna()
+    df_no_id = df_filtered[mask_no_id]
+    df_with_id = df_filtered[~mask_no_id]
+
+    # Keep first record per halId_s
+    df_unique_id = (
+        df_with_id
+        .sort_values("halId_s")
+        .drop_duplicates(subset="halId_s", keep="first")
+    )
+    duplicates_excluded = len(df_with_id) - len(df_unique_id)
+
+    # Reassemble final (with records without IDs)
+    df_final = pd.concat([df_unique_id, df_no_id], ignore_index=True)
+    pubs_list = df_final.drop(columns="norm_title").to_dict(orient="records")
+
+    result = {
         "processing_timestamp": datetime.now().isoformat(),
-        "source_file": str(raw_data.get("source_file", "unknown")),
-        "filtering_statistics": stats,
-        "publications": final_publications,
+        "source_file": source_filename,
+        "filtering_statistics": {
+            "total_retrieved": total,
+            "working_papers_excluded": excluded,
+            "duplicates_excluded": duplicates_excluded,
+            "final_count": len(pubs_list),
+        },
+        "publications": sorted(
+            pubs_list,
+            key=lambda pub: pub.get("halId_s", ""),
+        ),
     }
+
+    return result
 
 
 def save_prepared_catalog(catalog_data: dict[str, Any]) -> Path:
     """Save prepared catalog to timestamped file."""
     PREPARED_DIR.mkdir(parents=True, exist_ok=True)
-
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"catalog_{timestamp}.json"
     filepath = PREPARED_DIR / filename
-
     filepath.write_text(
-        json.dumps(catalog_data, ensure_ascii=False, indent=2), encoding="utf-8"
+        json.dumps(catalog_data, ensure_ascii=False, indent=2, sort_keys=True),
+        encoding="utf-8",
     )
-
     logging.info("Saved prepared catalog to %s", filepath)
+    stats = catalog_data.get("filtering_statistics", {})
+    logging.info(
+        "Statistiques catalogue préparé : récupérés=%d, exclus_working_papers=%d, doublons_exclus=%d, final=%d",
+        stats.get("total_retrieved", 0),
+        stats.get("working_papers_excluded", 0),
+        stats.get("duplicates_excluded", 0),
+        stats.get("final_count", 0),
+    )
     return filepath
 
 
@@ -181,7 +157,6 @@ def main() -> None:
         "warning": logging.WARNING,
         "error": logging.ERROR,
     }
-
     setup_logging(level=log_levels[args.log_level])
 
     if args.raw_file:
@@ -197,11 +172,16 @@ def main() -> None:
 
     try:
         raw_data = json.loads(raw_file.read_text(encoding="utf-8"))
-        raw_data["source_file"] = str(raw_file)
+        catalog_data = process_publications(raw_data, str(raw_file))
 
-        catalog_data = process_publications(raw_data)
+        # Nettoyage des NaN pour l'enregistrement
+        def _clean(pub: dict[str, Any]) -> dict[str, Any]:
+            return {
+                k: v for k, v in pub.items() if not (isinstance(v, float) and isnan(v))
+            }
+
+        catalog_data["publications"] = [_clean(p) for p in catalog_data["publications"]]
         save_prepared_catalog(catalog_data)
-
     except Exception as e:
         logging.error("Failed to process raw HAL file: %s", e)
 

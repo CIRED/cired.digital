@@ -33,6 +33,7 @@ from intake.config import (
 from intake.utils import (
     get_catalog_file,
     get_catalog_publications,
+    get_latest_prepared_catalog,
     get_server_documents,
 )
 
@@ -64,6 +65,7 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--catalog",
         type=Path,
+        default=get_latest_prepared_catalog(),
         help="Catalog JSON file containing metadata for publications (default: latest prepared catalog)",
     )
     parser.add_argument(
@@ -75,14 +77,14 @@ def get_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def load_catalog_local(catalog_file: Path) -> dict[str, dict[str, Any]]:
+def load_catalog_local(catalog_file: Path) -> tuple[dict[str, dict[str, Any]], int]:
     """Load catalog data and index by hal_id."""
     if not catalog_file.exists():
         logging.error("Catalog file not found: %s", catalog_file)
         logging.error(
             "Run hal_query.py and prepare_catalog.py first to create the catalog."
         )
-        return {}
+        return {}, 0
 
     try:
         catalog_data = json.loads(catalog_file.read_text(encoding="utf-8"))
@@ -95,14 +97,15 @@ def load_catalog_local(catalog_file: Path) -> dict[str, dict[str, Any]]:
                 catalog_by_hal_id[hal_id] = pub
 
         logging.info(
-            "Catalog loaded: %d records",
+            "Catalog loaded: %d records (dont %d avec halId_s)",
+            len(publications),
             len(catalog_by_hal_id),
         )
-        return catalog_by_hal_id
+        return catalog_by_hal_id, len(publications)
 
     except Exception as e:
         logging.error("Failed to load catalog: %s", e)
-        return {}
+        return {}, 0
 
 
 def establish_available_documents(
@@ -117,7 +120,7 @@ def establish_available_documents(
         - Number of missing PDF files
 
     """
-    catalog_by_hal_id = load_catalog_local(catalog_file)
+    catalog_by_hal_id, total_records = load_catalog_local(catalog_file)
 
     available_docs = {}
     missing_count = 0
@@ -177,7 +180,7 @@ def establish_available_documents(
 
     return (
         available_docs,
-        len(catalog_by_hal_id),
+        total_records,
         missing_count,
         oversized_count,
         non_pdf_count,
