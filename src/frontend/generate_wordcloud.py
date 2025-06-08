@@ -14,7 +14,7 @@ from r2r import R2RClient
 from wordcloud import STOPWORDS, WordCloud
 
 from intake.config import R2R_DEFAULT_BASE_URL, setup_logging
-from intake.utils import get_existing_documents
+from intake.utils import get_server_documents
 
 setup_logging()
 
@@ -197,7 +197,7 @@ accessibilité mobilité inclusive fracture mobilité précarité mobilité rura
 def get_titles_from_r2r() -> list[str]:
     """Fetch the list of document titles from the R2R server."""
     client = R2RClient(base_url=R2R_DEFAULT_BASE_URL)
-    df = get_existing_documents(client)
+    df = get_server_documents(client)
     if df is None or "title" not in df.columns:
         logging.error("Could not find publication titles from the R2R server")
         return []
