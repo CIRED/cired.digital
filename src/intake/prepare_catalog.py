@@ -201,6 +201,8 @@ def main() -> None:
 
         catalog_data = process_publications(raw_data)
         save_prepared_catalog(catalog_data)
+        # Afficher la première entrée pour débogage
+        print(json.dumps(catalog_data["publications"][0], ensure_ascii=False, indent=2))
 
     except Exception as e:
         logging.error("Failed to process raw HAL file: %s", e)
