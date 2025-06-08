@@ -236,6 +236,8 @@ def process_downloads(
     catalog: list[dict[str, Any]], max_download: int
 ) -> tuple[int, int, int, int]:
     """Process downloads from catalog entries."""
++    # Cache des stems de fichiers existants (évite iterdir à chaque tour)
++    existing_stems = {p.stem for p in DOCUMENTS_DIR.iterdir() if p.is_file()}
     total = 0
     skipped = 0
     downloaded = 0
@@ -252,8 +254,9 @@ def process_downloads(
             hashname = hashlib.md5(url.encode()).hexdigest()
             target_file = DOCUMENTS_DIR / f"{hashname}.pdf"
 
-        if target_file.exists():
-            logging.info("Already exists, skipping: %s", target_file.name)
+        basename = target_file.stem
+        if basename in existing_stems:
+            logging.info("Already exists (any ext), skipping: %s.*", basename)
             skipped += 1
             continue
 
