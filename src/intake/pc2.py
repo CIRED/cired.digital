@@ -143,10 +143,15 @@ def main() -> None:
         save_prepared_catalog(catalog_data)
         # Afficher les deux premières et les deux dernières entrées pour débogage
         pubs = catalog_data["publications"]
+        # Nettoyer les NaN avant affichage debug
+        from math import isnan
+        def _clean(pub):
+            return {k: v for k, v in pub.items() if not (isinstance(v, float) and isnan(v))}
+        clean_pubs = [_clean(p) for p in pubs]
         print("Deux premières entrées :")
-        print(json.dumps(pubs[:2], ensure_ascii=False, indent=2))
+        print(json.dumps(clean_pubs[:2], ensure_ascii=False, indent=2))
         print("Deux dernières entrées :")
-        print(json.dumps(pubs[-2:], ensure_ascii=False, indent=2))
+        print(json.dumps(clean_pubs[-2:], ensure_ascii=False, indent=2))
     except Exception as e:
         logging.error("Failed to process raw HAL file: %s", e)
 
