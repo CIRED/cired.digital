@@ -4,7 +4,7 @@ Align R2R documents with metadata on the HAL catalog by deleting offenders.
 
 This script:
 - Reads source/hal/catalog.json
-- Gets existing documents from the server using verify.py
+- Gets existing documents from the server
 - Matches each document with catalog records by hal_id or title
 - Compares meta_ columns with catalog data
 - Delete documents with inconsistent meta
