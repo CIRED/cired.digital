@@ -57,9 +57,26 @@ PREPARED_DIR = BASE_DIR / "data" / "prepared"
 BLACKLIST_FILE = BASE_DIR / "data" / "source" / "blacklist.json"
 
 # HAL Query settings
+"""
+## Query for CIRED:
+We query HAL with the acronym of the lab, because the lab has two different structId_i:
+- 1042364 since 2020-01-01
+- 135977 from 1998-01-01 to 2019-12-31
 
+## Documents filter for open access:
+- Fulltext is in HAL "submitType_s:file"
+- Fulltext is in HAL OR on the web via unpaywall "(submitType_s:file OR linkExtId_s:openaccess)"
+
+## References:
+https://wiki.ccsd.cnrs.fr/wikis/hal/index.php/Requêtes_sur_les_ressources_de_HAL
+https://api.archives-ouvertes.fr/docs/search/?schema=fields#fields
+
+"""
 HAL_API_URL = "https://api.archives-ouvertes.fr/search/"
 HAL_QUERY = "labStructAcronym_s:CIRED"
+HAL_FILTER = "submitType_s:file"
+HAL_FIELDS = """docid,halId_s,doiId_s,label_s,producedDate_tdate,authFullName_s,title_s,abstract_s,submitType_s,docType_s,peerReviewing_t,labStructAcronym_s,fileMain_s"""
+
 HAL_BATCH_SIZE = 500
 HAL_MAX_BATCHES = 10  # Fetch a maximum of 5000 publications
 
