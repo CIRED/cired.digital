@@ -78,8 +78,6 @@ def get_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def load_catalog_local(catalog_file: Path) -> tuple[dict[str, dict[str, Any]], int]:
-    return load_catalog_by_hal_id(catalog_file)
 
 
 def establish_available_documents(
@@ -94,7 +92,7 @@ def establish_available_documents(
         - Number of missing PDF files
 
     """
-    catalog_by_hal_id, total_records = load_catalog_local(catalog_file)
+    catalog_by_hal_id, total_records = load_catalog_by_hal_id(catalog_file)
 
     available_docs = {}
     missing_count = 0
