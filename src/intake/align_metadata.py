@@ -30,9 +30,6 @@ from intake.utils import (
 )
 
 
-def load_catalog(catalog_file: Path) -> dict[str, dict[str, Any]]:
-    catalog_by_hal_id, _ = load_catalog_by_hal_id(catalog_file)
-    return catalog_by_hal_id
 
 
 def match_documents_to_catalog(
@@ -258,7 +255,7 @@ def main() -> int:
     else:
         logging.info("Using catalog file: %s", catalog_file)
 
-    catalog_by_hal_id = load_catalog(catalog_file)
+    catalog_by_hal_id, _ = load_catalog_by_hal_id(catalog_file)
     if not catalog_by_hal_id:
         logging.error("Metadata alignment abort: Failed to load catalog.")
         return 1
