@@ -81,7 +81,7 @@ def get_args() -> argparse.Namespace:
 
 def establish_available_documents(
     catalog_file: Path, pdf_dir: Path
-) -> tuple[dict[str, dict[str, Any]], int, int, int, int]:
+) -> tuple[dict[str, dict[str, Any]], int, int]:
     """
     Walk the catalog and verify PDF files exist in the documents directory.
 
@@ -97,8 +97,6 @@ def establish_available_documents(
 
     available_docs = {}
     missing_count = 0
-    oversized_count = 0
-    non_pdf_count = 0
 
     for hal_id, metadata in catalog_by_hal_id.items():
         if "fileMain_s" not in metadata:
@@ -124,7 +122,6 @@ def establish_available_documents(
                     candidate.stat().st_size,
                     MAX_FILE_SIZE,
                 )
-                oversized_count += 1
             else:
                 available_docs[hal_id] = metadata
         else:
@@ -137,25 +134,16 @@ def establish_available_documents(
                     hal_id,
                     [f.name for f in other_files],
                 )
-                non_pdf_count += 1
             else:
                 logging.debug("Missing PDF file for %s", hal_id)
                 missing_count += 1
 
     logging.info("Valid documents: %d", len(available_docs))
     logging.info("Missing PDF files: %d", missing_count)
-    logging.info("Oversized PDF files: %d", oversized_count)
-    logging.info("Non-PDF files: %d", non_pdf_count)
     logging.info("Total catalog entries: %d", len(catalog_by_hal_id))
     logging.debug("Available docs: %s", list(available_docs.keys()))
 
-    return (
-        available_docs,
-        total_records,
-        missing_count,
-        oversized_count,
-        non_pdf_count,
-    )
+    return available_docs, total_records, missing_count
 
 
 def get_uploadable_documents(
@@ -170,7 +158,7 @@ def get_uploadable_documents(
     """
     uploadable_pdfs = []
 
-    for hal_id, metadata in available_docs.items():
+    for hal_id in available_docs:
         # Lookup par hal_id
         entry = server_documents.get(hal_id)
         ingestion_status = entry["status"] if entry else None
@@ -223,9 +211,6 @@ def load_metadata(metadata_file: Path) -> dict[str, dict[str, object]]:
 
                 metadata_by_file[filename_hyphen] = pub
                 metadata_by_file[filename_underscore] = pub
-            elif "fileMain_s" in pub:
-                filename = hashlib.md5(pub["fileMain_s"].encode()).hexdigest()
-                metadata_by_file[filename] = pub
             else:
                 continue  # Skip if we can't determine filename
 
@@ -322,14 +307,7 @@ def upload_documents(
                 len(document_paths),
                 doc_path.name,
             )
-            # Utiliser le titre du document pour la recherche d'existant
             file_stem = doc_path.stem
-            raw_metadata_for_title = metadata_by_file.get(file_stem, {})
-            formatted_for_title = (
-                format_metadata_for_upload(raw_metadata_for_title)
-                if raw_metadata_for_title
-                else {}
-            )
             # Lookup par hal_id (underscore → tiret)
             hal_id = file_stem.replace("_", "-")
             entry = server_documents.get(hal_id)
@@ -484,13 +462,7 @@ def main() -> int:
         logging.error("No catalog file available")
         return 1
 
-    (
-        available_docs,
-        total_records,
-        missing_files,
-        oversized_files,
-        non_pdf_files,
-    ) = establish_available_documents(catalog_file, args.dir)
+    available_docs, total_records, missing_files = establish_available_documents(catalog_file, args.dir)
 
     if not available_docs:
         logging.error("No documents available for upload")
