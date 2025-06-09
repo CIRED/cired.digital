@@ -56,14 +56,15 @@ def match_documents_to_catalog(
             catalog_entry = catalog_by_hal_id[meta_hal_id]
             match_method = "meta_hal_id"
 
-        elif title and title.endswith(".pdf"):
-            potential_hal_id = title[:-4]  # Remove .pdf extension
-            potential_hal_id = slugify(potential_hal_id)
-            logging.debug(f"Looking for key '{potential_hal_id}'")
-            if potential_hal_id in catalog_by_hal_id:
-                logging.debug("Found")
-                catalog_entry = catalog_by_hal_id[potential_hal_id]
-                match_method = "title_pattern"
+        # Title-based matching disabled due to duplicate titles
+        # elif title and title.endswith(".pdf"):
+        #     potential_hal_id = title[:-4]  # Remove .pdf extension
+        #     potential_hal_id = slugify(potential_hal_id)
+        #     logging.debug(f"Looking for key '{potential_hal_id}'")
+        #     if potential_hal_id in catalog_by_hal_id:
+        #         logging.debug("Found")
+        #         catalog_entry = catalog_by_hal_id[potential_hal_id]
+        #         match_method = "title_pattern"
 
         if catalog_entry:
             matches.append(
