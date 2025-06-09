@@ -155,6 +155,7 @@ def main() -> None:
         level=log_levels[args.log_level], enable_requests_debug=enable_requests_debug
     )
 
+    # Note : 'docid' est l'identifiant interne HAL (utile à la pagination stable) ; 'halId_s' est l'identifiant permanent de la publication.
     fields = """
 docid,halId_s,doiId_s,label_s,producedDate_tdate,authFullName_s,title_s,abstract_s,submitType_s,docType_s,peerReviewing_t,labStructAcronym_s,fileMain_s
 """
