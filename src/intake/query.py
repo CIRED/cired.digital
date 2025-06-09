@@ -93,13 +93,13 @@ def get_paginated_publications(
 
         current_batch += 1
 
-    # Déduplication des publications par docid
+    # Déduplication des publications par halId_s
     seen_ids: set[str] = set()
     unique_publications: list[Any] = []
     for pub in all_publications:
-        docid = pub.get("docid")
-        if docid and docid not in seen_ids:
-            seen_ids.add(docid)
+        hal_id = pub.get("halId_s")
+        if hal_id and hal_id not in seen_ids:
+            seen_ids.add(hal_id)
             unique_publications.append(pub)
     all_publications = unique_publications
 
