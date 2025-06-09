@@ -21,13 +21,14 @@ from typing import Any
 import pandas as pd
 from r2r import R2RClient
 
-from intake.config import CATALOG_FILE, R2R_DEFAULT_BASE_URL, setup_logging
+from intake.config import R2R_DEFAULT_BASE_URL, setup_logging
 from intake.push import format_metadata_for_upload
 from intake.utils import (
     get_catalog_file,
     get_server_documents,
     load_catalog_by_hal_id,
 )
+
 
 def parse_args() -> argparse.Namespace:
     """Parse command line arguments and return namespace."""
@@ -42,30 +43,63 @@ def parse_args() -> argparse.Namespace:
   %(prog)s --catalog /path/to/catalog.json  Use custom catalog file
 """,
     )
-    parser.add_argument("--catalog", type=Path, help="Path to catalog.json file (default: latest prepared catalog)")
-    parser.add_argument("--base-url", type=str, default=R2R_DEFAULT_BASE_URL, help=f"R2R API base URL (default: {R2R_DEFAULT_BASE_URL})")
-    parser.add_argument("--target", choices=["missing", "mismatch", "both"], default="both", help="Type of deletion: missing, mismatch, or both")
-    parser.add_argument("--execute", action="store_true", help="Actually delete documents (default: dry-run mode)")
-    parser.add_argument("--log-level", choices=["debug", "info", "warning", "error"], default="info", help="Set logging level (default: info)")
+    parser.add_argument(
+        "--catalog",
+        type=Path,
+        help="Path to catalog.json file (default: latest prepared catalog)",
+    )
+    parser.add_argument(
+        "--base-url",
+        type=str,
+        default=R2R_DEFAULT_BASE_URL,
+        help=f"R2R API base URL (default: {R2R_DEFAULT_BASE_URL})",
+    )
+    parser.add_argument(
+        "--target",
+        choices=["missing", "mismatch", "both"],
+        default="both",
+        help="Type of deletion: missing, mismatch, or both",
+    )
+    parser.add_argument(
+        "--execute",
+        action="store_true",
+        help="Actually delete documents (default: dry-run mode)",
+    )
+    parser.add_argument(
+        "--log-level",
+        choices=["debug", "info", "warning", "error"],
+        default="info",
+        help="Set logging level (default: info)",
+    )
     args = parser.parse_args()
     return args
 
+
 def init_logging(level_name: str) -> None:
     """Initialize logging with level name."""
-    level_map = {"debug": logging.DEBUG, "info": logging.INFO, "warning": logging.WARNING, "error": logging.ERROR}
+    level_map = {
+        "debug": logging.DEBUG,
+        "info": logging.INFO,
+        "warning": logging.WARNING,
+        "error": logging.ERROR,
+    }
     setup_logging(level=level_map[level_name], simple_format=True)
     logging.info("Logging initialized at %s level", level_name.upper())
+
 
 def load_catalog(catalog_arg: Path | None) -> dict[str, Any]:
     """Load catalog and return mapping of hal_id to metadata."""
     catalog_file = get_catalog_file(catalog_arg)
     if not catalog_file:
-        raise FileNotFoundError("No catalog file found. Run hal_query.py and prepare_catalog.py first.")
+        raise FileNotFoundError(
+            "No catalog file found. Run hal_query.py and prepare_catalog.py first."
+        )
     catalog_by_hal_id, _ = load_catalog_by_hal_id(catalog_file)
     if not catalog_by_hal_id:
         raise RuntimeError("Failed to load catalog metadata.")
     logging.info("Catalog loaded with %d entries", len(catalog_by_hal_id))
     return catalog_by_hal_id
+
 
 def fetch_and_enrich_docs(client: R2RClient, catalog: dict[str, Any]) -> pd.DataFrame:
     """Fetch documents from R2R and enrich with catalog metadata."""
@@ -74,9 +108,16 @@ def fetch_and_enrich_docs(client: R2RClient, catalog: dict[str, Any]) -> pd.Data
         raise RuntimeError("Failed to retrieve documents from R2R.")
     df["catalog_entry"] = df["meta_hal_id"].map(catalog.get)
     df["is_in_catalog"] = df["catalog_entry"].notnull()
-    df["metadata_bad"] = df.apply(lambda row: bool(identify_bad_metadata(row, row["catalog_entry"] or {})), axis=1)
-    logging.info("Fetched %d documents; %d flagged for metadata mismatch", len(df), df["metadata_bad"].sum())
+    df["metadata_bad"] = df.apply(
+        lambda row: bool(identify_bad_metadata(row, row["catalog_entry"] or {})), axis=1
+    )
+    logging.info(
+        "Fetched %d documents; %d flagged for metadata mismatch",
+        len(df),
+        df["metadata_bad"].sum(),
+    )
     return df
+
 
 def compute_targets(df: pd.DataFrame, target: str) -> list[str]:
     """Compute list of document ids to delete based on target criteria."""
@@ -89,6 +130,7 @@ def compute_targets(df: pd.DataFrame, target: str) -> list[str]:
         to_delete += bad_meta
     logging.info("Documents to delete (%s): %d", target, len(to_delete))
     return to_delete
+
 
 def delete_documents(ids: list[str], client: R2RClient, execute: bool) -> int:
     """Delete documents and return count of removed items."""
@@ -165,8 +207,6 @@ def remove_document(doc_id: str, client: R2RClient) -> bool:
         return False
 
 
-
-
 def main() -> int:
     """Align R2R document metadata on the HAL catalog."""
     args = parse_args()
@@ -199,6 +239,7 @@ def main() -> int:
     delete_count = delete_documents(targets, client, args.execute)
     logging.info("Summary: %d documents removed", delete_count)
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())
