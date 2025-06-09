@@ -116,7 +116,10 @@ def fetch_and_enrich_docs(client: R2RClient, catalog: dict[str, Any]) -> pd.Data
     df["catalog_entry"] = df["meta_hal_id"].map(catalog.get)
     df["is_in_catalog"] = df["catalog_entry"].notnull()
     df["metadata_bad"] = df.apply(
-        lambda row: False if not row["is_in_catalog"] else bool(identify_bad_metadata(row, row["catalog_entry"] or {})), axis=1
+        lambda row: False
+        if not row["is_in_catalog"]
+        else bool(identify_bad_metadata(row, row["catalog_entry"] or {})),
+        axis=1,
     )
     missing = (~df["is_in_catalog"]).sum()
     mismatch = df["metadata_bad"].sum()
@@ -196,7 +199,9 @@ def identify_bad_metadata(
                 continue
 
         try:
-            if pd.isna(current_value) or (isinstance(current_value, str) and current_value.strip() == ""):
+            if pd.isna(current_value) or (
+                isinstance(current_value, str) and current_value.strip() == ""
+            ):
                 current_value = None
         except (ValueError, TypeError):
             pass

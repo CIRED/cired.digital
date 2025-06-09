@@ -85,17 +85,15 @@ def process_publications(
     # Identify DOIs with both OUV and COUV to keep all
     special_dois = (
         df_with_doi.groupby("doiId_s")["docType_s"]
-           .agg(lambda s: set(s) >= {"OUV", "COUV"})
-           .loc[lambda x: x]
-           .index
-           .tolist()
+        .agg(lambda s: set(s) >= {"OUV", "COUV"})
+        .loc[lambda x: x]
+        .index.tolist()
     )
     special_df = df_with_doi[df_with_doi["doiId_s"].isin(special_dois)]
     dedup_df = df_with_doi[~df_with_doi["doiId_s"].isin(special_dois)]
     # Sort to keep the best document per DOI
     dedup_df = dedup_df.sort_values(
-        by=["doiId_s", "prio", "docid"],
-        ascending=[True, True, False]
+        by=["doiId_s", "prio", "docid"], ascending=[True, True, False]
     )
     # Drop duplicates based on raw DOI field
     unique_df = dedup_df.drop_duplicates(subset="doiId_s", keep="first")
