@@ -51,14 +51,14 @@ def match_documents_to_catalog(
             matches.append(
                 {
                     "doc_id": doc_id,
-                    "title": title,
+                    "title": doc.get("title", ""),
                     "meta_hal_id": meta_hal_id,
                     "catalog_entry": catalog_entry,
                     "document_row": doc,
                 }
             )
         else:
-            logging.warning("Unable to match doc_id %s (%s)", doc_id, title)
+            logging.warning("Unable to match doc_id %s (%s)", doc_id, doc.get("title", ""))
 
     logging.info(
         "Matched %d documents to catalog entries, %d documents remain orphan",
