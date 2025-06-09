@@ -56,9 +56,9 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--target",
-        choices=["missing", "mismatch", "all", "failed-ingestions"],
+        choices=["missing", "mismatch", "failed-ingestions", "all"],
         default="all",
-        help="Type of deletion: missing, mismatch, all, or failed-ingestions",
+        help="Type of deletion: missing, mismatch, failed-ingestions, or all",
     )
     parser.add_argument(
         "--execute",
