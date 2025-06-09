@@ -19,8 +19,6 @@ from pathlib import Path
 from typing import Any
 
 import pandas as pd
-import unicodedata
-import re
 from r2r import R2RClient
 
 from intake.config import CATALOG_FILE, R2R_DEFAULT_BASE_URL, setup_logging
@@ -32,40 +30,6 @@ from intake.utils import (
 )
 
 
-def match_documents_to_catalog(
-    documents_df: pd.DataFrame, catalog_by_hal_id: dict[str, dict[str, Any]]
-) -> list[dict[str, Any]]:
-    """Match server documents to catalog entries."""
-    matches = []
-
-    for _, doc in documents_df.iterrows():
-        doc_id = doc["id"]
-        meta_hal_id = doc.get("meta_hal_id")
-
-        catalog_entry = None
-
-        if meta_hal_id and meta_hal_id in catalog_by_hal_id:
-            catalog_entry = catalog_by_hal_id[meta_hal_id]
-
-        if catalog_entry:
-            matches.append(
-                {
-                    "doc_id": doc_id,
-                    "title": doc.get("title", ""),
-                    "meta_hal_id": meta_hal_id,
-                    "catalog_entry": catalog_entry,
-                    "document_row": doc,
-                }
-            )
-        else:
-            logging.warning("Unable to match doc_id %s (%s)", doc_id, doc.get("title", ""))
-
-    logging.info(
-        "Matched %d documents to catalog entries, %d documents remain orphan",
-        len(matches),
-        len(documents_df) - len(matches),
-    )
-    return matches
 
 
 def needs_metadata_update(
@@ -182,32 +146,6 @@ Examples:
     return parser
 
 
-def process_matches(
-    matches: list[dict[str, Any]], client: R2RClient, execute_mode: bool
-) -> tuple[int, int]:
-    """Process document matches and delete misdescribed documents."""
-    delete_count = 0
-    skip_count = 0
-
-    for match in matches:
-        doc_id = match["doc_id"]
-        catalog_entry = match["catalog_entry"]
-        document_row = match["document_row"]
-
-        updates_needed = needs_metadata_update(document_row, catalog_entry)
-
-        if not updates_needed:
-            logging.debug(f"Document {doc_id} metadata match the catalog")
-            skip_count += 1
-            continue
-
-        logging.info(
-            f"Document {doc_id} metadata mismatch: {list(updates_needed.keys())}"
-        )
-        if delete_document(doc_id, client, execute_mode):
-            delete_count += 1
-
-    return delete_count, skip_count
 
 
 def main() -> int:
