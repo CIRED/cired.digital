@@ -120,7 +120,7 @@ def process_publications(
         "filtering_statistics": {
             "total_retrieved": total,
             "working_papers_excluded": excluded,
-            "duplicates_excluded": duplicates_excluded,
+            "doi_duplicates_excluded": duplicates_excluded,
             "final_count": len(pubs_list),
         },
         "publications": sorted(
@@ -145,10 +145,10 @@ def save_prepared_catalog(catalog_data: dict[str, Any]) -> Path:
     logging.info("Saved prepared catalog to %s", filepath)
     stats = catalog_data.get("filtering_statistics", {})
     logging.info(
-        "Statistiques catalogue préparé : récupérés=%d, exclus_working_papers=%d, doublons_exclus=%d, final=%d",
+        "Prepared catalog stats: retrieved=%d, working_papers_excluded=%d, doi_duplicates_excluded=%d, final=%d",
         stats.get("total_retrieved", 0),
         stats.get("working_papers_excluded", 0),
-        stats.get("duplicates_excluded", 0),
+        stats.get("doi_duplicates_excluded", 0),
         stats.get("final_count", 0),
     )
     return filepath
