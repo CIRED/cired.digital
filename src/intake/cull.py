@@ -190,10 +190,11 @@ def identify_bad_metadata(
             if same:
                 continue
 
-        if pd.isna(current_value) or (
-            isinstance(current_value, str) and current_value.strip() == ""
-        ):
-            current_value = None
+        try:
+            if pd.isna(current_value) or (isinstance(current_value, str) and current_value.strip() == ""):
+                current_value = None
+        except (ValueError, TypeError):
+            pass
 
         if current_value == catalog_value:
             continue
