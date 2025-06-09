@@ -30,9 +30,7 @@ from intake.utils import (
 )
 
 
-
-
-def needs_metadata_update(
+def identify_bad_metadata(
     document_row: pd.Series[Any], catalog_metadata: dict[str, Any]
 ) -> dict[str, Any]:
     """Return the metadata that need to be aligned on the catalog."""
@@ -41,7 +39,7 @@ def needs_metadata_update(
     catalog_metadata = format_metadata_for_upload(catalog_metadata)
     logging.debug("Catalog:  %s", str(catalog_metadata))
 
-    updates_needed = {}
+    bad_metadata = {}
 
     field_mapping = {
         "title": "meta_title",
@@ -76,23 +74,18 @@ def needs_metadata_update(
         if current_value == catalog_value:
             continue
 
-        updates_needed[catalog_field] = catalog_value
+        bad_metadata[catalog_field] = catalog_value
 
-    if updates_needed != {}:
-        logging.debug("Updates needed = %s", str(updates_needed))
+    if bad_metadata != {}:
+        logging.debug("Bad metadata = %s", str(bad_metadata))
 
-    return updates_needed
+    return bad_metadata
 
 
-def delete_document(doc_id: str, client: R2RClient, execute_mode: bool) -> bool:
-    """Delete a document."""
-    logging.debug("Trying to delete document %s", doc_id)
-
-    if not execute_mode:
-        logging.info("DRY RUN: not really doing it.")
-        return True
-
+def remove_document(doc_id: str, client: R2RClient) -> bool:
+    """Remove a document from the server."""
     try:
+        logging.debug("Trying to delete document %s", doc_id)
         response = client.documents.delete(id=doc_id)
         logging.debug("Response for %s", str(response))
         return True
@@ -144,8 +137,6 @@ Examples:
         help="Set logging level (default: info)",
     )
     return parser
-
-
 
 
 def main() -> int:
@@ -205,17 +196,21 @@ def main() -> int:
         return 3
 
     # Enrich the DataFrame with catalog info and metadata check
-    documents_df['catalog_entry'] = documents_df['meta_hal_id'].map(lambda hid: catalog_by_hal_id.get(hid))
-    documents_df['is_in_catalog'] = documents_df['catalog_entry'].notnull()
+    documents_df["catalog_entry"] = documents_df["meta_hal_id"].map(
+        lambda hid: catalog_by_hal_id.get(hid)
+    )
+    documents_df["is_in_catalog"] = documents_df["catalog_entry"].notnull()
 
     def check_metadata(row):
-        return not bool(needs_metadata_update(row, row['catalog_entry'] or {}))
+        return bool(identify_bad_metadata(row, row["catalog_entry"] or {}))
 
-    documents_df['metadata_correct'] = documents_df.apply(check_metadata, axis=1)
+    documents_df["metadata_bad"] = documents_df.apply(check_metadata, axis=1)
 
-    # Select documents to delete based on target criteria
-    orphans = documents_df.loc[~documents_df['is_in_catalog'], 'id']
-    bad_meta = documents_df.loc[documents_df['is_in_catalog'] & ~documents_df['metadata_correct'], 'id']
+    orphans = documents_df.loc[~documents_df["is_in_catalog"], "id"]
+    bad_meta = documents_df.loc[
+        documents_df["is_in_catalog"] & documents_df["metadata_bad"], "id"
+    ]
+
     to_delete = []
     if args.target in ("missing", "both"):
         to_delete += list(orphans)
@@ -224,21 +219,24 @@ def main() -> int:
 
     if not to_delete:
         logging.info("No documents to delete based on target criteria")
-        if not args.execute:
-            logging.info("Mode dry-run - aucune suppression effective")
-            logging.info("Utilisez --execute pour supprimer réellement")
         return 0
 
     delete_count = 0
     for doc_id in to_delete:
-        logging.info(f"Suppression document {doc_id}")
-        if delete_document(doc_id, client, args.execute):
-            delete_count += 1
+        logging.info(
+            "Suppressing document %s (%s)",
+            doc_id,
+            documents_df["title"].get(doc_id, "Unknown Title"),
+        )
+        if args.execute:
+            if remove_document(doc_id, client):
+                delete_count += 1
 
-    logging.info(f"Résumé: {delete_count} documents supprimés")
+    logging.info("Summary: %s documents removed from the server", delete_count)
+
     if not args.execute:
-        logging.info("Mode dry-run - aucune suppression effective")
-        logging.info("Utilisez --execute pour supprimer réellement")
+        logging.info("Mode dry-run - nothing removed")
+        logging.info("Use --execute to really remove documents from server")
     return 0
 
 
