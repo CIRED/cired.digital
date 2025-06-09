@@ -147,7 +147,7 @@ def establish_available_documents(
 
 def get_uploadable_documents(
     available_docs: dict[str, dict[str, Any]],
-    server_documents: dict[str, str],
+    server_documents: dict[str, dict[str, Any]],
     pdf_dir: Path,
 ) -> list[Path]:
     """
@@ -278,7 +278,7 @@ def format_metadata_for_upload(metadata: dict[str, object]) -> dict[str, str]:
 def upload_documents(
     document_paths: list[Path],
     client: R2RClient,
-    server_documents: dict[str, str],
+    server_documents: dict[str, dict[str, object]],
     metadata_by_file: dict[str, dict[str, object]],
     collection: str | None = None,
     max_upload: int = 0,
@@ -401,7 +401,7 @@ def print_upload_statistics(
     total_records: int,
     available_docs: list[dict[str, Any]],
     missing_files: int,
-    server_documents: dict[str, str],
+    server_documents: dict[str, dict[str, Any]],
     uploadable_files: list[Path],
     success_count: int,
     skipped_count: int,
