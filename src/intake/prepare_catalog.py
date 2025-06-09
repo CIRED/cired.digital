@@ -75,10 +75,10 @@ def process_publications(
 
     excluded = total - len(df_filtered)
 
-    # Deduplicate halId_s using pandas
-    mask_no_id = df_filtered["halId_s"].isna()
-    df_no_id = df_filtered[mask_no_id]
-    df_with_id = df_filtered[~mask_no_id]
+     # Deduplicate halId_s using pandas
+     mask_no_id = df_filtered["halId_s"].isna()
+     df_no_id = df_filtered[mask_no_id]
+     df_with_id = df_filtered[~mask_no_id]
 
     # Keep first record per halId_s
     df_unique_id = (
