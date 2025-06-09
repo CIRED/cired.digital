@@ -1,13 +1,20 @@
 #!/usr/bin/env python
 """
-Align R2R documents with metadata on the HAL catalog by deleting offenders.
+Cull R2R documents with ingestion failure, or missing from the HAL catalog, or with different metadata.
 
-This script:
-- Reads source/hal/catalog.json
-- Gets existing documents from the server
-- Matches each document with catalog records by hal_id or title
-- Compares meta_ columns with catalog data
-- Delete documents with inconsistent meta
+This script is designed to help maintain the integrity of the R2R document repository
+by ensuring that only valid and aligned documents are retained.
+
+It fetches the latest catalog, retrieves documents from the R2R server,
+and compares them against the catalog metadata.
+It identifies documents that are either missing from the catalog,
+have mismatched metadata, or have failed ingestions.
+
+By default, the scripts is in dry-run mode and only shows what would be deleted.
+It will delete these documents from the R2R server if --execute is specified.
+
+# SPDX-FileCopyrightText: 2025 Minh Ha-Duong
+# SPDX-License-Identifier: Cecill-2.1
 """
 
 from __future__ import annotations  # Needed for pd.Series[Any]
@@ -120,19 +127,18 @@ def fetch_and_enrich_docs(client: R2RClient, catalog: dict[str, Any]) -> pd.Data
 
 
 def compute_targets(df: pd.DataFrame, target: str) -> list[str]:
-    """Compute list of document ids to delete based on target criteria."""
-    if target == "failed-ingestions":
-        failures = df.loc[df["ingestion_status"] != "success", "id"].tolist()
-        logging.info("Documents to delete (%s): %d", target, len(failures))
-        return failures
-
-    orphans = df.loc[~df["is_in_catalog"], "id"].tolist()
-    bad_meta = df.loc[df["is_in_catalog"] & df["metadata_bad"], "id"].tolist()
+    """Compute list of document ids to remove based on target criteria."""
     to_delete: list[str] = []
+
     if target in ("missing", "all"):
-        to_delete += orphans
+        to_delete += df.loc[~df["is_in_catalog"], "id"].tolist()
+
     if target in ("mismatch", "all"):
-        to_delete += bad_meta
+        to_delete += df.loc[df["is_in_catalog"] & df["metadata_bad"], "id"].tolist()
+
+    if target in ("failed-ingestions", "all"):
+        to_delete += df.loc[df["ingestion_status"] != "success", "id"].tolist()
+
     logging.info("Documents to delete (%s): %d", target, len(to_delete))
     return to_delete
 
@@ -213,7 +219,7 @@ def remove_document(doc_id: str, client: R2RClient) -> bool:
 
 
 def main() -> int:
-    """Align R2R document metadata on the HAL catalog."""
+    """Cull R2R document missing or mismatched from  the HAL catalog."""
     args = parse_args()
     init_logging(args.log_level)
 
@@ -225,7 +231,7 @@ def main() -> int:
     try:
         catalog = load_catalog(args.catalog)
     except Exception as e:
-        logging.error("Metadata alignment abort: %s", e)
+        logging.error("Abort, catalog loading error: %s", e)
         return 1
 
     client = R2RClient(base_url=args.base_url)
@@ -233,7 +239,7 @@ def main() -> int:
     try:
         docs_df = fetch_and_enrich_docs(client, catalog)
     except Exception as e:
-        logging.error("Document retrieval error: %s", e)
+        logging.error("Abort, document retrieval error: %s", e)
         return 2
 
     targets = compute_targets(docs_df, args.target)
