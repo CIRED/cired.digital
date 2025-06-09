@@ -56,9 +56,9 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--target",
-        choices=["missing", "mismatch", "both", "failed-ingestions"],
-        default="both",
-        help="Type of deletion: missing, mismatch, both, or failed-ingestions",
+        choices=["missing", "mismatch", "all", "failed-ingestions"],
+        default="all",
+        help="Type of deletion: missing, mismatch, all, or failed-ingestions",
     )
     parser.add_argument(
         "--execute",
@@ -129,9 +129,9 @@ def compute_targets(df: pd.DataFrame, target: str) -> list[str]:
     orphans = df.loc[~df["is_in_catalog"], "id"].tolist()
     bad_meta = df.loc[df["is_in_catalog"] & df["metadata_bad"], "id"].tolist()
     to_delete: list[str] = []
-    if target in ("missing", "both"):
+    if target in ("missing", "all"):
         to_delete += orphans
-    if target in ("mismatch", "both"):
+    if target in ("mismatch", "all"):
         to_delete += bad_meta
     logging.info("Documents to delete (%s): %d", target, len(to_delete))
     return to_delete
