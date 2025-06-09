@@ -74,22 +74,36 @@ def process_publications(
 
     excluded = total - len(df_filtered)
 
-    # Déduplication basée sur doiId_s et log détaillé des groupes
+    # Déduplication avancée selon DOC TYPE et docid
     records = df_filtered.drop(columns="norm_title").to_dict(orient="records")
-    pubs_by_doi = {}
-    duplicates_excluded = 0
+    pubs_by_doi: dict[str, list[dict]] = {}
     for pub in records:
-        doi = pub.get("doiId_s")
+        doi = pub.get("doiId_s") or ""
         pubs_by_doi.setdefault(doi, []).append(pub)
-    pubs_list = []
+    pubs_list: list[dict] = []
+    duplicates_excluded = 0
+    # Ordre de priorité
+    priority = {"ART": 1, "COMM": 2, "UNDEFINED": 3}
     for doi, group in pubs_by_doi.items():
-        if isinstance(doi, str) and len(group) > 1:
-            logging.info("Groupe DOI %s contient %d entrées", doi, len(group))
-            for entry in group:
-                logging.info("     docType_s=%s, halId_s=%s, docid=%s",
-                             entry.get("docType_s"), entry.get("halId_s"), entry.get("docid"))
-                logging.info("       %s", entry.get("label_s"))
-        pubs_list.append(group[0])
+        if len(group) <= 1:
+            pubs_list.extend(group)
+            continue
+        types = {g.get("docType_s") for g in group}
+        # cas ouvrage+chapitre → tout garder
+        if "OUV" in types and "COUV" in types:
+            pubs_list.extend(group)
+            duplicates_excluded += len(group) - 1
+            continue
+        # on choisit le type le plus prioritaire
+        best_prio = min(priority.get(t, 99) for t in types)
+        best_type = next(t for t, p in priority.items() if p == best_prio)
+        candidats = [g for g in group if g.get("docType_s") == best_type]
+        # si plusieurs ART, on prend le docid max
+        if best_type == "ART" and len(candidats) > 1:
+            sel = max(candidats, key=lambda g: int(g.get("docid", 0)))
+        else:
+            sel = candidats[0]
+        pubs_list.append(sel)
         duplicates_excluded += len(group) - 1
 
     result = {
