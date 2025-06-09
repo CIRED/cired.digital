@@ -9,6 +9,11 @@ Usage:
     python hal_query.py [--log-level LEVEL]
 
 The raw responses are saved to data/source/hal/ with timestamps.
+
+Notes:
+- `docid` is the internal, unique numeric identifier assigned to each document in the HAL database. It is returned by default in API queries and is used primarily for internal referencing and technical operations within the HAL infrastructure. It may change with HAL system updates.
+- `halId_s` is the string identifier that represents the public, persistent identifier of a document in HAL. This identifier is visible in the URL of the document and is used for citation and referencing outside the HAL system. It typically takes the form of a prefix indicating the collection (e.g., hal-, tel-, medihal-), followed by a unique number, such as hal-01234567 or tel-00000000.This identifier guarantees long-term access and is designed to be stable and persistent, making it suitable for public references and citations.
+
 """
 
 import argparse
@@ -26,6 +31,8 @@ from intake.config import (
     HAL_API_TIMEOUT,
     HAL_API_URL,
     HAL_BATCH_SIZE,
+    HAL_FIELDS,
+    HAL_FILTER,
     HAL_MAX_BATCHES,
     HAL_QUERY,
     RAW_HAL_DIR,
@@ -93,9 +100,25 @@ def get_paginated_publications(
 
         current_batch += 1
 
+    # Deduplication (just in case)
+    seen_ids: set[str] = set()
+    unique_publications: list[Any] = []
+    for pub in all_publications:
+        hal_id = pub.get("halId_s")
+        if hal_id and hal_id not in seen_ids:
+            seen_ids.add(hal_id)
+            unique_publications.append(pub)
+        else:
+            logging.warning("Dropping duplicate %s", hal_id)
+    all_publications = unique_publications
+
     logging.info(
-        "Pagination complete. Retrieved a total of %d records.", len(all_publications)
+        "Pagination complete. Retrieved a total of %d unique records.",
+        len(all_publications),
     )
+
+    # Sort publications by halId_s
+    all_publications.sort(key=lambda pub: pub.get("halId_s", ""))
 
     return {
         "query_timestamp": datetime.now().isoformat(),
@@ -145,14 +168,12 @@ def main() -> None:
         level=log_levels[args.log_level], enable_requests_debug=enable_requests_debug
     )
 
-    fields = """
-docid,halId_s,doiId_s,label_s,producedDate_tdate,authFullName_s,title_s,abstract_s,submitType_s,docType_s,peerReviewing_t,labStructAcronym_s,fileMain_s
-"""
+    # Note: on-HAL sorting slows the reply
     params: dict[str, str | int] = {
         "q": HAL_QUERY,
-        "fl": fields.strip(),
+        "fl": HAL_FIELDS,
+        "fq": HAL_FILTER,
         "wt": "json",
-        "fq": "submitType_s:file",  # Only files, no notices or annexes
     }
 
     response_data = get_paginated_publications(params)

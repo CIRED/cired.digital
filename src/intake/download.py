@@ -191,7 +191,18 @@ def download_file(url: str, target_path: Path) -> bool:
         logging.info("Downloaded: %s", target_path.name)
         return True
     except Exception as e:
-        logging.warning("Failed to download %s: %s", url, e)
+        # Suggère un embargo si code HTTP 403 Forbidden
+        if (
+            isinstance(e, requests.exceptions.HTTPError)
+            and getattr(e.response, "status_code", None) == 403
+        ):
+            logging.warning(
+                "Failed to download %s: %s (HTTP 403 Forbidden – le fichier peut être sous embargo)",
+                url,
+                e,
+            )
+        else:
+            logging.warning("Failed to download %s: %s", url, e)
         if temp_path.exists():
             temp_path.unlink()
         return False
