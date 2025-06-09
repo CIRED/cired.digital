@@ -56,9 +56,9 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--target",
-        choices=["missing", "mismatch", "both"],
+        choices=["missing", "mismatch", "both", "failed-ingestions"],
         default="both",
-        help="Type of deletion: missing, mismatch, or both",
+        help="Type of deletion: missing, mismatch, both, or failed-ingestions",
     )
     parser.add_argument(
         "--execute",
@@ -121,6 +121,11 @@ def fetch_and_enrich_docs(client: R2RClient, catalog: dict[str, Any]) -> pd.Data
 
 def compute_targets(df: pd.DataFrame, target: str) -> list[str]:
     """Compute list of document ids to delete based on target criteria."""
+    if target == "failed-ingestions":
+        failures = df.loc[df["ingestion_status"] != "success", "id"].tolist()
+        logging.info("Documents to delete (%s): %d", target, len(failures))
+        return failures
+
     orphans = df.loc[~df["is_in_catalog"], "id"].tolist()
     bad_meta = df.loc[df["is_in_catalog"] & df["metadata_bad"], "id"].tolist()
     to_delete: list[str] = []
