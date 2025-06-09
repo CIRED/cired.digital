@@ -115,9 +115,10 @@ def establish_available_documents(
         if candidate:
             if candidate.stat().st_size > MAX_FILE_SIZE:
                 logging.warning(
-                    "File too large for %s: %s (> %d bytes)",
+                    "File too large for %s: %s has size %d bytes (> %d bytes)",
                     hal_id,
                     candidate.name,
+                    candidate.stat().st_size,
                     MAX_FILE_SIZE,
                 )
                 oversized_count += 1
