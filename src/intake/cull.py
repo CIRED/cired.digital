@@ -31,11 +31,12 @@ from intake.utils import (
     load_catalog_by_hal_id,
 )
 
-def slugify(value: str) -> str:
-    value = unicodedata.normalize('NFD', value)
-    value = value.encode('ascii', 'ignore').decode('ascii')
-    value = re.sub(r"[^\w\s-]", "", value).strip().lower()
-    return re.sub(r"[-\s]+", "-", value)
+# Fonction slugify désactivée car non utilisée
+# def slugify(value: str) -> str:
+#     value = unicodedata.normalize('NFD', value)
+#     value = value.encode('ascii', 'ignore').decode('ascii')
+#     value = re.sub(r"[^\w\s-]", "", value).strip().lower()
+#     return re.sub(r"[-\s]+", "-", value)
 
 
 def match_documents_to_catalog(
