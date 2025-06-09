@@ -29,6 +29,77 @@ from intake.utils import (
     load_catalog_by_hal_id,
 )
 
+def parse_args() -> argparse.Namespace:
+    """Parse command line arguments and return namespace."""
+    parser = argparse.ArgumentParser(
+        description="Delete R2R documents missing or mismatched with the HAL catalog",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""Examples:
+  %(prog)s --help                    Show this help message
+  %(prog)s                           Dry run - show what would be deleted
+  %(prog)s --execute                 Actually delete unaligned documents
+  %(prog)s --log-level debug         Enable debug logging
+  %(prog)s --catalog /path/to/catalog.json  Use custom catalog file
+""",
+    )
+    parser.add_argument("--catalog", type=Path, help="Path to catalog.json file (default: latest prepared catalog)")
+    parser.add_argument("--base-url", type=str, default=R2R_DEFAULT_BASE_URL, help=f"R2R API base URL (default: {R2R_DEFAULT_BASE_URL})")
+    parser.add_argument("--target", choices=["missing", "mismatch", "both"], default="both", help="Type of deletion: missing, mismatch, or both")
+    parser.add_argument("--execute", action="store_true", help="Actually delete documents (default: dry-run mode)")
+    parser.add_argument("--log-level", choices=["debug", "info", "warning", "error"], default="info", help="Set logging level (default: info)")
+    args = parser.parse_args()
+    return args
+
+def init_logging(level_name: str) -> None:
+    """Initialize logging with level name."""
+    level_map = {"debug": logging.DEBUG, "info": logging.INFO, "warning": logging.WARNING, "error": logging.ERROR}
+    setup_logging(level=level_map[level_name], simple_format=True)
+    logging.info("Logging initialized at %s level", level_name.upper())
+
+def load_catalog(catalog_arg: Path | None) -> dict[str, Any]:
+    """Load catalog and return mapping of hal_id to metadata."""
+    catalog_file = get_catalog_file(catalog_arg)
+    if not catalog_file:
+        raise FileNotFoundError("No catalog file found. Run hal_query.py and prepare_catalog.py first.")
+    catalog_by_hal_id, _ = load_catalog_by_hal_id(catalog_file)
+    if not catalog_by_hal_id:
+        raise RuntimeError("Failed to load catalog metadata.")
+    logging.info("Catalog loaded with %d entries", len(catalog_by_hal_id))
+    return catalog_by_hal_id
+
+def fetch_and_enrich_docs(client: R2RClient, catalog: dict[str, Any]) -> pd.DataFrame:
+    """Fetch documents from R2R and enrich with catalog metadata."""
+    df = get_server_documents(client)
+    if df is None:
+        raise RuntimeError("Failed to retrieve documents from R2R.")
+    df["catalog_entry"] = df["meta_hal_id"].map(catalog.get)
+    df["is_in_catalog"] = df["catalog_entry"].notnull()
+    df["metadata_bad"] = df.apply(lambda row: bool(identify_bad_metadata(row, row["catalog_entry"] or {})), axis=1)
+    logging.info("Fetched %d documents; %d flagged for metadata mismatch", len(df), df["metadata_bad"].sum())
+    return df
+
+def compute_targets(df: pd.DataFrame, target: str) -> list[str]:
+    """Compute list of document ids to delete based on target criteria."""
+    orphans = df.loc[~df["is_in_catalog"], "id"].tolist()
+    bad_meta = df.loc[df["is_in_catalog"] & df["metadata_bad"], "id"].tolist()
+    to_delete: list[str] = []
+    if target in ("missing", "both"):
+        to_delete += orphans
+    if target in ("mismatch", "both"):
+        to_delete += bad_meta
+    logging.info("Documents to delete (%s): %d", target, len(to_delete))
+    return to_delete
+
+def delete_documents(ids: list[str], client: R2RClient, execute: bool) -> int:
+    """Delete documents and return count of removed items."""
+    removed = 0
+    for doc_id in ids:
+        logging.info("Deleting document %s", doc_id)
+        if execute and remove_document(doc_id, client):
+            removed += 1
+    logging.info("Deleted %d documents (execute=%s)", removed, execute)
+    return removed
+
 
 def identify_bad_metadata(
     document_row: pd.Series[Any], catalog_metadata: dict[str, Any]
@@ -94,91 +165,20 @@ def remove_document(doc_id: str, client: R2RClient) -> bool:
         return False
 
 
-def setup_argument_parser() -> argparse.ArgumentParser:
-    """Set up command line argument parser."""
-    parser = argparse.ArgumentParser(
-        description="Delete R2R documents missing or mismatched with the HAL catalog",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Examples:
-  %(prog)s --help                    Show this help message
-  %(prog)s                           Dry run - show what would be deleted
-  %(prog)s --execute                 Actually delete unaligned documents
-  %(prog)s --log-level debug         Enable debug logging
-  %(prog)s --catalog /path/to/catalog.json  Use custom catalog file
-        """,
-    )
-    parser.add_argument(
-        "--catalog",
-        type=Path,
-        help="Path to catalog.json file (default: latest prepared catalog)",
-    )
-    parser.add_argument(
-        "--base-url",
-        type=str,
-        default=R2R_DEFAULT_BASE_URL,
-        help=f"R2R API base URL (default: {R2R_DEFAULT_BASE_URL})",
-    )
-    parser.add_argument(
-        "--target",
-        choices=["missing", "mismatch", "both"],
-        default="both",
-        help="Type of deletion: missing = only orphans, mismatch = only metadata mismatches, both = both (default)",
-    )
-    parser.add_argument(
-        "--execute",
-        action="store_true",
-        help="Actually delete documents (default is dry-run mode)",
-    )
-    parser.add_argument(
-        "--log-level",
-        choices=["debug", "info", "warning", "error"],
-        default="info",
-        help="Set logging level (default: info)",
-    )
-    return parser
 
 
 def main() -> int:
-    """
-    Align R2R document metadata on the HAL catalog.
-
-    This script reads the HAL catalog, retrieves documents from R2R server,
-    matches them by hal_id or title pattern, compares the metadata and
-    DELETE DOCUMENTS with unaligned metadata.
-    By default runs in dry-run mode to show what would be deleted.
-    """
-    parser = setup_argument_parser()
-    args = parser.parse_args()
-
-    log_levels = {
-        "debug": logging.DEBUG,
-        "info": logging.INFO,
-        "warning": logging.WARNING,
-        "error": logging.ERROR,
-    }
-
-    setup_logging(level=log_levels[args.log_level], simple_format=True)
+    """Align R2R document metadata on the HAL catalog."""
+    args = parse_args()
+    init_logging(args.log_level)
 
     if args.execute:
         logging.info("Running in EXECUTE mode - will actually delete documents")
     else:
         logging.info("Running in DRY-RUN mode - will show what would be deleted")
 
-    catalog_file = get_catalog_file(args.catalog)
-    if not catalog_file:
-        logging.error(
-            "No catalog file found. Run hal_query.py and prepare_catalog.py first."
-        )
-        return 1
-
-    if catalog_file == CATALOG_FILE:
-        logging.info("Using legacy catalog file: %s", CATALOG_FILE)
-    else:
-        logging.info("Using catalog file: %s", catalog_file)
-
     try:
-        catalog_by_hal_id, _ = load_catalog_by_hal_id(catalog_file)
+        catalog = load_catalog(args.catalog)
     except Exception as e:
         logging.error("Metadata alignment abort: %s", e)
         return 1
@@ -186,60 +186,19 @@ def main() -> int:
     client = R2RClient(base_url=args.base_url)
 
     try:
-        documents_df = get_server_documents(client)
-        if documents_df is None:
-            logging.error(
-                "Metadata alignment abort: Failed to retrieve documents from R2R."
-            )
-            return 2
+        docs_df = fetch_and_enrich_docs(client, catalog)
     except Exception as e:
-        logging.error("Metadata alignment abort: Failed to connect to R2R: %s", str(e))
-        return 3
+        logging.error("Document retrieval error: %s", e)
+        return 2
 
-    # Enrich the DataFrame with catalog info and metadata check
-    documents_df["catalog_entry"] = documents_df["meta_hal_id"].map(
-        lambda hid: catalog_by_hal_id.get(hid)
-    )
-    documents_df["is_in_catalog"] = documents_df["catalog_entry"].notnull()
-
-    def check_metadata(row):
-        return bool(identify_bad_metadata(row, row["catalog_entry"] or {}))
-
-    documents_df["metadata_bad"] = documents_df.apply(check_metadata, axis=1)
-
-    orphans = documents_df.loc[~documents_df["is_in_catalog"], "id"]
-    bad_meta = documents_df.loc[
-        documents_df["is_in_catalog"] & documents_df["metadata_bad"], "id"
-    ]
-
-    to_delete = []
-    if args.target in ("missing", "both"):
-        to_delete += list(orphans)
-    if args.target in ("mismatch", "both"):
-        to_delete += list(bad_meta)
-
-    if not to_delete:
+    targets = compute_targets(docs_df, args.target)
+    if not targets:
         logging.info("No documents to delete based on target criteria")
         return 0
 
-    delete_count = 0
-    for doc_id in to_delete:
-        logging.info(
-            "Suppressing document %s (%s)",
-            doc_id,
-            documents_df["title"].get(doc_id, "Unknown Title"),
-        )
-        if args.execute:
-            if remove_document(doc_id, client):
-                delete_count += 1
-
-    logging.info("Summary: %s documents removed from the server", delete_count)
-
-    if not args.execute:
-        logging.info("Mode dry-run - nothing removed")
-        logging.info("Use --execute to really remove documents from server")
+    delete_count = delete_documents(targets, client, args.execute)
+    logging.info("Summary: %d documents removed", delete_count)
     return 0
-
 
 if __name__ == "__main__":
     sys.exit(main())
