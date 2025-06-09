@@ -118,10 +118,15 @@ def fetch_and_enrich_docs(client: R2RClient, catalog: dict[str, Any]) -> pd.Data
     df["metadata_bad"] = df.apply(
         lambda row: False if not row["is_in_catalog"] else bool(identify_bad_metadata(row, row["catalog_entry"] or {})), axis=1
     )
+    missing = (~df["is_in_catalog"]).sum()
+    mismatch = df["metadata_bad"].sum()
+    failed = (df["ingestion_status"] != "success").sum()
     logging.info(
-        "Fetched %d documents; %d flagged for metadata mismatch",
+        "Fetched %d documents; %d not in catalog; %d metadata mismatches; %d failed ingestions",
         len(df),
-        df["metadata_bad"].sum(),
+        missing,
+        mismatch,
+        failed,
     )
     return df
 
