@@ -115,6 +115,9 @@ def get_paginated_publications(
         "Pagination complete. Retrieved a total of %d unique records.", len(all_publications)
     )
 
+    # Sort publications by halId_s
+    all_publications.sort(key=lambda pub: pub.get("halId_s", ""))
+
     return {
         "query_timestamp": datetime.now().isoformat(),
         "query_params": base_params,
