@@ -115,7 +115,7 @@ def establish_available_documents(
 
         if candidate:
             if candidate.stat().st_size > MAX_FILE_SIZE:
-                logging.warning(
+                logging.debug(
                     "File too large for %s: %s has size %d bytes (> %d bytes)",
                     hal_id,
                     candidate.name,
@@ -130,24 +130,21 @@ def establish_available_documents(
                 pdf_dir.glob(f"{hal_id.replace('-', '_')}.*")
             )
             if other_files:
-                logging.warning(
+                logging.debug(
                     "Excluded non-PDF file(s) for %s: %s",
                     hal_id,
                     [f.name for f in other_files],
                 )
                 non_pdf_count += 1
             else:
-                logging.error("Missing PDF file for %s", hal_id)
+                logging.debug("Missing PDF file for %s", hal_id)
                 missing_count += 1
 
-    logging.info(
-        "Local summary: %d valid | %d missing | %d oversized | %d non-PDF | out of %d catalog entries",
-        len(available_docs),
-        missing_count,
-        oversized_count,
-        non_pdf_count,
-        len(catalog_by_hal_id),
-    )
+    logging.info("Valid documents: %d", len(available_docs))
+    logging.info("Missing PDF files: %d", missing_count)
+    logging.info("Oversized PDF files: %d", oversized_count)
+    logging.info("Non-PDF files: %d", non_pdf_count)
+    logging.info("Total catalog entries: %d", len(catalog_by_hal_id))
     logging.debug("Available docs: %s", list(available_docs.keys()))
 
     return (
