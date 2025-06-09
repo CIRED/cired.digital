@@ -432,12 +432,7 @@ def print_upload_statistics(
     """Print upload statistics and return appropriate exit code."""
     logging.info("=== UPLOAD STATISTICS ===")
 
-    logging.info(
-        "Catalog records loaded: %d",
-        total_records,
-    )
-    logging.info("Available documents: %d", len(available_docs))
-    logging.info("Missing PDF files: %d", missing_files)
+    logging.info("Local valid documents: %d", len(available_docs))
     logging.info("Documents on server: %d", len(server_documents))
     logging.info("Uploadable documents: %d", len(uploadable_files))
     logging.info("Successfully uploaded: %d", success_count)
