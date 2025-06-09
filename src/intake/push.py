@@ -514,7 +514,7 @@ def main() -> int:
     # On indexe les docs par metadata.hal_id et on conserve docid + status
     server_documents: dict[str, dict[str, object]] = {}
     for _, row in documents_df.iterrows():
-        hal_id = row["metadata.hal_id"]
+        hal_id = row["meta_hal_id"]
         if pd.isna(hal_id):
             continue
         server_documents[hal_id] = {
