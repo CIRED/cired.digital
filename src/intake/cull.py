@@ -31,13 +31,6 @@ from intake.utils import (
     load_catalog_by_hal_id,
 )
 
-# Fonction slugify désactivée car non utilisée
-# def slugify(value: str) -> str:
-#     value = unicodedata.normalize('NFD', value)
-#     value = value.encode('ascii', 'ignore').decode('ascii')
-#     value = re.sub(r"[^\w\s-]", "", value).strip().lower()
-#     return re.sub(r"[-\s]+", "-", value)
-
 
 def match_documents_to_catalog(
     documents_df: pd.DataFrame, catalog_by_hal_id: dict[str, dict[str, Any]]
@@ -47,25 +40,12 @@ def match_documents_to_catalog(
 
     for _, doc in documents_df.iterrows():
         doc_id = doc["id"]
-        title = doc["title"]
         meta_hal_id = doc.get("meta_hal_id")
 
         catalog_entry = None
-        match_method = None
 
         if meta_hal_id and meta_hal_id in catalog_by_hal_id:
             catalog_entry = catalog_by_hal_id[meta_hal_id]
-            match_method = "meta_hal_id"
-
-        # Title-based matching disabled due to duplicate titles
-        # elif title and title.endswith(".pdf"):
-        #     potential_hal_id = title[:-4]  # Remove .pdf extension
-        #     potential_hal_id = slugify(potential_hal_id)
-        #     logging.debug(f"Looking for key '{potential_hal_id}'")
-        #     if potential_hal_id in catalog_by_hal_id:
-        #         logging.debug("Found")
-        #         catalog_entry = catalog_by_hal_id[potential_hal_id]
-        #         match_method = "title_pattern"
 
         if catalog_entry:
             matches.append(
@@ -74,7 +54,6 @@ def match_documents_to_catalog(
                     "title": title,
                     "meta_hal_id": meta_hal_id,
                     "catalog_entry": catalog_entry,
-                    "match_method": match_method,
                     "document_row": doc,
                 }
             )
