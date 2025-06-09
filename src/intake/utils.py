@@ -172,6 +172,7 @@ def get_date_columns() -> list[str]:
     """Extract list of columns that should be parsed as dates."""
     return [col for col, config in COLUMN_CONFIG.items() if config["parse_dates"]]
 
+
 def load_catalog_by_hal_id(catalog_file: Path) -> tuple[dict[str, dict[str, Any]], int]:
     """Load catalog JSON and index by hal_id, return mapping and total publications count."""
     if not catalog_file.exists():

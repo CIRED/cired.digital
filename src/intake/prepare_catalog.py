@@ -17,7 +17,6 @@ import html
 import json
 import logging
 from datetime import datetime
-from math import isnan
 from pathlib import Path
 from typing import Any
 
@@ -160,14 +159,6 @@ def main() -> None:
     try:
         raw_data = json.loads(raw_file.read_text(encoding="utf-8"))
         catalog_data = process_publications(raw_data, str(raw_file))
-
-        # Nettoyage des NaN pour l'enregistrement
-        def _clean(pub: dict[str, Any]) -> dict[str, Any]:
-            return {
-                k: v for k, v in pub.items() if not (isinstance(v, float) and isnan(v))
-            }
-
-        catalog_data["publications"] = [_clean(p) for p in catalog_data["publications"]]
         save_prepared_catalog(catalog_data)
     except Exception as e:
         logging.error("Failed to process raw HAL file: %s", e)

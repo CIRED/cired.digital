@@ -78,8 +78,6 @@ def get_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-
-
 def establish_available_documents(
     catalog_file: Path, pdf_dir: Path
 ) -> tuple[dict[str, dict[str, Any]], int, int, int, int]:

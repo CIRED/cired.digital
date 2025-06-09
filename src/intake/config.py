@@ -67,6 +67,10 @@ We query HAL with the acronym of the lab, because the lab has two different stru
 - Fulltext is in HAL "submitType_s:file"
 - Fulltext is in HAL OR on the web via unpaywall "(submitType_s:file OR linkExtId_s:openaccess)"
 
+## Fields to retrieve:
+TODO: retrieve linkExtId_s linkExtURL_s and download those too
+TODO: retrieve releasedDate_s
+
 ## References:
 https://wiki.ccsd.cnrs.fr/wikis/hal/index.php/Requêtes_sur_les_ressources_de_HAL
 https://api.archives-ouvertes.fr/docs/search/?schema=fields#fields

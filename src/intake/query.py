@@ -13,6 +13,7 @@ The raw responses are saved to data/source/hal/ with timestamps.
 Notes:
 - `docid` is the internal, unique numeric identifier assigned to each document in the HAL database. It is returned by default in API queries and is used primarily for internal referencing and technical operations within the HAL infrastructure. It may change with HAL system updates.
 - `halId_s` is the string identifier that represents the public, persistent identifier of a document in HAL. This identifier is visible in the URL of the document and is used for citation and referencing outside the HAL system. It typically takes the form of a prefix indicating the collection (e.g., hal-, tel-, medihal-), followed by a unique number, such as hal-01234567 or tel-00000000.This identifier guarantees long-term access and is designed to be stable and persistent, making it suitable for public references and citations.
+
 """
 
 import argparse
@@ -29,11 +30,11 @@ from intake.config import (
     HAL_API_REQUEST_DELAY,
     HAL_API_TIMEOUT,
     HAL_API_URL,
-    HAL_QUERY,
-    HAL_FILTER,
-    HAL_FIELDS,
     HAL_BATCH_SIZE,
+    HAL_FIELDS,
+    HAL_FILTER,
     HAL_MAX_BATCHES,
+    HAL_QUERY,
     RAW_HAL_DIR,
     setup_logging,
 )
@@ -112,7 +113,8 @@ def get_paginated_publications(
     all_publications = unique_publications
 
     logging.info(
-        "Pagination complete. Retrieved a total of %d unique records.", len(all_publications)
+        "Pagination complete. Retrieved a total of %d unique records.",
+        len(all_publications),
     )
 
     # Sort publications by halId_s

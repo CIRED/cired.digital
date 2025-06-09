@@ -30,8 +30,6 @@ from intake.utils import (
 )
 
 
-
-
 def match_documents_to_catalog(
     documents_df: pd.DataFrame, catalog_by_hal_id: dict[str, dict[str, Any]]
 ) -> list[dict[str, Any]]:
