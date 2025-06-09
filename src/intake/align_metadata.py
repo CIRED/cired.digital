@@ -19,6 +19,8 @@ from pathlib import Path
 from typing import Any
 
 import pandas as pd
+import unicodedata
+import re
 from r2r import R2RClient
 
 from intake.config import CATALOG_FILE, R2R_DEFAULT_BASE_URL, setup_logging
@@ -28,6 +30,12 @@ from intake.utils import (
     get_server_documents,
     load_catalog_by_hal_id,
 )
+
+def slugify(value: str) -> str:
+    value = unicodedata.normalize('NFD', value)
+    value = value.encode('ascii', 'ignore').decode('ascii')
+    value = re.sub(r"[^\w\s-]", "", value).strip().lower()
+    return re.sub(r"[-\s]+", "-", value)
 
 
 def match_documents_to_catalog(
@@ -50,7 +58,7 @@ def match_documents_to_catalog(
 
         elif title and title.endswith(".pdf"):
             potential_hal_id = title[:-4]  # Remove .pdf extension
-            potential_hal_id = potential_hal_id.replace("_", "-")
+            potential_hal_id = slugify(potential_hal_id)
             logging.debug(f"Looking for key '{potential_hal_id}'")
             if potential_hal_id in catalog_by_hal_id:
                 logging.debug("Found")
