@@ -74,21 +74,24 @@ def process_publications(
 
     excluded = total - len(df_filtered)
 
-    # Vectorized DOI deduplication with OUV/COUV special case
+    # Vectorized DOI deduplication with OUV/COUV special case and keep all no-DOI records
     df2 = df_filtered.drop(columns="norm_title").copy()
     # Priority scoring per document type
     priority_map = {"ART": 1, "COMM": 2, "UNDEFINED": 3}
     df2["prio"] = df2["docType_s"].map(priority_map).fillna(99)
+    # Separate records without DOI
+    no_doi_df = df2[df2["doiId_s"].isna() | (df2["doiId_s"] == "")]
+    df_with_doi = df2[~(df2["doiId_s"].isna() | (df2["doiId_s"] == ""))]
     # Identify DOIs with both OUV and COUV to keep all
     special_dois = (
-        df2.groupby("doiId_s")["docType_s"]
+        df_with_doi.groupby("doiId_s")["docType_s"]
            .agg(lambda s: set(s) >= {"OUV", "COUV"})
            .loc[lambda x: x]
            .index
            .tolist()
     )
-    special_df = df2[df2["doiId_s"].isin(special_dois)]
-    dedup_df = df2[~df2["doiId_s"].isin(special_dois)]
+    special_df = df_with_doi[df_with_doi["doiId_s"].isin(special_dois)]
+    dedup_df = df_with_doi[~df_with_doi["doiId_s"].isin(special_dois)]
     # Sort to keep the best document per DOI
     dedup_df = dedup_df.sort_values(
         by=["doiId_s", "prio", "docid"],
@@ -96,8 +99,8 @@ def process_publications(
     )
     # Drop duplicates based on raw DOI field
     unique_df = dedup_df.drop_duplicates(subset="doiId_s", keep="first")
-    # Combine special cases with deduplicated records
-    final_df = pd.concat([special_df, unique_df], ignore_index=True)
+    # Combine no-DOI records, special cases and deduplicated records
+    final_df = pd.concat([no_doi_df, special_df, unique_df], ignore_index=True)
     pubs_list = final_df.to_dict(orient="records")
     # Recalculate duplicates_excluded
     duplicates_excluded = (total - excluded) - len(pubs_list)
