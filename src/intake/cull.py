@@ -159,7 +159,7 @@ def delete_document(doc_id: str, client: R2RClient, execute_mode: bool) -> bool:
 def setup_argument_parser() -> argparse.ArgumentParser:
     """Set up command line argument parser."""
     parser = argparse.ArgumentParser(
-        description="Update R2R document metadata from HAL catalog",
+        description="Delete R2R documents missing or mismatched with the HAL catalog",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -180,6 +180,12 @@ Examples:
         type=str,
         default=R2R_DEFAULT_BASE_URL,
         help=f"R2R API base URL (default: {R2R_DEFAULT_BASE_URL})",
+    )
+    parser.add_argument(
+        "--target",
+        choices=["missing", "mismatch", "both"],
+        default="both",
+        help="Type of deletion: missing = only orphans, mismatch = only metadata mismatches, both = both (default)",
     )
     parser.add_argument(
         "--execute",
@@ -281,19 +287,45 @@ def main() -> int:
 
     matches = match_documents_to_catalog(documents_df, catalog_by_hal_id)
 
-    if not matches:
-        logging.error(
-            "Metadata alignment abort: No documents matched to catalog entries"
-        )
-        return 4
+    # Identify orphans (documents missing from catalog)
+    matched_ids = {m["doc_id"] for m in matches}
+    orphans = [row for _, row in documents_df.iterrows() if row["id"] not in matched_ids]
 
-    delete_count, skip_count = process_matches(matches, client, args.execute)
+    # Identify mismatches (documents with inconsistent metadata)
+    mismatches = []
+    for match in matches:
+        diffs = needs_metadata_update(match["document_row"], match["catalog_entry"])
+        if diffs:
+            mismatches.append({"doc_id": match["doc_id"], "diffs": diffs})
 
-    logging.info(f"Summary: {delete_count} documents deleted, {skip_count} skipped")
+    # Select documents to process based on target
+    to_process = []
+    if args.target in ("missing", "both"):
+        to_process += [("missing", row["id"]) for row in orphans]
+    if args.target in ("mismatch", "both"):
+        to_process += [("mismatch", m["doc_id"], m["diffs"]) for m in mismatches]
+
+    if not to_process:
+        logging.info("No documents to delete based on target criteria")
+        return 0
+
+    delete_count = 0
+    for item in to_process:
+        if item[0] == "missing":
+            logging.info(f"Document {item[1]} absent du catalogue")
+            if delete_document(item[1], client, args.execute):
+                delete_count += 1
+        else:
+            doc_id, diffs = item[1], item[2]
+            logging.info(f"Document {doc_id} métadonnées divergentes: {list(diffs.keys())}")
+            if delete_document(doc_id, client, args.execute):
+                delete_count += 1
+
+    logging.info(f"Résumé: {delete_count} documents supprimés")
 
     if not args.execute:
-        logging.info("This was a dry run - no actual changes were made")
-        logging.info("Use --execute to actually delete unaligned documents")
+        logging.info("Mode dry-run - aucune suppression effective")
+        logging.info("Utilisez --execute pour supprimer réellement")
 
     return 0
 
