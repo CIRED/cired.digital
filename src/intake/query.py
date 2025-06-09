@@ -93,8 +93,18 @@ def get_paginated_publications(
 
         current_batch += 1
 
+    # Déduplication des publications par docid
+    seen_ids: set[str] = set()
+    unique_publications: list[Any] = []
+    for pub in all_publications:
+        docid = pub.get("docid")
+        if docid and docid not in seen_ids:
+            seen_ids.add(docid)
+            unique_publications.append(pub)
+    all_publications = unique_publications
+
     logging.info(
-        "Pagination complete. Retrieved a total of %d records.", len(all_publications)
+        "Pagination complete. Retrieved a total of %d unique records.", len(all_publications)
     )
 
     return {
