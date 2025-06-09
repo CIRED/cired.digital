@@ -20,8 +20,8 @@ import logging
 import sys
 from pathlib import Path
 from typing import Any
-import pandas as pd
 
+import pandas as pd
 from r2r import R2RClient
 
 from intake.config import (
