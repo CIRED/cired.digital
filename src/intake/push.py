@@ -20,6 +20,7 @@ import logging
 import sys
 from pathlib import Path
 from typing import Any
+import pandas as pd
 
 from r2r import R2RClient
 
@@ -510,18 +511,16 @@ def main() -> int:
         logging.error("Failed to retrieve documents from R2R.")
         return 3
 
-    # On indexe les docs par hal_id et on conserve docid + status
+    # On indexe les docs par metadata.hal_id et on conserve docid + status
     server_documents: dict[str, dict[str, object]] = {}
     for _, row in documents_df.iterrows():
-        md = row["metadata"]
-        if isinstance(md, str):
-            md = json.loads(md)
-        hal_id = md.get("hal_id")
-        if hal_id:
-            server_documents[hal_id] = {
-                "docid": row.get("id") or row.get("document_id"),
-                "status": row["ingestion_status"],
-            }
+        hal_id = row["metadata.hal_id"]
+        if pd.isna(hal_id):
+            continue
+        server_documents[hal_id] = {
+            "docid": row.get("id") or row.get("document_id"),
+            "status": row["ingestion_status"],
+        }
 
     logging.info(
         "Server summary: %d documents present",
