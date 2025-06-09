@@ -76,8 +76,7 @@ def process_publications(
     excluded = total - len(df_filtered)
 
     # Pas de déduplication, conserver tous les enregistrements
-    df_final = df_filtered
-    pubs_list = df_final.drop(columns="norm_title").to_dict(orient="records")
+    pubs_list = df_filtered.drop(columns="norm_title").to_dict(orient="records")
     duplicates_excluded = 0
 
     result = {
