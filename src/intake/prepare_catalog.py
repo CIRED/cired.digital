@@ -75,22 +75,10 @@ def process_publications(
 
     excluded = total - len(df_filtered)
 
-     # Deduplicate halId_s using pandas
-     mask_no_id = df_filtered["halId_s"].isna()
-     df_no_id = df_filtered[mask_no_id]
-     df_with_id = df_filtered[~mask_no_id]
-
-    # Keep first record per halId_s
-    df_unique_id = (
-        df_with_id
-        .sort_values("halId_s")
-        .drop_duplicates(subset="halId_s", keep="first")
-    )
-    duplicates_excluded = len(df_with_id) - len(df_unique_id)
-
-    # Reassemble final (with records without IDs)
-    df_final = pd.concat([df_unique_id, df_no_id], ignore_index=True)
+    # Pas de déduplication, conserver tous les enregistrements
+    df_final = df_filtered
     pubs_list = df_final.drop(columns="norm_title").to_dict(orient="records")
+    duplicates_excluded = 0
 
     result = {
         "processing_timestamp": datetime.now().isoformat(),
