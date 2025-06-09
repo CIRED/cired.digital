@@ -266,48 +266,41 @@ def main() -> int:
         logging.error("Metadata alignment abort: Failed to connect to R2R: %s", str(e))
         return 3
 
-    matches = match_documents_to_catalog(documents_df, catalog_by_hal_id)
+    # Enrich the DataFrame with catalog info and metadata check
+    documents_df['catalog_entry'] = documents_df['meta_hal_id'].map(lambda hid: catalog_by_hal_id.get(hid))
+    documents_df['is_in_catalog'] = documents_df['catalog_entry'].notnull()
 
-    # Identify orphans (documents missing from catalog)
-    matched_ids = {m["doc_id"] for m in matches}
-    orphans = [row for _, row in documents_df.iterrows() if row["id"] not in matched_ids]
+    def check_metadata(row):
+        return not bool(needs_metadata_update(row, row['catalog_entry'] or {}))
 
-    # Identify mismatches (documents with inconsistent metadata)
-    mismatches = []
-    for match in matches:
-        diffs = needs_metadata_update(match["document_row"], match["catalog_entry"])
-        if diffs:
-            mismatches.append({"doc_id": match["doc_id"], "diffs": diffs})
+    documents_df['metadata_correct'] = documents_df.apply(check_metadata, axis=1)
 
-    # Select documents to process based on target
-    to_process = []
+    # Select documents to delete based on target criteria
+    orphans = documents_df.loc[~documents_df['is_in_catalog'], 'id']
+    bad_meta = documents_df.loc[documents_df['is_in_catalog'] & ~documents_df['metadata_correct'], 'id']
+    to_delete = []
     if args.target in ("missing", "both"):
-        to_process += [("missing", row["id"]) for row in orphans]
+        to_delete += list(orphans)
     if args.target in ("mismatch", "both"):
-        to_process += [("mismatch", m["doc_id"], m["diffs"]) for m in mismatches]
+        to_delete += list(bad_meta)
 
-    if not to_process:
+    if not to_delete:
         logging.info("No documents to delete based on target criteria")
+        if not args.execute:
+            logging.info("Mode dry-run - aucune suppression effective")
+            logging.info("Utilisez --execute pour supprimer réellement")
         return 0
 
     delete_count = 0
-    for item in to_process:
-        if item[0] == "missing":
-            logging.info(f"Document {item[1]} absent du catalogue")
-            if delete_document(item[1], client, args.execute):
-                delete_count += 1
-        else:
-            doc_id, diffs = item[1], item[2]
-            logging.info(f"Document {doc_id} métadonnées divergentes: {list(diffs.keys())}")
-            if delete_document(doc_id, client, args.execute):
-                delete_count += 1
+    for doc_id in to_delete:
+        logging.info(f"Suppression document {doc_id}")
+        if delete_document(doc_id, client, args.execute):
+            delete_count += 1
 
     logging.info(f"Résumé: {delete_count} documents supprimés")
-
     if not args.execute:
         logging.info("Mode dry-run - aucune suppression effective")
         logging.info("Utilisez --execute pour supprimer réellement")
-
     return 0
 
 
