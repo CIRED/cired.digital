@@ -89,6 +89,8 @@ def establish_available_documents(
         - Dictionary of available documents (hal_id -> metadata)
         - Total number of records in catalog
         - Number of missing PDF files
+        - Number of oversized PDF files
+        - Number of non-PDF files
 
     """
     catalog_by_hal_id, total_records = load_catalog_by_hal_id(catalog_file)
@@ -169,7 +171,6 @@ def get_uploadable_documents(
     uploadable_pdfs = []
 
     for hal_id, metadata in available_docs.items():
-        formatted_metadata = format_metadata_for_upload(metadata)
         # Lookup par hal_id
         entry = server_documents.get(hal_id)
         ingestion_status = entry["status"] if entry else None
@@ -431,6 +432,8 @@ def print_upload_statistics(
 ) -> int:
     """Print upload statistics and return appropriate exit code."""
     logging.info("=== UPLOAD STATISTICS ===")
+    logging.info("Total catalog entries: %d", total_records)
+    logging.info("Missing PDF files: %d", missing_files)
 
     logging.info("Local valid documents: %d", len(available_docs))
     logging.info("Documents on server: %d", len(server_documents))
