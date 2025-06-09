@@ -74,9 +74,21 @@ def process_publications(
 
     excluded = total - len(df_filtered)
 
-    # Pas de déduplication, conserver tous les enregistrements
-    pubs_list = df_filtered.drop(columns="norm_title").to_dict(orient="records")
+    # Déduplication basée sur doiId_s et log détaillé des groupes
+    records = df_filtered.drop(columns="norm_title").to_dict(orient="records")
+    pubs_by_doi = {}
     duplicates_excluded = 0
+    for pub in records:
+        doi = pub.get("doiId_s")
+        pubs_by_doi.setdefault(doi, []).append(pub)
+    pubs_list = []
+    for doi, group in pubs_by_doi.items():
+        if doi and len(group) > 1:
+            logging.debug("Groupe DOI %s contient %d entrées", doi, len(group))
+            for entry in group:
+                logging.debug("    %s", entry)
+        pubs_list.append(group[0])
+        duplicates_excluded += len(group) - 1
 
     result = {
         "processing_timestamp": datetime.now().isoformat(),
