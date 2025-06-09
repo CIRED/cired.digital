@@ -13,7 +13,6 @@ This script:
 from __future__ import annotations  # Needed for pd.Series[Any]
 
 import argparse
-import json
 import logging
 import sys
 from pathlib import Path
