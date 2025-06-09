@@ -172,9 +172,9 @@ def get_uploadable_documents(
 
     for hal_id, metadata in available_docs.items():
         formatted_metadata = format_metadata_for_upload(metadata)
-        doc_title = formatted_metadata.get("title", hal_id)
-
-        ingestion_status = server_documents.get(doc_title)
+        # Lookup par hal_id
+        entry = server_documents.get(hal_id)
+        ingestion_status = entry["status"] if entry else None
 
         if ingestion_status not in (None, "failed"):
             continue
@@ -331,8 +331,10 @@ def upload_documents(
                 if raw_metadata_for_title
                 else {}
             )
-            doc_title = formatted_for_title.get("title", file_stem)
-            ingestion_status = server_documents.get(doc_title)
+            # Lookup par hal_id (underscore → tiret)
+            hal_id = file_stem.replace("_", "-")
+            entry = server_documents.get(hal_id)
+            ingestion_status = entry["status"] if entry else None
 
             if ingestion_status not in (None, "failed"):
                 logging.debug(
@@ -508,9 +510,18 @@ def main() -> int:
         logging.error("Failed to retrieve documents from R2R.")
         return 3
 
-    server_documents: dict[str, str] = {
-        row["title"]: row["ingestion_status"] for _, row in documents_df.iterrows()
-    }
+    # On indexe les docs par hal_id et on conserve docid + status
+    server_documents: dict[str, dict[str, object]] = {}
+    for _, row in documents_df.iterrows():
+        md = row["metadata"]
+        if isinstance(md, str):
+            md = json.loads(md)
+        hal_id = md.get("hal_id")
+        if hal_id:
+            server_documents[hal_id] = {
+                "docid": row.get("id") or row.get("document_id"),
+                "status": row["ingestion_status"],
+            }
 
     logging.info(
         "Server summary: %d documents present",
