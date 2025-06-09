@@ -85,6 +85,10 @@ def process_publications(
     # Ordre de priorité
     priority = {"ART": 1, "COMM": 2, "UNDEFINED": 3}
     for doi, group in pubs_by_doi.items():
+        # ne pas toucher aux publications sans DOI
+        if not doi:
+            pubs_list.extend(group)
+            continue
         if len(group) <= 1:
             pubs_list.extend(group)
             continue
@@ -92,7 +96,7 @@ def process_publications(
         # cas ouvrage+chapitre → tout garder
         if "OUV" in types and "COUV" in types:
             pubs_list.extend(group)
-            duplicates_excluded += len(group) - 1
+            # compteur recalculé ultérieurement
             continue
         # on choisit le type le plus prioritaire
         best_prio = min(priority.get(t, 99) for t in types)
@@ -104,7 +108,11 @@ def process_publications(
         else:
             sel = candidats[0]
         pubs_list.append(sel)
-        duplicates_excluded += len(group) - 1
+        # compteur recalculé ultérieurement
+
+    # recalcul de duplicates_excluded pour cohérence des stats
+    total_after_wp = total - excluded
+    duplicates_excluded = total_after_wp - len(pubs_list)
 
     result = {
         "processing_timestamp": datetime.now().isoformat(),
