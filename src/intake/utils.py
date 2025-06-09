@@ -176,18 +176,17 @@ def get_date_columns() -> list[str]:
 def load_catalog_by_hal_id(catalog_file: Path) -> tuple[dict[str, dict[str, Any]], int]:
     """Load catalog JSON and index by hal_id, return mapping and total publications count."""
     if not catalog_file.exists():
-        logging.error("Catalog file not found: %s", catalog_file)
-        return {}, 0
+        raise FileNotFoundError(f"Catalog file not found: {catalog_file}")
 
     try:
         catalog_data = json.loads(catalog_file.read_text(encoding="utf-8"))
-        publications = get_catalog_publications(catalog_data)
-        catalog_by_hal_id: dict[str, dict[str, Any]] = {}
-        for pub in publications:
-            if "halId_s" in pub:
-                catalog_by_hal_id[pub["halId_s"]] = pub
-        logging.info("Loaded %d publications from catalog", len(catalog_by_hal_id))
-        return catalog_by_hal_id, len(publications)
     except Exception as e:
-        logging.error("Failed to load catalog: %s", e)
-        return {}, 0
+        raise RuntimeError(f"Failed to parse catalog JSON: {e}")
+
+    publications = get_catalog_publications(catalog_data)
+    catalog_by_hal_id: dict[str, dict[str, Any]] = {}
+    for pub in publications:
+        if "halId_s" in pub:
+            catalog_by_hal_id[pub["halId_s"]] = pub
+    logging.info("Loaded %d publications from catalog", len(catalog_by_hal_id))
+    return catalog_by_hal_id, len(publications)

@@ -177,9 +177,10 @@ def main() -> int:
     else:
         logging.info("Using catalog file: %s", catalog_file)
 
-    catalog_by_hal_id, _ = load_catalog_by_hal_id(catalog_file)
-    if not catalog_by_hal_id:
-        logging.error("Metadata alignment abort: Failed to load catalog.")
+    try:
+        catalog_by_hal_id, _ = load_catalog_by_hal_id(catalog_file)
+    except Exception as e:
+        logging.error("Metadata alignment abort: %s", e)
         return 1
 
     client = R2RClient(base_url=args.base_url)
