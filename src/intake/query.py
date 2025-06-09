@@ -163,6 +163,7 @@ docid,halId_s,doiId_s,label_s,producedDate_tdate,authFullName_s,title_s,abstract
         "fl": fields.strip(),
         "wt": "json",
         "fq": "submitType_s:file",  # Only files, no notices or annexes
+        "sort": "docid asc",        # Tri stable pour pagination cohérente
     }
 
     response_data = get_paginated_publications(params)
