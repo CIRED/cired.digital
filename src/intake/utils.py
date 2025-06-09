@@ -171,3 +171,22 @@ def get_column_dtypes() -> Mapping[Hashable, str]:
 def get_date_columns() -> list[str]:
     """Extract list of columns that should be parsed as dates."""
     return [col for col, config in COLUMN_CONFIG.items() if config["parse_dates"]]
+
+
+def load_catalog_by_hal_id(catalog_file: Path) -> tuple[dict[str, dict[str, Any]], int]:
+    """Load catalog JSON and index by hal_id, return mapping and total publications count."""
+    if not catalog_file.exists():
+        raise FileNotFoundError(f"Catalog file not found: {catalog_file}")
+
+    try:
+        catalog_data = json.loads(catalog_file.read_text(encoding="utf-8"))
+    except Exception as e:
+        raise RuntimeError(f"Failed to parse catalog JSON: {e}")
+
+    publications = get_catalog_publications(catalog_data)
+    catalog_by_hal_id: dict[str, dict[str, Any]] = {}
+    for pub in publications:
+        if "halId_s" in pub:
+            catalog_by_hal_id[pub["halId_s"]] = pub
+    logging.info("Loaded %d publications from catalog", len(catalog_by_hal_id))
+    return catalog_by_hal_id, len(publications)

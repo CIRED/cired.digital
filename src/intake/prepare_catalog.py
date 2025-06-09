@@ -17,7 +17,6 @@ import html
 import json
 import logging
 from datetime import datetime
-from math import isnan
 from pathlib import Path
 from typing import Any
 
@@ -75,22 +74,34 @@ def process_publications(
 
     excluded = total - len(df_filtered)
 
-    # Deduplicate halId_s using pandas
-    mask_no_id = df_filtered["halId_s"].isna()
-    df_no_id = df_filtered[mask_no_id]
-    df_with_id = df_filtered[~mask_no_id]
-
-    # Keep first record per halId_s
-    df_unique_id = (
-        df_with_id
-        .sort_values("halId_s")
-        .drop_duplicates(subset="halId_s", keep="first")
+    # Vectorized DOI deduplication with OUV/COUV special case and keep all no-DOI records
+    df2 = df_filtered.drop(columns="norm_title").copy()
+    # Priority scoring per document type
+    priority_map = {"ART": 1, "COMM": 2, "UNDEFINED": 3}
+    df2["prio"] = df2["docType_s"].map(priority_map).fillna(99)
+    # Separate records without DOI
+    no_doi_df = df2[df2["doiId_s"].isna() | (df2["doiId_s"] == "")]
+    df_with_doi = df2[~(df2["doiId_s"].isna() | (df2["doiId_s"] == ""))]
+    # Identify DOIs with both OUV and COUV to keep all
+    special_dois = (
+        df_with_doi.groupby("doiId_s")["docType_s"]
+        .agg(lambda s: set(s) >= {"OUV", "COUV"})
+        .loc[lambda x: x]
+        .index.tolist()
     )
-    duplicates_excluded = len(df_with_id) - len(df_unique_id)
-
-    # Reassemble final (with records without IDs)
-    df_final = pd.concat([df_unique_id, df_no_id], ignore_index=True)
-    pubs_list = df_final.drop(columns="norm_title").to_dict(orient="records")
+    special_df = df_with_doi[df_with_doi["doiId_s"].isin(special_dois)]
+    dedup_df = df_with_doi[~df_with_doi["doiId_s"].isin(special_dois)]
+    # Sort to keep the best document per DOI
+    dedup_df = dedup_df.sort_values(
+        by=["doiId_s", "prio", "docid"], ascending=[True, True, False]
+    )
+    # Drop duplicates based on raw DOI field
+    unique_df = dedup_df.drop_duplicates(subset="doiId_s", keep="first")
+    # Combine no-DOI records, special cases and deduplicated records
+    final_df = pd.concat([no_doi_df, special_df, unique_df], ignore_index=True)
+    pubs_list = final_df.to_dict(orient="records")
+    # Recalculate duplicates_excluded
+    duplicates_excluded = (total - excluded) - len(pubs_list)
 
     result = {
         "processing_timestamp": datetime.now().isoformat(),
@@ -98,7 +109,7 @@ def process_publications(
         "filtering_statistics": {
             "total_retrieved": total,
             "working_papers_excluded": excluded,
-            "duplicates_excluded": duplicates_excluded,
+            "doi_duplicates_excluded": duplicates_excluded,
             "final_count": len(pubs_list),
         },
         "publications": sorted(
@@ -123,10 +134,10 @@ def save_prepared_catalog(catalog_data: dict[str, Any]) -> Path:
     logging.info("Saved prepared catalog to %s", filepath)
     stats = catalog_data.get("filtering_statistics", {})
     logging.info(
-        "Statistiques catalogue préparé : récupérés=%d, exclus_working_papers=%d, doublons_exclus=%d, final=%d",
+        "Prepared catalog stats: retrieved=%d, working_papers_excluded=%d, doi_duplicates_excluded=%d, final=%d",
         stats.get("total_retrieved", 0),
         stats.get("working_papers_excluded", 0),
-        stats.get("duplicates_excluded", 0),
+        stats.get("doi_duplicates_excluded", 0),
         stats.get("final_count", 0),
     )
     return filepath
@@ -173,14 +184,6 @@ def main() -> None:
     try:
         raw_data = json.loads(raw_file.read_text(encoding="utf-8"))
         catalog_data = process_publications(raw_data, str(raw_file))
-
-        # Nettoyage des NaN pour l'enregistrement
-        def _clean(pub: dict[str, Any]) -> dict[str, Any]:
-            return {
-                k: v for k, v in pub.items() if not (isinstance(v, float) and isnan(v))
-            }
-
-        catalog_data["publications"] = [_clean(p) for p in catalog_data["publications"]]
         save_prepared_catalog(catalog_data)
     except Exception as e:
         logging.error("Failed to process raw HAL file: %s", e)
