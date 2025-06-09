@@ -83,7 +83,7 @@ def process_publications(
         pubs_by_doi.setdefault(doi, []).append(pub)
     pubs_list = []
     for doi, group in pubs_by_doi.items():
-        if doi and len(group) > 1:
+        if isinstance(doi, str) and len(group) > 1:
             logging.info("Groupe DOI %s contient %d entrées", doi, len(group))
             for entry in group:
                 logging.info("    halId_s=%s, docid=%s, title_s=%s, docType_s=%s",
