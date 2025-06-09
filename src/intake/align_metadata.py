@@ -26,36 +26,14 @@ from intake.config import CATALOG_FILE, R2R_DEFAULT_BASE_URL, setup_logging
 from intake.push import format_metadata_for_upload
 from intake.utils import (
     get_catalog_file,
-    get_catalog_publications,
     get_server_documents,
+    load_catalog_by_hal_id,
 )
 
 
 def load_catalog(catalog_file: Path) -> dict[str, dict[str, Any]]:
-    """Load catalog data and index by hal_id."""
-    if not catalog_file.exists():
-        logging.error(f"Catalog file not found: {catalog_file}")
-        logging.error(
-            "Run hal_query.py and prepare_catalog.py first to create the catalog."
-        )
-        return {}
-
-    try:
-        catalog_data = json.loads(catalog_file.read_text(encoding="utf-8"))
-        publications = get_catalog_publications(catalog_data)
-        catalog_by_hal_id = {}
-
-        for pub in publications:
-            if "halId_s" in pub:
-                hal_id = pub["halId_s"]
-                catalog_by_hal_id[hal_id] = pub
-
-        logging.info("Loaded %d publications from catalog", len(catalog_by_hal_id))
-        return catalog_by_hal_id
-
-    except Exception as e:
-        logging.error(f"Failed to load catalog: {e}")
-        return {}
+    catalog_by_hal_id, _ = load_catalog_by_hal_id(catalog_file)
+    return catalog_by_hal_id
 
 
 def match_documents_to_catalog(
