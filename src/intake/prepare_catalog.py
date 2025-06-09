@@ -86,8 +86,9 @@ def process_publications(
         if isinstance(doi, str) and len(group) > 1:
             logging.info("Groupe DOI %s contient %d entrées", doi, len(group))
             for entry in group:
-                logging.info("    halId_s=%s, docid=%s, title_s=%s, docType_s=%s",
-                             entry.get("halId_s"), entry.get("docid"), entry.get("title_s"), entry.get("docType_s"))
+                logging.info("     docType_s=%s, halId_s=%s, docid=%s",
+                             entry.get("docType_s"), entry.get("halId_s"), entry.get("docid"))
+                logging.info("       %s", entry.get("label_s"))
         pubs_list.append(group[0])
         duplicates_excluded += len(group) - 1
 
