@@ -14,7 +14,6 @@ Exit codes:
 """
 
 import argparse
-import hashlib
 import json
 import logging
 import sys
@@ -462,7 +461,9 @@ def main() -> int:
         logging.error("No catalog file available")
         return 1
 
-    available_docs, total_records, missing_files = establish_available_documents(catalog_file, args.dir)
+    available_docs, total_records, missing_files = establish_available_documents(
+        catalog_file, args.dir
+    )
 
     if not available_docs:
         logging.error("No documents available for upload")
