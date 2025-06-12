@@ -43,7 +43,7 @@ table th {
                 Conversations avec CIRED.digital, documentaliste scientifique  - VERSION ALPHA
               </h1>
 <p class="text-sm text-gray-500" id="status-text">
-                Connecté à <span id="api-url-display">http://cired.digital:7272</span> • <span id="model-display">openai/gpt-4o-mini</span>
+                Connecté à <span id="api-url-display">http://cired.digital:7272</span> • <span id="model-display">ollama/mistral-small:24b-3.1-instruct-2503-q8_0</span>
 </p>
 </div>
 </div><button class="px-3 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors" id="config-btn">Config</button>
@@ -55,18 +55,18 @@ table th {
 <label class="block text-sm font-medium text-gray-700 mb-1">R2R API URL</label> <input class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="api-url" type="text"/>
 </div>
 <div>
-<label class="block text-sm font-medium text-gray-700 mb-1">Model</label> <select class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="model">
-<option value="openai/gpt-4.1-mini">
-                GPT-4.1 Mini
-              </option>
-<option value="deepseek/deepseek-chat">
-                Deepseek chat
-              </option>
-<option value="mistral/open-mistral-7b">
-                Open mistral 7b
-              </option>
-</select>
-</div>
+  <label class="block text-sm font-medium text-gray-700 mb-1">Model</label>
+  <select class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="model">
+    <option value="ollama/mistral-small:24b-3.1-instruct-2503-q8_0">Mistral small on CNRS servers</option>
+    <option value="ollama/mistra-large:latest">Mistral large on CNRS servers</option>
+    <option value="ollama/qwen3:32b">Qwen 3 32B on CNRS servers</option>
+    <option value="deepseek/deepseek-r1">Deepseek R1 at Deepseek</option>
+    <option value="deepseek/deepseek-chat">Deepseek chat at Deepseek</option>
+    <option value="mistral/open-mistral-7b">Open mistral 7b at Mistral</option>
+    <option value="anthropic/claude-sonnet-4-20250514">Claude Sonnet 2025-05-14 at Anthropic</option>
+    <option value="openai/gpt-4.1-mini">GPT-4.1 Mini at OpenAI</option>
+  </select>
+ </div>
 <div>
 <label class="block text-sm font-medium text-gray-700 mb-1">Temperature</label> <input class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="temperature" max="2" min="0" step="0.1" type="number" value="0.1"/>
 </div>
@@ -121,7 +121,7 @@ table th {
 <div class="bg-white border-t border-gray-200 p-4">
 <div class="flex space-x-3 max-w-4xl mx-auto">
 <div class="flex-1 relative">
-<textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="message-input" placeholder="Posez votre question sur les thèmes du CIRED..." rows="1" style="min-height: 48px; max-height: 120px;"></textarea>
+<textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="message-input" placeholder="Quelle est votre question de recherche, sur quoi travaillez vous actuellement?" rows="1" style="min-height: 48px; max-height: 120px;"></textarea>
 </div><button class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center transition-colors" id="send-btn"><span class="font-bold text-lg">➤</span></button>
 </div>
 <div class="text-center mt-2">
