@@ -12,3 +12,20 @@ default_admin_password="QX9TstK7~N+TgwW"
 
 [ingestion]
 automatic_extraction = false
+
+[agent]
+tools = ["search_file_knowledge"]
+
+[completion]
+provider = "litellm"
+concurrent_request_limit = 1
+
+  [completion.generation_config]
+  temperature = 0.1
+  top_p = 1
+  max_tokens_to_sample = 1_024
+  stream = false
+  api_base = "https://llm-tools-alpha.huma-num.fr/MH_6QCsJibvVd_jx7eTm22h3/"
+
+[orchestration]
+provider = "hatchet"
