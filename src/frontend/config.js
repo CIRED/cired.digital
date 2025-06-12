@@ -1,7 +1,7 @@
 // ==========================================
 // CONFIGURATION CONSTANTS
 // ==========================================
-const DEFAULT_HOST = 'http://cired.digital:7272';
+const DEFAULT_HOST = 'http://localhost:7272';
 const FEEDBACK_HOST = 'http://localhost:7275';
 
 // ==========================================
@@ -60,12 +60,12 @@ function setupEventListeners() {
 
     initializePrivacyMode();
     initializeSession();
-    
+
     document.getElementById('view-analytics-link').addEventListener('click', function(e) {
         e.preventDefault();
         window.open(FEEDBACK_HOST + '/v1/analytics/view', '_blank');
     });
-    
+
     document.getElementById('privacy-policy-link').addEventListener('click', function(e) {
         e.preventDefault();
         alert('Privacy policy coming soon!');
@@ -186,20 +186,20 @@ function initializeSession() {
         sessionId = generateSessionId();
         localStorage.setItem('session-id', sessionId);
     }
-    
+
     logSessionStart();
 }
 
 async function logSessionStart() {
     try {
         const privacyMode = isPrivacyModeEnabled();
-        
+
         const sessionData = {
             session_id: sessionId,
             start_time: new Date().toISOString(),
             privacy_mode: privacyMode
         };
-        
+
         const response = await fetch(`${FEEDBACK_HOST}/v1/log/session`, {
             method: 'POST',
             headers: {
@@ -207,7 +207,7 @@ async function logSessionStart() {
             },
             body: JSON.stringify(sessionData)
         });
-        
+
         if (response.ok) {
             debugLog('Session logged successfully');
         } else {
@@ -221,7 +221,7 @@ async function logSessionStart() {
 async function logQuery(queryId, question, queryParameters) {
     try {
         const privacyMode = isPrivacyModeEnabled();
-        
+
         const queryData = {
             session_id: sessionId,
             query_id: queryId,
@@ -230,7 +230,7 @@ async function logQuery(queryId, question, queryParameters) {
             timestamp: new Date().toISOString(),
             privacy_mode: privacyMode
         };
-        
+
         const response = await fetch(`${FEEDBACK_HOST}/v1/log/query`, {
             method: 'POST',
             headers: {
@@ -238,7 +238,7 @@ async function logQuery(queryId, question, queryParameters) {
             },
             body: JSON.stringify(queryData)
         });
-        
+
         if (response.ok) {
             debugLog('Query logged successfully');
         } else {
@@ -252,7 +252,7 @@ async function logQuery(queryId, question, queryParameters) {
 async function logResponse(queryId, response, processingTime) {
     try {
         const privacyMode = isPrivacyModeEnabled();
-        
+
         const responseData = {
             query_id: queryId,
             response: response,
@@ -260,7 +260,7 @@ async function logResponse(queryId, response, processingTime) {
             timestamp: new Date().toISOString(),
             privacy_mode: privacyMode
         };
-        
+
         const responseResult = await fetch(`${FEEDBACK_HOST}/v1/log/response`, {
             method: 'POST',
             headers: {
@@ -268,7 +268,7 @@ async function logResponse(queryId, response, processingTime) {
             },
             body: JSON.stringify(responseData)
         });
-        
+
         if (responseResult.ok) {
             debugLog('Response logged successfully');
         } else {
