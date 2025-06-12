@@ -1,27 +1,33 @@
+# Change: Prefix volumes names
+
 volumes:
   hatchet_certs:
-    name: hatchet_certs
+    name: ${PROJECT_NAME}_hatchet_certs
   hatchet_config:
-    name: hatchet_config
+    name: ${PROJECT_NAME}_hatchet_config
   hatchet_api_key:
-    name: hatchet_api_key
+    name: ${PROJECT_NAME}_hatchet_api_key
   hatchet_rabbitmq_data:
-    name: hatchet_rabbitmq_data
+    name: ${PROJECT_NAME}_hatchet_rabbitmq_data
   hatchet_rabbitmq_conf:
-    name: hatchet_rabbitmq_conf
+    name: ${PROJECT_NAME}_hatchet_rabbitmq_conf
   hatchet_postgres_data:
-    name: hatchet_postgres_data
+    name: ${PROJECT_NAME}_hatchet_postgres_data
   minio_data:
-    name: minio_data
+    name: ${PROJECT_NAME}_minio_data
   postgres_data:
-    name: postgres_data
+    name: ${PROJECT_NAME}_postgres_data
+
+# Changes:
+# - Use env_files from credentials/ out of repo, they are full of secrets
+# - Fully define paths to images, for security
 
 services:
   postgres:
-    image: pgvector/pgvector:pg16
+    image: docker.io/pgvector/pgvector:pg16
     profiles: [postgres]
     env_file:
-      - ./env/postgres.env
+      - ../../credentials/postgres-cidi.env
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
@@ -37,10 +43,10 @@ services:
       -c max_connections=1024
 
   minio:
-    image: minio/minio
+    image: docker.io/minio/minio
     profiles: [minio]
     env_file:
-      - ./env/minio.env
+      - ../../credentials/minio-cidi.env
     volumes:
       - minio_data:/data
     ports:
@@ -55,9 +61,9 @@ services:
     command: server /data --console-address ":9001"
 
   hatchet-postgres:
-    image: postgres:latest
+    image: docker.io/library/postgres:latest
     env_file:
-      - ./env/hatchet.env
+      - ../../credentials/hatchet-cidi.env
     volumes:
       - hatchet_postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -66,15 +72,14 @@ services:
       timeout: 5s
       retries: 5
 
-
   hatchet-rabbitmq:
-    image: "rabbitmq:3-management"
+    image: docker.io/library/rabbitmq:3-management
     hostname: "hatchet-rabbitmq"
     ports:
       - "5673:5672"
       - "15673:15672"
     env_file:
-      - ./env/hatchet.env
+      - ../../credentials/hatchet-cidi.env
     volumes:
       - hatchet_rabbitmq_data:/var/lib/rabbitmq
       - hatchet_rabbitmq_conf:/etc/rabbitmq/rabbitmq.conf
@@ -85,17 +90,17 @@ services:
       retries: 5
 
   hatchet-create-db:
-    image: postgres:latest
+    image: docker.io/library/postgres:latest
     command: sh /scripts/create-hatchet-db.sh
     volumes:
       - ./scripts:/scripts
     env_file:
-      - ./env/hatchet.env
+      - ../../credentials/hatchet-cidi.env
 
   hatchet-migration:
     image: ghcr.io/hatchet-dev/hatchet/hatchet-migrate:v0.53.15
     env_file:
-      - ./env/hatchet.env
+      - ../../credentials/hatchet-cidi.env
     depends_on:
       hatchet-create-db:
         condition: service_completed_successfully
@@ -104,7 +109,7 @@ services:
     image: ghcr.io/hatchet-dev/hatchet/hatchet-admin:v0.53.15
     command: /hatchet/hatchet-admin quickstart --skip certs --generated-config-dir /hatchet/config --overwrite=false
     env_file:
-      - ./env/hatchet.env
+      - ../../credentials/hatchet-cidi.env
     volumes:
       - hatchet_certs:/hatchet/certs
       - hatchet_config:/hatchet/config
@@ -124,7 +129,7 @@ services:
     ports:
       - "7077:7077"
     env_file:
-      - ./env/hatchet.env
+      - ../../credentials/hatchet-cidi.env
     volumes:
       - hatchet_certs:/hatchet/certs
       - hatchet_config:/hatchet/config
@@ -142,7 +147,7 @@ services:
       hatchet-setup-config:
         condition: service_completed_successfully
     env_file:
-      - ./env/hatchet.env
+      - ../../credentials/hatchet-cidi.env
     volumes:
       - hatchet_certs:/hatchet/certs
       - hatchet_config:/hatchet/config
@@ -162,7 +167,7 @@ services:
         condition: service_completed_successfully
 
   unstructured:
-    image: ragtoriches/unst-prod
+    image: docker.io/ragtoriches/unst-prod:latest
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:7275/health"]
       interval: 10s
@@ -170,7 +175,7 @@ services:
       retries: 5
 
   graph_clustering:
-    image: ragtoriches/cluster-prod
+    image: docker.io/ragtoriches/cluster-prod
     ports:
       - "7276:7276"
     healthcheck:
@@ -180,11 +185,11 @@ services:
       retries: 5
 
   r2r:
-    image: sciphiai/r2r:latest
+    image: docker.io/sciphiai/r2r:latest
     ports:
       - "7272:7272"
     env_file:
-      - ./env/r2r-full.env
+      - ../../credentials/r2r-cidi.env
     command: sh /scripts/start-r2r.sh
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:7272/v3/health"]
@@ -198,7 +203,9 @@ services:
       - hatchet_api_key:/hatchet_api_key:ro
       - ./scripts:/scripts
     extra_hosts:
-      - host.docker.internal:host-gateway
+      # Broken on Linux
+      # - host.docker.internal:host-gateway
+      - host.docker.internal:[127.0.0.1]
     depends_on:
       setup-token:
         condition: service_completed_successfully
@@ -206,10 +213,34 @@ services:
         condition: service_healthy
       graph_clustering:
         condition: service_healthy
+    # Logging stack removed in May 2025
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
 
   r2r-dashboard:
-    image: sciphiai/r2r-dashboard:1.0.3
+    image: docker.io/sciphiai/r2r-dashboard:1.0.3
     env_file:
-      - ./env/r2r-dashboard.env
+      - ../../credentials/r2r-dashboard-cidi.env
     ports:
       - "7273:3000"
+
+  # Our analytics
+  feedback:
+    build:
+      context: ../analytics
+    ports:
+      - "7275:7275"
+    volumes:
+      - ../analytics/feedback_server.py:/app/feedback_server.py
+    command: uvicorn feedback_server:app --host 0.0.0.0 --port 7275 --reload
+    restart: unless-stopped
+
+  frontend:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ../frontend:/usr/share/nginx/html:ro

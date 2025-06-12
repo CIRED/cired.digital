@@ -54,7 +54,7 @@
 #   Use with caution in production environments.
 #
 # DEPENDENCIES:
-#   - common_config.sh (must define PROJECT_NAME, COMPOSE_FILE, OVERRIDE_FILE)
+#   - common_config.sh (must define PROJECT_NAME, COMPOSE_FILE)
 #   - systemctl (for Docker daemon restart)
 #   - Standard Unix tools: ps, grep, awk, kill
 #
@@ -138,7 +138,7 @@ check_docker_access
 
 log "1) Attempting graceful shutdown: docker compose down (timeout ${DOWN_TIMEOUT}s)…"
 # Note: timeout disallows using function. So inlining the docker_compose_cmd() from common_config.sh
-if timeout "${DOWN_TIMEOUT}s" docker compose --project-name "$PROJECT_NAME" -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" down; then
+if timeout "${DOWN_TIMEOUT}s" docker compose --project-name "$PROJECT_NAME" -f "$COMPOSE_FILE" down; then
   log "✅ Compose down completed within ${DOWN_TIMEOUT}s."
 else
   log "⚠️  Compose down did NOT complete in ${DOWN_TIMEOUT}s."

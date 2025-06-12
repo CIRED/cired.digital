@@ -36,13 +36,6 @@ fi
 # Verify configuration files exist
 validate_config_files
 
-
-log "📦 Project: $PROJECT_NAME"
-log "🔧 Compose file: $COMPOSE_FILE"
-log "🔧🔧 Override file: $OVERRIDE_FILE"
-log "🔑 Secrets env file: $SECRETS_FILE"
-
-
 log "🚀 Starting services..."
 docker_compose_cmd up -d
 log "✅ Docker Compose started successfully."
