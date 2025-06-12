@@ -1,9 +1,5 @@
  // ==========================================
  // ==========================================
- let conversationId = null;
-
- // ==========================================
- // ==========================================
  
  marked.setOptions({
      breaks: true,    // Convert \n to <br>
@@ -49,13 +45,8 @@ async function sendMessage() {
         const config = getConfiguration();
         debugLog('Configuration retrieved', config);
 
-        if (!window.conversationId) {
-            await createConversation(config.apiUrl);
-        }
-
         const requestBody = buildRequestBody(query, config);
         debugLog('Request body built:', requestBody);
-
 
         logQuery(queryId, query, {
             model: config.model,
@@ -75,11 +66,9 @@ async function sendMessage() {
 
         const data = await response.json();
         debugLog('Raw server response', data);
-
         debugLog('Response data parsed', {
             hasGeneratedAnswer: !!data.results?.generated_answer,
-            citationsCount: data.results?.citations?.length || 0,
-            hasConversationId: !!conversationId
+            citationsCount: data.results?.citations?.length || 0
         });
 
         const processingTime = Date.now() - startTime;
@@ -117,131 +106,33 @@ function getConfiguration() {
 }
 
 function buildRequestBody(query, config) {
-    const requestBody = {
-        message: {
-            role: "user",
-            content: query
-        },
-        ragGenerationConfig: {
-            model: config.model,
-            temperature: config.temperature,
-            maxTokens: config.maxTokens,
-            stream: false
-        }
-    };
-    
-    if (window.conversationId) {
-        requestBody.conversationId = window.conversationId;
-    }
-    
-    return requestBody;
-}
-
-async function createConversation(apiUrl) {
-    try {
-        debugLog('Attempting to create conversation', { apiUrl });
-        const response = await fetch(`${apiUrl}/v3/conversations`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({})
-        });
-
-        debugLog('Conversation creation response received', {
-            status: response.status,
-            statusText: response.statusText,
-            ok: response.ok
-        });
-
-        if (!response.ok) {
-            const errorText = await response.text();
-            debugLog('Conversation creation failed, falling back to rag endpoint', {
-                status: response.status,
-                statusText: response.statusText,
-                errorText
-            });
-            return;
-        }
-
-        const data = await response.json();
-        debugLog('Conversation creation data', data);
-        if (data.results && data.results.id) {
-            window.conversationId = data.results.id;
-            debugLog('Conversation created successfully', { conversationId: window.conversationId });
-        } else {
-            debugLog('Conversation creation response missing results.id', { data });
-        }
-    } catch (err) {
-        debugLog('Conversation creation error, falling back to rag endpoint', { 
-            error: err.message,
-            stack: err.stack 
-        });
-    }
-}
-
-async function makeApiRequest(apiUrl, requestBody) {
-    if (window.conversationId) {
-        try {
-            debugLog('Attempting agent endpoint with conversation context', { conversationId: window.conversationId });
-            const agentResponse = await fetch(`${apiUrl}/v3/retrieval/agent`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(requestBody)
-            });
-
-            if (agentResponse.ok) {
-                const agentData = await agentResponse.json();
-                debugLog('Agent endpoint response', { 
-                    hasGeneratedAnswer: !!agentData.results?.generated_answer,
-                    citationsCount: agentData.results?.citations?.length || 0
-                });
-                
-                if (agentData.results?.generated_answer) {
-                    debugLog('Agent endpoint successful, using agent response');
-                    return agentResponse;
-                } else {
-                    debugLog('Agent endpoint returned no content, falling back to rag');
-                }
-            } else {
-                debugLog('Agent endpoint failed, falling back to rag', {
-                    status: agentResponse.status,
-                    statusText: agentResponse.statusText
-                });
-            }
-        } catch (err) {
-            debugLog('Agent endpoint error, falling back to rag', { error: err.message });
-        }
-    }
-
-    debugLog('Using RAG endpoint as fallback');
-    const ragRequestBody = {
-        query: requestBody.message.content,
+    return {
+        query: query,
         search_settings: {
             search_mode: 'advanced',
             limit: 10
         },
         rag_generation_config: {
-            model: requestBody.ragGenerationConfig.model,
-            temperature: requestBody.ragGenerationConfig.temperature,
-            max_tokens: requestBody.ragGenerationConfig.maxTokens,
-            stream: requestBody.ragGenerationConfig.stream
+            model: config.model,
+            temperature: config.temperature,
+            max_tokens: config.maxTokens,
+            stream: false
         }
     };
+}
 
+async function makeApiRequest(apiUrl, requestBody) {
     const response = await fetch(`${apiUrl}/v3/retrieval/rag`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(ragRequestBody)
+        body: JSON.stringify(requestBody)
     });
 
     if (!response.ok) {
         const errorData = await response.text();
-        debugLog('RAG endpoint failed', {
+        debugLog('API request failed', {
             status: response.status,
             statusText: response.statusText,
             errorData,
@@ -296,14 +187,14 @@ function handleResponse(requestBody, data, queryId, processingTime) {
 function sendFeedback(requestBody, results, feedback, comment = '') {
     debugLog('Sending feedback', {
         feedback,
-        questionLength: requestBody.message?.content?.length || requestBody.query?.length || 0,
+        questionLength: requestBody.query.length,
         answerLength: results.generated_answer?.length || 0,
         commentLength: comment.length,
         comment: comment,
         hasComment: comment.length > 0
     });
     const feedbackData = {
-        question: requestBody.message?.content || requestBody.query,
+        question: requestBody.query,
         answer: results.generated_answer,
         feedback: feedback,
         timestamp: new Date().toISOString(),

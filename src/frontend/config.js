@@ -292,11 +292,6 @@ function initializeConfig() {
     debugLog('Configuration initialized');
 }
 
-function resetConversation() {
-    conversationId = null;
-    debugLog('Conversation context reset');
-}
-
 if (document.readyState === 'loading') {
      document.addEventListener('DOMContentLoaded', initializeConfig);
 } else {
