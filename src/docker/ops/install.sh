@@ -3,9 +3,7 @@
 # Install R2R:
 # 1. Validates a running docker installation
 # 2. Pull R2R docker configurations files from its GitHub repository
-# 3. Validates our local overrides files exist
-# 4. Create required volume directories
-# 5. Pull R2R docker images
+# 3. Pull R2R docker images
 
 set -euo pipefail
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
@@ -73,17 +71,8 @@ log "✅ Successfully fetched $SOURCE_DIR from $REPO_URL into $TARGET_DIR."
 # Verify configuration files exist
 validate_config_files
 
-log "📦 Project: $PROJECT_NAME"
-log "🔧 Compose file: $COMPOSE_FILE"
-log "🔧🔧 Override file: $OVERRIDE_FILE"
-log "🔑 Env file: $SECRETS_FILE"
-
 #
-# 3. Not used. We use Docker volumes for persistence.
-#
-
-#
-# 4. Pull R2R images
+# 3. Pull R2R images
 #
 log "📥 Pulling Docker images..."
 docker compose -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" pull

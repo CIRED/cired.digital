@@ -17,8 +17,7 @@ export PROJECT_NAME="cidir2r"  # Used as prefix for Docker resources
 export PROJECT_DESCRIPTION="CIRED R2R Deployment"
 CONFIG_UPSTREAM_DIR="${BASE_DIR}/config.upstream"
 COMPOSE_FILE="${BASE_DIR}/compose.yaml"
-OVERRIDE_FILE="${BASE_DIR}/compose.override.yaml"
-SECRETS_FILE="${BASE_DIR}/../../credentials/API_KEYS.env"
+SECRETS_FILE="${BASE_DIR}/../../credentials/r2r-cidi.env"
 VENV_DIR="${BASE_DIR}/venv"
 
 # Volume settings
@@ -32,15 +31,13 @@ BACKUP_RETENTION_COUNT=0  # Number of backup volumes to keep per volume type
 # Docker Compose Command Builder
 # Wrapper for consistent docker compose command usage across all scripts
 docker_compose_cmd() {
-    if ! validate_file "$COMPOSE_FILE" || ! validate_file "$OVERRIDE_FILE"; then
+    if ! validate_file "$COMPOSE_FILE"; then
         return 1
     fi
 
     local cmd=(
         docker compose
         --project-name "$PROJECT_NAME"
-        -f "$COMPOSE_FILE"
-        -f "$OVERRIDE_FILE"
         --profile postgres
     )
 
@@ -74,8 +71,10 @@ validate_file() {
 
 validate_config_files() {
     validate_file "$COMPOSE_FILE" || exit 1
-    validate_file "$OVERRIDE_FILE" || exit 1
     validate_file "$SECRETS_FILE" || exit 1
+    log "📦 Project: $PROJECT_NAME"
+    log "🔧 Compose file: $COMPOSE_FILE"
+    log "🔑 Secrets env file: $SECRETS_FILE"
 }
 
 # Docker settings

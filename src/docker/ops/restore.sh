@@ -64,21 +64,21 @@ rollback_volumes() {
         log "No backup volumes to rollback"
         return 0
     fi
-    
+
     log -w "Rolling back ${#BACKUP_VOLUMES[@]} volume(s) due to restoration failure..."
-    
+
     for backup_info in "${BACKUP_VOLUMES[@]}"; do
         original_volume="${backup_info%:*}"
         backup_volume="${backup_info#*:}"
-        
+
         log "Restoring $original_volume from backup $backup_volume"
-        
+
         if docker volume inspect "$original_volume" &>/dev/null; then
             docker volume rm "$original_volume" || log -w "Failed to remove failed volume $original_volume"
         fi
-        
+
         docker volume create "$original_volume"
-        
+
         # Copy data from backup back to original volume
         if docker run --rm \
             -v "$backup_volume:/source" \
@@ -88,7 +88,7 @@ rollback_volumes() {
         else
             log -e "Failed to restore $original_volume from backup $backup_volume"
         fi
-        
+
         # Clean up the backup volume
         if docker volume rm "$backup_volume" 2>/dev/null; then
             log "Cleaned up backup volume: $backup_volume"
@@ -102,12 +102,12 @@ cleanup_backup_volumes() {
     if [ ${#BACKUP_VOLUMES[@]} -eq 0 ]; then
         return 0
     fi
-    
+
     log "Cleaning up ${#BACKUP_VOLUMES[@]} backup volume(s) after successful restoration..."
-    
+
     for backup_info in "${BACKUP_VOLUMES[@]}"; do
         backup_volume="${backup_info#*:}"
-        
+
         if docker volume rm "$backup_volume" 2>/dev/null; then
             log "Cleaned up backup volume: $backup_volume"
         else
@@ -163,7 +163,7 @@ for archive in $volume_archives; do
             alpine sh -c "cp -a /source/. /backup/"
 
         log "Created backup volume: $backup_volume"
-        
+
         BACKUP_VOLUMES+=("$full_volume_name:$backup_volume")
     else
         log "Creating new volume: $full_volume_name"

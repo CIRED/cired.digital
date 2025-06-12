@@ -96,32 +96,32 @@ check_api_keys() {
 check_container_logs() {
     local container_name="$1"
     local full_container_name="${PROJECT_NAME}-${container_name}-1"
-    
+
     log "🔍 Checking logs for container '$full_container_name'..."
-    
+
     # Check if container exists and is running
     if ! docker ps --format '{{.Names}}' | grep -q "^${full_container_name}$"; then
         log "❌ Container '$full_container_name' is not running."
         return 3
     fi
-    
+
     local logs
     logs=$(docker logs "$full_container_name" 2>&1)
-    
+
     # Check for ERROR messages
     if echo "$logs" | grep -i "ERROR" >/dev/null 2>&1; then
         log "❌ Found ERROR messages in $full_container_name logs:"
         echo "$logs" | grep -i "ERROR" | sed 's/^/   /'
         return 1
     fi
-    
+
     # Check for WARNING messages
     if echo "$logs" | grep -i "WARNING" >/dev/null 2>&1; then
         log "⚠️ Found WARNING messages in $full_container_name logs:"
         echo "$logs" | grep -i "WARNING" | sed 's/^/   /'
         return 2
     fi
-    
+
     log "✅ No ERROR or WARNING messages found in $full_container_name logs."
     return 0
 }
