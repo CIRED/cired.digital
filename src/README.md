@@ -17,7 +17,7 @@ CIRED.digital/
     ├── src/                # Application source code **YOU ARE HERE**
     │   ├── analytics/         # Performance and user metrics
     │   ├── intake/            # Data retrieval and preparation
-    │   ├── engine/            # Scripts to manage the backend (R2R)
+    │   ├── docker/            # Scripts to manage the containers
     │   └── frontend/          # Frontend chatbot user interface (Single page app)
     └── tests/              # Automated tests, mirroring the src/ directory structure
 ```
@@ -29,19 +29,28 @@ The `src/` directory is organized into specific subdirectories: `intake/`, `engi
 
 ### Data Preparation (`intake/`)
 
-The ingestion pipeline retrieves the catalog of CIRED publications from the HAL database (there is need to filter out some records unrelated to CIRED), download the PDF files, processes them (currently, we plan to just compress oversized files), and push them to the RAG engine.
+The ingestion pipeline is:
+- `query.py` gets the catalog of open access CIRED publications from HAL
+- `download.py` gets the documents (most PDf, some media)
+- `prepare_catalog.py` removes oversized files and partially deduplicate
+- `push.py` uploads to complete the R2R instance with documents from the catalog.
+- `cull.py` removes from the instance any document not found in the catalog
+- `verify.py` shows statistics on documents in the R2R
 
 ### Frontend Interface (`frontend/`)
 
-A standalone web page interactive chat interface. Enables real-time querying. Planned: user feedback, and side-by-side comparison of different engines.
+A standalone web page application in vanilla HTML/JS.
+Ask a question, get the RAG answer with sources, give feedback.
 
 ### Analytics (`analytics/`)
 
-Planned: Costs, performance and user satisfaction are tracked via clearly defined metrics, guiding future enhancements.
+Logs sessions, questions, answers and feedback.
+Soon: Add user profile.
 
-### RAG engine (`engine/`)
+### Stack management (`docker/`)
 
-The docker configuration files and scripts to manage the R2R stack.
+The docker configuration files for the containers stack: database, orchestration, RAG engine, frontend, analytics.
+The script to start/stop the application is `src/docker/ops/up.sh`
 
 ## Testing Strategy
 
