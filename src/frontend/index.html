@@ -2,11 +2,10 @@
 
 <html lang="en">
 <head>
-<meta content="HTML Tidy for HTML5 for Linux version 5.8.0" name="generator"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>
-      Conversations avec le documentaliste scientifique CIRED.digital - VERSION ALPHA
+      CIRED.digital - Assistant documentaire scientifique
     </title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -39,11 +38,9 @@ table th {
 <span class="text-white font-bold text-lg">🤖</span>
 </div>
 <div>
-<h1 class="text-lg font-semibold text-gray-900">
-                Conversations avec CIRED.digital, documentaliste scientifique  - VERSION ALPHA
-              </h1>
+<h1 class="text-lg font-semibold text-gray-900">CIRED.digital - Assistant documentaire scientifique</h1>
 <p class="text-sm text-gray-500" id="status-text">
-                Connecté à <span id="api-url-display">http://cired.digital:7272</span> • <span id="model-display">openai/gpt-4o-mini</span>
+                Connecté à <span id="api-url-display">http://cired.digital:7272</span> • <span id="model-display">ollama/mistral-small:24b-3.1-instruct-2503-q8_0</span>
 </p>
 </div>
 </div><button class="px-3 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors" id="config-btn">Config</button>
@@ -55,18 +52,18 @@ table th {
 <label class="block text-sm font-medium text-gray-700 mb-1">R2R API URL</label> <input class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="api-url" type="text"/>
 </div>
 <div>
-<label class="block text-sm font-medium text-gray-700 mb-1">Model</label> <select class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="model">
-<option value="openai/gpt-4.1-mini">
-                GPT-4.1 Mini
-              </option>
-<option value="deepseek/deepseek-chat">
-                Deepseek chat
-              </option>
-<option value="mistral/open-mistral-7b">
-                Open mistral 7b
-              </option>
-</select>
-</div>
+  <label class="block text-sm font-medium text-gray-700 mb-1">Model</label>
+  <select class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="model">
+    <option value="ollama/mistral-small:24b-3.1-instruct-2503-q8_0">Mistral small on CNRS servers</option>
+    <option value="ollama/mistral-large:latest">Mistral large on CNRS servers</option>
+    <option value="ollama/qwen3:32b">Qwen 3 32B on CNRS servers</option>
+    <option value="deepseek/deepseek-r1" disabled>Deepseek R1 at Deepseek</option>
+    <option value="deepseek/deepseek-chat" disabled>Deepseek chat at Deepseek</option>
+    <option value="mistral/open-mistral-7b" disabled>Open mistral 7b at Mistral</option>
+    <option value="anthropic/claude-sonnet-4-20250514" disabled>Claude Sonnet 2025-05-14 at Anthropic</option>
+    <option value="openai/gpt-4.1-mini" disabled>GPT-4.1 Mini at OpenAI</option>
+  </select>
+ </div>
 <div>
 <label class="block text-sm font-medium text-gray-700 mb-1">Temperature</label> <input class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="temperature" max="2" min="0" step="0.1" type="number" value="0.1"/>
 </div>
@@ -101,13 +98,26 @@ table th {
 </div>
 <div class="flex-1">
 <div class="bg-white text-gray-800 border border-gray-200 px-4 py-3 rounded-lg">
-<div class="message-content">Bonjour !<br/>Je suis CIRED.digital, documentaliste scientifique. J'analyse les écrits du Centre International de Recherche sur l'Environnement et le Développement (le CIRED) pour vous fournir des micro-synthèses sourcées. Le fonds documentaire compte plus de 1000 documents consultables sur l'archive ouverte Hyper Articles en Ligne (HAL).<br />Vous pourrez donner un feedback en cliquant 👍 ou 👎 sous chaque réponse.
-<br/><br/>
+<div class="message-content">
+Bonjour !<br/>
+<br />
+Je suis <strong>CIRED.digital</strong>, votre documentaliste scientifique spécialisé. Je maîtrise l'ensemble des travaux du Centre International de Recherche sur l'Environnement et le Développement (CIRED) et je peux les analyser pour vous proposer des synthèses précises et sourcées.<br />
+<br />
+<strong>Mon expertise</strong> : 1199 publications scientifiques indexées, toutes accessibles via l'archive ouverte HAL – avec les liens directs pour faciliter vos recherches 😉.<br />
+<br />
+                <div class="text-center mb-8">
+                    <img alt="Nuage de mots représentant les principales thématiques de recherche CIRED : changement climatique, transition énergétique, politique climatique, modélisation économique, énergies renouvelables, développement durable, et politiques environnementales"
+                         class="w-full max-w-2xl h-auto max-h-80 object-contain rounded-lg shadow-md mx-auto"
+                         src="static/cired_wordcloud.png"/>
+                    <p class="text-sm text-gray-600 italic mt-3 text-center max-w-2xl mx-auto">
+                        Domaines couverts
+                    </p>
+                </div>
 ⚠️ <strong>Les conversations sont enregistrées pour améliorer le service.</strong><br/>
+Vous pourrez donner un feedback en cliquant 👍 ou 👎 sous la réponse.<br />
 📊 <a href="#" id="view-analytics-link" class="text-blue-600 hover:text-blue-800">Voir les données collectées</a> |
 🔒 <a href="#" id="privacy-policy-link" class="text-blue-600 hover:text-blue-800">Politique de confidentialité</a>
-
-                  <img alt="Nuage de mots représentant les principales thématiques de recherche CIRED : changement climatique, transition énergétique, politique climatique, modélisation économique, énergies renouvelables, développement durable, et politiques environnementales" class="w-full h-auto max-w-full rounded-lg shadow-sm" src="static/cired_wordcloud.png" style="max-height: 300px; object-fit: contain;"/>
+<br />
 </div>
 </div>
 <div class="text-xs text-gray-500 mt-1" id="initial-timestamp"></div>
@@ -121,11 +131,12 @@ table th {
 <div class="bg-white border-t border-gray-200 p-4">
 <div class="flex space-x-3 max-w-4xl mx-auto">
 <div class="flex-1 relative">
-<textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="message-input" placeholder="Posez votre question sur les thèmes du CIRED..." rows="1" style="min-height: 48px; max-height: 120px;"></textarea>
+<textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="message-input" placeholder="Quelle est votre question sur l'environnement et le développement?" rows="1" style="min-height: 48px; max-height: 120px;"></textarea>
 </div><button class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center transition-colors" id="send-btn"><span class="font-bold text-lg">➤</span></button>
 </div>
 <div class="text-center mt-2">
-<span class="text-xs text-gray-500">Appuyez sur Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne</span>
+<span class="text-xs text-gray-500">Appuyez sur Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne.</span><br />
+<span class="text-xs text-gray-500">Je parle français – I speak English – Hablo español – Я говорю по-русски – 我会说中文 – أنا أتكلم العربية.</span>
 </div>
 </div>
 </div>
