@@ -42,7 +42,7 @@ def clean_titles(raw_titles: list[str]) -> list[str]:
             stripped = re.sub(r"^(?:d|l)'", "", word)
             stripped = re.sub(r"'s$", "", stripped)
             key = stripped if stripped in KEEP_INITIALIZED else stripped.lower()
-            if key in STOPWORDS or key in FRENCH_STOPWORDS:
+            if key in STOPWORDS or key in MY_STOPWORDS:
                 continue
             mapped = TRANSLATION_TABLE.get(key, key)
             cleaned_words.append(mapped)
