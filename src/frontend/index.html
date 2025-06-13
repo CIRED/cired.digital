@@ -30,13 +30,16 @@ table th {
 </head>
 <body class="bg-gray-50 flex flex-col min-h-screen">
 <div class="flex flex-col flex-grow" id="app">
+
 <!-- Header -->
 <div class="bg-white border-b border-gray-200 px-4 py-3 shadow-sm">
 <div class="flex items-center justify-between">
 <div class="flex items-center space-x-3">
     <button class="px-3 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors" id="config-btn">⚙️</button>
 </div>
-</div><!-- Configuration Panel -->
+</div>
+
+<!-- Configuration Panel -->
 <div class="bg-white border-r border-gray-200 p-4 hidden fixed left-0 top-0 h-full w-1/4 overflow-auto" id="config-panel">
     <div class="flex items-center justify-between mb-4">
         <button id="config-close-btn" class="text-gray-500 hover:text-gray-700">✖️</button>
@@ -113,9 +116,12 @@ table th {
     </label>
   </div>
   </div>
-</div><!-- Messages -->
-<div class="flex-1 overflow-auto px-4 py-0 max-w-2xl mx-auto space-y-4" id="messages-container">
+</div>
 
+<!-- Greeting Message -->
+<div class="flex flex-col min-h-screen">
+
+<div class="flex-1 overflow-auto px-4 py-0 max-w-2xl mx-auto space-y-4" id="messages-container">
                 <div class="text-center mb-0">
                     <img alt="Nuage de mots représentant les principales thématiques de recherche CIRED : changement climatique, transition énergétique, politique climatique, modélisation économique, énergies renouvelables, développement durable, et politiques environnementales"
                          class="w-full max-w-2xl h-auto max-h-80 object-contain rounded-lg shadow-md mx-auto"
@@ -137,11 +143,14 @@ Je suis <strong>Cirdi</strong>, votre documentaliste scientifique spécialisé. 
 </div>
 </div>
 </div>
-</div><!-- Error Display -->
+</div>
+
+<!-- Error Display -->
 <div class="mx-4 mb-2 p-3 bg-red-50 border border-red-200 rounded-lg items-center text-red-800 hidden" id="error-container">
 <span class="mr-2">⚠️</span> <span class="text-sm" id="error-text"></span>
-</div><!-- Input -->
-<div class="flex-grow"></div>
+</div>
+
+<!-- Input -->
 <div class="bg-white p-4">
 <div class="flex space-x-3 max-w-4xl mx-auto">
 <div class="flex-1 relative">
@@ -151,9 +160,11 @@ Je suis <strong>Cirdi</strong>, votre documentaliste scientifique spécialisé. 
 <div class="text-center mt-2">
 <div class="text-xs text-gray-500">Cirdi parle français et + de 100 langues: Cirdi speaks English – Hablo español – Я говорю по-русски – 我会说中文 – أنا أتكلم العربية.</div>
 <div class="text-xs text-gray-500">Appuyez sur Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne.</div>
+
 </div>
 </div>
 </div>
+
 
 <footer class="p-4 text-center text-xs text-gray-500">
 ⚠️ <strong>Conversations are logged for service improvement.</strong>
@@ -161,6 +172,8 @@ Vous pourrez donner un feedback en cliquant 👍 ou 👎 sous la réponse.<br />
 📊 <a href="#" id="view-analytics-link" class="text-blue-600 hover:text-blue-800">Voir les données collectées</a> |
 🔒 <a href="#" id="privacy-policy-link" class="text-blue-600 hover:text-blue-800">Politique de confidentialité</a>
 </footer>
+
+</div>
 
 <script src="config.js"></script>
 <script src="messages.js"></script>
