@@ -15,7 +15,6 @@ from wordcloud import STOPWORDS, WordCloud
 
 from intake.config import R2R_DEFAULT_BASE_URL, setup_logging
 from intake.utils import get_server_documents
-from googletrans import Translator
 
 setup_logging()
 
@@ -252,12 +251,10 @@ def main() -> None:
 
     titles = get_titles_from_r2r()
     if titles:
-        translator = Translator()
-        french_titles = [translator.translate(title, dest="fr").text for title in titles]
-        text = " ".join(french_titles)
+        text = " ".join(titles)
         logging.info(
-            "Génération du nuage de mots à partir de %d titres traduits en français (%d mots)",
-            len(french_titles),
+            "Generating wordcloud from a bag of %d titles (%d words)",
+            len(titles),
             len(text.split()),
         )
     else:
