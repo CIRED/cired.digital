@@ -213,9 +213,11 @@ def get_titles_from_r2r() -> list[str]:
     raw_titles = df["title"].dropna().astype(str).tolist()
     translator = Translator()
     try:
-        translations = asyncio.run(
+        loop = asyncio.new_event_loop()
+        translations = loop.run_until_complete(
             asyncio.gather(*(translator.translate(t, dest="fr") for t in raw_titles))
         )
+        loop.close()
         french_titles = [tr.text for tr in translations]
         return french_titles
     except Exception as e:
