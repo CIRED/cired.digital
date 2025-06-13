@@ -19,7 +19,6 @@ function createMessage(type, content, timestamp, isError = false) {
                     <div class="message-content">${content}</div>
                 </div>
                 <div class="citations-container"></div>
-                <div class="text-xs text-gray-500 mt-1">${formatTimestamp(timestamp)}</div>
             </div>
         </div>
     `;
