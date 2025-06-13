@@ -224,24 +224,25 @@ def get_titles_from_r2r() -> list[str]:
         return []
     raw_titles = df["title"].dropna().astype(str).tolist()
     translator = GoogleTranslator(source='auto', target='en')
+    sep = "<SEP>"
     try:
         french_titles: list[str] = []
         batch: list[str] = []
         current_len = 0
         for title in raw_titles:
-            title_len = len(title) + 4  # plus délimiteur
+            title_len = len(title) + len(sep)  # plus délimiteur
             if current_len + title_len > 4500 and batch:
-                concatenated = " /// ".join(batch)
+                concatenated = sep.join(batch)
                 translated = translator.translate(concatenated)
-                french_titles.extend([t.strip() for t in translated.split("///")])
+                french_titles.extend([t.strip() for t in translated.split(sep)])
                 batch = []
                 current_len = 0
             batch.append(title)
             current_len += title_len
         if batch:
-            concatenated = " /// ".join(batch)
+            concatenated = sep.join(batch)
             translated = translator.translate(concatenated)
-            french_titles.extend([t.strip() for t in translated.split("///")])
+            french_titles.extend([t.strip() for t in translated.split(sep)])
         # Enregistrer les vocabulaires brut et traduit avec leurs fréquences
         raw_counts = Counter(word for title in raw_titles for word in title.split() if word.lower() not in STOPWORDS and word.lower() not in FRENCH_STOPWORDS)
         translated_counts = Counter(word for title in french_titles for word in title.split() if word.lower() not in STOPWORDS and word.lower() not in FRENCH_STOPWORDS)
