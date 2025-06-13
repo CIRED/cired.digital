@@ -31,8 +31,6 @@ const maxTokensInput = document.getElementById('max-tokens');
 const debugModeCheckbox = document.getElementById('debug-mode');
 
 // Status display elements
-const apiUrlDisplay = document.getElementById('api-url-display');
-const modelDisplay = document.getElementById('model-display');
 
 // ==========================================
 // EVENT LISTENERS SETUP
@@ -103,12 +101,8 @@ function handleDebugModeToggle() {
 // UTILITY FUNCTIONS
 // ==========================================
 function updateStatusDisplay() {
-    if (apiUrlDisplay) {
-        apiUrlDisplay.textContent = apiUrlInput.value;
-    }
-    if (modelDisplay) {
-        modelDisplay.textContent = modelSelect.value;
-    }
+    clearChunkCache();
+    fetchApiStatus();
     clearChunkCache();
     fetchApiStatus();
 }
