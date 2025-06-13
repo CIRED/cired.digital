@@ -15,7 +15,7 @@ from wordcloud import STOPWORDS, WordCloud
 
 from intake.config import R2R_DEFAULT_BASE_URL, setup_logging
 from intake.utils import get_server_documents
-from deep_translator import GoogleTranslator
+from translation_table import TRANSLATION_TABLE
 from collections import Counter
 
 setup_logging()
@@ -226,26 +226,11 @@ def get_titles_from_r2r() -> list[str]:
         logging.error("Could not find publication titles from the R2R server")
         return []
     raw_titles = df["title"].dropna().astype(str).tolist()
-    translator = GoogleTranslator(source='auto', target='en')
-    sep = "<SEP>"
-    try:
-        french_titles: list[str] = []
-        batch: list[str] = []
-        current_len = 0
-        for title in raw_titles:
-            title_len = len(title) + len(sep)  # plus délimiteur
-            if current_len + title_len > 4500 and batch:
-                concatenated = sep.join(batch)
-                translated = translator.translate(concatenated)
-                french_titles.extend([t.strip() for t in translated.split(sep)])
-                batch = []
-                current_len = 0
-            batch.append(title)
-            current_len += title_len
-        if batch:
-            concatenated = sep.join(batch)
-            translated = translator.translate(concatenated)
-            french_titles.extend([t.strip() for t in translated.split(sep)])
+    french_titles: list[str] = []
+    for title in raw_titles:
+        words = title.split()
+        translated_words = [TRANSLATION_TABLE.get(word, word.lower()) for word in words]
+        french_titles.append(" ".join(translated_words))
         # Enregistrer les vocabulaires brut et traduit avec leurs fréquences
         raw_counts = Counter((word if word in EXCEPTIONS else word.lower()) for title in raw_titles for word in title.split() if ((word if word in EXCEPTIONS else word.lower()) not in STOPWORDS and (word if word in EXCEPTIONS else word.lower()) not in FRENCH_STOPWORDS and (word if word in EXCEPTIONS else word.lower()) not in ADDITIONAL_STOPWORDS))
         translated_counts = Counter((word if word in EXCEPTIONS else word.lower()) for title in french_titles for word in title.split() if ((word if word in EXCEPTIONS else word.lower()) not in STOPWORDS and (word if word in EXCEPTIONS else word.lower()) not in FRENCH_STOPWORDS and (word if word in EXCEPTIONS else word.lower()) not in ADDITIONAL_STOPWORDS))
