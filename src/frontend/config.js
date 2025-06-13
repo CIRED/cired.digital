@@ -31,8 +31,6 @@ const maxTokensInput = document.getElementById('max-tokens');
 const debugModeCheckbox = document.getElementById('debug-mode');
 
 // Status display elements
-const apiUrlDisplay = document.getElementById('api-url-display');
-const modelDisplay = document.getElementById('model-display');
 
 // ==========================================
 // EVENT LISTENERS SETUP
@@ -42,6 +40,12 @@ function setupEventListeners() {
     configBtn.addEventListener('click', () => {
         configPanel.classList.toggle('hidden');
     });
+    const configCloseBtn = document.getElementById('config-close-btn');
+    if (configCloseBtn) {
+        configCloseBtn.addEventListener('click', () => {
+            configPanel.classList.add('hidden');
+        });
+    }
 
     // Send message handlers
     sendBtn.addEventListener('click', sendMessage);
@@ -97,17 +101,12 @@ function handleDebugModeToggle() {
 // UTILITY FUNCTIONS
 // ==========================================
 function updateStatusDisplay() {
-    apiUrlDisplay.textContent = apiUrlInput.value;
-    modelDisplay.textContent = modelSelect.value;
     clearChunkCache();
+    fetchApiStatus();
+    clearChunkCache();
+    fetchApiStatus();
 }
 
-function formatTimestamp(timestamp) {
-    return new Intl.DateTimeFormat('en-US', {
-        hour: '2-digit',
-        minute: '2-digit'
-    }).format(timestamp);
-}
 
 function debugLog(message, data = null) {
     if (debugMode) {
@@ -281,8 +280,26 @@ async function logResponse(queryId, response, processingTime) {
 // ==========================================
 // INITIALIZATION
 // ==========================================
+function fetchApiStatus() {
+    const statusEl = document.getElementById('api-status');
+    if (!statusEl) return;
+    const url = apiUrlInput.value.replace(/\/$/, '') + '/v3/health';
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            const message = data.results?.message?.toUpperCase() || data.status || data.health || 'unknown';
+            statusEl.textContent = `Server status: ${message}`;
+            statusEl.classList.remove('text-red-500');
+            statusEl.classList.add('text-green-600');
+        })
+        .catch(() => {
+            statusEl.textContent = 'Server status: unreachable';
+            statusEl.classList.remove('text-green-600');
+            statusEl.classList.add('text-red-500');
+        });
+}
+
 function initializeConfig() {
-    document.getElementById('initial-timestamp').textContent = formatTimestamp(new Date());
     apiUrlInput.value = DEFAULT_HOST;
     updateStatusDisplay();
     setupEventListeners();
