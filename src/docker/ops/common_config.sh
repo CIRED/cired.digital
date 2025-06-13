@@ -59,6 +59,33 @@ validate_dir() {
     return 0
 }
 
+# Vérifie que Docker est installé et que le démon tourne
+ensure_docker() {
+    local smoke_test=false
+    if [[ "${1:-}" == "--smoke-test" ]]; then
+        smoke_test=true
+    fi
+
+    if ! command -v docker &> /dev/null; then
+        log -e "❌ Docker introuvable. Veuillez installer Docker avant de continuer."
+        exit 1
+    fi
+
+    if ! docker info &> /dev/null; then
+        log -e "❌ Docker installé mais inopérant (daemon arrêté ou problème de permissions)."
+        exit 1
+    fi
+
+    if $smoke_test; then
+        log "🚀 Test smoke: exécution de hello-world"
+        if ! docker run --rm hello-world &> /dev/null; then
+            log -e "❌ Test smoke 'hello-world' a échoué."
+            exit 1
+        fi
+        log "✅ Test smoke 'hello-world' réussi."
+    fi
+}
+
 validate_file() {
     local file="$1"
     if [ ! -f "$file" ]; then

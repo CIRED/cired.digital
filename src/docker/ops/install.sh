@@ -10,6 +10,7 @@ SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 cd "$SCRIPT_DIR"
 
 source "$SCRIPT_DIR/common_config.sh"
+ensure_docker --smoke-test
 
 trap 'log "❌ An unexpected error occurred."' ERR
 
