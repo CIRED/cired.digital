@@ -16,7 +16,6 @@ from wordcloud import STOPWORDS, WordCloud
 from intake.config import R2R_DEFAULT_BASE_URL, setup_logging
 from intake.utils import get_server_documents
 from googletrans import Translator
-import asyncio
 
 setup_logging()
 
@@ -213,12 +212,9 @@ def get_titles_from_r2r() -> list[str]:
     raw_titles = df["title"].dropna().astype(str).tolist()
     translator = Translator()
     try:
-        loop = asyncio.new_event_loop()
-        translations = loop.run_until_complete(
-            asyncio.gather(*(translator.translate(t, dest="fr") for t in raw_titles))
-        )
-        loop.close()
-        french_titles = [tr.text for tr in translations]
+        concatenated = " /// ".join(raw_titles)
+        translated = translator.translate(concatenated, dest="fr").text
+        french_titles = [t.strip() for t in translated.split("///")]
         return french_titles
     except Exception as e:
         logging.warning(f"Translation failed : {e}. Utilisation des titres originaux.")
