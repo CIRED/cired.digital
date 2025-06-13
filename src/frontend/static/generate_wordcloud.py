@@ -242,12 +242,7 @@ def clean_titles(raw_titles: list[str]) -> list[str]:
         cleaned_titles.append(" ".join(cleaned_words))
     # Enregistrer les vocabulaires brut et nettoyé avec leurs fréquences
     static_dir = Path(__file__).parent
-    raw_counts = Counter(
-        raw for title in raw_titles for raw in title.split()
-        if (raw if raw in EXCEPTIONS else raw.lower()) not in STOPWORDS
-        and (raw if raw in EXCEPTIONS else raw.lower()) not in FRENCH_STOPWORDS
-        and (raw if raw in EXCEPTIONS else raw.lower()) not in ADDITIONAL_STOPWORDS
-    )
+    raw_counts = Counter(raw for title in raw_titles for raw in title.split())
     cleaned_counts = Counter(word for title in cleaned_titles for word in title.split())
     with open(static_dir / "raw_wordbag.txt", "w", encoding="utf-8") as f:
         for word, count in raw_counts.most_common():
