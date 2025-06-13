@@ -113,12 +113,6 @@ function updateStatusDisplay() {
     fetchApiStatus();
 }
 
-function formatTimestamp(timestamp) {
-    return new Intl.DateTimeFormat('en-US', {
-        hour: '2-digit',
-        minute: '2-digit'
-    }).format(timestamp);
-}
 
 function debugLog(message, data = null) {
     if (debugMode) {
@@ -312,7 +306,6 @@ function fetchApiStatus() {
 }
 
 function initializeConfig() {
-    document.getElementById('initial-timestamp').textContent = formatTimestamp(new Date());
     apiUrlInput.value = DEFAULT_HOST;
     updateStatusDisplay();
     setupEventListeners();
