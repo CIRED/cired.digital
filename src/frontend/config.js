@@ -299,7 +299,8 @@ function fetchApiStatus() {
     fetch(url)
         .then(res => res.json())
         .then(data => {
-            statusEl.textContent = `Server status: ${data.status || data.health || 'unknown'}`;
+            const message = data.results?.message?.toUpperCase() || data.status || data.health || 'unknown';
+            statusEl.textContent = `Server status: ${message}`;
             statusEl.classList.remove('text-red-500');
             statusEl.classList.add('text-green-600');
         })
