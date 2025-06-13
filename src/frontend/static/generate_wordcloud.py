@@ -7,18 +7,17 @@ as a static image that can be served by the analytics server.
 """
 
 import logging
+import re
+from collections import Counter
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 from r2r import R2RClient
 from wordcloud import STOPWORDS, WordCloud
+from words import CIRED_THEMES, KEEP_INITIALIZED, MY_STOPWORDS, TRANSLATION_TABLE
 
 from intake.config import R2R_DEFAULT_BASE_URL, setup_logging
 from intake.utils import get_server_documents
-import re
-from collections import Counter
-
-from words import TRANSLATION_TABLE, MY_STOPWORDS, KEEP_INITIALIZED, CIRED_THEMES
 
 setup_logging()
 
@@ -33,31 +32,31 @@ def get_titles_from_r2r() -> list[str]:
     raw_titles = df["title"].dropna().astype(str).tolist()
     return raw_titles
 
+
 def clean_titles(raw_titles: list[str]) -> list[str]:
     """Nettoie les titres : suppression de stopwords, mise en minuscules sauf exceptions, application du tableau de traduction."""
     cleaned_titles: list[str] = []
     for title in raw_titles:
         cleaned_words: list[str] = []
-        for word in title.split():
-            stripped = re.sub(r"^(?:d|l)'", "", word)
-            stripped = re.sub(r"'s$", "", stripped)
-            key = stripped if stripped in KEEP_INITIALIZED else stripped.lower()
+        parts = re.split(r"[ :\?']", title)
+        for word in parts:
+            key = word if word in KEEP_INITIALIZED else word.lower()
             if key in STOPWORDS or key in MY_STOPWORDS:
                 continue
             mapped = TRANSLATION_TABLE.get(key, key)
             cleaned_words.append(mapped)
         cleaned_titles.append(" ".join(cleaned_words))
-        
+
     # Enregistrer les vocabulaires brut et nettoyé avec leurs fréquences
     static_dir = Path(__file__).parent
     raw_counts = Counter(raw for title in raw_titles for raw in title.split())
     cleaned_counts = Counter(word for title in cleaned_titles for word in title.split())
-    with open(static_dir / "raw_wordbag.txt", "w", encoding="utf-8") as f:
+    with open(static_dir / "wordbag-raw.txt", "w", encoding="utf-8") as f:
         for word, count in raw_counts.most_common():
-            f.write(f"{word}\t{count}\n")
-    with open(static_dir / "translated_wordbag.txt", "w", encoding="utf-8") as f:
+            f.write(f"{count}\t{word}\n")
+    with open(static_dir / "wordbag-processed.txt", "w", encoding="utf-8") as f:
         for word, count in cleaned_counts.most_common():
-            f.write(f"{word}\t{count}\n")
+            f.write(f"{count}\t{word}\n")
     return cleaned_titles
 
 
@@ -92,7 +91,7 @@ def create_wordcloud(text: str, output_path: Path) -> None:
 
 def main() -> None:
     """Generate the CIRED themes wordcloud."""
-    output_path = "cired_wordcloud.png"
+    output_path = Path("cired_wordcloud.png")
 
     raw_titles = get_titles_from_r2r()
     titles = clean_titles(raw_titles)
