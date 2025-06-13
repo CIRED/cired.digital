@@ -106,6 +106,13 @@ FRENCH_STOPWORDS = {
     "study",
     "entre",
     "review",
+    "Two",
+    "Comment",
+    "d'un",
+    "Assessing",
+    "l'environnement",
+    "rechearch",
+    "recherche",
 }
 
 CIRED_THEMES = """
@@ -208,27 +215,28 @@ def get_titles_from_r2r() -> list[str]:
 def create_wordcloud(text: str, output_path: Path) -> None:
     """Create and save a wordcloud from the given text."""
     wordcloud = WordCloud(
-        width=800,
-        height=400,
+        width=1024,
+        height=640,
         background_color="white",
         max_words=100,
         stopwords=STOPWORDS.union(FRENCH_STOPWORDS),
         colormap="viridis",
-        relative_scaling=0.5,
+        relative_scaling=0.4,
         min_font_size=10,
         max_font_size=60,
         prefer_horizontal=0.7,
-        collocations=False,
+        collocations=True,
+        scale=2,
     ).generate(text)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    plt.figure(figsize=(10, 5))
+    plt.figure(figsize=(12.8, 8))
     plt.imshow(wordcloud, interpolation="bilinear")
     plt.axis("off")
     plt.tight_layout(pad=0)
     plt.savefig(
-        output_path, dpi=150, bbox_inches="tight", facecolor="white", edgecolor="none"
+        output_path, dpi=80, bbox_inches="tight", facecolor="white", edgecolor="none"
     )
     plt.close()
 
