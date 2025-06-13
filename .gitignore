@@ -1,4 +1,4 @@
-src/docker/config.upstream/
+config.upstream/
 
 # Python
 __pycache__/
