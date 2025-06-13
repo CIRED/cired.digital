@@ -110,10 +110,17 @@ FRENCH_STOPWORDS = {
     "Two",
     "Comment",
     "d'un",
+    "d'une",
     "Assessing",
     "l'environnement",
     "rechearch",
     "recherche",
+    "est",
+    "cas",
+    "vers",
+    "mise",
+    "mode",
+    "l",
 }
 
 CIRED_THEMES = """
