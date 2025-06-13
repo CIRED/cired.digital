@@ -266,7 +266,6 @@ def get_titles_from_r2r() -> list[str]:
 
 def create_wordcloud(text: str, output_path: Path) -> None:
     """Create and save a wordcloud from the given text."""
-    output_path = Path(output_path)
     wordcloud = WordCloud(
         width=1024,
         height=640,
@@ -281,8 +280,6 @@ def create_wordcloud(text: str, output_path: Path) -> None:
         collocations=True,
         scale=2,
     ).generate(text)
-
-    output_path.parent.mkdir(parents=True, exist_ok=True)
 
     plt.figure(figsize=(12.8, 8))
     plt.imshow(wordcloud, interpolation="bilinear")
