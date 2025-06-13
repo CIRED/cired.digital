@@ -212,9 +212,23 @@ def get_titles_from_r2r() -> list[str]:
     raw_titles = df["title"].dropna().astype(str).tolist()
     translator = GoogleTranslator(source='auto', target='fr')
     try:
-        concatenated = " /// ".join(raw_titles)
-        translated = translator.translate(concatenated)
-        french_titles = [t.strip() for t in translated.split("///")]
+        french_titles: list[str] = []
+        batch: list[str] = []
+        current_len = 0
+        for title in raw_titles:
+            title_len = len(title) + 4  # plus délimiteur
+            if current_len + title_len > 4500 and batch:
+                concatenated = " /// ".join(batch)
+                translated = translator.translate(concatenated)
+                french_titles.extend([t.strip() for t in translated.split("///")])
+                batch = []
+                current_len = 0
+            batch.append(title)
+            current_len += title_len
+        if batch:
+            concatenated = " /// ".join(batch)
+            translated = translator.translate(concatenated)
+            french_titles.extend([t.strip() for t in translated.split("///")])
         return french_titles
     except Exception as e:
         logging.warning(f"Translation failed : {e}. Utilisation des titres originaux.")
