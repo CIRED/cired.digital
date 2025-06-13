@@ -15,6 +15,7 @@ from wordcloud import STOPWORDS, WordCloud
 
 from intake.config import R2R_DEFAULT_BASE_URL, setup_logging
 from intake.utils import get_server_documents
+from googletrans import Translator
 
 setup_logging()
 
@@ -208,8 +209,17 @@ def get_titles_from_r2r() -> list[str]:
     if df is None or "title" not in df.columns:
         logging.error("Could not find publication titles from the R2R server")
         return []
-    titles: list[str] = df["title"].dropna().astype(str).tolist()
-    return titles
+    raw_titles = df["title"].dropna().astype(str).tolist()
+    translator = Translator()
+    try:
+        french_titles = [
+            translator.translate(t, dest="fr").text
+            for t in raw_titles
+        ]
+        return french_titles
+    except Exception as e:
+        logging.warning(f"Translation failed : {e}. Utilisation des titres originaux.")
+        return raw_titles
 
 
 def create_wordcloud(text: str, output_path: Path) -> None:
