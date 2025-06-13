@@ -35,12 +35,13 @@ table th {
 <div class="flex items-center justify-between">
 <div class="flex items-center space-x-3">
     <button class="px-3 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors" id="config-btn">⚙️</button>
-<div>
-<h1 class="text-lg font-semibold text-gray-900">Cirdi - Settings</h1>
-</div>
 </div>
 </div><!-- Configuration Panel -->
 <div class="bg-white border-r border-gray-200 p-4 hidden fixed left-0 top-0 h-full w-1/4 overflow-auto" id="config-panel">
+    <div class="flex items-center justify-between mb-4">
+        <button id="config-close-btn" class="text-gray-500 hover:text-gray-700">✖️</button>
+        <h2 class="text-lg font-semibold text-gray-900">Cirdi - Settings</h2>
+    </div>
 <div class="grid grid-cols-1 gap-4">
 <div>
 <label class="block text-sm font-medium text-gray-700 mb-1">R2R API URL</label> <input class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="api-url" type="text"/>

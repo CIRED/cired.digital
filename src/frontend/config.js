@@ -42,6 +42,12 @@ function setupEventListeners() {
     configBtn.addEventListener('click', () => {
         configPanel.classList.toggle('hidden');
     });
+    const configCloseBtn = document.getElementById('config-close-btn');
+    if (configCloseBtn) {
+        configCloseBtn.addEventListener('click', () => {
+            configPanel.classList.add('hidden');
+        });
+    }
 
     // Send message handlers
     sendBtn.addEventListener('click', sendMessage);
