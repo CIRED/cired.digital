@@ -19,19 +19,6 @@ trap 'log "❌ An unexpected error occurred."' ERR
 #
 log "🔍 Checking required dependencies..."
 
-# Check for Docker
-if ! command -v docker &> /dev/null; then
-  log "❌ Error: Docker is not installed. Please install Docker first."
-  exit 1
-fi
-
-# Run a test container to validate Docker functionality
-log "🚀 Testing Docker installation..."
-if ! docker run --rm hello-world &> /dev/null; then
-  log "❌ Error: Docker is installed but not working correctly."
-  exit 1
-fi
-log "✅ Docker test successful."
 
 # Display Docker version
 log "🐳 Docker version:"
