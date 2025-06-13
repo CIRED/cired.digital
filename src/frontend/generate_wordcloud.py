@@ -15,7 +15,7 @@ from wordcloud import STOPWORDS, WordCloud
 
 from intake.config import R2R_DEFAULT_BASE_URL, setup_logging
 from intake.utils import get_server_documents
-from googletrans import Translator
+from deep_translator import GoogleTranslator
 
 setup_logging()
 
@@ -210,10 +210,10 @@ def get_titles_from_r2r() -> list[str]:
         logging.error("Could not find publication titles from the R2R server")
         return []
     raw_titles = df["title"].dropna().astype(str).tolist()
-    translator = Translator()
+    translator = GoogleTranslator(source='auto', target='fr')
     try:
         concatenated = " /// ".join(raw_titles)
-        translated = translator.translate(concatenated, dest="fr").text
+        translated = translator.translate(concatenated)
         french_titles = [t.strip() for t in translated.split("///")]
         return french_titles
     except Exception as e:
