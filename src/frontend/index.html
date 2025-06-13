@@ -1,51 +1,37 @@
 <!DOCTYPE html>
+<html lang="fr">
 
-<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>
-      CIRED.digital - Assistant documentaire scientifique
-    </title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js"></script>
-<style>
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 1rem 0;
-}
-table th, table td {
-    border: 1px solid #d1d5db;
-    padding: 0.5rem;
-    text-align: left;
-}
-table th {
-    background-color: #f9fafb;
-    font-weight: 600;
-}
-</style>
-
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Cirdi - Assistant documentaire scientifique du CIRED</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js"></script>
+  <style>
+    table {border-collapse: collapse; width: 100%; margin: 1rem 0;}
+    table th, table td {border: 1px solid #d1d5db; padding: 0.5rem; text-align: left;}
+    table th {background-color: #f9fafb; font-weight: 600;}
+  </style>
 </head>
-<body class="bg-gray-50 flex flex-col min-h-screen">
-<div class="flex flex-col flex-grow" id="app">
 
-<!-- Header -->
-<div class="bg-white border-b border-gray-200 px-4 py-3 shadow-sm">
-<div class="flex items-center justify-between">
-<div class="flex items-center space-x-3">
-    <button class="px-3 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors" id="config-btn">⚙️</button>
-</div>
-</div>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+<!-- Configuration button -->
+<span>
+    <button class="m-2 px-3 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-300 transition-colors shadow" id="config-btn">⚙️</button>
+</span>
 
 <!-- Configuration Panel -->
 <div class="bg-white border-r border-gray-200 p-4 hidden fixed left-0 top-0 h-full w-1/4 overflow-auto" id="config-panel">
+
     <div class="flex items-center justify-between mb-4">
         <button id="config-close-btn" class="text-gray-500 hover:text-gray-700">✖️</button>
         <h2 class="text-lg font-semibold text-gray-900">Cirdi settings</h2>
     </div>
-<div class="grid grid-cols-1 gap-4">
+    
+<div class="grid grid-cols-1 gap-4" id="settings-container">
+
 <div class="space-y-1">
   <div class="flex items-center justify-between">
     <label class="block text-sm font-medium text-gray-700">
@@ -56,6 +42,7 @@ table th {
   </div>
   <input class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" id="api-url" type="text"/>
 </div>
+
 <div>
   <label class="block text-sm font-medium text-gray-700 mb-1">
   Language model
@@ -72,6 +59,7 @@ table th {
     <option value="openai/gpt-4.1-mini" disabled>GPT-4.1 Mini at OpenAI</option>
   </select>
 </div>
+
 <div>
   <label class="block text-sm font-medium text-gray-700 mb-1">
   Response variability
@@ -85,6 +73,7 @@ table th {
     <option value="1.1">Creative</option>
   </select>
 </div>
+
 <div>
   <label class="block text-sm font-medium text-gray-700 mb-1">
     Response length
@@ -97,83 +86,83 @@ table th {
     <option value="8192" disabled>Oversized</option>
   </select>
 </div>
+
+
+<div class="flex-1 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+  <label class="flex items-center text-sm">
+    <input type="checkbox" id="privacy-mode" class="mr-2">
+    <span class="text-yellow-800"><strong>Privacy Mode</strong> – No logging</span>
+   </label>
 </div>
-  <div class="mt-4 flex space-x-4">
-    <div class="flex-1 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-      <label class="flex items-center text-sm">
-        <input type="checkbox" id="privacy-mode" class="mr-2">
-        <span class="text-yellow-800">
-          <strong>Privacy Mode</strong> – No conversation logging
-        </span>
-      </label>
-    </div>
-  <div class="flex-1 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-    <label class="flex items-center text-sm">
-      <input type="checkbox" id="debug-mode" class="mr-2">
-      <span class="text-blue-800">
-        <strong>Debug Mode</strong> – Show response logs in console
-      </span>
-    </label>
-  </div>
-  </div>
+
+<div class="flex-1 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+  <label class="flex items-center text-sm">
+    <input type="checkbox" id="debug-mode" class="mr-2">
+    <span class="text-blue-800"><strong>Debug Mode</strong> – Show response logs in console</span>
+  </label>
 </div>
+
+</div> <!-- id="settings-container"-->
+</div> <!-- id="config-panel"-->
 
 <!-- Greeting Message -->
-<div class="flex flex-col min-h-screen">
 
-<div class="flex-1 overflow-auto px-4 py-0 max-w-2xl mx-auto space-y-4" id="messages-container">
-                <div class="text-center mb-0">
-                    <img alt="Nuage de mots représentant les principales thématiques de recherche CIRED : changement climatique, transition énergétique, politique climatique, modélisation économique, énergies renouvelables, développement durable, et politiques environnementales"
-                         class="w-full max-w-2xl h-auto max-h-80 object-contain rounded-lg shadow-md mx-auto"
-                         src="static/cired_wordcloud.png"/>
-                    <p class="text-sm text-gray-600 italic mt-3 text-right max-w-2xl mx-auto">
-                        <strong>Domaines d'expertise</strong> : Cirdi a indexé 1199 publications du CIRED
-                    </p>
-                </div>
-<div class="flex justify-start">
-<div class="flex max-w-3xl">
-<div class="flex-1">
-<div>
-<div class="message-content">
-Bonjour !<br/>
-<br />
-Je suis <strong>Cirdi</strong>, votre documentaliste scientifique spécialisé. Je maîtrise les travaux du Centre International de Recherche sur l'Environnement et le Développement (CIRED) et je peux les analyser pour vous proposer des synthèses précises – avec les liens directs en accès libre sur HAL pour en savoir plus 😉.<br />
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<div id="messages-container" class="px-4 max-w-4xl mx-auto">
+    <div class="message-content">
+      Bonjour !<br />
+      Je suis <strong>Cirdi</strong>, votre documentaliste scientifique spécialisé. Je maîtrise les travaux du Centre International de Recherche sur l'Environnement et le Développement (CIRED) et je peux les analyser pour vous proposer des synthèses précises – avec les liens directs en accès libre sur HAL pour en savoir plus 😉.<br />
+    </div>
+</div> <!-- id="messages-container" -->
 
-<!-- Error Display -->
-<div class="mx-4 mb-2 p-3 bg-red-50 border border-red-200 rounded-lg items-center text-red-800 hidden" id="error-container">
-<span class="mr-2">⚠️</span> <span class="text-sm" id="error-text"></span>
-</div>
+<!-- Wrapper central qui centre verticalement l'input et l'erreur -->
+<div class="flex-1 flex flex-col justify-center" id="vertical-centering">
 
-<!-- Input -->
-<div class="bg-white p-4">
-<div class="flex space-x-3 max-w-4xl mx-auto">
-<div class="flex-1 relative">
-<textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" id="message-input" placeholder="Quelle est votre question sur l'environnement et le développement?" rows="1" style="min-height: 48px; max-height: 120px;"></textarea>
-</div><button class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center transition-colors" id="send-btn"><span class="font-bold text-lg">➤</span></button>
-</div>
-<div class="text-center mt-2">
-<div class="text-xs text-gray-500">Cirdi parle français et + de 100 langues: Cirdi speaks English – Hablo español – Я говорю по-русски – 我会说中文 – أنا أتكلم العربية.</div>
-<div class="text-xs text-gray-500">Appuyez sur Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne.</div>
+  <!-- Error Display -->
+  <div class="mx-4 mb-2 p-3 bg-red-50 border border-red-200 rounded-lg items-center text-red-800 hidden" id="error-container">
+    <span class="mr-2">⚠️</span> <span class="text-sm" id="error-text"></span>
+  </div>
 
-</div>
-</div>
-</div>
+  <!-- Input -->
+  <div class="p-4" id="input-container">
+    <div class="flex space-x-3 max-w-4xl mx-auto">
+    <textarea
+      class="flex-1 w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      id="message-input"
+      placeholder="Que recherchez-vous sur l'environnement et le développement ?"
+      rows="1"
+      style="min-height: 48px; max-height: 120px;"
+      ></textarea>
+    <button
+      class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center transition-colors" 
+      id="send-btn"
+      >
+      <span class="font-bold text-lg">➤</span>
+    </button>
+    </div>
+    <div class="text-center mt-2 text-xs text-gray-500">
+      <p>Cirdi parle français et + de 100 langues: Cirdi speaks English – Hablo español – Я говорю по-русски – 我会说中文 – أنا أتكلم العربية.</p>
+      <p>Appuyez sur Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne.</p>
+    </div>
+  </div> <!-- id="input-container" -->
 
+</div> <!-- id="vertical-centering" -->
 
 <footer class="p-4 text-center text-xs text-gray-500">
-⚠️ <strong>Conversations are logged for service improvement.</strong>
+    <div class="p-4">
+    <p class="text-sm text-gray-600 italic mt-3 text-center">
+      <strong>Domaines d'expertise</strong> : Cirdi a indexé 1199 publications du CIRED
+    </p>
+    <img
+      alt="Nuage de mots représentant les principales thématiques de recherche CIRED : changement climatique, transition énergétique, politique climatique, modélisation économique, énergies renouvelables, développement durable, et politiques environnementales"
+      class="w-auto h-auto max-h-80 object-contain rounded-lg shadow-md mx-auto"
+      src="static/cired_wordcloud.png"
+    />
+    </div>
+⚠️ <strong>Les conversations sont enregistrées pour améliorer le service.</strong>
 Vous pourrez donner un feedback en cliquant 👍 ou 👎 sous la réponse.<br />
 📊 <a href="#" id="view-analytics-link" class="text-blue-600 hover:text-blue-800">Voir les données collectées</a> |
 🔒 <a href="#" id="privacy-policy-link" class="text-blue-600 hover:text-blue-800">Politique de confidentialité</a>
 </footer>
-
-</div>
 
 <script src="config.js"></script>
 <script src="messages.js"></script>
