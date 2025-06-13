@@ -16,6 +16,7 @@ from wordcloud import STOPWORDS, WordCloud
 from intake.config import R2R_DEFAULT_BASE_URL, setup_logging
 from intake.utils import get_server_documents
 from deep_translator import GoogleTranslator
+from collections import Counter
 
 setup_logging()
 
@@ -236,9 +237,27 @@ def get_titles_from_r2r() -> list[str]:
             concatenated = " /// ".join(batch)
             translated = translator.translate(concatenated)
             french_titles.extend([t.strip() for t in translated.split("///")])
+        # Enregistrer les vocabulaires brut et traduit avec leurs fréquences
+        static_dir = Path(__file__).parent / "static"
+        static_dir.mkdir(parents=True, exist_ok=True)
+        raw_counts = Counter(word for title in raw_titles for word in title.split())
+        translated_counts = Counter(word for title in french_titles for word in title.split())
+        with open(static_dir / "raw_wordbag.txt", "w", encoding="utf-8") as f:
+            for word, count in raw_counts.most_common():
+                f.write(f"{word}\t{count}\n")
+        with open(static_dir / "translated_wordbag.txt", "w", encoding="utf-8") as f:
+            for word, count in translated_counts.most_common():
+                f.write(f"{word}\t{count}\n")
         return french_titles
     except Exception as e:
         logging.warning(f"Translation failed : {e}. Utilisation des titres originaux.")
+        # Enregistrer le vocabulaire brut en cas d'échec de traduction
+        static_dir = Path(__file__).parent / "static"
+        static_dir.mkdir(parents=True, exist_ok=True)
+        raw_counts = Counter(word for title in raw_titles for word in title.split())
+        with open(static_dir / "raw_wordbag.txt", "w", encoding="utf-8") as f:
+            for word, count in raw_counts.most_common():
+                f.write(f"{word}\t{count}\n")
         return raw_titles
 
 
