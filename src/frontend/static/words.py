@@ -1,4 +1,7 @@
-"""Module contenant les constantes utilisées pour le traitement de mots :
+"""
+List exceptions and traduction.
+
+Module contenant les constantes utilisées pour le traitement de mots :
 - KEEP_INITIALIZED : ensemble de mots à conserver avec casse initiale
 - TRANSLATION_TABLE : mappage mots français -> anglais
 - MY_STOPWORDS : ensemble de stopwords à ignorer
