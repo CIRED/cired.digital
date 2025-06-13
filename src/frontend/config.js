@@ -97,8 +97,12 @@ function handleDebugModeToggle() {
 // UTILITY FUNCTIONS
 // ==========================================
 function updateStatusDisplay() {
-    apiUrlDisplay.textContent = apiUrlInput.value;
-    modelDisplay.textContent = modelSelect.value;
+    if (apiUrlDisplay) {
+        apiUrlDisplay.textContent = apiUrlInput.value;
+    }
+    if (modelDisplay) {
+        modelDisplay.textContent = modelSelect.value;
+    }
     clearChunkCache();
 }
 
