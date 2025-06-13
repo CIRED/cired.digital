@@ -1,3 +1,10 @@
+"""Module contenant les constantes utilisées pour le traitement de mots :
+- KEEP_INITIALIZED : ensemble de mots à conserver avec casse initiale
+- TRANSLATION_TABLE : mappage mots français -> anglais
+- MY_STOPWORDS : ensemble de stopwords à ignorer
+- CIRED_THEMES : chaîne contenant les thèmes de CIRED
+"""
+
 KEEP_INITIALIZED = {
     "Africa",
     "India",
