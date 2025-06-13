@@ -266,6 +266,7 @@ def get_titles_from_r2r() -> list[str]:
 
 def create_wordcloud(text: str, output_path: Path) -> None:
     """Create and save a wordcloud from the given text."""
+    output_path = Path(output_path)
     wordcloud = WordCloud(
         width=1024,
         height=640,
