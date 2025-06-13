@@ -253,7 +253,7 @@ def main() -> None:
         logging.warning("Using hardcoded themes to generate wordcloud.")
         text = CIRED_THEMES
 
-    create_wordcloud(CIRED_THEMES, output_path)
+    create_wordcloud(text, output_path)
 
 
 if __name__ == "__main__":
