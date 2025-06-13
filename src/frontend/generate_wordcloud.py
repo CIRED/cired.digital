@@ -240,8 +240,8 @@ def get_titles_from_r2r() -> list[str]:
         # Enregistrer les vocabulaires brut et traduit avec leurs fréquences
         static_dir = Path(__file__).parent / "static"
         static_dir.mkdir(parents=True, exist_ok=True)
-        raw_counts = Counter(word for title in raw_titles for word in title.split())
-        translated_counts = Counter(word for title in french_titles for word in title.split())
+        raw_counts = Counter(word for title in raw_titles for word in title.split() if word.lower() not in STOPWORDS and word.lower() not in FRENCH_STOPWORDS)
+        translated_counts = Counter(word for title in french_titles for word in title.split() if word.lower() not in STOPWORDS and word.lower() not in FRENCH_STOPWORDS)
         with open(static_dir / "raw_wordbag.txt", "w", encoding="utf-8") as f:
             for word, count in raw_counts.most_common():
                 f.write(f"{word}\t{count}\n")
@@ -254,7 +254,7 @@ def get_titles_from_r2r() -> list[str]:
         # Enregistrer le vocabulaire brut en cas d'échec de traduction
         static_dir = Path(__file__).parent / "static"
         static_dir.mkdir(parents=True, exist_ok=True)
-        raw_counts = Counter(word for title in raw_titles for word in title.split())
+        raw_counts = Counter(word for title in raw_titles for word in title.split() if word.lower() not in STOPWORDS and word.lower() not in FRENCH_STOPWORDS)
         with open(static_dir / "raw_wordbag.txt", "w", encoding="utf-8") as f:
             for word, count in raw_counts.most_common():
                 f.write(f"{word}\t{count}\n")
