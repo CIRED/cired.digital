@@ -29,7 +29,7 @@ table th {
 
 </head>
 <body class="bg-gray-50">
-<div class="flex flex-col h-screen" id="app">
+<div class="flex flex-col h-screen justify-center" id="app">
 <!-- Header -->
 <div class="bg-white border-b border-gray-200 px-4 py-3 shadow-sm">
 <div class="flex items-center justify-between">
@@ -114,12 +114,9 @@ table th {
   </div>
   </div>
 </div><!-- Messages -->
-<div class="flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth" id="messages-container">
+<div class="px-4 py-8 max-w-2xl mx-auto space-y-4" id="messages-container">
 <div class="flex justify-start">
 <div class="flex max-w-3xl">
-<div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 text-gray-600 mr-3 flex items-center justify-center">
-<span class="font-bold text-lg">🤖</span>
-</div>
 <div class="flex-1">
 <div class="bg-white text-gray-800 border border-gray-200 px-4 py-3 rounded-lg">
 <div class="message-content">
@@ -134,14 +131,12 @@ Je suis <strong>Cirdi</strong>, votre documentaliste scientifique spécialisé. 
                          class="w-full max-w-2xl h-auto max-h-80 object-contain rounded-lg shadow-md mx-auto"
                          src="static/cired_wordcloud.png"/>
                 </div>
-⚠️ <strong>Les conversations sont enregistrées pour améliorer le service.</strong><br/>
 Vous pourrez donner un feedback en cliquant 👍 ou 👎 sous la réponse.<br />
 📊 <a href="#" id="view-analytics-link" class="text-blue-600 hover:text-blue-800">Voir les données collectées</a> |
 🔒 <a href="#" id="privacy-policy-link" class="text-blue-600 hover:text-blue-800">Politique de confidentialité</a>
 <br />
 </div>
 </div>
-<div class="text-xs text-gray-500 mt-1" id="initial-timestamp"></div>
 </div>
 </div>
 </div>
@@ -162,6 +157,9 @@ Vous pourrez donner un feedback en cliquant 👍 ou 👎 sous la réponse.<br />
 </div>
 </div>
 
+<footer class="p-4 text-center text-xs text-gray-500">
+⚠️ <strong>Conversations are logged for service improvement.</strong>
+</footer>
 <script src="config.js"></script>
 <script src="messages.js"></script>
 <script src="citations.js"></script>
