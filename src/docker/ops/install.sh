@@ -18,21 +18,12 @@ trap 'log "❌ An unexpected error occurred."' ERR
 #
 log "🔍 Checking required dependencies..."
 
-# Check for Docker
-if ! command -v docker &> /dev/null; then
-  log "❌ Error: Docker is not installed. Please install Docker first."
-  exit 1
-fi
+# Verify configuration files exist
+validate_config_files
 
-# Run a test container to validate Docker functionality
-log "🚀 Testing Docker installation..."
-if ! docker run --rm hello-world &> /dev/null; then
-  log "❌ Error: Docker is installed but not working correctly."
-  exit 1
-fi
-log "✅ Docker test successful."
+# Verify Docker runs, display version
+ensure_docker --smoke-test
 
-# Display Docker version
 log "🐳 Docker version:"
 docker --version
 
@@ -44,7 +35,7 @@ if ! command -v uv &> /dev/null; then
 fi
 
 #
-# 2. Clone the R2R repository and extract only the docker subdirectory
+# 2. Pulling the docker/ subdir of the R2R repository
 #
 REPO_URL="https://github.com/SciPhi-AI/R2R.git"
 SOURCE_DIR="docker"
@@ -68,14 +59,11 @@ mv "$TEMP_DIR/$SOURCE_DIR" "$TARGET_DIR"
 rm -rf "$TEMP_DIR"
 log "✅ Successfully fetched $SOURCE_DIR from $REPO_URL into $TARGET_DIR."
 
-# Verify configuration files exist
-validate_config_files
-
 #
 # 3. Pull R2R images
 #
 log "📥 Pulling Docker images..."
-docker compose -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" pull
+docker compose pull
 
 log "✅ Images pulled successfully."
 
