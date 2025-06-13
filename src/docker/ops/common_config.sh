@@ -38,7 +38,6 @@ docker_compose_cmd() {
     local cmd=(
         docker compose
         --project-name "$PROJECT_NAME"
-        --profile postgres
     )
 
     # Add any passed arguments
