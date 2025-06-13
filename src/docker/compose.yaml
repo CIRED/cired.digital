@@ -2,30 +2,30 @@
 
 volumes:
   hatchet_certs:
-    name: ${PROJECT_NAME}_hatchet_certs
+    name: cidir2r_hatchet_certs
   hatchet_config:
-    name: ${PROJECT_NAME}_hatchet_config
+    name: cidir2r_hatchet_config
   hatchet_api_key:
-    name: ${PROJECT_NAME}_hatchet_api_key
+    name: cidir2r_hatchet_api_key
   hatchet_rabbitmq_data:
-    name: ${PROJECT_NAME}_hatchet_rabbitmq_data
+    name: cidir2r_hatchet_rabbitmq_data
   hatchet_rabbitmq_conf:
-    name: ${PROJECT_NAME}_hatchet_rabbitmq_conf
+    name: cidir2r_hatchet_rabbitmq_conf
   hatchet_postgres_data:
-    name: ${PROJECT_NAME}_hatchet_postgres_data
+    name: cidir2r_hatchet_postgres_data
   minio_data:
-    name: ${PROJECT_NAME}_minio_data
+    name: cidir2r_minio_data
   postgres_data:
-    name: ${PROJECT_NAME}_postgres_data
+    name: cidir2r_postgres_data
 
 # Changes:
 # - Use env_files from credentials/ out of repo, they are full of secrets
 # - Fully define paths to images, for security
+# - Postgres included by default, no need to specify profile postgres
 
 services:
   postgres:
     image: docker.io/pgvector/pgvector:pg16
-    profiles: [postgres]
     env_file:
       - ../../credentials/postgres-cidi.env
     volumes:
@@ -42,6 +42,7 @@ services:
       postgres
       -c max_connections=1024
 
+  # Not used by default
   minio:
     image: docker.io/minio/minio
     profiles: [minio]

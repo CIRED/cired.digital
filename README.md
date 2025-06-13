@@ -43,10 +43,10 @@ This project's goal is to implement a chatbot with CIRED publications.
 
 Project's secret keys and passwords.
 
-- Contents not versionned on GitHub because secret.
-- Contents not synced by Nextcloud.
-- Developer should populate their own local copy.
-- For deployment, transfer keys separately
+- Contents not versionned on GitHub, not synced by Nextcloud.
+- Must be transferred securely to production.
+- Templates are `src/docker/ops/config.upstream/env/*.env`, which is pulled from upstream with `src/docker/ops/install.sh`.
+- Then edit files with their own local API_KEYs.
 
 ### `data/`
 raw PDFs, extracted text, metadata, summaries, chunks, vector indexes...

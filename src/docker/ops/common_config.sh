@@ -13,7 +13,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 BASE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 # --- Project Configuration ---
-export PROJECT_NAME="cidir2r"  # Used as prefix for Docker resources
+export COMPOSE_PROJECT_NAME="cidir2r"  # Used as prefix for Docker resources
 export PROJECT_DESCRIPTION="CIRED R2R Deployment"
 CONFIG_UPSTREAM_DIR="${BASE_DIR}/config.upstream"
 COMPOSE_FILE="${BASE_DIR}/compose.yaml"
@@ -35,11 +35,7 @@ docker_compose_cmd() {
         return 1
     fi
 
-    local cmd=(
-        docker compose
-        --project-name "$PROJECT_NAME"
-        --profile postgres
-    )
+    local cmd=(docker compose -p "$COMPOSE_PROJECT_NAME")
 
     # Add any passed arguments
     cmd+=("$@")
@@ -60,6 +56,33 @@ validate_dir() {
     return 0
 }
 
+# Vérifie que Docker est installé et que le démon tourne
+ensure_docker() {
+    local smoke_test=false
+    if [[ "${1:-}" == "--smoke-test" ]]; then
+        smoke_test=true
+    fi
+
+    if ! command -v docker &> /dev/null; then
+        log -e "❌ Docker introuvable. Veuillez installer Docker avant de continuer."
+        exit 1
+    fi
+
+    if ! docker info &> /dev/null; then
+        log -e "❌ Docker installé mais inopérant (daemon arrêté ou problème de permissions)."
+        exit 1
+    fi
+
+    if $smoke_test; then
+        log "🚀 Test smoke: exécution de hello-world"
+        if ! docker run --rm hello-world &> /dev/null; then
+            log -e "❌ Test smoke 'hello-world' a échoué."
+            exit 1
+        fi
+        log "✅ Test smoke 'hello-world' réussi."
+    fi
+}
+
 validate_file() {
     local file="$1"
     if [ ! -f "$file" ]; then
@@ -72,7 +95,7 @@ validate_file() {
 validate_config_files() {
     validate_file "$COMPOSE_FILE" || exit 1
     validate_file "$SECRETS_FILE" || exit 1
-    log "📦 Project: $PROJECT_NAME"
+    log "📦 Project: $COMPOSE_PROJECT_NAME"
     log "🔧 Compose file: $COMPOSE_FILE"
     log "🔑 Secrets env file: $SECRETS_FILE"
 }

@@ -77,7 +77,7 @@ check_r2r_health() {
 
 # Check for API keys in the R2R container
 check_api_keys() {
-    local container_name="${PROJECT_NAME}-r2r-1"
+    local container_name="${COMPOSE_PROJECT_NAME}-r2r-1"
     log "🔍 Checking for API keys in container '$container_name'..."
 
     if docker ps --format '{{.Names}}' | grep -q "^${container_name}$"; then
@@ -95,7 +95,7 @@ check_api_keys() {
 
 check_container_logs() {
     local container_name="$1"
-    local full_container_name="${PROJECT_NAME}-${container_name}-1"
+    local full_container_name="${COMPOSE_PROJECT_NAME}-${container_name}-1"
 
     log "🔍 Checking logs for container '$full_container_name'..."
 

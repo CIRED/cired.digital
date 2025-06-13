@@ -13,13 +13,13 @@ BACKUP_DIR="${ARCHIVES_DIR}/${SNAPSHOT_NAME}"
 mkdir -p "$BACKUP_DIR"
 
 log "Checking for running containers..."
-running_containers=$(docker ps --format '{{.Names}}' | grep -E "${PROJECT_NAME}" || true)
+running_containers=$(docker ps --format '{{.Names}}' | grep -E "${COMPOSE_PROJECT_NAME}" || true)
 
 if [ -n "$running_containers" ]; then
-    log -w "Found running containers for $PROJECT_NAME, stopping them temporarily..."
+    log -w "Found running containers for $COMPOSE_PROJECT_NAME, stopping them temporarily..."
 
     # Store container IDs and their start commands
-    container_info=$(docker ps --filter "name=${PROJECT_NAME}" --format '{{.ID}} {{.Command}}')
+    container_info=$(docker ps --filter "name=${COMPOSE_PROJECT_NAME}" --format '{{.ID}} {{.Command}}')
 
     # Stop containers
     docker_compose_cmd stop
@@ -28,7 +28,7 @@ if [ -n "$running_containers" ]; then
     sleep 5
 
     # Verify they're stopped
-    if docker ps --format '{{.Names}}' | grep -E "${PROJECT_NAME}" | grep -q .; then
+    if docker ps --format '{{.Names}}' | grep -E "${COMPOSE_PROJECT_NAME}" | grep -q .; then
         log -e "Failed to stop containers, aborting snapshot"
         exit 1
     fi
@@ -39,13 +39,13 @@ else
     should_restart=false
 fi
 
-log "📦 Creating snapshots for all volumes in project $PROJECT_NAME"
+log "📦 Creating snapshots for all volumes in project $COMPOSE_PROJECT_NAME"
 
 # Get all volumes for this project
-project_volumes=$(docker volume ls --filter "name=${PROJECT_NAME}" -q)
+project_volumes=$(docker volume ls --filter "name=${COMPOSE_PROJECT_NAME}" -q)
 
 if [ -z "$project_volumes" ]; then
-    log -e "No volumes found for project $PROJECT_NAME"
+    log -e "No volumes found for project $COMPOSE_PROJECT_NAME"
     exit 2
 fi
 
@@ -54,7 +54,7 @@ for volume in $project_volumes; do
     log "Backing up volume: $volume"
 
     # Extract the short name (without project prefix)
-    volume_short_name=$(echo "$volume" | sed "s/${PROJECT_NAME}_//")
+    volume_short_name=$(echo "$volume" | sed "s/${COMPOSE_PROJECT_NAME}_//")
 
     # Create tar of the volume
     if docker run --rm \
