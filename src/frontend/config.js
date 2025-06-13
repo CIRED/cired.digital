@@ -110,6 +110,7 @@ function updateStatusDisplay() {
         modelDisplay.textContent = modelSelect.value;
     }
     clearChunkCache();
+    fetchApiStatus();
 }
 
 function formatTimestamp(timestamp) {
@@ -291,6 +292,24 @@ async function logResponse(queryId, response, processingTime) {
 // ==========================================
 // INITIALIZATION
 // ==========================================
+function fetchApiStatus() {
+    const statusEl = document.getElementById('api-status');
+    if (!statusEl) return;
+    const url = apiUrlInput.value.replace(/\/$/, '') + '/v3/health';
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            statusEl.textContent = `Server status: ${data.status || data.health || 'unknown'}`;
+            statusEl.classList.remove('text-red-500');
+            statusEl.classList.add('text-green-600');
+        })
+        .catch(() => {
+            statusEl.textContent = 'Server status: unreachable';
+            statusEl.classList.remove('text-green-600');
+            statusEl.classList.add('text-red-500');
+        });
+}
+
 function initializeConfig() {
     document.getElementById('initial-timestamp').textContent = formatTimestamp(new Date());
     apiUrlInput.value = DEFAULT_HOST;
