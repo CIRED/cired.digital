@@ -44,7 +44,7 @@ if ! command -v uv &> /dev/null; then
 fi
 
 #
-# 2. Clone the R2R repository and extract only the docker subdirectory
+# 2. Pulling the docker/ subdir of the R2R repository
 #
 REPO_URL="https://github.com/SciPhi-AI/R2R.git"
 SOURCE_DIR="docker"
@@ -75,7 +75,7 @@ validate_config_files
 # 3. Pull R2R images
 #
 log "📥 Pulling Docker images..."
-docker compose -f "$COMPOSE_FILE" -f "$OVERRIDE_FILE" pull
+docker compose pull
 
 log "✅ Images pulled successfully."
 
