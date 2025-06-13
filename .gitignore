@@ -1,3 +1,5 @@
+src/docker/config.upstream/
+
 # Python
 __pycache__/
 *.py[cod]

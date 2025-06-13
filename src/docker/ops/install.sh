@@ -10,7 +10,6 @@ SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 cd "$SCRIPT_DIR"
 
 source "$SCRIPT_DIR/common_config.sh"
-ensure_docker --smoke-test
 
 trap 'log "❌ An unexpected error occurred."' ERR
 
@@ -19,8 +18,12 @@ trap 'log "❌ An unexpected error occurred."' ERR
 #
 log "🔍 Checking required dependencies..."
 
+# Verify configuration files exist
+validate_config_files
 
-# Display Docker version
+# Verify Docker runs, display version
+ensure_docker --smoke-test
+
 log "🐳 Docker version:"
 docker --version
 
@@ -55,9 +58,6 @@ fi
 mv "$TEMP_DIR/$SOURCE_DIR" "$TARGET_DIR"
 rm -rf "$TEMP_DIR"
 log "✅ Successfully fetched $SOURCE_DIR from $REPO_URL into $TARGET_DIR."
-
-# Verify configuration files exist
-validate_config_files
 
 #
 # 3. Pull R2R images

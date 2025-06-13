@@ -13,7 +13,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 BASE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 # --- Project Configuration ---
-export PROJECT_NAME="cidir2r"  # Used as prefix for Docker resources
+export COMPOSE_PROJECT_NAME="cidir2r"  # Used as prefix for Docker resources
 export PROJECT_DESCRIPTION="CIRED R2R Deployment"
 CONFIG_UPSTREAM_DIR="${BASE_DIR}/config.upstream"
 COMPOSE_FILE="${BASE_DIR}/compose.yaml"
@@ -35,10 +35,7 @@ docker_compose_cmd() {
         return 1
     fi
 
-    local cmd=(
-        docker compose
-        --project-name "$PROJECT_NAME"
-    )
+    local cmd=(docker compose -p "$COMPOSE_PROJECT_NAME")
 
     # Add any passed arguments
     cmd+=("$@")
@@ -98,7 +95,7 @@ validate_file() {
 validate_config_files() {
     validate_file "$COMPOSE_FILE" || exit 1
     validate_file "$SECRETS_FILE" || exit 1
-    log "📦 Project: $PROJECT_NAME"
+    log "📦 Project: $COMPOSE_PROJECT_NAME"
     log "🔧 Compose file: $COMPOSE_FILE"
     log "🔑 Secrets env file: $SECRETS_FILE"
 }

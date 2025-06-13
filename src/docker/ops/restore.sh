@@ -118,10 +118,10 @@ cleanup_backup_volumes() {
 
 # Now safe to stop containers
 # Check and stop running containers
-running_containers=$(docker ps --format '{{.Names}}' | grep -E "${PROJECT_NAME}" || true)
+running_containers=$(docker ps --format '{{.Names}}' | grep -E "${COMPOSE_PROJECT_NAME}" || true)
 
 if [ -n "$running_containers" ]; then
-    log -w "Stopping running containers for $PROJECT_NAME..."
+    log -w "Stopping running containers for $COMPOSE_PROJECT_NAME..."
     docker_compose_cmd stop
     sleep 5
     should_restart=true
@@ -146,7 +146,7 @@ fi
 for archive in $volume_archives; do
     # Get volume name from archive filename
     volume_name=$(basename "$archive" .tar)
-    full_volume_name="${PROJECT_NAME}_${volume_name}"
+    full_volume_name="${COMPOSE_PROJECT_NAME}_${volume_name}"
 
     log "Restoring volume: $full_volume_name"
 
