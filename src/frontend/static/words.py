@@ -1,11 +1,11 @@
 """
-List exceptions and traduction.
+List of exceptions and translations.
 
-Module contenant les constantes utilisées pour le traitement de mots :
-- KEEP_INITIALIZED : ensemble de mots à conserver avec casse initiale
-- TRANSLATION_TABLE : mappage mots français -> anglais
-- MY_STOPWORDS : ensemble de stopwords à ignorer
-- CIRED_THEMES : chaîne contenant les thèmes de CIRED
+Module containing constants used for word processing:
+- KEEP_INITIALIZED: set of words to preserve with original casing
+- TRANSLATION_TABLE: mapping French words to English
+- MY_STOPWORDS: set of stopwords to ignore
+- CIRED_THEMES: string containing CIRED themes
 """
 
 KEEP_INITIALIZED = {
