@@ -129,6 +129,9 @@ FRENCH_STOPWORDS = {
     "»",
 }
 
+EXCEPTIONS = {"France", "Vietnam", "Paris", "CO2", "Europe"}
+ADDITIONAL_STOPWORDS = {"<Sep>", "<sep>", "<pi>", "2", "Two", "°", "<Seps>"}
+
 CIRED_THEMES = """
 changement climatique transition énergétique politique climatique taxe carbone
 prix carbone modélisation macro-économique CGE IMACLIM émissions CO2 efficacité énergétique
@@ -244,8 +247,8 @@ def get_titles_from_r2r() -> list[str]:
             translated = translator.translate(concatenated)
             french_titles.extend([t.strip() for t in translated.split(sep)])
         # Enregistrer les vocabulaires brut et traduit avec leurs fréquences
-        raw_counts = Counter(word for title in raw_titles for word in title.split() if word.lower() not in STOPWORDS and word.lower() not in FRENCH_STOPWORDS)
-        translated_counts = Counter(word for title in french_titles for word in title.split() if word.lower() not in STOPWORDS and word.lower() not in FRENCH_STOPWORDS)
+        raw_counts = Counter((word if word in EXCEPTIONS else word.lower()) for title in raw_titles for word in title.split() if ((word if word in EXCEPTIONS else word.lower()) not in STOPWORDS and (word if word in EXCEPTIONS else word.lower()) not in FRENCH_STOPWORDS and (word if word in EXCEPTIONS else word.lower()) not in ADDITIONAL_STOPWORDS))
+        translated_counts = Counter((word if word in EXCEPTIONS else word.lower()) for title in french_titles for word in title.split() if ((word if word in EXCEPTIONS else word.lower()) not in STOPWORDS and (word if word in EXCEPTIONS else word.lower()) not in FRENCH_STOPWORDS and (word if word in EXCEPTIONS else word.lower()) not in ADDITIONAL_STOPWORDS))
         with open("raw_wordbag.txt", "w", encoding="utf-8") as f:
             for word, count in raw_counts.most_common():
                 f.write(f"{word}\t{count}\n")
@@ -258,7 +261,7 @@ def get_titles_from_r2r() -> list[str]:
         # Enregistrer le vocabulaire brut en cas d'échec de traduction
         static_dir = Path(__file__).parent / "static"
         static_dir.mkdir(parents=True, exist_ok=True)
-        raw_counts = Counter(word for title in raw_titles for word in title.split() if word.lower() not in STOPWORDS and word.lower() not in FRENCH_STOPWORDS)
+        raw_counts = Counter((word if word in EXCEPTIONS else word.lower()) for title in raw_titles for word in title.split() if ((word if word in EXCEPTIONS else word.lower()) not in STOPWORDS and (word if word in EXCEPTIONS else word.lower()) not in FRENCH_STOPWORDS and (word if word in EXCEPTIONS else word.lower()) not in ADDITIONAL_STOPWORDS))
         with open(static_dir / "raw_wordbag.txt", "w", encoding="utf-8") as f:
             for word, count in raw_counts.most_common():
                 f.write(f"{word}\t{count}\n")
@@ -272,7 +275,7 @@ def create_wordcloud(text: str, output_path: Path) -> None:
         height=640,
         background_color="white",
         max_words=100,
-        stopwords=STOPWORDS.union(FRENCH_STOPWORDS),
+        stopwords=STOPWORDS.union(FRENCH_STOPWORDS, ADDITIONAL_STOPWORDS),
         colormap="viridis",
         relative_scaling=0.4,
         min_font_size=10,
