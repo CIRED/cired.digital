@@ -15,6 +15,7 @@ from wordcloud import STOPWORDS, WordCloud
 
 from intake.config import R2R_DEFAULT_BASE_URL, setup_logging
 from intake.utils import get_server_documents
+import re
 from collections import Counter
 
 from words import TRANSLATION_TABLE, MY_STOPWORDS, KEEP_INITIALIZED, CIRED_THEMES
@@ -38,7 +39,9 @@ def clean_titles(raw_titles: list[str]) -> list[str]:
     for title in raw_titles:
         cleaned_words: list[str] = []
         for word in title.split():
-            key = word if word in KEEP_INITIALIZED else word.lower()
+            stripped = re.sub(r"^(?:d|l)'", "", word)
+            stripped = re.sub(r"'s$", "", stripped)
+            key = stripped if stripped in KEEP_INITIALIZED else stripped.lower()
             if key in STOPWORDS or key in FRENCH_STOPWORDS:
                 continue
             mapped = TRANSLATION_TABLE.get(key, key)
