@@ -226,31 +226,36 @@ def get_titles_from_r2r() -> list[str]:
         logging.error("Could not find publication titles from the R2R server")
         return []
     raw_titles = df["title"].dropna().astype(str).tolist()
-    french_titles: list[str] = []
+    return raw_titles
+
+def clean_titles(raw_titles: list[str]) -> list[str]:
+    """Nettoie les titres : suppression de stopwords, mise en minuscules sauf exceptions, application du tableau de traduction."""
+    cleaned_titles: list[str] = []
     for title in raw_titles:
-        words = title.split()
-        translated_words = [TRANSLATION_TABLE.get(word, word.lower()) for word in words]
-        french_titles.append(" ".join(translated_words))
-        # Enregistrer les vocabulaires brut et traduit avec leurs fréquences
-        raw_counts = Counter((word if word in EXCEPTIONS else word.lower()) for title in raw_titles for word in title.split() if ((word if word in EXCEPTIONS else word.lower()) not in STOPWORDS and (word if word in EXCEPTIONS else word.lower()) not in FRENCH_STOPWORDS and (word if word in EXCEPTIONS else word.lower()) not in ADDITIONAL_STOPWORDS))
-        translated_counts = Counter((word if word in EXCEPTIONS else word.lower()) for title in french_titles for word in title.split() if ((word if word in EXCEPTIONS else word.lower()) not in STOPWORDS and (word if word in EXCEPTIONS else word.lower()) not in FRENCH_STOPWORDS and (word if word in EXCEPTIONS else word.lower()) not in ADDITIONAL_STOPWORDS))
-        with open("raw_wordbag.txt", "w", encoding="utf-8") as f:
-            for word, count in raw_counts.most_common():
-                f.write(f"{word}\t{count}\n")
-        with open("translated_wordbag.txt", "w", encoding="utf-8") as f:
-            for word, count in translated_counts.most_common():
-                f.write(f"{word}\t{count}\n")
-        return french_titles
-    except Exception as e:
-        logging.warning(f"Translation failed : {e}. Utilisation des titres originaux.")
-        # Enregistrer le vocabulaire brut en cas d'échec de traduction
-        static_dir = Path(__file__).parent / "static"
-        static_dir.mkdir(parents=True, exist_ok=True)
-        raw_counts = Counter((word if word in EXCEPTIONS else word.lower()) for title in raw_titles for word in title.split() if ((word if word in EXCEPTIONS else word.lower()) not in STOPWORDS and (word if word in EXCEPTIONS else word.lower()) not in FRENCH_STOPWORDS and (word if word in EXCEPTIONS else word.lower()) not in ADDITIONAL_STOPWORDS))
-        with open(static_dir / "raw_wordbag.txt", "w", encoding="utf-8") as f:
-            for word, count in raw_counts.most_common():
-                f.write(f"{word}\t{count}\n")
-        return raw_titles
+        cleaned_words: list[str] = []
+        for word in title.split():
+            key = word if word in EXCEPTIONS else word.lower()
+            if key in STOPWORDS or key in FRENCH_STOPWORDS or key in ADDITIONAL_STOPWORDS:
+                continue
+            mapped = TRANSLATION_TABLE.get(key, key)
+            cleaned_words.append(mapped)
+        cleaned_titles.append(" ".join(cleaned_words))
+    # Enregistrer les vocabulaires brut et nettoyé avec leurs fréquences
+    static_dir = Path(__file__).parent
+    raw_counts = Counter(
+        raw for title in raw_titles for raw in title.split()
+        if (raw if raw in EXCEPTIONS else raw.lower()) not in STOPWORDS
+        and (raw if raw in EXCEPTIONS else raw.lower()) not in FRENCH_STOPWORDS
+        and (raw if raw in EXCEPTIONS else raw.lower()) not in ADDITIONAL_STOPWORDS
+    )
+    cleaned_counts = Counter(word for title in cleaned_titles for word in title.split())
+    with open(static_dir / "raw_wordbag.txt", "w", encoding="utf-8") as f:
+        for word, count in raw_counts.most_common():
+            f.write(f"{word}\t{count}\n")
+    with open(static_dir / "translated_wordbag.txt", "w", encoding="utf-8") as f:
+        for word, count in cleaned_counts.most_common():
+            f.write(f"{word}\t{count}\n")
+    return cleaned_titles
 
 
 def create_wordcloud(text: str, output_path: Path) -> None:
@@ -286,7 +291,8 @@ def main() -> None:
     """Generate the CIRED themes wordcloud."""
     output_path = "cired_wordcloud.png"
 
-    titles = get_titles_from_r2r()
+    raw_titles = get_titles_from_r2r()
+    titles = clean_titles(raw_titles)
     if titles:
         text = " ".join(titles)
         logging.info(
