@@ -29,7 +29,7 @@ def get_titles_from_r2r() -> list[str]:
     if df is None or "title" not in df.columns:
         logging.error("Could not find publication titles from the R2R server")
         return []
-    raw_titles = df["title"].dropna().astype(str).tolist()
+    raw_titles: list[str] = df["title"].dropna().astype(str).tolist()
     return raw_titles
 
 
