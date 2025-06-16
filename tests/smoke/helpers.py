@@ -29,7 +29,32 @@ TEMPERATURE = 0.0
 DOCUMENT_POLLING_TIMEOUT = 30  # seconds
 DOCUMENT_POLLING_INTERVAL = 2  # seconds
 
-client = R2RClient(SERVER_URL)
+_default_client = R2RClient(SERVER_URL)
+
+@pytest.fixture(scope="session")
+def client():
+    """Return R2RClient instance for tests."""
+    return _default_client
+
+# Expose configuration constants as fixtures
+_ORIG_QUERY = QUERY
+_ORIG_MODEL = MODEL
+_ORIG_TEMPERATURE = TEMPERATURE
+
+@pytest.fixture(scope="session", name="QUERY")
+def query_fixture():
+    """Return the test query string."""
+    return _ORIG_QUERY
+
+@pytest.fixture(scope="session", name="MODEL")
+def model_fixture():
+    """Return the test model identifier."""
+    return _ORIG_MODEL
+
+@pytest.fixture(scope="session", name="TEMPERATURE")
+def temperature_fixture():
+    """Return the test temperature value."""
+    return _ORIG_TEMPERATURE
 
 
 def write_test_file(content: str = TEST_CONTENT) -> None:
@@ -74,7 +99,7 @@ def create_or_get_document() -> uuid.UUID | None:
 
     """
     try:
-        response = client.documents.create(file_path=TEST_FILE)
+        response = _default_client.documents.create(file_path=TEST_FILE)
         document_id = response.results.document_id
 
         assert isinstance(document_id, uuid.UUID), (
@@ -85,7 +110,7 @@ def create_or_get_document() -> uuid.UUID | None:
         start_time = time.time()
         while time.time() - start_time < DOCUMENT_POLLING_TIMEOUT:
             try:
-                doc_info = client.documents.retrieve(document_id)
+                doc_info = _default_client.documents.retrieve(document_id)
                 ingestion_status = getattr(
                     doc_info.results, "ingestion_status", "unknown"
                 )
@@ -134,7 +159,7 @@ def delete_document(doc_id: uuid.UUID) -> None:
 
     """
     try:
-        client.documents.delete(doc_id)
+        _default_client.documents.delete(doc_id)
         print("Document deleted from server.")
     except Exception as e:
         print(f"Warning: Failed to delete document: {e}")
