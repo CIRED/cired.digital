@@ -14,33 +14,16 @@ from smoke.r2r_test_utils import (
 )
 
 
-def main() -> None:
-    """
-    Run a basic smoke test for the R2R stack.
-
-    This script creates or fetches a document, performs a RAG query on it,
-    prints the generated answer, and cleans up test files and documents.
-
-    Raises
-    ------
-        RuntimeError: If document creation fails and no ID is returned.
-
-    """
-    write_test_file()
+@pytest.mark.smoke
+def test_hello_r2r():
+    write_test_file(content=TEST_CONTENT)
     document_id = create_or_get_document()
-
-    if document_id:
-        rag_response = client.retrieval.rag(
-            query=QUERY,
-            rag_generation_config={"model": MODEL, "temperature": TEMPERATURE},
-        )
-        print(f"Completion:\n{rag_response.results.generated_answer}")
-        delete_document(document_id)
-    else:
-        print("Skipping RAG query: no document ID available.")
-
+    assert document_id, "Échec création du document de test"
+    response = client.retrieval.rag(
+        query=QUERY,
+        rag_generation_config={"model": MODEL, "temperature": TEMPERATURE},
+    )
+    answer = response.results.generated_answer or ""
+    assert answer.strip(), "Réponse vide pour test_hello_r2r"
+    delete_document(document_id)
     delete_test_file()
-
-
-if __name__ == "__main__":
-    main()
