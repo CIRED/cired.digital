@@ -48,19 +48,17 @@ CIRED.digital/
   | ├ source/           # raw downloaded files
   | ├ prepared/         # files ready to upload to R2R.
   | └ archived/         # volumes snapshots
-  ├ docs/               # Technical documentation and guidelines
-  ├ reports/            # Analytical outputs
+  ├ deploy/           # Scripts to deploy and manage the application
+  | ├ compose.yaml      # Our docker compose configuration.
+  | ├ ops/              # Our application management scripts (install/clean, up/down, start/stop, snapshot/restore).
+  | ├ user_configs/     # Our custom configuration file, accessible to the `r2r` container.
+  | └ scripts/          # Upstream scripts passed to `r2r` and `hatchet` containers. Do not modify.
+  ├ docs/             # Technical documentation and guidelines
+  ├ reports/          # Analytical outputs
   ├ src/              # Application source code
   | ├ analytics/        # Logging usage and user feedback
   | ├ frontend/         # Main user interface
   | ├ intake/           # Data retrieval and preparation
-  | └ docker/            # Scripts for R2R, analytics and frontend containers
-  |   ├ compose.yaml          # docker compose configuration.
-  |   ├ ops/                  # Bash scripts to manage the stack state.
-  |   ├ user_configs/         # Custom configuration files accessible to the application the `r2r` container.
-  |   ├ user_tools/           # Custom tool files accessible to the application in the `r2r` container. Not used yet.
-  |   ├ scripts/              # Scripts made available to r2r container. Copied from `config.upstream`, do not modify.
-  |   └ config.upstream/      # Temporary directory - not versionned in our repo.
   └ tests/            # Automated tests
 
 
@@ -69,6 +67,9 @@ CIRED.digital/
 - Do not place processing scripts or metadata code there.
 - All transformation logic should live under `src/intake/`.
 - Manage files in `data/source` `data/prepared` and `data/archived` as immutable: cannot be modified after it is created. Instead of changing a file, create a new one. Timestamp in the filename.
+
+### `deploy/`
+- Requires a local `.env` which includes `ENV_DIR=../secrets/env`
 
 ### `docs/`
 - Human‑readable

@@ -208,7 +208,6 @@ services:
     restart: on-failure
     volumes:
       - ./user_configs:/app/user_configs
-      - ./user_tools:/app/user_tools
       - hatchet_api_key:/hatchet_api_key:ro
       - ./scripts:/scripts
     extra_hosts:
@@ -239,11 +238,11 @@ services:
   # Our analytics
   feedback:
     build:
-      context: ../analytics
+      context: ../src/analytics
     ports:
       - "7275:7275"
     volumes:
-      - ../analytics/feedback_server.py:/app/feedback_server.py
+      - ../src/analytics/feedback_server.py:/app/feedback_server.py
     command: uvicorn feedback_server:app --host 0.0.0.0 --port 7275 --reload
     restart: unless-stopped
 
@@ -252,4 +251,4 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ../frontend:/usr/share/nginx/html:ro
+      - ../src/frontend:/usr/share/nginx/html:ro
