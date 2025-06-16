@@ -6,6 +6,7 @@ from smoke.r2r_test_utils import (
     MODEL,
     QUERY,
     TEMPERATURE,
+    TEST_CONTENT,
     client,
     create_or_get_document,
     delete_document,
