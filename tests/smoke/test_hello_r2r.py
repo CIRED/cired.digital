@@ -1,7 +1,8 @@
 # hello_r2r.py
 """hello_r2r.py — Smoke test for R2R stack."""
 
-from r2r_test_utils import (
+import pytest
+from smoke.r2r_test_utils import (
     MODEL,
     QUERY,
     TEMPERATURE,
