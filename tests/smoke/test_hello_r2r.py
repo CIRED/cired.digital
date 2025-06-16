@@ -6,7 +6,7 @@ import pytest
 
 
 @pytest.mark.smoke
-def test_hello_r2r():
+def test_hello_r2r(client, write_test_file, create_or_get_document, delete_document, delete_test_file, QUERY, TEST_CONTENT, MODEL, TEMPERATURE):
     write_test_file(content=TEST_CONTENT)
     document_id = create_or_get_document()
     assert document_id, "Échec création du document de test"
