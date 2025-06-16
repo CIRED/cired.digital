@@ -20,6 +20,15 @@ A vanilla HTML/JS standalone web page application. The action loop is:
 - User provides feedback.
 
 Includes a script to dynamically generate the wordcloud showing the collection themes.
+For commercial providers, we only include a **cost effective** (read: cheap) model.
+
+Models pricing and strings:
+
+- (Anthropic)[https://docs.anthropic.com/en/docs/about-claude/models/overview]
+- (Deepseek)[https://api-docs.deepseek.com/quick_start/pricing]
+- (Mistral)[https://mistral.ai/pricing#api-pricing]
+- (OpenAI)[https://platform.openai.com/docs/pricing]
+
 
 ## analytics
 
