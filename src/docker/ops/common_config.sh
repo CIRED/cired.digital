@@ -17,7 +17,13 @@ export COMPOSE_PROJECT_NAME="cidir2r"  # Used as prefix for Docker resources
 export PROJECT_DESCRIPTION="CIRED R2R Deployment"
 CONFIG_UPSTREAM_DIR="${BASE_DIR}/config.upstream"
 COMPOSE_FILE="${BASE_DIR}/compose.yaml"
-SECRETS_FILE="${BASE_DIR}/secrets/r2r-full.env"
+# Charge la variable ENV_DIR depuis le .env à la racine
+if [ -f "${BASE_DIR}/.env" ]; then
+  set -o allexport
+  source "${BASE_DIR}/.env"
+  set +o allexport
+fi
+SECRETS_FILE="${ENV_DIR:?ENV_DIR not set}/r2r-full.env"
 
 # Volume settings
 # data/ is at the same level as src/ but in .gitignore
