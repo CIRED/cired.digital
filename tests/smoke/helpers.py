@@ -7,6 +7,7 @@ import time
 import uuid
 from pathlib import Path
 
+import pytest
 from r2r import R2RClient
 
 # Load configuration from common file
@@ -137,3 +138,21 @@ def delete_document(doc_id: uuid.UUID) -> None:
         print("Document deleted from server.")
     except Exception as e:
         print(f"Warning: Failed to delete document: {e}")
+
+@pytest.fixture(scope="session")
+def test_file(tmp_path_factory):
+    p = tmp_path_factory.mktemp("smoke") / TEST_FILE
+    p.write_text(TEST_CONTENT, encoding="utf-8")
+    return p
+
+@pytest.fixture(scope="session")
+def document_id(client, test_file):
+    response = client.documents.create(file_path=str(test_file))
+    document_id = response.results.document_id
+    start_time = time.time()
+    while time.time() - start_time < DOCUMENT_POLLING_TIMEOUT:
+        doc_info = client.documents.retrieve(document_id)
+        if getattr(doc_info.results, "ingestion_status", "") == "success":
+            return document_id
+        time.sleep(DOCUMENT_POLLING_INTERVAL)
+    return document_id

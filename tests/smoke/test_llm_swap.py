@@ -12,15 +12,10 @@ MODEL_NAMES = [
 
 @pytest.mark.smoke
 @pytest.mark.parametrize("model", MODEL_NAMES)
-def test_llm_model_responses(model, client, write_test_file, create_or_get_document, delete_document, delete_test_file, QUERY, TEST_CONTENT):
-    write_test_file(content=TEST_CONTENT)
-    document_id = create_or_get_document()
-    assert document_id, "Échec création du document de test"
+def test_llm_model_responses(model, client, document_id, QUERY, TEMPERATURE):
     response = client.retrieval.rag(
         query=QUERY,
-        rag_generation_config={"model": model, "temperature": 0.0},
+        rag_generation_config={"model": model, "temperature": TEMPERATURE},
     )
     answer = response.results.generated_answer or ""
     assert answer.strip(), f"Réponse vide pour le modèle {model}"
-    delete_document(document_id)
-    delete_test_file()
