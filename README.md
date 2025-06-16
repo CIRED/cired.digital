@@ -45,22 +45,28 @@ CIRED.digital/
 ├ secrets/          # keys, logins, configurations...
 └ cired.digital/    # **This repo**
   ├ data/             # Raw and processed research documents
-  | ├ source/           # raw downloaded files
+  | ├ archived/         # volumes snapshots
+  | | └ R2R/            #
   | ├ prepared/         # files ready to upload to R2R.
-  | └ archived/         # volumes snapshots
+  | └ source/           # raw downloaded files
+  |   └ hal/            # from HAL
+  |     └ documents/    #
   ├ deploy/           # Scripts to deploy and manage the application
-  | ├ compose.yaml      # Our docker compose configuration.
   | ├ ops/              # Our application management scripts (install/clean, up/down, start/stop, snapshot/restore).
-  | ├ user_configs/     # Our custom configuration file, accessible to the `r2r` container.
-  | └ scripts/          # Upstream scripts passed to `r2r` and `hatchet` containers. Do not modify.
+  | ├ scripts/          # Upstream scripts passed to `r2r` and `hatchet` containers. Do not modify.
+  | └ user_configs/     # Our custom configuration file, accessible to the `r2r` container.
   ├ docs/             # Technical documentation and guidelines
   ├ reports/          # Analytical outputs
+  | └ logs/           # from docker
   ├ src/              # Application source code
   | ├ analytics/        # Logging usage and user feedback
   | ├ frontend/         # Main user interface
-  | ├ intake/           # Data retrieval and preparation
+  | | └ static/         # Image
+  | └ intake/           # Data retrieval and preparation
   └ tests/            # Automated tests
+  | └ smoke-tests/      #
 
+Map last updated on 2025-06-15
 
 ### `data/`
 - Not versionned in the git, only the directory structure and the README.md.
