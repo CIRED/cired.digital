@@ -1,7 +1,6 @@
 """LLM_swap.py — Test different LLMs using the R2R stack and compare answers."""
 
 import pytest
-import pytest
 
 MODEL_NAMES = [
     "openai/gpt-4o-mini",

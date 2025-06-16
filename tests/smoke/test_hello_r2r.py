@@ -2,8 +2,6 @@
 """hello_r2r.py — Smoke test for R2R stack."""
 
 import pytest
-import pytest
-
 
 @pytest.mark.smoke
 def test_hello_r2r(client, write_test_file, create_or_get_document, delete_document, delete_test_file, QUERY, TEST_CONTENT, MODEL, TEMPERATURE):
