@@ -1,7 +1,7 @@
 """LLM_swap.py — Test different LLMs using the R2R stack and compare answers."""
 
 import pytest
-from smoke.r2r_test_utils import (
+from tests.smoke.r2r_test_utils import (
     QUERY,
     TEST_CONTENT,
     client,
