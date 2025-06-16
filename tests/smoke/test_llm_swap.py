@@ -1,15 +1,7 @@
 """LLM_swap.py — Test different LLMs using the R2R stack and compare answers."""
 
 import pytest
-from tests.smoke.helpers import (
-    QUERY,
-    TEST_CONTENT,
-    client,
-    create_or_get_document,
-    delete_document,
-    delete_test_file,
-    write_test_file,
-)
+import pytest
 
 MODEL_NAMES = [
     "openai/gpt-4o-mini",
