@@ -1,5 +1,6 @@
 """LLM_swap.py — Test different LLMs using the R2R stack and compare answers."""
 
+import pytest
 from smoke.r2r_test_utils import (
     QUERY,
     TEST_CONTENT,
@@ -18,48 +19,17 @@ MODEL_NAMES = [
 ]
 
 
-def run_all_models() -> dict[str, str]:
-    """
-    Run RAG queries using all configured models and collect their answers.
-
-    Returns
-    -------
-    dict[str, str]
-        A dictionary mapping model names to their generated answers.
-
-    """
-    answers: dict[str, str] = {}
-    for model in MODEL_NAMES:
-        print(f"Running model: {model}")
-        response = client.retrieval.rag(
-            query=QUERY,
-            rag_generation_config={"model": model, "temperature": 0.0},
-        )
-        answers[model] = response.results.generated_answer
-    return answers
-
-
-def main() -> None:
-    """Run the end-to-end test for all models and print results."""
+@pytest.mark.smoke
+@pytest.mark.parametrize("model", MODEL_NAMES)
+def test_llm_model_responses(model):
     write_test_file(content=TEST_CONTENT)
     document_id = create_or_get_document()
-
-    if not document_id:
-        print("Aborting: no document ID.")
-        return
-
-    print(f"\nQuery: {QUERY}\n")
-
-    results = run_all_models()
-
-    for model, answer in results.items():
-        print(f"---- {model} ----")
-        print(answer)
-        print()
-
+    assert document_id, "Échec création du document de test"
+    response = client.retrieval.rag(
+        query=QUERY,
+        rag_generation_config={"model": model, "temperature": 0.0},
+    )
+    answer = response.results.generated_answer or ""
+    assert answer.strip(), f"Réponse vide pour le modèle {model}"
     delete_document(document_id)
     delete_test_file()
-
-
-if __name__ == "__main__":
-    main()

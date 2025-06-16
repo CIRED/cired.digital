@@ -72,3 +72,9 @@ module = [
     # Add other modules without types here
 ]
 ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+markers = [
+  "smoke: tests de bout en bout lents pour la stack R2R",
+]
+addopts = "--maxfail=1 --strict-markers"
