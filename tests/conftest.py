@@ -4,6 +4,8 @@ import pytest
 from docker import from_env
 from docker.models.containers import Container
 
+pytest_plugins = ["tests.smoke.helpers"]
+
 
 @pytest.fixture(scope="session")
 def r2r_container() -> Container:
