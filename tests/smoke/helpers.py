@@ -1,83 +1,60 @@
 # r2r_test_utils.py
 """Utility functions for R2R smoke testing."""
 
-import os
+import logging
 import re
 import time
 import uuid
 from pathlib import Path
 
 import pytest
+from pytest import TempPathFactory
 from r2r import R2RClient
 
+logger = logging.getLogger(__name__)
+
 # Load configuration from common file
-config_path = Path(__file__).parent.parent / "deploy/ops/common_config.sh"
-config = {}
-if config_path.exists():
-    with open(config_path) as f:
-        for line in f:
-            if "=" in line and not line.strip().startswith("#"):
-                key, value = line.strip().split("=", 1)
-                config[key] = value.strip('"')
+SERVER_URL: str = "http://localhost:7272"
+TEST_FILE: str = "test.txt"
+TEST_CONTENT: str = "QuetzalX is a person that works at CIRED."
+QUERY: str = "Who is QuetzalX?"
+DOCUMENT_POLLING_TIMEOUT: int = 30  # seconds
+DOCUMENT_POLLING_INTERVAL: int = 2  # seconds
 
-SERVER_URL = config.get("SERVER_URL", "http://localhost:7272")
-TEST_FILE = config.get("TEST_FILE", "test.txt")
-TEST_CONTENT = config.get("TEST_CONTENT", "QuetzalX is a person that works at CIRED.")
-QUERY = config.get("TEST_QUERY", "Who is QuetzalX?")
-MODEL = "openai/gpt-4o-mini"
-TEMPERATURE = 0.0
-DOCUMENT_POLLING_TIMEOUT = 30  # seconds
-DOCUMENT_POLLING_INTERVAL = 2  # seconds
-
-_default_client = R2RClient(SERVER_URL)
-
-@pytest.fixture(scope="session")
-def client():
-    """Return R2RClient instance for tests."""
-    return _default_client
 
 # Expose configuration constants as fixtures
-_ORIG_QUERY = QUERY
-_ORIG_MODEL = MODEL
-_ORIG_TEMPERATURE = TEMPERATURE
-
 @pytest.fixture(scope="session", name="QUERY")
-def query_fixture():
-    """Return the test query string."""
-    return _ORIG_QUERY
-
-@pytest.fixture(scope="session", name="MODEL")
-def model_fixture():
-    """Return the test model identifier."""
-    return _ORIG_MODEL
-
-@pytest.fixture(scope="session", name="TEMPERATURE")
-def temperature_fixture():
-    """Return the test temperature value."""
-    return _ORIG_TEMPERATURE
+def query_fixture() -> str:
+    """Pytest fixture that returns the test query string."""
+    return QUERY
 
 
-def write_test_file(content: str = TEST_CONTENT) -> None:
-    """
-    Create a test file with the specified content.
+# Setup the client with a test document
+@pytest.fixture(scope="session")
+def client(test_file: Path) -> R2RClient:
+    """Pytest fixture that returns an R2RClient with a test document."""
+    client = R2RClient(SERVER_URL)
 
-    Args:
-    ----
-        content: The string content to write into the test file.
+    document_id = create_or_get_document(client, test_file)
+    if not document_id:
+        raise RuntimeError("Failed to create or retrieve test document for R2R tests.")
 
-    """
-    with open(TEST_FILE, "w") as file:
-        file.write(content)
-        print(f"Local file created: {content}")
-
-
-def delete_test_file() -> None:
-    """Delete the local test file, if it exists."""
+    document_id = wait_for_document_ready(document_id, client)
+    if not document_id:
+        raise RuntimeError("Failed to ingest document for R2R tests.")
+    logger.info(f"Document ready with ID: {document_id}")
     try:
-        os.remove(TEST_FILE)
-        print("Local file deleted.")
-    except Exception as e:
-        print(f"Warning: Failed to delete local file: {e}")
+        yield client
+    finally:
+        delete_document(document_id, client)
+
+
+@pytest.fixture(scope="session")
+def test_file(tmp_path_factory: TempPathFactory) -> Path:
+    """Pytest fixture that creates a temporary test file for document upload."""
+    p: Path = tmp_path_factory.mktemp("smoke") / TEST_FILE
+    p.write_text(TEST_CONTENT, encoding="utf-8")
+    return p
 
 
 def is_valid_uuid(value: str) -> bool:
@@ -89,95 +66,65 @@ def is_valid_uuid(value: str) -> bool:
         return False
 
 
-def create_or_get_document() -> uuid.UUID | None:
-    """
-    Create a document from the test file or retrieve its existing ID.
-
-    Returns
-    -------
-        The document ID if creation or extraction succeeds, else None.
-
-    """
+def create_or_get_document(client: R2RClient, test_file: Path) -> uuid.UUID | None:
+    """Create a document from the test file or retrieve its existing ID."""
     try:
-        response = _default_client.documents.create(file_path=TEST_FILE)
+        response = client.documents.create(test_file)
         document_id = response.results.document_id
-
         assert isinstance(document_id, uuid.UUID), (
             f"Expected document_id to be a valid UUID, got: {document_id}"
         )
-        print("Document created.")
-
-        start_time = time.time()
-        while time.time() - start_time < DOCUMENT_POLLING_TIMEOUT:
-            try:
-                doc_info = _default_client.documents.retrieve(document_id)
-                ingestion_status = getattr(
-                    doc_info.results, "ingestion_status", "unknown"
-                )
-
-                print(f"Document status: ingestion={ingestion_status}")
-
-                if ingestion_status == "success":
-                    print("Document is ready.")
-                    return document_id
-                elif ingestion_status == "failed":
-                    print(f"Document processing failed: ingestion={ingestion_status}")
-                    return None
-
-                time.sleep(DOCUMENT_POLLING_INTERVAL)
-            except Exception as poll_error:
-                print(f"Error checking document status: {poll_error}")
-                time.sleep(DOCUMENT_POLLING_INTERVAL)
-
-        print(
-            f"Timeout waiting for document to be ready after {DOCUMENT_POLLING_TIMEOUT} seconds"
-        )
+        logger.info("Document created.")
         return document_id
-
     except Exception as e:
         error_msg = str(e)
         if "already exists" in error_msg:
-            print("Document already exists. Extracting ID...")
+            logger.info("Document already exists. Extracting ID...")
             match = re.search(r"Document ([\w-]+) already exists", error_msg)
             if match:
                 document_id = uuid.UUID(match.group(1))
-                print(f"Found existing document ID: {document_id}")
+                logger.info(f"Found existing document ID: {document_id}")
                 return document_id
-            print("Error: Could not parse document ID from error message.")
+            logger.error("Error: Could not parse document ID from error message.")
         else:
-            print(f"Unexpected creation error: {e}")
+            logger.error(f"Unexpected creation error: {e}")
     return None
 
 
-def delete_document(doc_id: uuid.UUID) -> None:
-    """
-    Delete a document from the R2R server by ID.
-
-    Args:
-    ----
-        doc_id: The UUID of the document to delete.
-
-    """
-    try:
-        _default_client.documents.delete(doc_id)
-        print("Document deleted from server.")
-    except Exception as e:
-        print(f"Warning: Failed to delete document: {e}")
-
-@pytest.fixture(scope="session")
-def test_file(tmp_path_factory):
-    p = tmp_path_factory.mktemp("smoke") / TEST_FILE
-    p.write_text(TEST_CONTENT, encoding="utf-8")
-    return p
-
-@pytest.fixture(scope="session")
-def document_id(client, test_file):
-    response = client.documents.create(file_path=str(test_file))
-    document_id = response.results.document_id
+def wait_for_document_ready(
+    document_id: uuid.UUID, client: R2RClient
+) -> uuid.UUID | None:
+    """Poll the server until the document is ingested or times out."""
     start_time = time.time()
     while time.time() - start_time < DOCUMENT_POLLING_TIMEOUT:
-        doc_info = client.documents.retrieve(document_id)
-        if getattr(doc_info.results, "ingestion_status", "") == "success":
-            return document_id
-        time.sleep(DOCUMENT_POLLING_INTERVAL)
-    return document_id
+        try:
+            doc_info = client.documents.retrieve(document_id)
+            ingestion_status = getattr(doc_info.results, "ingestion_status", "unknown")
+            logger.info(f"Document status: ingestion={ingestion_status}")
+
+            if ingestion_status == "success":
+                return document_id
+            elif ingestion_status == "failed":
+                logger.error(
+                    f"Document processing failed: ingestion={ingestion_status}"
+                )
+                return None
+
+            time.sleep(DOCUMENT_POLLING_INTERVAL)
+        except Exception as poll_error:
+            logger.warning(f"Error checking document status: {poll_error}")
+            time.sleep(DOCUMENT_POLLING_INTERVAL)
+
+    logger.error(
+        f"Timeout waiting for document to be ready after {DOCUMENT_POLLING_TIMEOUT} seconds"
+    )
+    return None
+
+
+def delete_document(doc_id: uuid.UUID, client: R2RClient) -> None:
+    """Delete a document from the R2R server by ID."""
+    try:
+        client.documents.delete(doc_id)
+        logger.info("Document deleted from server.")
+    except Exception as e:
+        logger.warning(f"Warning: Failed to delete document: {e}")

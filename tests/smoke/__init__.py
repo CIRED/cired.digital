@@ -1,1 +1,1 @@
-# Ce fichier rend le dossier tests/smoke un package Python
+"""Declare the directory  tests/smoke  as a Python package."""
