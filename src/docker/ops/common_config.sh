@@ -118,7 +118,7 @@ HEALTH_CHECK_TIMEOUT=10
 DOCKER_STOP_TIMEOUT=15
 
 # Test settings
-SMOKE_DIR="${BASE_DIR}/smoke-tests"
+SMOKE_DIR="${BASE_DIR}/../../tests/smoke-tests"
 TEST_FILE="test.txt"
 TEST_CONTENT="QuetzalX is a person that works at CIRED."
 TEST_QUERY="Who is QuetzalX?"

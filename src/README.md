@@ -6,23 +6,6 @@ This README provides a code architecture overview of the chatbot system being de
 
 The chatbot enables users to pose natural-language queries and obtain accurate, citation-supported answers from CIRED’s research corpus. Multiple Retrieval-Augmented Generation (RAG) engines, such as R2R, Morphik, and PaperQA, will be integrated and evaluated side-by-side. The architecture emphasizes openness and reproducibility by sharing all code publicly. User privacy and compliance with GDPR standards will be rigorously maintained. Data-driven performance metrics will guide continuous improvement of the system.
 
-## Where you are in the project
-
-```text
-CIRED.digital/
-└── cired.digital/
-    ├── data/               # Raw and processed research documents
-    ├── docs/               # Technical documentation and guidelines
-    ├── reports/            # Analytical outputs
-    ├── src/                # Application source code **YOU ARE HERE**
-    │   ├── analytics/         # Performance and user metrics
-    │   ├── intake/            # Data retrieval and preparation
-    │   ├── docker/            # Scripts to manage the containers
-    │   └── frontend/          # Frontend chatbot user interface (Single page app)
-    └── tests/              # Automated tests, mirroring the src/ directory structure
-```
-> Note: The cired.digital/ repository is a subdirectory of the top-level CIRED.digital/ project directory, not versionned. The tests/ directory inside cired.digital/ mirrors the structure of src/ to facilitate targeted and modular testing.
-
 ## Source Code Organization (`src/`)
 
 The `src/` directory is organized into specific subdirectories: `intake/`, `engine/`, `frontend/`, and `analytics/`.

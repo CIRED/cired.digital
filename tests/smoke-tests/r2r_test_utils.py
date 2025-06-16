@@ -10,7 +10,7 @@ from pathlib import Path
 from r2r import R2RClient
 
 # Load configuration from common file
-config_path = Path(__file__).parent.parent / "common_config.sh"
+config_path = Path(__file__).parent.parent / "src/docker/ops/common_config.sh"
 config = {}
 if config_path.exists():
     with open(config_path) as f:

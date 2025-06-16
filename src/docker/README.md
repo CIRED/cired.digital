@@ -1,31 +1,35 @@
-# README.md for the RAG engine
+# README.md for the deployment directory
 
-HDM, 2025-05-26
+HDM, 2025-06-16
 
-The RAG engine is R2R, the stack including Postgress and Hatchett is managed with `docker compose`.
+The stack uses:
+- R2R and its dashboard, the core RAG application
+- Postgres with pgvector extension
+- Hatchet and dependencies for workflow
+- unstructured for parsing and extracting documents
+- nginx to serve the main user interface as a static web frontend
+- FastAPI/uvicorn to serve the custom analytics backend
 
-CIRED.digital/
-└ cired.digital/
-  ├ credentials/        # env files with secrets like API keys and admin logins
-  ├ data/               # Raw and processed research documents
-  ├ docs/               # Technical documentation and guidelines
-  ├ reports/            # Analytical outputs
-  ├ tests/              # Automated tests, mirroring the src/ directory structure
-  └ src/                # Application source code
-    ├ analytics/         # Performance and user metrics
-    ├ data_preparation/  # Data retrieval and preparation
-    ├ frontend/          # Frontend chatbot user interface (Single page app)
-    └ docker/            # Scripts for R2R, analytics and frontend containers **YOU ARE HERE**
-      ├ compose.yaml          # docker compose configuration.
-      ├ ops/                  # Bash scripts to manage the stack state.
-      ├ smoke-tests/          # Python scripts to verify that the R2R stack works.
-      ├ user_configs/         # Custom configuration files accessible to the application the `r2r` container. Not used yet.
-      ├ user_tools/           # Custom tool files accessible to the application in the `r2r` container. Not used yet.
-      ├ scripts/              # Scripts made available to r2r container. Copied from `config.upstream`, do not modify.
-      └ config.upstream/      # Temporary directory not versionned in our repo.
+Not used:
+- minio, the S3 compatible files storage service
+- graph_clustering, started but should be unused when we disable graph analysis
+- earlier releases included logging and analytics services which bugged on newer Ubuntu
 
-*Notes:*
+External services:
+- Commercial LLMs: at present we use OpenAI, Anthropic, DeepSeek, Mistral
+- Open LLM: an experimental ollama on CNRS servers
+- We do not use Serper, for now web search capability is not used
+- We do not use Firecrawl, for now web scrape capability is not used
 
-. Scripts in `smoke-tests/` require `uv` since it uses `uvx` to pull the `r2r` SDK.
+*Security is work-in-progress:*
 
-. This `docker/` directory mirrors the `docker/` directory from R2R repository, with edits to the compose file our own scripts and configuration files. If upstream changes, we have to manually inspect and sync. To that end, the dir `config.upstream` can be created by `ops/install.sh` and deleted by `ops/clean.sh`.
+- Create a `.env` file next to `compose.yaml` to set the `ENV_DIR` variable pointing to `secrets`
+- `sops` does not support `toml` format that R2R uses for storing configuration. Its rust rewrite `rops` does.
+- TODO: also securely manage secrets from `user_configs/`
+
+*What needs manual inspect and sync on upstream R2R changes:*
+
+- Create `config.upstream/` using `ops/install.sh` and delete it with `ops/clean.sh` afterwards.
+- Templates for `secrets/env/` directory are the `config.upstream/docker/env/` directory.
+- Template for `compose.yaml` file is the `config.upstream/docker/compose.full.yaml`.
+- Templates for `user_configs/` are at `https://github.com/SciPhi-AI/R2R/tree/main/py/core/configs`
