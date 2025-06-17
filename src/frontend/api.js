@@ -1,5 +1,7 @@
  // ==========================================
  // ==========================================
+ const { r2rClient } = require("r2r-js");
+ const client = new r2rClient();
 
  marked.setOptions({
      breaks: true,    // Convert \n to <br>
@@ -123,25 +125,10 @@ function buildRequestBody(query, config) {
 }
 
 async function makeApiRequest(apiUrl, requestBody) {
-    const response = await fetch(`${apiUrl}/v3/retrieval/rag`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(requestBody)
+    const response = await client.retrieval.rag({
+        ...requestBody,
+        base_url: apiUrl
     });
-
-    if (!response.ok) {
-        const errorData = await response.text();
-        debugLog('API request failed', {
-            status: response.status,
-            statusText: response.statusText,
-            errorData,
-            url: apiUrl
-        });
-        throw new Error(`API Error: ${response.status} ${response.statusText}`);
-    }
-
     return response;
 }
 
