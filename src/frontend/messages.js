@@ -94,13 +94,13 @@ function addFeedbackButtons(botMessage, requestBody, results) {
 
     const commentInput = feedbackDiv.querySelector('input[type="text"]');
 
-    feedbackDiv.querySelector('.thumb-up').addEventListener('click', () => {
+    feedbackDiv.querySelector('.feedback-up').addEventListener('click', () => {
         debugLog('User clicked thumbs up');
         sendFeedback(requestBody, results, 'up', commentInput.value.trim());
         feedbackDiv.remove();
     });
 
-    feedbackDiv.querySelector('.thumb-down').addEventListener('click', () => {
+    feedbackDiv.querySelector('.feedback-down').addEventListener('click', () => {
         debugLog('User clicked thumbs down');
         sendFeedback(requestBody, results, 'down', commentInput.value.trim());
         feedbackDiv.remove();
