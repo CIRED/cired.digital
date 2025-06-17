@@ -83,7 +83,7 @@ function addFeedbackButtons(botMessage, requestBody, results) {
     debugLog('Adding feedback buttons to message');
 
     const feedbackDiv = document.createElement('div');
-    feedbackDiv.className = 'flex gap-2 mt-2 items-center';
+    feedbackDiv.className = 'feedback-container';
     feedbackDiv.innerHTML = `
         <input type="text" class="feedback-input" placeholder="Donnez votre avis sur cette réponse." maxlength="500">
         <button class="feedback-button feedback-up" title="Bonne réponse.">👍</button>
