@@ -155,17 +155,6 @@ function initializePrivacyMode() {
 
 function updatePrivacyStatus() {
     const privacyMode = localStorage.getItem('privacy-mode') === 'true';
-    const statusText = document.getElementById('status-text');
-    const originalContent = statusText.innerHTML;
-
-    if (privacyMode) {
-        if (!statusText.innerHTML.includes('🔒 Mode sans trace activé')) {
-            statusText.innerHTML = originalContent + ' • <span class="text-orange-600">🔒 Mode sans trace activé</span>';
-        }
-    } else {
-        statusText.innerHTML = originalContent.replace(/ • <span class="text-orange-600">🔒 Mode sans trace activé<\/span>/, '');
-    }
-
     debugLog('Privacy status updated', { privacyMode });
 }
 
