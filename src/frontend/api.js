@@ -47,19 +47,13 @@ async function sendMessage() {
 
         const requestBody = buildRequestBody(query, config);
         debugLog('Request body built:', requestBody);
-        debugLog('Envoi avec paramètres', {
-            query: requestBody.query,
-            limit: requestBody.search_settings.limit,
-            model: requestBody.rag_generation_config.model,
-            temperature: requestBody.rag_generation_config.temperature,
-            maxTokens: requestBody.rag_generation_config.max_tokens
-        });
 
         logQuery(queryId, query, {
-            model: config.model,
-            temperature: config.temperature,
-            max_tokens: config.maxTokens,
-            search_mode: 'advanced'
+            query: requestBody.query,
+            model: requestBody.rag_generation_config.model,
+            temperature: requestBody.rag_generation_config.temperature,
+            maxTokens: requestBody.rag_generation_config.max_tokens,
+            search_mode: requestBody.search_settings.search_mode
         });
 
         const startTime = Date.now();
@@ -116,7 +110,7 @@ function buildRequestBody(query, config) {
     return {
         query: query,
         search_settings: {
-            search_mode: 'advanced',
+            search_mode: 'hybrid',
             limit: 10
         },
         rag_generation_config: {
