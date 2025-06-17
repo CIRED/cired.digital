@@ -24,6 +24,9 @@ else
     log "ℹ️  $CONFIG_UPSTREAM_DIR directory not found (already clean)"
 fi
 
+log "🧹 Removing the expanded user_configs files"
+
+
 log "🧹 Removing test file..."
 if [[ -f "$TEST_FILE" ]]; then
     rm -f "$TEST_FILE"
