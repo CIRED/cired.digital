@@ -38,7 +38,7 @@ def clean_titles(raw_titles: list[str]) -> list[str]:
     cleaned_titles: list[str] = []
     for title in raw_titles:
         cleaned_words: list[str] = []
-        parts = re.split(r"[ :\?']", title)
+        parts = re.split(r"[ :\?'’–]", title)
         for word in parts:
             key = word if word in KEEP_INITIALIZED else word.lower()
             if key in STOPWORDS or key in MY_STOPWORDS:

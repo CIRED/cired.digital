@@ -21,11 +21,13 @@ External services:
 - We do not use Serper, for now web search capability is not used
 - We do not use Firecrawl, for now web scrape capability is not used
 
-*Security is work-in-progress:*
+*Security:*
 
 - Create a `.env` file next to `compose.yaml` to set the `ENV_DIR` variable pointing to `secrets`
 - `sops` does not support `toml` format that R2R uses for storing configuration. Its rust rewrite `rops` does.
-- TODO: also securely manage secrets from `user_configs/`
+- The configuration file `user_configs/cidir2r.toml` contains "${R2R_ADMIN_PASSWORD}" instead of the clear text
+- The secret is defined in the `env_file` along with all others
+- We extend `scripts/start-r2r.sh` to do the interpolation (inject the secrets) at up time.
 
 *What needs manual inspect and sync on upstream R2R changes:*
 
@@ -33,3 +35,17 @@ External services:
 - Templates for `secrets/env/` directory are the `config.upstream/docker/env/` directory.
 - Template for `compose.yaml` file is the `config.upstream/docker/compose.full.yaml`.
 - Templates for `user_configs/` are at `https://github.com/SciPhi-AI/R2R/tree/main/py/core/configs`
+
+*Disabling knowledge graphs*
+We disable graph building AND graph search globally in the r2r TOML config file:
+```
+[ingestion]
+automatic_extraction = false
+
+[database]
+  [database.graph_search_settings]
+  enabled = false
+```
+HDM, 2025-06-17:
+Forgetting to disable graph search globally like this can lead to empty retrieval issues,
+even when we query the `v3/rag/` endpoint with the search_settings.graph_settings.enabled = false.

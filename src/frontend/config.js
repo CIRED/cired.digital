@@ -103,8 +103,6 @@ function handleDebugModeToggle() {
 function updateStatusDisplay() {
     clearChunkCache();
     fetchApiStatus();
-    clearChunkCache();
-    fetchApiStatus();
 }
 
 
@@ -155,17 +153,6 @@ function initializePrivacyMode() {
 
 function updatePrivacyStatus() {
     const privacyMode = localStorage.getItem('privacy-mode') === 'true';
-    const statusText = document.getElementById('status-text');
-    const originalContent = statusText.innerHTML;
-
-    if (privacyMode) {
-        if (!statusText.innerHTML.includes('🔒 Mode sans trace activé')) {
-            statusText.innerHTML = originalContent + ' • <span class="text-orange-600">🔒 Mode sans trace activé</span>';
-        }
-    } else {
-        statusText.innerHTML = originalContent.replace(/ • <span class="text-orange-600">🔒 Mode sans trace activé<\/span>/, '');
-    }
-
     debugLog('Privacy status updated', { privacyMode });
 }
 
@@ -289,13 +276,11 @@ function fetchApiStatus() {
         .then(data => {
             const message = data.results?.message?.toUpperCase() || data.status || data.health || 'unknown';
             statusEl.textContent = `Server status: ${message}`;
-            statusEl.classList.remove('text-red-500');
-            statusEl.classList.add('text-green-600');
+            statusEl.className = 'status-text status-success';
         })
         .catch(() => {
             statusEl.textContent = 'Server status: unreachable';
-            statusEl.classList.remove('text-green-600');
-            statusEl.classList.add('text-red-500');
+            statusEl.className = 'status-text status-error';
         });
 }
 

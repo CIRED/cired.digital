@@ -11,10 +11,9 @@ function showTooltip(event, element) {
 
     const tooltip = document.createElement('div');
     tooltip.id = 'document-tooltip';
-    tooltip.className = 'absolute z-50 bg-gray-800 text-white text-xs rounded py-3 px-4 max-w-lg shadow-lg';
+    tooltip.className = 'document-tooltip';
     tooltip.style.left = event.pageX + 10 + 'px';
     tooltip.style.top = event.pageY - 10 + 'px';
-    tooltip.style.minWidth = '300px';
 
     // Build tooltip content with description as primary content
     const tooltipParts = [];
@@ -49,20 +48,17 @@ function showChunkTooltip(event, element) {
     // Create initial tooltip with loading state
     const tooltip = document.createElement('div');
     tooltip.id = 'chunk-tooltip';
-    tooltip.className = 'absolute z-50 bg-blue-800 text-white text-xs rounded py-2 px-3 shadow-lg';
+    tooltip.className = 'chunk-tooltip';
     tooltip.style.left = event.pageX + 10 + 'px';
     tooltip.style.top = event.pageY - 10 + 'px';
-    tooltip.style.maxWidth = '400px';
-    tooltip.style.minWidth = '200px';
-    tooltip.style.wordBreak = 'break-word';
 
     // Show loading state initially
     tooltip.innerHTML = `
-        <div class="flex items-center">
-            <span class="animate-spin mr-2">⟳</span>
+        <div class="tooltip-loading">
+            <span class="tooltip-loading-spinner">⟳</span>
             Loading chunk data...
         </div>
-        <div class="text-xs opacity-75 mt-1">ID: ${chunkId}</div>
+        <div class="tooltip-metadata">ID: ${chunkId}</div>
     `;
 
     document.body.appendChild(tooltip);
@@ -125,14 +121,14 @@ async function fetchChunkData(chunkId, tooltip) {
 
 function displayChunkData(chunkData, tooltip, chunkId) {
     // Build tooltip content from chunk data
-    let content = '<div class="space-y-2">';
+    let content = '<div>';
 
     // Chunk ID
-    content += `<div class="text-xs opacity-75">Chunk ID: ${chunkId}</div>`;
+    content += `<div class="tooltip-metadata">Chunk ID: ${chunkId}</div>`;
 
     // Document ID if available
     if (chunkData.document_id) {
-        content += `<div class="text-xs opacity-75">Document: ${chunkData.document_id}</div>`;
+        content += `<div class="tooltip-metadata">Document: ${chunkData.document_id}</div>`;
     }
 
     // Main text content
@@ -140,17 +136,17 @@ function displayChunkData(chunkData, tooltip, chunkId) {
         const truncatedText = chunkData.text.length > 600
             ? chunkData.text.substring(0, 600) + '...'
             : chunkData.text;
-        content += `<div class="font-medium">${escapeHtml(truncatedText)}</div>`;
+        content += `<div class="tooltip-content">${escapeHtml(truncatedText)}</div>`;
     }
 
     // Metadata if available and interesting
     if (chunkData.metadata && Object.keys(chunkData.metadata).length > 0) {
-        content += '<div class="text-xs opacity-75 mt-2">Metadata:</div>';
+        content += '<div class="tooltip-metadata tooltip-content">Metadata:</div>';
         const interestingKeys = ['title', 'page', 'section', 'chapter', 'author'];
 
         for (const key of interestingKeys) {
             if (chunkData.metadata[key]) {
-                content += `<div class="text-xs opacity-75">• ${key}: ${escapeHtml(String(chunkData.metadata[key]))}</div>`;
+                content += `<div class="tooltip-metadata">• ${key}: ${escapeHtml(String(chunkData.metadata[key]))}</div>`;
             }
         }
     }
@@ -162,15 +158,15 @@ function displayChunkData(chunkData, tooltip, chunkId) {
 
 function displayChunkError(error, tooltip, chunkId) {
     tooltip.innerHTML = `
-        <div class="text-red-200">
-            <div class="font-medium">⚠️ Error loading chunk</div>
-            <div class="text-xs mt-1">ID: ${chunkId}</div>
-            <div class="text-xs mt-1 opacity-75">${escapeHtml(error.message)}</div>
+        <div>
+            <div><strong>⚠️ Error loading chunk</strong></div>
+            <div class="tooltip-metadata">ID: ${chunkId}</div>
+            <div class="tooltip-metadata">${escapeHtml(error.message)}</div>
         </div>
     `;
 
     // Change tooltip color to indicate error
-    tooltip.className = tooltip.className.replace('bg-blue-800', 'bg-red-600');
+    tooltip.className = 'chunk-tooltip chunk-tooltip-error';
 }
 
 function hideChunkTooltip() {

@@ -1,20 +1,20 @@
  // ==========================================
  // ==========================================
- 
+
  marked.setOptions({
      breaks: true,    // Convert \n to <br>
      gfm: true,       // GitHub Flavored Markdown
      tables: true,    // Table support
      sanitize: false  // We'll use DOMPurify instead
  });
- 
+
  // fenced tables avec optional language tag (```lang\n|...|\n```)
  const FENCED_TABLE_REGEX = /```(?:\w+)?\s*\n(\|[\s\S]*?\|)\s*\n```/g;
- 
+
  function renderSafeLLMContent(markdown) {
-    
+
     const processedMarkdown = markdown.replace(FENCED_TABLE_REGEX, (_, tableContent) => tableContent);
-    
+
     const rawHtml = marked.parse(processedMarkdown);
     return DOMPurify.sanitize(rawHtml);
 }
@@ -48,19 +48,11 @@ async function sendMessage() {
         const requestBody = buildRequestBody(query, config);
         debugLog('Request body built:', requestBody);
 
-        logQuery(queryId, query, {
-            model: config.model,
-            temperature: config.temperature,
-            max_tokens: config.maxTokens,
-            search_mode: 'advanced'
-        });
-
         const startTime = Date.now();
         const response = await makeApiRequest(config.apiUrl, requestBody);
-        const responseTime = Date.now() - startTime;
         debugLog('API request completed', {
             status: response.status,
-            responseTime: `${responseTime}ms`,
+            responseTime: `${Date.now() - startTime}ms`,
             url: config.apiUrl
         });
 
@@ -71,9 +63,7 @@ async function sendMessage() {
             citationsCount: data.results?.citations?.length || 0
         });
 
-        const processingTime = Date.now() - startTime;
-
-        handleResponse(requestBody, data, queryId, processingTime);
+        handleResponse(requestBody, data, queryId);
 
     } catch (err) {
         console.error('Error sending message:', err);
@@ -108,8 +98,8 @@ function getConfiguration() {
 function buildRequestBody(query, config) {
     return {
         query: query,
+        search_mode: 'custom',
         search_settings: {
-            search_mode: 'advanced',
             limit: 10
         },
         rag_generation_config: {
@@ -122,6 +112,16 @@ function buildRequestBody(query, config) {
 }
 
 async function makeApiRequest(apiUrl, requestBody) {
+    logQuery(
+        queryId,
+        requestBody.query,
+        {
+            model: requestBody.rag_generation_config.model,
+            temperature: requestBody.rag_generation_config.temperature,
+            max_tokens: requestBody.rag_generation_config.maxTokens,
+            search_mode: requestBody.search_settings.search_mode
+        });
+
     const response = await fetch(`${apiUrl}/v3/retrieval/rag`, {
         method: 'POST',
         headers: {
@@ -156,7 +156,7 @@ function handleError(err) {
 // ==========================================
 // RESPONSE HANDLING
 // ==========================================
-function handleResponse(requestBody, data, queryId, processingTime) {
+function handleResponse(requestBody, data, queryId) {
     debugLog('Starting response processing', {
         hasContent: !!data.results.generated_answer,
         citationsCount: data.results.citations?.length || 0
@@ -178,7 +178,7 @@ function handleResponse(requestBody, data, queryId, processingTime) {
     addVancouverCitations(botMessage, documentBibliography);
     addFeedbackButtons(botMessage, requestBody, data.results);
 
-    logResponse(queryId, processedContent, processingTime);
+    logResponse(queryId, processedContent);
 }
 
 // ==========================================
