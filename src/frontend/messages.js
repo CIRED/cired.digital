@@ -8,6 +8,7 @@ function createMessage(type, content, timestamp, isError = false) {
 
     const avatarIcon = type === 'user' ? '👤' : '🤖';
     const messageClass = getMessageClass(type, isError);
+    const avatarClass = getAvatarClass(type);
 
     messageDiv.innerHTML = `
         <div class="message-content-wrapper ${type === 'user' ? 'user-content' : 'bot-content'}">
