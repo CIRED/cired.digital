@@ -47,6 +47,13 @@ async function sendMessage() {
 
         const requestBody = buildRequestBody(query, config);
         debugLog('Request body built:', requestBody);
+        debugLog('Envoi avec paramètres', {
+            query: requestBody.query,
+            limit: requestBody.search_settings.limit,
+            model: requestBody.rag_generation_config.model,
+            temperature: requestBody.rag_generation_config.temperature,
+            maxTokens: requestBody.rag_generation_config.max_tokens
+        });
 
         logQuery(queryId, query, {
             model: config.model,
