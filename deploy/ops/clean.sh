@@ -25,6 +25,13 @@ else
 fi
 
 log "🧹 Removing the expanded user_configs files"
+if [[ -d "$BASE_DIR/user_configs" ]]; then
+    log "🧹 Recherche et suppression des fichiers '*+rendered.toml' dans $BASE_DIR/user_configs"
+    find "$BASE_DIR/user_configs" -type f -name '*+rendered.toml' -exec rm -f {} +
+    log "✅ Tous les fichiers '+rendered.toml' ont été supprimés dans $BASE_DIR/user_configs"
+else
+    log "ℹ️  Le répertoire $BASE_DIR/user_configs n’existe pas (rien à nettoyer)"
+fi
 
 
 log "🧹 Removing test file..."
