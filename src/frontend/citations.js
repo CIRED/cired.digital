@@ -45,7 +45,8 @@ function processVancouverCitations(content, citations, messageId = null) {
         const metadata = payload.metadata || {};
 
         const documentInfo = extractDocumentInfo(metadata, payload);
-        const docKey = documentInfo.doi || documentInfo.halid || documentInfo.title;
+        const fullChunkId = payload.id || citation.id || '';
+        const docKey = fullChunkId;
 
         // Create or get document entry
         if (!documentMap.has(docKey)) {
@@ -61,7 +62,6 @@ function processVancouverCitations(content, citations, messageId = null) {
 
         const doc = documentMap.get(docKey);
         const citationId = citation.id || payload.id || '';
-        const fullChunkId = payload.id || citation.id || '';
 
         // Increment chunk counter and generate letter suffix
         doc.chunkCounter++;
