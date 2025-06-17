@@ -103,8 +103,6 @@ function handleDebugModeToggle() {
 function updateStatusDisplay() {
     clearChunkCache();
     fetchApiStatus();
-    clearChunkCache();
-    fetchApiStatus();
 }
 
 
@@ -278,13 +276,11 @@ function fetchApiStatus() {
         .then(data => {
             const message = data.results?.message?.toUpperCase() || data.status || data.health || 'unknown';
             statusEl.textContent = `Server status: ${message}`;
-            statusEl.classList.remove('text-red-500');
-            statusEl.classList.add('text-green-600');
+            statusEl.className = 'status-text status-success';
         })
         .catch(() => {
             statusEl.textContent = 'Server status: unreachable';
-            statusEl.classList.remove('text-green-600');
-            statusEl.classList.add('text-red-500');
+            statusEl.className = 'status-text status-error';
         });
 }
 

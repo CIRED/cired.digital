@@ -3,19 +3,19 @@
 // ==========================================
 function createMessage(type, content, timestamp, isError = false) {
     const messageDiv = document.createElement('div');
-    messageDiv.className = `flex ${type === 'user' ? 'justify-end' : 'justify-start'}`;
+    messageDiv.className = `message-wrapper ${type === 'user' ? 'user-wrapper' : 'bot-wrapper'}`;
     messageDiv.id = `message-${messageIdCounter++}`;
 
     const avatarIcon = type === 'user' ? '👤' : '🤖';
     const messageClass = getMessageClass(type, isError);
 
     messageDiv.innerHTML = `
-        <div class="flex max-w-3xl ${type === 'user' ? 'flex-row-reverse' : 'flex-row'}">
-            <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${getAvatarClass(type)}">
-                <span class="font-bold text-lg">${avatarIcon}</span>
+        <div class="message-content-wrapper ${type === 'user' ? 'user-content' : 'bot-content'}">
+            <div class="avatar ${avatarClass}">
+                <span class="avatar-text">${avatarIcon}</span>
             </div>
-            <div class="flex-1">
-                <div class="${messageClass} px-4 py-3 rounded-lg">
+            <div class="message-bubble">
+                <div class="${messageClass}">
                     <div class="message-content">${content}</div>
                 </div>
                 <div class="citations-container"></div>
@@ -28,17 +28,17 @@ function createMessage(type, content, timestamp, isError = false) {
 
 function getMessageClass(type, isError) {
     if (type === 'user') {
-        return 'bg-blue-600 text-white';
+        return 'user-message';
     }
     return isError
-        ? 'bg-red-50 text-red-800 border border-red-200'
-        : 'bg-white text-gray-800 border border-gray-200';
+        ? 'error-message'
+        : 'bot-message';
 }
 
 function getAvatarClass(type) {
     return type === 'user'
-        ? 'bg-blue-600 text-white ml-3'
-        : 'bg-gray-200 text-gray-600 mr-3';
+        ? 'user-avatar'
+        : 'bot-avatar';
 }
 
 function addMessage(type, content, isError = false) {
@@ -58,7 +58,7 @@ function showTyping() {
 
     const msg = createMessage(
         'bot',
-        `<span class="mr-2 inline-block animate-spin text-blue-500">⟳</span>Recherche dans la base documentaire…`
+        `<span class="typing-spinner">⟳</span>Recherche dans la base documentaire…`
     );
     msg.id = 'typing-indicator';
     messagesContainer.appendChild(msg);
@@ -84,9 +84,9 @@ function addFeedbackButtons(botMessage, requestBody, results) {
     const feedbackDiv = document.createElement('div');
     feedbackDiv.className = 'flex gap-2 mt-2 items-center';
     feedbackDiv.innerHTML = `
-        <input type="text" class="flex-1 px-2 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Donnez votre avis sur cette réponse." maxlength="500">
-        <button class="thumb-up text-green-600 hover:text-green-800" title="Bonne réponse.">👍</button>
-        <button class="thumb-down text-red-600 hover:text-red-800" title="Réponse insuffisante.">👎</button>
+        <input type="text" class="feedback-input" placeholder="Donnez votre avis sur cette réponse." maxlength="500">
+        <button class="feedback-button feedback-up" title="Bonne réponse.">👍</button>
+        <button class="feedback-button feedback-down" title="Réponse insuffisante.">👎</button>
     `;
 
     botMessage.querySelector('.message-content').after(feedbackDiv);

@@ -212,15 +212,16 @@ function createBibliographyHtml(documentBibliography) {
     const documentsHtml = documentBibliography.map(doc => createDocumentHtml(doc)).join('');
 
     return `
-        <div class="mt-3 text-sm">
-            <div class="font-semibold text-gray-700 mb-2 flex items-center">
-                <span class="mr-1">📚</span>
+        <div class="bibliography-container">
+            <div class="bibliography-header">
+                <span class="bibliography-icon">📚</span>
                 Bibliographie:
             </div>
             ${documentsHtml}
         </div>
     `;
 }
+
 
 function createDocumentHtml(doc) {
     // Build authors text with robust safety checks
@@ -253,12 +254,12 @@ function createDocumentHtml(doc) {
     const linksHtml = createDocumentLinksHtml(doc);
 
     // Build the main HTML structure
-    let html = `<div class="bg-gray-50 border border-gray-200 rounded-lg p-3 mb-2 hover:bg-gray-100 transition-colors" id="cite-${doc.documentId}">`;
-    html += '<div class="flex justify-between items-start mb-2">';
-    html += '<div class="flex-1">';
+     let html = `<div class="document-item" id="cite-${doc.documentId}">`;
+    html += '<div class="document-header">';
+    html += '<div class="document-content">';
 
     // Build the title with data attributes
-    html += '<h4 class="font-medium text-gray-900 text-sm leading-tight cursor-pointer"';
+    html += '<h4 class="document-title"';
     html += ' data-doc-title="' + escapeQuotes(doc.title) + '"';
     html += ' data-doc-description="' + escapeQuotes(doc.description) + '"';
     html += ' data-doc-authors="' + escapeQuotes(authorsText) + '"';
@@ -268,19 +269,20 @@ function createDocumentHtml(doc) {
     html += doc.title;
     html += '</h4>';
 
+
     // Add authors paragraph if authors exist
     if (authorsText) {
-        html += '<p class="text-xs text-gray-600 mt-1">';
+        html += '<p class="document-authors">';
         html += authorsText;
         html += '</p>';
     }
 
     html += '</div>';
-    html += '<div class="ml-2 text-xs text-gray-500 font-bold">';
+    html += '<div class="document-number">';
     html += '[' + doc.docNumber + ']';
     html += '</div>';
     html += '</div>';
-    html += '<div class="flex flex-wrap gap-2 text-xs">';
+    html += '<div class="document-links">';
     html += linksHtml;
     html += '</div>';
     html += '</div>';
