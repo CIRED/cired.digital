@@ -88,7 +88,9 @@ Thumbs.db
 *.env.production.local
 
 # Secrets
-credentials/*
+secrets/*
+.env
+secrets.env
 
 # Keep certain files even if they match patterns above
 !data/.gitkeep

@@ -43,6 +43,7 @@ dev = [
   "mypy>=1.16,<2.0",
   "pre-commit>=3.0,<5.0",
   "types-requests",
+  "types-docker",
   "pandas-stubs",
 ]
 
@@ -72,3 +73,9 @@ module = [
     # Add other modules without types here
 ]
 ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+markers = [
+  "smoke: tests de bout en bout lents pour la stack R2R",
+]
+addopts = "--maxfail=1 --strict-markers"

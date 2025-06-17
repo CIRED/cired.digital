@@ -32,23 +32,15 @@ else
     log "ℹ️  $TEST_FILE not found (already clean)"
 fi
 
-log "🧹 Removing Python cache files..."
-# Remove cache in smoke-tests directory if it exists
-if [[ -d "$SMOKE_DIR" ]]; then
-    rm -rf "$SMOKE_DIR"/__pycache__
-    rm -rf "$SMOKE_DIR"/.ropeproject
-    log "✅ Cleaned Python cache in smoke-tests directory"
-else
-    log "ℹ️  Smoke-tests directory not found"
-fi
+log "🧹 Suppression des __pycache__ et des .ropeproject dans $BASE_DIR"
+find "$BASE_DIR" -type d \( -name "__pycache__" -o -name ".ropeproject" \) -exec rm -rf {} +
 
-# Remove ropeproject in the script directory
-if [[ -d "$SCRIPT_DIR/.ropeproject" ]]; then
-    rm -rf "$SCRIPT_DIR/.ropeproject"
-    log "✅ Removed .ropeproject in script directory"
-else
-    log "ℹ️  .ropeproject not found in script directory"
-fi
+log "🧹 Suppression des __pycache__ et des .ropeproject dans $BASE_DIR/../src/"
+find "$BASE_DIR/../src/" -type d \( -name "__pycache__" -o -name ".ropeproject" \) -exec rm -rf {} +
+
+log "🧹 Suppression des __pycache__ et des .ropeproject dans $BASE_DIR/../tests/"
+find "$BASE_DIR/../tests/" -type d \( -name "__pycache__" -o -name ".ropeproject" \) -exec rm -rf {} +
+
 
 # Prune dangling images, stopped containers, unused networks
 log "🧹 Cleaning up Docker resources..."

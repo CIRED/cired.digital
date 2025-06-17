@@ -1,35 +1,10 @@
-# CIRED Chatbot Architecture Overviewb
+# Cirdi: A CIRED digital documentalist
 
-This README provides a code architecture overview of the chatbot system being developed for CIRED. A more detailed description is available in the document `docs/blueprints.md`.
+The application is organized in three parts: `intake/`, `frontend/`, and `analytics/`.
 
-## Main Objectives
+## intake/
 
-The chatbot enables users to pose natural-language queries and obtain accurate, citation-supported answers from CIRED’s research corpus. Multiple Retrieval-Augmented Generation (RAG) engines, such as R2R, Morphik, and PaperQA, will be integrated and evaluated side-by-side. The architecture emphasizes openness and reproducibility by sharing all code publicly. User privacy and compliance with GDPR standards will be rigorously maintained. Data-driven performance metrics will guide continuous improvement of the system.
-
-## Where you are in the project
-
-```text
-CIRED.digital/
-└── cired.digital/
-    ├── data/               # Raw and processed research documents
-    ├── docs/               # Technical documentation and guidelines
-    ├── reports/            # Analytical outputs
-    ├── src/                # Application source code **YOU ARE HERE**
-    │   ├── analytics/         # Performance and user metrics
-    │   ├── intake/            # Data retrieval and preparation
-    │   ├── docker/            # Scripts to manage the containers
-    │   └── frontend/          # Frontend chatbot user interface (Single page app)
-    └── tests/              # Automated tests, mirroring the src/ directory structure
-```
-> Note: The cired.digital/ repository is a subdirectory of the top-level CIRED.digital/ project directory, not versionned. The tests/ directory inside cired.digital/ mirrors the structure of src/ to facilitate targeted and modular testing.
-
-## Source Code Organization (`src/`)
-
-The `src/` directory is organized into specific subdirectories: `intake/`, `engine/`, `frontend/`, and `analytics/`.
-
-### Data Preparation (`intake/`)
-
-The ingestion pipeline is:
+A command-line ingestion pipeline including:
 - `query.py` gets the catalog of open access CIRED publications from HAL
 - `download.py` gets the documents (most PDf, some media)
 - `prepare_catalog.py` removes oversized files and partially deduplicate
@@ -37,29 +12,25 @@ The ingestion pipeline is:
 - `cull.py` removes from the instance any document not found in the catalog
 - `verify.py` shows statistics on documents in the R2R
 
-### Frontend Interface (`frontend/`)
+## frontend/
 
-A standalone web page application in vanilla HTML/JS.
-Ask a question, get the RAG answer with sources, give feedback.
+A vanilla HTML/JS standalone web page application. The action loop is:
+- User asks a question.
+- System shows the RAG answer with sources.
+- User provides feedback.
 
-### Analytics (`analytics/`)
+Includes a script to dynamically generate the wordcloud showing the collection themes.
+For commercial providers, we only include a **cost effective** (read: cheap) model.
 
-Logs sessions, questions, answers and feedback.
-Soon: Add user profile.
+Models pricing and strings:
 
-### Stack management (`docker/`)
+- (Anthropic)[https://docs.anthropic.com/en/docs/about-claude/models/overview]
+- (Deepseek)[https://api-docs.deepseek.com/quick_start/pricing]
+- (Mistral)[https://mistral.ai/pricing#api-pricing]
+- (OpenAI)[https://platform.openai.com/docs/pricing]
 
-The docker configuration files for the containers stack: database, orchestration, RAG engine, frontend, analytics.
-The script to start/stop the application is `src/docker/ops/up.sh`
 
-## Testing Strategy
+## analytics
 
-Planned: Automated tests verify functionality across ingestion, storage, RAG integration, frontend interactions, and API responses, ensuring robustness and reliability.
-
-## Operational and Ethical Guidelines
-
-The project strictly adheres to GDPR, promotes transparency, and maintains comprehensive documentation. Operational costs are closely monitored.
-
-## Sensitive Information Handling
-
-Credentials and sensitive data are stored securely, separate from the project repository, ensuring confidentiality and security.
+A FastAPI/Unicorn server that logs sessions, questions, answers and feedbacks.
+Visualization and reporting remain to be developped.

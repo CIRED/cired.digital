@@ -19,15 +19,23 @@ volumes:
     name: cidir2r_postgres_data
 
 # Changes:
-# - Use env_files from credentials/ out of repo, they are full of secrets
-# - Fully define paths to images, for security
-# - Postgres included by default, no need to specify profile postgres
+# - Replace ./env by ${ENV_DIR:?ENV_DIR not set}
+#     Define ENV_DIR in .env to point where the secrets are stored
+#     Fails with explicit error message if not set
+#     It can be specified on the command line
+#     Allows to store secrets out of repo
+#     Allows to use upstream configuration for testing
+# - Prefix volumes names
+# - Define fully qualified images
+#     Schema is <registry>/<namespace>/<repository>:tag
+#     This is more secure against hijacking
+# - Delete profile postgres to include it by default
 
 services:
   postgres:
     image: docker.io/pgvector/pgvector:pg16
     env_file:
-      - ../../credentials/postgres-cidi.env
+      - ${ENV_DIR:?ENV_DIR not set}/postgres.env
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
@@ -47,7 +55,7 @@ services:
     image: docker.io/minio/minio
     profiles: [minio]
     env_file:
-      - ../../credentials/minio-cidi.env
+      - ${ENV_DIR:?ENV_DIR not set}/minio.env
     volumes:
       - minio_data:/data
     ports:
@@ -64,7 +72,7 @@ services:
   hatchet-postgres:
     image: docker.io/library/postgres:latest
     env_file:
-      - ../../credentials/hatchet-cidi.env
+      - ${ENV_DIR:?ENV_DIR not set}/hatchet.env
     volumes:
       - hatchet_postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -80,7 +88,7 @@ services:
       - "5673:5672"
       - "15673:15672"
     env_file:
-      - ../../credentials/hatchet-cidi.env
+      - ${ENV_DIR:?ENV_DIR not set}/hatchet.env
     volumes:
       - hatchet_rabbitmq_data:/var/lib/rabbitmq
       - hatchet_rabbitmq_conf:/etc/rabbitmq/rabbitmq.conf
@@ -96,12 +104,12 @@ services:
     volumes:
       - ./scripts:/scripts
     env_file:
-      - ../../credentials/hatchet-cidi.env
+      - ${ENV_DIR:?ENV_DIR not set}/hatchet.env
 
   hatchet-migration:
     image: ghcr.io/hatchet-dev/hatchet/hatchet-migrate:v0.53.15
     env_file:
-      - ../../credentials/hatchet-cidi.env
+      - ${ENV_DIR:?ENV_DIR not set}/hatchet.env
     depends_on:
       hatchet-create-db:
         condition: service_completed_successfully
@@ -110,7 +118,7 @@ services:
     image: ghcr.io/hatchet-dev/hatchet/hatchet-admin:v0.53.15
     command: /hatchet/hatchet-admin quickstart --skip certs --generated-config-dir /hatchet/config --overwrite=false
     env_file:
-      - ../../credentials/hatchet-cidi.env
+      - ${ENV_DIR:?ENV_DIR not set}/hatchet.env
     volumes:
       - hatchet_certs:/hatchet/certs
       - hatchet_config:/hatchet/config
@@ -130,7 +138,7 @@ services:
     ports:
       - "7077:7077"
     env_file:
-      - ../../credentials/hatchet-cidi.env
+      - ${ENV_DIR:?ENV_DIR not set}/hatchet.env
     volumes:
       - hatchet_certs:/hatchet/certs
       - hatchet_config:/hatchet/config
@@ -148,7 +156,7 @@ services:
       hatchet-setup-config:
         condition: service_completed_successfully
     env_file:
-      - ../../credentials/hatchet-cidi.env
+      - ${ENV_DIR:?ENV_DIR not set}/hatchet.env
     volumes:
       - hatchet_certs:/hatchet/certs
       - hatchet_config:/hatchet/config
@@ -190,7 +198,7 @@ services:
     ports:
       - "7272:7272"
     env_file:
-      - ../../credentials/r2r-cidi.env
+      - ${ENV_DIR:?ENV_DIR not set}/r2r-full.env
     command: sh /scripts/start-r2r.sh
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:7272/v3/health"]
@@ -200,7 +208,6 @@ services:
     restart: on-failure
     volumes:
       - ./user_configs:/app/user_configs
-      - ./user_tools:/app/user_tools
       - hatchet_api_key:/hatchet_api_key:ro
       - ./scripts:/scripts
     extra_hosts:
@@ -224,18 +231,18 @@ services:
   r2r-dashboard:
     image: docker.io/sciphiai/r2r-dashboard:1.0.3
     env_file:
-      - ../../credentials/r2r-dashboard-cidi.env
+      - ${ENV_DIR:?ENV_DIR not set}/r2r-dashboard.env
     ports:
       - "7273:3000"
 
   # Our analytics
   feedback:
     build:
-      context: ../analytics
+      context: ../src/analytics
     ports:
       - "7275:7275"
     volumes:
-      - ../analytics/feedback_server.py:/app/feedback_server.py
+      - ../src/analytics/feedback_server.py:/app/feedback_server.py
     command: uvicorn feedback_server:app --host 0.0.0.0 --port 7275 --reload
     restart: unless-stopped
 
@@ -244,4 +251,4 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ../frontend:/usr/share/nginx/html:ro
+      - ../src/frontend:/usr/share/nginx/html:ro

@@ -10,19 +10,25 @@ set -o pipefail
 
 # Get the absolute path of this script
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+# Get the path to the `deploy/` directory
 BASE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+# Charge la variable ENV_DIR depuis le .env à la racine
+if [ -f "${BASE_DIR}/.env" ]; then
+  set -o allexport
+  source "${BASE_DIR}/.env"
+  set +o allexport
+fi
 
 # --- Project Configuration ---
 export COMPOSE_PROJECT_NAME="cidir2r"  # Used as prefix for Docker resources
 export PROJECT_DESCRIPTION="CIRED R2R Deployment"
 CONFIG_UPSTREAM_DIR="${BASE_DIR}/config.upstream"
 COMPOSE_FILE="${BASE_DIR}/compose.yaml"
-SECRETS_FILE="${BASE_DIR}/../../credentials/r2r-cidi.env"
-VENV_DIR="${BASE_DIR}/venv"
+SECRETS_FILE="${BASE_DIR}/${ENV_DIR:?ENV_DIR not set}/r2r-full.env"
 
 # Volume settings
 # data/ is at the same level as src/ but in .gitignore
-DATA_BASE="$(realpath "$BASE_DIR/../../data")"
+DATA_BASE="$(realpath "$BASE_DIR/../data")"
 ARCHIVES_DIR="${DATA_BASE}/archived/R2R"
 SNAPSHOT_PREFIX="snapshot_$(date +%F_%H%M%S)"
 
@@ -93,10 +99,10 @@ validate_file() {
 }
 
 validate_config_files() {
-    validate_file "$COMPOSE_FILE" || exit 1
-    validate_file "$SECRETS_FILE" || exit 1
     log "📦 Project: $COMPOSE_PROJECT_NAME"
+    validate_file "$COMPOSE_FILE" || exit 1
     log "🔧 Compose file: $COMPOSE_FILE"
+    validate_file "$SECRETS_FILE" || exit 1
     log "🔑 Secrets env file: $SECRETS_FILE"
 }
 
@@ -113,7 +119,7 @@ HEALTH_CHECK_TIMEOUT=10
 DOCKER_STOP_TIMEOUT=15
 
 # Test settings
-SMOKE_DIR="${BASE_DIR}/smoke-tests"
+SMOKE_DIR="${BASE_DIR}/../tests/smoke-tests"
 TEST_FILE="test.txt"
 TEST_CONTENT="QuetzalX is a person that works at CIRED."
 TEST_QUERY="Who is QuetzalX?"
