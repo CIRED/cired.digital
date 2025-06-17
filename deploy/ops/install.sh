@@ -18,9 +18,6 @@ trap 'log "❌ An unexpected error occurred."' ERR
 #
 log "🔍 Checking required dependencies..."
 
-# Verify configuration files exist
-validate_config_files
-
 # Verify Docker runs, display version
 ensure_docker --smoke-test
 

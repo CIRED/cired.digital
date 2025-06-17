@@ -35,18 +35,18 @@ Install extra tools:
 Clone the cired.digital Git repo.
 - `git clone https://github.com/MinhHaDuong/cired.digital.git`
 
-Transfer secrets:
+Transfer secrets (if you have):
 
-- Transfer the secrets file to `cired.digital/credentials/API_KEYS`
-- Chmod 600 the secrets file
+- Transfer the secrets dir to a `secrets/` directory sibling to `cired.digital/`
+- Chmod 600 the secret files
 
 ## Start R2R on the remote
 
-1. ssh -t admin@157.180.70.232 bash         # Login to the VPS
-2. cd cired.digital                         # Project directory
-3. git pull                                 # Update to latest version
-4. src/engine/ops/up.sh                     # Start the stack
-5. src/engine/ops/validate.sh               # Verify
+1. ssh -t admin@157.180.70.232 bash     # Login to the VPS
+2. cd cired.digital                     # Project directory
+3. git pull                             # Update to latest version
+4. deploy/ops/up.sh                     # Start the stack
+5. deploy/ops/validate.sh               # Verify
 
 ## Manual smoketesting
 
