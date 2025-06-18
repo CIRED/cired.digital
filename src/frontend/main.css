@@ -222,24 +222,24 @@ table th {
   padding: 0 1rem;
   max-width: 48rem;
   margin: 0 auto;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
 }
 
 /* ==========================================
    GREETING MESSAGE
    ========================================== */
 #greeting {
-  background-color: white;
   color: #1f2937;
-  border: 1px solid #e5e7eb;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
   max-width: 48rem;
-  margin: 1rem auto;
-}
+  padding: 0.5rem 0.75rem;
+ }
 
 .message-wrapper {
   display: flex;
   justify-content: flex-start;
+  max-width: 48rem;
   margin-bottom: 1rem;
 }
 
@@ -273,29 +273,20 @@ table th {
 .message-text {
   background-color: white;
   color: #1f2937;
-  border: 1px solid #e5e7eb;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
 }
 
 /* ==========================================
    MESSAGE TYPES
    ========================================== */
 .user-message {
-  font-weight: 500;
+  font-weight: 800;
   background-color: white;
   color: #1f2937;
-  border: 1px solid #e5e7eb;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
 }
 
 .bot-message {
   background-color: white;
   color: #1f2937;
-  border: 1px solid #e5e7eb;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
 }
 
 .error-message {
