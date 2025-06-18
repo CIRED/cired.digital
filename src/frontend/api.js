@@ -192,6 +192,11 @@ function handleResponse(requestBody, data, queryId) {
     addFeedbackButtons(botMessage, requestBody, data.results);
 
     logResponse(queryId, processedContent);
+    // Faire réapparaître la searchbox après réponse
+    const inputSection = document.getElementById('input-container');
+    if (inputSection) {
+        inputSection.classList.remove('seen');
+    }
 }
 
 // ==========================================
