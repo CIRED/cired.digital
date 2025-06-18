@@ -80,7 +80,13 @@ function addFeedbackButtons(botMessage, requestBody, results) {
         <button class="feedback-button feedback-down" title="Réponse insuffisante.">👎</button>
     `;
 
-    botMessage.querySelector('.message-content').after(feedbackDiv);
+    // Placer le feedback sous la bibliographie (citations-container)
+    const citContainer = botMessage.querySelector('.citations-container');
+    if (citContainer) {
+        citContainer.after(feedbackDiv);
+    } else {
+        botMessage.querySelector('.message-content').after(feedbackDiv);
+    }
 
     const commentInput = feedbackDiv.querySelector('input[type="text"]');
 
