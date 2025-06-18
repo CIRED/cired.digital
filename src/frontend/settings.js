@@ -4,6 +4,7 @@ window.allSettings = {
     debugMode: true,
     chunkLimit: 10,
     searchStrategy: "rag_fusion",
+    includeWebSearch: false,
     models: [
       {
         value: "ollama/mistral-small:24b-3.1-instruct-2503-q8_0",
@@ -79,6 +80,7 @@ window.allSettings = {
     debugMode: false,
     chunkLimit: 10,
     searchStrategy: "rag_fusion",
+    includeWebSearch: false,
     models: [
       {
         value: "ollama/mistral-small:24b-3.1-instruct-2503-q8_0",
