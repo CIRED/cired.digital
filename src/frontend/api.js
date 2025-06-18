@@ -23,6 +23,11 @@
 // MESSAGE SENDING AND API COMMUNICATION
 // ==========================================
 async function sendMessage() {
+    // Masquer le greeting et le footer dès le premier envoi
+    const greetingEl = document.getElementById('greeting');
+    if (greetingEl) greetingEl.classList.add('seen');
+    const footerEl = document.querySelector('footer.footer');
+    if (footerEl) footerEl.classList.add('seen');
     const query = messageInput.value.trim();
     if (!query || isLoading) return;
 
