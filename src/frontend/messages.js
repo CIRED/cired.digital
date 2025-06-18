@@ -6,15 +6,10 @@ function createMessage(type, content, timestamp, isError = false) {
     messageDiv.className = `message-wrapper ${type === 'user' ? 'user-wrapper' : 'bot-wrapper'}`;
     messageDiv.id = `message-${messageIdCounter++}`;
 
-    const avatarIcon = type === 'user' ? '👤' : '🤖';
     const messageClass = getMessageClass(type, isError);
-    const avatarClass = getAvatarClass(type);
 
     messageDiv.innerHTML = `
         <div class="message-content-wrapper ${type === 'user' ? 'user-content' : 'bot-content'}">
-            <div class="avatar ${avatarClass}">
-                <span class="avatar-text">${avatarIcon}</span>
-            </div>
             <div class="message-bubble">
                 <div class="${messageClass}">
                     <div class="message-content">${content}</div>
@@ -36,11 +31,6 @@ function getMessageClass(type, isError) {
         : 'bot-message';
 }
 
-function getAvatarClass(type) {
-    return type === 'user'
-        ? 'user-avatar'
-        : 'bot-avatar';
-}
 
 function addMessage(type, content, isError = false) {
     debugLog('Adding message to UI', { type, contentLength: content.length, isError });
