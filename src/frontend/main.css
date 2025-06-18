@@ -643,7 +643,7 @@ table th {
 .hide-greeting,
 .hide-footer {
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 3s ease;
 }
 
 /* ========== CHAMPS DÉSACTIVÉS ========== */
