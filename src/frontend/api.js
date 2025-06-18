@@ -95,6 +95,9 @@ function buildRequestBody(query, config) {
         query: query,
         search_mode: 'custom',
         search_settings: {
+            use_semantic_search: true,
+            use_hybrid_search: true,
+            search_strategy: 'rag_fusion',
             limit: config.chunkLimit
         },
         rag_generation_config: {
