@@ -69,6 +69,11 @@ function applySettings(settings) {
       if (model.disabled) option.disabled = true;
       modelSelect.appendChild(option);
     });
+    // Set debug mode from settings
+    if (typeof debugModeCheckbox !== "undefined" && settings.debugMode !== undefined) {
+      debugModeCheckbox.checked = settings.debugMode;
+      debugMode = settings.debugMode;
+    }
   }
 }
 
