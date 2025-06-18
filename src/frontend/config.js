@@ -37,7 +37,7 @@ const debugModeCheckbox = document.getElementById('debug-mode');
 // ==========================================
 const hostname = window.location.hostname;
 
-const env = (hostname === "doudou") ? "dev" : "prod";
+const env = (!hostname || hostname === "doudou") ? "dev" : "prod";
 if (!window.allSettings || !window.allSettings[env]) {
   throw new Error(`Settings inconnus pour '${env}'`);
 }
