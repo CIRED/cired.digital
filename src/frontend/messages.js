@@ -1,7 +1,9 @@
+const mainEl = document.querySelector('main');
+
 // ==========================================
 // MESSAGE CREATION AND DISPLAY
 // ==========================================
-function createMessage(type, content, timestamp, isError = false) {
+function createMessage(type, content, isError = false) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `message-wrapper ${type === 'user' ? 'user-wrapper' : 'bot-wrapper'}`;
     messageDiv.id = `message-${messageIdCounter++}`;
@@ -18,7 +20,6 @@ function createMessage(type, content, timestamp, isError = false) {
             </div>
         </div>
     `;
-
     return messageDiv;
 }
 
@@ -35,9 +36,9 @@ function getMessageClass(type, isError) {
 function addMessage(type, content, isError = false) {
     debugLog('Adding message to UI', { type, contentLength: content.length, isError });
 
-    const message = createMessage(type, content, new Date(), isError);
-    messagesContainer.appendChild(message);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    const message = createMessage(type, content, isError);
+    mainEl.appendChild(message);
+    mainEl.scrollTop = mainEl.scrollHeight;
     return message;
 }
 
@@ -52,8 +53,8 @@ function showTyping() {
         `<span class="typing-spinner">⟳</span>Recherche dans la base documentaire (compter 6-20s)…`
     );
     msg.id = 'typing-indicator';
-    messagesContainer.appendChild(msg);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    mainEl.appendChild(msg);
+    mainEl.scrollTop = mainEl.scrollHeight;
     return msg;
 }
 

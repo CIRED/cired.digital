@@ -14,10 +14,196 @@ body {
   margin: 0;
 }
 
+header {
+  max-width: 48rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+main {
+  padding: 0;
+  max-width: 48rem;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ==========================================
+   Header elements
+   ========================================== */
+
+#config-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+header #config-btn:hover {
+  background-color: #d1d5db;
+}
+
+#input-container {
+  max-width: 48rem;
+}
+
+#input {
+  max-width: 48rem;
+  width: 100%;
+  margin: 1rem auto;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.message-textarea {
+  flex: 1;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  resize: none;
+  font-family: inherit;
+  min-height: 64px;
+  max-height: 120px;
+  box-sizing: border-box;
+}
+
+.message-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+#send-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+#send-btn:hover {
+  background-color: #1d4ed8;
+}
+
+#send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#send-icon {
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+#input-help {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* ==========================================
+   Initial greeting
+   ========================================== */
+
+div#greeting {
+  color: #1f2937;
+  max-width: 48rem;
+  margin: 1rem auto;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;  padding: 0.5rem 0.75rem;
+ }
+
+ div#legend {
+  font-style: italic;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================
+   Main elements
+   ========================================== */
+
+main div#error-container {
+  margin: 0 1rem 0.5rem 1rem;
+  padding: 0.75rem;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 0.5rem;
+  display: none;
+  align-items: center;
+  color: #991b1b;
+}
+
+#error-icon {
+  margin-right: 0.5rem;
+}
+
+#error-text {
+  font-size: 0.875rem;
+}
+
+
+/* ==========================================
+   Footer elements
+   ========================================== */
+
+footer {
+  max-width: 64rem;
+  margin: 1rem auto;
+  padding: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+footer a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #1d4ed8;
+}
+
+
 /* ==========================================
    TABLE STYLES
    ========================================== */
-table {
+
+   table {
   border-collapse: collapse;
   width: 100%;
   margin: 1rem 0;
@@ -37,26 +223,9 @@ table th {
 /* ==========================================
    CONFIGURATION PANEL
    ========================================== */
-.config-button {
-  margin: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #374151;
-  background-color: #f3f4f6;
-  border: 1px solid #d1d5db;
-  border-radius: 0.375rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-}
 
-.config-button:hover {
-  background-color: #d1d5db;
-}
-
-.config-panel {
-  background-color: white;
+#config-panel {
+  background-color: rgb(188, 221, 219);
   border-right: 1px solid #e5e7eb;
   padding: 1rem;
   display: none;
@@ -69,18 +238,18 @@ table th {
   z-index: 1000;
 }
 
-.config-panel:not(.hidden) {
+#config-panel:not(.hidden) {
   display: block !important;
 }
 
-.config-header {
+#config-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
 
-.config-close-button {
+#config-close-btn {
   color: #6b7280;
   background: none;
   border: none;
@@ -88,11 +257,11 @@ table th {
   font-size: 1rem;
 }
 
-.config-close-button:hover {
+#config-close-btn:hover {
   color: #374151;
 }
 
-.config-title {
+#config-header > h2 {
   font-size: 1.125rem;
   font-weight: 600;
   color: #111827;
@@ -215,26 +384,11 @@ table th {
   color: #1e40af;
 }
 
-/* ==========================================
-   MESSAGE LAYOUT
-   ========================================== */
-.messages-container {
-  padding: 0 1rem;
-  max-width: 48rem;
-  margin: 0 auto;
-  background-color: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.5rem;
-}
+
 
 /* ==========================================
-   GREETING MESSAGE
+   Result
    ========================================== */
-#greeting {
-  color: #1f2937;
-  max-width: 48rem;
-  padding: 0.5rem 0.75rem;
- }
 
 .message-wrapper {
   display: flex;
@@ -243,31 +397,13 @@ table th {
   margin-bottom: 1rem;
 }
 
-.user-wrapper {
-  justify-content: flex-start;
-}
-
-.bot-wrapper {
-  justify-content: flex-start;
-}
-
 .message-content-wrapper {
   display: flex;
   width: 100%;
-  flex-direction: row;
-}
-
-.user-content {
-  flex-direction: row;
-}
-
-.bot-content {
-  flex-direction: row;
 }
 
 .message-bubble {
   width: 100%;
-  flex: none;
 }
 
 .message-text {
@@ -275,18 +411,8 @@ table th {
   color: #1f2937;
 }
 
-/* ==========================================
-   MESSAGE TYPES
-   ========================================== */
 .user-message {
   font-weight: 800;
-  background-color: white;
-  color: #1f2937;
-}
-
-.bot-message {
-  background-color: white;
-  color: #1f2937;
 }
 
 .error-message {
@@ -300,6 +426,7 @@ table th {
 /* ==========================================
    CITATIONS AND BIBLIOGRAPHY
    ========================================== */
+
 .bibliography-container {
   margin-top: 0.75rem;
   font-size: 0.875rem;
@@ -438,98 +565,6 @@ table th {
   margin-top: 0.25rem;
 }
 
-/* ==========================================
-   INPUT SECTION
-   ========================================== */
-.vertical-centering {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.error-container {
-  margin: 0 1rem 0.5rem 1rem;
-  padding: 0.75rem;
-  background-color: #fef2f2;
-  border: 1px solid #fecaca;
-  border-radius: 0.5rem;
-  display: none;
-  align-items: center;
-  color: #991b1b;
-}
-
-.error-icon {
-  margin-right: 0.5rem;
-}
-
-.error-text {
-  font-size: 0.875rem;
-}
-
-.input-section {
-  padding: 1rem;
-}
-
-.input-wrapper {
-  display: flex;
-  gap: 0.75rem;
-  max-width: 48rem;
-  margin: 0 auto;
-}
-
-.message-textarea {
-  flex: 1;
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
-  resize: none;
-  font-family: inherit;
-  min-height: 64px;
-  max-height: 120px;
-  box-sizing: border-box;
-}
-
-.message-textarea:focus {
-  outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
-}
-
-.send-button {
-  padding: 0.75rem 1.5rem;
-  background-color: #2563eb;
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s;
-}
-
-.send-button:hover {
-  background-color: #1d4ed8;
-}
-
-.send-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.send-icon {
-  font-weight: bold;
-  font-size: 1.125rem;
-}
-
-.input-help {
-  text-align: center;
-  margin-top: 0.5rem;
-  font-size: 0.75rem;
-  color: #6b7280;
-}
 
 /* ==========================================
    FEEDBACK SYSTEM
@@ -576,46 +611,6 @@ table th {
 }
 
 /* ==========================================
-   FOOTER
-   ========================================== */
-.footer {
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.75rem;
-  color: #6b7280;
-}
-
-.footer-content {
-  max-width: 48rem;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-.expertise-text {
-  font-size: 0.875rem;
-  color: #4b5563;
-  font-style: italic;
-  margin-top: 0.75rem;
-  text-align: center;
-}
-
-.wordcloud-image {
-  width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.footer-link {
-  color: #2563eb;
-  text-decoration: none;
-}
-
-.footer-link:hover {
-  color: #1d4ed8;
-}
-
-/* ==========================================
    ANIMATIONS
    ========================================== */
 .animate-spin {
@@ -644,10 +639,11 @@ table th {
 /* ==========================================
    FADE OUT GREETING AND FOOTER
    ========================================== */
-.hide-greeting,
-.hide-footer {
+
+.seen {
   opacity: 0;
   transition: opacity 3s ease;
+  pointer-events: none;
 }
 
 /* ========== CHAMPS DÉSACTIVÉS ========== */
