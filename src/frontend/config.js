@@ -74,6 +74,13 @@ function applySettings(settings) {
       debugModeCheckbox.checked = settings.debugMode;
       debugMode = settings.debugMode;
     }
+    // Initialise la température selon le modèle sélectionné
+    if (typeof temperatureInput !== "undefined" && Array.isArray(settings.models)) {
+      const sel = settings.models.find(m => m.value === modelSelect.value);
+      if (sel && sel.defaultTemperature !== undefined) {
+        temperatureInput.value = sel.defaultTemperature;
+      }
+    }
   }
 }
 
@@ -100,8 +107,14 @@ function setupEventListeners() {
     messageInput.addEventListener('input', handleTextAreaResize);
 
     // Update status display when config changes
-    [apiUrlInput, modelSelect].forEach(element => {
-        element.addEventListener('change', updateStatusDisplay);
+    // Met à jour le statut et la température à chaque changement d’URL ou de modèle
+    apiUrlInput.addEventListener('change', updateStatusDisplay);
+    modelSelect.addEventListener('change', () => {
+        const sel = window.Settings.models.find(m => m.value === modelSelect.value);
+        if (sel && sel.defaultTemperature !== undefined) {
+            temperatureInput.value = sel.defaultTemperature;
+        }
+        updateStatusDisplay();
     });
 
     // Debug mode
