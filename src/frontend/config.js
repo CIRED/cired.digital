@@ -1,4 +1,14 @@
 // ==========================================
+// ENVIRONMENT SELECTION
+// ==========================================
+const hostname = window.location.hostname;
+const env = (hostname === "doudou") ? "dev" : "prod";
+if (!window.allAppSettings || !window.allAppSettings[env]) {
+  throw new Error(`Settings inconnus pour '${env}'`);
+}
+window.myAppSettings = window.allAppSettings[env];
+
+// ==========================================
 // CONFIGURATION CONSTANTS
 // ==========================================
 const DEFAULT_HOST = 'http://localhost:7272';
