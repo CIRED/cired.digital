@@ -664,3 +664,32 @@ table th {
 .hidden {
   display: none !important;
 }
+
+/* ========== CHAMPS DÉSACTIVÉS ========== */
+/* Inputs et selects */
+.form-input:disabled,
+.form-select:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Labels autour des inputs désactivés */
+.form-group input:disabled + .form-label,
+.form-group select:disabled + .form-label {
+  color: #9ca3af;
+}
+
+/* Checkbox labels (span) */
+.checkbox-label input:disabled ~ span {
+  color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Optionnel : uniformiser l’opacité du container */
+.form-group input:disabled,
+.form-group select:disabled,
+.checkbox-container input:disabled {
+  opacity: 0.8;
+}
