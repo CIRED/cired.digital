@@ -224,6 +224,19 @@ table th {
   margin: 0 auto;
 }
 
+/* ==========================================
+   GREETING MESSAGE
+   ========================================== */
+#greeting {
+  background-color: white;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  max-width: 48rem;
+  margin: 1rem auto;
+}
+
 .message-wrapper {
   display: flex;
   justify-content: flex-start;
