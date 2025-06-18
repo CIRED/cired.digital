@@ -220,7 +220,7 @@ table th {
    ========================================== */
 .messages-container {
   padding: 0 1rem;
-  max-width: 64rem;
+  max-width: 48rem;
   margin: 0 auto;
 }
 
@@ -231,7 +231,7 @@ table th {
 }
 
 .user-wrapper {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .bot-wrapper {
@@ -240,51 +240,21 @@ table th {
 
 .message-content-wrapper {
   display: flex;
-  max-width: 48rem;
+  width: 100%;
   flex-direction: row;
 }
 
 .user-content {
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 .bot-content {
   flex-direction: row;
 }
 
-.avatar {
-  flex-shrink: 0;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #e5e7eb;
-  color: #4b5563;
-  margin-right: 0.75rem;
-}
-
-.avatar-text {
-  font-weight: bold;
-  font-size: 1.125rem;
-}
-
-.user-avatar {
-  background-color: #2563eb;
-  color: white;
-  margin-left: 0.75rem;
-  margin-right: 0;
-}
-
-.bot-avatar {
-  background-color: #e5e7eb;
-  color: #4b5563;
-  margin-right: 0.75rem;
-}
-
 .message-bubble {
-  flex: 1;
+  width: 100%;
+  flex: none;
 }
 
 .message-text {
@@ -299,8 +269,10 @@ table th {
    MESSAGE TYPES
    ========================================== */
 .user-message {
-  background-color: #2563eb;
-  color: white;
+  font-weight: 500;
+  background-color: white;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
 }
