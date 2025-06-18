@@ -74,13 +74,13 @@
 </div>
 <div class="form-group">
   <label class="form-label">
-    Search strategy
-    <span class="help-icon" title="Mode de recherche: vanilla, rag_fusion, hyde">ℹ️</span>
+    Méthode pour pêcher les segments
+    <span class="help-icon" title="Options: vanilla (recherche directe - pour question précise), rag_fusion (reformule - pour question ambigüe), HyDE (prêche le faux pour pêcher le vrai - pour question ouverte, conceptuelle)">ℹ️</span>
   </label>
   <select id="search-strategy" class="form-select">
     <option value="vanilla">Vanilla</option>
-    <option value="rag_fusion" selected>RAG Fusion</option>
-    <option value="hyde">Hyde</option>
+    <option value="rag_fusion">RAG Fusion</option>
+    <option value="hyde" selected>Hyde</option>
   </select>
 </div>
 

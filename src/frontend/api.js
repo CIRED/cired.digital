@@ -106,7 +106,9 @@ function buildRequestBody(query, config) {
             temperature: config.temperature,
             max_tokens: config.maxTokens,
             stream: false
-        }
+        },
+        include_title_if_available: true,
+        include_title_if_available: config.includeWebSearch,
     };
 }
 
