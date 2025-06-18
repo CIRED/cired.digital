@@ -30,7 +30,39 @@ const temperatureInput = document.getElementById('temperature');
 const maxTokensInput = document.getElementById('max-tokens');
 const debugModeCheckbox = document.getElementById('debug-mode');
 
-// Status display elements
+// Status display elements (none at the moment)
+
+// ==========================================
+// SETTINGS LOADER FOR ENVIRONMENT CONFIGURATION
+// ==========================================
+function loadSettings() {
+  try {
+    if (!window.myAppSettings) throw new Error("Settings not loaded. Make sure settings.js is included before config.js.");
+    applySettings(window.myAppSettings);
+  } catch (err) {
+    showError("Failed to load settings: " + err.message);
+  }
+}
+
+function applySettings(settings) {
+  // Set API URL
+  if (settings.apiUrl && typeof apiUrlInput !== "undefined") {
+    apiUrlInput.value = settings.apiUrl;
+  }
+
+  // Populate language model select options
+  if (settings.models && Array.isArray(settings.models) && typeof modelSelect !== "undefined") {
+    modelSelect.innerHTML = '';
+    settings.models.forEach(model => {
+      const option = document.createElement('option');
+      option.value = model.value;
+      option.textContent = model.label;
+      if (model.selected) option.selected = true;
+      if (model.disabled) option.disabled = true;
+      modelSelect.appendChild(option);
+    });
+  }
+}
 
 // ==========================================
 // EVENT LISTENERS SETUP
@@ -105,6 +137,23 @@ function updateStatusDisplay() {
     fetchApiStatus();
 }
 
+function fetchApiStatus() {
+    const statusEl = document.getElementById('api-status');
+    if (!statusEl) return;
+    const url = apiUrlInput.value.replace(/\/$/, '') + '/v3/health';
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            const message = data.results?.message?.toUpperCase() || data.status || data.health || 'unknown';
+            statusEl.textContent = `Server status: ${message}`;
+            statusEl.className = 'status-text status-success';
+        })
+        .catch(() => {
+            statusEl.textContent = 'Server status: unreachable';
+            statusEl.className = 'status-text status-error';
+        });
+}
+
 
 function debugLog(message, data = null) {
     if (debugMode) {
@@ -116,24 +165,6 @@ function debugLog(message, data = null) {
     }
 }
 
-async function loadModels() {
-    try {
-        const res = await fetch('models.json');
-        const data = await res.json();
-        modelSelect.innerHTML = '';
-        data.models.forEach(m => {
-            const opt = document.createElement('option');
-            opt.value = m.value;
-            opt.textContent = m.label;
-            if (data.default === m.value) {
-                opt.selected = true;
-            }
-            modelSelect.appendChild(opt);
-        });
-    } catch (err) {
-        console.error('Failed to load models:', err);
-    }
-}
 // ==========================================
 // ERROR HANDLING
 // ==========================================
@@ -283,36 +314,26 @@ async function logResponse(queryId, response, processingTime) {
         console.error('Error logging response:', error);
     }
 }
+
+
 // ==========================================
 // INITIALIZATION
 // ==========================================
-function fetchApiStatus() {
-    const statusEl = document.getElementById('api-status');
-    if (!statusEl) return;
-    const url = apiUrlInput.value.replace(/\/$/, '') + '/v3/health';
-    fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            const message = data.results?.message?.toUpperCase() || data.status || data.health || 'unknown';
-            statusEl.textContent = `Server status: ${message}`;
-            statusEl.className = 'status-text status-success';
-        })
-        .catch(() => {
-            statusEl.textContent = 'Server status: unreachable';
-            statusEl.className = 'status-text status-error';
-        });
-}
 
 async function initializeConfig() {
-    await loadModels();
-    apiUrlInput.value = DEFAULT_HOST;
+  // Load settings before anything else
+  try {
+    await loadSettings();
     updateStatusDisplay();
     setupEventListeners();
-
-    // Initialize debug mode state
     debugMode = debugModeCheckbox.checked;
     debugLog('Configuration initialized');
+  } catch (err) {
+    showError("Initialization failed: " + err.message);
+    console.error('Initialization error:', err);
+  }
 }
+
 
 if (document.readyState === 'loading') {
      document.addEventListener('DOMContentLoaded', initializeConfig);
