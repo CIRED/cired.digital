@@ -87,7 +87,8 @@ function getConfiguration() {
         temperature: parseFloat(temperatureInput.value),
         maxTokens: parseInt(maxTokensInput.value),
         chunkLimit: parseInt(chunkLimitInput.value, 10),
-        searchStrategy: searchStrategySelect.value
+        searchStrategy: searchStrategySelect.value,
+        includeWebSearch: includeWebSearchCheckbox.checked
     };
 }
 
@@ -108,7 +109,7 @@ function buildRequestBody(query, config) {
             stream: false
         },
         include_title_if_available: true,
-        include_title_if_available: config.includeWebSearch,
+        include_web_search: config.includeWebSearch,
     };
 }
 

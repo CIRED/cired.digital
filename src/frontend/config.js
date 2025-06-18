@@ -31,6 +31,7 @@ const maxTokensInput = document.getElementById('max-tokens');
 const debugModeCheckbox = document.getElementById('debug-mode');
 const chunkLimitInput = document.getElementById('chunk-limit');
 const searchStrategySelect = document.getElementById('search-strategy');
+const includeWebSearchCheckbox = document.getElementById('include-web-search');
 
 // Status display elements (none at the moment)
 
@@ -91,6 +92,9 @@ function applySettings(settings) {
       if (searchStrategySelect && settings.searchStrategy !== undefined) {
         searchStrategySelect.value = settings.searchStrategy;
       }
+      if (includeWebSearchCheckbox && settings.includeWebSearch !== undefined) {
+        includeWebSearchCheckbox.checked = settings.includeWebSearch;
+      }
     }
   }
 }
@@ -138,6 +142,9 @@ function setupEventListeners() {
     }
     if (searchStrategySelect) {
       searchStrategySelect.addEventListener('change', updateStatusDisplay);
+    }
+    if (includeWebSearchCheckbox) {
+      includeWebSearchCheckbox.addEventListener('change', updateStatusDisplay);
     }
 
     initializePrivacyMode();
