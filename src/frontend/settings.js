@@ -1,4 +1,4 @@
-window.allAppSettings = {
+window.allSettings = {
   dev: {
     apiUrl: "http://localhost:7272",
     models: [
