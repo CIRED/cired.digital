@@ -49,7 +49,7 @@ async function sendMessage() {
         debugLog('Request body built:', requestBody);
 
         const startTime = Date.now();
-        const response = await makeApiRequest(config.apiUrl, requestBody);
+        const response = await makeApiRequest(config.apiUrl, requestBody, queryId);
         debugLog('API request completed', {
             status: response.status,
             responseTime: `${Date.now() - startTime}ms`,
@@ -111,7 +111,7 @@ function buildRequestBody(query, config) {
     };
 }
 
-async function makeApiRequest(apiUrl, requestBody) {
+async function makeApiRequest(apiUrl, requestBody, queryId) {
     logQuery(
         queryId,
         requestBody.query,
