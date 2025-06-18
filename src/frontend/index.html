@@ -52,23 +52,18 @@
 
 <div class="form-group">
   <label class="form-label">
-  Response variability
-  <span class="help-icon" title="Temperature parameter. Options: 0 / 0.2 / 0.4 / 0.8 / 1.6.">ℹ️</span>
+    Temperature (response creativity)
+    <span class="help-icon" title="Automatically set to model provider's recommendations.">ℹ️</span>
   </label>
-  <input type="number" id="temperature" class="form-input" step="0.01"/>
+  <input type="number" id="temperature" class="form-input" step="0.05"/>
 </div>
 
 <div class="form-group">
   <label class="form-label">
-    Response length
-    <span class="help-icon" title="Max tokens parameter. Options: 512, 2048, 4096, 8192 (disabled for cost control).">ℹ️</span>
+    Max tokens (response length)
+    <span class="help-icon" title="Automatically set according to the model.">ℹ️</span>
   </label>
-  <select class="form-select" id="max-tokens">
-    <option value="512">Concise (default)</option>
-    <option value="2048">Detailled</option>
-    <option value="4096">Long</option>
-    <option value="8192" disabled>Oversized</option>
-  </select>
+  <input type="number" id="max-tokens" class="form-input" step="100"/>
 </div>
 
 

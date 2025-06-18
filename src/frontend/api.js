@@ -26,8 +26,7 @@ async function sendMessage() {
     const query = messageInput.value.trim();
     if (!query || isLoading) return;
 
-    const queryId = 'query_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-    const startTime = Date.now();
+    const queryId = 'query_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
 
     debugLog('Starting message send process', { query, queryId, isLoading });
 
@@ -39,30 +38,25 @@ async function sendMessage() {
     // Add user message and show typing indicator
     addMessage('user', query);
     resetMessageInput();
-    const typingMSG = showTyping();
+    showTyping();
+
+    const config = getConfiguration();
+    debugLog('Configuration retrieved', config);
+
+    const requestBody = buildRequestBody(query, config);
+    debugLog('Request body built:', requestBody);
 
     try {
-        const config = getConfiguration();
-        debugLog('Configuration retrieved', config);
-
-        const requestBody = buildRequestBody(query, config);
-        debugLog('Request body built:', requestBody);
-
         const startTime = Date.now();
         const response = await makeApiRequest(config.apiUrl, requestBody, queryId);
         debugLog('API request completed', {
+            apiUrl: config.apiUrl,
             status: response.status,
             responseTime: `${Date.now() - startTime}ms`,
-            url: config.apiUrl
         });
 
         const data = await response.json();
         debugLog('Raw server response', data);
-        debugLog('Response data parsed', {
-            hasGeneratedAnswer: !!data.results?.generated_answer,
-            citationsCount: data.results?.citations?.length || 0
-        });
-
         handleResponse(requestBody, data, queryId);
 
     } catch (err) {
@@ -118,7 +112,7 @@ async function makeApiRequest(apiUrl, requestBody, queryId) {
         {
             model: requestBody.rag_generation_config.model,
             temperature: requestBody.rag_generation_config.temperature,
-            max_tokens: requestBody.rag_generation_config.maxTokens,
+            max_tokens: requestBody.rag_generation_config.max_tokens,
             search_mode: requestBody.search_settings.search_mode
         });
 
@@ -150,7 +144,7 @@ function handleError(err) {
         errorStack: err.stack
     });
     showError(err.message);
-    addMessage('bot', `I apologize, but I encountered an error: ${err.message}. Please check your R2R configuration and try again.`, true);
+    addMessage('bot', `I apologize, but I encountered an error: ${err.message}.`, true);
 }
 
 // ==========================================
