@@ -3,6 +3,7 @@ window.allSettings = {
     apiUrl: "http://localhost:7272",
     debugMode: true,
     chunkLimit: 10,
+    searchStrategy: "rag_fusion",
     models: [
       {
         value: "ollama/mistral-small:24b-3.1-instruct-2503-q8_0",
@@ -77,6 +78,7 @@ window.allSettings = {
     apiUrl: "http://cired.digital:7272",
     debugMode: false,
     chunkLimit: 10,
+    searchStrategy: "rag_fusion",
     models: [
       {
         value: "ollama/mistral-small:24b-3.1-instruct-2503-q8_0",

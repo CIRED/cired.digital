@@ -30,6 +30,7 @@ const temperatureInput = document.getElementById('temperature');
 const maxTokensInput = document.getElementById('max-tokens');
 const debugModeCheckbox = document.getElementById('debug-mode');
 const chunkLimitInput = document.getElementById('chunk-limit');
+const searchStrategySelect = document.getElementById('search-strategy');
 
 // Status display elements (none at the moment)
 
@@ -87,6 +88,9 @@ function applySettings(settings) {
       if (chunkLimitInput && settings.chunkLimit !== undefined) {
         chunkLimitInput.value = settings.chunkLimit;
       }
+      if (searchStrategySelect && settings.searchStrategy !== undefined) {
+        searchStrategySelect.value = settings.searchStrategy;
+      }
     }
   }
 }
@@ -131,6 +135,9 @@ function setupEventListeners() {
     debugModeCheckbox.addEventListener('change', handleDebugModeToggle);
     if (chunkLimitInput) {
       chunkLimitInput.addEventListener('change', updateStatusDisplay);
+    }
+    if (searchStrategySelect) {
+      searchStrategySelect.addEventListener('change', updateStatusDisplay);
     }
 
     initializePrivacyMode();

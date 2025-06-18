@@ -86,7 +86,8 @@ function getConfiguration() {
         model: modelSelect.value,
         temperature: parseFloat(temperatureInput.value),
         maxTokens: parseInt(maxTokensInput.value),
-        chunkLimit: parseInt(chunkLimitInput.value, 10)
+        chunkLimit: parseInt(chunkLimitInput.value, 10),
+        searchStrategy: searchStrategySelect.value
     };
 }
 
@@ -97,7 +98,7 @@ function buildRequestBody(query, config) {
         search_settings: {
             use_semantic_search: true,
             use_hybrid_search: true,
-            search_strategy: 'rag_fusion',
+            search_strategy: config.searchStrategy,
             limit: config.chunkLimit
         },
         rag_generation_config: {
