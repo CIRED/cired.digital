@@ -637,6 +637,15 @@ table th {
   display: none !important;
 }
 
+/* ==========================================
+   FADE OUT GREETING AND FOOTER
+   ========================================== */
+.hide-greeting,
+.hide-footer {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
 /* ========== CHAMPS DÉSACTIVÉS ========== */
 /* Inputs et selects */
 .form-input:disabled,
