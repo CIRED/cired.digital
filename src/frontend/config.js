@@ -74,11 +74,14 @@ function applySettings(settings) {
       debugModeCheckbox.checked = settings.debugMode;
       debugMode = settings.debugMode;
     }
-    // Initialise la température selon le modèle sélectionné
+    // Initialise la température et max tokens selon le modèle sélectionné
     if (typeof temperatureInput !== "undefined" && Array.isArray(settings.models)) {
       const sel = settings.models.find(m => m.value === modelSelect.value);
       if (sel && sel.defaultTemperature !== undefined) {
         temperatureInput.value = sel.defaultTemperature;
+      }
+      if (typeof maxTokensInput !== "undefined" && sel && sel.defaultMaxTokens !== undefined) {
+        maxTokensInput.value = sel.defaultMaxTokens;
       }
     }
   }
@@ -113,6 +116,9 @@ function setupEventListeners() {
         const sel = window.Settings.models.find(m => m.value === modelSelect.value);
         if (sel && sel.defaultTemperature !== undefined) {
             temperatureInput.value = sel.defaultTemperature;
+        }
+        if (sel && sel.defaultMaxTokens !== undefined) {
+            maxTokensInput.value = sel.defaultMaxTokens;
         }
         updateStatusDisplay();
     });
