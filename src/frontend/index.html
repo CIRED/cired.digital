@@ -13,15 +13,11 @@
   <style>
     /* Transition de disparition pour le greeting et le footer */
     #greeting, footer.footer {
-      transition: opacity 3s ease, transform 3s ease;
+      transition: opacity 3s ease;
     }
-    #greeting.seen {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
+    #greeting.seen,
     footer.footer.seen {
       opacity: 0;
-      transform: translateY(100%);
     }
   </style>
 </head>
