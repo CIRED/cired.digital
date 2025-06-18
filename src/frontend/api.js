@@ -85,7 +85,8 @@ function getConfiguration() {
         apiUrl: apiUrlInput.value,
         model: modelSelect.value,
         temperature: parseFloat(temperatureInput.value),
-        maxTokens: parseInt(maxTokensInput.value)
+        maxTokens: parseInt(maxTokensInput.value),
+        chunkLimit: parseInt(chunkLimitInput.value, 10)
     };
 }
 
@@ -94,7 +95,7 @@ function buildRequestBody(query, config) {
         query: query,
         search_mode: 'custom',
         search_settings: {
-            limit: 10
+            limit: config.chunkLimit
         },
         rag_generation_config: {
             model: config.model,

@@ -29,6 +29,7 @@ const modelSelect = document.getElementById('model');
 const temperatureInput = document.getElementById('temperature');
 const maxTokensInput = document.getElementById('max-tokens');
 const debugModeCheckbox = document.getElementById('debug-mode');
+const chunkLimitInput = document.getElementById('chunk-limit');
 
 // Status display elements (none at the moment)
 
@@ -83,6 +84,9 @@ function applySettings(settings) {
       if (typeof maxTokensInput !== "undefined" && sel && sel.defaultMaxTokens !== undefined) {
         maxTokensInput.value = sel.defaultMaxTokens;
       }
+      if (chunkLimitInput && settings.chunkLimit !== undefined) {
+        chunkLimitInput.value = settings.chunkLimit;
+      }
     }
   }
 }
@@ -125,6 +129,9 @@ function setupEventListeners() {
 
     // Debug mode
     debugModeCheckbox.addEventListener('change', handleDebugModeToggle);
+    if (chunkLimitInput) {
+      chunkLimitInput.addEventListener('change', updateStatusDisplay);
+    }
 
     initializePrivacyMode();
     initializeSession();

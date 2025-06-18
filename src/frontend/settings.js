@@ -2,6 +2,7 @@ window.allSettings = {
   dev: {
     apiUrl: "http://localhost:7272",
     debugMode: true,
+    chunkLimit: 10,
     models: [
       {
         value: "ollama/mistral-small:24b-3.1-instruct-2503-q8_0",
@@ -75,6 +76,7 @@ window.allSettings = {
   prod: {
     apiUrl: "http://cired.digital:7272",
     debugMode: false,
+    chunkLimit: 10,
     models: [
       {
         value: "ollama/mistral-small:24b-3.1-instruct-2503-q8_0",
