@@ -46,7 +46,7 @@ function processVancouverCitations(content, citations, messageId = null) {
 
         const documentInfo = extractDocumentInfo(metadata, payload);
         const fullChunkId = payload.id || citation.id || '';
-        const docKey = fullChunkId;
+        const docKey = payload.document_id || fullChunkId;
 
         // Create or get document entry
         if (!documentMap.has(docKey)) {
