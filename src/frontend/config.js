@@ -115,6 +115,25 @@ function debugLog(message, data = null) {
         }
     }
 }
+
+async function loadModels() {
+    try {
+        const res = await fetch('models.json');
+        const data = await res.json();
+        modelSelect.innerHTML = '';
+        data.models.forEach(m => {
+            const opt = document.createElement('option');
+            opt.value = m.value;
+            opt.textContent = m.label;
+            if (data.default === m.value) {
+                opt.selected = true;
+            }
+            modelSelect.appendChild(opt);
+        });
+    } catch (err) {
+        console.error('Failed to load models:', err);
+    }
+}
 // ==========================================
 // ERROR HANDLING
 // ==========================================
@@ -284,7 +303,8 @@ function fetchApiStatus() {
         });
 }
 
-function initializeConfig() {
+async function initializeConfig() {
+    await loadModels();
     apiUrlInput.value = DEFAULT_HOST;
     updateStatusDisplay();
     setupEventListeners();
