@@ -59,7 +59,7 @@ function showTyping() {
 
     const msg = createMessage(
         'bot',
-        `<span class="typing-spinner">⟳</span>Recherche dans la base documentaire…`
+        `<span class="typing-spinner">⟳</span>Recherche dans la base documentaire (compter 6-20s)…`
     );
     msg.id = 'typing-indicator';
     messagesContainer.appendChild(msg);

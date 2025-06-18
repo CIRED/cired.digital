@@ -3,7 +3,7 @@ window.allSettings = {
     apiUrl: "http://localhost:7272",
     debugMode: true,
     chunkLimit: 10,
-    searchStrategy: "rag_fusion",
+    searchStrategy: "vanilla",
     includeWebSearch: false,
     models: [
       {
@@ -79,7 +79,7 @@ window.allSettings = {
     apiUrl: "http://cired.digital:7272",
     debugMode: false,
     chunkLimit: 10,
-    searchStrategy: "rag_fusion",
+    searchStrategy: "vanilla",
     includeWebSearch: false,
     models: [
       {
