@@ -1,14 +1,4 @@
 // ==========================================
-// ENVIRONMENT SELECTION
-// ==========================================
-const hostname = window.location.hostname;
-const env = (hostname === "doudou") ? "dev" : "prod";
-if (!window.allAppSettings || !window.allAppSettings[env]) {
-  throw new Error(`Settings inconnus pour '${env}'`);
-}
-window.myAppSettings = window.allAppSettings[env];
-
-// ==========================================
 // CONFIGURATION CONSTANTS
 // ==========================================
 const DEFAULT_HOST = 'http://localhost:7272';
@@ -43,12 +33,20 @@ const debugModeCheckbox = document.getElementById('debug-mode');
 // Status display elements (none at the moment)
 
 // ==========================================
-// SETTINGS LOADER FOR ENVIRONMENT CONFIGURATION
+// SETTINGS LOADER
 // ==========================================
+const hostname = window.location.hostname;
+
+const env = (hostname === "doudou") ? "dev" : "prod";
+if (!window.allSettings || !window.allSettings[env]) {
+  throw new Error(`Settings inconnus pour '${env}'`);
+}
+window.Settings = window.allSettings[env];
+
 function loadSettings() {
   try {
-    if (!window.myAppSettings) throw new Error("Settings not loaded. Make sure settings.js is included before config.js.");
-    applySettings(window.myAppSettings);
+    if (!window.Settings) throw new Error("Settings not loaded. Make sure settings.js is included before config.js.");
+    applySettings(window.Settings);
   } catch (err) {
     showError("Failed to load settings: " + err.message);
   }
