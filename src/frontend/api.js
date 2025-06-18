@@ -28,6 +28,12 @@ async function sendMessage() {
     if (greetingEl) greetingEl.classList.add('seen');
     const footerEl = document.querySelector('footer.footer');
     if (footerEl) footerEl.classList.add('seen');
+    // Masquer et déplacer la searchbox (input) sous messages-container
+    const inputSection = document.getElementById('input-container');
+    if (inputSection) {
+        inputSection.classList.add('seen');
+        document.getElementById('messages-container').appendChild(inputSection);
+    }
     const query = messageInput.value.trim();
     if (!query || isLoading) return;
 
