@@ -2,21 +2,60 @@
 // VANCOUVER CITATIONS PROCESSING
 // ==========================================
 
+function initializeCitationContext(messageId) {
+    const documentMap = new Map();
+    const citationToDoc = new Map();
+    let docCounter = 1;
+    const questionNumber = messageId || `msg-${Date.now()}`;
+    return { documentMap, citationToDoc, docCounter, questionNumber };
+}
+
+function prepareDocumentEntry(citation, questionNumber) {
+    const payload = citation.payload || citation;
+    const metadata = payload.metadata || {};
+    const docMeta = extractDocumentInfo(metadata, payload);
+    const fullChunkId = payload.id || citation.id || '';
+    const docKey = payload.document_id || fullChunkId;
+    return { docKey, fullChunkId, docMeta };
+}
+
+function createDocumentRecord(docMeta, context) {
+    const record = {
+        docNumber: context.docCounter,
+        documentId: generateDocumentId(docMeta, context.questionNumber),
+        questionNumber: context.questionNumber,
+        ...docMeta,
+        citations: [],
+        chunkCounter: 0
+    };
+    context.docCounter++;
+    return record;
+}
+
+function getNextLetterSuffix(docRecord) {
+    docRecord.chunkCounter++;
+    return String.fromCharCode(96 + docRecord.chunkCounter);
+}
+
+function addCitationToDocument(docRecord, citation, payload, letterSuffix) {
+    const citationId = citation.id || payload.id || '';
+    docRecord.citations.push({
+        id: citationId,
+        text: payload.text || citation.text || '',
+        score: payload.score || citation.score || 0,
+        letterSuffix: letterSuffix
+    }
+}
+
 function processVancouverCitations(citations, messageId = null) {
     debugLog('Processing Vancouver citations', {
         citationsCount: citations.length,
         messageId
     });
 
-    const documentMap = new Map();
-    const citationToDoc = new Map();
-    let docNumber = 1;
+    const context = initializeCitationContext(messageId);
 
-    // Generate unique message identifier for this set of citations
-    const questionNumber = messageId || `msg-${Date.now()}`;
-
-    // Process each citation
-    citations.forEach(citation => {
+    for (const citation of citations) {
         const payload = citation.payload || citation;
         const metadata = payload.metadata || {};
 
@@ -61,13 +100,13 @@ function processVancouverCitations(citations, messageId = null) {
     });
 
     debugLog('Citations processed successfully', {
-        documentsCount: documentMap.size,
-        citationToDocCount: citationToDoc.size
+        documentsCount: context.documentMap.size,
+        citationToDocCount: context.citationToDoc.size
     });
 
     return {
-        citationToDoc: citationToDoc,
-        bibliography: Array.from(documentMap.values())
+        citationToDoc: context.citationToDoc,
+        bibliography: Array.from(context.documentMap.values())
     };
 }
 
