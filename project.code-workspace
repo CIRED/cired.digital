@@ -1,0 +1,127 @@
+{
+    "folders": [
+        {
+            "name": "Frontend",
+            "path": "./src/frontend"
+        },
+        {
+            "name": "Intake",
+            "path": "./src/intake"
+        },
+        {
+            "name": "Analytics",
+            "path": "./src/analytics"
+        },
+        {
+            "name": "Deploy",
+            "path": "./deploy"
+        },
+        {
+            "name": "Project Root",
+            "path": "./"
+        }
+    ],
+    "settings": {
+        "files.exclude": {
+            "**/node_modules": true,
+            "**/.git": true,
+            "**/.DS_Store": true,
+            "**/dist": true,
+            "**/build": true,
+            "**/.venv": true,
+            "**/__pycache__": true,
+            "**/.ruff_cache": true,
+            "**/.mypy_cache": true,
+            "**/.pytest_cache": true,
+            "**/.aider.tags.cache.v4": true,
+            "**/.ropeproject": true,
+            "**/*.pyc": true
+        },
+        "search.exclude": {
+            "**/node_modules": true,
+            "**/dist": true,
+            "**/build": true,
+            "**/.git": true
+        },
+        "typescript.preferences.includePackageJsonAutoImports": "auto",
+        "python.defaultInterpreterPath": "./.venv/bin/python",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+        "[python]": {
+            "editor.defaultFormatter": "charliermarsh.ruff",
+            "editor.formatOnSave": true,
+            "editor.codeActionsOnSave": {
+                "source.organizeImports": "explicit",
+                "source.fixAll.ruff": "explicit"
+            }
+        },
+        "extensions.ignoreRecommendations": true,
+        "liveServer.settings.multiRootWorkspaceName": "Frontend"
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-python.python",
+            "charliermarsh.ruff",
+            "ms-vscode.vscode-typescript-next",
+            "esbenp.prettier-vscode",
+            "ms-vscode.vscode-json",
+            "redhat.vscode-yaml",
+            "ms-vscode.vscode-eslint",
+            "ritwickdey.LiveServer"
+        ]
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "Install Frontend Dependencies",
+                "type": "shell",
+                "command": "npm install",
+                "options": {
+                    "cwd": "${workspaceFolder:Frontend}"
+                },
+                "group": "build"
+            },
+            {
+                "label": "Start Frontend Dev Server",
+                "type": "shell",
+                "command": "npm run dev",
+                "options": {
+                    "cwd": "${workspaceFolder:Frontend}"
+                },
+                "group": "build"
+            },
+            {
+                "label": "Install Analytics Dependencies",
+                "type": "shell",
+                "command": "pip install -r requirements.txt",
+                "options": {
+                    "cwd": "${workspaceFolder:Analytics}"
+                },
+                "group": "build"
+            }
+        ]
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Debug Frontend",
+                "type": "node",
+                "request": "launch",
+                "program": "${workspaceFolder:Frontend}/src/index.js",
+                "console": "integratedTerminal"
+            },
+            {
+                "name": "Debug Python Analytics",
+                "type": "python",
+                "request": "launch",
+                "program": "${workspaceFolder:Analytics}/main.py",
+                "console": "integratedTerminal",
+                "cwd": "${workspaceFolder:Analytics}"
+            }
+        ]
+    }
+}

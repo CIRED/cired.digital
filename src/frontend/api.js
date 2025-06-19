@@ -22,68 +22,82 @@
 // ==========================================
 // MESSAGE SENDING AND API COMMUNICATION
 // ==========================================
-async function sendMessage() {
-    const query = messageInput.value.trim();
+async function processMessage() {
+    const query = userInput.value.trim();
     if (!query || isLoading) return;
 
-    const queryId = 'query_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-    const startTime = Date.now();
+    animateWaitStart(query);
 
+    const queryId = 'query_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
     debugLog('Starting message send process', { query, queryId, isLoading });
 
-    // Set loading state
-    setLoadingState(true);
-    debugLog('Loading state set to true');
-    hideError();
+    const config = getConfiguration();
+    debugLog('Configuration retrieved', config);
 
-    // Add user message and show typing indicator
-    addMessage('user', query);
-    resetMessageInput();
-    const typingMSG = showTyping();
+    const requestBody = buildRequestBody(query, config);
+    debugLog('Request body built:', requestBody);
 
     try {
-        const config = getConfiguration();
-        debugLog('Configuration retrieved', config);
-
-        const requestBody = buildRequestBody(query, config);
-        debugLog('Request body built:', requestBody);
-
         const startTime = Date.now();
-        const response = await makeApiRequest(config.apiUrl, requestBody);
+        const response = await makeApiRequest(config.apiUrl, requestBody, queryId);
         debugLog('API request completed', {
+            apiUrl: config.apiUrl,
             status: response.status,
             responseTime: `${Date.now() - startTime}ms`,
-            url: config.apiUrl
         });
 
         const data = await response.json();
         debugLog('Raw server response', data);
-        debugLog('Response data parsed', {
-            hasGeneratedAnswer: !!data.results?.generated_answer,
-            citationsCount: data.results?.citations?.length || 0
-        });
-
         handleResponse(requestBody, data, queryId);
 
     } catch (err) {
-        console.error('Error sending message:', err);
         handleError(err);
     } finally {
-        // Clean up
+        animateWaitEnd();
+        debugLog('Message processing completed');
+    }
+}
+
+async function animateWaitStart(query) {
+    // Fade out
+    setLoadingState(true);
+    hideError();
+
+    inputHelp.classList.add('seen');
+    Array.from(messagesContainer.children).forEach(child => child.classList.add('seen'));
+  //  Array.from(mainEl.children).forEach(child => child.classList.add('seen'));
+
+    // Await fade-out (3s as defined in CSS for .seen class)
+    await new Promise(resolve => setTimeout(resolve, 3000));
+
+    // Remove from display flow
+    inputHelp.style.display = 'none';
+    Array.from(messagesContainer.children).forEach(child => {
+        child.style.display = 'none';
+    });
+
+    // Show user message and spinner
+    if (isLoading) {
+        showTyping();
+    }
+}
+
+function animateWaitEnd() {
         hideTyping();
         setLoadingState(false);
-        messageInput.focus();
-    }
+        inputDiv.classList.remove('seen');
+        userInput.focus();
 }
 
 function setLoadingState(loading) {
     isLoading = loading;
     sendBtn.disabled = loading;
+    debugLog('Loading state set to ' + loading);
 }
 
 function resetMessageInput() {
-    messageInput.value = '';
-    messageInput.style.height = 'auto';
+    userInput.value = '';
+    userInput.style.height = 'auto';
 }
 
 function getConfiguration() {
@@ -91,7 +105,10 @@ function getConfiguration() {
         apiUrl: apiUrlInput.value,
         model: modelSelect.value,
         temperature: parseFloat(temperatureInput.value),
-        maxTokens: parseInt(maxTokensInput.value)
+        maxTokens: parseInt(maxTokensInput.value),
+        chunkLimit: parseInt(chunkLimitInput.value, 10),
+        searchStrategy: searchStrategySelect.value,
+        includeWebSearch: includeWebSearchCheckbox.checked
     };
 }
 
@@ -100,25 +117,30 @@ function buildRequestBody(query, config) {
         query: query,
         search_mode: 'custom',
         search_settings: {
-            limit: 10
+            use_semantic_search: true,
+            use_hybrid_search: true,
+            search_strategy: config.searchStrategy,
+            limit: config.chunkLimit
         },
         rag_generation_config: {
             model: config.model,
             temperature: config.temperature,
             max_tokens: config.maxTokens,
             stream: false
-        }
+        },
+        include_title_if_available: true,
+        include_web_search: config.includeWebSearch,
     };
 }
 
-async function makeApiRequest(apiUrl, requestBody) {
+async function makeApiRequest(apiUrl, requestBody, queryId) {
     logQuery(
         queryId,
         requestBody.query,
         {
             model: requestBody.rag_generation_config.model,
             temperature: requestBody.rag_generation_config.temperature,
-            max_tokens: requestBody.rag_generation_config.maxTokens,
+            max_tokens: requestBody.rag_generation_config.max_tokens,
             search_mode: requestBody.search_settings.search_mode
         });
 
@@ -150,7 +172,7 @@ function handleError(err) {
         errorStack: err.stack
     });
     showError(err.message);
-    addMessage('bot', `I apologize, but I encountered an error: ${err.message}. Please check your R2R configuration and try again.`, true);
+    addMessage('bot', `I apologize, but I encountered an error: ${err.message}.`, true);
 }
 
 // ==========================================
@@ -162,26 +184,52 @@ function handleResponse(requestBody, data, queryId) {
         citationsCount: data.results.citations?.length || 0
     });
 
-    const content = data.results.generated_answer || 'No response generated.';
     const citations = data.results.citations || [];
+    const { citationToDoc, bibliography } = processCitations(citations);
 
-    const { processedContent, documentBibliography } = processVancouverCitations(content, citations);
-    debugLog('Citations processed', {
-        originalLength: content.length,
-        processedLength: processedContent.length,
-        bibliographyCount: Object.keys(documentBibliography).length
-    });
+    const content = data.results.generated_answer || 'No response generated.';
+    replyText = renderSafeLLMContent(replaceCitationMarkers(content, citationToDoc));
 
-    const htmlContent = renderSafeLLMContent(processedContent);
+    const htmlContent =
+        replyTitle(requestBody) +
+        replyText +
+        createBibliographyHtml(bibliography);
 
     const botMessage = addMessage('bot', htmlContent);
-    addVancouverCitations(botMessage, documentBibliography);
+    // lier les tooltips de citation
+    botMessage.querySelectorAll('.citation-bracket').forEach(el => {
+      el.addEventListener('mouseover', ev => showChunkTooltip(ev, el));
+      el.addEventListener('mouseout',  () => hideChunkTooltip());
+    });
+
     addFeedbackButtons(botMessage, requestBody, data.results);
 
-    logResponse(queryId, processedContent);
+    logResponse(queryId, replyText);
 }
 
-// ==========================================
+function replyTitle(requestBody) {
+    const today = new Date();
+    const dayDate = today.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+    return `<h2>${escapeHtml(requestBody.query)}</h2>
+            <div><em>Generated by Cirdi on ${dayDate}</em></div>
+            <hr/>
+    `;
+}
+
+// Helper to escape HTML in the query
+function escapeHtml(text) {
+    return text.replace(/[&<>"']/g, function (m) {
+        return ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+        })[m];
+    });
+}
+
 // FEEDBACK SYSTEM
 // ==========================================
 function sendFeedback(requestBody, results, feedback, comment = '') {

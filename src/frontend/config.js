@@ -18,7 +18,9 @@ let sessionId = null;
 const configBtn = document.getElementById('config-btn');
 const configPanel = document.getElementById('config-panel');
 const messagesContainer = document.getElementById('messages-container');
-const messageInput = document.getElementById('message-input');
+const userInput = document.getElementById('user-input');
+const inputDiv = document.getElementById('input');
+const inputHelp = document.getElementById('input-help');
 const sendBtn = document.getElementById('send-btn');
 const errorContainer = document.getElementById('error-container');
 const errorText = document.getElementById('error-text');
@@ -29,8 +31,75 @@ const modelSelect = document.getElementById('model');
 const temperatureInput = document.getElementById('temperature');
 const maxTokensInput = document.getElementById('max-tokens');
 const debugModeCheckbox = document.getElementById('debug-mode');
+const chunkLimitInput = document.getElementById('chunk-limit');
+const searchStrategySelect = document.getElementById('search-strategy');
+const includeWebSearchCheckbox = document.getElementById('include-web-search');
 
-// Status display elements
+// Status display elements (none at the moment)
+
+// ==========================================
+// SETTINGS LOADER
+// ==========================================
+const hostname = window.location.hostname;
+
+const env = (!hostname || hostname === "doudou") ? "dev" : "prod";
+if (!window.allSettings || !window.allSettings[env]) {
+  throw new Error(`Settings inconnus pour '${env}'`);
+}
+window.Settings = window.allSettings[env];
+
+function loadSettings() {
+  try {
+    if (!window.Settings) throw new Error("Settings not loaded. Make sure settings.js is included before config.js.");
+    applySettings(window.Settings);
+  } catch (err) {
+    showError("Failed to load settings: " + err.message);
+  }
+}
+
+function applySettings(settings) {
+  // Set API URL
+  if (settings.apiUrl && typeof apiUrlInput !== "undefined") {
+    apiUrlInput.value = settings.apiUrl;
+  }
+
+  // Populate language model select options
+  if (settings.models && Array.isArray(settings.models) && typeof modelSelect !== "undefined") {
+    modelSelect.innerHTML = '';
+    settings.models.forEach(model => {
+      const option = document.createElement('option');
+      option.value = model.value;
+      option.textContent = model.label;
+      if (model.selected) option.selected = true;
+      if (model.disabled) option.disabled = true;
+      modelSelect.appendChild(option);
+    });
+    // Set debug mode from settings
+    if (typeof debugModeCheckbox !== "undefined" && settings.debugMode !== undefined) {
+      debugModeCheckbox.checked = settings.debugMode;
+      debugMode = settings.debugMode;
+    }
+    // Initialise la température et max tokens selon le modèle sélectionné
+    if (typeof temperatureInput !== "undefined" && Array.isArray(settings.models)) {
+      const sel = settings.models.find(m => m.value === modelSelect.value);
+      if (sel && sel.defaultTemperature !== undefined) {
+        temperatureInput.value = sel.defaultTemperature;
+      }
+      if (typeof maxTokensInput !== "undefined" && sel && sel.defaultMaxTokens !== undefined) {
+        maxTokensInput.value = sel.defaultMaxTokens;
+      }
+      if (chunkLimitInput && settings.chunkLimit !== undefined) {
+        chunkLimitInput.value = settings.chunkLimit;
+      }
+      if (searchStrategySelect && settings.searchStrategy !== undefined) {
+        searchStrategySelect.value = settings.searchStrategy;
+      }
+      if (includeWebSearchCheckbox && settings.includeWebSearch !== undefined) {
+        includeWebSearchCheckbox.checked = settings.includeWebSearch;
+      }
+    }
+  }
+}
 
 // ==========================================
 // EVENT LISTENERS SETUP
@@ -47,20 +116,51 @@ function setupEventListeners() {
         });
     }
 
-    // Send message handlers
-    sendBtn.addEventListener('click', sendMessage);
-    messageInput.addEventListener('keypress', handleKeyPress);
+    // Input text message handlers
+    sendBtn.addEventListener('click', processMessage);;
 
-    // Auto-resize textarea
-    messageInput.addEventListener('input', handleTextAreaResize);
+    userInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+        // Don't add a new line
+        e.preventDefault();
+        // Process the message
+        sendBtn.click();
+    }
+    });
 
-    // Update status display when config changes
-    [apiUrlInput, modelSelect].forEach(element => {
-        element.addEventListener('change', updateStatusDisplay);
+    userInput.addEventListener('input', function() {
+        // Auto-resize the input field
+        this.style.height = 'auto';
+        // But no more than 120px tall
+        this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+    });
+
+    // Update backend status display when URL changes
+    apiUrlInput.addEventListener('change', updateStatusDisplay);
+
+    // Set temperature and max-tokens to default values when model changes
+    modelSelect.addEventListener('change', () => {
+        const sel = window.Settings.models.find(m => m.value === modelSelect.value);
+        if (sel && sel.defaultTemperature !== undefined) {
+            temperatureInput.value = sel.defaultTemperature;
+        }
+        if (sel && sel.defaultMaxTokens !== undefined) {
+            maxTokensInput.value = sel.defaultMaxTokens;
+        }
+        updateStatusDisplay();
     });
 
     // Debug mode
     debugModeCheckbox.addEventListener('change', handleDebugModeToggle);
+    if (chunkLimitInput) {
+      chunkLimitInput.addEventListener('change', updateStatusDisplay);
+    }
+    if (searchStrategySelect) {
+      searchStrategySelect.addEventListener('change', updateStatusDisplay);
+    }
+    if (includeWebSearchCheckbox) {
+      includeWebSearchCheckbox.addEventListener('change', updateStatusDisplay);
+    }
 
     initializePrivacyMode();
     initializeSession();
@@ -76,18 +176,6 @@ function setupEventListeners() {
     });
 }
 
-function handleKeyPress(e) {
-    if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault();
-        sendMessage();
-    }
-}
-
-function handleTextAreaResize() {
-    this.style.height = 'auto';
-    this.style.height = Math.min(this.scrollHeight, 120) + 'px';
-}
-
 function handleDebugModeToggle() {
     debugMode = debugModeCheckbox.checked;
 
@@ -97,12 +185,30 @@ function handleDebugModeToggle() {
         console.log('🐛 Debug mode disabled');
     }
 }
+
 // ==========================================
 // UTILITY FUNCTIONS
 // ==========================================
 function updateStatusDisplay() {
     clearChunkCache();
     fetchApiStatus();
+}
+
+function fetchApiStatus() {
+    const statusEl = document.getElementById('api-status');
+    if (!statusEl) return;
+    const url = apiUrlInput.value.replace(/\/$/, '') + '/v3/health';
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            const message = data.results?.message?.toUpperCase() || data.status || data.health || 'unknown';
+            statusEl.textContent = `Server status: ${message}`;
+            statusEl.className = 'status-text status-success';
+        })
+        .catch(() => {
+            statusEl.textContent = 'Server status: unreachable';
+            statusEl.className = 'status-text status-error';
+        });
 }
 
 
@@ -115,6 +221,7 @@ function debugLog(message, data = null) {
         }
     }
 }
+
 // ==========================================
 // ERROR HANDLING
 // ==========================================
@@ -264,35 +371,26 @@ async function logResponse(queryId, response, processingTime) {
         console.error('Error logging response:', error);
     }
 }
+
+
 // ==========================================
 // INITIALIZATION
 // ==========================================
-function fetchApiStatus() {
-    const statusEl = document.getElementById('api-status');
-    if (!statusEl) return;
-    const url = apiUrlInput.value.replace(/\/$/, '') + '/v3/health';
-    fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            const message = data.results?.message?.toUpperCase() || data.status || data.health || 'unknown';
-            statusEl.textContent = `Server status: ${message}`;
-            statusEl.className = 'status-text status-success';
-        })
-        .catch(() => {
-            statusEl.textContent = 'Server status: unreachable';
-            statusEl.className = 'status-text status-error';
-        });
-}
 
-function initializeConfig() {
-    apiUrlInput.value = DEFAULT_HOST;
+async function initializeConfig() {
+  // Load settings before anything else
+  try {
+    await loadSettings();
     updateStatusDisplay();
     setupEventListeners();
-
-    // Initialize debug mode state
     debugMode = debugModeCheckbox.checked;
     debugLog('Configuration initialized');
+  } catch (err) {
+    showError("Initialization failed: " + err.message);
+    console.error('Initialization error:', err);
+  }
 }
+
 
 if (document.readyState === 'loading') {
      document.addEventListener('DOMContentLoaded', initializeConfig);
