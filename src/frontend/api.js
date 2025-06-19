@@ -196,6 +196,11 @@ function handleResponse(requestBody, data, queryId) {
         createBibliographyHtml(bibliography);
 
     const botMessage = addMessage('bot', htmlContent);
+    // lier les tooltips de citation
+    botMessage.querySelectorAll('.citation-bracket').forEach(el => {
+      el.addEventListener('mouseover', ev => showChunkTooltip(ev, el));
+      el.addEventListener('mouseout',  () => hideChunkTooltip());
+    });
 
     addFeedbackButtons(botMessage, requestBody, data.results);
 

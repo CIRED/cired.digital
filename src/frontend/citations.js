@@ -174,8 +174,6 @@ function replaceCitationMarkers(content, citationToDoc) {
         const newMark = `<a class="citation-bracket"
                               href="#cite-${docInfo.documentId}"
                               data-chunk-id="${escapeQuotes(docInfo.fullChunkId)}"
-                              onmouseover="showChunkTooltip(event, this)"
-                              onmouseout="hideChunkTooltip()"
                               >[${docInfo.docNumber}${docInfo.letterSuffix}]</a>`;
         processedContent = processedContent.replace(new RegExp(`\\[${citationId}\\]`, 'g'), newMark);
     });
