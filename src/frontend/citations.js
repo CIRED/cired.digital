@@ -219,7 +219,6 @@ function createDocumentHtml(doc) {
                     ${doc.title}
                 </h4>
                 ${authorsText ? `<p class="document-authors">${authorsText}</p>` : ''}
-                <p class="document-chunks">Chunks: ${chunkList}</p>
                 <p class="document-links">${linksHtml}</p>
             </div>
         </div>
