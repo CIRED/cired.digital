@@ -47,8 +47,8 @@ function addCitationToDocument(docRecord, citation, payload, letterSuffix) {
     });
 }
 
-function processVancouverCitations(citations, messageId = null) {
-    debugLog('Processing Vancouver citations', {
+function processCitations(citations, messageId = null) {
+    debugLog('Processing citations', {
         citationsCount: citations.length,
         messageId
     });
