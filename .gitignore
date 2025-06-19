@@ -91,6 +91,7 @@ Thumbs.db
 secrets/*
 .env
 secrets.env
+*+rendered.toml
 
 # Keep certain files even if they match patterns above
 !data/.gitkeep

@@ -14,167 +14,146 @@
 
 <body>
 
-<!-- Configuration button -->
-<span>
-    <button class="config-button" id="config-btn">⚙️</button>
-</span>
+<header>
+  <button id="config-btn">⚙️</button>
+    <div id="input-container">
+      <div id="input">
+        <textarea
+          id="user-input"
+          placeholder="Cirdi, que disent les écrits du CIRED sur..."
+          rows="2"
+          ></textarea>
+        <button id="send-btn">
+          ➤
+        </button>
+      </div>
+      <div id="input-help">
+        <p>Cirdi parle français et + de 100 langues: Cirdi speaks English – Hablo español – Я говорю по-русски – 我会说中文 – أنا أتكلم العربية.</p>
+        <p>Appuyez sur Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne.</p>
+      </div>
+    </div> <!-- id="input-container" -->
+</header>
 
-<!-- Configuration Panel -->
-<div class="config-panel hidden" id="config-panel">
-
-    <div class="config-header">
-        <button id="config-close-btn" class="config-close-button">✖️</button>
-        <h2 class="config-title">Cirdi settings</h2>
-    </div>
-
-<div class="settings-grid" id="settings-container">
-
-<div class="form-group">
-  <div class="label-with-status">
-    <label class="form-label">
-      Server URL
-      <span class="help-icon" title="Where to find the R2R API endpoint. Try http://cired.digital:7272">ℹ️</span>
-    </label>
-    <div class="status-text" id="api-status">Status: OK</div>
+<main>
+  <div id="error-container" hidden>
+    <span id="error-icon">⚠️</span><span id="error-text"></span>
   </div>
-  <input class="form-input" id="api-url" type="text"/>
-</div>
+  <div id="messages-container">
+    <div id="greeting">
+      Bonjour !<br /><br />
+      Je suis <strong>Cirdi</strong>, votre documentaliste scientifique. Je dispose des travaux du Centre International de Recherche sur l'Environnement et le Développement (CIRED) sur les thèmes ci dessous. Je vais les analyser afin de vous proposer une synthèse avec liens directs en accès libre sur HAL pour en savoir plus 😉.<br />
+      <div id="legend">
+        <strong>Domaines d'expertise</strong> : Cirdi a indexé 1199 publications du CIRED
+      </div>
+      <img
+        alt="Nuage de mots représentant les principales thématiques de recherche CIRED : changement climatique, transition énergétique, politique climatique, modélisation économique, énergies renouvelables, développement durable, et politiques environnementales"
+        src="static/cired_wordcloud.png"
+      />
+    </div> <!-- id="greeting" -->
+  </div> <!-- id="messages-container" -->
+</main>
 
-<div class="form-group">
-  <label class="form-label">
-  Language model
-  <span class="help-icon" title="The LLM used to generate replies. Commercial options disabled for cost control.">ℹ️</span>
-  </label>
-  <select class="form-select" id="model">
-    <option value="ollama/mistral-small:24b-3.1-instruct-2503-q8_0">Mistral small on CNRS servers</option>
-    <option value="ollama/mistral-large:latest">Mistral large on CNRS servers</option>
-    <option value="ollama/qwen3:32b">Qwen 3 32B on CNRS servers</option>
-    <option value="deepseek/deepseek-chat">Deepseek chat at Deepseek</option>
-    <!--option value="deepseek/deepseek-reasoner">Deepseek reasoner at Deepseek</option-->
-    <option value="mistral/mistral-small-latest">Mistral small latest at Mistral</option>
-    <!--option value="mistral/mistral-medium-latest">Mistral medium latest at Mistral</option-->
-    <option value="anthropic/claude-3-5-haiku-latest">Claude Haiku 3.5 latest at Anthropic</option>
-    <!--option value="anthropic/claude-sonnet-4-20250514" disabled>Claude Sonnet 2025-05-14 at Anthropic</option-->
-    <option value="openai/gpt-4o-mini" selected>GPT-4o mini at OpenAI</option>
-    <!--option value="openai/gpt-4.1-mini" disabled>GPT-4.1 Mini at OpenAI</option-->
-  </select>
-</div>
-
-<div class="form-group">
-  <label class="form-label">
-  Response variability
-  <span class="help-icon" title="Temperature parameter. Options: 0 / 0.2 / 0.4 / 0.8 / 1.6.">ℹ️</span>
-  </label>
-  <select class="form-select" id="temperature">
-    <option value="0">Repeatable answers</option>
-    <option value="0.2" selected>Precise (default)</option>
-    <option value="0.4">Analytical</option>
-    <option value="0.8">Exploratory</option>
-    <option value="1.6">Creative</option>
-  </select>
-</div>
-
-<div class="form-group">
-  <label class="form-label">
-    Response length
-    <span class="help-icon" title="Max tokens parameter. Options: 512, 2048, 4096, 8192 (disabled for cost control).">ℹ️</span>
-  </label>
-  <select class="form-select" id="max-tokens">
-    <option value="512">Concise (default)</option>
-    <option value="2048">Detailled</option>
-    <option value="4096">Long</option>
-    <option value="8192" disabled>Oversized</option>
-  </select>
-</div>
-
-
-<div class="checkbox-container privacy-container">
-  <label class="checkbox-label">
-    <input type="checkbox" id="privacy-mode" class="checkbox-input">
-    <span class="privacy-text"><strong>Privacy Mode</strong> – No logging</span>
-   </label>
-</div>
-
-<div class="checkbox-container debug-container">
-  <label class="checkbox-label">
-    <input type="checkbox" id="debug-mode" class="checkbox-input">
-    <span class="debug-text"><strong>Debug Mode</strong> – Show response logs in console</span>
-  </label>
-</div>
-
-</div> <!-- id="settings-container"-->
-</div> <!-- id="config-panel"-->
-
-<!-- Greeting Message -->
-
-<div id="messages-container" class="messages-container">
-    <div class="message-wrapper" id="message-1">
-        <div class="message-content-wrapper">
-            <div class="avatar">
-                <span class="avatar-text">🤖</span>
-            </div>
-            <div class="message-bubble">
-                <div class="message-text">
-                    <div class="message-content">
-                      Bonjour !<br />
-                      Je suis <strong>Cirdi</strong>, votre documentaliste scientifique spécialisé. Je maîtrise les travaux du Centre International de Recherche sur l'Environnement et le Développement (CIRED) et je peux les analyser pour vous proposer des synthèses précises – avec les liens directs en accès libre sur HAL pour en savoir plus 😉.<br />
-                    </div>
-                </div>
-                <div class="citations-container"></div>
-            </div>
-        </div>
-    </div>
-</div> <!-- id="messages-container" -->
-
-<!-- Wrapper central qui centre verticalement l'input et l'erreur -->
-<div class="vertical-centering" id="vertical-centering">
-
-  <!-- Error Display -->
-  <div class="error-container" id="error-container">
-    <span class="error-icon">⚠️</span> <span class="error-text" id="error-text"></span>
-  </div>
-
-  <!-- Input -->
-  <div class="input-section" id="input-container">
-    <div class="input-wrapper">
-    <textarea
-      class="message-textarea"
-      id="message-input"
-      placeholder="Que disent les écrits du CIRED sur..."
-      rows="1"
-      ></textarea>
-    <button
-      class="send-button"
-      id="send-btn"
-      >
-      <span class="send-icon">➤</span>
-    </button>
-    </div>
-    <div class="input-help">
-      <p>Cirdi parle français et + de 100 langues: Cirdi speaks English – Hablo español – Я говорю по-русски – 我会说中文 – أنا أتكلم العربية.</p>
-      <p>Appuyez sur Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne.</p>
-    </div>
-  </div> <!-- id="input-container" -->
-
-</div> <!-- id="vertical-centering" -->
-
-<footer class="footer">
-    <div class="footer-content">
-    <p class="expertise-text">
-      <strong>Domaines d'expertise</strong> : Cirdi a indexé 1199 publications du CIRED
-    </p>
-    <img
-      alt="Nuage de mots représentant les principales thématiques de recherche CIRED : changement climatique, transition énergétique, politique climatique, modélisation économique, énergies renouvelables, développement durable, et politiques environnementales"
-      class="wordcloud-image"
-      src="static/cired_wordcloud.png"
-    />
-    </div>
-⚠️ <strong>Les conversations sont enregistrées pour améliorer le service.</strong>
-Vous pourrez donner un feedback en cliquant 👍 ou 👎 sous la réponse.<br />
-📊 <a href="#" id="view-analytics-link" class="footer-link">Voir les données collectées</a> |
-🔒 <a href="#" id="privacy-policy-link" class="footer-link">Politique de confidentialité</a>
+<footer>
+    ⚠️ <strong>Les conversations sont enregistrées pour améliorer le service.</strong>
+    Vous pourrez donner un feedback en cliquant 👍 ou 👎 sous la réponse.<br />
+    📊 <a href="#" id="view-analytics-link">Voir les données collectées</a> |
+    🔒 <a href="#" id="privacy-policy-link">Politique de confidentialité</a>
 </footer>
 
+
+<!-- Configuration Panel -->
+<aside class="hidden" id="config-panel">
+
+  <div id="config-header">
+    <button id="config-close-btn">✖️</button>
+    <h2>Cirdi settings</h2>
+  </div>
+
+  <div class="settings-grid" id="settings-container">
+
+    <div class="form-group">
+      <div class="label-with-status">
+        <label class="form-label">
+          Server URL
+          <span class="help-icon" title="Where to find the R2R API endpoint. Try http://cired.digital:7272">ℹ️</span>
+        </label>
+        <div class="status-text" id="api-status">Status: OK</div>
+      </div>
+      <input class="form-input" id="api-url" type="text"/>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">
+      Language model
+      <span class="help-icon" title="The LLM used to generate replies. Commercial options disabled for cost control.">ℹ️</span>
+      </label>
+      <select class="form-select" id="model">
+        <option>Chargement...</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">
+        Temperature (response creativity)
+        <span class="help-icon" title="Automatically set to model provider's recommendations.">ℹ️</span>
+      </label>
+      <input type="number" id="temperature" class="form-input" step="0.05"/>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">
+        Max tokens (response length)
+        <span class="help-icon" title="Automatically set according to the model.">ℹ️</span>
+      </label>
+      <input type="number" id="max-tokens" class="form-input" step="100"/>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">
+        Nombre maximum de segments à récupérer
+        <span class="help-icon" title="Entre 1 et 1000.">ℹ️</span>
+      </label>
+      <input type="number" id="chunk-limit" class="form-input" step="1"/>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">
+        Méthode pour pêcher les segments
+        <span class="help-icon" title="Options: vanilla (recherche directe rapide - pour question précise), rag_fusion (reformule - pour question ambigüe), HyDE (prêche le faux pour pêcher le vrai - pour question ouverte, conceptuelle)">ℹ️</span>
+      </label>
+      <select id="search-strategy" class="form-select">
+        <option value="vanilla">Vanilla</option>
+        <option value="rag_fusion">RAG Fusion</option>
+        <option value="hyde" selected>Hyde</option>
+      </select>
+    </div>
+
+    <div class="checkbox-container web-search-container">
+      <label class="checkbox-label">
+        <input type="checkbox" id="include-web-search" class="checkbox-input"  disabled>
+        <span class="web-search-text"><strong>Recherche Web</strong> – Inclure les résultats web (0.1 cent par question)</span>
+      </label>
+    </div>
+
+    <div class="checkbox-container privacy-container">
+      <label class="checkbox-label">
+        <input type="checkbox" id="privacy-mode" class="checkbox-input">
+        <span class="privacy-text"><strong>Privacy Mode</strong> – No logging</span>
+      </label>
+    </div>
+
+    <div class="checkbox-container debug-container">
+      <label class="checkbox-label">
+        <input type="checkbox" id="debug-mode" class="checkbox-input">
+        <span class="debug-text"><strong>Debug Mode</strong> – Show response logs in console</span>
+      </label>
+    </div>
+
+  </div> <!-- id="settings-container"-->
+</aside>
+
+
+<script src="settings.js"></script>
 <script src="config.js"></script>
 <script src="messages.js"></script>
 <script src="citations.js"></script>

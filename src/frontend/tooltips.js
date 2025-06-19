@@ -133,10 +133,7 @@ function displayChunkData(chunkData, tooltip, chunkId) {
 
     // Main text content
     if (chunkData.text) {
-        const truncatedText = chunkData.text.length > 600
-            ? chunkData.text.substring(0, 600) + '...'
-            : chunkData.text;
-        content += `<div class="tooltip-content">${escapeHtml(truncatedText)}</div>`;
+        content += `<div class="tooltip-content">${escapeHtml(chunkData.text)}</div>`;
     }
 
     // Metadata if available and interesting
@@ -182,4 +179,13 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+
+// Cache for chunk data to avoid repeated API calls
+const chunkCache = new Map();
+
+function clearChunkCache() {
+    chunkCache.clear();
+    debugLog('Chunk cache cleared');
 }

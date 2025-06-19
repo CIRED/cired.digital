@@ -1,20 +1,17 @@
+const mainEl = document.querySelector('main');
+
 // ==========================================
 // MESSAGE CREATION AND DISPLAY
 // ==========================================
-function createMessage(type, content, timestamp, isError = false) {
+function createMessage(type, content, isError = false) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `message-wrapper ${type === 'user' ? 'user-wrapper' : 'bot-wrapper'}`;
     messageDiv.id = `message-${messageIdCounter++}`;
 
-    const avatarIcon = type === 'user' ? '👤' : '🤖';
     const messageClass = getMessageClass(type, isError);
-    const avatarClass = getAvatarClass(type);
 
     messageDiv.innerHTML = `
         <div class="message-content-wrapper ${type === 'user' ? 'user-content' : 'bot-content'}">
-            <div class="avatar ${avatarClass}">
-                <span class="avatar-text">${avatarIcon}</span>
-            </div>
             <div class="message-bubble">
                 <div class="${messageClass}">
                     <div class="message-content">${content}</div>
@@ -23,7 +20,6 @@ function createMessage(type, content, timestamp, isError = false) {
             </div>
         </div>
     `;
-
     return messageDiv;
 }
 
@@ -36,16 +32,11 @@ function getMessageClass(type, isError) {
         : 'bot-message';
 }
 
-function getAvatarClass(type) {
-    return type === 'user'
-        ? 'user-avatar'
-        : 'bot-avatar';
-}
 
 function addMessage(type, content, isError = false) {
     debugLog('Adding message to UI', { type, contentLength: content.length, isError });
 
-    const message = createMessage(type, content, new Date(), isError);
+    const message = createMessage(type, content, isError);
     messagesContainer.appendChild(message);
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
     return message;
@@ -59,17 +50,16 @@ function showTyping() {
 
     const msg = createMessage(
         'bot',
-        `<span class="typing-spinner">⟳</span>Recherche dans la base documentaire…`
+        `<span class="typing-spinner">⟳</span>Recherche dans la base documentaire (compter 6-20s)…`
     );
     msg.id = 'typing-indicator';
-    messagesContainer.appendChild(msg);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    mainEl.appendChild(msg);
+    mainEl.scrollTop = mainEl.scrollHeight;
     return msg;
 }
 
 function hideTyping() {
     debugLog('Hiding typing indicator');
-
     const typing = document.getElementById('typing-indicator');
     if (typing) {
         typing.remove();
@@ -90,7 +80,13 @@ function addFeedbackButtons(botMessage, requestBody, results) {
         <button class="feedback-button feedback-down" title="Réponse insuffisante.">👎</button>
     `;
 
-    botMessage.querySelector('.message-content').after(feedbackDiv);
+    // Placer le feedback sous la bibliographie (citations-container)
+    const citContainer = botMessage.querySelector('.citations-container');
+    if (citContainer) {
+        citContainer.after(feedbackDiv);
+    } else {
+        botMessage.querySelector('.message-content').after(feedbackDiv);
+    }
 
     const commentInput = feedbackDiv.querySelector('input[type="text"]');
 
