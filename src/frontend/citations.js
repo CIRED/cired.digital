@@ -57,6 +57,8 @@ function processCitations(citations, messageId = null) {
 
     for (const citation of citations) {
         const { docKey, fullChunkId, docMeta } = prepareDocumentEntry(citation, context.questionNumber);
+        const citationId = citation.id || citation.payload?.id || '';
+        if (context.citationToDoc.has(citationId)) continue;
 
         if (!context.documentMap.has(docKey)) {
             context.documentMap.set(docKey, createDocumentRecord(docMeta, context));
@@ -68,7 +70,7 @@ function processCitations(citations, messageId = null) {
 
         addCitationToDocument(doc, citation, payload, letterSuffix);
 
-        context.citationToDoc.set(citation.id || payload.id || '', {
+        context.citationToDoc.set(citationId, {
             docNumber: doc.docNumber,
             documentId: doc.documentId,
             letterSuffix: letterSuffix,
