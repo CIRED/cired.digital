@@ -185,7 +185,7 @@ function handleResponse(requestBody, data, queryId) {
     });
 
     const citations = data.results.citations || [];
-    const { citationToDoc, bibliography } = processVancouverCitations(citations);
+    const { citationToDoc, bibliography } = processCitations(citations);
 
     const content = data.results.generated_answer || 'No response generated.';
     replyText = renderSafeLLMContent(replaceCitationMarkers(content, citationToDoc));
