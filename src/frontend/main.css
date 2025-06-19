@@ -458,7 +458,7 @@ table th {
 }
 
 .document-number {
-  min-width: 1em;
+  min-width: 2em;
   color: #555;
   text-align: right;
   flex-shrink: 0;
@@ -484,11 +484,7 @@ table th {
 }
 
 .citation-bracket {
-  cursor: help;
-  color: #2563eb;
-  font-weight: 500;
-  transition: color 0.2s;
-  text-decoration: none;
+  color: black;
 }
 
 .citation-bracket:hover {
