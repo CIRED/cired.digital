@@ -485,11 +485,12 @@ table th {
 }
 
 .citation-bracket {
-  color: black;
+  color: inherit;
+  text-decoration: none;
 }
 
 .citation-bracket:hover {
-  color: #1d4ed8;
+  color: inherit;
 }
 
 /* ==========================================
