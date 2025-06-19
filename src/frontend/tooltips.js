@@ -133,10 +133,7 @@ function displayChunkData(chunkData, tooltip, chunkId) {
 
     // Main text content
     if (chunkData.text) {
-        const truncatedText = chunkData.text.length > 600
-            ? chunkData.text.substring(0, 600) + '...'
-            : chunkData.text;
-        content += `<div class="tooltip-content">${escapeHtml(truncatedText)}</div>`;
+        content += `<div class="tooltip-content">${escapeHtml(chunkData.text)}</div>`;
     }
 
     // Metadata if available and interesting
