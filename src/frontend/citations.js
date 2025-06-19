@@ -44,7 +44,7 @@ function addCitationToDocument(docRecord, citation, payload, letterSuffix) {
         text: payload.text || citation.text || '',
         score: payload.score || citation.score || 0,
         letterSuffix: letterSuffix
-    }
+    });
 }
 
 function processVancouverCitations(citations, messageId = null) {
@@ -56,48 +56,25 @@ function processVancouverCitations(citations, messageId = null) {
     const context = initializeCitationContext(messageId);
 
     for (const citation of citations) {
-        const payload = citation.payload || citation;
-        const metadata = payload.metadata || {};
+        const { docKey, fullChunkId, docMeta } = prepareDocumentEntry(citation, context.questionNumber);
 
-        const documentInfo = extractDocumentInfo(metadata, payload);
-        const fullChunkId = payload.id || citation.id || '';
-        const docKey = payload.document_id || fullChunkId;
-
-        // Create or get document entry
-        if (!documentMap.has(docKey)) {
-            documentMap.set(docKey, {
-                docNumber: docNumber++,
-                documentId: generateDocumentId(documentInfo, questionNumber),
-                questionNumber: questionNumber,
-                ...documentInfo,
-                citations: [],
-                chunkCounter: 0
-            });
+        if (!context.documentMap.has(docKey)) {
+            context.documentMap.set(docKey, createDocumentRecord(docMeta, context));
         }
 
-        const doc = documentMap.get(docKey);
-        const citationId = citation.id || payload.id || '';
+        const doc = context.documentMap.get(docKey);
+        const letterSuffix = getNextLetterSuffix(doc);
+        const payload = citation.payload || citation;
 
-        // Increment chunk counter and generate letter suffix
-        doc.chunkCounter++;
-        const letterSuffix = String.fromCharCode(96 + doc.chunkCounter);
+        addCitationToDocument(doc, citation, payload, letterSuffix);
 
-        // Add citation to document
-        doc.citations.push({
-            id: citationId,
-            text: payload.text || citation.text || '',
-            score: payload.score || citation.score || 0,
-            letterSuffix: letterSuffix
-        });
-
-        // Map citation ID to document info with letter suffix
-        citationToDoc.set(citationId, {
+        context.citationToDoc.set(citation.id || payload.id || '', {
             docNumber: doc.docNumber,
             documentId: doc.documentId,
             letterSuffix: letterSuffix,
-            fullChunkId: fullChunkId,
+            fullChunkId: fullChunkId
         });
-    });
+    }
 
     debugLog('Citations processed successfully', {
         documentsCount: context.documentMap.size,
