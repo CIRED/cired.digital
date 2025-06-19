@@ -176,7 +176,7 @@ function replaceCitationMarkers(content, citationToDoc) {
                               data-chunk-id="${escapeQuotes(docInfo.fullChunkId)}"
                               onmouseover="showChunkTooltip(event, this)"
                               onmouseout="hideChunkTooltip()"
-                              style="cursor: help; color: #2563eb; font-weight: 500; transition: color 0.2s;">[${docInfo.docNumber}${docInfo.letterSuffix}]</a>`;
+                              style="cursor: help; font-weight: 500; text-decoration: none;">[${docInfo.docNumber}${docInfo.letterSuffix}]</a>`;
         processedContent = processedContent.replace(new RegExp(`\\[${citationId}\\]`, 'g'), newMark);
     });
 
