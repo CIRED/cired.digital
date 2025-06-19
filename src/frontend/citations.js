@@ -121,7 +121,7 @@ function extractDocumentInfo(metadata, payload) {
     let authors = metadata.authors || [];
 
     // Debug logging
-    debugLog('Debug - extractDocumentInfo - original metadata.authors:', metadata.authors, 'Type:', typeof metadata.authors);
+ //   debugLog('Debug - extractDocumentInfo - original metadata.authors:', metadata.authors, 'Type:', typeof metadata.authors);
 
     if (typeof authors === 'string') {
         // Check if the string looks like a JSON array
@@ -163,7 +163,7 @@ function extractDocumentInfo(metadata, payload) {
         }).filter(author => author.length > 0);
     }
 
-    debugLog('Debug - extractDocumentInfo - processed authors:', authors, 'Type:', typeof authors, 'IsArray:', Array.isArray(authors));
+//    debugLog('extractDocumentInfo - processed authors:', authors, 'Type:', typeof authors, 'IsArray:', Array.isArray(authors));
 
     return {
         title: metadata.title || payload.title || 'No title (sorry, we are working on it.).',
@@ -177,7 +177,7 @@ function extractDocumentInfo(metadata, payload) {
 
 function replaceCitationMarkers(content, citationToDoc) {
     let processedContent = content;
-
+    debugLog('Replacing citation markers in content', { content, citationToDoc: Array.from(citationToDoc.entries()) });
     citationToDoc.forEach((docInfo, citationId) => {
         const oldMark = `[${citationId}]`;
         const newMark = `<a class="citation-bracket"
@@ -214,8 +214,7 @@ function createBibliographyHtml(documentBibliography) {
     return `
         <div class="bibliography-container">
             <div class="bibliography-header">
-                <span class="bibliography-icon">📚</span>
-                Bibliographie:
+                Pour en savoir plus:
             </div>
             ${documentsHtml}
         </div>
@@ -225,10 +224,10 @@ function createBibliographyHtml(documentBibliography) {
 
 function createDocumentHtml(doc) {
     // Build authors text with robust safety checks
-    let authorsText = '';
+    // which should not be necessary, we already check authors in extractDocumentInfo
+    //debugLog('Debug - doc.authors:', doc.authors, 'Type:', typeof doc.authors);
 
-    // Debug logging to understand what we're getting
-    debugLog('Debug - doc.authors:', doc.authors, 'Type:', typeof doc.authors);
+    let authorsText = '';
 
     if (doc.authors) {
         let authorsArray = [];
@@ -236,10 +235,8 @@ function createDocumentHtml(doc) {
         if (Array.isArray(doc.authors)) {
             authorsArray = doc.authors;
         } else if (typeof doc.authors === 'string') {
-            // Split string by common separators
             authorsArray = doc.authors.split(/[,;]/).map(author => author.trim()).filter(author => author.length > 0);
         } else {
-            // Convert any other type to string and wrap in array
             authorsArray = [String(doc.authors)];
         }
 
@@ -254,11 +251,14 @@ function createDocumentHtml(doc) {
     const linksHtml = createDocumentLinksHtml(doc);
 
     // Build the main HTML structure
-     let html = `<div class="document-item" id="cite-${doc.documentId}">`;
-    html += '<div class="document-header">';
+    let html = `<div class="document-item" id="cite-${doc.documentId}">`;
+
+    // Doc number
+    html += `<div class="document-number" style="margin-right: 1em;">[${doc.docNumber}]</div>`;
+
     html += '<div class="document-content">';
 
-    // Build the title with data attributes
+    // Title line, with document description in tooltip
     html += '<h4 class="document-title"';
     html += ' data-doc-title="' + escapeQuotes(doc.title) + '"';
     html += ' data-doc-description="' + escapeQuotes(doc.description) + '"';
@@ -269,22 +269,19 @@ function createDocumentHtml(doc) {
     html += doc.title;
     html += '</h4>';
 
-
-    // Add authors paragraph if authors exist
+    // Authors line
     if (authorsText) {
         html += '<p class="document-authors">';
         html += authorsText;
         html += '</p>';
     }
 
-    html += '</div>';
-    html += '<div class="document-number">';
-    html += '[' + doc.docNumber + ']';
-    html += '</div>';
-    html += '</div>';
-    html += '<div class="document-links">';
+    // DOI and HALId line
+    html += '<p class="document-links">';
     html += linksHtml;
-    html += '</div>';
+    html += '</p>';
+
+    html += '</div>'; // .document-content
     html += '</div>';
 
     return html;

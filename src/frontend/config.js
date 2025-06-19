@@ -20,6 +20,7 @@ const configPanel = document.getElementById('config-panel');
 const messagesContainer = document.getElementById('messages-container');
 const userInput = document.getElementById('user-input');
 const inputDiv = document.getElementById('input');
+const inputHelp = document.getElementById('input-help');
 const sendBtn = document.getElementById('send-btn');
 const errorContainer = document.getElementById('error-container');
 const errorText = document.getElementById('error-text');

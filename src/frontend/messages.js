@@ -37,8 +37,8 @@ function addMessage(type, content, isError = false) {
     debugLog('Adding message to UI', { type, contentLength: content.length, isError });
 
     const message = createMessage(type, content, isError);
-    mainEl.appendChild(message);
-    mainEl.scrollTop = mainEl.scrollHeight;
+    messagesContainer.appendChild(message);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
     return message;
 }
 
@@ -60,7 +60,6 @@ function showTyping() {
 
 function hideTyping() {
     debugLog('Hiding typing indicator');
-
     const typing = document.getElementById('typing-indicator');
     if (typing) {
         typing.remove();
