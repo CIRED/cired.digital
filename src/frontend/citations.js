@@ -203,6 +203,7 @@ function createBibliographyHtml(documentBibliography) {
 function createDocumentHtml(doc) {
     const authorsText = sanitizedAuthorsDate(doc.authors, doc.year);
     const linksHtml = createDocumentLinksHtml(doc);
+    const chunkList = doc.citations.map(c => `${doc.docNumber}${c.letterSuffix}`).join(', ');
 
     return `
         <div class="document-item" id="cite-${doc.documentId}">
@@ -218,6 +219,7 @@ function createDocumentHtml(doc) {
                     ${doc.title}
                 </h4>
                 ${authorsText ? `<p class="document-authors">${authorsText}</p>` : ''}
+                <p class="document-chunks">Chunks: ${chunkList}</p>
                 <p class="document-links">${linksHtml}</p>
             </div>
         </div>
