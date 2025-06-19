@@ -74,7 +74,7 @@ header #config-btn:hover {
   gap: 0.75rem;
 }
 
-.message-textarea {
+#user-input {
   flex: 1;
   width: 100%;
   padding: 0.75rem 1rem;
@@ -87,7 +87,7 @@ header #config-btn:hover {
   box-sizing: border-box;
 }
 
-.message-textarea:focus {
+.user-input:focus {
   outline: none;
   border-color: #3b82f6;
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
@@ -104,6 +104,8 @@ header #config-btn:hover {
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s;
+  font-weight: bold;
+  font-size: 1.125rem;
 }
 
 #send-btn:hover {
@@ -113,11 +115,6 @@ header #config-btn:hover {
 #send-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-}
-
-#send-icon {
-  font-weight: bold;
-  font-size: 1.125rem;
 }
 
 #input-help {

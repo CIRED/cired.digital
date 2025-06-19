@@ -18,7 +18,8 @@ let sessionId = null;
 const configBtn = document.getElementById('config-btn');
 const configPanel = document.getElementById('config-panel');
 const messagesContainer = document.getElementById('messages-container');
-const messageInput = document.getElementById('message-input');
+const userInput = document.getElementById('user-input');
+const inputDiv = document.getElementById('input');
 const sendBtn = document.getElementById('send-btn');
 const errorContainer = document.getElementById('error-container');
 const errorText = document.getElementById('error-text');
@@ -114,16 +115,29 @@ function setupEventListeners() {
         });
     }
 
-    // Send message handlers
-    sendBtn.addEventListener('click', sendMessage);
-    messageInput.addEventListener('keypress', handleKeyPress);
+    // Input text message handlers
+    sendBtn.addEventListener('click', processMessage);;
 
-    // Auto-resize textarea
-    messageInput.addEventListener('input', handleTextAreaResize);
+    userInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+        // Don't add a new line
+        e.preventDefault();
+        // Process the message
+        sendBtn.click();
+    }
+    });
 
-    // Update status display when config changes
-    // Met à jour le statut et la température à chaque changement d’URL ou de modèle
+    userInput.addEventListener('input', function() {
+        // Auto-resize the input field
+        this.style.height = 'auto';
+        // But no more than 120px tall
+        this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+    });
+
+    // Update backend status display when URL changes
     apiUrlInput.addEventListener('change', updateStatusDisplay);
+
+    // Set temperature and max-tokens to default values when model changes
     modelSelect.addEventListener('change', () => {
         const sel = window.Settings.models.find(m => m.value === modelSelect.value);
         if (sel && sel.defaultTemperature !== undefined) {
@@ -161,18 +175,6 @@ function setupEventListeners() {
     });
 }
 
-function handleKeyPress(e) {
-    if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault();
-        sendMessage();
-    }
-}
-
-function handleTextAreaResize() {
-    this.style.height = 'auto';
-    this.style.height = Math.min(this.scrollHeight, 120) + 'px';
-}
-
 function handleDebugModeToggle() {
     debugMode = debugModeCheckbox.checked;
 
@@ -182,6 +184,7 @@ function handleDebugModeToggle() {
         console.log('🐛 Debug mode disabled');
     }
 }
+
 // ==========================================
 // UTILITY FUNCTIONS
 // ==========================================

@@ -22,55 +22,14 @@
 // ==========================================
 // MESSAGE SENDING AND API COMMUNICATION
 // ==========================================
-async function sendMessage() {
-    const query = messageInput.value.trim();
+async function processMessage() {
+    const query = userInput.value.trim();
     if (!query || isLoading) return;
 
-    // Hide and remove the input help message
-    const inputHelp = document.getElementById('input-help');
-    if (inputHelp) {
-        inputHelp.classList.add('seen');
-        setTimeout(() => {
-            inputHelp.style.display = 'none';
-            inputHelp.classList.remove('seen');
-            }
-        , 3000);
-    }
-
-    // Momentarily hide the input box
-    const inputSection = document.getElementById('input');
-    if (inputSection) {
-          inputSection.classList.add('seen');
-    }
-
-    // Hide all existing messages with a fade-out effect
-    Array.from(mainEl.children).forEach(child => {
-        child.classList.add('seen');
-        setTimeout(() => {
-            child.style.display = 'none';
-            child.classList.remove('seen');
-            if (child.parentNode) {
-                child.parentNode.removeChild(child);
-            }
-        }, 3000);
-    });
-
-    // Set loading state
-    setLoadingState(true);
-    debugLog('Loading state set to true');
-    hideError();
-
-    // Add user message and show typing indicator after fade-out and removal
-    setTimeout(() => {
-        addMessage('user', query);
-        resetMessageInput();
-        showTyping();
-    }, 3000);
+    animateWaitStart(query);
 
     const queryId = 'query_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
-
     debugLog('Starting message send process', { query, queryId, isLoading });
-
 
     const config = getConfiguration();
     debugLog('Configuration retrieved', config);
@@ -95,22 +54,66 @@ async function sendMessage() {
         console.error('Error sending message:', err);
         handleError(err);
     } finally {
-        // Clean up
+        animateWaitEnd();
+        debugLog('Message processing completed');
+    }
+}
+
+function animateWaitStart(query) {
+    // Set loading state
+    setLoadingState(true);
+    hideError();
+
+    // Hide and remove the input help message
+    const inputHelp = document.getElementById('input-help');
+    if (inputHelp) {
+        inputHelp.classList.add('seen');
+        setTimeout(() => {
+            inputHelp.style.display = 'none';
+            inputHelp.classList.remove('seen');
+            }
+        , 3000);
+    }
+
+    // Momentarily hide the input box and button
+    inputDiv.classList.add('seen');
+
+    // Hide all existing messages with a fade-out effect
+    Array.from(mainEl.children).forEach(child => {
+        child.classList.add('seen');
+        setTimeout(() => {
+            child.style.display = 'none';
+            child.classList.remove('seen');
+            if (child.parentNode) {
+                child.parentNode.removeChild(child);
+            }
+        }, 3000);
+    });
+
+    // Add user message and show typing indicator after fade-out and removal
+    setTimeout(() => {
+        addMessage('user', query);
+        resetMessageInput();
+        showTyping();
+    }, 3000);
+}
+
+function animateWaitEnd() {
         hideTyping();
         setLoadingState(false);
-        inputSection.classList.remove('seen');
-        messageInput.focus();
-    }
+        inputDiv.classList.remove('seen');
+        userInput.focus();
 }
 
 function setLoadingState(loading) {
     isLoading = loading;
     sendBtn.disabled = loading;
+    debugLog('Loading state set to' + loading);
 }
 
 function resetMessageInput() {
-    messageInput.value = '';
-    messageInput.style.height = 'auto';
+    userInput.value = '';
+    userInput.style.height = 'auto';
 }
 
 function getConfiguration() {
