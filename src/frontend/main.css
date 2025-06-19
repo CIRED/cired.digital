@@ -458,8 +458,7 @@ table th {
 }
 
 .document-number {
-  min-width: 3em;
-  white-space: nowrap;
+  width: 3em;
   color: #555;
   text-align: right;
   flex-shrink: 0;
