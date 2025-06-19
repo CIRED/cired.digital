@@ -183,3 +183,12 @@ function escapeHtml(text) {
     div.textContent = text;
     return div.innerHTML;
 }
+
+
+// Cache for chunk data to avoid repeated API calls
+const chunkCache = new Map();
+
+function clearChunkCache() {
+    chunkCache.clear();
+    debugLog('Chunk cache cleared');
+}

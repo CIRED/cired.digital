@@ -1,32 +1,8 @@
 // ==========================================
-// CITATION PROCESSING WITH MESSAGE CONTEXT
-// ==========================================
-function processMessageWithCitations(content, citations, messageElement) {
-    debugLog('Processing message citations', {
-        contentLength: content.length,
-        citationsCount: citations.length
-    });
-
-    // Extract message ID for unique citation linking
-    const messageId = messageElement.id;
-
-    // Process citations with message context
-    const result = processVancouverCitations(content, citations, messageId);
-
-    // Update message content with processed citations
-    const contentElement = messageElement.querySelector('.message-content');
-    contentElement.innerHTML = result.processedContent;
-
-    // Add bibliography to message
-    addVancouverCitations(messageElement, result.documentBibliography);
-
-    return result;
-}
-
-// ==========================================
 // VANCOUVER CITATIONS PROCESSING
 // ==========================================
-function processVancouverCitations(content, citations, messageId = null) {
+
+function processVancouverCitations(citations, messageId = null) {
     debugLog('Processing Vancouver citations', {
         citationsCount: citations.length,
         messageId
@@ -84,17 +60,14 @@ function processVancouverCitations(content, citations, messageId = null) {
         });
     });
 
-    // Replace citation markers in content
-    const processedContent = replaceCitationMarkers(content, citationToDoc);
-
     debugLog('Citations processed successfully', {
         documentsCount: documentMap.size,
-        processedContentLength: processedContent.length
+        citationToDocCount: citationToDoc.size
     });
 
     return {
-        processedContent: processedContent,
-        documentBibliography: Array.from(documentMap.values())
+        citationToDoc: citationToDoc,
+        bibliography: Array.from(documentMap.values())
     };
 }
 
@@ -195,18 +168,6 @@ function replaceCitationMarkers(content, citationToDoc) {
 // ==========================================
 // BIBLIOGRAPHY DISPLAY
 // ==========================================
-function addVancouverCitations(messageElement, documentBibliography) {
-    debugLog('Adding Vancouver citations to message', {
-        bibliographyCount: documentBibliography?.length || 0
-    });
-
-    const citationsContainer = messageElement.querySelector('.citations-container');
-
-    if (documentBibliography && documentBibliography.length > 0) {
-        const bibliographyHtml = createBibliographyHtml(documentBibliography);
-        citationsContainer.innerHTML = bibliographyHtml;
-    }
-}
 
 function createBibliographyHtml(documentBibliography) {
     const documentsHtml = documentBibliography.map(doc => createDocumentHtml(doc)).join('');
@@ -221,70 +182,57 @@ function createBibliographyHtml(documentBibliography) {
     `;
 }
 
-
 function createDocumentHtml(doc) {
-    // Build authors text with robust safety checks
+    const authorsText = sanitizedAuthorsDate(doc.authors, doc.year);
+    const linksHtml = createDocumentLinksHtml(doc);
+
+    return `
+        <div class="document-item" id="cite-${doc.documentId}">
+            <div class="document-number" style="margin-right: 1em;">[${doc.docNumber}]</div>
+            <div class="document-content">
+                <h4 class="document-title"
+                    data-doc-title="${escapeQuotes(doc.title)}"
+                    data-doc-description="${escapeQuotes(doc.description)}"
+                    data-doc-authors="${escapeQuotes(authorsText)}"
+                    data-doc-year="${doc.year}"
+                    onmouseover="showTooltip(event, this)"
+                    onmouseout="hideTooltip()">
+                    ${doc.title}
+                </h4>
+                ${authorsText ? `<p class="document-authors">${authorsText}</p>` : ''}
+                <p class="document-links">${linksHtml}</p>
+            </div>
+        </div>
+    `;
+}
+
+function sanitizedAuthorsDate(authors, year) {
+    // Build authors line with robust safety checks
     // which should not be necessary, we already check authors in extractDocumentInfo
     //debugLog('Debug - doc.authors:', doc.authors, 'Type:', typeof doc.authors);
 
-    let authorsText = '';
+    let authorsArray = [];
 
-    if (doc.authors) {
-        let authorsArray = [];
-
-        if (Array.isArray(doc.authors)) {
-            authorsArray = doc.authors;
-        } else if (typeof doc.authors === 'string') {
-            authorsArray = doc.authors.split(/[,;]/).map(author => author.trim()).filter(author => author.length > 0);
-        } else {
-            authorsArray = [String(doc.authors)];
-        }
-
-        if (authorsArray.length > 0) {
-            authorsText = authorsArray.join(', ');
-            if (doc.year) {
-                authorsText += ' (' + doc.year + ')';
-            }
-        }
+    if (Array.isArray(authors)) {
+        authorsArray = authors;
+    } else if (typeof authors === 'string') {
+        authorsArray = authors.split(/[,;]/).map(author => author.trim()).filter(author => author.length > 0);
+    } else if (authors) {
+        authorsArray = [String(authors)];
     }
 
-    const linksHtml = createDocumentLinksHtml(doc);
+    // Remove quotes and trim
+    authorsArray = authorsArray.map(author =>
+        typeof author === 'string'
+            ? author.replace(/['"]/g, '').trim()
+            : String(author).replace(/['"]/g, '').trim()
+    ).filter(author => author.length > 0);
 
-    // Build the main HTML structure
-    let html = `<div class="document-item" id="cite-${doc.documentId}">`;
-
-    // Doc number
-    html += `<div class="document-number" style="margin-right: 1em;">[${doc.docNumber}]</div>`;
-
-    html += '<div class="document-content">';
-
-    // Title line, with document description in tooltip
-    html += '<h4 class="document-title"';
-    html += ' data-doc-title="' + escapeQuotes(doc.title) + '"';
-    html += ' data-doc-description="' + escapeQuotes(doc.description) + '"';
-    html += ' data-doc-authors="' + escapeQuotes(authorsText) + '"';
-    html += ' data-doc-year="' + doc.year + '"';
-    html += ' onmouseover="showTooltip(event, this)"';
-    html += ' onmouseout="hideTooltip()">';
-    html += doc.title;
-    html += '</h4>';
-
-    // Authors line
-    if (authorsText) {
-        html += '<p class="document-authors">';
-        html += authorsText;
-        html += '</p>';
+    let authorsText = authorsArray.join(', ');
+    if (authorsText && year) {
+        authorsText += ' (' + year + ')';
     }
-
-    // DOI and HALId line
-    html += '<p class="document-links">';
-    html += linksHtml;
-    html += '</p>';
-
-    html += '</div>'; // .document-content
-    html += '</div>';
-
-    return html;
+    return authorsText;
 }
 
 function createDocumentLinksHtml(doc) {
@@ -314,12 +262,4 @@ function createDocumentLinksHtml(doc) {
 function escapeQuotes(str) {
     if (!str) return '';
     return str.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
-
-// Cache for chunk data to avoid repeated API calls
-const chunkCache = new Map();
-
-function clearChunkCache() {
-    chunkCache.clear();
-    debugLog('Chunk cache cleared');
 }
