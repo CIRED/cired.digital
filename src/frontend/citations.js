@@ -207,7 +207,7 @@ function createDocumentHtml(doc) {
 
     return `
         <div class="document-item" id="cite-${doc.documentId}">
-            <div class="document-number" style="margin-right: 1em;">[${doc.docNumber}]</div>
+            <div class="document-number" style="margin-right: 1em;">[${chunkList}]</div>
             <div class="document-content">
                 <h4 class="document-title"
                     data-doc-title="${escapeQuotes(doc.title)}"
