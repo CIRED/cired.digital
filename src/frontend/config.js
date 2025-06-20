@@ -242,6 +242,8 @@ function handleDebugModeToggle() {
     } else {
         console.log('🐛 Debug mode disabled');
     }
+    // Update stats visibility in the UI
+    if (typeof updateStatsVisibility === "function") updateStatsVisibility();
 }
 
 // ==========================================
