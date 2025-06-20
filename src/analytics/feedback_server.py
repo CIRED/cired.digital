@@ -18,22 +18,21 @@ Endpoints:
 import csv
 import os
 from datetime import datetime
-from typing import Any, Literal
+from typing import Any
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
-from pydantic import BaseModel
 
 from .models import (
-    SessionLog,
-    RequestLog,
-    ArticleLog,
-    ResponseLog,
-    Feedback,
     DATA_MODEL_HEADERS,
+    ArticleLog,
+    Feedback,
+    RequestLog,
+    ResponseLog,
+    SessionLog,
 )
-from .utils import classify_network, write_to_csv
+from .utils import classify_network, read_csv_with_metadata, write_to_csv
 
 app = FastAPI()
 
@@ -45,40 +44,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-
-
-
-
-
-
-
-
-
-def read_csv_with_metadata(filename: str):
-    """Reads a CSV file and returns header, data rows, and metadata dict."""
-    if not os.path.exists(filename):
-        return [], [], {}
-    filesize = os.path.getsize(filename)
-    with open(filename, newline="", encoding="utf-8") as f:
-        reader = csv.reader(f)
-        rows = list(reader)
-    line_count = len(rows)
-    first_timestamp = ""
-    header = rows[0] if rows else []
-    data_rows = rows[1:] if len(rows) > 1 else []
-    # Correction: check if there is at least one data row and enough columns
-    if line_count > 1 and header:
-        for i, col in enumerate(header):
-            if "time" in col.lower() and len(rows[1]) > i:
-                first_timestamp = rows[1][i]
-                break
-    metadata = {
-        "filesize": filesize,
-        "line_count": line_count,
-        "first_timestamp": first_timestamp,
-    }
-    return header, data_rows, metadata
 
 
 def render_file_metadata(metadata: dict[str, Any], filename: str) -> str:
