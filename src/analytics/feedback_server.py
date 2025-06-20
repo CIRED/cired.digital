@@ -47,116 +47,12 @@ app.add_middleware(
 )
 
 
-class SessionLog(BaseModel):
-    """Schema for session start logging."""
-
-    session_id: str
-    start_time: str
-    privacy_mode: bool = False
 
 
-class RequestLog(BaseModel):
-    """Schema for request logging."""
-
-    session_id: str
-    query_id: str
-    query: str
-    config: dict[str, Any]
-    request_body: dict[str, Any]
-    timestamp: str
-    privacy_mode: bool = False
 
 
-class ArticleLog(BaseModel):
-    """Schema for request logging."""
-
-    session_id: str
-    query_id: str
-    article: str
-    timestamp: str
-    privacy_mode: bool = False
 
 
-class ResponseLog(BaseModel):
-    """Schema for response logging."""
-
-    session_id: str
-    query_id: str
-    response: dict[str, Any]
-    processing_time: float
-    timestamp: str
-    privacy_mode: bool = False
-
-
-class Feedback(BaseModel):
-    """Schema for incoming feedback data."""
-
-    session_id: str
-    query_id: str
-    feedback: Literal["up", "down"]
-    comment: str | None = None
-
-
-def classify_network(ip_address: str) -> str:
-    """
-    Classify network type based on IP address.
-
-    Parameters
-    ----------
-    ip_address : str
-        The IP address to classify.
-
-    Returns
-    -------
-    str
-        Network type (CIRED, ENPC, or EXTERNE).
-
-    """
-    if ip_address.startswith("193.51.120."):
-        return "CIRED"
-    elif ip_address.startswith("192.168."):
-        return "ENPC"
-    else:
-        return "EXTERNE"
-
-
-def write_to_csv(filename: str, headers: list[str], data: list[Any]) -> None:
-    """
-    Write data to CSV file with headers if file doesn't exist.
-
-    Parameters
-    ----------
-    filename : str
-        Name of the CSV file.
-    headers : list[str]
-        Column headers for the CSV.
-    data : list
-        Row data to write.
-
-    """
-    file_exists = os.path.exists(filename)
-    with open(filename, "a", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        if not file_exists:
-            writer.writerow(headers)
-        writer.writerow(data)
-
-
-# Data model headers for verification
-DATA_MODEL_HEADERS = {
-    "sessions.csv": ["session_id", "start_time", "ip", "network_type"],
-    "requests.csv": [
-        "session_id",
-        "query_id",
-        "query",
-        "config",
-        "request_body",
-        "timestamp",
-    ],
-    "responses.csv": ["query_id", "response", "processing_time", "timestamp"],
-    "feedback.csv": ["timestamp", "session_id", "query_id", "feedback", "comment"],
-    "articles.csv": ["session_id", "query_id", "article", "timestamp"],
-}
 
 
 def read_csv_with_metadata(filename: str):
