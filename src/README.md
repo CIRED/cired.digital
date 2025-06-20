@@ -19,7 +19,9 @@ A vanilla HTML/JS standalone web page application. The action loop is:
 - System shows the RAG answer with sources.
 - User provides feedback.
 
-Includes a script to dynamically generate the wordcloud showing the collection themes.
+Javascript uses the classic, not the ES-modules variant or Typescript.
+
+Includes a Python script to dynamically generate the wordcloud showing the collection themes.
 For commercial providers, we only include a **cost effective** (read: cheap) model.
 
 Models pricing and strings:

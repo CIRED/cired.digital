@@ -7,6 +7,7 @@ const FEEDBACK_HOST = 'http://localhost:7275';
 // ==========================================
 // GLOBAL STATE
 // ==========================================
+let settings;
 let isLoading = false;
 let articleIdCounter = 1;
 let debugMode = false;
@@ -36,68 +37,96 @@ const includeWebSearchCheckbox = document.getElementById('include-web-search');
 
 // Status display elements (none at the moment)
 
-// ==========================================
-// SETTINGS LOADER
-// ==========================================
-const hostname = window.location.hostname;
-
-const env = (!hostname || hostname === "doudou") ? "dev" : "prod";
-if (!window.allSettings || !window.allSettings[env]) {
-  throw new Error(`Settings inconnus pour '${env}'`);
+function detectEnvironment() {
+  const hostname = window.location.hostname;
+  return (!hostname || hostname === "doudou") ? "dev" : "prod";
 }
-window.Settings = window.allSettings[env];
+
+function validateSettings(env) {
+  if (!allSettings) {
+    throw new Error("allSettings not found. Make sure settings.js is included before config.js.");
+  }
+  if (!allSettings.profiles) {
+    throw new Error("allSettings.profiles not found. Invalid settings structure.");
+  }
+  if (!allSettings.profiles[env]) {
+    throw new Error(`Settings inconnus pour '${env}'. Available profiles: ${Object.keys(allSettings.profiles).join(', ')}`);
+  }
+}
+
+function initializeSettings() {
+  try {
+    const env = detectEnvironment();
+    validateSettings(env);
+    settings = allSettings.profiles[env];
+    return true;
+  } catch (err) {
+    console.error("Settings initialization failed:", err.message);
+    return false;
+  }
+}
 
 function loadSettings() {
   try {
-    if (!window.Settings) throw new Error("Settings not loaded. Make sure settings.js is included before config.js.");
-    applySettings(window.Settings);
+    if (!settings) throw new Error("Settings not loaded. Make sure settings.js is included before config.js.");
+    applySettings(settings);
   } catch (err) {
     addMainError("Failed to load settings: " + err.message);
   }
 }
 
 function applySettings(settings) {
-  // Set API URL
-  if (settings.apiUrl && typeof apiUrlInput !== "undefined") {
-    apiUrlInput.value = settings.apiUrl;
-  }
+    // Set API URL
+    if (settings.apiUrl && typeof apiUrlInput !== "undefined") {
+        apiUrlInput.value = settings.apiUrl;
+    }
 
-  // Populate language model select options
-  if (settings.models && Array.isArray(settings.models) && typeof modelSelect !== "undefined") {
-    modelSelect.innerHTML = '';
-    settings.models.forEach(model => {
-      const option = document.createElement('option');
-      option.value = model.value;
-      option.textContent = model.label;
-      if (model.selected) option.selected = true;
-      if (model.disabled) option.disabled = true;
-      modelSelect.appendChild(option);
-    });
-    // Set debug mode from settings
-    if (typeof debugModeCheckbox !== "undefined" && settings.debugMode !== undefined) {
-      debugModeCheckbox.checked = settings.debugMode;
-      debugMode = settings.debugMode;
+    // Populate language model select options
+    if (settings.models && Array.isArray(settings.models) && typeof modelSelect !== "undefined") {
+        modelSelect.innerHTML = '';
+
+        // Build model options using the new structure
+        settings.models.forEach(modelKey => {
+            const modelConfig = allSettings.modelDefaults[modelKey];
+            if (modelConfig) {
+                const option = document.createElement('option');
+                option.value = modelKey;
+                option.textContent = modelConfig.label;
+                if (modelConfig.selected) option.selected = true;
+                if (modelConfig.disabled) option.disabled = true;
+                modelSelect.appendChild(option);
+            }
+        });
+
+        // Set debug mode from settings
+        if (typeof debugModeCheckbox !== "undefined" && settings.debugMode !== undefined) {
+        debugModeCheckbox.checked = settings.debugMode;
+        debugMode = settings.debugMode;
+        }
+
+        // Initialize temperature and max tokens according to selected model
+        if (typeof temperatureInput !== "undefined" && Array.isArray(settings.models)) {
+        const selectedModelKey = modelSelect.value;
+        const modelConfig = allSettings.modelDefaults[selectedModelKey];
+
+        if (modelConfig && modelConfig.defaultTemperature !== undefined) {
+            temperatureInput.value = modelConfig.defaultTemperature;
+        }
+        if (typeof maxTokensInput !== "undefined" && modelConfig && modelConfig.defaultMaxTokens !== undefined) {
+            maxTokensInput.value = modelConfig.defaultMaxTokens;
+        }
+
+        if (chunkLimitInput && settings.chunkLimit !== undefined) {
+            chunkLimitInput.value = settings.chunkLimit;
+        }
+        if (searchStrategySelect && settings.searchStrategy !== undefined) {
+            searchStrategySelect.value = settings.searchStrategy;
+        }
+        if (includeWebSearchCheckbox && settings.includeWebSearch !== undefined) {
+            includeWebSearchCheckbox.checked = settings.includeWebSearch;
+        }
+        }
     }
-    // Initialise la température et max tokens selon le modèle sélectionné
-    if (typeof temperatureInput !== "undefined" && Array.isArray(settings.models)) {
-      const sel = settings.models.find(m => m.value === modelSelect.value);
-      if (sel && sel.defaultTemperature !== undefined) {
-        temperatureInput.value = sel.defaultTemperature;
-      }
-      if (typeof maxTokensInput !== "undefined" && sel && sel.defaultMaxTokens !== undefined) {
-        maxTokensInput.value = sel.defaultMaxTokens;
-      }
-      if (chunkLimitInput && settings.chunkLimit !== undefined) {
-        chunkLimitInput.value = settings.chunkLimit;
-      }
-      if (searchStrategySelect && settings.searchStrategy !== undefined) {
-        searchStrategySelect.value = settings.searchStrategy;
-      }
-      if (includeWebSearchCheckbox && settings.includeWebSearch !== undefined) {
-        includeWebSearchCheckbox.checked = settings.includeWebSearch;
-      }
-    }
-  }
 }
 
 // ==========================================
@@ -139,12 +168,14 @@ function setupEventListeners() {
 
     // Set temperature and max-tokens to default values when model changes
     modelSelect.addEventListener('change', () => {
-        const sel = window.Settings.models.find(m => m.value === modelSelect.value);
-        if (sel && sel.defaultTemperature !== undefined) {
-            temperatureInput.value = sel.defaultTemperature;
+        const selectedModelKey = modelSelect.value;
+        const modelConfig = gallSettings.modelDefaults[selectedModelKey];
+
+        if (modelConfig && modelConfig.defaultTemperature !== undefined) {
+            temperatureInput.value = modelConfig.defaultTemperature;
         }
-        if (sel && sel.defaultMaxTokens !== undefined) {
-            maxTokensInput.value = sel.defaultMaxTokens;
+        if (modelConfig && modelConfig.defaultMaxTokens !== undefined) {
+            maxTokensInput.value = modelConfig.defaultMaxTokens;
         }
         updateStatusDisplay();
     });
@@ -255,6 +286,7 @@ function isPrivacyModeEnabled() {
 }
 
 // ==========================================
+// SESSION MANAGEMENT
 // ==========================================
 function generateSessionId() {
     return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
@@ -365,6 +397,11 @@ async function logResponse(queryId, response, processingTime) {
 // ==========================================
 
 async function initializeConfig() {
+  // Initialize settings first
+  if (!initializeSettings()) {
+    addMainError("Settings initialization failed. Check console for details.");
+    return;
+  }
   // Load settings before anything else
   try {
     await loadSettings();
