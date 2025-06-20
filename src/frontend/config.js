@@ -8,7 +8,7 @@ const FEEDBACK_HOST = 'http://localhost:7275';
 // GLOBAL STATE
 // ==========================================
 let isLoading = false;
-let messageIdCounter = 1;
+let articleIdCounter = 1;
 let debugMode = false;
 let sessionId = null;
 
@@ -22,6 +22,7 @@ const userInput = document.getElementById('user-input');
 const inputDiv = document.getElementById('input');
 const inputHelp = document.getElementById('input-help');
 const sendBtn = document.getElementById('send-btn');
+const mainEl = document.querySelector('main');
 
 // Configuration elements
 const apiUrlInput = document.getElementById('api-url');

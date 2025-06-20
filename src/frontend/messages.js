@@ -1,71 +1,43 @@
-const mainEl = document.querySelector('main');
-
 // ==========================================
-// MESSAGE CREATION AND DISPLAY
+// MAIN CONTENTS CREATION AND DISPLAY
 // ==========================================
-
-function createMessage(content, isError = false) {
-    const messageDiv = document.createElement('div');
-    messageDiv.className = `message-wrapper`;
-    messageDiv.id = `message-${messageIdCounter++}`;
-
-    messageDiv.innerHTML = `
-        <div class="message-content-wrapper">
-            <div class="message-bubble">
-                <div class="${messageClass}">
-                    <div class="message-content">${content}</div>
-                </div>
-                <div class="citations-container"></div>
-            </div>
-        </div>
-    `;
-    return messageDiv;
-}
 
 function addMain(content) {
-    debugLog('Adding article to UI', {contentLength: content.length});
-
-    const message = createMessage(content, false);
-    messagesContainer.appendChild(message);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
-    return message;
+    debugLog('Adding article to main content zone', { contentLength: content.length });
+    const articleEl = document.createElement('article');
+    articleEl.id = `article-${articleIdCounter++}`;
+    articleEl.innerHTML = content;
+    messagesContainer.appendChild(articleEl);
+    return articleEl;
 }
 
 function addMainError(content) {
+    debugLog('Adding error message to main content zone', { contentLength: content.length });
     const errorDiv = document.createElement('div');
     errorDiv.className = 'error-message';
     errorDiv.textContent = content;
-    messagesContainer.appendChild(errorDiv);
+    messagesContainer.prepend(errorDiv);
 }
 
-// ==========================================
-// TYPING INDICATOR
-// ==========================================
 function showTyping() {
     debugLog('Showing typing indicator');
-
-    const msg = createMessage(
-        'bot',
-        `<span class="typing-spinner">⟳</span>Recherche dans la base documentaire (compter 6-20s)…`
-    );
-    msg.id = 'typing-indicator';
-    mainEl.appendChild(msg);
-    mainEl.scrollTop = mainEl.scrollHeight;
-    return msg;
+    hideTyping();
+    const spinnerDiv = document.createElement('div');
+    spinnerDiv.id = 'typing-indicator';
+    spinnerDiv.innerHTML = '<span class="typing-spinner">⟳</span>Recherche dans la base documentaire (compter 6-20s)…';
+    mainEl.appendChild(spinnerDiv);
 }
 
 function hideTyping() {
     debugLog('Hiding typing indicator');
-    const typing = document.getElementById('typing-indicator');
-    if (typing) {
-        typing.remove();
-    }
+    document.getElementById('typing-indicator')?.remove();
 }
 
 // ==========================================
-// FEEDBACK BUTTONS
+// FEEDBACK
 // ==========================================
-function addFeedbackButtons(botMessage, requestBody, results) {
+
+function addFeedbackButtons(article, requestBody, results) {
     debugLog('Adding feedback buttons to message');
 
     const feedbackDiv = document.createElement('div');
@@ -76,13 +48,8 @@ function addFeedbackButtons(botMessage, requestBody, results) {
         <button class="feedback-button feedback-down" title="Réponse insuffisante.">👎</button>
     `;
 
-    // Placer le feedback sous la bibliographie (citations-container)
-    const citContainer = botMessage.querySelector('.citations-container');
-    if (citContainer) {
-        citContainer.after(feedbackDiv);
-    } else {
-        botMessage.querySelector('.message-content').after(feedbackDiv);
-    }
+    // Placer le feedback après le contenu de l'article
+    article.appendChild(feedbackDiv);
 
     const commentInput = feedbackDiv.querySelector('input[type="text"]');
 
@@ -96,5 +63,44 @@ function addFeedbackButtons(botMessage, requestBody, results) {
         debugLog('User clicked thumbs down');
         sendFeedback(requestBody, results, 'down', commentInput.value.trim());
         feedbackDiv.remove();
+    });
+}
+
+
+function sendFeedback(requestBody, results, feedback, comment = '') {
+    debugLog('Sending feedback', {
+        feedback,
+        questionLength: requestBody.query.length,
+        answerLength: results.generated_answer?.length || 0,
+        commentLength: comment.length,
+        comment: comment,
+        hasComment: comment.length > 0
+    });
+    const feedbackData = {
+        question: requestBody.query,
+        answer: results.generated_answer,
+        feedback: feedback,
+        timestamp: new Date().toISOString(),
+        comment: comment || null
+    };
+
+    debugLog('Feedback data being sent to server', feedbackData);
+
+    fetch(`${FEEDBACK_HOST}/v1/feedback`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(feedbackData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            debugLog('Feedback request failed', { status: response.status });
+        } else {
+            debugLog('Feedback successfully sent.');
+        }
+    })
+    .catch(error => {
+        debugLog('Error sending feedback:', error);
     });
 }

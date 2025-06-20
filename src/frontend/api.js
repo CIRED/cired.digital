@@ -1,24 +1,3 @@
- // ==========================================
- // ==========================================
-
- marked.setOptions({
-     breaks: true,    // Convert \n to <br>
-     gfm: true,       // GitHub Flavored Markdown
-     tables: true,    // Table support
-     sanitize: false  // We'll use DOMPurify instead
- });
-
- // fenced tables avec optional language tag (```lang\n|...|\n```)
- const FENCED_TABLE_REGEX = /```(?:\w+)?\s*\n(\|[\s\S]*?\|)\s*\n```/g;
-
- function renderSafeLLMContent(markdown) {
-
-    const processedMarkdown = markdown.replace(FENCED_TABLE_REGEX, (_, tableContent) => tableContent);
-
-    const rawHtml = marked.parse(processedMarkdown);
-    return DOMPurify.sanitize(rawHtml);
-}
-
 // ==========================================
 // INPUT PROCESSING AND API COMMUNICATION
 // ==========================================
@@ -188,14 +167,14 @@ function insertArticle(requestBody, data, queryId) {
     const { citationToDoc, bibliography } = processCitations(citations);
 
     const content = data.results.generated_answer || 'No response generated.';
-    replyText = renderSafeLLMContent(replaceCitationMarkers(content, citationToDoc));
+    replyText = renderFromLLM(content);
 
     const htmlContent =
         replyTitle(requestBody) +
-        replyText +
+        replaceCitationMarkers(replyText, citationToDoc) +
         createBibliographyHtml(bibliography);
 
-    const article = addArticle(htmlContent);
+    const article = addMain(htmlContent);
 
     // lier les tooltips de citation
     article.querySelectorAll('.citation-bracket').forEach(el => {
@@ -231,42 +210,21 @@ function escapeHtml(text) {
     });
 }
 
-// FEEDBACK SYSTEM
-// ==========================================
-function sendFeedback(requestBody, results, feedback, comment = '') {
-    debugLog('Sending feedback', {
-        feedback,
-        questionLength: requestBody.query.length,
-        answerLength: results.generated_answer?.length || 0,
-        commentLength: comment.length,
-        comment: comment,
-        hasComment: comment.length > 0
-    });
-    const feedbackData = {
-        question: requestBody.query,
-        answer: results.generated_answer,
-        feedback: feedback,
-        timestamp: new Date().toISOString(),
-        comment: comment || null
-    };
+// Helper to safely render Markdown in model's reply.
+// Use the marked and purify libraries
 
-    debugLog('Feedback data being sent to server', feedbackData);
+marked.setOptions({
+     breaks: true,    // Convert \n to <br>
+     gfm: true,       // GitHub Flavored Markdown
+     tables: true,    // Table support
+     sanitize: false  // We'll use DOMPurify instead
+ });
 
-    fetch(`${FEEDBACK_HOST}/v1/feedback`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(feedbackData)
-    })
-    .then(response => {
-        if (!response.ok) {
-            debugLog('Feedback request failed', { status: response.status });
-        } else {
-            debugLog('Feedback successfully sent.');
-        }
-    })
-    .catch(error => {
-        debugLog('Error sending feedback:', error);
-    });
+ function renderFromLLM(markdown) {
+    // Sometimes the LLM fence tables in ```table or ```md blocks. Remove those fences.
+    const FENCED_TABLE_REGEX = /```(?:\w+)?\s*\n(\|[\s\S]*?\|)\s*\n```/g;
+    const processedMarkdown = markdown.replace(FENCED_TABLE_REGEX, (_, tableContent) => tableContent);
+
+    const rawHtml = marked.parse(processedMarkdown);
+    return DOMPurify.sanitize(rawHtml);
 }
