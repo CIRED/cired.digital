@@ -360,34 +360,32 @@ async function logSessionStart() {
     }
 }
 
-async function logQuery(queryId, question, queryParameters) {
+async function logRequest(queryId, query, config, requestBody) {
     try {
         const privacyMode = isPrivacyModeEnabled();
-
-        const queryData = {
+        const requestData = {
             session_id: sessionId,
             query_id: queryId,
-            question: question,
-            query_parameters: queryParameters,
+            query: query,
+            config: config,
+            request_body: requestBody,
             timestamp: new Date().toISOString(),
             privacy_mode: privacyMode
         };
-
-        const response = await fetch(`${FEEDBACK_HOST}/v1/log/query`, {
+        const response = await fetch(`${FEEDBACK_HOST}/v1/log/request`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(queryData)
+            body: JSON.stringify(requestData)
         });
-
         if (response.ok) {
-            debugLog('Query logged successfully');
+            debugLog('Request logged successfully');
         } else {
-            console.warn('Query logging failed:', response.status);
+            console.warn('Request logging failed:', response.status);
         }
     } catch (error) {
-        console.error('Error logging query:', error);
+        console.error('Error logging request:', error);
     }
 }
 
@@ -396,6 +394,7 @@ async function logResponse(queryId, response, processingTime) {
         const privacyMode = isPrivacyModeEnabled();
 
         const responseData = {
+            session_id: sessionId,
             query_id: queryId,
             response: response,
             processing_time: processingTime,
@@ -411,13 +410,33 @@ async function logResponse(queryId, response, processingTime) {
             body: JSON.stringify(responseData)
         });
 
-        if (responseResult.ok) {
-            debugLog('Response logged successfully');
-        } else {
-            console.warn('Response logging failed:', responseResult.status);
-        }
+        debugLog('Response logging status', { status: responseResult.status, ok: responseResult.ok , responseResult});
     } catch (error) {
         console.error('Error logging response:', error);
+    }
+}
+
+async function logArticle(sessionId, queryId, article) {
+    try {
+        const privacyMode = isPrivacyModeEnabled();
+        const articleData = {
+            session_id: sessionId,
+            query_id: queryId,
+            article: article,
+            timestamp: new Date().toISOString(),
+            privacy_mode: privacyMode
+        };
+        const response = await fetch(`${FEEDBACK_HOST}/v1/log/article`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(articleData)
+        });
+        debugLog('Article logging response', { status: response.status, ok: response.ok , response});
+    } catch (error) {
+        console.error('Error logging article:', error);
+            debugLog('Article logging failed', response.status);
     }
 }
 

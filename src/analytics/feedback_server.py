@@ -18,13 +18,11 @@ Endpoints:
 import csv
 import os
 from datetime import datetime
-from typing import Any
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
-
-from .models import (
+from models import (
     DATA_MODEL_HEADERS,
     ArticleLog,
     Feedback,
@@ -32,14 +30,8 @@ from .models import (
     ResponseLog,
     SessionLog,
 )
-from .utils import classify_network, write_to_csv
-from .render_utils import (
-    render_file_metadata,
-    abbreviate_cell,
-    html_wordwrap,
-    render_table_rows,
-    render_csv_table,
-)
+from render_utils import render_csv_table
+from utils import classify_network, write_to_csv
 
 app = FastAPI()
 
@@ -51,16 +43,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-
-
-
-
-
-
-
-
-
 
 
 @app.post("/v1/feedback")
@@ -86,37 +68,25 @@ async def receive_feedback(fb: Feedback) -> dict[str, str]:
     with open("feedback.csv", "a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         if not file_exists:
-            writer.writerow([
-                "timestamp",
-                "session_id",
-                "query_id",
-                "feedback",
-                "comment",
-            ])
-        writer.writerow([
-            timestamp,
-            fb.session_id,
-            fb.query_id,
-            fb.feedback,
-            fb.comment or "",
-        ])
+            writer.writerow(
+                [
+                    "timestamp",
+                    "session_id",
+                    "query_id",
+                    "feedback",
+                    "comment",
+                ]
+            )
+        writer.writerow(
+            [
+                timestamp,
+                fb.session_id,
+                fb.query_id,
+                fb.feedback,
+                fb.comment or "",
+            ]
+        )
     return {"message": "Feedback saved"}
-
-
-@app.post("/v1/rotate/{filename}")
-async def rotate_csv(filename: str):
-    # Sécurise le nom de fichier
-    if filename not in DATA_MODEL_HEADERS:
-        return JSONResponse({"error": "Fichier non autorisé."}, status_code=400)
-    base = filename.rsplit(".", 1)[0]
-    ext = filename.rsplit(".", 1)[-1]
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    new_name = f"{base}_{timestamp}.{ext}"
-    try:
-        os.rename(filename, new_name)
-        return {"status": "ok", "archived_as": new_name}
-    except Exception as e:
-        return JSONResponse({"error": str(e)}, status_code=500)
 
 
 @app.get("/v1/feedback/view", response_class=HTMLResponse)
@@ -294,7 +264,7 @@ async def log_response(response_log: ResponseLog) -> dict[str, str]:
 
 
 @app.get("/v1/csv/list", response_class=HTMLResponse)
-async def list_csv_files():
+async def list_csv_files() -> str:
     """
     List all CSV files in the current directory, with [View] and [Download] buttons after the filename.
 
@@ -313,6 +283,7 @@ async def list_csv_files():
             f"<li style='margin-bottom:8px;'><b>{f}</b> "
             f"<a href='/v1/csv/view/{f}' style='margin-left:10px;'><button>[View]</button></a> "
             f"<a href='/v1/csv/download/{f}' style='margin-left:5px;'><button>[Download]</button></a>"
+            f"<a href='/v1/csv/rotate/{f}' style='margin-left:5px;'><button>[Rotate]</button></a>"
             f"</li>"
         )
     html.append("</ul>")
@@ -320,7 +291,7 @@ async def list_csv_files():
 
 
 @app.get("/v1/csv/view/{filename}", response_class=HTMLResponse)
-async def view_csv_file(filename: str):
+async def view_csv_file(filename: str) -> str:
     """
     Render a CSV file as an HTML table.
 
@@ -336,31 +307,12 @@ async def view_csv_file(filename: str):
 
     """
     if not filename.endswith(".csv") or not os.path.isfile(filename):
-        # Always show the archive button, even if file not found
-        html = [f"<h2>{filename}</h2>"]
-        html.append("<h3>Fichier non trouvé.</h3>")
-        html.append(f"""
-            <form method="post" action="/v1/rotate/{filename}" onsubmit="return rotateCSV(this, '{filename}');">
-                <button type="submit">Archiver ce fichier</button>
-            </form>
-            <div id="rotate-result-{filename}" style="color:green"></div>
-            <script>
-            async function rotateCSV(form, filename) {{
-                event.preventDefault();
-                const resp = await fetch(form.action, {{method: "POST"}});
-                const data = await resp.json();
-                let div = document.getElementById("rotate-result-" + filename);
-                if(data.status === "ok") {{
-                    div.textContent = "Fichier archivé sous : " + data.archived_as;
-                    setTimeout(()=>window.location.reload(), 1000);
-                }} else {{
-                    div.style.color = "red";
-                    div.textContent = "Erreur : " + (data.error || "inconnue");
-                }}
-                return false;
-            }}
-            </script>
-        """)
+        html = [f"<h2>{filename}</h2>", "<h3>Fichier non trouvé.</h3>"]
+        html.append(
+            f"<form method='post' action='/v1/csv/rotate/{filename}'>"
+            f"<button type='submit'>Archiver ce fichier</button>"
+            f"</form>"
+        )
         return "\n".join(html)
     html = [f"<h2>{filename}</h2>", "<table border='1' cellpadding='5'>"]
     with open(filename, newline="", encoding="utf-8") as f:
@@ -371,11 +323,16 @@ async def view_csv_file(filename: str):
                 "<tr>" + "".join(f"<{tag}>{cell}</{tag}>" for cell in row) + "</tr>"
             )
     html.append("</table>")
+    html.append(
+        f"<form method='post' action='/v1/csv/rotate/{filename}'>"
+        f"<button type='submit'>Archiver ce fichier</button>"
+        f"</form>"
+    )
     return "\n".join(html)
 
 
 @app.get("/v1/csv/download/{filename}")
-async def download_csv_file(filename: str):
+async def download_csv_file(filename: str) -> FileResponse | JSONResponse:
     """
     Download a CSV file.
 
@@ -393,3 +350,29 @@ async def download_csv_file(filename: str):
     if not filename.endswith(".csv") or not os.path.isfile(filename):
         return JSONResponse({"error": "Fichier non trouvé."}, status_code=404)
     return FileResponse(filename, media_type="text/csv", filename=filename)
+
+
+@app.get("/v1/csv/rotate/{filename}")
+async def rotate_csv(filename: str) -> dict[str, str] | JSONResponse:
+    """
+    Archive (rotate) a CSV file by renaming it with a timestamp suffix.
+
+    Args:
+        filename: The name of the CSV file to rotate. Must be in DATA_MODEL_HEADERS.
+
+    Returns:
+        JSON response indicating success and the new filename, or an error message.
+
+    """
+    # Sécurise le nom de fichier
+    if filename not in DATA_MODEL_HEADERS:
+        return JSONResponse({"error": "Fichier non autorisé."}, status_code=400)
+    base = filename.rsplit(".", 1)[0]
+    ext = filename.rsplit(".", 1)[-1]
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    new_name = f"{base}_{timestamp}.{ext}"
+    try:
+        os.rename(filename, new_name)
+        return {"status": "ok", "archived_as": new_name}
+    except Exception as e:
+        return JSONResponse({"error": str(e)}, status_code=500)

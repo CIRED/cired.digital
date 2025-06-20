@@ -1,10 +1,23 @@
-import os
+"""
+Utility functions for rendering HTML representations of CSV data and metadata for analytics purposes.
+
+This module provides helpers to:
+- Render file metadata as HTML
+- Abbreviate long cell content with expand/collapse controls
+- Insert word wrapping in HTML for specific columns
+- Render HTML tables from CSV data, with special handling for certain columns
+- Render a CSV file as an HTML table with metadata and error handling
+"""
+
 import html as html_lib
+import os
 from typing import Any
-from .utils import read_csv_with_metadata
-from .models import DATA_MODEL_HEADERS
+
+from utils import read_csv_with_metadata
+
 
 def render_file_metadata(metadata: dict[str, Any], filename: str) -> str:
+    """Render HTML displaying file metadata (filename, line count, size, first timestamp)."""
     return (
         f"<div style='font-size:small;color:#888;'>"
         f"Fichier: <b>{filename}</b> | "
@@ -14,8 +27,20 @@ def render_file_metadata(metadata: dict[str, Any], filename: str) -> str:
         f"</div>"
     )
 
+
 def abbreviate_cell(cell: str, cell_id: str, max_length: int = 300) -> str:
-    """Return HTML for abbreviated cell with expand/collapse if needed."""
+    """
+    Return HTML for abbreviated cell content with expand/collapse links if the content exceeds max_length.
+
+    Args:
+        cell: The cell content to abbreviate.
+        cell_id: Unique identifier for the cell (used for toggling display).
+        max_length: Maximum length before abbreviation (default: 300).
+
+    Returns:
+        HTML string with abbreviated content and expand/collapse controls.
+
+    """
     safe_cell = html_lib.escape(cell)
     if len(cell) <= max_length:
         return safe_cell
@@ -30,10 +55,18 @@ def abbreviate_cell(cell: str, cell_id: str, max_length: int = 300) -> str:
         f"</div>"
     )
 
+
 def html_wordwrap(cell: str, col: str) -> str:
     """
-    Insert <wbr> for word wrapping on underscores for session_id/query_id,
-    and on 'T' for timestamp.
+    Insert <wbr> tags for word wrapping on underscores for session_id/query_id, and on 'T' for timestamp.
+
+    Args:
+        cell: The cell content to wrap.
+        col: The column name (affects wrapping logic).
+
+    Returns:
+        HTML string with <wbr> tags inserted as appropriate.
+
     """
     safe_cell = html_lib.escape(cell)
     if col in ("session_id", "query_id"):
@@ -42,9 +75,22 @@ def html_wordwrap(cell: str, col: str) -> str:
         return safe_cell.replace("T", "<wbr>T")
     return safe_cell
 
+
 def render_table_rows(
     header: list[str], rows: list[list[str]], filename: str = ""
 ) -> str:
+    """
+    Render HTML table rows from header and data rows, abbreviating certain columns if needed.
+
+    Args:
+        header: List of column names.
+        rows: List of data rows (each a list of strings).
+        filename: Name of the CSV file (affects abbreviation logic).
+
+    Returns:
+        HTML string containing table rows.
+
+    """
     html: list[str] = []
     html.append("<tr>" + "".join(f"<th>{cell}</th>" for cell in header) + "</tr>")
     abbr_cols = []
@@ -71,10 +117,20 @@ def render_table_rows(
         html.append("</tr>")
     return "\n".join(html)
 
+
 def render_csv_table(filename: str, title: str) -> list[str]:
     """
-    Render a CSV file as an HTML table, showing only the last 3 entries.
-    Also display file metadata, vérifie la conformité des colonnes.
+    Render a CSV file as an HTML table, showing only the last 3 entries and file metadata.
+
+    Displays an error message if the file cannot be read.
+
+    Args:
+        filename: Path to the CSV file.
+        title: Title to display above the table.
+
+    Returns:
+        List of HTML strings for rendering the table and metadata.
+
     """
     try:
         if not os.path.exists(filename):

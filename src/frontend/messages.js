@@ -55,32 +55,28 @@ function addFeedbackButtons(article, requestBody, results) {
 
     feedbackDiv.querySelector('.feedback-up').addEventListener('click', () => {
         debugLog('User clicked thumbs up');
-        sendFeedback(requestBody, results, 'up', commentInput.value.trim());
+        sendFeedback('up', commentInput.value.trim(), results);
         feedbackDiv.remove();
     });
 
     feedbackDiv.querySelector('.feedback-down').addEventListener('click', () => {
         debugLog('User clicked thumbs down');
-        sendFeedback(requestBody, results, 'down', commentInput.value.trim());
+        sendFeedback('down', commentInput.value.trim(), results);
         feedbackDiv.remove();
     });
 }
 
-
-function sendFeedback(requestBody, results, feedback, comment = '') {
+function sendFeedback(feedback, comment = '', results = {}) {
     debugLog('Sending feedback', {
         feedback,
-        questionLength: requestBody.query.length,
-        answerLength: results.generated_answer?.length || 0,
         commentLength: comment.length,
         comment: comment,
         hasComment: comment.length > 0
     });
     const feedbackData = {
-        question: requestBody.query,
-        answer: results.generated_answer,
+        session_id: typeof sessionId !== 'undefined' ? sessionId : '',
+        query_id: results.query_id || '',
         feedback: feedback,
-        timestamp: new Date().toISOString(),
         comment: comment || null
     };
 

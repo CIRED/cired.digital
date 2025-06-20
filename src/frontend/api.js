@@ -17,6 +17,8 @@ async function processInput() {
     const requestBody = buildRequestBody(query, config);
     debugLog('Request body built:', requestBody);
 
+    logRequest(queryId, query, config, requestBody);
+
     try {
         const startTime = Date.now();
         const response = await makeApiRequest(config.apiUrl, requestBody, queryId);
@@ -30,6 +32,8 @@ async function processInput() {
         const data = await response.json();
         debugLog('Raw server response', data);
 
+        logResponse(queryId, data, duration);
+
         insertArticle(config, requestBody, data, queryId, duration);
     } catch (err) {
         handleError(err);
@@ -39,13 +43,12 @@ async function processInput() {
     }
 }
 
-async function animateWaitStart(query) {
+async function animateWaitStart() {
     // Fade out
     setLoadingState(true);
 
     inputHelp.classList.add('seen');
     Array.from(messagesContainer.children).forEach(child => child.classList.add('seen'));
-  //  Array.from(mainEl.children).forEach(child => child.classList.add('seen'));
 
     // Await fade-out (3s as defined in CSS for .seen class)
     await new Promise(resolve => setTimeout(resolve, 3000));
@@ -113,17 +116,7 @@ function buildRequestBody(query, config) {
     };
 }
 
-async function makeApiRequest(apiUrl, requestBody, queryId) {
-    logQuery(
-        queryId,
-        requestBody.query,
-        {
-            model: requestBody.rag_generation_config.model,
-            temperature: requestBody.rag_generation_config.temperature,
-            max_tokens: requestBody.rag_generation_config.max_tokens,
-            search_mode: requestBody.search_settings.search_mode
-        });
-
+async function makeApiRequest(apiUrl, requestBody) {
     const response = await fetch(`${apiUrl}/v3/retrieval/rag`, {
         method: 'POST',
         headers: {
@@ -175,6 +168,8 @@ function insertArticle(config, requestBody, data, queryId, duration) {
         replaceCitationMarkers(replyText, citationToDoc) +
         createBibliographyHtml(bibliography);
 
+    logArticle(sessionId, queryId, htmlContent);
+
     const article = addMain(htmlContent);
 
     // lier les tooltips de citation
@@ -184,8 +179,6 @@ function insertArticle(config, requestBody, data, queryId, duration) {
     });
 
     addFeedbackButtons(article, requestBody, data.results);
-
-    logResponse(queryId, replyText);
 
     // Update stats visibility after article is inserted
     updateStatsVisibility();
