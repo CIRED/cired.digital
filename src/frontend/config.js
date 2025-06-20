@@ -8,7 +8,7 @@ const FEEDBACK_HOST = 'http://localhost:7275';
 // GLOBAL STATE
 // ==========================================
 let isLoading = false;
-let messageIdCounter = 1;
+let articleIdCounter = 1;
 let debugMode = false;
 let sessionId = null;
 
@@ -22,8 +22,7 @@ const userInput = document.getElementById('user-input');
 const inputDiv = document.getElementById('input');
 const inputHelp = document.getElementById('input-help');
 const sendBtn = document.getElementById('send-btn');
-const errorContainer = document.getElementById('error-container');
-const errorText = document.getElementById('error-text');
+const mainEl = document.querySelector('main');
 
 // Configuration elements
 const apiUrlInput = document.getElementById('api-url');
@@ -53,7 +52,7 @@ function loadSettings() {
     if (!window.Settings) throw new Error("Settings not loaded. Make sure settings.js is included before config.js.");
     applySettings(window.Settings);
   } catch (err) {
-    showError("Failed to load settings: " + err.message);
+    addMainError("Failed to load settings: " + err.message);
   }
 }
 
@@ -117,7 +116,7 @@ function setupEventListeners() {
     }
 
     // Input text message handlers
-    sendBtn.addEventListener('click', processMessage);;
+    sendBtn.addEventListener('click', processInput);;
 
     userInput.addEventListener('keydown', function(e) {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -222,19 +221,7 @@ function debugLog(message, data = null) {
     }
 }
 
-// ==========================================
-// ERROR HANDLING
-// ==========================================
-function showError(message) {
-    errorText.textContent = message;
-    errorContainer.classList.remove('hidden');
-    errorContainer.classList.add('flex');
-}
 
-function hideError() {
-    errorContainer.classList.add('hidden');
-    errorContainer.classList.remove('flex');
-}
 // ==========================================
 // PRIVACY MODE FUNCTIONALITY
 // ==========================================
@@ -386,11 +373,10 @@ async function initializeConfig() {
     debugMode = debugModeCheckbox.checked;
     debugLog('Configuration initialized');
   } catch (err) {
-    showError("Initialization failed: " + err.message);
+    addMainError("Initialization failed: " + err.message);
     console.error('Initialization error:', err);
   }
 }
-
 
 if (document.readyState === 'loading') {
      document.addEventListener('DOMContentLoaded', initializeConfig);
