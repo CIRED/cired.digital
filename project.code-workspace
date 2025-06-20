@@ -45,20 +45,41 @@
         },
         "typescript.preferences.includePackageJsonAutoImports": "auto",
         "python.defaultInterpreterPath": "./.venv/bin/python",
-        "editor.formatOnSave": true,
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": false,
+
+        // Global formatting left manual to avoid surprises
+        "editor.formatOnSave": false,
         "editor.codeActionsOnSave": {
             "source.organizeImports": "explicit"
         },
+
         "[python]": {
             "editor.defaultFormatter": "charliermarsh.ruff",
             "editor.formatOnSave": true,
             "editor.codeActionsOnSave": {
-                "source.organizeImports": "explicit",
-                "source.fixAll.ruff": "explicit"
+                "source.organizeImports": "always",
+                "source.fixAll.ruff": "always"
             }
         },
+
+        "[javascript]": {
+            "editor.formatOnSave": true
+        },
+
+        "[html]": {
+            "editor.formatOnSave": false
+        },
+
+        "[css]": {
+            "editor.formatOnSave": true
+        },
+
+        "[json]": {
+            "editor.formatOnSave": true
+        },
+
         "extensions.ignoreRecommendations": true,
-        "liveServer.settings.multiRootWorkspaceName": "Frontend"
     },
     "extensions": {
         "recommendations": [
@@ -116,7 +137,7 @@
             },
             {
                 "name": "Debug Python Analytics",
-                "type": "python",
+                "type": "debugpy",
                 "request": "launch",
                 "program": "${workspaceFolder:Analytics}/main.py",
                 "console": "integratedTerminal",
