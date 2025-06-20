@@ -329,6 +329,9 @@ def upload_documents(
             else:
                 logging.debug("Uploading new document: %s", doc_path)
 
+            # Ready to upload, see API documentation:
+            # https://r2r-docs.sciphi.ai/api-and-sdks/documents/create-document
+
             # Prepare upload parameters
             kwargs = {}
             if collection:
