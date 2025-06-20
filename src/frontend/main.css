@@ -287,6 +287,12 @@ table th {
   margin-bottom: 0.25rem;
 }
 
+#model-info {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-top: 0.5rem;
+}
+
 .label-with-status {
   display: flex;
   align-items: center;
@@ -343,6 +349,7 @@ table th {
   border-color: #3b82f6;
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
 }
+
 
 /* ==========================================
    CHECKBOX CONTAINERS

@@ -125,8 +125,33 @@ function applySettings(settings) {
         if (includeWebSearchCheckbox && settings.includeWebSearch !== undefined) {
             includeWebSearchCheckbox.checked = settings.includeWebSearch;
         }
+
+        setModelTariffDisplay(selectedModelKey);
         }
     }
+}
+
+function setModelTariffDisplay(modelKey) {
+    const fallback = "NA (unknown)";
+    const loading = "...";
+
+    const inputTariffEl = document.getElementById('input-tariff');
+    const outputTariffEl = document.getElementById('output-tariff');
+
+    const modelConfig = allSettings.modelDefaults[modelKey];
+    const tariff = modelConfig?.tariff;
+
+    if (tariff && inputTariffEl && outputTariffEl) {
+        inputTariffEl.textContent = formatTariff(tariff.input, fallback);
+        outputTariffEl.textContent = formatTariff(tariff.output, fallback);
+    } else {
+        if (inputTariffEl) inputTariffEl.textContent = loading;
+        if (outputTariffEl) outputTariffEl.textContent = loading;
+    }
+}
+
+function formatTariff(value, fallback) {
+    return typeof value === "number" ? value.toFixed(2) : fallback;
 }
 
 // ==========================================
@@ -169,7 +194,7 @@ function setupEventListeners() {
     // Set temperature and max-tokens to default values when model changes
     modelSelect.addEventListener('change', () => {
         const selectedModelKey = modelSelect.value;
-        const modelConfig = gallSettings.modelDefaults[selectedModelKey];
+        const modelConfig = allSettings.modelDefaults[selectedModelKey];
 
         if (modelConfig && modelConfig.defaultTemperature !== undefined) {
             temperatureInput.value = modelConfig.defaultTemperature;
@@ -177,6 +202,9 @@ function setupEventListeners() {
         if (modelConfig && modelConfig.defaultMaxTokens !== undefined) {
             maxTokensInput.value = modelConfig.defaultMaxTokens;
         }
+        // Set model tariff display on model change
+        setModelTariffDisplay(selectedModelKey);
+
         updateStatusDisplay();
     });
 
