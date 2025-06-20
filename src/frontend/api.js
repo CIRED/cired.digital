@@ -20,9 +20,10 @@
 }
 
 // ==========================================
-// MESSAGE SENDING AND API COMMUNICATION
+// INPUT PROCESSING AND API COMMUNICATION
 // ==========================================
-async function processMessage() {
+
+async function processInput() {
     const query = userInput.value.trim();
     if (!query || isLoading) return;
 
@@ -48,8 +49,8 @@ async function processMessage() {
 
         const data = await response.json();
         debugLog('Raw server response', data);
-        handleResponse(requestBody, data, queryId);
 
+        insertArticle(requestBody, data, queryId);
     } catch (err) {
         handleError(err);
     } finally {
@@ -61,7 +62,6 @@ async function processMessage() {
 async function animateWaitStart(query) {
     // Fade out
     setLoadingState(true);
-    hideError();
 
     inputHelp.classList.add('seen');
     Array.from(messagesContainer.children).forEach(child => child.classList.add('seen'));
@@ -171,14 +171,14 @@ function handleError(err) {
         errorMessage: err.message,
         errorStack: err.stack
     });
-    showError(err.message);
-    addMessage('bot', `I apologize, but I encountered an error: ${err.message}.`, true);
+    addMainError(`I apologize, but I encountered an error: ${err.message}.`, true);
 }
 
 // ==========================================
 // RESPONSE HANDLING
 // ==========================================
-function handleResponse(requestBody, data, queryId) {
+
+function insertArticle(requestBody, data, queryId) {
     debugLog('Starting response processing', {
         hasContent: !!data.results.generated_answer,
         citationsCount: data.results.citations?.length || 0
@@ -195,14 +195,15 @@ function handleResponse(requestBody, data, queryId) {
         replyText +
         createBibliographyHtml(bibliography);
 
-    const botMessage = addMessage('bot', htmlContent);
+    const article = addArticle(htmlContent);
+
     // lier les tooltips de citation
-    botMessage.querySelectorAll('.citation-bracket').forEach(el => {
+    article.querySelectorAll('.citation-bracket').forEach(el => {
       el.addEventListener('mouseover', ev => showChunkTooltip(ev, el));
       el.addEventListener('mouseout',  () => hideChunkTooltip());
     });
 
-    addFeedbackButtons(botMessage, requestBody, data.results);
+    addFeedbackButtons(article, requestBody, data.results);
 
     logResponse(queryId, replyText);
 }
@@ -268,19 +269,4 @@ function sendFeedback(requestBody, results, feedback, comment = '') {
     .catch(error => {
         debugLog('Error sending feedback:', error);
     });
-}
-
-// ==========================================
-// APPLICATION STARTUP
-// ==========================================
-
-function initializeAPI() {
-    debugLog('API module initialized');
-}
-
-// Initialize when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeAPI);
-} else {
-    initializeAPI();
 }

@@ -3,15 +3,14 @@ const mainEl = document.querySelector('main');
 // ==========================================
 // MESSAGE CREATION AND DISPLAY
 // ==========================================
-function createMessage(type, content, isError = false) {
+
+function createMessage(content, isError = false) {
     const messageDiv = document.createElement('div');
-    messageDiv.className = `message-wrapper ${type === 'user' ? 'user-wrapper' : 'bot-wrapper'}`;
+    messageDiv.className = `message-wrapper`;
     messageDiv.id = `message-${messageIdCounter++}`;
 
-    const messageClass = getMessageClass(type, isError);
-
     messageDiv.innerHTML = `
-        <div class="message-content-wrapper ${type === 'user' ? 'user-content' : 'bot-content'}">
+        <div class="message-content-wrapper">
             <div class="message-bubble">
                 <div class="${messageClass}">
                     <div class="message-content">${content}</div>
@@ -23,23 +22,20 @@ function createMessage(type, content, isError = false) {
     return messageDiv;
 }
 
-function getMessageClass(type, isError) {
-    if (type === 'user') {
-        return 'user-message';
-    }
-    return isError
-        ? 'error-message'
-        : 'bot-message';
-}
+function addMain(content) {
+    debugLog('Adding article to UI', {contentLength: content.length});
 
-
-function addMessage(type, content, isError = false) {
-    debugLog('Adding message to UI', { type, contentLength: content.length, isError });
-
-    const message = createMessage(type, content, isError);
+    const message = createMessage(content, false);
     messagesContainer.appendChild(message);
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
     return message;
+}
+
+function addMainError(content) {
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'error-message';
+    errorDiv.textContent = content;
+    messagesContainer.appendChild(errorDiv);
 }
 
 // ==========================================
