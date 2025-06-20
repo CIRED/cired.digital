@@ -29,7 +29,7 @@ Models pricing and strings:
 - (Anthropic)[https://docs.anthropic.com/en/docs/about-claude/models/overview]
 - (Deepseek)[https://api-docs.deepseek.com/quick_start/pricing]
 - (Mistral)[https://mistral.ai/pricing#api-pricing]
-- (OpenAI)[https://platform.openai.com/docs/pricing]
+- (OpenAI)[https://platform.openai.com/docs/pricing] and [https://openai.com/api/pricing/]
 
 
 ## analytics
