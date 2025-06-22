@@ -34,22 +34,17 @@ SNAPSHOT_PREFIX="snapshot_$(date +%F_%H%M%S)"
 
 BACKUP_RETENTION_COUNT=0  # Number of backup volumes to keep per volume type
 
-# Docker Compose Command Builder
-# Wrapper for consistent docker compose command usage across all scripts
+# Wrapper for logging docker compose usage across all scripts
 docker_compose_cmd() {
-    if ! validate_file "$COMPOSE_FILE"; then
+    local compose_file="${COMPOSE_FILE:-docker-compose.yaml}"
+
+    if ! validate_file "$compose_file"; then
+        log -e "Missing or invalid compose file: $compose_file"
         return 1
     fi
 
-    local cmd=(docker compose -p "$COMPOSE_PROJECT_NAME")
-
-    # Add any passed arguments
-    cmd+=("$@")
-
-    # Log the command in debug mode
-    log -d "Executing: ${cmd[*]}"
-
-    "${cmd[@]}"
+    log -d "Executing: docker compose $*"
+    docker compose "$@"
 }
 
 # Utility functions
