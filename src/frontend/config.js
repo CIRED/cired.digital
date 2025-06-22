@@ -2,7 +2,7 @@
 // CONFIGURATION CONSTANTS
 // ==========================================
 const DEFAULT_HOST = 'http://localhost:7272';
-const FEEDBACK_HOST = 'http://localhost:7275';
+ // const FEEDBACK_HOST = 'http://localhost:7275'; // désactivé, utilisation de settings.feedbackUrl
 
 // ==========================================
 // GLOBAL STATE
@@ -35,7 +35,9 @@ const chunkLimitInput = document.getElementById('chunk-limit');
 const searchStrategySelect = document.getElementById('search-strategy');
 const includeWebSearchCheckbox = document.getElementById('include-web-search');
 
-// Status display elements (none at the moment)
+ // Status display elements (none at the moment)
+ const feedbackUrlInput = document.getElementById('feedback-url');
+ const feedbackStatusEl = document.getElementById('feedback-status');
 
 function detectEnvironment() {
   const hostname = window.location.hostname;
@@ -225,7 +227,7 @@ function setupEventListeners() {
 
     document.getElementById('view-analytics-link').addEventListener('click', function(e) {
         e.preventDefault();
-        window.open(FEEDBACK_HOST + '/v1/analytics/view', '_blank');
+        window.open(feedbackUrlInput.value.replace(/\/$/, '') + '/v1/analytics/view', '_blank');
     });
 
     document.getElementById('privacy-policy-link').addEventListener('click', function(e) {
@@ -268,6 +270,22 @@ function fetchApiStatus() {
         .catch(() => {
             statusEl.textContent = 'Server status: unreachable';
             statusEl.className = 'status-text status-error';
+        });
+}
+
+function fetchFeedbackStatus() {
+    if (!feedbackUrlInput || !feedbackStatusEl) return;
+    const url = feedbackUrlInput.value.replace(/\/$/, '') + '/health';
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            const s = (data.status || 'unknown').toUpperCase();
+            feedbackStatusEl.textContent = `Statut journalisation : ${s}`;
+            feedbackStatusEl.className = s === 'OK' ? 'status-text status-success' : 'status-text status-error';
+        })
+        .catch(() => {
+            feedbackStatusEl.textContent = 'Statut journalisation : INJOIGNABLE';
+            feedbackStatusEl.className = 'status-text status-error';
         });
 }
 

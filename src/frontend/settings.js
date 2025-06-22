@@ -2,6 +2,7 @@ const allSettings = {
   profiles: {
     dev: {
       apiUrl: "http://localhost:7272",
+      feedbackUrl: "http://localhost:7275",
       debugMode: true,
       chunkLimit: 10,
       searchStrategy: "vanilla",
@@ -21,6 +22,7 @@ const allSettings = {
     },
     prod: {
       apiUrl: "http://cired.digital:7272",
+      feedbackUrl: "http://cired.digital:7275",
       debugMode: false,
       chunkLimit: 10,
       searchStrategy: "vanilla",

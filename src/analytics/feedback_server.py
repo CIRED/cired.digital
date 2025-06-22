@@ -35,6 +35,10 @@ from utils import classify_network, write_to_csv
 
 app = FastAPI()
 
+@app.get("/health", response_class=JSONResponse)
+async def health() -> dict[str, str]:
+    return {"status": "ok"}
+
 # CORS support
 app.add_middleware(
     CORSMiddleware,
