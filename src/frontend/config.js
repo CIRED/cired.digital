@@ -11,6 +11,9 @@ let isLoading = false;
 let articleIdCounter = 1;
 let debugMode = false;
 let sessionId = null;
+let statusInterval = null;
+let feedbackInterval = null;
+const POLL_INTERVAL_MS = 1000;
 
 // ==========================================
 // DOM ELEMENTS
@@ -164,11 +167,24 @@ function setupEventListeners() {
     // Configuration panel toggle
     configBtn.addEventListener('click', () => {
         configPanel.classList.toggle('hidden');
+        if (!configPanel.classList.contains('hidden')) {
+            // Panel ouvert: démarrer polling
+            fetchApiStatus();
+            fetchFeedbackStatus();
+            statusInterval = setInterval(fetchApiStatus, POLL_INTERVAL_MS);
+            feedbackInterval = setInterval(fetchFeedbackStatus, POLL_INTERVAL_MS);
+        } else {
+            // Panel fermé: arrêter polling
+            clearInterval(statusInterval);
+            clearInterval(feedbackInterval);
+        }
     });
     const configCloseBtn = document.getElementById('config-close-btn');
     if (configCloseBtn) {
         configCloseBtn.addEventListener('click', () => {
             configPanel.classList.add('hidden');
+            clearInterval(statusInterval);
+            clearInterval(feedbackInterval);
         });
     }
 
