@@ -82,7 +82,7 @@ function sendFeedback(feedback, comment = '', results = {}) {
 
     debugLog('Feedback data being sent to server', feedbackData);
 
-    fetch(`${FEEDBACK_HOST}/v1/feedback`, {
+    fetch(analyticsEndpoint(feedback), {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
