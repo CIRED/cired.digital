@@ -49,7 +49,7 @@ app.add_middleware(
 )
 
 
-@app.post("/v1/feedback")
+@app.post("/v1/log/feedback")
 async def receive_feedback(fb: Feedback) -> dict[str, str]:
     """
     Save user feedback to a CSV file.
@@ -93,7 +93,7 @@ async def receive_feedback(fb: Feedback) -> dict[str, str]:
     return {"message": "Feedback saved"}
 
 
-@app.get("/v1/feedback/view", response_class=HTMLResponse)
+@app.get("/v1/log/feedback/view", response_class=HTMLResponse)
 async def view_feedback() -> str:
     """
     Render stored feedback as an HTML table.
