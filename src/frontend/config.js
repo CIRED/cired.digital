@@ -2,7 +2,6 @@
 // CONFIGURATION CONSTANTS
 // ==========================================
 const DEFAULT_HOST = 'http://localhost:7272';
- // const FEEDBACK_HOST = 'http://localhost:7275'; // désactivé, utilisation de settings.feedbackUrl
 
 // ==========================================
 // GLOBAL STATE
@@ -34,10 +33,8 @@ const debugModeCheckbox = document.getElementById('debug-mode');
 const chunkLimitInput = document.getElementById('chunk-limit');
 const searchStrategySelect = document.getElementById('search-strategy');
 const includeWebSearchCheckbox = document.getElementById('include-web-search');
-
- // Status display elements (none at the moment)
- const feedbackUrlInput = document.getElementById('feedback-url');
- const feedbackStatusEl = document.getElementById('feedback-status');
+const feedbackUrlInput = document.getElementById('feedback-url');
+const feedbackStatusEl = document.getElementById('feedback-status');
 
 function detectEnvironment() {
   const hostname = window.location.hostname;
@@ -81,6 +78,10 @@ function applySettings(settings) {
     // Set API URL
     if (settings.apiUrl && typeof apiUrlInput !== "undefined") {
         apiUrlInput.value = settings.apiUrl;
+    }
+
+    if (settings.feedbackUrl && typeof feedbackUrlInput !== "undefined") {
+        feedbackUrlInput.value = settings.feedbackUrl;
     }
 
     // Populate language model select options
@@ -280,11 +281,11 @@ function fetchFeedbackStatus() {
         .then(res => res.json())
         .then(data => {
             const s = (data.status || 'unknown').toUpperCase();
-            feedbackStatusEl.textContent = `Statut journalisation : ${s}`;
+            feedbackStatusEl.textContent = `Server status : ${s}`;
             feedbackStatusEl.className = s === 'OK' ? 'status-text status-success' : 'status-text status-error';
         })
         .catch(() => {
-            feedbackStatusEl.textContent = 'Statut journalisation : INJOIGNABLE';
+            feedbackStatusEl.textContent = 'Server status : Unreachable';
             feedbackStatusEl.className = 'status-text status-error';
         });
 }
@@ -356,8 +357,7 @@ async function initializeConfig() {
     // Lancement du polling toutes les secondes
     const POLL_INTERVAL_MS = 1000;
     setInterval(fetchApiStatus, POLL_INTERVAL_MS);
-    // Premier appel immédiat
-    fetchApiStatus();
+    setInterval(fetchFeedbackStatus, POLL_INTERVAL_MS);
 
     debugMode = debugModeCheckbox.checked;
     debugLog('Configuration initialized');
