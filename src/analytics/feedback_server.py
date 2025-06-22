@@ -19,7 +19,7 @@ import csv
 import os
 from datetime import datetime
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from models import (
@@ -332,7 +332,7 @@ async def view_csv_file(filename: str) -> str:
 
 
 @app.get("/v1/csv/download/{filename}")
-async def download_csv_file(filename: str) -> FileResponse | JSONResponse:
+async def download_csv_file(filename: str) -> Response:
     """
     Download a CSV file.
 
@@ -353,7 +353,7 @@ async def download_csv_file(filename: str) -> FileResponse | JSONResponse:
 
 
 @app.get("/v1/csv/rotate/{filename}")
-async def rotate_csv(filename: str) -> dict[str, str] | JSONResponse:
+async def rotate_csv(filename: str) -> Response:
     """
     Archive (rotate) a CSV file by renaming it with a timestamp suffix.
 
@@ -373,6 +373,6 @@ async def rotate_csv(filename: str) -> dict[str, str] | JSONResponse:
     new_name = f"{base}_{timestamp}.{ext}"
     try:
         os.rename(filename, new_name)
-        return {"status": "ok", "archived_as": new_name}
+        return JSONResponse({"status": "ok", "archived_as": new_name})
     except Exception as e:
         return JSONResponse({"error": str(e)}, status_code=500)
