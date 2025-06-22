@@ -316,6 +316,11 @@ function initializePrivacyMode() {
 function updatePrivacyStatus() {
     const privacyMode = localStorage.getItem('privacy-mode') === 'true';
     debugLog('Privacy status updated', { privacyMode });
+    // Afficher ou masquer le contrôle de l'URL de feedback selon le mode Privacy
+    const feedbackGroup = document.querySelector('.privacy-container .form-group');
+    if (feedbackGroup) {
+        feedbackGroup.style.display = privacyMode ? 'none' : '';
+    }
 }
 
 function isPrivacyModeEnabled() {
