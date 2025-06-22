@@ -375,10 +375,6 @@ async function initializeConfig() {
     await loadSettings();
     setupEventListeners();
 
-    // Lancement du polling toutes les secondes
-    const POLL_INTERVAL_MS = 1000;
-    setInterval(fetchApiStatus, POLL_INTERVAL_MS);
-    setInterval(fetchFeedbackStatus, POLL_INTERVAL_MS);
 
     debugMode = debugModeCheckbox.checked;
     debugLog('Configuration initialized');
