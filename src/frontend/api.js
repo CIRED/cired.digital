@@ -207,35 +207,3 @@ function replyTitle(config, requestBody, data, duration) {
             <hr/>
     `;
 }
-
-// Helper to escape HTML in the query
-function escapeHtml(text) {
-    return text.replace(/[&<>"']/g, function (m) {
-        return ({
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
-            "'": '&#39;'
-        })[m];
-    });
-}
-
-// Helper to safely render Markdown in model's reply.
-// Use the marked and purify libraries
-
-marked.setOptions({
-     breaks: true,    // Convert \n to <br>
-     gfm: true,       // GitHub Flavored Markdown
-     tables: true,    // Table support
-     sanitize: false  // We'll use DOMPurify instead
- });
-
- function renderFromLLM(markdown) {
-    // Sometimes the LLM fence tables in ```table or ```md blocks. Remove those fences.
-    const FENCED_TABLE_REGEX = /```(?:\w+)?\s*\n(\|[\s\S]*?\|)\s*\n```/g;
-    const processedMarkdown = markdown.replace(FENCED_TABLE_REGEX, (_, tableContent) => tableContent);
-
-    const rawHtml = marked.parse(processedMarkdown);
-    return DOMPurify.sanitize(rawHtml);
-}
