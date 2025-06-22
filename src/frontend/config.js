@@ -333,8 +333,14 @@ async function initializeConfig() {
   // Load settings before anything else
   try {
     await loadSettings();
-    updateStatusDisplay();
     setupEventListeners();
+
+    // Lancement du polling toutes les secondes
+    const POLL_INTERVAL_MS = 1000;
+    setInterval(fetchApiStatus, POLL_INTERVAL_MS);
+    // Premier appel immédiat
+    fetchApiStatus();
+
     debugMode = debugModeCheckbox.checked;
     debugLog('Configuration initialized');
   } catch (err) {
