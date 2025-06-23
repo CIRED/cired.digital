@@ -1,5 +1,5 @@
 """
-Collect and display user feedback and logging data.
+Monitor Cirdi app.
 
 A FastAPI application to collect Cirdi analytics.
 """
@@ -160,8 +160,10 @@ async def monitor_event(event: MonitorEvent) -> dict[str, str]:
     # Now save the event as a JSON file
     filename = f"{safe_session}-{safe_timestamp}-{safe_type}.json"
     file_path = os.path.normpath(os.path.join(dir_path, filename))
+    abs_dir_path = os.path.abspath(dir_path)
+    abs_file_path = os.path.abspath(file_path)
     # Ensure the file_path is within the intended directory
-    if not file_path.startswith(os.path.abspath(dir_path)):
+    if not abs_file_path.startswith(abs_dir_path + os.sep):
         raise ValueError("Invalid file path: potential path traversal detected")
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(event.model_dump(), f, ensure_ascii=False, indent=2)

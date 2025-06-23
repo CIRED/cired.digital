@@ -48,6 +48,7 @@ data/archived/*
 *.xlsx
 *.db
 *.sqlite3
+/reports/analytics-logs/
 
 # Generated reports
 reports/*
