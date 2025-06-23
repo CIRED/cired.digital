@@ -21,8 +21,7 @@ async function processInput() {
         queryId,
         query,
         config,
-        requestBody,
-        timestamp: new Date().toISOString()
+        requestBody
     });
 
     try {
