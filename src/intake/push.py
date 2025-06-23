@@ -80,7 +80,7 @@ def get_args() -> argparse.Namespace:
 
 def establish_available_documents(
     catalog_file: Path, pdf_dir: Path
-) -> tuple[dict[str, dict[str, Any]], int, int]:
+) -> tuple[dict[str, dict[str, Any]], int, int, int]:
     """
     Walk the catalog and verify PDF files exist in the documents directory.
 
@@ -89,7 +89,6 @@ def establish_available_documents(
         - Total number of records in catalog
         - Number of missing PDF files
         - Number of oversized PDF files
-        - Number of non-PDF files
 
     """
     catalog_by_hal_id, total_records = load_catalog_by_hal_id(catalog_file)
