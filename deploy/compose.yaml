@@ -242,8 +242,9 @@ services:
     ports:
       - "7275:7275"
     volumes:
-      - ../src/analytics/feedback_server.py:/app/feedback_server.py
-    command: uvicorn feedback_server:app --host 0.0.0.0 --port 7275 --reload
+      - ../src/analytics/monitor.py:/app/monitor.py
+      - ../reports/analytics-logs:/app/data/logs
+    command: uvicorn monitor:app --host 0.0.0.0 --port 7275 --reload
     restart: unless-stopped
 
   frontend:

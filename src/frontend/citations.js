@@ -154,10 +154,8 @@ function extractDocumentInfo(metadata, payload) {
         }).filter(author => author.length > 0);
     }
 
-//    debugLog('extractDocumentInfo - processed authors:', authors, 'Type:', typeof authors, 'IsArray:', Array.isArray(authors));
-
     return {
-        title: metadata.title || payload.title || 'No title (sorry, we are working on it.).',
+        title: metadata.title || payload.title || 'No title (might be an hallucination).',
         description: metadata.description || '',
         doi: metadata.doi || '',
         halid: metadata.hal_id || '',

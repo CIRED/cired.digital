@@ -16,4 +16,4 @@ COPY *.py .
 EXPOSE 7275
 
 # Entrypoint overridden by docker-compose for live reload
-CMD ["uvicorn", "feedback_server:app", "--host", "0.0.0.0", "--port", "7275"]
+CMD ["uvicorn", "monitor:app", "--host", "0.0.0.0", "--port", "7275"]
