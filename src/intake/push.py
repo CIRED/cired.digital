@@ -425,6 +425,8 @@ def print_upload_statistics(
     logging.info("Successfully uploaded: %d", success_count)
     logging.info("Skipped: %d", skipped_count)
     logging.info("Failed: %d", len(failed_documents))
+    logging.info("Résumé : total=%d, manquants=%d, volumineux=%d, valides_locaux=%d, sur_serveur=%d, à_téléverser=%d, téléversés=%d, ignorés=%d, échecs=%d",
+                 total_records, missing_files, oversized_files, len(available_docs), len(server_documents), len(uploadable_files), success_count, skipped_count, len(failed_documents))
 
     if failed_documents:
         logging.error("Failed files:")
