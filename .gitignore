@@ -87,9 +87,8 @@ Thumbs.db
 *.env.test.local
 *.env.production.local
 
-# Secrets
+# Secrets (should not even be in-tree)
 secrets/*
-.env
 secrets.env
 *+rendered.toml
 

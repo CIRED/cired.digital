@@ -11,7 +11,7 @@ RUN pip install fastapi uvicorn
 
 # Copy the file only if you want a fallback image build
 # Leave this out if you plan to mount the file instead (or leave in, overriden)
-COPY feedback_server.py .
+COPY *.py .
 
 EXPOSE 7275
 

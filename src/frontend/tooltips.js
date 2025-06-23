@@ -173,14 +173,6 @@ function hideChunkTooltip() {
     }
 }
 
-// Utility function to escape HTML in text content
-function escapeHtml(text) {
-    if (!text) return '';
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-}
-
 
 // Cache for chunk data to avoid repeated API calls
 const chunkCache = new Map();

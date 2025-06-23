@@ -372,6 +372,14 @@ table th {
   background-color: #fffbeb;
   border-color: #fcd34d;
 }
+/* Espace sous la ligne Privacy Mode */
+.privacy-container .checkbox-label {
+  margin-bottom: 1rem;
+}
+/* Réduire l'espace sous l'input URL de feedback */
+.privacy-container .form-group {
+  margin-bottom: 0.5rem;
+}
 
 .debug-container {
   background-color: #eff6ff;

@@ -140,6 +140,13 @@
         <input type="checkbox" id="privacy-mode" class="checkbox-input">
         <span class="privacy-text"><strong>Privacy Mode</strong> – No logging</span>
       </label>
+      <div class="form-group">
+        <div class="label-with-status">
+          <label class="form-label" for="feedback-url">URL du backend de journalisation</label>
+          <div class="status-text" id="feedback-status">Chargement…</div>
+        </div>
+        <input class="form-input" id="feedback-url" type="text" readonly/>
+      </div>
     </div>
 
     <div class="checkbox-container debug-container">
@@ -153,6 +160,7 @@
 </aside>
 
 
+<script src="utils.js"></script>
 <script src="settings.js"></script>
 <script src="config.js"></script>
 <script src="messages.js"></script>

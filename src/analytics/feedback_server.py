@@ -1,27 +1,18 @@
 """
 Collect and display user feedback and logging data.
 
-A simple FastAPI application to collect and display user feedback
-on chatbot answers. Feedback is stored in a local CSV file and
-can be retrieved in HTML table format for review.
-
-Endpoints:
-- POST /v1/feedback: Accepts user feedback and appends it to a CSV file.
-- GET /v1/feedback/view: Displays the collected feedback as an HTML table.
-- POST /v1/log/session: Logs session start information.
-- POST /v1/log/query: Logs user questions.
-- POST /v1/log/response: Logs bot responses.
-- GET /v1/analytics/view: Displays all collected data as HTML tables.
+A FastAPI application to collect Cirdi analytics.
 """
 
-import csv
+import json
 import os
-from typing import Any, Literal
+from datetime import UTC, datetime
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import HTMLResponse
-from pydantic import BaseModel
+from fastapi.responses import HTMLResponse, JSONResponse
+from models import MonitorEvent
+from utils import sanitize
 
 app = FastAPI()
 
@@ -35,215 +26,117 @@ app.add_middleware(
 )
 
 
-class Feedback(BaseModel):
-    """Schema for incoming feedback data."""
-
-    question: str
-    answer: str
-    feedback: Literal["up", "down"]
-    timestamp: str
-    comment: str | None = None
+@app.get("/health", response_class=JSONResponse)
+async def health() -> dict[str, str]:
+    """Return a simple health check response."""
+    return {"status": "ok"}
 
 
-class SessionLog(BaseModel):
-    """Schema for session start logging."""
+PRIVACY_VIEW_HTML = """
+<html>
+  <head>
+    <title>CIRED.digital Analytics</title>
+    <style>
+      body { font-family: sans-serif; max-width: 700px; margin: 2em auto; }
+      h1, h2 { color: #2c3e50; }
+      ul { margin-bottom: 2em; }
+      .event-type { font-weight: bold; color: #2980b9; }
+      .payload { color: #555; font-size: 0.97em; }
+      .privacy { background: #f6f8fa; border-left: 4px solid #2980b9; padding: 1em; margin: 2em 0; }
+    </style>
+  </head>
+  <body>
+    <h1>CIRED.digital – Données collectées</h1>
+    <p>
+      Pour améliorer la qualité du service, CIRED.digital collecte des événements d’utilisation.
+      <b>Aucune donnée personnelle, identifiant civil ou contenu privé n’est enregistré.</b>
+      Le système respecte le mode «&nbsp;confidentialité&nbsp;» si vous l’activez.
+    </p>
+    <div class="privacy">
+      <b>Protection de la vie privée&nbsp;:</b><br>
+      – Un identifiant de session anonyme est généré à chaque visite.<br>
+      – Vous pouvez activer le mode confidentialité à tout moment, auquel cas aucune donnée n’est envoyée.<br>
+      – Les données servent uniquement à l’amélioration du service et à la détection d’anomalies.
+      – Les données ne sont pas transmises à des tiers et ne sont pas utilisées à des fins commerciales.
+    </div>
+    <h2>Types d’événements collectés</h2>
+    <ul>
+      <li>
+        <span class="event-type">session</span> : ouverture d’une session utilisateur.<br>
+        <span class="payload">Données&nbsp;: identifiant de session, date/heure, contexte technique.</span>
+      </li>
+      <li>
+        <span class="event-type">request</span> : envoi d’une requête (question, recherche, etc.).<br>
+        <span class="payload">Données&nbsp;: session, texte de la requête, paramètres choisis, date/heure.</span>
+      </li>
+      <li>
+        <span class="event-type">response</span> : réponse générée par le système.<br>
+        <span class="payload">Données&nbsp;: session, contenu de la réponse, temps de traitement, date/heure.</span>
+      </li>
+      <li>
+        <span class="event-type">article</span> : affichage d’un article ou document.<br>
+        <span class="payload">Données&nbsp;: session, identifiant de l’article, contexte d’affichage, date/heure.</span>
+      </li>
+      <li>
+        <span class="event-type">feedback</span> : retour utilisateur (avis, commentaire).<br>
+        <span class="payload">Données&nbsp;: session, type de retour (👍/👎), commentaire éventuel, date/heure.</span>
+      </li>
+      <li>
+        <span class="event-type">userProfile</span> : modification de profil ou préférences.<br>
+        <span class="payload">Données&nbsp;: session, préférences choisies, date/heure.</span>
+      </li>
+    </ul>
+    <h2>Utilisation des données</h2>
+    <ul>
+      <li>Amélioration continue du service et de l’ergonomie</li>
+      <li>Détection de bugs et d’anomalies</li>
+      <li>Statistiques d’usage globales (jamais individuelles)</li>
+    </ul>
+    <p>
+      Pour toute question sur la confidentialité ou la gestion des données, contactez l’équipe CIRED.digital à < minh.ha-duong@cnrs.fr >.
+    </p>
+  </body>
+</html>
+"""
 
-    session_id: str
-    start_time: str
-    privacy_mode: bool = False
 
-
-class QueryLog(BaseModel):
-    """Schema for query logging."""
-
-    session_id: str
-    query_id: str
-    question: str
-    query_parameters: dict[str, Any]
-    timestamp: str
-    privacy_mode: bool = False
-
-
-class ResponseLog(BaseModel):
-    """Schema for response logging."""
-
-    query_id: str
-    response: str
-    processing_time: float
-    timestamp: str
-    privacy_mode: bool = False
-
-
-def classify_network(ip_address: str) -> str:
+@app.get("/v1/view/privacy", response_class=HTMLResponse)
+async def view_privacy() -> str:
     """
-    Classify network type based on IP address.
-
-    Parameters
-    ----------
-    ip_address : str
-        The IP address to classify.
+    Serve the privacy statement.
 
     Returns
     -------
     str
-        Network type (CIRED, ENPC, or EXTERNE).
+        An HTML page.
 
     """
-    if ip_address.startswith("193.51.120."):
-        return "CIRED"
-    elif ip_address.startswith("192.168."):
-        return "ENPC"
-    else:
-        return "EXTERNE"
+    return PRIVACY_VIEW_HTML
 
 
-def write_to_csv(filename: str, headers: list[str], data: list[Any]) -> None:
-    """
-    Write data to CSV file with headers if file doesn't exist.
-
-    Parameters
-    ----------
-    filename : str
-        Name of the CSV file.
-    headers : list[str]
-        Column headers for the CSV.
-    data : list
-        Row data to write.
-
-    """
-    file_exists = os.path.exists(filename)
-    with open(filename, "a", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        if not file_exists:
-            writer.writerow(headers)
-        writer.writerow(data)
-
-
-def render_csv_table(filename: str, title: str) -> list[str]:
-    """
-    Render a CSV file as an HTML table.
-
-    Parameters
-    ----------
-    filename : str
-        Name of the CSV file to render.
-    title : str
-        Title for the table section.
-
-    Returns
-    -------
-    list[str]
-        HTML lines for the table.
-
-    """
-    if not os.path.exists(filename):
-        return [f"<h3>{title}</h3>", "<p>Aucune donnée enregistrée.</p>"]
-
-    html = [f"<h3>{title}</h3>", "<table border='1' cellpadding='5'>"]
-    with open(filename, newline="", encoding="utf-8") as f:
-        reader = csv.reader(f)
-        rows = list(reader)
-
-    for i, row in enumerate(rows):
-        tag = "th" if i == 0 else "td"
-        html.append(
-            "<tr>" + "".join(f"<{tag}>{cell}</{tag}>" for cell in row) + "</tr>"
-        )
-    html.append("</table><br/>")
-    return html
-
-
-@app.post("/v1/feedback")
-async def receive_feedback(fb: Feedback) -> dict[str, str]:
-    """
-    Save user feedback to a CSV file.
-
-    Parameters
-    ----------
-    fb : Feedback
-       Feedback object containing question, answer, feedback type, and timestamp.
-
-    Returns
-    -------
-    dict
-        A JSON response indicating successful storage.
-
-    """
-    file_exists = os.path.exists("feedback.csv")
-    with open("feedback.csv", "a", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        if not file_exists:
-            writer.writerow(["timestamp", "feedback", "question", "answer", "comment"])
-        writer.writerow(
-            [fb.timestamp, fb.feedback, fb.question, fb.answer, fb.comment or ""]
-        )
-    return {"message": "Feedback saved"}
-
-
-@app.get("/v1/feedback/view", response_class=HTMLResponse)
-async def view_feedback() -> str:
-    """
-    Render stored feedback as an HTML table.
-
-    Returns
-    -------
-    - An HTML page showing feedback in tabular format, or a message if no data exists.
-
-    """
-    if not os.path.exists("feedback.csv"):
-        return "<h3>No feedback recorded yet.</h3>"
-
-    html = ["<h2>Feedback Table</h2>", "<table border='1' cellpadding='5'>"]
-    with open("feedback.csv", newline="", encoding="utf-8") as f:
-        reader = csv.reader(f)
-        rows = list(reader)
-
-    for i, row in enumerate(rows):
-        tag = "th" if i == 0 else "td"
-        html.append(
-            "<tr>" + "".join(f"<{tag}>{cell}</{tag}>" for cell in row) + "</tr>"
-        )
-    html.append("</table>")
-    return "\n".join(html)
-
-
-@app.get("/v1/analytics/view", response_class=HTMLResponse)
+@app.get("/v1/view/analytics", response_class=HTMLResponse)
 async def view_analytics() -> str:
     """
-    Render all collected data as HTML tables.
+    Serve an overview of analytics -- WIP for now serve the privacy.
 
     Returns
     -------
     str
-        An HTML page showing all data tables (sessions, queries, responses, feedback).
+        An HTML page.
 
     """
-    html = [
-        "<html><head><title>CIRED.digital Analytics</title></head><body>",
-        "<h1>CIRED.digital - Données Collectées</h1>",
-        "<p>Voici un aperçu de toutes les données collectées par le système de journalisation.</p>",
-    ]
-
-    html.extend(render_csv_table("sessions.csv", "Sessions"))
-    html.extend(render_csv_table("queries.csv", "Requêtes Utilisateur"))
-    html.extend(render_csv_table("responses.csv", "Réponses du Bot"))
-    html.extend(render_csv_table("feedback.csv", "Feedback Utilisateur"))
-
-    html.extend(["</body></html>"])
-    return "\n".join(html)
+    return PRIVACY_VIEW_HTML
 
 
-@app.post("/v1/log/session")
-async def log_session(session_log: SessionLog, request: Request) -> dict[str, str]:
+@app.post("/v1/monitor")
+async def monitor_event(event: MonitorEvent) -> dict[str, str]:
     """
-    Log session start information.
+    Log monitoring events.
 
     Parameters
     ----------
-    session_log : SessionLog
-        Session logging data.
-    request : Request
-        FastAPI request object to extract client IP.
+    event : MonitorEvent
+        Monitoring event data.
 
     Returns
     -------
@@ -251,83 +144,25 @@ async def log_session(session_log: SessionLog, request: Request) -> dict[str, st
         Success message.
 
     """
-    if session_log.privacy_mode:
-        return {"message": "Session logged (privacy mode - not saved)"}
-
-    client_ip = request.client.host if request.client else "unknown"
-    network_type = classify_network(client_ip)
-
-    write_to_csv(
-        "sessions.csv",
-        ["session_id", "start_time", "ip", "network_type"],
-        [session_log.session_id, session_log.start_time, client_ip, network_type],
+    # Validate event type
+    #     (already handled by Pydantic/Enum)
+    # Sanitize sessionId, timestamp, eventType for filename
+    #     (also handled frontside, redone as defensive programming)
+    safe_session = sanitize(event.sessionId)
+    safe_timestamp = sanitize(event.timestamp)
+    safe_type = sanitize(event.eventType)
+    # Directory: /data/logs/YYYY/MM/DD/
+    now = datetime.now(UTC)
+    dir_path = os.path.join(
+        "data", "logs", f"{now.year:04d}", f"{now.month:02d}", f"{now.day:02d}"
     )
-
-    return {"message": "Session logged"}
-
-
-@app.post("/v1/log/query")
-async def log_query(query_log: QueryLog) -> dict[str, str]:
-    """
-    Log user query information.
-
-    Parameters
-    ----------
-    query_log : QueryLog
-        Query logging data.
-
-    Returns
-    -------
-    dict
-        Success message.
-
-    """
-    if query_log.privacy_mode:
-        return {"message": "Query logged (privacy mode - not saved)"}
-
-    write_to_csv(
-        "queries.csv",
-        ["session_id", "query_id", "question", "query_parameters", "timestamp"],
-        [
-            query_log.session_id,
-            query_log.query_id,
-            query_log.question,
-            str(query_log.query_parameters),
-            query_log.timestamp,
-        ],
-    )
-
-    return {"message": "Query logged"}
-
-
-@app.post("/v1/log/response")
-async def log_response(response_log: ResponseLog) -> dict[str, str]:
-    """
-    Log bot response information.
-
-    Parameters
-    ----------
-    response_log : ResponseLog
-        Response logging data.
-
-    Returns
-    -------
-    dict
-        Success message.
-
-    """
-    if response_log.privacy_mode:
-        return {"message": "Response logged (privacy mode - not saved)"}
-
-    write_to_csv(
-        "responses.csv",
-        ["query_id", "response", "processing_time", "timestamp"],
-        [
-            response_log.query_id,
-            response_log.response,
-            response_log.processing_time,
-            response_log.timestamp,
-        ],
-    )
-
-    return {"message": "Response logged"}
+    os.makedirs(dir_path, exist_ok=True)
+    # Now save the event as a JSON file
+    filename = f"{safe_session}-{safe_timestamp}-{safe_type}.json"
+    file_path = os.path.normpath(os.path.join(dir_path, filename))
+    # Ensure the file_path is within the intended directory
+    if not file_path.startswith(os.path.abspath(dir_path)):
+        raise ValueError("Invalid file path: potential path traversal detected")
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump(event.model_dump(), f, ensure_ascii=False, indent=2)
+    return {"message": "Monitor event saved"}

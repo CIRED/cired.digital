@@ -2,7 +2,6 @@
 // CONFIGURATION CONSTANTS
 // ==========================================
 const DEFAULT_HOST = 'http://localhost:7272';
-const FEEDBACK_HOST = 'http://localhost:7275';
 
 // ==========================================
 // GLOBAL STATE
@@ -12,6 +11,9 @@ let isLoading = false;
 let articleIdCounter = 1;
 let debugMode = false;
 let sessionId = null;
+let statusInterval = null;
+let feedbackInterval = null;
+const POLL_INTERVAL_MS = 1000;
 
 // ==========================================
 // DOM ELEMENTS
@@ -34,8 +36,8 @@ const debugModeCheckbox = document.getElementById('debug-mode');
 const chunkLimitInput = document.getElementById('chunk-limit');
 const searchStrategySelect = document.getElementById('search-strategy');
 const includeWebSearchCheckbox = document.getElementById('include-web-search');
-
-// Status display elements (none at the moment)
+const feedbackUrlInput = document.getElementById('feedback-url');
+const feedbackStatusEl = document.getElementById('feedback-status');
 
 function detectEnvironment() {
   const hostname = window.location.hostname;
@@ -79,6 +81,10 @@ function applySettings(settings) {
     // Set API URL
     if (settings.apiUrl && typeof apiUrlInput !== "undefined") {
         apiUrlInput.value = settings.apiUrl;
+    }
+
+    if (settings.feedbackUrl && typeof feedbackUrlInput !== "undefined") {
+        feedbackUrlInput.value = settings.feedbackUrl;
     }
 
     // Populate language model select options
@@ -161,11 +167,24 @@ function setupEventListeners() {
     // Configuration panel toggle
     configBtn.addEventListener('click', () => {
         configPanel.classList.toggle('hidden');
+        if (!configPanel.classList.contains('hidden')) {
+            // Panel ouvert: démarrer polling
+            fetchApiStatus();
+            fetchMonitorStatus();
+            statusInterval = setInterval(fetchApiStatus, POLL_INTERVAL_MS);
+            feedbackInterval = setInterval(fetchMonitorStatus, POLL_INTERVAL_MS);
+        } else {
+            // Panel fermé: arrêter polling
+            clearInterval(statusInterval);
+            clearInterval(feedbackInterval);
+        }
     });
     const configCloseBtn = document.getElementById('config-close-btn');
     if (configCloseBtn) {
         configCloseBtn.addEventListener('click', () => {
             configPanel.classList.add('hidden');
+            clearInterval(statusInterval);
+            clearInterval(feedbackInterval);
         });
     }
 
@@ -225,12 +244,12 @@ function setupEventListeners() {
 
     document.getElementById('view-analytics-link').addEventListener('click', function(e) {
         e.preventDefault();
-        window.open(FEEDBACK_HOST + '/v1/analytics/view', '_blank');
+        window.open(feedbackUrlInput.value.replace(/\/$/, '') + '/v1/view/analytics', '_blank');
     });
 
     document.getElementById('privacy-policy-link').addEventListener('click', function(e) {
         e.preventDefault();
-        alert('Privacy policy coming soon!');
+        window.open(feedbackUrlInput.value.replace(/\/$/, '') + '/v1/view/privacy', '_blank');
     });
 }
 
@@ -271,17 +290,21 @@ function fetchApiStatus() {
         });
 }
 
-
-function debugLog(message, data = null) {
-    if (debugMode) {
-        if (data) {
-            console.log(`🐛 ${message}`, data);
-        } else {
-            console.log(`🐛 ${message}`);
-        }
-    }
+function fetchMonitorStatus() {
+    if (!feedbackUrlInput || !feedbackStatusEl) return;
+    const url = feedbackUrlInput.value.replace(/\/$/, '') + '/health';
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            const s = (data.status || 'unknown').toUpperCase();
+            feedbackStatusEl.textContent = `Server status : ${s}`;
+            feedbackStatusEl.className = s === 'OK' ? 'status-text status-success' : 'status-text status-error';
+        })
+        .catch(() => {
+            feedbackStatusEl.textContent = 'Server status : Unreachable';
+            feedbackStatusEl.className = 'status-text status-error';
+        });
 }
-
 
 // ==========================================
 // PRIVACY MODE FUNCTIONALITY
@@ -309,6 +332,11 @@ function initializePrivacyMode() {
 function updatePrivacyStatus() {
     const privacyMode = localStorage.getItem('privacy-mode') === 'true';
     debugLog('Privacy status updated', { privacyMode });
+    // Afficher ou masquer le contrôle de l'URL de feedback selon le mode Privacy
+    const feedbackGroup = document.querySelector('.privacy-container .form-group');
+    if (feedbackGroup) {
+        feedbackGroup.style.display = privacyMode ? 'none' : '';
+    }
 }
 
 function isPrivacyModeEnabled() {
@@ -319,7 +347,14 @@ function isPrivacyModeEnabled() {
 // SESSION MANAGEMENT
 // ==========================================
 function generateSessionId() {
-    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    /*
+     * Generate a unique session ID based on the current timestamp and a random string.
+     *
+     * This ID is used to track user sessions and interactions.
+     * It is 100% safe for filenames and URL: only alphanums and _.
+     */
+    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
+            .replace(/[^a-zA-Z0-9_]/g, '');
 }
 
 function initializeSession() {
@@ -329,98 +364,19 @@ function initializeSession() {
         localStorage.setItem('session-id', sessionId);
     }
 
-    logSessionStart();
-}
-
-async function logSessionStart() {
-    try {
-        const privacyMode = isPrivacyModeEnabled();
-
-        const sessionData = {
-            session_id: sessionId,
-            start_time: new Date().toISOString(),
-            privacy_mode: privacyMode
-        };
-
-        const response = await fetch(`${FEEDBACK_HOST}/v1/log/session`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(sessionData)
-        });
-
-        if (response.ok) {
-            debugLog('Session logged successfully');
-        } else {
-            console.warn('Session logging failed:', response.status);
+    // Gather technical context
+    const technicalContext = {
+        sessionId: sessionId,
+        userAgent: navigator.userAgent,
+        language: navigator.language || navigator.userLanguage,
+        screen: {
+            width: window.screen.width,
+            height: window.screen.height,
+            pixelRatio: window.devicePixelRatio
         }
-    } catch (error) {
-        console.error('Error logging session:', error);
-    }
+    };
+    monitor(MonitorEventType.SESSION, technicalContext);
 }
-
-async function logQuery(queryId, question, queryParameters) {
-    try {
-        const privacyMode = isPrivacyModeEnabled();
-
-        const queryData = {
-            session_id: sessionId,
-            query_id: queryId,
-            question: question,
-            query_parameters: queryParameters,
-            timestamp: new Date().toISOString(),
-            privacy_mode: privacyMode
-        };
-
-        const response = await fetch(`${FEEDBACK_HOST}/v1/log/query`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(queryData)
-        });
-
-        if (response.ok) {
-            debugLog('Query logged successfully');
-        } else {
-            console.warn('Query logging failed:', response.status);
-        }
-    } catch (error) {
-        console.error('Error logging query:', error);
-    }
-}
-
-async function logResponse(queryId, response, processingTime) {
-    try {
-        const privacyMode = isPrivacyModeEnabled();
-
-        const responseData = {
-            query_id: queryId,
-            response: response,
-            processing_time: processingTime,
-            timestamp: new Date().toISOString(),
-            privacy_mode: privacyMode
-        };
-
-        const responseResult = await fetch(`${FEEDBACK_HOST}/v1/log/response`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(responseData)
-        });
-
-        if (responseResult.ok) {
-            debugLog('Response logged successfully');
-        } else {
-            console.warn('Response logging failed:', responseResult.status);
-        }
-    } catch (error) {
-        console.error('Error logging response:', error);
-    }
-}
-
 
 // ==========================================
 // INITIALIZATION
@@ -435,8 +391,9 @@ async function initializeConfig() {
   // Load settings before anything else
   try {
     await loadSettings();
-    updateStatusDisplay();
     setupEventListeners();
+
+
     debugMode = debugModeCheckbox.checked;
     debugLog('Configuration initialized');
   } catch (err) {

@@ -37,7 +37,16 @@ function hideTyping() {
 // FEEDBACK
 // ==========================================
 
-function addFeedbackButtons(article, requestBody, results) {
+
+function logFeedback(type, comment) {
+    debugLog('Logging feedback', { type, comment });
+    monitor(MonitorEventType.FEEDBACK, {
+        type,
+        comment: comment || ''
+    });
+}
+
+function addFeedback(article) {
     debugLog('Adding feedback buttons to message');
 
     const feedbackDiv = document.createElement('div');
@@ -54,53 +63,12 @@ function addFeedbackButtons(article, requestBody, results) {
     const commentInput = feedbackDiv.querySelector('input[type="text"]');
 
     feedbackDiv.querySelector('.feedback-up').addEventListener('click', () => {
-        debugLog('User clicked thumbs up');
-        sendFeedback(requestBody, results, 'up', commentInput.value.trim());
+        logFeedback('up', commentInput.value.trim());
         feedbackDiv.remove();
     });
 
     feedbackDiv.querySelector('.feedback-down').addEventListener('click', () => {
-        debugLog('User clicked thumbs down');
-        sendFeedback(requestBody, results, 'down', commentInput.value.trim());
+        logFeedback('down', commentInput.value.trim());
         feedbackDiv.remove();
-    });
-}
-
-
-function sendFeedback(requestBody, results, feedback, comment = '') {
-    debugLog('Sending feedback', {
-        feedback,
-        questionLength: requestBody.query.length,
-        answerLength: results.generated_answer?.length || 0,
-        commentLength: comment.length,
-        comment: comment,
-        hasComment: comment.length > 0
-    });
-    const feedbackData = {
-        question: requestBody.query,
-        answer: results.generated_answer,
-        feedback: feedback,
-        timestamp: new Date().toISOString(),
-        comment: comment || null
-    };
-
-    debugLog('Feedback data being sent to server', feedbackData);
-
-    fetch(`${FEEDBACK_HOST}/v1/feedback`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(feedbackData)
-    })
-    .then(response => {
-        if (!response.ok) {
-            debugLog('Feedback request failed', { status: response.status });
-        } else {
-            debugLog('Feedback successfully sent.');
-        }
-    })
-    .catch(error => {
-        debugLog('Error sending feedback:', error);
     });
 }

@@ -17,6 +17,14 @@ async function processInput() {
     const requestBody = buildRequestBody(query, config);
     debugLog('Request body built:', requestBody);
 
+    monitor(MonitorEventType.REQUEST, {
+        queryId,
+        query,
+        config,
+        requestBody,
+        timestamp: new Date().toISOString()
+    });
+
     try {
         const startTime = Date.now();
         const response = await makeApiRequest(config.apiUrl, requestBody, queryId);
@@ -30,6 +38,13 @@ async function processInput() {
         const data = await response.json();
         debugLog('Raw server response', data);
 
+        monitor(MonitorEventType.RESPONSE, {
+            queryId,
+            response: data,
+            processingTime: duration,
+            timestamp: new Date().toISOString()
+        });
+
         insertArticle(config, requestBody, data, queryId, duration);
     } catch (err) {
         handleError(err);
@@ -39,13 +54,12 @@ async function processInput() {
     }
 }
 
-async function animateWaitStart(query) {
+async function animateWaitStart() {
     // Fade out
     setLoadingState(true);
 
     inputHelp.classList.add('seen');
     Array.from(messagesContainer.children).forEach(child => child.classList.add('seen'));
-  //  Array.from(mainEl.children).forEach(child => child.classList.add('seen'));
 
     // Await fade-out (3s as defined in CSS for .seen class)
     await new Promise(resolve => setTimeout(resolve, 3000));
@@ -113,17 +127,7 @@ function buildRequestBody(query, config) {
     };
 }
 
-async function makeApiRequest(apiUrl, requestBody, queryId) {
-    logQuery(
-        queryId,
-        requestBody.query,
-        {
-            model: requestBody.rag_generation_config.model,
-            temperature: requestBody.rag_generation_config.temperature,
-            max_tokens: requestBody.rag_generation_config.max_tokens,
-            search_mode: requestBody.search_settings.search_mode
-        });
-
+async function makeApiRequest(apiUrl, requestBody) {
     const response = await fetch(`${apiUrl}/v3/retrieval/rag`, {
         method: 'POST',
         headers: {
@@ -175,6 +179,11 @@ function insertArticle(config, requestBody, data, queryId, duration) {
         replaceCitationMarkers(replyText, citationToDoc) +
         createBibliographyHtml(bibliography);
 
+    monitor(MonitorEventType.ARTICLE, {
+        queryId,
+        htmlContent,
+    });
+
     const article = addMain(htmlContent);
 
     // lier les tooltips de citation
@@ -183,9 +192,7 @@ function insertArticle(config, requestBody, data, queryId, duration) {
       el.addEventListener('mouseout',  () => hideChunkTooltip());
     });
 
-    addFeedbackButtons(article, requestBody, data.results);
-
-    logResponse(queryId, replyText);
+    addFeedback(article);
 
     // Update stats visibility after article is inserted
     updateStatsVisibility();
@@ -213,36 +220,4 @@ function replyTitle(config, requestBody, data, duration) {
             <div class="config-stats">Retrieval en mode ${config.searchStrategy} limité à ${config.chunkLimit} segments. Génération avec ${config.model} limité à ${config.maxTokens} tokens out.</div>
             <hr/>
     `;
-}
-
-// Helper to escape HTML in the query
-function escapeHtml(text) {
-    return text.replace(/[&<>"']/g, function (m) {
-        return ({
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
-            "'": '&#39;'
-        })[m];
-    });
-}
-
-// Helper to safely render Markdown in model's reply.
-// Use the marked and purify libraries
-
-marked.setOptions({
-     breaks: true,    // Convert \n to <br>
-     gfm: true,       // GitHub Flavored Markdown
-     tables: true,    // Table support
-     sanitize: false  // We'll use DOMPurify instead
- });
-
- function renderFromLLM(markdown) {
-    // Sometimes the LLM fence tables in ```table or ```md blocks. Remove those fences.
-    const FENCED_TABLE_REGEX = /```(?:\w+)?\s*\n(\|[\s\S]*?\|)\s*\n```/g;
-    const processedMarkdown = markdown.replace(FENCED_TABLE_REGEX, (_, tableContent) => tableContent);
-
-    const rawHtml = marked.parse(processedMarkdown);
-    return DOMPurify.sanitize(rawHtml);
 }
