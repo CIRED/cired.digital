@@ -373,7 +373,8 @@ function initializeSession() {
             width: window.screen.width,
             height: window.screen.height,
             pixelRatio: window.devicePixelRatio
-        }
+        },
+        profile: window.getProfileForSession ? window.getProfileForSession() : null
     };
     monitor(MonitorEventType.SESSION, technicalContext);
 }
@@ -392,6 +393,9 @@ async function initializeConfig() {
   try {
     await loadSettings();
     setupEventListeners();
+    if (typeof initializeProfile === 'function') {
+        initializeProfile();
+    }
 
     debugMode = debugModeCheckbox.checked;
     debugLog('Configuration initialized');
