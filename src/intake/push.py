@@ -96,6 +96,7 @@ def establish_available_documents(
 
     available_docs = {}
     missing_count = 0
+    oversized_count = 0
 
     for hal_id, metadata in catalog_by_hal_id.items():
         if "fileMain_s" not in metadata:
@@ -121,6 +122,7 @@ def establish_available_documents(
                     candidate.stat().st_size,
                     MAX_FILE_SIZE,
                 )
+                oversized_count += 1
             else:
                 available_docs[hal_id] = metadata
         else:
@@ -142,7 +144,7 @@ def establish_available_documents(
     logging.info("Total catalog entries: %d", len(catalog_by_hal_id))
     logging.debug("Available docs: %s", list(available_docs.keys()))
 
-    return available_docs, total_records, missing_count
+    return available_docs, total_records, missing_count, oversized_count
 
 
 def get_uploadable_documents(
@@ -404,6 +406,7 @@ def print_upload_statistics(
     total_records: int,
     available_docs: list[dict[str, Any]],
     missing_files: int,
+    oversized_files: int,
     server_documents: dict[str, dict[str, Any]],
     uploadable_files: list[Path],
     success_count: int,
@@ -414,6 +417,7 @@ def print_upload_statistics(
     logging.info("=== UPLOAD STATISTICS ===")
     logging.info("Total catalog entries: %d", total_records)
     logging.info("Missing PDF files: %d", missing_files)
+    logging.info("Oversized PDF files: %d", oversized_files)
 
     logging.info("Local valid documents: %d", len(available_docs))
     logging.info("Documents on server: %d", len(server_documents))
@@ -464,7 +468,7 @@ def main() -> int:
         logging.error("No catalog file available")
         return 1
 
-    available_docs, total_records, missing_files = establish_available_documents(
+    available_docs, total_records, missing_files, oversized_files = establish_available_documents(
         catalog_file, args.dir
     )
 
@@ -521,6 +525,7 @@ def main() -> int:
         total_records,
         list(available_docs.values()),
         missing_files,
+        oversized_files,
         server_documents,
         uploadable_pdfs,
         success_count,
