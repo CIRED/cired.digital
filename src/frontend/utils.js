@@ -42,151 +42,40 @@ function debugLog(message, data = null) {
 }
 
 // ===========================================
-// Observability: Log to the analytics server
+// Observability: Monitor to the analytics server
 // ===========================================
 
-function analyticsEndpoint(path) {
-    return feedbackUrlInput.value.replace(/\/$/, '') + '/v1/' + path;
-}
+const MonitorEventType = {
+    SESSION: "session",
+    REQUEST: "request",
+    RESPONSE: "response",
+    ARTICLE: "article",
+    FEEDBACK: "feedback",
+    USER_PROFILE: "userProfile"
+};
 
-async function logSessionStart() {
-    try {
-        const privacyMode = isPrivacyModeEnabled();
-
-        const sessionData = {
-            session_id: sessionId,
-            start_time: new Date().toISOString(),
-            privacy_mode: privacyMode
-        };
-
-        const response = await fetch(analyticsEndpoint("log/session"), {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(sessionData)
-        });
-
-        if (response.ok) {
-            debugLog('Session logged successfully');
-        } else {
-            console.warn('Session logging failed:', response.status);
-        }
-    } catch (error) {
-        console.error('Error logging session:', error);
+async function monitor(eventType, payload) {
+    if (isPrivacyModeEnabled()) return;
+    if (!Object.values(MonitorEventType).includes(eventType)) {
+        debugLog('Invalid monitor event type', eventType);
+        return;
     }
-}
-
-async function logRequest(queryId, query, config, requestBody) {
+    const analyticsEndpoint = feedbackUrlInput.value.replace(/\/$/, '') + '/v1/monitor'
+    const timestamp = new Date().toISOString().replace(/[^a-zA-Z0-9]/g, '');
+    const data = {
+        sessionId,
+        timestamp,
+        eventType,
+        payload
+    };
     try {
-        const privacyMode = isPrivacyModeEnabled();
-        const requestData = {
-            session_id: sessionId,
-            query_id: queryId,
-            query: query,
-            config: config,
-            request_body: requestBody,
-            timestamp: new Date().toISOString(),
-            privacy_mode: privacyMode
-        };
-        const response = await fetch(analyticsEndpoint("log/request"), {
+        const response = await fetch(analyticsEndpoint, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(requestData)
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
         });
-        if (response.ok) {
-            debugLog('Request logged successfully');
-        } else {
-            console.warn('Request logging failed:', response.status);
-        }
+        debugLog('Monitor event sent', { eventType, status: response.status, ok: response.ok });
     } catch (error) {
-        console.error('Error logging request:', error);
-    }
-}
-
-async function logResponse(queryId, response, processingTime) {
-    try {
-        const privacyMode = isPrivacyModeEnabled();
-
-        const responseData = {
-            session_id: sessionId,
-            query_id: queryId,
-            response: response,
-            processing_time: processingTime,
-            timestamp: new Date().toISOString(),
-            privacy_mode: privacyMode
-        };
-
-        const responseResult = await fetch(analyticsEndpoint("log/response"), {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(responseData)
-        });
-
-        debugLog('Response logging status', { status: responseResult.status, ok: responseResult.ok , responseResult});
-    } catch (error) {
-        console.error('Error logging response:', error);
-    }
-}
-
-async function logArticle(sessionId, queryId, article) {
-    try {
-        const privacyMode = isPrivacyModeEnabled();
-        const articleData = {
-            session_id: sessionId,
-            query_id: queryId,
-            article: article,
-            timestamp: new Date().toISOString(),
-            privacy_mode: privacyMode
-        };
-        const response = await fetch(analyticsEndpoint("log/article"), {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(articleData)
-        });
-        debugLog('Article logging response', { status: response.status, ok: response.ok , response});
-    } catch (error) {
-        console.error('Error logging article:', error);
-    }
-}
-
-async function logFeedback(feedback, comment = '', results = {}) {
-    try {
-        debugLog('Sending feedback', {
-            feedback,
-            commentLength: comment.length,
-            comment: comment,
-            hasComment: comment.length > 0
-        });
-        const feedbackData = {
-            session_id: typeof sessionId !== 'undefined' ? sessionId : '',
-            query_id: results.query_id || '',
-            feedback: feedback,
-            comment: comment || null
-        };
-
-        debugLog('Feedback data being sent to server', feedbackData);
-
-        const response = await fetch(analyticsEndpoint('log/feedback'), {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(feedbackData)
-        });
-
-        if (!response.ok) {
-            debugLog('Feedback request failed', { status: response.status });
-        } else {
-            debugLog('Feedback successfully sent.');
-        }
-    } catch (error) {
-        debugLog('Error sending feedback:', error);
+        console.error('Error sending monitor event:', error);
     }
 }

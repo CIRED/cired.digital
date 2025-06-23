@@ -17,7 +17,13 @@ async function processInput() {
     const requestBody = buildRequestBody(query, config);
     debugLog('Request body built:', requestBody);
 
-    logRequest(queryId, query, config, requestBody);
+    monitor(MonitorEventType.REQUEST, {
+        queryId,
+        query,
+        config,
+        requestBody,
+        timestamp: new Date().toISOString()
+    });
 
     try {
         const startTime = Date.now();
@@ -32,7 +38,12 @@ async function processInput() {
         const data = await response.json();
         debugLog('Raw server response', data);
 
-        logResponse(queryId, data, duration);
+        monitor(MonitorEventType.RESPONSE, {
+            queryId,
+            response: data,
+            processingTime: duration,
+            timestamp: new Date().toISOString()
+        });
 
         insertArticle(config, requestBody, data, queryId, duration);
     } catch (err) {
@@ -168,7 +179,10 @@ function insertArticle(config, requestBody, data, queryId, duration) {
         replaceCitationMarkers(replyText, citationToDoc) +
         createBibliographyHtml(bibliography);
 
-    logArticle(sessionId, queryId, htmlContent);
+    monitor(MonitorEventType.ARTICLE, {
+        queryId,
+        htmlContent,
+    });
 
     const article = addMain(htmlContent);
 
@@ -178,7 +192,7 @@ function insertArticle(config, requestBody, data, queryId, duration) {
       el.addEventListener('mouseout',  () => hideChunkTooltip());
     });
 
-    addFeedbackButtons(article, requestBody, data.results);
+    addFeedback(article);
 
     // Update stats visibility after article is inserted
     updateStatsVisibility();

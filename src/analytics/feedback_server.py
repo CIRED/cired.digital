@@ -4,23 +4,15 @@ Collect and display user feedback and logging data.
 A FastAPI application to collect Cirdi analytics.
 """
 
-import csv
+import json
 import os
-from datetime import datetime
+from datetime import UTC, datetime
 
-from fastapi import FastAPI, Request, Response
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
-from models import (
-    DATA_MODEL_HEADERS,
-    ArticleLog,
-    Feedback,
-    RequestLog,
-    ResponseLog,
-    SessionLog,
-)
-from render_utils import render_csv_table
-from utils import classify_network, write_to_csv
+from fastapi.responses import HTMLResponse, JSONResponse
+from models import MonitorEvent
+from utils import sanitize
 
 app = FastAPI()
 
@@ -40,44 +32,111 @@ async def health() -> dict[str, str]:
     return {"status": "ok"}
 
 
-@app.get("/v1/analytics/view", response_class=HTMLResponse)
+PRIVACY_VIEW_HTML = """
+<html>
+  <head>
+    <title>CIRED.digital Analytics</title>
+    <style>
+      body { font-family: sans-serif; max-width: 700px; margin: 2em auto; }
+      h1, h2 { color: #2c3e50; }
+      ul { margin-bottom: 2em; }
+      .event-type { font-weight: bold; color: #2980b9; }
+      .payload { color: #555; font-size: 0.97em; }
+      .privacy { background: #f6f8fa; border-left: 4px solid #2980b9; padding: 1em; margin: 2em 0; }
+    </style>
+  </head>
+  <body>
+    <h1>CIRED.digital – Données collectées</h1>
+    <p>
+      Pour améliorer la qualité du service, CIRED.digital collecte des événements d’utilisation.
+      <b>Aucune donnée personnelle, identifiant civil ou contenu privé n’est enregistré.</b>
+      Le système respecte le mode «&nbsp;confidentialité&nbsp;» si vous l’activez.
+    </p>
+    <div class="privacy">
+      <b>Protection de la vie privée&nbsp;:</b><br>
+      – Un identifiant de session anonyme est généré à chaque visite.<br>
+      – Vous pouvez activer le mode confidentialité à tout moment, auquel cas aucune donnée n’est envoyée.<br>
+      – Les données servent uniquement à l’amélioration du service et à la détection d’anomalies.
+      – Les données ne sont pas transmises à des tiers et ne sont pas utilisées à des fins commerciales.
+    </div>
+    <h2>Types d’événements collectés</h2>
+    <ul>
+      <li>
+        <span class="event-type">session</span> : ouverture d’une session utilisateur.<br>
+        <span class="payload">Données&nbsp;: identifiant de session, date/heure, contexte technique.</span>
+      </li>
+      <li>
+        <span class="event-type">request</span> : envoi d’une requête (question, recherche, etc.).<br>
+        <span class="payload">Données&nbsp;: session, texte de la requête, paramètres choisis, date/heure.</span>
+      </li>
+      <li>
+        <span class="event-type">response</span> : réponse générée par le système.<br>
+        <span class="payload">Données&nbsp;: session, contenu de la réponse, temps de traitement, date/heure.</span>
+      </li>
+      <li>
+        <span class="event-type">article</span> : affichage d’un article ou document.<br>
+        <span class="payload">Données&nbsp;: session, identifiant de l’article, contexte d’affichage, date/heure.</span>
+      </li>
+      <li>
+        <span class="event-type">feedback</span> : retour utilisateur (avis, commentaire).<br>
+        <span class="payload">Données&nbsp;: session, type de retour (👍/👎), commentaire éventuel, date/heure.</span>
+      </li>
+      <li>
+        <span class="event-type">userProfile</span> : modification de profil ou préférences.<br>
+        <span class="payload">Données&nbsp;: session, préférences choisies, date/heure.</span>
+      </li>
+    </ul>
+    <h2>Utilisation des données</h2>
+    <ul>
+      <li>Amélioration continue du service et de l’ergonomie</li>
+      <li>Détection de bugs et d’anomalies</li>
+      <li>Statistiques d’usage globales (jamais individuelles)</li>
+    </ul>
+    <p>
+      Pour toute question sur la confidentialité ou la gestion des données, contactez l’équipe CIRED.digital à < minh.ha-duong@cnrs.fr >.
+    </p>
+  </body>
+</html>
+"""
+
+
+@app.get("/v1/view/privacy", response_class=HTMLResponse)
+async def view_privacy() -> str:
+    """
+    Serve the privacy statement.
+
+    Returns
+    -------
+    str
+        An HTML page.
+
+    """
+    return PRIVACY_VIEW_HTML
+
+
+@app.get("/v1/view/analytics", response_class=HTMLResponse)
 async def view_analytics() -> str:
     """
-    Render all collected data as HTML tables.
+    Serve an overview of analytics -- WIP for now serve the privacy.
 
     Returns
     -------
     str
-        An HTML page showing all data tables (sessions, queries, responses, feedback).
+        An HTML page.
 
     """
-    html = [
-        "<html><head><title>CIRED.digital Analytics</title></head><body>",
-        "<h1>CIRED.digital - Données Collectées</h1>",
-        "<p>Voici un aperçu de toutes les données collectées par le système de journalisation.</p>",
-    ]
-
-    html.extend(render_csv_table("sessions.csv", "Sessions"))
-    html.extend(render_csv_table("requests.csv", "Requêtes API"))
-    html.extend(render_csv_table("responses.csv", "Réponses du RAG"))
-    html.extend(render_csv_table("articles.csv", "Article montré à l'utilisateur"))
-    html.extend(render_csv_table("feedback.csv", "Feedback Utilisateur"))
-
-    html.extend(["</body></html>"])
-    return "\n".join(html)
+    return PRIVACY_VIEW_HTML
 
 
-@app.post("/v1/log/session")
-async def log_session(session_log: SessionLog, request: Request) -> dict[str, str]:
+@app.post("/v1/monitor")
+async def monitor_event(event: MonitorEvent) -> dict[str, str]:
     """
-    Log session start information.
+    Log monitoring events.
 
     Parameters
     ----------
-    session_log : SessionLog
-        Session logging data.
-    request : Request
-        FastAPI request object to extract client IP.
+    event : MonitorEvent
+        Monitoring event data.
 
     Returns
     -------
@@ -85,262 +144,22 @@ async def log_session(session_log: SessionLog, request: Request) -> dict[str, st
         Success message.
 
     """
-    if session_log.privacy_mode:
-        return {"message": "Session logged (privacy mode - not saved)"}
-
-    client_ip = request.client.host if request.client else "unknown"
-    network_type = classify_network(client_ip)
-
-    write_to_csv(
-        "sessions.csv",
-        ["session_id", "start_time", "ip", "network_type"],
-        [session_log.session_id, session_log.start_time, client_ip, network_type],
+    # Validate event type
+    #     (already handled by Pydantic/Enum)
+    # Sanitize sessionId, timestamp, eventType for filename
+    #     (also handled frontside, redone as defensive programming)
+    safe_session = sanitize(event.sessionId)
+    safe_timestamp = sanitize(event.timestamp)
+    safe_type = sanitize(event.eventType)
+    # Directory: /data/logs/YYYY/MM/DD/
+    now = datetime.now(UTC)
+    dir_path = os.path.join(
+        "data", "logs", f"{now.year:04d}", f"{now.month:02d}", f"{now.day:02d}"
     )
-
-    return {"message": "Session logged"}
-
-
-@app.post("/v1/log/request")
-async def log_request(request_log: RequestLog) -> dict[str, str]:
-    """
-    Log request information.
-
-    Parameters
-    ----------
-    request_log : RequestLog
-        Request logging data.
-
-    Returns
-    -------
-    dict
-        Success message.
-
-    """
-    if request_log.privacy_mode:
-        return {"message": "Request logged (privacy mode - not saved)"}
-
-    write_to_csv(
-        "requests.csv",
-        ["session_id", "query_id", "query", "config", "request_body", "timestamp"],
-        [
-            request_log.session_id,
-            request_log.query_id,
-            request_log.query,
-            str(request_log.config),
-            str(request_log.request_body),
-            request_log.timestamp,
-        ],
-    )
-    return {"message": "Request logged"}
-
-
-@app.post("/v1/log/article")
-async def log_article(article_log: ArticleLog) -> dict[str, str]:
-    """Log article HTML content for a query/session."""
-    if article_log.privacy_mode:
-        return {"message": "Article logged (privacy mode - not saved)"}
-
-    write_to_csv(
-        "articles.csv",
-        ["session_id", "query_id", "article", "timestamp"],
-        [
-            article_log.session_id,
-            article_log.query_id,
-            article_log.article,
-            article_log.timestamp,
-        ],
-    )
-    return {"message": "Article logged"}
-
-
-@app.post("/v1/log/response")
-async def log_response(response_log: ResponseLog) -> dict[str, str]:
-    """
-    Log bot response information.
-
-    Parameters
-    ----------
-    response_log : ResponseLog
-        Response logging data.
-
-    Returns
-    -------
-    dict
-        Success message.
-
-    """
-    if response_log.privacy_mode:
-        return {"message": "Response logged (privacy mode - not saved)"}
-
-    write_to_csv(
-        "responses.csv",
-        ["session_id", "query_id", "response", "processing_time", "timestamp"],
-        [
-            response_log.session_id,
-            response_log.query_id,
-            response_log.response,
-            response_log.processing_time,
-            response_log.timestamp,
-        ],
-    )
-
-    return {"message": "Response logged"}
-
-
-@app.post("/v1/log/feedback")
-async def receive_feedback(fb: Feedback) -> dict[str, str]:
-    """
-    Save user feedback to a CSV file.
-
-    Parameters
-    ----------
-    fb : Feedback
-       Feedback object containing session_id, query_id, feedback type, and comment.
-
-    Returns
-    -------
-    dict
-        A JSON response indicating successful storage.
-
-    """
-    file_exists = os.path.exists("feedback.csv")
-    from datetime import datetime
-
-    timestamp = datetime.now().isoformat()
-    with open("feedback.csv", "a", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        if not file_exists:
-            writer.writerow(
-                [
-                    "timestamp",
-                    "session_id",
-                    "query_id",
-                    "feedback",
-                    "comment",
-                ]
-            )
-        writer.writerow(
-            [
-                timestamp,
-                fb.session_id,
-                fb.query_id,
-                fb.feedback,
-                fb.comment or "",
-            ]
-        )
-    return {"message": "Feedback saved"}
-
-
-@app.get("/v1/csv/list", response_class=HTMLResponse)
-async def list_csv_files() -> str:
-    """
-    List all CSV files in the current directory, with [View] and [Download] buttons after the filename.
-
-    Returns
-    -------
-    str
-        An HTML page with the list of CSV files and their actions.
-
-    """
-    import os
-
-    files = [f for f in os.listdir(".") if f.endswith(".csv") and os.path.isfile(f)]
-    html = ["<h2>CSV Files</h2>", "<ul style='list-style-type:none;padding:0;'>"]
-    for f in files:
-        html.append(
-            f"<li style='margin-bottom:8px;'><b>{f}</b> "
-            f"<a href='/v1/csv/view/{f}' style='margin-left:10px;'><button>[View]</button></a> "
-            f"<a href='/v1/csv/download/{f}' style='margin-left:5px;'><button>[Download]</button></a>"
-            f"<a href='/v1/csv/rotate/{f}' style='margin-left:5px;'><button>[Rotate]</button></a>"
-            f"</li>"
-        )
-    html.append("</ul>")
-    return "\n".join(html)
-
-
-@app.get("/v1/csv/view/{filename}", response_class=HTMLResponse)
-async def view_csv_file(filename: str) -> str:
-    """
-    Render a CSV file as an HTML table.
-
-    Parameters
-    ----------
-    filename : str
-        Name of the CSV file.
-
-    Returns
-    -------
-    str
-        HTML table of the CSV file.
-
-    """
-    if not filename.endswith(".csv") or not os.path.isfile(filename):
-        html = [f"<h2>{filename}</h2>", "<h3>Fichier non trouvé.</h3>"]
-        html.append(
-            f"<form method='post' action='/v1/csv/rotate/{filename}'>"
-            f"<button type='submit'>Archiver ce fichier</button>"
-            f"</form>"
-        )
-        return "\n".join(html)
-    html = [f"<h2>{filename}</h2>", "<table border='1' cellpadding='5'>"]
-    with open(filename, newline="", encoding="utf-8") as f:
-        reader = csv.reader(f)
-        for i, row in enumerate(reader):
-            tag = "th" if i == 0 else "td"
-            html.append(
-                "<tr>" + "".join(f"<{tag}>{cell}</{tag}>" for cell in row) + "</tr>"
-            )
-    html.append("</table>")
-    html.append(
-        f"<form method='post' action='/v1/csv/rotate/{filename}'>"
-        f"<button type='submit'>Archiver ce fichier</button>"
-        f"</form>"
-    )
-    return "\n".join(html)
-
-
-@app.get("/v1/csv/download/{filename}")
-async def download_csv_file(filename: str) -> Response:
-    """
-    Download a CSV file.
-
-    Parameters
-    ----------
-    filename : str
-        Name of the CSV file.
-
-    Returns
-    -------
-    FileResponse
-        The CSV file as an attachment.
-
-    """
-    if not filename.endswith(".csv") or not os.path.isfile(filename):
-        return JSONResponse({"error": "Fichier non trouvé."}, status_code=404)
-    return FileResponse(filename, media_type="text/csv", filename=filename)
-
-
-@app.get("/v1/csv/rotate/{filename}")
-async def rotate_csv(filename: str) -> Response:
-    """
-    Archive (rotate) a CSV file by renaming it with a timestamp suffix.
-
-    Args:
-        filename: The name of the CSV file to rotate. Must be in DATA_MODEL_HEADERS.
-
-    Returns:
-        JSON response indicating success and the new filename, or an error message.
-
-    """
-    # Sécurise le nom de fichier
-    if filename not in DATA_MODEL_HEADERS:
-        return JSONResponse({"error": "Fichier non autorisé."}, status_code=400)
-    base = filename.rsplit(".", 1)[0]
-    ext = filename.rsplit(".", 1)[-1]
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    new_name = f"{base}_{timestamp}.{ext}"
-    try:
-        os.rename(filename, new_name)
-        return JSONResponse({"status": "ok", "archived_as": new_name})
-    except Exception as e:
-        return JSONResponse({"error": str(e)}, status_code=500)
+    os.makedirs(dir_path, exist_ok=True)
+    # Now save the event as a JSON file
+    filename = f"{safe_session}-{safe_timestamp}-{safe_type}.json"
+    file_path = os.path.join(dir_path, filename)
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump(event.model_dump(), f, ensure_ascii=False, indent=2)
+    return {"message": "Monitor event saved"}

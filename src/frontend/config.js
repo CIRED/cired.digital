@@ -170,9 +170,9 @@ function setupEventListeners() {
         if (!configPanel.classList.contains('hidden')) {
             // Panel ouvert: démarrer polling
             fetchApiStatus();
-            fetchFeedbackStatus();
+            fetchMonitorStatus();
             statusInterval = setInterval(fetchApiStatus, POLL_INTERVAL_MS);
-            feedbackInterval = setInterval(fetchFeedbackStatus, POLL_INTERVAL_MS);
+            feedbackInterval = setInterval(fetchMonitorStatus, POLL_INTERVAL_MS);
         } else {
             // Panel fermé: arrêter polling
             clearInterval(statusInterval);
@@ -244,12 +244,12 @@ function setupEventListeners() {
 
     document.getElementById('view-analytics-link').addEventListener('click', function(e) {
         e.preventDefault();
-        window.open(feedbackUrlInput.value.replace(/\/$/, '') + '/v1/analytics/view', '_blank');
+        window.open(feedbackUrlInput.value.replace(/\/$/, '') + '/v1/view/analytics', '_blank');
     });
 
     document.getElementById('privacy-policy-link').addEventListener('click', function(e) {
         e.preventDefault();
-        alert('Privacy policy coming soon!');
+        window.open(feedbackUrlInput.value.replace(/\/$/, '') + '/v1/view/privacy', '_blank');
     });
 }
 
@@ -290,7 +290,7 @@ function fetchApiStatus() {
         });
 }
 
-function fetchFeedbackStatus() {
+function fetchMonitorStatus() {
     if (!feedbackUrlInput || !feedbackStatusEl) return;
     const url = feedbackUrlInput.value.replace(/\/$/, '') + '/health';
     fetch(url)
@@ -347,7 +347,14 @@ function isPrivacyModeEnabled() {
 // SESSION MANAGEMENT
 // ==========================================
 function generateSessionId() {
-    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    /*
+     * Generate a unique session ID based on the current timestamp and a random string.
+     *
+     * This ID is used to track user sessions and interactions.
+     * It is 100% safe for filenames and URL: only alphanums and _.
+     */
+    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
+            .replace(/[^a-zA-Z0-9_]/g, '');
 }
 
 function initializeSession() {
@@ -357,7 +364,18 @@ function initializeSession() {
         localStorage.setItem('session-id', sessionId);
     }
 
-    logSessionStart();
+    // Gather technical context
+    const technicalContext = {
+        sessionId: sessionId,
+        userAgent: navigator.userAgent,
+        language: navigator.language || navigator.userLanguage,
+        screen: {
+            width: window.screen.width,
+            height: window.screen.height,
+            pixelRatio: window.devicePixelRatio
+        }
+    };
+    monitor(MonitorEventType.SESSION, technicalContext);
 }
 
 // ==========================================

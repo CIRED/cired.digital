@@ -37,7 +37,16 @@ function hideTyping() {
 // FEEDBACK
 // ==========================================
 
-function addFeedbackButtons(article, requestBody, results) {
+
+function logFeedback(type, comment) {
+    debugLog('Logging feedback', { type, comment });
+    monitor(MonitorEventType.FEEDBACK, {
+        type,
+        comment: comment || ''
+    });
+}
+
+function addFeedback(article) {
     debugLog('Adding feedback buttons to message');
 
     const feedbackDiv = document.createElement('div');
@@ -54,14 +63,12 @@ function addFeedbackButtons(article, requestBody, results) {
     const commentInput = feedbackDiv.querySelector('input[type="text"]');
 
     feedbackDiv.querySelector('.feedback-up').addEventListener('click', () => {
-        debugLog('User clicked thumbs up');
-        logFeedback('up', commentInput.value.trim(), results);
+        logFeedback('up', commentInput.value.trim());
         feedbackDiv.remove();
     });
 
     feedbackDiv.querySelector('.feedback-down').addEventListener('click', () => {
-        debugLog('User clicked thumbs down');
-        logFeedback('down', commentInput.value.trim(), results);
+        logFeedback('down', commentInput.value.trim());
         feedbackDiv.remove();
     });
 }
