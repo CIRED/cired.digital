@@ -1,7 +1,10 @@
 // utils.js
 // Utility functions for the frontend application
 
+
+// ===========================================
 // Render Markdown in model's reply using marked, then sanitizes using DOMPurify
+// ===========================================
 
 marked.setOptions({
      breaks: true,    // Convert \n to <br>
