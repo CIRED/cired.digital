@@ -393,7 +393,6 @@ async function initializeConfig() {
     await loadSettings();
     setupEventListeners();
 
-
     debugMode = debugModeCheckbox.checked;
     debugLog('Configuration initialized');
   } catch (err) {
@@ -402,8 +401,36 @@ async function initializeConfig() {
   }
 }
 
+// ==========================================
+// MODE D'EMPLOI MODAL FUNCTIONALITY
+// ==========================================
+function setupModeEmploiModal() {
+    const modeEmploiPanel = document.getElementById('mode-emploi-panel');
+    const modeEmploiCloseBtn = document.getElementById('mode-emploi-close-btn');
+    const aideBtn = document.getElementById('aide-btn');
+
+    if (!modeEmploiPanel || !modeEmploiCloseBtn || !aideBtn) {
+        console.error('Mode d\'emploi modal elements not found');
+        return;
+    }
+
+    modeEmploiCloseBtn.addEventListener('click', () => {
+        modeEmploiPanel.classList.add('hidden');
+        aideBtn.classList.remove('hidden');
+    });
+
+    aideBtn.addEventListener('click', () => {
+        modeEmploiPanel.classList.remove('hidden');
+        aideBtn.classList.add('hidden');
+    });
+}
+
 if (document.readyState === 'loading') {
-     document.addEventListener('DOMContentLoaded', initializeConfig);
+     document.addEventListener('DOMContentLoaded', () => {
+         initializeConfig();
+         setupModeEmploiModal();
+     });
 } else {
     initializeConfig();
+    setupModeEmploiModal();
 }
