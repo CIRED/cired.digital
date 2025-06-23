@@ -393,7 +393,6 @@ async function initializeConfig() {
     await loadSettings();
     setupEventListeners();
 
-
     debugMode = debugModeCheckbox.checked;
     debugLog('Configuration initialized');
   } catch (err) {
