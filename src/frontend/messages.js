@@ -55,48 +55,13 @@ function addFeedbackButtons(article, requestBody, results) {
 
     feedbackDiv.querySelector('.feedback-up').addEventListener('click', () => {
         debugLog('User clicked thumbs up');
-        sendFeedback('up', commentInput.value.trim(), results);
+        logFeedback('up', commentInput.value.trim(), results);
         feedbackDiv.remove();
     });
 
     feedbackDiv.querySelector('.feedback-down').addEventListener('click', () => {
         debugLog('User clicked thumbs down');
-        sendFeedback('down', commentInput.value.trim(), results);
+        logFeedback('down', commentInput.value.trim(), results);
         feedbackDiv.remove();
-    });
-}
-
-function sendFeedback(feedback, comment = '', results = {}) {
-    debugLog('Sending feedback', {
-        feedback,
-        commentLength: comment.length,
-        comment: comment,
-        hasComment: comment.length > 0
-    });
-    const feedbackData = {
-        session_id: typeof sessionId !== 'undefined' ? sessionId : '',
-        query_id: results.query_id || '',
-        feedback: feedback,
-        comment: comment || null
-    };
-
-    debugLog('Feedback data being sent to server', feedbackData);
-
-    fetch(analyticsEndpoint('log/feedback'), {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(feedbackData)
-    })
-    .then(response => {
-        if (!response.ok) {
-            debugLog('Feedback request failed', { status: response.status });
-        } else {
-            debugLog('Feedback successfully sent.');
-        }
-    })
-    .catch(error => {
-        debugLog('Error sending feedback:', error);
     });
 }

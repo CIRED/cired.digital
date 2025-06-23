@@ -45,6 +45,10 @@ function debugLog(message, data = null) {
 // Observability: Log to the analytics server
 // ===========================================
 
+function analyticsEndpoint(path) {
+    return feedbackUrlInput.value.replace(/\/$/, '') + '/v1/' + path;
+}
+
 async function logSessionStart() {
     try {
         const privacyMode = isPrivacyModeEnabled();
@@ -55,7 +59,7 @@ async function logSessionStart() {
             privacy_mode: privacyMode
         };
 
-        const response = await fetch(`${FEEDBACK_HOST}/v1/log/session`, {
+        const response = await fetch(analyticsEndpoint("log/session"), {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -85,7 +89,7 @@ async function logRequest(queryId, query, config, requestBody) {
             timestamp: new Date().toISOString(),
             privacy_mode: privacyMode
         };
-        const response = await fetch(`${FEEDBACK_HOST}/v1/log/request`, {
+        const response = await fetch(analyticsEndpoint("log/request"), {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -115,7 +119,7 @@ async function logResponse(queryId, response, processingTime) {
             privacy_mode: privacyMode
         };
 
-        const responseResult = await fetch(`${FEEDBACK_HOST}/v1/log/response`, {
+        const responseResult = await fetch(analyticsEndpoint("log/response"), {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -139,7 +143,7 @@ async function logArticle(sessionId, queryId, article) {
             timestamp: new Date().toISOString(),
             privacy_mode: privacyMode
         };
-        const response = await fetch(`${FEEDBACK_HOST}/v1/log/article`, {
+        const response = await fetch(analyticsEndpoint("log/article"), {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -149,5 +153,40 @@ async function logArticle(sessionId, queryId, article) {
         debugLog('Article logging response', { status: response.status, ok: response.ok , response});
     } catch (error) {
         console.error('Error logging article:', error);
+    }
+}
+
+async function logFeedback(feedback, comment = '', results = {}) {
+    try {
+        debugLog('Sending feedback', {
+            feedback,
+            commentLength: comment.length,
+            comment: comment,
+            hasComment: comment.length > 0
+        });
+        const feedbackData = {
+            session_id: typeof sessionId !== 'undefined' ? sessionId : '',
+            query_id: results.query_id || '',
+            feedback: feedback,
+            comment: comment || null
+        };
+
+        debugLog('Feedback data being sent to server', feedbackData);
+
+        const response = await fetch(analyticsEndpoint('log/feedback'), {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(feedbackData)
+        });
+
+        if (!response.ok) {
+            debugLog('Feedback request failed', { status: response.status });
+        } else {
+            debugLog('Feedback successfully sent.');
+        }
+    } catch (error) {
+        debugLog('Error sending feedback:', error);
     }
 }
