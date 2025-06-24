@@ -30,8 +30,14 @@ function hideOnboardingPanel() {
         onboardingPanel.hidden = true;
     }
     if (onboardingBtn) {
-        onboardingBtn.hidden = true; // Onboarding shown only once, hide the button
-    }}
+        onboardingBtn.hidden = true;
+    }
+    
+    const configBtn = document.getElementById('config-btn');
+    if (configBtn && isOnboarded()) {
+        configBtn.style.display = '';
+    }
+}
 
 function handlePanelKeydown(event) {
     if (event.key === 'Escape') {
@@ -60,54 +66,99 @@ function handlePanelKeydown(event) {
 }
 
 // ==========================================
-// Event Listeners
 // ==========================================
 
+function completeStage(stageId, statusId, nextStageId) {
+    const stage = document.getElementById(stageId);
+    const status = document.getElementById(statusId);
+    const nextStage = document.getElementById(nextStageId);
+    
+    if (stage) {
+        stage.className = 'onboarding-complete';
+    }
+    if (status) {
+        status.textContent = '✅ Terminé';
+    }
+    if (nextStage) {
+        nextStage.className = 'onboarding-focus';
+    }
+    
+    debugLog('Onboarding stage completed', { stageId, nextStageId });
+}
+
+function enableUIElement(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.disabled = false;
+        element.style.opacity = '1';
+        element.style.filter = 'none';
+    }
+}
+
+function disableUIElement(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.disabled = true;
+        element.style.opacity = '0.5';
+        element.style.filter = 'blur(2px)';
+    }
+}
+
+function blurMainArea(blur = true) {
+    const main = document.getElementById('messages-container');
+    const inputContainer = document.getElementById('input-container');
+    
+    if (blur) {
+        if (main) {
+            main.style.opacity = '0.5';
+            main.style.filter = 'blur(2px)';
+            main.style.pointerEvents = 'none';
+        }
+        if (inputContainer) {
+            inputContainer.style.opacity = '0.5';
+            inputContainer.style.filter = 'blur(2px)';
+            inputContainer.style.pointerEvents = 'none';
+        }
+    } else {
+        if (main) {
+            main.style.opacity = '1';
+            main.style.filter = 'none';
+            main.style.pointerEvents = 'auto';
+        }
+        if (inputContainer) {
+            inputContainer.style.opacity = '1';
+            inputContainer.style.filter = 'none';
+            inputContainer.style.pointerEvents = 'auto';
+        }
+    }
+}
 
 // ==========================================
-// Onboarding stages
 // ==========================================
 
-// If onboarding is completed (by checking localStorage or completing the 5 stages):
-//  the onboarding panel is not shown
-//  the global onboarding button is hidden, the one at the end of the profile panel is shown.
-//  the Settings button is shown.
+function onProfileCompleted() {
+    completeStage('onboarding-stage-profile', 'profile-status', 'onboarding-stage-help');
+    enableUIElement('help-btn');
+    debugLog('Profile stage completed, help button enabled');
+}
 
-// If onboarding is not completed:
-//   the onboarding panel is shown on page load.
-//   the main area is blurred / non-interactive.
-//   the Aide button is blurred / non-interactive.
-//   the Settings button is invisible too
+function onHelpCompleted() {
+    completeStage('onboarding-stage-help', 'help-status', 'onboarding-stage-first-question');
+    blurMainArea(false);
+    debugLog('Help stage completed, main area enabled');
+}
 
+function onFirstResponseCompleted() {
+    completeStage('onboarding-stage-first-question', 'first-response-status', 'onboarding-stage-feedback');
+    debugLog('First response stage completed');
+}
 
-// Stage 1: Setup Profile
-// When the user has saved their profile,
-// - In stage 1, the "En attente" text is replaced with "[Checkmark emoji] Complete"
-// - Stage 1 style becomes complete
-// - Stage 2 style becomes focused
-// - The "Aide" button is enabled and unblurred
-
-// Stage 2: Find the help panel
-// When the user closes the help panel,
-// - The "En attente" text is replaced with "[Checkmark emoji] Complete"
-// - Stage 2 style becomes complete
-// - Stage 3 style becomes focused
-// - The main area is unblurred and enabled
-
-// Stage 3: First Question Guide
-// Cliquer sur le button bleu dans le message le fait flasher.
-// Ajouter un bouton "Aller à la question" dans le message qui met le focus dans le champ de saisie.
-// When the user receives the answer to the first question,
-// - The "En attente" text is replaced with "[Checkmark emoji] Complete"
-// - Stage 3 style becomes complete
-// - Stage 4 style becomes focused
-
-// Stage 4: Completed Feedback Form
-// Stage completes when the user submits the feedback form.
-//
-
-// Stage 5: Onboarding Completed
-// When the user completes all stages,
+function onFeedbackCompleted() {
+    completeStage('onboarding-stage-feedback', null, 'onboarding-stage-completed');
+    enableUIElement('config-btn');
+    setOnboarded();
+    debugLog('Feedback stage completed, onboarding finished');
+}
 
 
 function initializeOnBoarding() {
@@ -131,15 +182,15 @@ function initializeOnBoarding() {
         openHelpBtn.addEventListener('click', showHelpPanel);
     }
 
-    const firstQuestionGuideBtn = document.getElementById('open-first-question-guide');
-    const feedbackFormBtn = document.getElementById('open-feedback-form');
-
-    if (firstQuestionGuideBtn) {
-        firstQuestionGuideBtn.addEventListener('click', showFirstQuestionGuide);
-    }
-
-    if (feedbackFormBtn) {
-        feedbackFormBtn.addEventListener('click', showFeedbackForm);
+    const focusInputBtn = document.getElementById('focus-input');
+    if (focusInputBtn) {
+        focusInputBtn.addEventListener('click', () => {
+            const userInput = document.getElementById('user-input');
+            if (userInput) {
+                userInput.focus();
+                userInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
     }
 
     if (onboardingPanel) {
@@ -150,8 +201,28 @@ function initializeOnBoarding() {
         });
     }
 
-    // TODO: Add a check if the user is already onboarded
-    showOnboardingPanel();
+    if (isOnboarded()) {
+        if (onboardingBtn) {
+            onboardingBtn.hidden = true;
+        }
+        enableUIElement('config-btn');
+        debugLog('User already onboarded, skipping onboarding flow');
+    } else {
+        showOnboardingPanel();
+        setupInitialOnboardingState();
+        debugLog('Starting onboarding flow for new user');
+    }
+}
+
+function setupInitialOnboardingState() {
+    disableUIElement('help-btn');
+    disableUIElement('config-btn');
+    blurMainArea(true);
+    
+    const configBtn = document.getElementById('config-btn');
+    if (configBtn) {
+        configBtn.style.display = 'none';
+    }
 }
 
 // Initialize the onboarding system when the script loads

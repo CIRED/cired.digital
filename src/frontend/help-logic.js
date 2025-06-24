@@ -16,6 +16,10 @@ function hideHelpPanel() {
     if (helpPanel && helpBtn) {
         helpPanel.hidden = true;
         helpBtn.hidden = false;
+        
+        if (typeof onHelpCompleted === 'function' && !isOnboarded()) {
+            onHelpCompleted();
+        }
     }
 }
 

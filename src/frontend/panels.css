@@ -401,3 +401,15 @@ CHECKBOX CONTAINERS
   color: #888;
   opacity: 0.5;
 }
+
+#onboarding-panel ol li.onboarding-complete,
+#onboarding-panel ol li.onboarding-complete * {
+  color: #059669;
+  opacity: 1;
+}
+
+#onboarding-panel ol li.onboarding-focus {
+  color: #111827;
+  opacity: 1;
+  font-weight: 500;
+}

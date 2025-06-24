@@ -141,6 +141,10 @@ function handleSaveProfile() {
         setTimeout(() => {
             saveBtn.textContent = originalText;
             saveBtn.style.backgroundColor = '';
+            
+            if (typeof onProfileCompleted === 'function' && !isOnboarded()) {
+                onProfileCompleted();
+            }
         }, 2000);
     }
 }
