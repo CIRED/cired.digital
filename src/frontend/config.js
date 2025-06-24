@@ -166,8 +166,8 @@ function formatTariff(value, fallback) {
 function setupEventListeners() {
     // Configuration panel toggle
     configBtn.addEventListener('click', () => {
-        configPanel.classList.toggle('hidden');
-        if (!configPanel.classList.contains('hidden')) {
+        configPanel.hidden = !configPanel.hidden;
+        if (!configPanel.hidden) {
             // Panel ouvert: démarrer polling
             fetchApiStatus();
             fetchMonitorStatus();
@@ -182,7 +182,7 @@ function setupEventListeners() {
     const configCloseBtn = document.getElementById('config-close-btn');
     if (configCloseBtn) {
         configCloseBtn.addEventListener('click', () => {
-            configPanel.classList.add('hidden');
+            configPanel.hidden = true;
             clearInterval(statusInterval);
             clearInterval(feedbackInterval);
         });
@@ -405,36 +405,10 @@ async function initializeConfig() {
   }
 }
 
-// ==========================================
-// MODE D'EMPLOI MODAL FUNCTIONALITY
-// ==========================================
-function setupModeEmploiModal() {
-    const modeEmploiPanel = document.getElementById('mode-emploi-panel');
-    const modeEmploiCloseBtn = document.getElementById('mode-emploi-close-btn');
-    const aideBtn = document.getElementById('aide-btn');
-
-    if (!modeEmploiPanel || !modeEmploiCloseBtn || !aideBtn) {
-        console.error('Mode d\'emploi modal elements not found');
-        return;
-    }
-
-    modeEmploiCloseBtn.addEventListener('click', () => {
-        modeEmploiPanel.classList.add('hidden');
-        aideBtn.classList.remove('hidden');
-    });
-
-    aideBtn.addEventListener('click', () => {
-        modeEmploiPanel.classList.remove('hidden');
-        aideBtn.classList.add('hidden');
-    });
-}
-
 if (document.readyState === 'loading') {
      document.addEventListener('DOMContentLoaded', () => {
          initializeConfig();
-         setupModeEmploiModal();
      });
 } else {
     initializeConfig();
-    setupModeEmploiModal();
 }
