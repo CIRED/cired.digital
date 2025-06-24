@@ -93,13 +93,14 @@ function sanitizeProfileForAnalytics(profile) {
 function showProfilePanel() {
     if (profilePanel) {
         loadProfileIntoForm();
-        profilePanel.hidden = false;
+        displayStoredProfile(); // Affiche les données stockées
+        profilePanel.classList.remove('hidden');
     }
 }
 
 function hideProfilePanel() {
     if (profilePanel) {
-        profilePanel.hidden = true;
+        profilePanel.classList.add('hidden');
     }
 }
 
@@ -118,9 +119,9 @@ function loadProfileIntoForm() {
 function collectFormData(formPrefix = 'profile-') {
     return {
         name: document.getElementById(formPrefix + 'name')?.value || '',
-        role: document.getElementById(formPrefix + 'role')?.value || '',
-        usage: document.getElementById(formPrefix + 'usage')?.value || '',
-        organization: document.getElementById(formPrefix + 'organization')?.value || ''
+        role: document.querySelector('input[name="profile-role"]:checked')?.value || '',
+        usage: document.querySelector('input[name="profile-usage"]:checked')?.value || '',
+        organization: document.querySelector('input[name="profile-organization"]:checked')?.value || ''
     };
 }
 
@@ -141,11 +142,12 @@ function handleSaveProfile() {
         setTimeout(() => {
             saveBtn.textContent = originalText;
             saveBtn.style.backgroundColor = '';
-            
+
             if (typeof onProfileCompleted === 'function' && !isOnboarded()) {
                 onProfileCompleted();
             }
-        }, 2000);
+            hideProfilePanel();
+        }, 500);
     }
 }
 
@@ -158,6 +160,32 @@ function handleClearProfile() {
     }
 }
 
+function displayStoredProfile() {
+    const display = document.getElementById('profile-data-display');
+    if (!display) return;
+    try {
+        const stored = localStorage.getItem(PROFILE_STORAGE_KEY);
+        const onboarded = localStorage.getItem(PROFILE_ONBOARDED_KEY);
+        if (stored) {
+            const profile = JSON.parse(stored);
+            display.innerHTML = `
+                <ul>
+                    <li><b>Pseudonyme:</b> ${profile.name || ''}</li>
+                    <li><b>Affiliation:</b> ${profile.organization || ''}</li>
+                    <li><b>Rôle:</b> ${profile.role || ''}</li>
+                    <li><b>Usage IA:</b> ${profile.usage || ''}</li>
+                    <li><b>Créé le:</b> ${profile.createdAt ? new Date(profile.createdAt).toLocaleString() : ''}</li>
+                    <li><b>Modifié le:</b> ${profile.updatedAt ? new Date(profile.updatedAt).toLocaleString() : ''}</li>
+                    <li><b>${PROFILE_ONBOARDED_KEY}:</b> ${onboarded !== null ? onboarded : ''}</li>
+                </ul>
+            `;
+        } else {
+            display.textContent = 'Aucune donnée de profil enregistrée.';
+        }
+    } catch (e) {
+        display.textContent = 'Erreur de lecture du profil.';
+    }
+}
 
 // ==========================================
 // INITIALIZATION
@@ -180,6 +208,16 @@ function initializeProfile() {
 
     if (clearProfileBtn) {
         clearProfileBtn.addEventListener('click', handleClearProfile);
+    }
+
+    // Ajout du listener pour relancer le guide de démarrage rapide
+    const restartOnboardingBtn = document.getElementById('restart-onboarding');
+    if (restartOnboardingBtn) {
+        restartOnboardingBtn.addEventListener('click', () => {
+            if (typeof restartOnboarding === 'function') {
+                restartOnboarding();
+            }
+        });
     }
 
     debugLog('Profile system initialized');

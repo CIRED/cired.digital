@@ -32,7 +32,7 @@ function hideOnboardingPanel() {
     if (onboardingBtn) {
         onboardingBtn.hidden = true;
     }
-    
+
     const configBtn = document.getElementById('config-btn');
     if (configBtn && isOnboarded()) {
         configBtn.style.display = '';
@@ -72,7 +72,7 @@ function completeStage(stageId, statusId, nextStageId) {
     const stage = document.getElementById(stageId);
     const status = document.getElementById(statusId);
     const nextStage = document.getElementById(nextStageId);
-    
+
     if (stage) {
         stage.className = 'onboarding-complete';
     }
@@ -82,7 +82,7 @@ function completeStage(stageId, statusId, nextStageId) {
     if (nextStage) {
         nextStage.className = 'onboarding-focus';
     }
-    
+
     debugLog('Onboarding stage completed', { stageId, nextStageId });
 }
 
@@ -107,7 +107,7 @@ function disableUIElement(elementId) {
 function blurMainArea(blur = true) {
     const main = document.getElementById('messages-container');
     const inputContainer = document.getElementById('input-container');
-    
+
     if (blur) {
         if (main) {
             main.style.opacity = '0.5';
@@ -182,6 +182,11 @@ function initializeOnBoarding() {
         openHelpBtn.addEventListener('click', showHelpPanel);
     }
 
+    const helpCloseBtn = document.getElementById('help-close-btn');
+    if (helpCloseBtn) {
+        helpCloseBtn.addEventListener('click', () => onHelpCompleted());
+    }
+
     const focusInputBtn = document.getElementById('focus-input');
     if (focusInputBtn) {
         focusInputBtn.addEventListener('click', () => {
@@ -218,11 +223,27 @@ function setupInitialOnboardingState() {
     disableUIElement('help-btn');
     disableUIElement('config-btn');
     blurMainArea(true);
-    
+
     const configBtn = document.getElementById('config-btn');
     if (configBtn) {
         configBtn.style.display = 'none';
     }
+}
+
+// ==========================================
+// Relancer le guide de démarrage rapide
+// ==========================================
+
+function restartOnboarding() {
+    // Réinitialise l'état d'onboarding et relance le panneau d'onboarding
+    localStorage.removeItem(PROFILE_ONBOARDED_KEY);
+    if (typeof setupInitialOnboardingState === 'function') {
+        setupInitialOnboardingState();
+    }
+    if (typeof showOnboardingPanel === 'function') {
+        showOnboardingPanel();
+    }
+    debugLog('Onboarding reset and relaunched');
 }
 
 // Initialize the onboarding system when the script loads
