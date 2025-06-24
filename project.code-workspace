@@ -43,6 +43,11 @@
             "**/build": true,
             "**/.git": true
         },
+        "git.branchProtection": [
+            "main",
+            "master"
+        ],
+        "git.branchProtectionPrompt": "alwaysCommitToNewBranch",
         "typescript.preferences.includePackageJsonAutoImports": "auto",
         "python.defaultInterpreterPath": "./.venv/bin/python",
         "files.insertFinalNewline": true,
