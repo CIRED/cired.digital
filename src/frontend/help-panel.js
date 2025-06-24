@@ -106,3 +106,32 @@ document.getElementById("mode-emploi-panel").innerHTML = `
 
 </div>
 `;
+
+function initializeHelp() {
+    const modeEmploiPanel = document.getElementById('mode-emploi-panel');
+    const modeEmploiCloseBtn = document.getElementById('mode-emploi-close-btn');
+    const helpBtn = document.getElementById('help-btn');
+
+    if (!modeEmploiPanel || !modeEmploiCloseBtn || !helpBtn) {
+        console.error('Mode d\'emploi modal elements not found');
+        return;
+    }
+
+    modeEmploiCloseBtn.addEventListener('click', () => {
+        modeEmploiPanel.hidden = true;
+        helpBtn.hidden = false;
+    });
+
+    helpBtn.addEventListener('click', () => {
+        modeEmploiPanel.hidden = false;
+        helpBtn.hidden = true;
+    });
+}
+
+if (document.readyState === 'loading') {
+     document.addEventListener('DOMContentLoaded', () => {
+         initializeHelp();
+     });
+} else {
+    initializeHelp();
+}
