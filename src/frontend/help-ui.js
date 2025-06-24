@@ -7,7 +7,7 @@ document.getElementById("help-panel").innerHTML = `
   <div id="help-content">
 
   <p>
-    Bienvenue dans l’interface de dialogue avec l’assistant Cirdi. Cet outil a été conçu pour vous aider à retrouver rapidement des informations issues des publications de notre centre de recherche.
+    Cet outil a été conçu pour vous aider à retrouver rapidement des informations issues des publications de notre centre de recherche.
   </p>
 
 <section>
@@ -92,6 +92,9 @@ document.getElementById("help-panel").innerHTML = `
     </li>
     <li>
       La base HAL est consultée ponctuellement, elle n’est pas mise à jour automatiquement de façon régulière.
+    </li>
+    <li>
+      Cirdi sait lire et écrire dans beaucoup de langues, mais il ne sait pas dessiner ni même lire une figure.
     </li>
   </ul>
 </section>

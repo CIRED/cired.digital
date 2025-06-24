@@ -1,4 +1,23 @@
+
 // help-logic.js
+
+function showHelpPanel() {
+    const helpPanel = document.getElementById('help-panel');
+    const helpBtn = document.getElementById('help-btn');
+    if (helpPanel && helpBtn) {
+        helpPanel.hidden = false;
+        helpBtn.hidden = true;
+    }
+}
+
+function hideHelpPanel() {
+    const helpPanel = document.getElementById('help-panel');
+    const helpBtn = document.getElementById('help-btn');
+    if (helpPanel && helpBtn) {
+        helpPanel.hidden = true;
+        helpBtn.hidden = false;
+    }
+}
 
 function initializeHelp() {
     const helpPanel = document.getElementById('help-panel');
@@ -6,19 +25,13 @@ function initializeHelp() {
     const helpBtn = document.getElementById('help-btn');
 
     if (!helpPanel || !helpCloseBtn || !helpBtn) {
-        console.error('Mode d\'emploi modal elements not found');
+        console.error('Help panel elements not found');
         return;
     }
 
-    helpCloseBtn.addEventListener('click', () => {
-        helpPanel.hidden = true;
-        helpBtn.hidden = false;
-    });
+    helpCloseBtn.addEventListener('click', () => hideHelpPanel());
 
-    helpBtn.addEventListener('click', () => {
-        helpPanel.hidden = false;
-        helpBtn.hidden = true;
-    });
+    helpBtn.addEventListener('click', () => showHelpPanel());
 }
 
 if (document.readyState === 'loading') {

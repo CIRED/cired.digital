@@ -178,7 +178,7 @@ CHECKBOX CONTAINERS
 
 
 /* ==========================================
-   MODE D'EMPLOI
+   HELP PANEL
    ========================================== */
 #help-panel {
   background-color: rgb(188, 221, 219);
@@ -384,4 +384,20 @@ CHECKBOX CONTAINERS
   display: flex;
   gap: 0.5rem;
   margin-top: 1rem;
+}
+
+/* ===========================================
+   ONBOARDING PANEL
+   ========================================== */
+
+
+#onboarding-panel ol li {
+  margin: 1.5rem 0;
+  line-height: 1.85;
+}
+
+#onboarding-panel ol li.onboarding-inactive,
+#onboarding-panel ol li.onboarding-inactive * {
+  color: #888;
+  opacity: 0.5;
 }
