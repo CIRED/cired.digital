@@ -1,3 +1,6 @@
+// profile-ui.js
+
+
 document.getElementById("profile-panel").innerHTML = `
   <div id="profile-header">
     <h2>Mon Profil</h2>

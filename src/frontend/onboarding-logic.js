@@ -1,42 +1,13 @@
 // ==========================================
-// onboarding.js
+// onboarding-logic.js
 // ==========================================
 
 const onboardingPanel = document.getElementById('onboarding-panel');
-
-onboardingPanel.innerHTML = `
-<div id="onboarding-header">
-    <button id="onboarding-close-btn">✖️</button>
-    <h2>Guide de démarrage</h2>
-</div>
-<div id="onboarding-content">
-    <h3>Bienvenue dans l'assistant documentaire Cirdi !</h3>
-    <p>Merci de participer à l'évaluation de l'assistant documentaire Cirdi. Nous sommes en phase de test beta sur invitation.</p>
-    <p>Puis-je vous inviter à:</p>
-    <ol>
-        <li>Remplir votre profil utilisateur.
-        <button type="button" id="open-profile-panel" class="primary-button">Compléter mon profil</button>
-        </li>
-        <li>Consulter le guide de démarrage rapide.
-        <button type="button" id="open-quick-start-guide" class="primary-button">Ouvrir le guide</button>
-        </li>
-        <li>Poser votre première question à Cirdi.
-        <button type="button" id="open-first-question-guide" class="primary-button">Poser une question</button>
-        </li>
-        <li>Partager vos retours d'expérience.
-        <button type="button" id="open-feedback-form" class="primary-button">Donner mon avis</button>
-        </li>
-    </ol>
-    <p>Votre contribution est précieuse pour améliorer l'assistant.</p>
-    Merci de votre aide, Minh !
-</div>
-`
-
 const onboardingBtn = document.getElementById('onboarding-btn');
 const onboardingCloseBtn = document.getElementById('onboarding-close-btn');
 
 // ==========================================
-// ==========================================
+// =========== Onboarding State ==============
 
 const PROFILE_ONBOARDED_KEY = 'profile-onboarded';
 
@@ -58,7 +29,9 @@ function hideOnboardingPanel() {
     if (onboardingPanel) {
         onboardingPanel.hidden = true;
     }
-}
+    if (onboardingBtn) {
+        onboardingBtn.hidden = true; // Onboarding shown only once, hide the button
+    }}
 
 function handlePanelKeydown(event) {
     if (event.key === 'Escape') {
@@ -90,36 +63,52 @@ function handlePanelKeydown(event) {
 // Event Listeners
 // ==========================================
 
-// When the user clicks the "Fill profile" button, we open the profile panel.
-// When the user clicks the "Ouvrir le guide" button, we show a Panel with the quick start guide content.
-//
 
 // ==========================================
 // Onboarding stages
 // ==========================================
 
-// Initially, the div "input" is inactive and shown greyed out.
-// Initially, the Settings button is inactive and shown greyed out.
-// Stages 2-4 are also greyed out
+// If onboarding is completed (by checking localStorage or completing the 5 stages):
+//  the onboarding panel is not shown
+//  the global onboarding button is hidden, the one at the end of the profile panel is shown.
+//  the Settings button is shown.
 
-// Stage 1: Welcome and Profile Setup
-// When the user has saved their profile, we replace the open-profile-panel button
-// with a thank you message indicating that the profile is complete
-// it can be modified or deleted with the Profile button in the top right corner. Show an image of the button.
+// If onboarding is not completed:
+//   the onboarding panel is shown on page load.
+//   the main area is blurred / non-interactive.
+//   the Aide button is blurred / non-interactive.
+//   the Settings button is invisible too
 
-// Stage 2: Quick Start Guide
-// The button "open-quick-start-guide" looks the same as the Aide button in the top right corner.
-// At this stage, the help panel only displays only basic instructions on how to use the assistant.
-// The stage completes upon opening the guide.
-// The button is replaced with a thank you message indicating that the button will remain in the top right corner.
+
+// Stage 1: Setup Profile
+// When the user has saved their profile,
+// - In stage 1, the "En attente" text is replaced with "[Checkmark emoji] Complete"
+// - Stage 1 style becomes complete
+// - Stage 2 style becomes focused
+// - The "Aide" button is enabled and unblurred
+
+// Stage 2: Find the help panel
+// When the user closes the help panel,
+// - The "En attente" text is replaced with "[Checkmark emoji] Complete"
+// - Stage 2 style becomes complete
+// - Stage 3 style becomes focused
+// - The main area is unblurred and enabled
 
 // Stage 3: First Question Guide
-// The stage completes when the user receives its first answer.
-// Upon completion, the Aide button will show additional tips on limits
+// Cliquer sur le button bleu dans le message le fait flasher.
+// Ajouter un bouton "Aller à la question" dans le message qui met le focus dans le champ de saisie.
+// When the user receives the answer to the first question,
+// - The "En attente" text is replaced with "[Checkmark emoji] Complete"
+// - Stage 3 style becomes complete
+// - Stage 4 style becomes focused
 
 // Stage 4: Completed Feedback Form
 // Stage completes when the user submits the feedback form.
-// This unlocks the "Settings" button in the top right corner.
+//
+
+// Stage 5: Onboarding Completed
+// When the user completes all stages,
+
 
 function initializeOnBoarding() {
     if (onboardingBtn) {
@@ -132,6 +121,27 @@ function initializeOnBoarding() {
 
     document.addEventListener('keydown', handlePanelKeydown);
 
+    const openProfileBtn = document.getElementById('open-profile-btn');
+    if (openProfileBtn) {
+        openProfileBtn.addEventListener('click', showProfilePanel);
+    }
+
+    const openHelpBtn = document.getElementById('open-help-btn');
+    if (openHelpBtn) {
+        openHelpBtn.addEventListener('click', showHelpPanel);
+    }
+
+    const firstQuestionGuideBtn = document.getElementById('open-first-question-guide');
+    const feedbackFormBtn = document.getElementById('open-feedback-form');
+
+    if (firstQuestionGuideBtn) {
+        firstQuestionGuideBtn.addEventListener('click', showFirstQuestionGuide);
+    }
+
+    if (feedbackFormBtn) {
+        feedbackFormBtn.addEventListener('click', showFeedbackForm);
+    }
+
     if (onboardingPanel) {
         onboardingPanel.addEventListener('click', (event) => {
             if (event.target === onboardingPanel) {
@@ -139,6 +149,9 @@ function initializeOnBoarding() {
             }
         });
     }
+
+    // TODO: Add a check if the user is already onboarded
+    showOnboardingPanel();
 }
 
 // Initialize the onboarding system when the script loads

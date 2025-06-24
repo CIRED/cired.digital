@@ -15,8 +15,6 @@ body {
   margin: 0;
 }
 
-nav {}  /* Placeholder */
-
 header {
   max-width: 48rem;
   width: 100%;
@@ -46,7 +44,7 @@ footer {
    Nav elements
    ========================================== */
 
-#config-btn, #onboarding-btn {
+#config-btn, #show-config-btn, #onboarding-btn {
   position: fixed;
   top: 1rem;
   left: 1rem;
@@ -64,14 +62,14 @@ footer {
 }
 
 #onboarding-btn {
- left: 4rem;
+ left: 1rem;
 }
 
-#profile-btn {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1000;
+#show-config-btn{
+  position:inherit;
+}
+
+#profile-btn, #open-profile-btn {
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
   font-weight: 500;
@@ -83,16 +81,20 @@ footer {
   transition: all 0.2s;
 }
 
-#profile-btn:hover {
+#profile-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+
+#profile-btn:hover, #open-profile-btn:hover {
   background-color: #f3f4f6;
   border-color: #9ca3af;
 }
 
-#help-btn {
-  position: fixed;
-  top: 1rem;
-  right: 4rem;
-  z-index: 1000;
+#help-btn, #open-help-btn {
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
   font-weight: 500;
@@ -105,7 +107,14 @@ footer {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
-#help-btn:hover {
+#help-btn {
+  position: fixed;
+  top: 1rem;
+  right: 4rem;
+  z-index: 1000;
+}
+
+#help-btn:hover, #open-help-btn:hover {
   background-color: #d1d5db;
 }
 
@@ -147,13 +156,16 @@ header #config-btn:hover {
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
 }
 
-#send-btn {
+#send-btn, #image-send-btn {
   padding: 0.75rem 1.5rem;
   background-color: #2563eb;
   color: white;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+
+#send-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,6 +173,7 @@ header #config-btn:hover {
   font-weight: bold;
   font-size: 1.125rem;
 }
+
 
 #send-btn:hover {
   background-color: #1d4ed8;
@@ -170,6 +183,11 @@ header #config-btn:hover {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+#image-send-btn {
+  padding: 0.2rem 0.5rem;
+}
+
 
 #input-help {
   text-align: center;

@@ -192,22 +192,22 @@ if (document.readyState === 'loading') {
 }
 
 function initializeHelp() {
-    const modeEmploiPanel = document.getElementById('mode-emploi-panel');
-    const modeEmploiCloseBtn = document.getElementById('mode-emploi-close-btn');
+    const helpPanel = document.getElementById('help-panel');
+    const helpCloseBtn = document.getElementById('help-close-btn');
     const helpBtn = document.getElementById('help-btn');
 
-    if (!modeEmploiPanel || !modeEmploiCloseBtn || !helpBtn) {
+    if (!helpPanel || !helpCloseBtn || !helpBtn) {
         console.error('Mode d\'emploi modal elements not found');
         return;
     }
 
-    modeEmploiCloseBtn.addEventListener('click', () => {
-        modeEmploiPanel.hidden = true;
+    helpCloseBtn.addEventListener('click', () => {
+        helpPanel.hidden = true;
         helpBtn.hidden = false;
     });
 
     helpBtn.addEventListener('click', () => {
-        modeEmploiPanel.hidden = false;
+        helpPanel.hidden = false;
         helpBtn.hidden = true;
     });
 }
