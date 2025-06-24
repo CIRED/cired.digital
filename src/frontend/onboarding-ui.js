@@ -13,15 +13,16 @@ document.getElementById('onboarding-panel').innerHTML = `
             Profil complété: <span id="profile-status">En attente.</span>
         </li>
         <li id="onboarding-stage-help" class="onboarding-inactive">
-            Consultez le mode d'emploi. Vous trouverez le bouton
+            Repérez le mode d'emploi. Le bouton
             <button type="button" id="open-help-btn" class="primary-button">Aide</button>
-            juste à côté du bouton de profil.
+            est juste à côté du bouton de profil.
             <br />
             Mode d'emploi vu, refermé: <span id="help-status">En attente.</span>
         </li>
         <li id="onboarding-stage-first-question" class="onboarding-inactive">
             Posez une première question à Cirdi. Le champ de saisie est en haut au centre,
             le bouton bleu <button id="image-send-btn">➤</button> lance la requête.
+            <button id="focus-input">Aller au champ de saisie</button>.
             <br />
             Première réponse: <span id="first-response-status">En attente.</span>
         </li>

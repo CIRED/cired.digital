@@ -68,20 +68,31 @@ function handlePanelKeydown(event) {
 // Onboarding stages
 // ==========================================
 
-// Initially, the div "input" is inactive and shown greyed out.
-// Initially, the Settings button is hidden.
+// If onboarding is completed (by checking localStorage or completing the 5 stages):
+//  the onboarding panel is not shown
+//  the global onboarding button is hidden, the one at the end of the profile panel is shown.
+//  the Settings button is shown.
+
+// If onboarding is not completed:
+//   the onboarding panel is shown on page load.
+//   the main area is blurred / non-interactive.
+//   the Aide button is blurred / non-interactive.
+//   the Settings button is invisible too
+
 
 // Stage 1: Setup Profile
 // When the user has saved their profile,
 // - In stage 1, the "En attente" text is replaced with "[Checkmark emoji] Complete"
 // - Stage 1 style becomes complete
 // - Stage 2 style becomes focused
+// - The "Aide" button is enabled and unblurred
 
 // Stage 2: Find the help panel
 // When the user closes the help panel,
 // - The "En attente" text is replaced with "[Checkmark emoji] Complete"
 // - Stage 2 style becomes complete
 // - Stage 3 style becomes focused
+// - The main area is unblurred and enabled
 
 // Stage 3: First Question Guide
 // Cliquer sur le button bleu dans le message le fait flasher.
@@ -93,7 +104,11 @@ function handlePanelKeydown(event) {
 
 // Stage 4: Completed Feedback Form
 // Stage completes when the user submits the feedback form.
-// This unlocks the "Settings" button in the top right corner.
+//
+
+// Stage 5: Onboarding Completed
+// When the user completes all stages,
+
 
 function initializeOnBoarding() {
     if (onboardingBtn) {
