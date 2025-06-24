@@ -1,10 +1,10 @@
-document.getElementById("mode-emploi-panel").innerHTML = `
-  <div id="mode-emploi-header">
+document.getElementById("help-panel").innerHTML = `
+  <div id="help-header">
     <h2>Mode d'emploi - assistant documentaire Cirdi</h2>
-    <button id="mode-emploi-close-btn">✖️</button>
+    <button id="help-close-btn">✖️</button>
   </div>
 
-  <div id="mode-emploi-content">
+  <div id="help-content">
 
   <p>
     Bienvenue dans l’interface de dialogue avec l’assistant Cirdi. Cet outil a été conçu pour vous aider à retrouver rapidement des informations issues des publications de notre centre de recherche.
@@ -106,32 +106,3 @@ document.getElementById("mode-emploi-panel").innerHTML = `
 
 </div>
 `;
-
-function initializeHelp() {
-    const modeEmploiPanel = document.getElementById('mode-emploi-panel');
-    const modeEmploiCloseBtn = document.getElementById('mode-emploi-close-btn');
-    const helpBtn = document.getElementById('help-btn');
-
-    if (!modeEmploiPanel || !modeEmploiCloseBtn || !helpBtn) {
-        console.error('Mode d\'emploi modal elements not found');
-        return;
-    }
-
-    modeEmploiCloseBtn.addEventListener('click', () => {
-        modeEmploiPanel.hidden = true;
-        helpBtn.hidden = false;
-    });
-
-    helpBtn.addEventListener('click', () => {
-        modeEmploiPanel.hidden = false;
-        helpBtn.hidden = true;
-    });
-}
-
-if (document.readyState === 'loading') {
-     document.addEventListener('DOMContentLoaded', () => {
-         initializeHelp();
-     });
-} else {
-    initializeHelp();
-}

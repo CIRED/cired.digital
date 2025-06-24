@@ -180,7 +180,7 @@ CHECKBOX CONTAINERS
 /* ==========================================
    MODE D'EMPLOI
    ========================================== */
-#mode-emploi-panel {
+#help-panel {
   background-color: rgb(188, 221, 219);
   border-left: 1px solid #e5e7eb;
   padding: 1rem;
@@ -196,7 +196,7 @@ CHECKBOX CONTAINERS
   line-height: 1.5;
 }
 
-#mode-emploi-header {
+#help-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -205,7 +205,7 @@ CHECKBOX CONTAINERS
   padding-bottom: 0.5rem;
 }
 
-#mode-emploi-close-btn {
+#help-close-btn {
   color: #6b7280;
   background: none;
   border: none;
@@ -213,26 +213,26 @@ CHECKBOX CONTAINERS
   font-size: 1rem;
 }
 
-#mode-emploi-close-btn:hover {
+#help-close-btn:hover {
   color: #374151;
 }
 
-#mode-emploi-header > h2 {
+#help-header > h2 {
   font-size: 1.125rem;
   font-weight: 600;
   color: #111827;
   margin: 0;
 }
 
-#mode-emploi-content {
+#help-content {
   color: #374151;
 }
 
-#mode-emploi-content section {
+#help-content section {
   margin-bottom: 1.5rem;
 }
 
-#mode-emploi-content h3 {
+#help-content h3 {
   font-size: 1rem;
   font-weight: 600;
   color: #111827;
@@ -241,7 +241,7 @@ CHECKBOX CONTAINERS
   padding-bottom: 0.25rem;
 }
 
-#mode-emploi-content h4 {
+#help-content h4 {
   font-size: 0.875rem;
   font-weight: 500;
   color: #374151;
@@ -249,21 +249,21 @@ CHECKBOX CONTAINERS
   margin-top: 1rem;
 }
 
-#mode-emploi-content ul {
+#help-content ul {
   margin: 0.5rem 0;
   padding-left: 1.5rem;
 }
 
-#mode-emploi-content li {
+#help-content li {
   margin-bottom: 0.5rem;
 }
 
-#mode-emploi-content a {
+#help-content a {
   color: #2563eb;
   text-decoration: underline;
 }
 
-#mode-emploi-content a:hover {
+#help-content a:hover {
   color: #1d4ed8;
 }
 

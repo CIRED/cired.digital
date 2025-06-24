@@ -65,4 +65,4 @@ document.getElementById("profile-panel").innerHTML = `
       <button type="button" id="clear-profile" class="secondary-button">Effacer le profil</button>
     </div>
   </div>
-`
+`;
