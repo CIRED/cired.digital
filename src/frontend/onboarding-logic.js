@@ -155,11 +155,29 @@ function onFirstResponseCompleted() {
 
 function onFeedbackCompleted() {
     completeStage('onboarding-stage-feedback', null, 'onboarding-stage-completed');
-    enableUIElement('config-btn');
-    setOnboarded();
     debugLog('Feedback stage completed, onboarding finished');
 }
 
+function finalizeOnboarding() {
+    // Remove the 'onboarding-inactive' class of the Fermer le guide button to
+    const onboardingCloseBtn = document.getElementById('onboarding-close-btn');
+    if (onboardingCloseBtn) {
+        onboardingCloseBtn.classList.remove('onboarding-inactive');
+    }
+    enableUIElement('config-btn');
+    setOnboarded();
+}
+
+function handleOnboardingCloseBtn() {
+    debugLog('Onboarding closed');
+    // Shortcut: complete all stages of the onboarding flow
+    completeStage('onboarding-stage-profile', 'profile-status', 'onboarding-stage-help');
+    completeStage('onboarding-stage-help', 'help-status', 'onboarding-stage-first-question');
+    completeStage('onboarding-stage-first-question', 'first-response-status', 'onboarding-stage-feedback');
+    completeStage('onboarding-stage-feedback', null, 'onboarding-stage-completed');
+    finalizeOnboarding();
+    hideOnboardingPanel();
+}
 
 function initializeOnBoarding() {
     if (onboardingBtn) {
@@ -167,7 +185,7 @@ function initializeOnBoarding() {
     }
 
     if (onboardingCloseBtn) {
-        onboardingCloseBtn.addEventListener('click', hideOnboardingPanel);
+        onboardingCloseBtn.addEventListener('click', handleOnboardingCloseBtn);
     }
 
     document.addEventListener('keydown', handlePanelKeydown);
