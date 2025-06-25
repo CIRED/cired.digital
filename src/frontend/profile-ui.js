@@ -3,69 +3,125 @@
 
 document.getElementById("profile-panel").innerHTML = `
   <div id="profile-header">
-    <h2>Mon Profil</h2>
+    <h2>Renseigner mon Profil</h2>
     <button id="profile-close-btn">✖️</button>
   </div>
 
   <div class="settings-grid" id="profile-container">
-    <div class="profile-info">
-      <p>Profil spécifique à cet ordinateur</p>
+    <form id="profile-edit-form" class="settings-grid">
+
+      <div class="form-group">
+        <label class="form-label" for="edit-profile-organization">Affiliation professionnelle</label>
+        <div id="edit-profile-organization" style="display: flex; flex-direction: column; gap: 0.25em;">
+          <label><input type="radio" name="profile-organization" value="CIRED"> CIRED</label>
+          <label><input type="radio" name="profile-organization" value="university"> Enseignement et recherche</label>
+          <label><input type="radio" name="profile-organization" value="media"> Media</label>
+          <label><input type="radio" name="profile-organization" value="nonprofit"> ONG/Association</label>
+          <label><input type="radio" name="profile-organization" value="public"> Secteur public</label>
+          <label><input type="radio" name="profile-organization" value="private"> Secteur privé</label>
+          <label><input type="radio" name="profile-organization" value="other"> Autre</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="edit-profile-role">Connaissance des questions d'environnement et/ou de développement</label>
+        <div id="edit-profile-role" style="display: flex; flex-direction: column; gap: 0.25em;">
+          <label><input type="radio" name="profile-role" value="researcher"> Expert: des années de pratique ou de recherche dans le domaine</label>
+          <label><input type="radio" name="profile-role" value="consultant"> Engagé: journaliste, étudiant, militant...</label>
+          <label><input type="radio" name="profile-role" value="student"> Initiale: souhaite en savoir plus sur le sujet</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="edit-profile-usage">Niveau de familiarité avec les technologies IA</label>
+        <div id="edit-profile-usage" style="display: flex; flex-direction: column; gap: 0.25em;">
+          <label><input type="radio" name="profile-usage" value="expert"> Professionnel - Je trouve que Cirdi est un RAG simple.</label>
+          <label><input type="radio" name="profile-usage" value="advanced"> Avancé - J'utilise au quotidien divers outils d'IA.</label>
+          <label><input type="radio" name="profile-usage" value="intermediate"> Intermédiaire - J'ai une pratique répétée.</label>
+          <label><input type="radio" name="profile-usage" value="beginner"> Débutant - J'ai peu ou pas utilisé de chatbot.</label>
+        </div>
+      </div>
+
+      </form>
+
+    <div id="profile-actions">
+      <button type="button" id="save-profile-btn" class="primary-button">Sauvegarder</button>
     </div>
 
-    <form id="profile-edit-form" class="settings-grid">
-      <div class="form-group">
-        <label class="form-label" for="edit-profile-name">Pseudonyme</label>
-        <input type="text" id="edit-profile-name" class="form-input">
-      </div>
+    <div id="stored-profile">
+    <h3>Données stockées actuellement</h3>
+      <div id="profile-data-display">Loading...</div>
+      <button type="button" id="clear-profile-btn" class="secondary-button">Effacer les données</button>
+    </div>
 
-      <div class="form-group">
-        <label class="form-label" for="edit-profile-role">Rôle</label>
-        <select id="edit-profile-role" class="form-select">
-          <option value="">Sélectionnez votre rôle</option>
-          <option value="researcher">Chercheur/Chercheuse</option>
-          <option value="student">Étudiant(e)</option>
-          <option value="policy-maker">Décideur politique</option>
-          <option value="consultant">Consultant(e)</option>
-          <option value="journalist">Journaliste</option>
-          <option value="citizen">Citoyen(ne)</option>
-          <option value="other">Autre</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="edit-profile-usage">Contexte d'utilisation</label>
-        <select id="edit-profile-usage" class="form-select">
-          <option value="">Sélectionnez le contexte</option>
-          <option value="research">Recherche académique</option>
-          <option value="education">Enseignement/Formation</option>
-          <option value="policy">Élaboration de politiques</option>
-          <option value="business">Conseil/Business</option>
-          <option value="personal">Intérêt personnel</option>
-          <option value="journalism">Journalisme</option>
-          <option value="other">Autre</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="edit-profile-organization">Type d'organisation</label>
-        <select id="edit-profile-organization" class="form-select">
-          <option value="">Sélectionnez le type</option>
-          <option value="university">Université/École</option>
-          <option value="research-institute">Institut de recherche</option>
-          <option value="government">Administration publique</option>
-          <option value="ngo">ONG/Association</option>
-          <option value="private-company">Entreprise privée</option>
-          <option value="consulting">Cabinet de conseil</option>
-          <option value="media">Média</option>
-          <option value="individual">Particulier</option>
-          <option value="other">Autre</option>
-        </select>
-      </div>
-    </form>
-
-    <div class="profile-actions">
-      <button type="button" id="save-profile" class="primary-button">Sauvegarder</button>
-      <button type="button" id="clear-profile" class="secondary-button">Effacer le profil</button>
+    <div id="profile-footer">
+      <button type="button" id="restart-onboarding-btn">Effacer les données et relancer le guide de démarrage rapide</button>
     </div>
   </div>
-`
+`;
+
+
+/**
+ * Updates the profile panel UI with the user's profile data from localStorage.
+ *
+ * - Displays profile information in the element with ID 'profile-data-display'.
+ * - Updates the label of the save-profile button depending on whether a profile ID exists.
+ * - Synchronizes the profile edit form fields with the stored profile data, or clears them if no profile is found.
+ * - Handles errors gracefully and displays an error message if profile data cannot be read.
+ *
+ * Relies on the constants PROFILE_STORAGE_KEY and PROFILE_ONBOARDED_KEY being defined in the scope.
+ */
+function updateProfilePanel() {
+
+    const display = document.getElementById('profile-data-display');
+    if (!display) return;
+    try {
+        const stored = localStorage.getItem(PROFILE_STORAGE_KEY);
+        const onboarded = localStorage.getItem(PROFILE_ONBOARDED_KEY);
+        let profile = null;
+        if (stored) {
+            profile = JSON.parse(stored);
+            display.innerHTML = `
+                <ul>
+                    <li><b>Profile ID:</b> ${profile.id || ''}</li>
+                    <li><b>Affiliation:</b> ${profile.organization || ''}</li>
+                    <li><b>Rôle:</b> ${profile.role || ''}</li>
+                    <li><b>Usage IA:</b> ${profile.usage || ''}</li>
+                    <li><b>Créé le:</b> ${profile.createdAt ? new Date(profile.createdAt).toLocaleString() : ''}</li>
+                    <li><b>Modifié le:</b> ${profile.updatedAt ? new Date(profile.updatedAt).toLocaleString() : ''}</li>
+                    <li><b>${PROFILE_ONBOARDED_KEY}:</b> ${onboarded !== null ? onboarded : ''}</li>
+                </ul>
+            `;
+        } else {
+            display.textContent = 'Aucune donnée de profil enregistrée.';
+        }
+
+        // Update save-profile button label depending on presence of ID
+        const saveBtn = document.getElementById('save-profile');
+        if (saveBtn) {
+            saveBtn.textContent = profile && profile.id ? 'Mettre à jour' : 'Sauvegarder';
+        }
+
+        // Synchronize form fields with profile data or clear them if no profile
+        const editForm = document.getElementById('profile-edit-form');
+        if (editForm) {
+            // Organization
+            const orgInputs = editForm.querySelectorAll('input[name="profile-organization"]');
+            orgInputs.forEach(input => {
+                input.checked = profile && profile.organization === input.value;
+            });
+            // Role
+            const roleInputs = editForm.querySelectorAll('input[name="profile-role"]');
+            roleInputs.forEach(input => {
+                input.checked = profile && profile.role === input.value;
+            });
+            // Usage
+            const usageInputs = editForm.querySelectorAll('input[name="profile-usage"]');
+            usageInputs.forEach(input => {
+                input.checked = profile && profile.usage === input.value;
+            });
+        }
+    } catch (e) {
+        display.textContent = 'Erreur de lecture du profil.';
+    }
+}

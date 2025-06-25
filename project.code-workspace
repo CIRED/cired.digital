@@ -50,6 +50,7 @@
         "git.branchProtectionPrompt": "alwaysCommitToNewBranch",
         "typescript.preferences.includePackageJsonAutoImports": "auto",
         "python.defaultInterpreterPath": "./.venv/bin/python",
+        "files.trimTrailingWhitespace": true,
         "files.insertFinalNewline": true,
         "files.trimFinalNewlines": false,
 

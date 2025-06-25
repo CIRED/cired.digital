@@ -65,10 +65,18 @@ function addFeedback(article) {
     feedbackDiv.querySelector('.feedback-up').addEventListener('click', () => {
         logFeedback('up', commentInput.value.trim());
         feedbackDiv.remove();
+
+        if (typeof onFeedbackCompleted === 'function' && !isOnboarded()) {
+            onFeedbackCompleted();
+        }
     });
 
     feedbackDiv.querySelector('.feedback-down').addEventListener('click', () => {
         logFeedback('down', commentInput.value.trim());
         feedbackDiv.remove();
+
+        if (typeof onFeedbackCompleted === 'function' && !isOnboarded()) {
+            onFeedbackCompleted();
+        }
     });
 }

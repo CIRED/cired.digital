@@ -51,6 +51,9 @@ dev = [
 target-version = "py311"
 line-length = 88
 
+[tool.ruff.format]
+line-ending = "lf"  # Satisfy end-of-line-fixer pre-commit hook
+
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "C90", "D", "UP"]
 ignore = ["E501", "D203", "D212"]

@@ -19,8 +19,13 @@
 <nav>
  <button id="config-btn">⚙️</button>
  <button id="onboarding-btn">👥</button>
- <button id="profile-btn">👤</button>
- <button id="help-btn">Aide</button>
+ <span id="indicators-container" hidden>
+   <span id="backend-status-indicator">?</span>
+   <span id="model-status-indicator">?</span>
+   <span id="monitor-status-indicator">?</span>
+ </span>
+  <button id="profile-btn">👤</button>
+  <button id="help-btn">Aide</button>
 </nav>
 
 <header>
@@ -57,8 +62,7 @@
 </main>
 
 <footer>
-    ⚠️ <strong>Les conversations sont enregistrées pour améliorer le service.</strong>
-    Vous pourrez donner un feedback en cliquant 👍 ou 👎 sous la réponse.<br />
+    ⚠️ <strong>Les conversations sont enregistrées pour améliorer le service.</strong><br />
     📊 <a href="#" id="view-analytics-link">Voir les données collectées</a> |
     🔒 <a href="#" id="privacy-policy-link">Politique de confidentialité</a>
 </footer>
@@ -66,7 +70,7 @@
 <aside hidden id="help-panel">Loading...</aside>
 <script src="help-ui.js"></script>
 
-<aside hidden id="profile-panel">Loading...</aside>
+<aside id="profile-panel" class="hidden">Loading...</aside>
 <script src="profile-ui.js"></script>
 
 <aside hidden id="config-panel">Loading...</aside>
