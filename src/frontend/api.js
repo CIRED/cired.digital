@@ -191,6 +191,7 @@ function insertArticle(config, requestBody, data, queryId, duration) {
 
     addFeedback(article);
     addCarouselControls(article);
+    updateCarouselControls();
 
     if (typeof onFirstResponseCompleted === 'function' && !isOnboarded()) {
         onFirstResponseCompleted();
