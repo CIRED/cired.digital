@@ -40,6 +40,8 @@ const includeWebSearchCheckbox = document.getElementById('include-web-search');
 const apiStatusElement = document.getElementById('api-status');
 const feedbackUrlInput = document.getElementById('feedback-url');
 const feedbackStatusEl = document.getElementById('feedback-status');
+const refreshModelsBtn = document.getElementById('refresh-models-btn');
+const modelStatusElement = document.getElementById('model-status');
 
 function detectEnvironment() {
   const hostname = window.location.hostname;
@@ -226,7 +228,7 @@ function setupEventListeners() {
         // Set model tariff display on model change
         setModelTariffDisplay(selectedModelKey);
 
-        updateStatusDisplay();
+        refreshModels();
     });
 
     // Debug mode
@@ -239,6 +241,10 @@ function setupEventListeners() {
     }
     if (includeWebSearchCheckbox) {
       includeWebSearchCheckbox.addEventListener('change', updateStatusDisplay);
+    }
+
+    if (refreshModelsBtn) {
+        refreshModelsBtn.addEventListener('click', refreshModels);
     }
 
     initializePrivacyMode();
@@ -271,7 +277,7 @@ function setupEventListeners() {
                     endReason: 'unload'
                 }
             };
-            
+
             if (navigator.sendBeacon) {
                 navigator.sendBeacon(analyticsEndpoint, JSON.stringify(sessionEndData));
             }
