@@ -50,6 +50,10 @@ services:
     command: >
       postgres
       -c max_connections=1024
+      -c shared_preload_libraries=''
+      -c log_statement=all
+      -c log_connections=on
+      -c log_disconnections=on
 
   # Not used by default
   minio:
