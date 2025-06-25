@@ -148,22 +148,18 @@ function fallbackCopyToClipboard(text) {
 }
 
 function addCarouselControls() {
-    let carouselDiv = document.querySelector('.carousel-navigation');
-    if (!carouselDiv) {
-        carouselDiv = document.createElement('div');
-        carouselDiv.className = 'carousel-navigation';
-        carouselDiv.innerHTML = `
-            <button class="carousel-btn carousel-prev" title="Article précédent">←</button>
-            <span class="carousel-indicator"></span>
-            <button class="carousel-btn carousel-next" title="Article suivant">→</button>
-        `;
-        messagesContainer.appendChild(carouselDiv);
-
-        const prevBtn = carouselDiv.querySelector('.carousel-prev');
-        const nextBtn = carouselDiv.querySelector('.carousel-next');
-        prevBtn.addEventListener('click', () => navigateToArticle('prev'));
-        nextBtn.addEventListener('click', () => navigateToArticle('next'));
-    }
+    const carouselDiv = document.querySelector('.carousel-navigation');
+    if (!carouselDiv) return;
+    carouselDiv.removeAttribute('hidden');
+    carouselDiv.innerHTML = `
+        <button class="carousel-btn carousel-prev" title="Article précédent">←</button>
+        <span class="carousel-indicator"></span>
+        <button class="carousel-btn carousel-next" title="Article suivant">→</button>
+    `;
+    const prevBtn = carouselDiv.querySelector('.carousel-prev');
+    const nextBtn = carouselDiv.querySelector('.carousel-next');
+    prevBtn.addEventListener('click', () => navigateToArticle('prev'));
+    nextBtn.addEventListener('click', () => navigateToArticle('next'));
 }
 
 function navigateToArticle(direction) {
