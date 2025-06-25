@@ -193,8 +193,8 @@ function showArticleAtIndex(index) {
     
     currentArticleIndex = index;
     updateCarouselControls();
-    // Scroller jusqu’à l’article affiché pour qu’il soit toujours visible
-    articles[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Scroller le conteneur messages-container jusqu’à l’article affiché
+    messagesContainer.scrollTo({ top: articles[index].offsetTop, behavior: 'smooth' });
 }
 
 function showLatestArticle() {
