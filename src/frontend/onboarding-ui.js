@@ -13,9 +13,9 @@ document.getElementById('onboarding-panel').innerHTML = `
             Profil complété: <span id="profile-status">En attente.</span>
         </li>
         <li id="onboarding-stage-help" class="onboarding-inactive">
-            Repérez le mode d'emploi. Le bouton
+            Ouvrez le mode d'emploi. Le bouton
             <button type="button" id="open-help-btn" class="primary-button">Aide</button>
-            est juste à côté du bouton de profil.
+            est juste à côté du bouton de profil. Utilisez les boutons <button id="help-close-btn">✖️</button> pour refermer.
             <br />
             Mode d'emploi vu, refermé: <span id="help-status">En attente.</span>
         </li>
@@ -36,10 +36,10 @@ document.getElementById('onboarding-panel').innerHTML = `
             Ce panneau ne sera plus ouvert automatiquement lorsque vous reviendrez.
             Vous pourrez y réaccéder via le panneau de profil utilisateur.
             <br />
-            Le bouton "Settings" <button id="show-config-btn">⚙️</button> sera désormais visible en haut à gauche.
+            Un bouton "Settings" <button id="show-config-btn">⚙️</button> pour utilisateurs avancés sera disponible en haut à gauche après la fermeture de ce guide de démarrage rapide.
             <br />
             <br />
-            <button id="onboarding-close-btn">Fermer le guide de démarrage rapide</button>
+            <button id="onboarding-close-btn">Fermer le guide.</button>
         </li>
     </ol>
 </div>

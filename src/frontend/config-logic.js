@@ -36,6 +36,7 @@ const debugModeCheckbox = document.getElementById('debug-mode');
 const chunkLimitInput = document.getElementById('chunk-limit');
 const searchStrategySelect = document.getElementById('search-strategy');
 const includeWebSearchCheckbox = document.getElementById('include-web-search');
+const apiStatusElement = document.getElementById('api-status');
 const feedbackUrlInput = document.getElementById('feedback-url');
 const feedbackStatusEl = document.getElementById('feedback-status');
 
@@ -266,47 +267,6 @@ function handleDebugModeToggle() {
 }
 
 // ==========================================
-// UTILITY FUNCTIONS
-// ==========================================
-function updateStatusDisplay() {
-    clearChunkCache();
-    fetchApiStatus();
-}
-
-function fetchApiStatus() {
-    const statusEl = document.getElementById('api-status');
-    if (!statusEl) return;
-    const url = apiUrlInput.value.replace(/\/$/, '') + '/v3/health';
-    fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            const message = data.results?.message?.toUpperCase() || data.status || data.health || 'unknown';
-            statusEl.textContent = `Server status: ${message}`;
-            statusEl.className = 'status-text status-success';
-        })
-        .catch(() => {
-            statusEl.textContent = 'Server status: unreachable';
-            statusEl.className = 'status-text status-error';
-        });
-}
-
-function fetchMonitorStatus() {
-    if (!feedbackUrlInput || !feedbackStatusEl) return;
-    const url = feedbackUrlInput.value.replace(/\/$/, '') + '/health';
-    fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            const s = (data.status || 'unknown').toUpperCase();
-            feedbackStatusEl.textContent = `Server status : ${s}`;
-            feedbackStatusEl.className = s === 'OK' ? 'status-text status-success' : 'status-text status-error';
-        })
-        .catch(() => {
-            feedbackStatusEl.textContent = 'Server status : Unreachable';
-            feedbackStatusEl.className = 'status-text status-error';
-        });
-}
-
-// ==========================================
 // PRIVACY MODE FUNCTIONALITY
 // ==========================================
 function initializePrivacyMode() {
@@ -365,6 +325,7 @@ function initializeSession() {
     }
 
     // Gather technical context
+    profileOrNothing = getProfile() || null;
     const technicalContext = {
         sessionId: sessionId,
         userAgent: navigator.userAgent,
@@ -374,7 +335,7 @@ function initializeSession() {
             height: window.screen.height,
             pixelRatio: window.devicePixelRatio
         },
-        profile: window.getProfileForSession ? window.getProfileForSession() : null
+        profile: profileOrNothing
     };
     monitor(MonitorEventType.SESSION, technicalContext);
 }

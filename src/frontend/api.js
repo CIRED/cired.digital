@@ -193,6 +193,10 @@ function insertArticle(config, requestBody, data, queryId, duration) {
 
     addFeedback(article);
 
+    if (typeof onFirstResponseCompleted === 'function' && !isOnboarded()) {
+        onFirstResponseCompleted();
+    }
+
     // Update stats visibility after article is inserted
     updateStatsVisibility();
 }

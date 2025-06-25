@@ -37,7 +37,7 @@ jobs:
       - name: Run Ruff formatting check
         run: ruff format --check . || echo "⚠️ Formatting issues found but continuing..."
         continue-on-error: true
-        
+
       - name: Run mypy type checking
         run: mypy src/
 
