@@ -188,7 +188,7 @@ function showArticleAtIndex(index) {
     if (totalArticles === 0 || index < 0 || index >= totalArticles) return;
     
     articles.forEach((article, i) => {
-        article.style.display = i === index ? 'block' : 'none';
+        article.hidden = i !== index;
     });
     
     currentArticleIndex = index;
