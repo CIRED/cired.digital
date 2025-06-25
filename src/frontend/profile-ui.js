@@ -24,11 +24,11 @@ document.getElementById("profile-panel").innerHTML = `
       </div>
 
       <div class="form-group">
-        <label class="form-label" for="edit-profile-role">Connaissance des questions d'environnement et/ou de développement</label>
-        <div id="edit-profile-role" style="display: flex; flex-direction: column; gap: 0.25em;">
-          <label><input type="radio" name="profile-role" value="researcher"> Expert: des années de pratique ou de recherche dans le domaine</label>
-          <label><input type="radio" name="profile-role" value="consultant"> Engagé: journaliste, étudiant, militant...</label>
-          <label><input type="radio" name="profile-role" value="student"> Initiale: souhaite en savoir plus sur le sujet</label>
+        <label class="form-label" for="edit-profile-knowledge">Connaissance des questions d'environnement et/ou de développement</label>
+        <div id="edit-profile-knowledge" style="display: flex; flex-direction: column; gap: 0.25em;">
+          <label><input type="radio" name="profile-knowledge" value="expert"> Expert: des années de pratique ou de recherche dans le domaine</label>
+          <label><input type="radio" name="profile-knowledge" value="engaged"> Engagé: journaliste, étudiant, militant...</label>
+          <label><input type="radio" name="profile-knowledge" value="initial"> Initiale: souhaite en savoir plus sur le sujet</label>
         </div>
       </div>
 
@@ -85,8 +85,8 @@ function updateProfilePanel() {
                 <ul>
                     <li><b>Profile ID:</b> ${profile.id || ''}</li>
                     <li><b>Affiliation:</b> ${profile.organization || ''}</li>
-                    <li><b>Rôle:</b> ${profile.role || ''}</li>
-                    <li><b>Usage IA:</b> ${profile.usage || ''}</li>
+                    <li><b>Expertise:</b> ${profile.knowledge || ''}</li>
+                    <li><b>Familliarité IA:</b> ${profile.usage || ''}</li>
                     <li><b>Créé le:</b> ${profile.createdAt ? new Date(profile.createdAt).toLocaleString() : ''}</li>
                     <li><b>Modifié le:</b> ${profile.updatedAt ? new Date(profile.updatedAt).toLocaleString() : ''}</li>
                     <li><b>${PROFILE_ONBOARDED_KEY}:</b> ${onboarded !== null ? onboarded : ''}</li>
@@ -110,14 +110,14 @@ function updateProfilePanel() {
             orgInputs.forEach(input => {
                 input.checked = profile && profile.organization === input.value;
             });
-            // Role
-            const roleInputs = editForm.querySelectorAll('input[name="profile-role"]');
-            roleInputs.forEach(input => {
-                input.checked = profile && profile.role === input.value;
+            // Expertise
+            const expertiseInputs = editForm.querySelectorAll('input[name="profile-knowledge"]');
+            expertiseInputs.forEach(input => {
+                input.checked = profile && profile.knowledge === input.value;
             });
-            // Usage
-            const usageInputs = editForm.querySelectorAll('input[name="profile-usage"]');
-            usageInputs.forEach(input => {
+            // Familiarity
+            const familiarityInputs = editForm.querySelectorAll('input[name="profile-usage"]');
+            familiarityInputs.forEach(input => {
                 input.checked = profile && profile.usage === input.value;
             });
         }
