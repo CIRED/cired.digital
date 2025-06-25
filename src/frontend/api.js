@@ -57,8 +57,6 @@ async function animateWaitStart() {
     // Fade out
     setLoadingState(true);
 
-    inputHelp.classList.add('seen');
-    Array.from(messagesContainer.children).forEach(child => child.classList.add('seen'));
 
     // Await fade-out (3s as defined in CSS for .seen class)
     await new Promise(resolve => setTimeout(resolve, 3000));
