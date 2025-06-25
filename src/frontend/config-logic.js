@@ -14,6 +14,7 @@ let sessionId = null;
 let sessionStartTime = null;
 let statusInterval = null;
 let feedbackInterval = null;
+let currentArticleIndex = -1;
 const POLL_INTERVAL_MS = 1000;
 
 // ==========================================
