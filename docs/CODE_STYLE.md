@@ -147,6 +147,7 @@ Ruff handles both linting and formatting for this project. It’s configured in 
 
 ### ✅ Good Practices
 
+- Ensure code cleanliness before committing `pre-commit run --all-files`
 - Commit only clean code: no lint warnings, tests passing. The PR will be tested.
 - Comment *why*, not what — code should explain the *what*.
 - Keep functions small and focused.
