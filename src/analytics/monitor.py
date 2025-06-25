@@ -10,7 +10,7 @@ from datetime import UTC, datetime
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, FileResponse
 from models import MonitorEvent
 from utils import sanitize
 
@@ -101,17 +101,17 @@ PRIVACY_VIEW_HTML = """
 
 
 @app.get("/v1/view/analytics", response_class=HTMLResponse)
-async def view_analytics() -> str:
+async def view_analytics() -> FileResponse:
     """
     Serve a description of data collected and the privacy statement.
 
     Returns
     -------
-    str
-        An HTML page.
+    FileResponse
+        The privacy HTML page.
 
     """
-    return PRIVACY_VIEW_HTML
+    return FileResponse(os.path.join("templates", "privacy.html"), media_type="text/html")
 
 
 @app.post("/v1/monitor")
