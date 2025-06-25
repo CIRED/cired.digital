@@ -190,7 +190,7 @@ function insertArticle(config, requestBody, data, queryId, duration) {
     });
 
     addFeedback(article);
-    addCarouselControls(article);
+    addCarouselControls();
     updateCarouselControls();
 
     if (typeof onFirstResponseCompleted === 'function' && !isOnboarded()) {

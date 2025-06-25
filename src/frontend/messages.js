@@ -147,22 +147,23 @@ function fallbackCopyToClipboard(text) {
     document.body.removeChild(textArea);
 }
 
-function addCarouselControls(articleEl) {
-    const carouselDiv = document.createElement('div');
-    carouselDiv.className = 'carousel-navigation';
-    carouselDiv.innerHTML = `
-        <button class="carousel-btn carousel-prev" title="Article précédent">←</button>
-        <span class="carousel-indicator"></span>
-        <button class="carousel-btn carousel-next" title="Article suivant">→</button>
-    `;
-    
-    articleEl.appendChild(carouselDiv);
-    
-    const prevBtn = carouselDiv.querySelector('.carousel-prev');
-    const nextBtn = carouselDiv.querySelector('.carousel-next');
-    
-    prevBtn.addEventListener('click', () => navigateToArticle('prev'));
-    nextBtn.addEventListener('click', () => navigateToArticle('next'));
+function addCarouselControls() {
+    let carouselDiv = document.querySelector('.carousel-navigation');
+    if (!carouselDiv) {
+        carouselDiv = document.createElement('div');
+        carouselDiv.className = 'carousel-navigation';
+        carouselDiv.innerHTML = `
+            <button class="carousel-btn carousel-prev" title="Article précédent">←</button>
+            <span class="carousel-indicator"></span>
+            <button class="carousel-btn carousel-next" title="Article suivant">→</button>
+        `;
+        messagesContainer.appendChild(carouselDiv);
+
+        const prevBtn = carouselDiv.querySelector('.carousel-prev');
+        const nextBtn = carouselDiv.querySelector('.carousel-next');
+        prevBtn.addEventListener('click', () => navigateToArticle('prev'));
+        nextBtn.addEventListener('click', () => navigateToArticle('next'));
+    }
 }
 
 function navigateToArticle(direction) {
@@ -215,21 +216,19 @@ function updateCarouselControls() {
     const articles = Array.from(messagesContainer.children).filter(child => child.tagName === 'ARTICLE');
     const totalArticles = articles.length;
     
-    articles.forEach((article, i) => {
-        const carouselNav = article.querySelector('.carousel-navigation');
-        if (!carouselNav) return;
-        
-        const prevBtn = carouselNav.querySelector('.carousel-prev');
-        const nextBtn = carouselNav.querySelector('.carousel-next');
-        const indicator = carouselNav.querySelector('.carousel-indicator');
-        
-        if (totalArticles <= 1) {
-            carouselNav.style.display = 'none';
-        } else {
-            carouselNav.style.display = 'flex';
-            prevBtn.disabled = currentArticleIndex === 0;
-            nextBtn.disabled = currentArticleIndex === totalArticles - 1;
-            indicator.textContent = `${currentArticleIndex + 1} / ${totalArticles}`;
-        }
-    });
+    const carouselNav = document.querySelector('.carousel-navigation');
+    if (!carouselNav) return;
+
+    const prevBtn = carouselNav.querySelector('.carousel-prev');
+    const nextBtn = carouselNav.querySelector('.carousel-next');
+    const indicator = carouselNav.querySelector('.carousel-indicator');
+
+    if (totalArticles <= 1) {
+        carouselNav.style.display = 'none';
+    } else {
+        carouselNav.style.display = 'flex';
+        prevBtn.disabled = currentArticleIndex === 0;
+        nextBtn.disabled = currentArticleIndex === totalArticles - 1;
+        indicator.textContent = `${currentArticleIndex + 1} / ${totalArticles}`;
+    }
 }
