@@ -40,6 +40,8 @@ const includeWebSearchCheckbox = document.getElementById('include-web-search');
 const apiStatusElement = document.getElementById('api-status');
 const feedbackUrlInput = document.getElementById('feedback-url');
 const feedbackStatusEl = document.getElementById('feedback-status');
+const refreshModelsBtn = document.getElementById('refresh-models-btn');
+const modelStatusElement = document.getElementById('model-status');
 
 function detectEnvironment() {
   const hostname = window.location.hostname;
@@ -162,6 +164,56 @@ function formatTariff(value, fallback) {
     return typeof value === "number" ? value.toFixed(2) : fallback;
 }
 
+async function refreshModels() {
+    if (!modelStatusElement || !refreshModelsBtn) return;
+    
+    refreshModelsBtn.disabled = true;
+    modelStatusElement.textContent = 'Testing model...';
+    modelStatusElement.className = 'status-text';
+    
+    try {
+        const config = getConfiguration();
+        const apiUrl = config.apiUrl;
+        const selectedModel = config.model;
+        
+        const requestBody = {
+            messages: [
+                {"role": "system", "content": "Just reply with 'OK', this is a handshake test."},
+                {"role": "user", "content": "Are you up?"}
+            ],
+            generation_config: {
+                model: selectedModel,
+                temperature: 0,
+                max_tokens: 10,
+                stream: false
+            }
+        };
+        
+        const response = await fetch(`${apiUrl}/v3/retrieval/completion`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestBody)
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            modelStatusElement.textContent = `Model: ${selectedModel} - OK`;
+            modelStatusElement.className = 'status-text status-success';
+        } else {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+    } catch (error) {
+        modelStatusElement.textContent = `Model: ${modelSelect.value} - Error: ${error.message}`;
+        modelStatusElement.className = 'status-text status-error';
+        console.error('Model refresh failed:', error);
+    } finally {
+        refreshModelsBtn.disabled = false;
+    }
+}
+
 // ==========================================
 // EVENT LISTENERS SETUP
 // ==========================================
@@ -239,6 +291,10 @@ function setupEventListeners() {
     }
     if (includeWebSearchCheckbox) {
       includeWebSearchCheckbox.addEventListener('change', updateStatusDisplay);
+    }
+
+    if (refreshModelsBtn) {
+        refreshModelsBtn.addEventListener('click', refreshModels);
     }
 
     initializePrivacyMode();

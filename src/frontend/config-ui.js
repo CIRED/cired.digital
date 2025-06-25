@@ -18,10 +18,13 @@ document.getElementById("config-panel").innerHTML = `
     </div>
 
     <div class="form-group">
-      <label class="form-label">
-      Language model
-      <span class="help-icon" title="The LLM used to generate replies. Commercial options disabled for cost control.">ℹ️</span>
-      </label>
+      <div class="label-with-status">
+        <label class="form-label">
+          Language model
+          <span class="help-icon" title="The LLM used to generate replies. Commercial options disabled for cost control.">ℹ️</span>
+        </label>
+        <div class="status-text" id="model-status">Status: ?</div><button id="refresh-models-btn">🔄</button>
+      </div>
       <select class="form-select" id="model">
         <option>Chargement...</option>
       </select>
