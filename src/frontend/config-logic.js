@@ -11,6 +11,7 @@ let isLoading = false;
 let articleIdCounter = 1;
 let debugMode = false;
 let sessionId = null;
+let sessionStartTime = null;
 let statusInterval = null;
 let feedbackInterval = null;
 const POLL_INTERVAL_MS = 1000;
@@ -243,6 +244,40 @@ function setupEventListeners() {
     initializePrivacyMode();
     initializeSession();
 
+    window.addEventListener('beforeunload', () => {
+        if (!isPrivacyModeEnabled() && sessionStartTime) {
+            const sessionDuration = Date.now() - sessionStartTime;
+            monitor(MonitorEventType.SESSION_END, {
+                sessionId: sessionId,
+                endTime: new Date().toISOString(),
+                sessionDuration: sessionDuration,
+                endReason: 'beforeunload',
+                userAgent: navigator.userAgent
+            });
+        }
+    });
+
+    window.addEventListener('unload', () => {
+        if (!isPrivacyModeEnabled() && sessionStartTime) {
+            const analyticsEndpoint = feedbackUrlInput.value.replace(/\/$/, '') + '/v1/monitor';
+            const sessionEndData = {
+                sessionId: sessionId,
+                timestamp: new Date().toISOString().replace(/[^a-zA-Z0-9]/g, ''),
+                eventType: 'sessionEnd',
+                payload: {
+                    sessionId: sessionId,
+                    endTime: new Date().toISOString(),
+                    sessionDuration: Date.now() - sessionStartTime,
+                    endReason: 'unload'
+                }
+            };
+            
+            if (navigator.sendBeacon) {
+                navigator.sendBeacon(analyticsEndpoint, JSON.stringify(sessionEndData));
+            }
+        }
+    });
+
     document.getElementById('view-analytics-link').addEventListener('click', function(e) {
         e.preventDefault();
         window.open(feedbackUrlInput.value.replace(/\/$/, '') + '/v1/view/analytics', '_blank');
@@ -338,6 +373,7 @@ function initializeSession() {
         profile: profileOrNothing
     };
     monitor(MonitorEventType.SESSION, technicalContext);
+    sessionStartTime = Date.now();
 }
 
 // ==========================================

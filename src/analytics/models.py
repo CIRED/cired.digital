@@ -22,6 +22,7 @@ class MonitorEventType(str, Enum):
     ARTICLE = "article"
     FEEDBACK = "feedback"
     USER_PROFILE = "userProfile"
+    SESSION_END = "sessionEnd"
 
 
 class MonitorEvent(BaseModel):

@@ -54,7 +54,8 @@ const MonitorEventType = {
     RESPONSE: "response",
     ARTICLE: "article",
     FEEDBACK: "feedback",
-    USER_PROFILE: "userProfile"
+    USER_PROFILE: "userProfile",
+    SESSION_END: "sessionEnd"
 };
 
 async function monitor(eventType, payload) {
