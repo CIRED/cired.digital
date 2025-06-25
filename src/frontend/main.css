@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+/* ==========================================
+   Main area styles
+   ========================================== */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -23,10 +27,6 @@ nav button {
   padding: 0.25rem;
   cursor: pointer;
 }
-
-/* ==========================================
-   Main area styles
-   ========================================== */
 
 
 article {
