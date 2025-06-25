@@ -11,10 +11,9 @@ const clearProfileBtn = document.getElementById('clear-profile-btn');
 const restartOnboardingBtn = document.getElementById('restart-onboarding-btn');
 
 const defaultProfile = {
-    id: null,
-    role: '',
-    usage: '',
     organization: '',
+    knowledge: '',
+    usage: '',
     createdAt: null,
     updatedAt: null
 };
@@ -35,7 +34,7 @@ function getProfile() {
 
 function collectFormData(formPrefix = 'profile-') {
     return {
-        role: document.querySelector('input[name="profile-role"]:checked')?.value || '',
+        knowledge: document.querySelector('input[name="profile-knowledge"]:checked')?.value || '',
         usage: document.querySelector('input[name="profile-usage"]:checked')?.value || '',
         organization: document.querySelector('input[name="profile-organization"]:checked')?.value || ''
     };
@@ -56,13 +55,13 @@ function saveProfile(profileData) {
             profile.createdAt = profile.updatedAt;
         }
         localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(profile));
-        debugLog('Profile saved', profile);
 
+        debugLog('Profile saved', profile);
+        updateProfilePanel(); // Update the UI to reflect the new profile
         monitor(MonitorEventType.USER_PROFILE, {
             action: 'profile_updated',
             profile: profile
         });
-
         return profile;
     } catch (error) {
         debugLog('Error saving profile', error);
@@ -71,15 +70,16 @@ function saveProfile(profileData) {
 }
 
 function clearProfile() {
+    monitor(MonitorEventType.USER_PROFILE, {
+        action: 'profile_clearing',
+        profile: getProfile()
+    });
     try {
         localStorage.removeItem(PROFILE_STORAGE_KEY);
         localStorage.removeItem(PROFILE_ONBOARDED_KEY);
+
+        updateProfilePanel(); // Update the UI to reflect the cleared profile
         debugLog('Profile cleared');
-
-        monitor(MonitorEventType.USER_PROFILE, {
-            action: 'profile_cleared'
-        });
-
         return true;
     } catch (error) {
         debugLog('Error clearing profile', error);
@@ -115,13 +115,7 @@ function handleSaveProfile() {
 }
 
 function handleClearProfile() {
-    debugLog('Clearing profile');
-    if (clearProfile()) {
-        debugLog('Profile cleared successfully');
-    } else {
-        debugLog('Failed to clear profile');
-    }
-    updateProfilePanel();
+    clearProfile()
 }
 
 function handleRestartOnboarding() {
