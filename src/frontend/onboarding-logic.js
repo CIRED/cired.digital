@@ -4,7 +4,6 @@
 
 const onboardingPanel = document.getElementById('onboarding-panel');
 const onboardingBtn = document.getElementById('onboarding-btn');
-const onboardingCloseBtn = document.getElementById('onboarding-close-btn');
 
 // ==========================================
 // =========== Onboarding State ==============
@@ -39,31 +38,6 @@ function hideOnboardingPanel() {
     }
 }
 
-function handlePanelKeydown(event) {
-    if (event.key === 'Escape') {
-        hideOnboardingPanel();
-        hideProfilePanel();
-    }
-
-    if (event.key === 'Tab') {
-        const Panel = event.target.closest('.Panel-overlay, #profile-panel');
-        if (Panel) {
-            const focusableElements = Panel.querySelectorAll(
-                'button, input, select, textarea, [tabindex]:not([tabindex="-1"])'
-            );
-            const firstElement = focusableElements[0];
-            const lastElement = focusableElements[focusableElements.length - 1];
-
-            if (event.shiftKey && event.target === firstElement) {
-                event.preventDefault();
-                lastElement.focus();
-            } else if (!event.shiftKey && event.target === lastElement) {
-                event.preventDefault();
-                firstElement.focus();
-            }
-        }
-    }
-}
 
 // ==========================================
 // ==========================================
@@ -105,30 +79,27 @@ function disableUIElement(elementId) {
 }
 
 function blurMainArea(blur = true) {
-    const main = document.getElementById('messages-container');
-    const inputContainer = document.getElementById('input-container');
-
     if (blur) {
-        if (main) {
-            main.style.opacity = '0.5';
-            main.style.filter = 'blur(2px)';
-            main.style.pointerEvents = 'none';
+        if (mainDiv) {
+            mainDiv.style.opacity = '0.5';
+            mainDiv.style.filter = 'blur(2px)';
+            mainDiv.style.pointerEvents = 'none';
         }
-        if (inputContainer) {
-            inputContainer.style.opacity = '0.5';
-            inputContainer.style.filter = 'blur(2px)';
-            inputContainer.style.pointerEvents = 'none';
+        if (inputDiv) {
+            inputDiv.style.opacity = '0.5';
+            inputDiv.style.filter = 'blur(2px)';
+            inputDiv.style.pointerEvents = 'none';
         }
     } else {
-        if (main) {
-            main.style.opacity = '1';
-            main.style.filter = 'none';
-            main.style.pointerEvents = 'auto';
+        if (mainDiv) {
+            mainDiv.style.opacity = '1';
+            mainDiv.style.filter = 'none';
+            mainDiv.style.pointerEvents = 'auto';
         }
-        if (inputContainer) {
-            inputContainer.style.opacity = '1';
-            inputContainer.style.filter = 'none';
-            inputContainer.style.pointerEvents = 'auto';
+        if (inputDiv) {
+            inputDiv.style.opacity = '1';
+            inputDiv.style.filter = 'none';
+            inputDiv.style.pointerEvents = 'auto';
         }
     }
 }
@@ -155,22 +126,60 @@ function onFirstResponseCompleted() {
 
 function onFeedbackCompleted() {
     completeStage('onboarding-stage-feedback', null, 'onboarding-stage-completed');
-    enableUIElement('config-btn');
-    setOnboarded();
     debugLog('Feedback stage completed, onboarding finished');
 }
 
+function finalizeOnboarding() {
+    const onboardingCloseBtn = document.getElementById('onboarding-close-btn');
+    if (onboardingCloseBtn) {
+        onboardingCloseBtn.classList.remove('onboarding-inactive');
+    }
+    enableUIElement('config-btn');
+    setOnboarded();
+}
+
+function handleOnboardingCloseBtn() {
+    debugLog('Closing onboarding panel');
+    // Shortcut: complete all stages of the onboarding flow
+    onProfileCompleted();
+    onHelpCompleted();
+    onFirstResponseCompleted();
+    onFeedbackCompleted();
+    finalizeOnboarding();
+    hideOnboardingPanel();
+}
+
+function restartOnboarding() {
+    debugLog('Onboarding reset and relaunch');
+    localStorage.removeItem(PROFILE_ONBOARDED_KEY);
+    initializeOnBoarding();
+}
+
+// ==========================================
+// =========== Initialization ===============
+// ==========================================
 
 function initializeOnBoarding() {
+    if (isOnboarded()) {
+        if (onboardingBtn) {
+            onboardingBtn.hidden = true;
+        }
+        debugLog('User already onboarded, skipping onboarding flow');
+        return
+    }
+
+    debugLog('Initializing onboarding flow for new user');
+
     if (onboardingBtn) {
         onboardingBtn.addEventListener('click', showOnboardingPanel);
     }
 
-    if (onboardingCloseBtn) {
-        onboardingCloseBtn.addEventListener('click', hideOnboardingPanel);
-    }
+    document.getElementById('onboarding-panel').innerHTML = onboardingHTML;
 
-    document.addEventListener('keydown', handlePanelKeydown);
+    const onboardingCloseBtn = document.getElementById('onboarding-close-btn');
+    if (onboardingCloseBtn) {
+        onboardingCloseBtn.addEventListener('click', handleOnboardingCloseBtn);
+    }
 
     const openProfileBtn = document.getElementById('open-profile-btn');
     if (openProfileBtn) {
@@ -198,52 +207,11 @@ function initializeOnBoarding() {
         });
     }
 
-    if (onboardingPanel) {
-        onboardingPanel.addEventListener('click', (event) => {
-            if (event.target === onboardingPanel) {
-                hideOnboardingPanel();
-            }
-        });
-    }
-
-    if (isOnboarded()) {
-        if (onboardingBtn) {
-            onboardingBtn.hidden = true;
-        }
-        enableUIElement('config-btn');
-        debugLog('User already onboarded, skipping onboarding flow');
-    } else {
-        showOnboardingPanel();
-        setupInitialOnboardingState();
-        debugLog('Starting onboarding flow for new user');
-    }
-}
-
-function setupInitialOnboardingState() {
     disableUIElement('help-btn');
     disableUIElement('config-btn');
     blurMainArea(true);
 
-    const configBtn = document.getElementById('config-btn');
-    if (configBtn) {
-        configBtn.style.display = 'none';
-    }
-}
-
-// ==========================================
-// Relancer le guide de démarrage rapide
-// ==========================================
-
-function restartOnboarding() {
-    // Réinitialise l'état d'onboarding et relance le panneau d'onboarding
-    localStorage.removeItem(PROFILE_ONBOARDED_KEY);
-    if (typeof setupInitialOnboardingState === 'function') {
-        setupInitialOnboardingState();
-    }
-    if (typeof showOnboardingPanel === 'function') {
-        showOnboardingPanel();
-    }
-    debugLog('Onboarding reset and relaunched');
+    showOnboardingPanel();
 }
 
 // Initialize the onboarding system when the script loads

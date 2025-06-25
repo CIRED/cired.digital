@@ -4,14 +4,12 @@
 
 function addMain(content) {
     debugLog('Adding article to main content zone', { contentLength: content.length });
-    const articleEl = document.createElement('article');
-    articleEl.id = `article-${articleIdCounter++}`;
-    articleEl.innerHTML = content;
-    messagesContainer.appendChild(articleEl);
-    
+    const article = document.createElement('article');
+    article.id = `article-${articleIdCounter++}`;
+    article.innerHTML = content;
+    messagesContainer.appendChild(article);
     showLatestArticle();
-    
-    return articleEl;
+    return article;
 }
 
 function addMainError(content) {
@@ -24,11 +22,13 @@ function addMainError(content) {
 
 function showTyping() {
     debugLog('Showing typing indicator');
-    hideTyping();
-    const spinnerDiv = document.createElement('div');
-    spinnerDiv.id = 'typing-indicator';
-    spinnerDiv.innerHTML = '<span class="typing-spinner">⟳</span>Recherche dans la base documentaire (compter 6-20s)…';
-    mainEl.appendChild(spinnerDiv);
+    // Only add spinner if it doesn't already exist
+    if (!document.getElementById('typing-indicator')) {
+        const spinnerDiv = document.createElement('div');
+        spinnerDiv.id = 'typing-indicator';
+        spinnerDiv.innerHTML = '<span class="typing-spinner">⟳</span>Recherche dans la base documentaire (compter 6-20s)…';
+        mainDiv.appendChild(spinnerDiv);
+    }
 }
 
 function hideTyping() {
@@ -166,15 +166,15 @@ function navigateToArticle(direction) {
     const articles = Array.from(messagesContainer.children).filter(child => child.tagName === 'ARTICLE');
     debugLog('navigateToArticle start', { direction, currentIndex: currentArticleIndex, totalArticles: articles.length });
     const totalArticles = articles.length;
-    
+
     if (totalArticles === 0) return;
-    
+
     if (direction === 'prev' && currentArticleIndex > 0) {
         currentArticleIndex--;
     } else if (direction === 'next' && currentArticleIndex < totalArticles - 1) {
         currentArticleIndex++;
     }
-    
+
     debugLog('navigateToArticle', { direction, newIndex: currentArticleIndex });
     showArticleAtIndex(currentArticleIndex);
 }
@@ -182,9 +182,9 @@ function navigateToArticle(direction) {
 function showArticleAtIndex(index) {
     const articles = Array.from(messagesContainer.children).filter(child => child.tagName === 'ARTICLE');
     const totalArticles = articles.length;
-    
+
     if (totalArticles === 0 || index < 0 || index >= totalArticles) return;
-    
+
     articles.forEach((article, i) => {
         if (i === index) {
             article.style.display = '';
@@ -193,7 +193,7 @@ function showArticleAtIndex(index) {
             article.style.display = 'none';
         }
     });
-    
+
     currentArticleIndex = index;
     updateCarouselControls();
     // Scroller le conteneur messages-container jusqu’à l’article affiché
@@ -211,7 +211,7 @@ function showLatestArticle() {
 function updateCarouselControls() {
     const articles = Array.from(messagesContainer.children).filter(child => child.tagName === 'ARTICLE');
     const totalArticles = articles.length;
-    
+
     const carouselNav = document.querySelector('.carousel-navigation');
     if (!carouselNav) return;
 
