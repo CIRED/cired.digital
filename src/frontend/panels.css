@@ -331,23 +331,31 @@ CHECKBOX CONTAINERS
 
 #profile-panel {
   background-color: rgb(219, 234, 254);
-  border-right: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
   padding: 1rem;
   display: block;
   position: fixed;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  overflow: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%);
+  opacity: 0;
+  width: 400px;
+  max-width: 90vw;
   z-index: 1000;
-  transition: transform 1.5s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
-  transform: translateX(0);
+  transition:
+    transform 3s cubic-bezier(0.4,0,0.2,1),
+    opacity 3s;
+}
+
+#profile-panel:not(.hidden) {
+  transform: translate(-50%, -50%);
   opacity: 1;
+  pointer-events: auto;
 }
 
 #profile-panel.hidden {
-  transform: translateX(100%);
+  transform: translate(-50%, -60%);
   opacity: 0;
   pointer-events: none;
 }
@@ -394,6 +402,20 @@ CHECKBOX CONTAINERS
   margin-top: 1rem;
   justify-content: center;
 }
+
+#clear-profile-btn {
+  display:block;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div#profile-footer {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
 
 /* ===========================================
    ONBOARDING PANEL

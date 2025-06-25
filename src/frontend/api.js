@@ -192,7 +192,7 @@ function insertArticle(config, requestBody, data, queryId, duration) {
     });
 
     addFeedback(article);
-    
+
     if (typeof onFirstResponseCompleted === 'function' && !isOnboarded()) {
         onFirstResponseCompleted();
     }

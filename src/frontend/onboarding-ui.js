@@ -15,7 +15,7 @@ document.getElementById('onboarding-panel').innerHTML = `
         <li id="onboarding-stage-help" class="onboarding-inactive">
             Ouvrez le mode d'emploi. Le bouton
             <button type="button" id="open-help-btn" class="primary-button">Aide</button>
-            est juste à côté du bouton de profil. Refermez le avec son bouton <button id="help-close-btn">✖️</button> quand vous en assez lu.
+            est juste à côté du bouton de profil. Utilisez les boutons <button id="help-close-btn">✖️</button> pour refermer.
             <br />
             Mode d'emploi vu, refermé: <span id="help-status">En attente.</span>
         </li>
