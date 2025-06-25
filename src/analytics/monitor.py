@@ -47,7 +47,6 @@ async def view_privacy() -> FileResponse:
         os.path.join("templates", "privacy.html"), media_type="text/html"
     )
 
-
 @app.post("/v1/monitor")
 async def monitor_event(event: MonitorEvent) -> dict[str, str]:
     """
