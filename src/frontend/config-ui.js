@@ -23,7 +23,7 @@ document.getElementById("config-panel").innerHTML = `
           Language model
           <span class="help-icon" title="The LLM used to generate replies. Commercial options disabled for cost control.">ℹ️</span>
         </label>
-        <div class="status-text" id="model-status">Status: ?</div><button id="refresh-models-btn">Refresh</button>
+        <div class="status-text" id="model-status">Status: ?</div><button id="refresh-models-btn" hidden>Refresh</button>
       </div>
       <select class="form-select" id="model">
         <option>Chargement...</option>

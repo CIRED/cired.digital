@@ -175,6 +175,7 @@ function setupEventListeners() {
             // Panel ouvert: démarrer polling
             fetchApiStatus();
             fetchMonitorStatus();
+            refreshModels();
             statusInterval = setInterval(fetchApiStatus, POLL_INTERVAL_MS);
             feedbackInterval = setInterval(fetchMonitorStatus, POLL_INTERVAL_MS);
         } else {
