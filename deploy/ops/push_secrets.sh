@@ -41,7 +41,13 @@ fi
 
 log "Starting rsync upload..."
 if rsync -avz --progress "$SECRETS_DIR/" "$REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH"; then
-    log -s "✅ Successfully pushed secrets to remote server"
+    log "Setting remote permissions..."
+    if ssh "$REMOTE_USER@$REMOTE_HOST" "find '$REMOTE_PATH' -type d -exec chmod 700 {} \; && find '$REMOTE_PATH' -type f -exec chmod 600 {} \;"; then
+        log -s "✅ Successfully pushed secrets and set permissions on remote server"
+    else
+        log -e "Failed to set remote permissions on remote server"
+        exit 4
+    fi
 else
     log -e "Failed to push secrets to remote server"
     exit 3
