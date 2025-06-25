@@ -168,6 +168,7 @@ function addCarouselControls(articleEl) {
 
 function navigateToArticle(direction) {
     const articles = Array.from(messagesContainer.children).filter(child => child.tagName === 'ARTICLE');
+    debugLog('showArticleAtIndex', { index, totalArticles: articles.length });
     const totalArticles = articles.length;
     
     if (totalArticles === 0) return;
@@ -178,6 +179,7 @@ function navigateToArticle(direction) {
         currentArticleIndex++;
     }
     
+    debugLog('navigateToArticle', { direction, newIndex: currentArticleIndex });
     showArticleAtIndex(currentArticleIndex);
 }
 
