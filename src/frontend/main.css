@@ -219,6 +219,27 @@ img {
   background-color: rgba(239, 68, 68, 0.1);
 }
 
+.clipboard-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.125rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+}
+
+.clipboard-button:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.feedback-success {
+  color: #059669;
+  font-weight: 500;
+  padding: 0.5rem;
+  text-align: center;
+}
+
 /* ==========================================
    ANIMATIONS
    ========================================== */
