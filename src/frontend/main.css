@@ -2,6 +2,11 @@
    CIRDI - SCIENTIFIC DOCUMENT RAG STYLES
    for: main contents
    ========================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 /* ==========================================
    Main area styles
