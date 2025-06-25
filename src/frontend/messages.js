@@ -9,7 +9,6 @@ function addMain(content) {
     articleEl.innerHTML = content;
     messagesContainer.appendChild(articleEl);
     
-    addCarouselControls(articleEl);
     showLatestArticle();
     
     return articleEl;

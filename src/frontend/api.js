@@ -190,6 +190,7 @@ function insertArticle(config, requestBody, data, queryId, duration) {
     });
 
     addFeedback(article);
+    addCarouselControls(article);
 
     if (typeof onFirstResponseCompleted === 'function' && !isOnboarded()) {
         onFirstResponseCompleted();
