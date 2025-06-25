@@ -31,6 +31,16 @@ Can be rescaled to 4, 8 or 16 vCPU as long as it remains on the AMD architecture
 - Installed `uv` with `pipx install uv`
 - Added `~/.local/bin` to the path with `pipx ensurepath`
 
+### Set the firewall
+
+```bash
+sudo ufw allow 22
+sudo ufw allow 80
+sudo ufw allow 7273
+sudo ufw deny 5432
+sudo ufw enable
+```
+
 ### Clone the cired.digital Git repo.
 - `git clone https://github.com/MinhHaDuong/cired.digital.git`
 
