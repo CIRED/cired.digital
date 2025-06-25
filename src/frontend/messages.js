@@ -193,6 +193,8 @@ function showArticleAtIndex(index) {
     
     currentArticleIndex = index;
     updateCarouselControls();
+    // Scroller jusqu’à l’article affiché pour qu’il soit toujours visible
+    articles[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function showLatestArticle() {
