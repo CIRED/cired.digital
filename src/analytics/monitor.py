@@ -100,24 +100,10 @@ PRIVACY_VIEW_HTML = """
 """
 
 
-@app.get("/v1/view/privacy", response_class=HTMLResponse)
-async def view_privacy() -> str:
-    """
-    Serve the privacy statement.
-
-    Returns
-    -------
-    str
-        An HTML page.
-
-    """
-    return PRIVACY_VIEW_HTML
-
-
 @app.get("/v1/view/analytics", response_class=HTMLResponse)
 async def view_analytics() -> str:
     """
-    Serve an overview of analytics -- WIP for now serve the privacy.
+    Serve a description of data collected and the privacy statement.
 
     Returns
     -------
