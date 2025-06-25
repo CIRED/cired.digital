@@ -6,13 +6,13 @@ set -Eeuo pipefail
 
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 PROJECT_ROOT=$(cd "$SCRIPT_DIR/../.." && pwd)
-SECRETS_DIR="$PROJECT_ROOT/secrets"
+SECRETS_DIR="$PROJECT_ROOT/../secrets"
 
 source "$SCRIPT_DIR/common_config.sh"
 
 REMOTE_USER="${1:-admin}"
 REMOTE_HOST="${2:-157.180.70.232}"
-REMOTE_PATH="${3:-/home/admin/cired.digital/secrets/}"
+REMOTE_PATH="${3:-/home/admin/secrets/}"
 
 usage() {
     echo "Usage: $0 [remote_user] [remote_host] [remote_path]"
