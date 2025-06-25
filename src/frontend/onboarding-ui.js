@@ -1,4 +1,4 @@
-document.getElementById('onboarding-panel').innerHTML = `
+const onboardingHTML = `
 <div id="onboarding-header">
     <h2>Guide de démarrage rapide</h2>
 </div>
@@ -44,3 +44,5 @@ document.getElementById('onboarding-panel').innerHTML = `
     <button id="onboarding-close-btn" class="onboarding-inactive">Fermer le guide.</button>
 </div>
 `;
+
+/* document.getElementById('onboarding-panel').innerHTML = onboardingHTML; */

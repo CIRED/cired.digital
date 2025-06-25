@@ -22,12 +22,12 @@ const POLL_INTERVAL_MS = 1000;
 // ==========================================
 const configBtn = document.getElementById('config-btn');
 const configPanel = document.getElementById('config-panel');
+const mainDiv = document.querySelector('main');
 const messagesContainer = document.getElementById('messages-container');
-const userInput = document.getElementById('user-input');
 const inputDiv = document.getElementById('input');
+const userInput = document.getElementById('user-input');
 const inputHelp = document.getElementById('input-help');
 const sendBtn = document.getElementById('send-btn');
-const mainEl = document.querySelector('main');
 
 // Configuration elements
 const apiUrlInput = document.getElementById('api-url');
@@ -46,7 +46,7 @@ const modelStatusElement = document.getElementById('model-status');
 
 function detectEnvironment() {
   const hostname = window.location.hostname;
-  return (!hostname || hostname === "doudou") ? "dev" : "prod";
+  return (!hostname || hostname === "doudou" || hostname === "localhost") ? "dev" : "prod";
 }
 
 function validateSettings(env) {
