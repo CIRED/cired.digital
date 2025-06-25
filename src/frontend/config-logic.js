@@ -287,13 +287,9 @@ function setupEventListeners() {
 
     document.getElementById('view-analytics-link').addEventListener('click', function(e) {
         e.preventDefault();
-        window.open(feedbackUrlInput.value.replace(/\/$/, '') + '/v1/view/analytics', '_blank');
-    });
-
-    document.getElementById('privacy-policy-link').addEventListener('click', function(e) {
-        e.preventDefault();
         window.open(feedbackUrlInput.value.replace(/\/$/, '') + '/v1/view/privacy', '_blank');
     });
+
 }
 
 function handleDebugModeToggle() {

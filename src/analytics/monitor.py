@@ -10,7 +10,7 @@ from datetime import UTC, datetime
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from models import MonitorEvent
 from utils import sanitize
 
@@ -32,100 +32,20 @@ async def health() -> dict[str, str]:
     return {"status": "ok"}
 
 
-PRIVACY_VIEW_HTML = """
-<html>
-  <head>
-    <title>CIRED.digital Analytics</title>
-    <style>
-      body { font-family: sans-serif; max-width: 700px; margin: 2em auto; }
-      h1, h2 { color: #2c3e50; }
-      ul { margin-bottom: 2em; }
-      .event-type { font-weight: bold; color: #2980b9; }
-      .payload { color: #555; font-size: 0.97em; }
-      .privacy { background: #f6f8fa; border-left: 4px solid #2980b9; padding: 1em; margin: 2em 0; }
-    </style>
-  </head>
-  <body>
-    <h1>CIRED.digital – Données collectées</h1>
-    <p>
-      Pour améliorer la qualité du service, CIRED.digital collecte des événements d’utilisation.
-      <b>Aucune donnée personnelle, identifiant civil ou contenu privé n’est enregistré.</b>
-      Le système respecte le mode «&nbsp;confidentialité&nbsp;» si vous l’activez.
-    </p>
-    <div class="privacy">
-      <b>Protection de la vie privée&nbsp;:</b><br>
-      – Un identifiant de session anonyme est généré à chaque visite.<br>
-      – Vous pouvez activer le mode confidentialité à tout moment, auquel cas aucune donnée n’est envoyée.<br>
-      – Les données servent uniquement à l’amélioration du service et à la détection d’anomalies.
-      – Les données ne sont pas transmises à des tiers et ne sont pas utilisées à des fins commerciales.
-    </div>
-    <h2>Types d’événements collectés</h2>
-    <ul>
-      <li>
-        <span class="event-type">session</span> : ouverture d’une session utilisateur.<br>
-        <span class="payload">Données&nbsp;: identifiant de session, date/heure, contexte technique.</span>
-      </li>
-      <li>
-        <span class="event-type">request</span> : envoi d’une requête (question, recherche, etc.).<br>
-        <span class="payload">Données&nbsp;: session, texte de la requête, paramètres choisis, date/heure.</span>
-      </li>
-      <li>
-        <span class="event-type">response</span> : réponse générée par le système.<br>
-        <span class="payload">Données&nbsp;: session, contenu de la réponse, temps de traitement, date/heure.</span>
-      </li>
-      <li>
-        <span class="event-type">article</span> : affichage d’un article ou document.<br>
-        <span class="payload">Données&nbsp;: session, identifiant de l’article, contexte d’affichage, date/heure.</span>
-      </li>
-      <li>
-        <span class="event-type">feedback</span> : retour utilisateur (avis, commentaire).<br>
-        <span class="payload">Données&nbsp;: session, type de retour (👍/👎), commentaire éventuel, date/heure.</span>
-      </li>
-      <li>
-        <span class="event-type">userProfile</span> : modification de profil ou préférences.<br>
-        <span class="payload">Données&nbsp;: session, préférences choisies, date/heure.</span>
-      </li>
-    </ul>
-    <h2>Utilisation des données</h2>
-    <ul>
-      <li>Amélioration continue du service et de l’ergonomie</li>
-      <li>Détection de bugs et d’anomalies</li>
-      <li>Statistiques d’usage globales (jamais individuelles)</li>
-    </ul>
-    <p>
-      Pour toute question sur la confidentialité ou la gestion des données, contactez l’équipe CIRED.digital à < minh.ha-duong@cnrs.fr >.
-    </p>
-  </body>
-</html>
-"""
-
-
 @app.get("/v1/view/privacy", response_class=HTMLResponse)
-async def view_privacy() -> str:
+async def view_privacy() -> FileResponse:
     """
-    Serve the privacy statement.
+    Serve the privacy statement with a description of data collected and the user's rights.
 
     Returns
     -------
-    str
-        An HTML page.
+    FileResponse
+        The privacy HTML page.
 
     """
-    return PRIVACY_VIEW_HTML
-
-
-@app.get("/v1/view/analytics", response_class=HTMLResponse)
-async def view_analytics() -> str:
-    """
-    Serve an overview of analytics -- WIP for now serve the privacy.
-
-    Returns
-    -------
-    str
-        An HTML page.
-
-    """
-    return PRIVACY_VIEW_HTML
+    return FileResponse(
+        os.path.join("templates", "privacy.html"), media_type="text/html"
+    )
 
 
 @app.post("/v1/monitor")

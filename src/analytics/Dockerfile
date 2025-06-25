@@ -12,6 +12,7 @@ RUN pip install fastapi uvicorn
 # Copy the file only if you want a fallback image build
 # Leave this out if you plan to mount the file instead (or leave in, overriden)
 COPY *.py .
+COPY templates/ templates/
 
 EXPOSE 7275
 
