@@ -196,7 +196,7 @@ function showArticleAtIndex(index) {
     currentArticleIndex = index;
     updateCarouselControls();
     // Scroller le conteneur messages-container jusqu’à l’article affiché
-    messagesContainer.scrollTo({ top: articles[index].offsetTop, behavior: 'smooth' });
+    articles[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function showLatestArticle() {
