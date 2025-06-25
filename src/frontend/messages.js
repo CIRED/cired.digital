@@ -168,7 +168,7 @@ function addCarouselControls(articleEl) {
 
 function navigateToArticle(direction) {
     const articles = Array.from(messagesContainer.children).filter(child => child.tagName === 'ARTICLE');
-    debugLog('showArticleAtIndex', { index, totalArticles: articles.length });
+    debugLog('navigateToArticle start', { direction, currentIndex: currentArticleIndex, totalArticles: articles.length });
     const totalArticles = articles.length;
     
     if (totalArticles === 0) return;
