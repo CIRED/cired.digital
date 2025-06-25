@@ -8,6 +8,10 @@ function addMain(content) {
     articleEl.id = `article-${articleIdCounter++}`;
     articleEl.innerHTML = content;
     messagesContainer.appendChild(articleEl);
+    
+    addCarouselControls(articleEl);
+    showLatestArticle();
+    
     return articleEl;
 }
 
@@ -142,4 +146,82 @@ function fallbackCopyToClipboard(text) {
         console.error('Fallback copy failed:', err);
     }
     document.body.removeChild(textArea);
+}
+
+function addCarouselControls(articleEl) {
+    const carouselDiv = document.createElement('div');
+    carouselDiv.className = 'carousel-navigation';
+    carouselDiv.innerHTML = `
+        <button class="carousel-btn carousel-prev" title="Article précédent">←</button>
+        <span class="carousel-indicator"></span>
+        <button class="carousel-btn carousel-next" title="Article suivant">→</button>
+    `;
+    
+    articleEl.appendChild(carouselDiv);
+    
+    const prevBtn = carouselDiv.querySelector('.carousel-prev');
+    const nextBtn = carouselDiv.querySelector('.carousel-next');
+    
+    prevBtn.addEventListener('click', () => navigateToArticle('prev'));
+    nextBtn.addEventListener('click', () => navigateToArticle('next'));
+}
+
+function navigateToArticle(direction) {
+    const articles = Array.from(messagesContainer.children).filter(child => child.tagName === 'ARTICLE');
+    const totalArticles = articles.length;
+    
+    if (totalArticles === 0) return;
+    
+    if (direction === 'prev' && currentArticleIndex > 0) {
+        currentArticleIndex--;
+    } else if (direction === 'next' && currentArticleIndex < totalArticles - 1) {
+        currentArticleIndex++;
+    }
+    
+    showArticleAtIndex(currentArticleIndex);
+}
+
+function showArticleAtIndex(index) {
+    const articles = Array.from(messagesContainer.children).filter(child => child.tagName === 'ARTICLE');
+    const totalArticles = articles.length;
+    
+    if (totalArticles === 0 || index < 0 || index >= totalArticles) return;
+    
+    articles.forEach((article, i) => {
+        article.style.display = i === index ? 'block' : 'none';
+    });
+    
+    currentArticleIndex = index;
+    updateCarouselControls();
+}
+
+function showLatestArticle() {
+    const articles = Array.from(messagesContainer.children).filter(child => child.tagName === 'ARTICLE');
+    if (articles.length > 0) {
+        currentArticleIndex = articles.length - 1;
+        showArticleAtIndex(currentArticleIndex);
+    }
+}
+
+function updateCarouselControls() {
+    const articles = Array.from(messagesContainer.children).filter(child => child.tagName === 'ARTICLE');
+    const totalArticles = articles.length;
+    
+    articles.forEach((article, i) => {
+        const carouselNav = article.querySelector('.carousel-navigation');
+        if (!carouselNav) return;
+        
+        const prevBtn = carouselNav.querySelector('.carousel-prev');
+        const nextBtn = carouselNav.querySelector('.carousel-next');
+        const indicator = carouselNav.querySelector('.carousel-indicator');
+        
+        if (totalArticles <= 1) {
+            carouselNav.style.display = 'none';
+        } else {
+            carouselNav.style.display = 'flex';
+            prevBtn.disabled = currentArticleIndex === 0;
+            nextBtn.disabled = currentArticleIndex === totalArticles - 1;
+            indicator.textContent = `${currentArticleIndex + 1} / ${totalArticles}`;
+        }
+    });
 }
