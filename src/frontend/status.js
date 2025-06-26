@@ -1,5 +1,7 @@
 // Status.js
 
+let isBackendOK = false;
+
 const backendStatusIndicator = document.getElementById('backend-status-indicator');
 const modelStatusIndicator = document.getElementById('model-status-indicator');
 const monitorStatusIndicator = document.getElementById('monitor-status-indicator');
@@ -19,10 +21,18 @@ function fetchApiStatus() {
             const message = data.results?.message?.toUpperCase() || data.status || data.health || 'unknown';
             apiStatusElement.textContent = `Server status: ${message}`;
             apiStatusElement.className = 'status-text status-success';
+            
+            const wasBackendOK = isBackendOK;
+            isBackendOK = true;
+            
+            if (!wasBackendOK && isBackendOK) {
+                refreshModels();
+            }
         })
         .catch(() => {
             apiStatusElement.textContent = 'Server status: unreachable';
             apiStatusElement.className = 'status-text status-error';
+            isBackendOK = false;
         });
 }
 
@@ -46,6 +56,14 @@ async function refreshModels() {
     if (!modelStatusElement || !refreshModelsBtn) return;
 
     refreshModelsBtn.disabled = true;
+    
+    if (!isBackendOK) {
+        modelStatusElement.textContent = 'Waiting for server';
+        modelStatusElement.className = 'status-text';
+        refreshModelsBtn.disabled = false;
+        return;
+    }
+    
     modelStatusElement.textContent = 'Testing model...';
     modelStatusElement.className = 'status-text';
 
