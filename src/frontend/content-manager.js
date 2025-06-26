@@ -39,24 +39,21 @@ function hideTyping() {
 // ==========================================
 // ==========================================
 
-async function animateWaitStart() {
+function animateWaitStart() {
     // Fade out
     setLoadingState(true);
-
-
-    // Await fade-out (3s as defined in CSS for .seen class)
-    await new Promise(resolve => setTimeout(resolve, 3000));
-
-    // Remove from display flow
-    inputHelp.style.display = 'none';
-    Array.from(messagesContainer.children).forEach(child => {
-        child.style.display = 'none';
-    });
-
-    // Show user message and spinner
-    if (isLoading) {
-        showTyping();
-    }
+    messagesContainer.querySelectorAll('article').forEach(article => article.classList.add('seen'));
+    fadeTimeout = setTimeout(() => {
+        // Remove from display flow
+        inputHelp.style.display = 'none';
+        Array.from(messagesContainer.children).forEach(child => {
+            child.style.display = 'none';
+        });
+        // Show spinner si toujours en attente
+        if (isLoading) {
+            showTyping();
+        }
+    }, 3000);
 }
 
 function animateWaitEnd() {
