@@ -155,7 +155,7 @@ function extractDocumentInfo(metadata, payload) {
     }
 
     return {
-        title: metadata.title || payload.title || 'No title (might be an hallucination).',
+        title: metadata.title || payload.title || 'Référence incorrecte. Suggestion: changer le modèle de langage avec ⚙️ puis relancer la question.',
         description: metadata.description || '',
         doi: metadata.doi || '',
         halid: metadata.hal_id || '',
