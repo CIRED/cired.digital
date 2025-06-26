@@ -1,5 +1,4 @@
 // ==========================================
-// MAIN CONTENTS CREATION AND DISPLAY
 // ==========================================
 
 function addMain(content) {
@@ -34,6 +33,42 @@ function showTyping() {
 function hideTyping() {
     debugLog('Hiding typing indicator');
     document.getElementById('typing-indicator')?.remove();
+}
+
+// ==========================================
+// ==========================================
+
+async function animateWaitStart() {
+    // Fade out
+    setLoadingState(true);
+
+
+    // Await fade-out (3s as defined in CSS for .seen class)
+    await new Promise(resolve => setTimeout(resolve, 3000));
+
+    // Remove from display flow
+    inputHelp.style.display = 'none';
+    Array.from(messagesContainer.children).forEach(child => {
+        child.style.display = 'none';
+    });
+
+    // Show user message and spinner
+    if (isLoading) {
+        showTyping();
+    }
+}
+
+function animateWaitEnd() {
+        hideTyping();
+        setLoadingState(false);
+        inputDiv.classList.remove('seen');
+        userInput.focus();
+}
+
+function setLoadingState(loading) {
+    isLoading = loading;
+    sendBtn.disabled = loading;
+    debugLog('Loading state set to ' + loading);
 }
 
 // ==========================================
