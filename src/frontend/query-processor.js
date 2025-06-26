@@ -6,9 +6,12 @@ async function processInput() {
     if (!validateInput()) return;
     
     const context = prepareQueryContext();
-    const response = await executeQuery(context);
-    await renderResponse(response, context);
-    finalizeUI();
+    try {
+        const response = await executeQuery(context);
+        await renderResponse(response, context);
+    } finally {
+        finalizeUI();
+    }
 }
 
 function validateInput() {
