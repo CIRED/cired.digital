@@ -42,7 +42,7 @@ function hideTyping() {
 function animateWaitStart() {
     // Fade out
     setLoadingState(true);
-    messagesContainer.querySelectorAll('article').forEach(article => article.classList.add('seen'));
+    messagesContainer.querySelectorAll('article, #greeting').forEach(el => el.classList.add('seen'));
     fadeTimeout = setTimeout(() => {
         // Remove from display flow
         inputHelp.style.display = 'none';
@@ -60,7 +60,7 @@ function animateWaitEnd() {
         clearTimeout(fadeTimeout);
         hideTyping();
         setLoadingState(false);
-        messagesContainer.querySelectorAll('article').forEach(article => article.classList.remove('seen'));
+        messagesContainer.querySelectorAll('article, #greeting').forEach(el => el.classList.remove('seen'));
         userInput.focus();
 }
 
