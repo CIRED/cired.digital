@@ -19,7 +19,8 @@ The docker image is pre-installed.
 No load test yet.
 Can be rescaled to 4, 8 or 16 vCPU as long as it remains on the AMD architecture.
 
-### Never log as root:
+
+### Basic security: Never log as root
 
 - Created the `admin` user and its home directory `/home/admin`
 - Transferred the `admin` user's public key, so that SSH does not ask for password.
@@ -31,7 +32,7 @@ Can be rescaled to 4, 8 or 16 vCPU as long as it remains on the AMD architecture
 - Installed `uv` with `pipx install uv`
 - Added `~/.local/bin` to the path with `pipx ensurepath`
 
-### Set the firewall
+### Basic security: Enable the firewall
 
 ```bash
 sudo ufw allow 22
@@ -41,13 +42,16 @@ sudo ufw deny 5432
 sudo ufw enable
 ```
 
+### Basic security: no defaults passwords
+
+- Generate secrets with `pwgen -s 16 1`
+- Change the default passwords in `secrets/env/*.env`.
+- Chmod 600 the secret files
+
+
 ### Clone the cired.digital Git repo.
 - `git clone https://github.com/MinhHaDuong/cired.digital.git`
 
-### Transfer secrets (if you have):
-
-- Transfer the secrets dir to a `secrets/` directory sibling to `cired.digital/`
-- Chmod 600 the secret files
 
 ## Start R2R on the remote
 
@@ -71,7 +75,7 @@ Warning: R2R tends to display the login popup even when one is already logged in
 
 1. Create the snapshot on the local development server: `deploy/ops/snapshot.sh`.
 2. Push it to the VPS: `deploy/ops/push_snapshot.sh`.
-3. Push the keys to the VPS: `deploy/ops/push_secrets.sh`
+3. Push the secrets to the VPS: `deploy/ops/push_secrets.sh`
 
 ## Go to the server
 1. Login `ssh -t admin@157.180.70.232 bash`
