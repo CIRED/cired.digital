@@ -38,8 +38,9 @@ services:
       - ${ENV_DIR:?ENV_DIR not set}/postgres.env
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
+# Security risk
+#    ports:
+#      - "5432:5432"
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 10s
@@ -49,6 +50,10 @@ services:
     command: >
       postgres
       -c max_connections=1024
+      -c shared_preload_libraries=''
+      -c log_statement=all
+      -c log_connections=on
+      -c log_disconnections=on
 
   # Not used by default
   minio:
@@ -58,9 +63,10 @@ services:
       - ${ENV_DIR:?ENV_DIR not set}/minio.env
     volumes:
       - minio_data:/data
-    ports:
-      - "9000:9000"
-      - "9001:9001"
+# Security risk
+#    ports:
+#      - "9000:9000"
+#      - "9001:9001"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
       interval: 10s

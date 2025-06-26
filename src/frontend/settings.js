@@ -8,16 +8,17 @@ const allSettings = {
       searchStrategy: "vanilla",
       includeWebSearch: false,
       models: [
-        "ollama/mistral-small:24b-3.1-instruct-2503-q8_0",
-        "ollama/mistral-large:latest",
-        "ollama/qwen3:32b",
         "deepseek/deepseek-reasoner",
         "mistral/mistral-small-latest",
         "mistral/mistral-medium-latest",
         "anthropic/claude-3-5-haiku-latest",
         "anthropic/claude-sonnet-4-20250514",
         "openai/gpt-4o-mini",
-        "openai/gpt-4.1-mini"
+        "openai/gpt-4.1-mini",
+        "openai/gpt-4.1",
+        "ollama/mistral-small:24b-3.1-instruct-2503-q8_0",
+        "ollama/mistral-large:latest",
+        "ollama/qwen3:32b",
       ]
     },
     prod: {
@@ -28,11 +29,11 @@ const allSettings = {
       searchStrategy: "vanilla",
       includeWebSearch: false,
       models: [
+        "mistral/mistral-small-latest",
+        "mistral/mistral-medium-latest",
         "ollama/mistral-small:24b-3.1-instruct-2503-q8_0",
         "ollama/mistral-large:latest",
         "ollama/qwen3:32b",
-        "mistral/mistral-small-latest",
-        "mistral/mistral-medium-latest"
       ]
     },
   },
