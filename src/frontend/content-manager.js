@@ -1,5 +1,6 @@
-// ==========================================
-// ==========================================
+ // ==========================================
+ // ==========================================
+ let fadeTimeout;
 
 function addMain(content) {
     debugLog('Adding article to main content zone', { contentLength: content.length });
@@ -59,9 +60,10 @@ async function animateWaitStart() {
 }
 
 function animateWaitEnd() {
+        clearTimeout(fadeTimeout);
         hideTyping();
         setLoadingState(false);
-        inputDiv.classList.remove('seen');
+        messagesContainer.querySelectorAll('article').forEach(article => article.classList.remove('seen'));
         userInput.focus();
 }
 
