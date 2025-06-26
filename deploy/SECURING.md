@@ -134,5 +134,5 @@ No authentication failures? You’re good.
 - Rotate DB, MinIO and RabbitMQ passwords on a schedule (30–90 days is typical).
 - Enforce TLS everywhere once passwords are no longer default.
 - Add --no-new-privileges:true and drop unnecessary Linux capabilities in your compose services for defence-in-depth.
-
-With those changes in place the R2R stack no longer exposes default credentials, and a casual attacker scanning for “minioadmin:minioadmin” or “postgres:postgres” will bounce right off.
+  - Allow the frontend process (nginx) to bind to priviledged port 80
+  - Allow r2r and analytics processes to write to their bind mounted rw directories
