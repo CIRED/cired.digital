@@ -419,6 +419,7 @@ div#profile-footer {
 }
 
 .profile-introduction {
+  color: #1e40af;
   background-color: #eff6ff;
   border: 1px solid #93c5fd;
   border-radius: 0.375rem;
@@ -426,7 +427,6 @@ div#profile-footer {
   margin-bottom: 1.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
-  color: #1e40af;
 }
 
 .profile-introduction p {
@@ -435,6 +435,12 @@ div#profile-footer {
 
 .profile-introduction p:last-child {
   margin-bottom: 0;
+}
+
+#questionnaire-signature {
+  font-size: 0.875rem;
+  text-align: right;
+  margin-top: 1rem;
 }
 
 
@@ -472,13 +478,12 @@ div#profile-footer {
   text-align: center;
 }
 
-#onboarding-btn, #onboarding-reset-btn {
+#onboarding-btn, #onboarding-reset-btn, #onboarding-close-btn {
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
   font-weight: 500;
   color: #374151;
   background-color: #f3f4f6;
-  border: 1px solid #d1d5db;
   border-radius: 0.375rem;
   cursor: pointer;
   transition: background-color 0.2s;
@@ -486,6 +491,6 @@ div#profile-footer {
   margin: 0.25rem;
 }
 
-#onboarding-btn:hover, #onboarding-reset-btn:hover {
+#onboarding-btn:hover, #onboarding-reset-btn:hover, #onboarding-close-btn:hover {
   background-color: #d1d5db;
 }

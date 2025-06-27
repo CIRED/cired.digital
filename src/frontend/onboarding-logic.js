@@ -80,14 +80,6 @@ function onProfileCompleted() {
     debugLog('Profile stage completed, onboarding finished');
 }
 
-function finalizeOnboarding() {
-    const onboardingCloseBtn = document.getElementById('onboarding-close-btn');
-    if (onboardingCloseBtn) {
-        onboardingCloseBtn.classList.remove('onboarding-inactive');
-    }
-    setOnboarded();
-}
-
 function handleOnboardingCloseBtn() {
     debugLog('Closing onboarding panel');
     // Shortcut: complete all stages of the onboarding flow
@@ -95,7 +87,7 @@ function handleOnboardingCloseBtn() {
     onFeedbackCompleted();
     onHelpCompleted();
     onProfileCompleted();
-    finalizeOnboarding();
+    setOnboarded();
     hideOnboardingPanel();
 }
 
@@ -110,12 +102,7 @@ function restartOnboarding() {
 // ==========================================
 
 function initializeOnBoarding() {
-    if (isOnboarded()) {
-        debugLog('User already onboarded, skipping onboarding flow');
-        return
-    }
-
-    debugLog('Initializing onboarding flow for new user');
+    debugLog('Initializing the onboarding panel');
 
     document.getElementById('onboarding-panel').innerHTML = onboardingHTML;
 
@@ -155,7 +142,10 @@ function initializeOnBoarding() {
         });
     }
 
-    showOnboardingPanel();
+    if (!isOnboarded()) {
+        debugLog('User not onboarded, showing the onboarding panel');
+        showOnboardingPanel();
+    }
 }
 
 // Initialize the onboarding system when the script loads

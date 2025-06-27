@@ -9,11 +9,13 @@ document.getElementById("profile-panel").innerHTML = `
 
   <div class="settings-grid" id="profile-container">
     <div class="profile-introduction">
-      <p>Afin de personnaliser votre expérience et de mieux comprendre les besoins de nos utilisateurs, je vous invite à renseigner quelques informations sur votre profil professionnel. Ce questionnaire prend que quelques secondes à compléter et comprend trois questions portant sur votre affiliation professionnelle, votre niveau d'expertise dans les domaines de l'environnement et du développement, ainsi que votre familiarité avec les technologies d'intelligence artificielle.</p>
-      
-      <p>Vos réponses nous permettront d'adapter les contenus et fonctionnalités à votre niveau d'expertise et à vos besoins spécifiques. Toutes les informations collectées sont traitées de manière confidentielle et stockées localement sur votre appareil. Vous pouvez modifier ou supprimer ces données à tout moment via les paramètres de votre profil.</p>
-      
+      <p>Je vous invite à ce questionnaire rapide: trois questions sur votre affiliation professionnelle, votre niveau d'expertise en environnement / développement, et votre familiarité avec les technologies d'intelligence artificielle.</p>
+
+      <p>Vos réponses nous permettront d'adapter les contenus et fonctionnalités à votre niveau d'expertise et à vos besoins spécifiques. Ces données sont anonymes, ne sont pas redistribuées, et vous pouvez les modifier ou supprimer à tout moment ci-dessous.</p>
+
       <p><em>Temps estimé : moins de 1 minute.</em></p>
+
+      <p id="questionnaire-signature">minh.ha-duong@cnrs.fr</p>
     </div>
 
     <form id="profile-edit-form" class="settings-grid">

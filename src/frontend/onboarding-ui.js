@@ -41,7 +41,7 @@ const onboardingHTML = `
     </ol>
 </div>
 <div id="onboarding-footer">
-    <button id="onboarding-close-btn" class="onboarding-inactive">Fermer le guide.</button>
+    <button id="onboarding-close-btn">Fermer et passer.</button>
     <button id="onboarding-reset-btn">Réinitialiser le guide</button>
 </div>
 `;
