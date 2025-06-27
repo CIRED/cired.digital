@@ -108,6 +108,16 @@ function hideProfilePanel() {
 
 function handleSaveProfile() {
     const profileData = collectFormData('edit-profile-');
+    
+    const hasAllAnswers = profileData.organization && profileData.knowledge && profileData.usage;
+    
+    if (!hasAllAnswers) {
+        showProfileValidationError();
+        return;
+    }
+    
+    clearProfileValidationError();
+    
     const savedProfile = saveProfile(profileData);
     if (savedProfile) {
         onProfileCompleted();
@@ -117,6 +127,28 @@ function handleSaveProfile() {
 
 function handleClearProfile() {
     clearProfile()
+}
+
+function showProfileValidationError() {
+    clearProfileValidationError();
+    
+    const errorDiv = document.createElement('div');
+    errorDiv.id = 'profile-validation-error';
+    errorDiv.className = 'error-message';
+    errorDiv.style.marginTop = '1rem';
+    errorDiv.textContent = 'Veuillez répondre aux trois questions avant de sauvegarder votre profil.';
+    
+    const actionsDiv = document.getElementById('profile-actions');
+    if (actionsDiv) {
+        actionsDiv.parentNode.insertBefore(errorDiv, actionsDiv);
+    }
+}
+
+function clearProfileValidationError() {
+    const existingError = document.getElementById('profile-validation-error');
+    if (existingError) {
+        existingError.remove();
+    }
 }
 
 function handleRestartOnboarding() {
