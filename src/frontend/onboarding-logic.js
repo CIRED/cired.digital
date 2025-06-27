@@ -18,9 +18,7 @@ function setOnboarded() {
 }
 
 function showOnboardingPanel() {
-    if (onboardingPanel) {
-        onboardingPanel.hidden = false;
-    }
+    initializeOnBoarding(openAnyway = true);
 }
 
 function hideOnboardingPanel() {
@@ -34,94 +32,86 @@ function hideOnboardingPanel() {
     }
 }
 
-
-// ==========================================
-// ==========================================
-
-function completeStage(stageId, statusId, nextStageId) {
-    const stage = document.getElementById(stageId);
-    const status = document.getElementById(statusId);
-    const nextStage = document.getElementById(nextStageId);
-
-    if (stage) {
-        stage.className = 'onboarding-complete';
-    }
-    if (status) {
-        status.textContent = '✅ Terminé';
-    }
-    if (nextStage) {
-        nextStage.className = 'onboarding-focus';
-    }
-
-    debugLog('Onboarding stage completed', { stageId, nextStageId });
+function setStageCompleted(stage) {
+    localStorage.setItem(`onboarding-stage-${stage}`, 'true');
 }
 
+function isStageCompleted(stage) {
+    return localStorage.getItem(`onboarding-stage-${stage}`) === 'true';
+}
+
+function isOnboardingFullyCompleted() {
+    return ONBOARDING_STAGES.every(isStageCompleted);
+}
+
+function clearOnboardingStages() {
+    ONBOARDING_STAGES.forEach(stage => localStorage.removeItem(`onboarding-stage-${stage}`));
+}
+
+function completeStage(stage) {
+    showCompleted(stage);
+    if (isStageCompleted(stage)) {
+        console.warn(`Stage ${stage} is already completed`);
+        return;
+    }
+    if (stage) {
+        setStageCompleted(stage);
+    }
+    debugLog('Onboarding stage completed', { stage });
+    if (isOnboardingFullyCompleted()) {
+        debugLog('Onboarding fully completed');
+        showOnboardingCompleted();
+        setOnboarded();
+    }
+}
 
 // ==========================================
 // ==========================================
 
 function onFirstResponseCompleted() {
-    completeStage('onboarding-stage-first-question', 'first-response-status', 'onboarding-stage-feedback');
-    debugLog('First response stage completed');
+    completeStage('question');
 }
 
 function onFeedbackCompleted() {
-    completeStage('onboarding-stage-feedback', null, 'onboarding-stage-help');
-    debugLog('Feedback stage completed');
+    completeStage('feedback');
 }
 
 function onHelpCompleted() {
-    completeStage('onboarding-stage-help', 'help-status', 'onboarding-stage-profile');
-    debugLog('Help stage completed');
+    completeStage('help');
 }
 
 function onProfileCompleted() {
-    completeStage('onboarding-stage-profile', 'profile-status', 'onboarding-stage-completed');
-    debugLog('Profile stage completed, onboarding finished');
-}
-
-function finalizeOnboarding() {
-    const onboardingCloseBtn = document.getElementById('onboarding-close-btn');
-    if (onboardingCloseBtn) {
-        onboardingCloseBtn.classList.remove('onboarding-inactive');
-    }
-    setOnboarded();
+    completeStage('profile');
 }
 
 function handleOnboardingCloseBtn() {
-    debugLog('Closing onboarding panel');
-    // Shortcut: complete all stages of the onboarding flow
-    onFirstResponseCompleted();
-    onFeedbackCompleted();
-    onHelpCompleted();
-    onProfileCompleted();
-    finalizeOnboarding();
+    hideOnboardingPanel();
+}
+
+function handleOnboardingPassBtn() {
+    debugLog('Pass on onboarding');
+    ONBOARDING_STAGES.forEach(setStageCompleted);
+    setOnboarded();
     hideOnboardingPanel();
 }
 
 function restartOnboarding() {
     debugLog('Onboarding reset and relaunch');
     localStorage.removeItem(PROFILE_ONBOARDED_KEY);
+    clearOnboardingStages();
     initializeOnBoarding();
 }
 
-// ==========================================
-// =========== Initialization ===============
-// ==========================================
-
-function initializeOnBoarding() {
-    if (isOnboarded()) {
-        debugLog('User already onboarded, skipping onboarding flow');
-        return
-    }
-
-    debugLog('Initializing onboarding flow for new user');
-
-    document.getElementById('onboarding-panel').innerHTML = onboardingHTML;
-
+function addHandlersToOnboarding() {
+    // Add event listeners for onboarding actions
     const onboardingCloseBtn = document.getElementById('onboarding-close-btn');
     if (onboardingCloseBtn) {
         onboardingCloseBtn.addEventListener('click', handleOnboardingCloseBtn);
+    }
+
+    const onboardingPassBtn = document.getElementById('onboarding-pass-btn');
+    if (onboardingPassBtn) {
+        onboardingPassBtn.addEventListener('click', handleOnboardingPassBtn);
     }
 
     const onboardingResetBtn = document.getElementById('onboarding-reset-btn');
@@ -154,8 +144,36 @@ function initializeOnBoarding() {
             }
         });
     }
+}
 
-    showOnboardingPanel();
+// ==========================================
+// =========== Initialization ===============
+// Called on pageload and on Guide Reset
+// ==========================================
+
+function initializeOnBoarding(openAnyway = false) {
+    debugLog('Initializing the onboarding panel');
+
+    const onboardingPanel = document.getElementById('onboarding-panel');
+    onboardingPanel.innerHTML = onboardingHTML;
+
+    // Update for the completed stages
+    ONBOARDING_STAGES.forEach(stageKey => {
+        if (isStageCompleted(stageKey)) {
+            showCompleted(stageKey);
+        }
+    });
+
+    addHandlersToOnboarding();
+
+    if (isOnboarded()) {
+        debugLog('User already onboarded');
+        showOnboardingCompleted();
+    }
+
+    if (!isOnboarded() || openAnyway) {
+        onboardingPanel.hidden = false;
+    }
 }
 
 // Initialize the onboarding system when the script loads
@@ -163,7 +181,6 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         initializeOnBoarding();
     });
-}
-else {
+} else {
     initializeOnBoarding();
 }

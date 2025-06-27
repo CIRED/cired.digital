@@ -1,7 +1,7 @@
 document.getElementById("help-panel").innerHTML = `
   <div id="help-header">
     <h2>Mode d'emploi - assistant documentaire Cirdi</h2>
-    <button id="help-close-btn">✖️</button>
+    <button id="help-close-btn" class="close-button">✖️</button>
   </div>
 
   <div id="help-content">

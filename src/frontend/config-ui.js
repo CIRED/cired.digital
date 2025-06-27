@@ -1,6 +1,6 @@
 document.getElementById("config-panel").innerHTML = `
   <div id="config-header">
-    <button id="config-close-btn">✖️</button>
+    <button id="config-close-btn" class="close-button">✖️</button>
     <h2>Cirdi settings</h2>
   </div>
 
@@ -23,7 +23,7 @@ document.getElementById("config-panel").innerHTML = `
           Language model
           <span class="help-icon" title="The LLM used to generate replies. Commercial options disabled for cost control.">ℹ️</span>
         </label>
-        <div class="status-text" id="model-status">Status: ?</div><button id="refresh-models-btn" hidden>Refresh</button>
+        <div class="status-text" id="model-status">Status: ?</div><button id="refresh-models-btn" class="secondary-button" hidden>Refresh</button>
       </div>
       <select class="form-select" id="model">
         <option>Chargement...</option>
