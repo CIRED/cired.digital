@@ -17,14 +17,14 @@
 <body>
 
 <nav>
- <button id="config-btn">⚙️</button>
+ <button id="config-btn" class="secondary-button">⚙️</button>
  <span id="indicators-container" hidden>
    <span id="backend-status-indicator">?</span>
    <span id="model-status-indicator">?</span>
    <span id="monitor-status-indicator">?</span>
  </span>
-  <button id="profile-btn">👤</button>
-  <button id="help-btn">Aide</button>
+  <button id="profile-btn" class="secondary-button">👤</button>
+  <button id="help-btn" class="secondary-button">Aide</button>
 </nav>
 
 <header>
@@ -35,7 +35,7 @@
           placeholder="Cirdi, que disent les écrits du CIRED sur..."
           rows="2"
           ></textarea>
-        <button id="send-btn">
+        <button id="send-btn" class="primary-button" title="Envoyer la question">
           ➤
         </button>
       </div>
@@ -77,6 +77,7 @@
 
 <aside hidden id="onboarding-panel">Loading...</aside>
 <script src="onboarding-ui.js"></script>
+<script src="onboarding-logic.js"></script>
 
 <script src="utils.js"></script>
 <script src="settings.js"></script>
@@ -85,7 +86,6 @@
 <script src="app-init.js"></script>
 <script src="help-logic.js"></script>
 <script src="profile-logic.js"></script>
-<script src="onboarding-logic.js"></script>
 <script src="content-manager.js"></script>
 <script src="economics.js"></script>
 <script src="citations.js"></script>
