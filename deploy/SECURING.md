@@ -128,11 +128,37 @@ curl -u minioadmin:<newPw> http://localhost:9000/minio/health/ready
 
 No authentication failures? You’re good.
 
+## Firewall everything except the public proxy
+
+- Needed because we keep ports: entries in compose.yaml for dev.
+- Change the NPM Admin password !!!
+
+```
+# Allow HTTP(S) and NPM Admin UI
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 81/tcp  # Optionally restrict this
+
+# Deny all other incoming connections by default
+sudo ufw default deny incoming
+
+# Allow outgoing connections (needed for apt, certbot, DNS, etc.)
+sudo ufw default allow outgoing
+
+# Enable the firewall
+sudo ufw enable
+
+# Check status
+sudo ufw status verbose
+```
+
 ## Hardening hints
 
+- Pin images versions
 - Keep all *.env and secrets/* in .gitignore and .dockerignore.
 - Rotate DB, MinIO and RabbitMQ passwords on a schedule (30–90 days is typical).
 - Enforce TLS everywhere once passwords are no longer default.
 - Add --no-new-privileges:true and drop unnecessary Linux capabilities in your compose services for defence-in-depth.
+- Some folders are mounted writable when RO would suffice
   - Allow the frontend process (nginx) to bind to priviledged port 80
   - Allow r2r and analytics processes to write to their bind mounted rw directories
