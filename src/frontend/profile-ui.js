@@ -4,14 +4,14 @@
 document.getElementById("profile-panel").innerHTML = `
   <div id="profile-header">
     <h2>Renseigner mon Profil</h2>
-    <button id="profile-close-btn">✖️</button>
+    <button id="profile-close-btn" class="close-button">✖️</button>
   </div>
 
   <div class="settings-grid" id="profile-container">
     <div class="profile-introduction">
-      <p>Je vous invite à ce questionnaire rapide: trois questions sur votre affiliation professionnelle, votre niveau d'expertise en environnement / développement, et votre familiarité avec les technologies d'intelligence artificielle.</p>
-
-      <p>Vos réponses nous permettront d'adapter les contenus et fonctionnalités à votre niveau d'expertise et à vos besoins spécifiques. Ces données sont anonymes, ne sont pas redistribuées, et vous pouvez les modifier ou supprimer à tout moment ci-dessous.</p>
+      <p>Je vous invite à ce questionnaire rapide pour m'aider à décider du sort de Cirdi.
+      Voici trois questions sur votre affiliation professionnelle, votre niveau d'expertise en environnement / développement, et votre familiarité avec les technologies d'intelligence artificielle.
+      Données anonymes, non redistribuées, modifiables ou supprimables à tout moment ci-dessous.</p>
 
       <p><em>Temps estimé : moins de 1 minute.</em></p>
 
@@ -21,7 +21,7 @@ document.getElementById("profile-panel").innerHTML = `
     <form id="profile-edit-form" class="settings-grid">
 
       <div class="form-group">
-        <label class="form-label" for="edit-profile-organization">Affiliation professionnelle</label>
+        <label class="form-label" for="edit-profile-organization">1. Affiliation professionnelle</label>
         <div id="edit-profile-organization" style="display: flex; flex-direction: column; gap: 0.25em;">
           <label><input type="radio" name="profile-organization" value="CIRED"> CIRED</label>
           <label><input type="radio" name="profile-organization" value="university"> Enseignement et recherche</label>
@@ -34,16 +34,16 @@ document.getElementById("profile-panel").innerHTML = `
       </div>
 
       <div class="form-group">
-        <label class="form-label" for="edit-profile-knowledge">Connaissance des questions d'environnement et/ou de développement</label>
+        <label class="form-label" for="edit-profile-knowledge">2. Connaissance des questions d'environnement et/ou de développement</label>
         <div id="edit-profile-knowledge" style="display: flex; flex-direction: column; gap: 0.25em;">
-          <label><input type="radio" name="profile-knowledge" value="expert"> Expert: des années de pratique ou de recherche dans le domaine</label>
-          <label><input type="radio" name="profile-knowledge" value="engaged"> Engagé: journaliste, étudiant, militant...</label>
-          <label><input type="radio" name="profile-knowledge" value="initial"> Initiale: souhaite en savoir plus sur le sujet</label>
+          <label><input type="radio" name="profile-knowledge" value="expert"> Expert - des années de pratique ou de recherche dans le domaine</label>
+          <label><input type="radio" name="profile-knowledge" value="engaged"> Engagé - journaliste, étudiant, militant...</label>
+          <label><input type="radio" name="profile-knowledge" value="initial"> Initial - souhaite en savoir plus sur le sujet</label>
         </div>
       </div>
 
       <div class="form-group">
-        <label class="form-label" for="edit-profile-usage">Niveau de familiarité avec les technologies IA</label>
+        <label class="form-label" for="edit-profile-usage">3. Niveau de familiarité avec les technologies IA</label>
         <div id="edit-profile-usage" style="display: flex; flex-direction: column; gap: 0.25em;">
           <label><input type="radio" name="profile-usage" value="expert"> Professionnel - Je trouve que Cirdi est un RAG simple.</label>
           <label><input type="radio" name="profile-usage" value="advanced"> Avancé - J'utilise au quotidien divers outils d'IA.</label>
@@ -61,11 +61,11 @@ document.getElementById("profile-panel").innerHTML = `
     <div id="stored-profile">
     <h3>Données stockées actuellement</h3>
       <div id="profile-data-display">Loading...</div>
-      <button type="button" id="clear-profile-btn" class="secondary-button">Effacer les données</button>
     </div>
 
     <div id="profile-footer">
-      <button type="button" id="onboarding-btn">Ouvrir le guide de démarrage rapide</button>
+      <button type="button" id="clear-profile-btn" class="secondary-button">Effacer les données</button>
+      <button type="button" id="onboarding-btn" class="secondary-button">Ouvrir le guide de démarrage rapide</button>
     </div>
   </div>
 `;
