@@ -451,7 +451,7 @@ div#profile-footer {
   text-align: center;
 }
 
-#restart-onboarding-btn, #onboarding-reset-btn {
+#onboarding-btn, #onboarding-reset-btn {
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
   font-weight: 500;
@@ -465,6 +465,6 @@ div#profile-footer {
   margin: 0.25rem;
 }
 
-#restart-onboarding-btn:hover, #onboarding-reset-btn:hover {
+#onboarding-btn:hover, #onboarding-reset-btn:hover {
   background-color: #d1d5db;
 }
