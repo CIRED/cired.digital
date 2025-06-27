@@ -55,7 +55,7 @@ document.getElementById("profile-panel").innerHTML = `
     </div>
 
     <div id="profile-footer">
-      <button type="button" id="restart-onboarding-btn">Effacer les données et relancer le guide de démarrage rapide</button>
+      <button type="button" id="restart-onboarding-btn">Ouvrir le guide de démarrage rapide</button>
     </div>
   </div>
 `;

@@ -119,10 +119,9 @@ function handleClearProfile() {
 }
 
 function handleRestartOnboarding() {
-    debugLog('Restarting onboarding process');
-    clearProfile();
+    debugLog('Opening onboarding guide');
     hideProfilePanel();
-    restartOnboarding();      // defined in onboarding-logic.js
+    showOnboardingPanel();
 }
 
 // ==========================================
