@@ -6,20 +6,7 @@ const onboardingHTML = `
     <h3>Bienvenue dans l'assistant documentaire Cirdi !</h3>
     <p>Le parcours de prise en main comprend quatre étapes:</p>
     <ol>
-        <li id="onboarding-stage-profile" class="onboarding-focus">
-            Complétez votre profil utilisateur en cliquant sur
-            <button id="open-profile-btn">👤</button> dans le coin en haut à droite.
-            <br />
-            Profil complété: <span id="profile-status">En attente.</span>
-        </li>
-        <li id="onboarding-stage-help" class="onboarding-inactive">
-            Ouvrez le mode d'emploi. Le bouton
-            <button type="button" id="open-help-btn" class="primary-button">Aide</button>
-            est juste à côté du bouton de profil. Utilisez les boutons <button id="help-close-btn">✖️</button> pour refermer.
-            <br />
-            Mode d'emploi vu, refermé: <span id="help-status">En attente.</span>
-        </li>
-        <li id="onboarding-stage-first-question" class="onboarding-inactive">
+        <li id="onboarding-stage-first-question" class="onboarding-focus">
             Posez une première question à Cirdi. Le champ de saisie est en haut au centre,
             le bouton bleu <button id="image-send-btn">➤</button> lance la requête.
             <button id="focus-input">Aller au champ de saisie</button>.
@@ -30,6 +17,19 @@ const onboardingHTML = `
             Partagez votre retour d'expérience sur le formulaire qui s'affichera sous la réponse, avec
             quelques mots et un choix entre <button class="feedback-button feedback-up" title="Bonne réponse.">👍</button>
             et <button class="feedback-button feedback-down" title="Réponse insuffisante.">👎</button> pour envoyer.
+        </li>
+        <li id="onboarding-stage-help" class="onboarding-inactive">
+            Ouvrez le mode d'emploi. Le bouton
+            <button type="button" id="open-help-btn" class="primary-button">Aide</button>
+            est juste à côté du bouton de profil. Utilisez les boutons <button id="help-close-btn">✖️</button> pour refermer.
+            <br />
+            Mode d'emploi vu, refermé: <span id="help-status">En attente.</span>
+        </li>
+        <li id="onboarding-stage-profile" class="onboarding-inactive">
+            Complétez votre profil utilisateur en cliquant sur
+            <button id="open-profile-btn">👤</button> dans le coin en haut à droite.
+            <br />
+            Profil complété: <span id="profile-status">En attente.</span>
         </li>
         <li id="onboarding-stage-completed" class="onboarding-inactive">
             🎉👏 Bravo, vous avez complété le parcours de prise en main !
@@ -42,6 +42,7 @@ const onboardingHTML = `
 </div>
 <div id="onboarding-footer">
     <button id="onboarding-close-btn" class="onboarding-inactive">Fermer le guide.</button>
+    <button id="onboarding-reset-btn">Réinitialiser le guide</button>
 </div>
 `;
 

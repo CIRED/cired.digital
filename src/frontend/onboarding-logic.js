@@ -3,7 +3,6 @@
 // ==========================================
 
 const onboardingPanel = document.getElementById('onboarding-panel');
-const onboardingBtn = document.getElementById('onboarding-btn');
 
 // ==========================================
 // =========== Onboarding State ==============
@@ -27,9 +26,6 @@ function showOnboardingPanel() {
 function hideOnboardingPanel() {
     if (onboardingPanel) {
         onboardingPanel.hidden = true;
-    }
-    if (onboardingBtn) {
-        onboardingBtn.hidden = true;
     }
 
     const configBtn = document.getElementById('config-btn');
@@ -60,64 +56,9 @@ function completeStage(stageId, statusId, nextStageId) {
     debugLog('Onboarding stage completed', { stageId, nextStageId });
 }
 
-function enableUIElement(elementId) {
-    const element = document.getElementById(elementId);
-    if (element) {
-        element.disabled = false;
-        element.style.opacity = '1';
-        element.style.filter = 'none';
-    }
-}
-
-function disableUIElement(elementId) {
-    const element = document.getElementById(elementId);
-    if (element) {
-        element.disabled = true;
-        element.style.opacity = '0.5';
-        element.style.filter = 'blur(2px)';
-    }
-}
-
-function blurMainArea(blur = true) {
-    if (blur) {
-        if (mainDiv) {
-            mainDiv.style.opacity = '0.5';
-            mainDiv.style.filter = 'blur(2px)';
-            mainDiv.style.pointerEvents = 'none';
-        }
-        if (inputDiv) {
-            inputDiv.style.opacity = '0.5';
-            inputDiv.style.filter = 'blur(2px)';
-            inputDiv.style.pointerEvents = 'none';
-        }
-    } else {
-        if (mainDiv) {
-            mainDiv.style.opacity = '1';
-            mainDiv.style.filter = 'none';
-            mainDiv.style.pointerEvents = 'auto';
-        }
-        if (inputDiv) {
-            inputDiv.style.opacity = '1';
-            inputDiv.style.filter = 'none';
-            inputDiv.style.pointerEvents = 'auto';
-        }
-    }
-}
 
 // ==========================================
 // ==========================================
-
-function onProfileCompleted() {
-    completeStage('onboarding-stage-profile', 'profile-status', 'onboarding-stage-help');
-    enableUIElement('help-btn');
-    debugLog('Profile stage completed, help button enabled');
-}
-
-function onHelpCompleted() {
-    completeStage('onboarding-stage-help', 'help-status', 'onboarding-stage-first-question');
-    blurMainArea(false);
-    debugLog('Help stage completed, main area enabled');
-}
 
 function onFirstResponseCompleted() {
     completeStage('onboarding-stage-first-question', 'first-response-status', 'onboarding-stage-feedback');
@@ -125,8 +66,18 @@ function onFirstResponseCompleted() {
 }
 
 function onFeedbackCompleted() {
-    completeStage('onboarding-stage-feedback', null, 'onboarding-stage-completed');
-    debugLog('Feedback stage completed, onboarding finished');
+    completeStage('onboarding-stage-feedback', null, 'onboarding-stage-help');
+    debugLog('Feedback stage completed');
+}
+
+function onHelpCompleted() {
+    completeStage('onboarding-stage-help', 'help-status', 'onboarding-stage-profile');
+    debugLog('Help stage completed');
+}
+
+function onProfileCompleted() {
+    completeStage('onboarding-stage-profile', 'profile-status', 'onboarding-stage-completed');
+    debugLog('Profile stage completed, onboarding finished');
 }
 
 function finalizeOnboarding() {
@@ -134,17 +85,16 @@ function finalizeOnboarding() {
     if (onboardingCloseBtn) {
         onboardingCloseBtn.classList.remove('onboarding-inactive');
     }
-    enableUIElement('config-btn');
     setOnboarded();
 }
 
 function handleOnboardingCloseBtn() {
     debugLog('Closing onboarding panel');
     // Shortcut: complete all stages of the onboarding flow
-    onProfileCompleted();
-    onHelpCompleted();
     onFirstResponseCompleted();
     onFeedbackCompleted();
+    onHelpCompleted();
+    onProfileCompleted();
     finalizeOnboarding();
     hideOnboardingPanel();
 }
@@ -161,24 +111,22 @@ function restartOnboarding() {
 
 function initializeOnBoarding() {
     if (isOnboarded()) {
-        if (onboardingBtn) {
-            onboardingBtn.hidden = true;
-        }
         debugLog('User already onboarded, skipping onboarding flow');
         return
     }
 
     debugLog('Initializing onboarding flow for new user');
 
-    if (onboardingBtn) {
-        onboardingBtn.addEventListener('click', showOnboardingPanel);
-    }
-
     document.getElementById('onboarding-panel').innerHTML = onboardingHTML;
 
     const onboardingCloseBtn = document.getElementById('onboarding-close-btn');
     if (onboardingCloseBtn) {
         onboardingCloseBtn.addEventListener('click', handleOnboardingCloseBtn);
+    }
+
+    const onboardingResetBtn = document.getElementById('onboarding-reset-btn');
+    if (onboardingResetBtn) {
+        onboardingResetBtn.addEventListener('click', restartOnboarding);
     }
 
     const openProfileBtn = document.getElementById('open-profile-btn');
@@ -206,10 +154,6 @@ function initializeOnBoarding() {
             }
         });
     }
-
-    disableUIElement('help-btn');
-    disableUIElement('config-btn');
-    blurMainArea(true);
 
     showOnboardingPanel();
 }

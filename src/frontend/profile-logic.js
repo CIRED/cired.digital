@@ -8,7 +8,7 @@ const profileBtn = document.getElementById('profile-btn');
 const profileCloseBtn = document.getElementById('profile-close-btn');
 const saveProfileBtn = document.getElementById('save-profile-btn');
 const clearProfileBtn = document.getElementById('clear-profile-btn');
-const restartOnboardingBtn = document.getElementById('restart-onboarding-btn');
+const onboardingBtn = document.getElementById('onboarding-btn');
 
 const defaultProfile = {
     organization: '',
@@ -119,10 +119,9 @@ function handleClearProfile() {
 }
 
 function handleRestartOnboarding() {
-    debugLog('Restarting onboarding process');
-    clearProfile();
+    debugLog('Opening onboarding guide');
     hideProfilePanel();
-    restartOnboarding();      // defined in onboarding-logic.js
+    showOnboardingPanel();
 }
 
 // ==========================================
@@ -148,8 +147,8 @@ function initializeProfile() {
         clearProfileBtn.addEventListener('click', handleClearProfile);
     }
 
-    if (restartOnboardingBtn) {
-        restartOnboardingBtn.addEventListener('click', handleRestartOnboarding);
+    if (onboardingBtn) {
+        onboardingBtn.addEventListener('click', handleRestartOnboarding);
     }
 
     debugLog('Profile system initialized');
