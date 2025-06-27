@@ -337,11 +337,13 @@ CHECKBOX CONTAINERS
   display: block;
   position: fixed;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -60%);
+  top: 2rem;
+  transform: translateX(-50%);
   opacity: 0;
   width: 400px;
   max-width: 90vw;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
   z-index: 1000;
   transition:
     transform 3s cubic-bezier(0.4,0,0.2,1),
@@ -349,13 +351,13 @@ CHECKBOX CONTAINERS
 }
 
 #profile-panel:not(.hidden) {
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   opacity: 1;
   pointer-events: auto;
 }
 
 #profile-panel.hidden {
-  transform: translate(-50%, -60%);
+  transform: translateX(-50%);
   opacity: 0;
   pointer-events: none;
 }
@@ -414,6 +416,25 @@ div#profile-footer {
   margin-top: 1rem;
   text-align: center;
   font-size: 0.875rem;
+}
+
+.profile-introduction {
+  background-color: #eff6ff;
+  border: 1px solid #93c5fd;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #1e40af;
+}
+
+.profile-introduction p {
+  margin: 0 0 1rem 0;
+}
+
+.profile-introduction p:last-child {
+  margin-bottom: 0;
 }
 
 

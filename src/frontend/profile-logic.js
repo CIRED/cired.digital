@@ -111,6 +111,7 @@ function handleSaveProfile() {
     const savedProfile = saveProfile(profileData);
     if (savedProfile) {
         onProfileCompleted();
+        hideProfilePanel();
     }
 }
 
