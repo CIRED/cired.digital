@@ -329,6 +329,7 @@ services:
       - npm_network
     ports:
       - "80:80"     # HTTP traffic
+      - "81:81"     # NPM admin. Protect with firewall and strong password
     volumes:
       - npm_data:/data
       - npm_ssl:/etc/letsencrypt
