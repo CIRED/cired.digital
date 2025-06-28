@@ -1,4 +1,3 @@
-config.upstream/
 
 # Python
 __pycache__/
@@ -87,6 +86,8 @@ Thumbs.db
 *.env.development.local
 *.env.test.local
 *.env.production.local
+compose.override.yaml
+config.upstream/
 
 # Secrets (should not even be in-tree)
 secrets/*

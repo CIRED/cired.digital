@@ -128,11 +128,59 @@ curl -u minioadmin:<newPw> http://localhost:9000/minio/health/ready
 
 No authentication failures? You’re good.
 
+## Firewall everything except 80 and 443
+
+1. After SSHing into the server:
+
+```bash
+# Allow HTTP(S) and NPM Admin UI
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+
+# Deny all other incoming connections by default
+sudo ufw default deny incoming
+
+# Allow outgoing connections (needed for apt, certbot, DNS, etc.)
+sudo ufw default allow outgoing
+
+# Enable the firewall
+sudo ufw enable
+
+# Check status
+sudo ufw status verbose
+```
+
+2. To access NPM configuration panel, open an SSH tunnel.
+
+```bash
+# From your local machine
+ssh -L 8081:localhost:81 adminname@the-server-IP
+
+# Then browse to http://localhost:8081
+```
+
+3. On the NPM configuration panel:
+
+- r2r-api.cired.digital -> 7272
+- r2r-dashboard.cired.digital -> 7273
+- hatchet-dashboard.cired.digital -> 7274
+- cirdi.cired.digital -> 8080
+- cirdi-api.cired.digital -> 7277
+
+4. Update the DNS zone file on Gandi so that all these point to the server IP
+
+5. Use compose.override.yaml to open ports on localhost: for development
+
+- Gitignore it so that it is not picked up in prod.
+- Version a .template so that devs can conveniently make their own local copy.
+
 ## Hardening hints
 
+- Pin images versions
 - Keep all *.env and secrets/* in .gitignore and .dockerignore.
 - Rotate DB, MinIO and RabbitMQ passwords on a schedule (30–90 days is typical).
 - Enforce TLS everywhere once passwords are no longer default.
 - Add --no-new-privileges:true and drop unnecessary Linux capabilities in your compose services for defence-in-depth.
+- Some folders are mounted writable when RO would suffice
   - Allow the frontend process (nginx) to bind to priviledged port 80
   - Allow r2r and analytics processes to write to their bind mounted rw directories

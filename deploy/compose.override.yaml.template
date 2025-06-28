@@ -1,0 +1,38 @@
+# Compose override file for cired.digital
+#
+# Not used in production
+# Open ports for the dev environemtn
+#
+
+services:
+  r2r:
+    ports:
+      - "7272:7272"
+
+  r2r-dashboard:
+    ports:
+      - "7273:3000"
+
+  hatchet-dashboard:
+    ports:
+      - "7274:80"
+
+  unstructured:
+    ports:
+      - "7275:7275"
+
+  graph_clustering:
+    ports:
+      - "7276:7276"
+
+  monitoring:
+    ports:
+      - "7277:7277"
+    # Enable hot reload for dev
+    volumes:
+      - ../src/analytics/monitor.py:/app/monitor.py
+    command: uvicorn monitor:app --host 0.0.0.0 --port 7277 --reload
+
+  frontend:
+    ports:
+      - "8080:80"
