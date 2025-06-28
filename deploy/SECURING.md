@@ -128,14 +128,16 @@ curl -u minioadmin:<newPw> http://localhost:9000/minio/health/ready
 
 No authentication failures? You’re good.
 
-## Firewall everything except 80 and 443
+----
 
-1. After SSHing into the server:
+## Firewall everything by default
+
+After SSHing into the server:
 
 ```bash
-# Allow HTTP(S) and NPM Admin UI
+# Allow SSH and HTTP
+sudo ufw allow 22
 sudo ufw allow 80/tcp
-sudo ufw allow 443/tcp
 
 # Deny all other incoming connections by default
 sudo ufw default deny incoming
@@ -147,36 +149,59 @@ sudo ufw default allow outgoing
 sudo ufw enable
 
 # Check status
-sudo ufw status verbose
+$ sudo ufw status verbose
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), deny (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22                         ALLOW IN    Anywhere
+80/tcp                     ALLOW IN    Anywhere
+22 (v6)                    ALLOW IN    Anywhere (v6)
+80/tcp (v6)                ALLOW IN    Anywhere (v6)
 ```
 
-2. To access NPM configuration panel, open an SSH tunnel.
+Now the outside world can only talk to sshd listening on port 22 and the proxy on port 80 (when running).
 
-```bash
-# From your local machine
-ssh -L 8081:localhost:81 adminname@the-server-IP
+As a second layer of protection, make sure that the proxy also only map ports: "80:80".
 
-# Then browse to http://localhost:8081
-```
+----
 
-3. On the NPM configuration panel:
+## Proxy access through NPM
 
-- r2r-api.cired.digital -> 7272
-- r2r-dashboard.cired.digital -> 7273
-- hatchet-dashboard.cired.digital -> 7274
-- cirdi.cired.digital -> 8080
-- cirdi-api.cired.digital -> 7277
+How it works:
 
-4. Update the DNS zone file on Gandi so that all these point to the server IP
+Instead of http://cired.digital:7277 we will access http://monitoring.cired.digital:80
+and let the proxy forward this to the container monitoring on port 7277.
 
-5. Use compose.override.yaml to open ports on localhost: for development
+1. Create A records the DNS zone file on Gandi to create one domain for each service,
+ and point them to the server IP
+
+2. Configure the proxy via the NPM configuration panel:
+
+- cired.digital -> http//:frontend:80
+- www.cired.digital -> http//:frontend:80
+- cirdi.cired.digital -> http//:frontend:80
+- monitoring.cired.digital -> http://monitoring:7277
+- r2r-api.cired.digital -> http://r2r:7272
+- r2r-dashboard.cired.digital -> http://r2r-dashboard:7273
+
+It is recommended to access the NPM configuration panel via an SSH tunnel from your local machine
+`ssh -L 8081:localhost:81 adminname@the-server-IP` then browse to `http://localhost:8081`
+
+3. Use compose.override.yaml to open ports on localhost: for development
 
 - Gitignore it so that it is not picked up in prod.
 - Version a .template so that devs can conveniently make their own local copy.
 
+----
+
 ## Hardening hints
 
-- Pin images versions
+- Use https:// requires € to purchase a certificate, or move domain to a registrar compatible with Let's Encrypt (meaning: not Gandi).
+- Pin container images versions
 - Keep all *.env and secrets/* in .gitignore and .dockerignore.
 - Rotate DB, MinIO and RabbitMQ passwords on a schedule (30–90 days is typical).
 - Enforce TLS everywhere once passwords are no longer default.

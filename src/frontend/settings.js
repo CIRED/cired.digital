@@ -22,8 +22,8 @@ const allSettings = {
       ]
     },
     prod: {
-      apiUrl: "https://r2r-api.cired.digital",
-      feedbackUrl: "https://monitoring.cired.digital",
+      apiUrl: "http://r2r-api.cired.digital",
+      feedbackUrl: "http://monitoring.cired.digital",
       debugMode: false,
       chunkLimit: 10,
       searchStrategy: "vanilla",
