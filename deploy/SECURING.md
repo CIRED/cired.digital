@@ -130,9 +130,11 @@ No authentication failures? You’re good.
 
 ----
 
-## Firewall everything by default
+## Firewall
 
-After SSHing into the server:
+First layer of protection: set a firewall on the VPS provider that only let traffic to ports 22 and 80 come in.
+
+Second layer of protection: SSH into the server and activate `ufw` rules to the same effect:
 
 ```bash
 # Allow SSH and HTTP
@@ -163,9 +165,9 @@ To                         Action      From
 80/tcp (v6)                ALLOW IN    Anywhere (v6)
 ```
 
-Now the outside world can only talk to sshd listening on port 22 and the proxy on port 80 (when running).
+As a third layer of protection, ensure that in the compose.yaml file, only the proxy map ports, and it only maps "80:80" and "81:81" (for convenience).
 
-As a second layer of protection, make sure that the proxy also only map ports: "80:80".
+Note: If we used HTTPS we would also let port 443 in, but we don't.
 
 ----
 
