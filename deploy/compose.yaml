@@ -212,9 +212,6 @@ services:
     volumes:
       - hatchet_certs:/hatchet/certs
       - hatchet_config:/hatchet/config
-    # For prod, firewall 7274 and let NPM handle
-    ports:
-      - "7274:80"
     command: sh ./entrypoint.sh --config /hatchet/config
     restart: on-failure
 
@@ -239,8 +236,6 @@ services:
     image: docker.io/ragtoriches/unst-prod:latest
     networks:
       - internal
-    expose:
-      - 7275
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:7275/health"]
       interval: 10s
@@ -251,8 +246,6 @@ services:
     image: docker.io/ragtoriches/cluster-prod
     networks:
       - internal
-    expose:
-      - 7276
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:7276/health"]
       interval: 10s
@@ -267,9 +260,6 @@ services:
     networks:
       - internal
       - npm_network
-    # For prod, firewall 7272 and let NPM handle
-    ports:
-      - "7272:7272"
     env_file:
       - ${ENV_DIR:?ENV_DIR not set}/r2r-full.env
     healthcheck:
@@ -308,9 +298,6 @@ services:
     networks:
     - internal
     - npm_network
-    # For prod, firewall 7273 and let NPM handle
-    ports:
-      - "7273:3000"
 
   #
   # Our app
@@ -320,23 +307,15 @@ services:
       context: ../src/analytics
     networks:
       - npm_network
-    # For prod, firewall 7277 and let NPM handle
-    ports:
-      - "7277:7277"
     volumes:
-      - ../src/analytics/monitor.py:/app/monitor.py
       - ../reports/analytics-logs:/app/data/logs
     restart: unless-stopped
-    command: uvicorn monitor:app --host 0.0.0.0 --port 7277 --reload
+    command: uvicorn monitor:app --host 0.0.0.0 --port 7277
 
   frontend:
     image: nginx:alpine
     networks:
       - npm_network
-    # For dev, access http://localhost:8080.
-    # For prod, firewall 8080 and let NPM handle
-    ports:
-      - "8080:80"
     volumes:
       - ../src/frontend:/usr/share/nginx/html:ro
 
@@ -348,11 +327,9 @@ services:
     restart: unless-stopped
     networks:
       - npm_network
-    # For prod, firewall everything but ports 80, 81, 443.
     ports:
       - "80:80"     # HTTP traffic
       - "443:443"   # HTTPS traffic
-      - "81:81"     # NPM Admin interface
     volumes:
       - npm_data:/data
       - npm_ssl:/etc/letsencrypt

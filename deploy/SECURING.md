@@ -128,16 +128,14 @@ curl -u minioadmin:<newPw> http://localhost:9000/minio/health/ready
 
 No authentication failures? You’re good.
 
-## Firewall everything except the public proxy
+## Firewall everything except 80 and 443
 
-- Needed because we keep ports: entries in compose.yaml for dev.
-- Change the NPM Admin password !!!
+1. After SSHing into the server:
 
-```
+```bash
 # Allow HTTP(S) and NPM Admin UI
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
-sudo ufw allow 81/tcp  # Optionally restrict this
 
 # Deny all other incoming connections by default
 sudo ufw default deny incoming
@@ -151,6 +149,30 @@ sudo ufw enable
 # Check status
 sudo ufw status verbose
 ```
+
+2. To access NPM configuration panel, open an SSH tunnel.
+
+```bash
+# From your local machine
+ssh -L 8081:localhost:81 adminname@the-server-IP
+
+# Then browse to http://localhost:8081
+```
+
+3. On the NPM configuration panel:
+
+- r2r-api.cired.digital -> 7272
+- r2r-dashboard.cired.digital -> 7273
+- hatchet-dashboard.cired.digital -> 7274
+- cirdi.cired.digital -> 8080
+- cirdi-api.cired.digital -> 7277
+
+4. Update the DNS zone file on Gandi so that all these point to the server IP
+
+5. Use compose.override.yaml to open ports on localhost: for development
+
+- Gitignore it so that it is not picked up in prod.
+- Version a .template so that devs can conveniently make their own local copy.
 
 ## Hardening hints
 
