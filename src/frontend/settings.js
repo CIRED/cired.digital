@@ -23,7 +23,7 @@ const allSettings = {
     },
     prod: {
       apiUrl: "http://r2r-api.cired.digital",
-      feedbackUrl: "http://monitoring.cired.digital",
+      feedbackUrl: "http://cirdi-api.cired.digital",
       debugMode: false,
       chunkLimit: 10,
       searchStrategy: "vanilla",
