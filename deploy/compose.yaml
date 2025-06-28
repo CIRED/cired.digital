@@ -1,4 +1,22 @@
-# Change: Prefix volumes names
+# Compose file for cired.digital
+#
+# Changes:
+# - Replace ./env by ${ENV_DIR:?ENV_DIR not set}
+#     Define ENV_DIR in .env to point where the secrets are stored
+#     Fails with explicit error message if not set
+#     It can be specified on the command line
+#     Allows to store secrets out of repo
+#     Allows to use upstream configuration for testing
+# - Prefix volumes names
+# - Define fully qualified images
+#     Schema is <registry>/<namespace>/<repository>:tag
+#     This is more secure against hijacking
+# - Always run postgres (delete profile section)
+# - Add nginx-proxy-manager (NPM) to dispatch incoming connexions
+# - Partition in two networks:
+#     internal    for services that need to talk to each other
+#     npm_network for services that need to talk to outside, via NPM
+#
 
 volumes:
   hatchet_certs:
@@ -17,30 +35,32 @@ volumes:
     name: cidir2r_minio_data
   postgres_data:
     name: cidir2r_postgres_data
+  npm_data:
+    name: cidir2r_npm_data
+  npm_ssl:
+    name: cidir2r_npm_ssl
 
-# Changes:
-# - Replace ./env by ${ENV_DIR:?ENV_DIR not set}
-#     Define ENV_DIR in .env to point where the secrets are stored
-#     Fails with explicit error message if not set
-#     It can be specified on the command line
-#     Allows to store secrets out of repo
-#     Allows to use upstream configuration for testing
-# - Prefix volumes names
-# - Define fully qualified images
-#     Schema is <registry>/<namespace>/<repository>:tag
-#     This is more secure against hijacking
-# - Delete profile postgres to include it by default
+networks:
+  internal:
+    internal: true
+    name: cidir2r_internal_network
+  npm_network:
+    name: cidir2r_npm_network
 
 services:
+  #
+  # Database services
+  #
   postgres:
     image: docker.io/pgvector/pgvector:pg16
+    networks:
+      - internal
+    expose:
+      - 5432
     env_file:
       - ${ENV_DIR:?ENV_DIR not set}/postgres.env
     volumes:
       - postgres_data:/var/lib/postgresql/data
-# Security risk
-#    ports:
-#      - "5432:5432"
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 10s
@@ -55,28 +75,10 @@ services:
       -c log_connections=on
       -c log_disconnections=on
 
-  # Not used by default
-  minio:
-    image: docker.io/minio/minio
-    profiles: [minio]
-    env_file:
-      - ${ENV_DIR:?ENV_DIR not set}/minio.env
-    volumes:
-      - minio_data:/data
-# Security risk
-#    ports:
-#      - "9000:9000"
-#      - "9001:9001"
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    restart: on-failure
-    command: server /data --console-address ":9001"
-
   hatchet-postgres:
     image: docker.io/library/postgres:latest
+    networks:
+    - internal
     env_file:
       - ${ENV_DIR:?ENV_DIR not set}/hatchet.env
     volumes:
@@ -87,12 +89,44 @@ services:
       timeout: 5s
       retries: 5
 
+  #
+  # Storage service
+  #
+  minio:
+    image: docker.io/minio/minio
+    profiles:
+    - minio
+    networks:
+    - internal
+    expose:
+    - 9000
+    # We do not expose the console port 9001 since we do not use it
+    env_file:
+      - ${ENV_DIR:?ENV_DIR not set}/minio.env
+    volumes:
+      - minio_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: on-failure
+    command: server /data --console-address ":9001"
+
+  #
+  # Message Queue
+  #
   hatchet-rabbitmq:
     image: docker.io/library/rabbitmq:3-management
     hostname: "hatchet-rabbitmq"
-    ports:
-      - "5673:5672"
-      - "15673:15672"
+    networks:
+    - internal
+#    ports:
+#      - "5673:5672"
+#      - "15673:15672"
+    expose:
+    - 5672
+    - 15672
     env_file:
       - ${ENV_DIR:?ENV_DIR not set}/hatchet.env
     volumes:
@@ -104,16 +138,23 @@ services:
       timeout: 10s
       retries: 5
 
+  #
+  # Tasks manager
+  #
   hatchet-create-db:
     image: docker.io/library/postgres:latest
-    command: sh /scripts/create-hatchet-db.sh
+    networks:
+    - internal
     volumes:
       - ./scripts:/scripts
     env_file:
       - ${ENV_DIR:?ENV_DIR not set}/hatchet.env
+    command: sh /scripts/create-hatchet-db.sh
 
   hatchet-migration:
     image: ghcr.io/hatchet-dev/hatchet/hatchet-migrate:v0.53.15
+    networks:
+    - internal
     env_file:
       - ${ENV_DIR:?ENV_DIR not set}/hatchet.env
     depends_on:
@@ -122,7 +163,8 @@ services:
 
   hatchet-setup-config:
     image: ghcr.io/hatchet-dev/hatchet/hatchet-admin:v0.53.15
-    command: /hatchet/hatchet-admin quickstart --skip certs --generated-config-dir /hatchet/config --overwrite=false
+    networks:
+    - internal
     env_file:
       - ${ENV_DIR:?ENV_DIR not set}/hatchet.env
     volumes:
@@ -133,16 +175,17 @@ services:
         condition: service_completed_successfully
       hatchet-rabbitmq:
         condition: service_healthy
+    command: /hatchet/hatchet-admin quickstart --skip certs --generated-config-dir /hatchet/config --overwrite=false
 
   hatchet-engine:
     image: ghcr.io/hatchet-dev/hatchet/hatchet-engine:v0.53.15
-    command: /hatchet/hatchet-engine --config /hatchet/config
-    restart: on-failure
+    networks:
+    - internal
+    expose:
+      - 7077
     depends_on:
       hatchet-setup-config:
         condition: service_completed_successfully
-    ports:
-      - "7077:7077"
     env_file:
       - ${ENV_DIR:?ENV_DIR not set}/hatchet.env
     volumes:
@@ -153,11 +196,14 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    command: /hatchet/hatchet-engine --config /hatchet/config
+    restart: on-failure
 
   hatchet-dashboard:
     image: ghcr.io/hatchet-dev/hatchet/hatchet-dashboard:v0.53.15
-    command: sh ./entrypoint.sh --config /hatchet/config
-    restart: on-failure
+    networks:
+    - internal
+    - npm_network
     depends_on:
       hatchet-setup-config:
         condition: service_completed_successfully
@@ -166,12 +212,13 @@ services:
     volumes:
       - hatchet_certs:/hatchet/certs
       - hatchet_config:/hatchet/config
-    ports:
-      - "7274:80"
+    command: sh ./entrypoint.sh --config /hatchet/config
+    restart: on-failure
 
   setup-token:
     image: ghcr.io/hatchet-dev/hatchet/hatchet-admin:v0.53.15
-    command: sh /scripts/setup-token.sh
+    networks:
+    - internal
     volumes:
       - ./scripts:/scripts
       - hatchet_certs:/hatchet/certs
@@ -180,9 +227,15 @@ services:
     depends_on:
       hatchet-setup-config:
         condition: service_completed_successfully
+    command: sh /scripts/setup-token.sh
 
+  #
+  # AI/ML tools
+  #
   unstructured:
     image: docker.io/ragtoriches/unst-prod:latest
+    networks:
+      - internal
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:7275/health"]
       interval: 10s
@@ -191,27 +244,29 @@ services:
 
   graph_clustering:
     image: docker.io/ragtoriches/cluster-prod
-    ports:
-      - "7276:7276"
+    networks:
+      - internal
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:7276/health"]
       interval: 10s
       timeout: 5s
       retries: 5
 
+  #
+  # RAG engine
+  #
   r2r:
     image: docker.io/sciphiai/r2r:latest
-    ports:
-      - "7272:7272"
+    networks:
+      - internal
+      - npm_network
     env_file:
       - ${ENV_DIR:?ENV_DIR not set}/r2r-full.env
-    command: sh /scripts/start-r2r.sh
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:7272/v3/health"]
       interval: 6s
       timeout: 5s
       retries: 5
-    restart: on-failure
     volumes:
       - ./user_configs:/app/user_configs
       - hatchet_api_key:/hatchet_api_key:ro
@@ -220,6 +275,11 @@ services:
       # Broken on Linux
       # - host.docker.internal:host-gateway
       - host.docker.internal:[127.0.0.1]
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
     depends_on:
       setup-token:
         condition: service_completed_successfully
@@ -228,34 +288,56 @@ services:
       graph_clustering:
         condition: service_healthy
     # Logging stack removed in May 2025
-    logging:
-      driver: json-file
-      options:
-        max-size: "10m"
-        max-file: "5"
+    command: sh /scripts/start-r2r.sh
+    restart: on-failure
 
   r2r-dashboard:
     image: docker.io/sciphiai/r2r-dashboard:1.0.3
     env_file:
       - ${ENV_DIR:?ENV_DIR not set}/r2r-dashboard.env
-    ports:
-      - "7273:3000"
+    networks:
+    - internal
+    - npm_network
 
-  # Our analytics
-  feedback:
+  #
+  # Our app
+  #
+  monitoring:
     build:
       context: ../src/analytics
-    ports:
-      - "7275:7275"
+    networks:
+      - npm_network
     volumes:
-      - ../src/analytics/monitor.py:/app/monitor.py
       - ../reports/analytics-logs:/app/data/logs
-    command: uvicorn monitor:app --host 0.0.0.0 --port 7275 --reload
     restart: unless-stopped
+    command: uvicorn monitor:app --host 0.0.0.0 --port 7277
 
   frontend:
     image: nginx:alpine
-    ports:
-      - "80:80"
+    networks:
+      - npm_network
     volumes:
       - ../src/frontend:/usr/share/nginx/html:ro
+
+  #
+  # Proxy for incoming connection
+  #
+  nginx-proxy-manager:
+    image: docker.io/jc21/nginx-proxy-manager:latest
+    restart: unless-stopped
+    networks:
+      - npm_network
+    ports:
+      - "80:80"     # HTTP traffic
+      - "443:443"   # HTTPS traffic
+    volumes:
+      - npm_data:/data
+      - npm_ssl:/etc/letsencrypt
+    environment:
+      DB_SQLITE_FILE: "/data/database.sqlite"
+      DISABLE_IPV6: 'true'
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:81/api/nginx/proxy-hosts"]
+      interval: 30s
+      timeout: 10s
+      retries: 5

@@ -14,7 +14,7 @@ RUN pip install fastapi uvicorn
 COPY *.py .
 COPY templates/ templates/
 
-EXPOSE 7275
+EXPOSE 7277
 
 # Entrypoint overridden by docker-compose for live reload
-CMD ["uvicorn", "monitor:app", "--host", "0.0.0.0", "--port", "7275"]
+CMD ["uvicorn", "monitor:app", "--host", "0.0.0.0", "--port", "7277"]
