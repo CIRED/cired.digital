@@ -477,11 +477,8 @@ div#profile-footer {
 
 @media (max-width: 400px) {
   #config-panel,
+  #help-panel,
   #onboarding-panel {
-    width: 100%;
-  }
-  
-  #help-panel {
     width: 100%;
   }
 }
