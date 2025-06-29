@@ -472,6 +472,18 @@ div#profile-footer {
 }
 
 /* ==========================================
+   MOBILE RESPONSIVE STYLES
+   ========================================== */
+
+@media (max-width: 400px) {
+  #config-panel,
+  #help-panel,
+  #onboarding-panel {
+    width: 100%;
+  }
+}
+
+/* ==========================================
    BUTTON STYLES
    ========================================== */
 
