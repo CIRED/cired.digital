@@ -11,7 +11,7 @@ const onboardingHTML = `
     <ol>
         <li id="onboarding-stage-question">
             Posez une première question à Cirdi. Le champ de saisie est en haut au centre,
-            le bouton bleu <button id="image-send-btn" class="primary-button">➤</button> lance la requête.
+            le bouton <button class="gost-button">➤</button> lance la requête.
             <button id="focus-input">Aller au champ de saisie</button>.
             <br />
             Première réponse: <span id="question-status">En attente.</span>
