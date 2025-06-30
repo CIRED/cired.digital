@@ -11,6 +11,7 @@ let statusInterval = null;
 let feedbackInterval = null;
 let currentArticleIndex = -1;
 const POLL_INTERVAL_MS = 1000;
+const MAX_INPUT_HEIGHT = 120;
 
 // ==========================================
 // DOM ELEMENTS
@@ -84,7 +85,7 @@ function setupEventListeners() {
         // Auto-resize the input field
         this.style.height = 'auto';
         // But no more than 120px tall
-        this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+        this.style.height = Math.min(this.scrollHeight, MAX_INPUT_HEIGHT) + 'px';
     });
 
     // Update backend status display when URL changes
