@@ -43,6 +43,9 @@ from intake.utils import get_catalog_file, get_catalog_publications
 
 setup_logging()
 
+# Flag pour correction automatique des extensions sans prompt
+AUTO_FIX = False
+
 # Create directories if they don't exist
 DOCUMENTS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -113,9 +116,12 @@ def verify_existing_files() -> None:
             mismatch["content_type"],
         )
     if mismatches:
-        response = input(
-            "\nDetected incorrect extensions. Do you want to automatically correct them? [y/N]: "
-        )
+        if AUTO_FIX:
+            response = "y"
+        else:
+            response = input(
+                "\nDetected incorrect extensions. Do you want to automatically correct them? [y/N]: "
+            )
         if response.lower() in ("y", "yes"):
             for mismatch in mismatches:
                 old_path = DOCUMENTS_DIR / mismatch["file"]
@@ -240,6 +246,11 @@ def setup_argument_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Verify file size limits for existing downloads",
     )
+    parser.add_argument(
+        "--auto-fix",
+        action="store_true",
+        help="Automatically correct file extensions without prompting",
+    )
     return parser
 
 
@@ -300,6 +311,8 @@ def main() -> None:
     """
     parser = setup_argument_parser()
     args = parser.parse_args()
+    global AUTO_FIX
+    AUTO_FIX = args.auto_fix
 
     log_levels = {
         "debug": logging.DEBUG,

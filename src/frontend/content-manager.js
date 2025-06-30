@@ -198,16 +198,16 @@ function fallbackCopyToClipboard(text) {
 }
 
 function addCarouselControls() {
-    const carouselDiv = document.querySelector('.carousel-navigation');
-    if (!carouselDiv) return;
-    carouselDiv.removeAttribute('hidden');
-    carouselDiv.innerHTML = `
+    const carouselNav = document.querySelector('.carousel-navigation');
+    if (!carouselNav) return;
+    carouselNav.removeAttribute('hidden');
+    carouselNav.innerHTML = `
         <button class="carousel-btn carousel-prev" title="Article précédent">←</button>
         <span class="carousel-indicator"></span>
         <button class="carousel-btn carousel-next" title="Article suivant">→</button>
     `;
-    const prevBtn = carouselDiv.querySelector('.carousel-prev');
-    const nextBtn = carouselDiv.querySelector('.carousel-next');
+    const prevBtn = carouselNav.querySelector('.carousel-prev');
+    const nextBtn = carouselNav.querySelector('.carousel-next');
     prevBtn.addEventListener('click', () => navigateToArticle('prev'));
     nextBtn.addEventListener('click', () => navigateToArticle('next'));
 }

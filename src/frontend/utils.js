@@ -58,6 +58,7 @@ const MonitorEventType = {
     SESSION_END: "sessionEnd"
 };
 
+// Note: Tried sendBeacon a blob instead of fetch, but it didn't work as expected
 async function monitor(eventType, payload) {
     if (isPrivacyModeEnabled()) return;
     if (!Object.values(MonitorEventType).includes(eventType)) {
@@ -78,7 +79,7 @@ async function monitor(eventType, payload) {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         });
-        debugLog('Monitor event sent', { eventType, status: response.status, ok: response.ok });
+        debugLog('[MONITOR] event sent', { eventType, status: response.status, ok: response.ok });
     } catch (error) {
         console.error('Error sending monitor event:', error);
     }

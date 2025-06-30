@@ -11,6 +11,7 @@ let statusInterval = null;
 let feedbackInterval = null;
 let currentArticleIndex = -1;
 const POLL_INTERVAL_MS = 1000;
+const MAX_INPUT_HEIGHT = 120;
 
 // ==========================================
 // DOM ELEMENTS
@@ -84,7 +85,7 @@ function setupEventListeners() {
         // Auto-resize the input field
         this.style.height = 'auto';
         // But no more than 120px tall
-        this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+        this.style.height = Math.min(this.scrollHeight, MAX_INPUT_HEIGHT) + 'px';
     });
 
     // Update backend status display when URL changes
@@ -126,38 +127,10 @@ function setupEventListeners() {
     initializePrivacyMode();
     initializeSession();
 
-    window.addEventListener('beforeunload', () => {
-        if (!isPrivacyModeEnabled() && sessionStartTime) {
-            const sessionDuration = Date.now() - sessionStartTime;
-            monitor(MonitorEventType.SESSION_END, {
-                sessionId: sessionId,
-                endTime: new Date().toISOString(),
-                sessionDuration: sessionDuration,
-                endReason: 'beforeunload',
-                userAgent: navigator.userAgent
-            });
-        }
-    });
-
-    window.addEventListener('unload', () => {
-        if (!isPrivacyModeEnabled() && sessionStartTime) {
-            const analyticsEndpoint = feedbackUrlInput.value.replace(/\/$/, '') + '/v1/monitor';
-            const sessionEndData = {
-                sessionId: sessionId,
-                timestamp: new Date().toISOString().replace(/[^a-zA-Z0-9]/g, ''),
-                eventType: 'sessionEnd',
-                payload: {
-                    sessionId: sessionId,
-                    endTime: new Date().toISOString(),
-                    sessionDuration: Date.now() - sessionStartTime,
-                    endReason: 'unload'
-                }
-            };
-
-            if (navigator.sendBeacon) {
-                navigator.sendBeacon(analyticsEndpoint, JSON.stringify(sessionEndData));
-            }
-        }
+    document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") {
+        logSessionEnd();
+    }
     });
 
     document.getElementById('view-analytics-link').addEventListener('click', function(e) {
@@ -178,6 +151,19 @@ function handleDebugModeToggle() {
     // Update stats visibility in the UI
     if (typeof updateStatsVisibility === "function") updateStatsVisibility();
 }
+
+function logSessionEnd() {
+    if (!isPrivacyModeEnabled() && sessionStartTime) {
+        monitor(MonitorEventType.SESSION_END, {
+            sessionId: sessionId,
+            endTime: new Date().toISOString(),
+            sessionDuration: Date.now() - sessionStartTime,
+            endReason: 'visibility_change',
+            userAgent: navigator.userAgent
+        });
+    }
+};
+
 
 // ==========================================
 // PRIVACY MODE FUNCTIONALITY

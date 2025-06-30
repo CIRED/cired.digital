@@ -3,7 +3,7 @@
 
 const PROFILE_STORAGE_KEY = 'user-profile';
 
-const profilePanel = document.getElementById('profile-panel');
+const profileDialog = document.getElementById('profile-dialog');
 const profileBtn = document.getElementById('profile-btn');
 const profileCloseBtn = document.getElementById('profile-close-btn');
 const saveProfileBtn = document.getElementById('save-profile-btn');
@@ -57,7 +57,7 @@ function saveProfile(profileData) {
         localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(profile));
 
         debugLog('Profile saved', profile);
-        updateProfilePanel(); // Update the UI to reflect the new profile
+        updateProfileDialog(); // Update the UI to reflect the new profile
         monitor(MonitorEventType.USER_PROFILE, {
             action: 'profile_updated',
             profile: profile
@@ -78,7 +78,7 @@ function clearProfile() {
         localStorage.removeItem(PROFILE_STORAGE_KEY);
         localStorage.removeItem(PROFILE_ONBOARDED_KEY);
 
-        updateProfilePanel(); // Update the UI to reflect the cleared profile
+        updateProfileDialog(); // Update the UI to reflect the cleared profile
         debugLog('Profile cleared');
         return true;
     } catch (error) {
@@ -93,16 +93,16 @@ function clearProfile() {
 // ==========================================
 
 
-function showProfilePanel() {
-    if (profilePanel) {
-        updateProfilePanel();
-        profilePanel.hidden = false;
+function showProfileDialog() {
+    if (profileDialog) {
+        updateProfileDialog();
+        profileDialog.hidden = false;
     }
 }
 
-function hideProfilePanel() {
-    if (profilePanel) {
-        profilePanel.hidden = true;
+function hideProfileDialog() {
+    if (profileDialog) {
+        profileDialog.hidden = true;
     }
 }
 
@@ -121,7 +121,7 @@ function handleSaveProfile() {
     const savedProfile = saveProfile(profileData);
     if (savedProfile) {
         onProfileCompleted();
-        hideProfilePanel();
+        hideProfileDialog();
     }
 }
 
@@ -154,7 +154,7 @@ function clearProfileValidationError() {
 
 function handleOpenOnboarding() {
     debugLog('Opening onboarding guide');
-    hideProfilePanel();
+    hideProfileDialog();
     showOnboardingPanel();
 }
 
@@ -166,11 +166,11 @@ function initializeProfile() {
     debugLog('Initializing profile system');
 
     if (profileBtn) {
-        profileBtn.addEventListener('click', showProfilePanel);
+        profileBtn.addEventListener('click', showProfileDialog);
     }
 
     if (profileCloseBtn) {
-        profileCloseBtn.addEventListener('click', hideProfilePanel);
+        profileCloseBtn.addEventListener('click', hideProfileDialog);
     }
 
     if (saveProfileBtn) {

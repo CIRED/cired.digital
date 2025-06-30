@@ -1,7 +1,7 @@
 // profile-ui.js
 
 
-document.getElementById("profile-panel").innerHTML = `
+document.getElementById("profile-dialog").innerHTML = `
   <header>
     <h2>Renseigner mon Profil</h2>
     <button id="profile-close-btn" class="ghost-button">✖️</button>
@@ -73,7 +73,7 @@ document.getElementById("profile-panel").innerHTML = `
 
 
 /**
- * Updates the profile panel UI with the user's profile data from localStorage.
+ * Updates the profile dialog UI with the user's profile data from localStorage.
  *
  * - Displays profile information in the element with ID 'profile-data-display'.
  * - Updates the label of the save-profile button depending on whether a profile ID exists.
@@ -82,7 +82,7 @@ document.getElementById("profile-panel").innerHTML = `
  *
  * Relies on the constants PROFILE_STORAGE_KEY and PROFILE_ONBOARDED_KEY being defined in the scope.
  */
-function updateProfilePanel() {
+function updateProfileDialog() {
 
     const display = document.getElementById('profile-data-display');
     if (!display) return;
