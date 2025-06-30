@@ -1,10 +1,10 @@
 document.getElementById("config-panel").innerHTML = `
-  <div id="config-header">
-    <button id="config-close-btn" class="close-button">✖️</button>
+  <header>
+    <button id="config-close-btn" class="ghost-button">✖️</button>
     <h2>Cirdi settings</h2>
-  </div>
+  </header>
 
-  <div class="settings-grid" id="settings-container">
+  <main class="settings-grid" id="settings-container">
 
     <div class="form-group">
       <div class="label-with-status">
@@ -69,14 +69,7 @@ document.getElementById("config-panel").innerHTML = `
       </select>
     </div>
 
-    <div class="checkbox-container web-search-container">
-      <label class="checkbox-label">
-        <input type="checkbox" id="include-web-search" class="checkbox-input"  disabled>
-        <span class="web-search-text"><strong>Recherche Web</strong> – Inclure les résultats web (0.1 cent par question)</span>
-      </label>
-    </div>
-
-    <div class="checkbox-container privacy-container">
+    <div class="form-group">
       <label class="checkbox-label">
         <input type="checkbox" id="privacy-mode" class="checkbox-input">
         <span class="privacy-text"><strong>Privacy Mode</strong> – No logging</span>
@@ -90,12 +83,19 @@ document.getElementById("config-panel").innerHTML = `
       </div>
     </div>
 
-    <div class="checkbox-container debug-container">
+    <div class="form-group">
       <label class="checkbox-label">
         <input type="checkbox" id="debug-mode" class="checkbox-input">
         <span class="debug-text"><strong>Debug Mode</strong> – Show response logs in console</span>
       </label>
     </div>
 
-  </div> <!-- id="settings-container"-->
+    <div class="form-group">
+      <label class="checkbox-label">
+        <input type="checkbox" id="include-web-search" class="checkbox-input"  disabled>
+        <span class="web-search-text"><strong>Recherche Web</strong> – Inclure les résultats web (0.1 cent par question)</span>
+      </label>
+    </div>
+
+    </main> <!-- id="settings-container"-->
 `

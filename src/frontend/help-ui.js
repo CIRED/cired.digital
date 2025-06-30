@@ -1,10 +1,10 @@
 document.getElementById("help-panel").innerHTML = `
-  <div id="help-header">
+  <header>
     <h2>Mode d'emploi - assistant documentaire Cirdi</h2>
-    <button id="help-close-btn" class="close-button">✖️</button>
-  </div>
+    <button id="help-close-btn" class="ghost-button">✖️</button>
+  </header>
 
-  <div id="help-content">
+  <main id="help-content">
 
   <p>
     Cet outil a été conçu pour vous aider à retrouver rapidement des informations issues des publications de notre centre de recherche.
@@ -98,14 +98,13 @@ document.getElementById("help-panel").innerHTML = `
     </li>
   </ul>
 </section>
+</main>
 
-<section>
+<footer>
   <h3>Contact</h3>
   <p>
     Pour toute question ou suggestion, n’hésitez pas à nous contacter :
     <a href="mailto:minh.ha-duong@cnrs.fr">minh.ha-duong@cnrs.fr</a>
   </p>
-</section>
-
-</div>
+</footer>
 `;

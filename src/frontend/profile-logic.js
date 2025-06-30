@@ -96,13 +96,13 @@ function clearProfile() {
 function showProfilePanel() {
     if (profilePanel) {
         updateProfilePanel();
-        profilePanel.classList.remove('hidden');
+        profilePanel.hidden = false;
     }
 }
 
 function hideProfilePanel() {
     if (profilePanel) {
-        profilePanel.classList.add('hidden');
+        profilePanel.hidden = true;
     }
 }
 
