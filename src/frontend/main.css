@@ -181,7 +181,7 @@ img {
   text-align: center;
 }
 
-.carousel-navigation {
+nav.carousel-navigation {
   display: flex;
   justify-content: flex-end;
   align-items: center;
