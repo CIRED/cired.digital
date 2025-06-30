@@ -293,3 +293,12 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
+
+  # Temporary for clean removal
+  unstructured:
+    image: docker.io/ragtoriches/unst-prod:latest
+    profiles: ["disabled"]
+
+  graph_clustering:
+    image: docker.io/ragtoriches/cluster-prod
+    profiles: ["disabled"]
