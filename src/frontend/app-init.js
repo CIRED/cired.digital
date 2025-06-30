@@ -127,38 +127,10 @@ function setupEventListeners() {
     initializePrivacyMode();
     initializeSession();
 
-    window.addEventListener('beforeunload', () => {
-        if (!isPrivacyModeEnabled() && sessionStartTime) {
-            const sessionDuration = Date.now() - sessionStartTime;
-            monitor(MonitorEventType.SESSION_END, {
-                sessionId: sessionId,
-                endTime: new Date().toISOString(),
-                sessionDuration: sessionDuration,
-                endReason: 'beforeunload',
-                userAgent: navigator.userAgent
-            });
-        }
-    });
-
-    window.addEventListener('unload', () => {
-        if (!isPrivacyModeEnabled() && sessionStartTime) {
-            const analyticsEndpoint = feedbackUrlInput.value.replace(/\/$/, '') + '/v1/monitor';
-            const sessionEndData = {
-                sessionId: sessionId,
-                timestamp: new Date().toISOString().replace(/[^a-zA-Z0-9]/g, ''),
-                eventType: 'sessionEnd',
-                payload: {
-                    sessionId: sessionId,
-                    endTime: new Date().toISOString(),
-                    sessionDuration: Date.now() - sessionStartTime,
-                    endReason: 'unload'
-                }
-            };
-
-            if (navigator.sendBeacon) {
-                navigator.sendBeacon(analyticsEndpoint, JSON.stringify(sessionEndData));
-            }
-        }
+    document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") {
+        logSessionEnd();
+    }
     });
 
     document.getElementById('view-analytics-link').addEventListener('click', function(e) {
@@ -179,6 +151,19 @@ function handleDebugModeToggle() {
     // Update stats visibility in the UI
     if (typeof updateStatsVisibility === "function") updateStatsVisibility();
 }
+
+function logSessionEnd() {
+    if (!isPrivacyModeEnabled() && sessionStartTime) {
+        monitor(MonitorEventType.SESSION_END, {
+            sessionId: sessionId,
+            endTime: new Date().toISOString(),
+            sessionDuration: Date.now() - sessionStartTime,
+            endReason: 'visibility_change',
+            userAgent: navigator.userAgent
+        });
+    }
+};
+
 
 // ==========================================
 // PRIVACY MODE FUNCTIONALITY
