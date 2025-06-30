@@ -98,12 +98,9 @@ services:
     hostname: "hatchet-rabbitmq"
     networks:
     - internal
-#    ports:
-#      - "5673:5672"
-#      - "15673:15672"
     expose:
-    - 5672
-    - 15672
+      - 5672
+      - 15672
     env_file:
       - ${ENV_DIR:?ENV_DIR not set}/hatchet.env
     volumes:
@@ -114,6 +111,9 @@ services:
       interval: 10s
       timeout: 10s
       retries: 5
+    # For docker compose in non-Swarm mode
+    mem_limit: 512M
+    restart: unless-stopped
 
   #
   # Tasks manager
