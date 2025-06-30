@@ -4,13 +4,23 @@
 
 async function processInput() {
     if (!validateInput()) return;
-    
+
     const context = prepareQueryContext();
     try {
+        uiProcessingStart();
         const response = await executeQuery(context);
-        await renderResponse(response, context);
+        uiProcessingUpdate(response.duration);
+        finalResult = await processStream(response);
+        monitor(MonitorEventType.RESPONSE, {
+            queryId: context.queryId,
+            response: finalResult,
+            processingTime: response.duration,
+            timestamp: new Date().toISOString()
+        });
+        insertArticle(context.config, context.requestBody, finalResult, context.queryId, response.duration);
     } finally {
-        finalizeUI();
+        uiProcessingEnd();
+        debugLog('Message processing completed');
     }
 }
 
@@ -24,61 +34,39 @@ function prepareQueryContext() {
     const queryId = 'query_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
     const config = getConfiguration();
     const requestBody = buildRequestBody(query, config);
-    
+
     debugLog('Starting message send process', { query, queryId, isLoading });
     debugLog('Configuration retrieved', config);
     debugLog('Request body built:', requestBody);
-    
+
     return { query, queryId, config, requestBody };
 }
 
 async function executeQuery(context) {
-    animateWaitStart();
-    
     monitor(MonitorEventType.REQUEST, {
         queryId: context.queryId,
         query: context.query,
         config: context.config,
         requestBody: context.requestBody
     });
-    
+
     try {
         const startTime = Date.now();
         const response = await makeApiRequest(context.config.apiUrl, context.requestBody);
         const duration = Date.now() - startTime;
-        
+
         debugLog('API request completed', {
             apiUrl: context.config.apiUrl,
             status: response.status,
             responseTime: `${duration}ms`,
         });
-        
+
         return { response, duration };
     } catch (err) {
         handleError(err);
         throw err;
     }
 }
-
-async function renderResponse(responseData, context) {
-    const data = await responseData.response.json();
-    debugLog('Raw server response', data);
-    
-    monitor(MonitorEventType.RESPONSE, {
-        queryId: context.queryId,
-        response: data,
-        processingTime: responseData.duration,
-        timestamp: new Date().toISOString()
-    });
-    
-    insertArticle(context.config, context.requestBody, data, context.queryId, responseData.duration);
-}
-
-function finalizeUI() {
-    animateWaitEnd();
-    debugLog('Message processing completed');
-}
-
 
 function resetMessageInput() {
     userInput.value = '';
@@ -111,7 +99,7 @@ function buildRequestBody(query, config) {
             model: config.model,
             temperature: config.temperature,
             max_tokens: config.maxTokens,
-            stream: false
+            stream: true
         },
         include_title_if_available: true,
         include_web_search: config.includeWebSearch,
