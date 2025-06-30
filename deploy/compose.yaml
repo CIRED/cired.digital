@@ -337,7 +337,7 @@ services:
       DB_SQLITE_FILE: "/data/database.sqlite"
       DISABLE_IPV6: 'true'
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:81/api/nginx/proxy-hosts"]
+      test: ["CMD", "curl", "-f", "http://localhost:81/"]
       interval: 30s
       timeout: 10s
       retries: 5
