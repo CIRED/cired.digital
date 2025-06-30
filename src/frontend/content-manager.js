@@ -1,6 +1,6 @@
- // ==========================================
- // ==========================================
- let fadeTimeout;
+// ==========================================
+// CONTENT MANAGER
+// ==========================================
 
 function addMain(content) {
     debugLog('Adding article to main content zone', { contentLength: content.length });
@@ -20,48 +20,63 @@ function addMainError(content) {
     messagesContainer.prepend(errorDiv);
 }
 
-function showTyping() {
-    debugLog('Showing typing indicator');
-    // Only add spinner if it doesn't already exist
+// ==========================================
+// ==========================================
+
+function uiProcessingStart() {
+    debugLog('Setting up the UI for processing state');
+
+    setLoadingState(true);
+    // Hide greeting and input help if they exist
+    const greetingDiv = document.getElementById('greeting');
+    if (greetingDiv) {
+        greetingDiv.style.display = 'none';
+    }
+    const inputHelpDiv = document.getElementById('input-help');
+    if (inputHelpDiv) {
+        inputHelpDiv.style.display = 'none';
+    }
+    // Hide the previous articles
+    messagesContainer.querySelectorAll('article').forEach(el => el.classList.add('seen'));
+
+    // Add the typing indicator if it doesn't already exist
     if (!document.getElementById('typing-indicator')) {
         const spinnerDiv = document.createElement('div');
         spinnerDiv.id = 'typing-indicator';
-        spinnerDiv.innerHTML = '<span class="typing-spinner">⟳</span>Recherche dans la base documentaire (compter 6-20s)…';
         mainDiv.appendChild(spinnerDiv);
+        spinnerDiv.innerHTML = '<div id="loading-message"><span class="typing-spinner">⟳</span>Recherche dans la base documentaire…</div>';
     }
 }
 
-function hideTyping() {
-    debugLog('Hiding typing indicator');
-    document.getElementById('typing-indicator')?.remove();
+function uiProcessingUpdate(duration) {
+    debugLog('Updating the UI with processing duration', { duration });
+
+    const statusDiv = document.getElementById("loading-message");
+    if (statusDiv) {
+        seconds = duration / 1000;
+        statusDiv.innerHTML = `<span class="typing-spinner-stopped">✔</span>Recherche documentaire terminée en ${seconds} secondes.`;
+    }
 }
 
-// ==========================================
-// ==========================================
+function uiProcessingEnd() {
+    debugLog('Finalizing the UI after processing');
 
-function animateWaitStart() {
-    // Fade out
-    setLoadingState(true);
-    messagesContainer.querySelectorAll('article, #greeting').forEach(el => el.classList.add('seen'));
-    fadeTimeout = setTimeout(() => {
-        // Remove from display flow
-        inputHelp.style.display = 'none';
-        Array.from(messagesContainer.children).forEach(child => {
-            child.style.display = 'none';
-        });
-        // Show spinner si toujours en attente
-        if (isLoading) {
-            showTyping();
+    // Keep the stream results in debug mode
+    if (typeof debugMode !== 'undefined' && debugMode) {
+        const statusDiv = document.getElementById("loading-message");
+        if (statusDiv) {
+            statusDiv.innerHTML = '<span class="typing-spinner-stopped">✔✔</span>Recherche et Génération terminées.';
         }
-    }, 3000);
-}
-
-function animateWaitEnd() {
-        clearTimeout(fadeTimeout);
-        hideTyping();
-        setLoadingState(false);
-        messagesContainer.querySelectorAll('article, #greeting').forEach(el => el.classList.remove('seen'));
-        userInput.focus();
+    } else {
+        // Remove the typing indicator
+        const spinnerDiv = document.getElementById('typing-indicator');
+        if (spinnerDiv) {
+            spinnerDiv.remove();
+        }
+    }
+    messagesContainer.querySelectorAll('article').forEach(el => el.classList.remove('seen'));
+    setLoadingState(false);
+    userInput.focus();
 }
 
 function setLoadingState(loading) {
@@ -123,6 +138,7 @@ function addFeedback(article) {
         }
     });
 }
+
 function showFeedbackSuccess(feedbackDiv) {
     // Hide the input and thumbs, keep the clipboard button
     const input = feedbackDiv.querySelector('.feedback-input');

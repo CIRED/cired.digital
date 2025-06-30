@@ -42,3 +42,27 @@ function estimateCosts(config, results, duration) {
         modelName: modelKey
     };
 }
+
+
+
+// Fixed estimateCosts function to handle missing metadata gracefully
+function _estimateCosts(config, results, duration) {
+    const usage = results.metadata?.usage || {
+        prompt_tokens: 0,
+        completion_tokens: results.generated_answer?.length || 0,
+        total_tokens: (results.generated_answer?.length || 0)
+    };
+
+    debugLog('Estimating costs with usage:', usage);
+
+    // Your existing cost calculation logic here
+    // but with fallback values to prevent errors
+
+    return {
+        inputTokens: usage.prompt_tokens || 0,
+        outputTokens: usage.completion_tokens || 0,
+        totalTokens: usage.total_tokens || 0,
+        estimatedCost: 0, // Calculate based on your pricing
+        duration: duration || 0
+    };
+}

@@ -238,6 +238,35 @@ img {
   to { transform: rotate(360deg); }
 }
 
+.typing-spinner-stopped {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: #3b82f6;
+ }
+
+
+.streaming-events {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: var(--color-surface);
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.8rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.streaming-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.streaming-event {
+  margin: 0.2rem 0;
+  color: var(--color-text-soft);
+}
+
 .seen {
   opacity: 0;
   transition: opacity 3s ease;
