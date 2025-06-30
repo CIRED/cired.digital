@@ -1,30 +1,31 @@
 const ONBOARDING_STAGES = ['question', 'feedback', 'help', 'profile'];
 
 const onboardingHTML = `
-<div id="onboarding-header">
+<header>
     <h2>Guide de démarrage rapide</h2>
-    <button id="onboarding-close-btn" class="close-button">✖️</button>
-</div>
-<div id="onboarding-content">
+    <button id="onboarding-close-btn" class="ghost-button">✖️</button>
+</header>
+
+<main id="onboarding-content">
     <h3>Prise en main en 4 étapes:</h3>
     <ol>
         <li id="onboarding-stage-question">
             Posez une première question à Cirdi. Le champ de saisie est en haut au centre,
-            le bouton bleu <button id="image-send-btn">➤</button> lance la requête.
+            le bouton bleu <button id="image-send-btn" class="primary-button">➤</button> lance la requête.
             <button id="focus-input">Aller au champ de saisie</button>.
             <br />
             Première réponse: <span id="question-status">En attente.</span>
         </li>
         <li id="onboarding-stage-feedback">
             Partagez votre retour d'expérience sur le formulaire qui s'affichera sous la réponse, avec
-            quelques mots et un choix entre <button class="feedback-button feedback-up" title="Bonne réponse.">👍</button>
-            et <button class="feedback-button feedback-down" title="Réponse insuffisante.">👎</button> pour envoyer.
+            quelques mots et un choix entre <button class="ghost-button feedback-up" title="Bonne réponse.">👍</button>
+            et <button class="ghost-button feedback-down" title="Réponse insuffisante.">👎</button> pour envoyer.
             <br />
             Retour d'expérience envoyé: <span id="feedback-status">En attente.</span>
         </li>
         <li id="onboarding-stage-help">
             Ouvrez le mode d'emploi. Le bouton
-            <button type="button" id="open-help-btn" class="primary-button">Aide</button>
+            <button type="button" id="open-help-btn" class="secondary-button">Aide</button>
             est juste à côté du bouton de profil. Utilisez les boutons <button id="help-close-btn">✖️</button> pour refermer.
             <br />
             Mode d'emploi vu, refermé: <span id="help-status">En attente.</span>
@@ -43,11 +44,12 @@ const onboardingHTML = `
             <br />
             Un bouton "Settings" <button id="show-config-btn">⚙️</button> pour utilisateurs avancés sera disponible en haut à gauche après la fermeture de ce guide de démarrage rapide.
     </p>
-</div>
-<div id="onboarding-footer">
+</main>
+
+<footer>
     <button id="onboarding-pass-btn" class="primary-button">Fermer et passer.</button>
     <button id="onboarding-reset-btn" class="secondary-button">Réinitialiser le guide</button>
-</div>
+</footer>
 `;
 
 function showCompleted(stageKey) {

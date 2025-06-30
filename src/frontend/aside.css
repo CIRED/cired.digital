@@ -1,0 +1,312 @@
+/* ==========================================
+   CIRDI - SCIENTIFIC DOCUMENT RAG STYLES
+   panels layout
+   Panels are <aside> with <header> <main> <footer>
+   The panel title is an <h2>
+   ========================================== */
+
+aside[hidden] {
+  display: none !important;
+}
+
+aside {
+  background-color: rgb(188, 221, 219);
+  border-right: 1px solid #e5e7eb;
+  padding: 1rem;
+  display: block;
+  position: fixed;
+  top: 0;
+  /* Panels must specify left or right positioning */
+  height: 100%;
+  width: 33%;
+  min-width: 350px;
+  overflow: auto;
+  z-index: 1000;
+}
+
+@media (max-width: 500px) {
+aside {
+    width: 100%;
+  }
+}
+
+aside header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+aside header > h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+aside main {
+  color: #374151;
+  line-height: 1.3;
+}
+
+aside section {
+  margin-bottom: 1.5rem;
+}
+
+aside main h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
+}
+
+aside ul, aside ol {
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+aside li {
+  margin-bottom: 0.5rem;
+}
+
+aside footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* ==========================================
+   HELP PANEL
+   ========================================== */
+
+#help-panel {
+  right: 0;
+  width: 40%;
+}
+
+#help-content a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+#help-content a:hover {
+  color: #1d4ed8;
+}
+
+/* ===========================================
+   ONBOARDING PANEL
+   ========================================== */
+
+#onboarding-panel {
+  left: 0;
+}
+
+#onboarding-panel main ol li {
+  line-height: 1.85;  /* Text contains buttons */
+}
+
+.onboarding-stage-complete {
+  color: #059669;
+  opacity: 1;
+}
+
+.onboarding-incomplete {
+  color: #888;
+  opacity: 0.5;
+}
+
+/* ==========================================
+   PROFILE PANEL
+   ========================================== */
+
+#profile-panel {
+  /* Override to look like a centered modal */
+  background-color: rgb(219, 234, 254);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  left: 50%;
+  top: 2rem;
+  transform: translateX(-50%);
+  width: 600px;
+  min-width: unset;
+  max-width: 90vw;
+  max-height: calc(100vh - 4rem);
+  }
+
+.profile-introduction {
+  color: #1e40af;
+  background-color: #eff6ff;
+  border: 1px solid #93c5fd;
+  border-radius: 0.375rem;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+#questionnaire-signature {
+  text-align: right;
+}
+
+/* Button group */
+#profile-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+/* ==========================================
+   CONFIGURATION PANEL
+   ========================================== */
+
+#config-panel {
+  left: 0;
+}
+
+/*
+   FORM ELEMENTS
+ */
+.settings-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+#model-info {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-top: 0.5rem;
+}
+
+.label-with-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-align: right;
+}
+
+.status-success {
+  color: #059669 !important;
+}
+
+.status-error {
+  color: #dc2626 !important;
+}
+
+.help-icon {
+  margin-left: 0.25rem;
+  color: #9ca3af;
+  cursor: help;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+
+.form-select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  background-color: white;
+}
+
+/*
+CHECKBOX CONTAINERS
+*/
+.checkbox-container {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid;
+}
+
+.privacy-container {
+  background-color: #fffbeb;
+  border-color: #fcd34d;
+}
+/* Espace sous la ligne Privacy Mode */
+.privacy-container .checkbox-label {
+  margin-bottom: 1rem;
+}
+/* Réduire l'espace sous l'input URL de feedback */
+.privacy-container .form-group {
+  margin-bottom: 0.5rem;
+}
+
+.debug-container {
+  background-color: #eff6ff;
+  border-color: #93c5fd;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.checkbox-input {
+  margin-right: 0.5rem;
+}
+
+.privacy-text {
+  color: #92400e;
+}
+
+.debug-text {
+  color: #1e40af;
+}
+
+
+/* ========== CHAMPS DÉSACTIVÉS ========== */
+/* Inputs et selects */
+.form-input:disabled,
+.form-select:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Labels autour des inputs désactivés */
+.form-group input:disabled + .form-label,
+.form-group select:disabled + .form-label {
+  color: #9ca3af;
+}
+
+/* Checkbox labels (span) */
+.checkbox-label input:disabled ~ span {
+  color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Optionnel : uniformiser l’opacité du container */
+.form-group input:disabled,
+.form-group select:disabled,
+.checkbox-container input:disabled {
+  opacity: 0.8;
+}

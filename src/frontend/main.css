@@ -1,33 +1,11 @@
 /* ==========================================
    CIRDI - SCIENTIFIC DOCUMENT RAG STYLES
-   for: main contents
+   for: main area contents
    ========================================== */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 /* ==========================================
    Main area styles
    ========================================== */
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  background-color: white;
-  margin-bottom: 1rem;
-}
-
-nav button {
-  background: none;
-  border: none;
-  padding: 0.25rem;
-  cursor: pointer;
-}
-
 
 article {
   background-color: white;
@@ -206,45 +184,6 @@ img {
   border: 1px solid #d1d5db;
   border-radius: 0.375rem;
   font-size: 0.875rem;
-  box-sizing: border-box;
-}
-
-.feedback-input:focus {
-  outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
-}
-
-.feedback-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.125rem;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  transition: background-color 0.2s;
-}
-
-.feedback-up:hover {
-  background-color: rgba(34, 197, 94, 0.1);
-}
-
-.feedback-down:hover {
-  background-color: rgba(239, 68, 68, 0.1);
-}
-
-.clipboard-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.125rem;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  transition: background-color 0.2s;
-}
-
-.clipboard-button:hover {
-  background-color: rgba(59, 130, 246, 0.1);
 }
 
 .feedback-success {
@@ -311,11 +250,17 @@ img {
   to { transform: rotate(360deg); }
 }
 
+.seen {
+  opacity: 0;
+  transition: opacity 3s ease;
+  pointer-events: none;
+}
+
 /* ==========================================
    TABLE STYLES
    ========================================== */
 
-   table {
+table {
   border-collapse: collapse;
   width: 100%;
   margin: 1rem 0;

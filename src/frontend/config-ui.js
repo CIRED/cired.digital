@@ -1,10 +1,10 @@
 document.getElementById("config-panel").innerHTML = `
-  <div id="config-header">
-    <button id="config-close-btn" class="close-button">✖️</button>
+  <header>
+    <button id="config-close-btn" class="ghost-button">✖️</button>
     <h2>Cirdi settings</h2>
-  </div>
+  </header>
 
-  <div class="settings-grid" id="settings-container">
+  <main class="settings-grid" id="settings-container">
 
     <div class="form-group">
       <div class="label-with-status">
@@ -97,5 +97,5 @@ document.getElementById("config-panel").innerHTML = `
       </label>
     </div>
 
-  </div> <!-- id="settings-container"-->
+  </main> <!-- id="settings-container"-->
 `
