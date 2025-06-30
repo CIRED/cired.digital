@@ -6,12 +6,12 @@
    ========================================== */
 
 aside[hidden] {
-  display: none !important;
+  display: none;
 }
 
 aside {
-  background-color: rgb(188, 221, 219);
-  border-right: 1px solid #e5e7eb;
+  background-color: var(--color-panel-bg);
+  border-right: 1px solid var(--color-border);
   padding: 1rem;
   display: block;
   position: fixed;
@@ -41,12 +41,12 @@ aside header {
 aside header > h2 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--color-text);
   margin: 0;
 }
 
 aside main {
-  color: #374151;
+  color: var(--color-text);
   line-height: 1.3;
 }
 
@@ -57,7 +57,7 @@ aside section {
 aside main h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--color-text);
   margin-bottom: 0.75rem;
   padding-bottom: 0.25rem;
 }
@@ -86,12 +86,12 @@ aside footer {
 }
 
 #help-content a {
-  color: #2563eb;
+  color: var(--color-primary);
   text-decoration: underline;
 }
 
 #help-content a:hover {
-  color: #1d4ed8;
+  color: var(--color-primary-hover);
 }
 
 /* ===========================================
@@ -107,12 +107,12 @@ aside footer {
 }
 
 .onboarding-stage-complete {
-  color: #059669;
+  color: var(--color-success);
   opacity: 1;
 }
 
 .onboarding-incomplete {
-  color: #888;
+  color: var(--color-text-soft);
   opacity: 0.5;
 }
 
@@ -122,9 +122,9 @@ aside footer {
 
 #profile-panel {
   /* Override to look like a centered modal */
-  background-color: rgb(219, 234, 254);
+  background-color: var(--color-profile-panel-bg);
   border-radius: 1rem;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  box-shadow: var(--shadow);
   left: 50%;
   top: 2rem;
   transform: translateX(-50%);
@@ -135,9 +135,8 @@ aside footer {
   }
 
 .profile-introduction {
-  color: #1e40af;
-  background-color: #eff6ff;
-  border: 1px solid #93c5fd;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
   border-radius: 0.375rem;
   padding: 0 1rem;
   margin-bottom: 1.5rem;
@@ -182,13 +181,13 @@ aside footer {
   display: block;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #374151;
+  color: var(--color-text);
   margin-bottom: 0.25rem;
 }
 
 #model-info {
   font-size: 0.875rem;
-  color: #9ca3af;
+  color: var(--color-text-soft);
   margin-top: 0.5rem;
 }
 
@@ -200,28 +199,28 @@ aside footer {
 
 .status-text {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: var(--color-text-soft);
   text-align: right;
 }
 
 .status-success {
-  color: #059669 !important;
+  color: var(--color-success) !important;
 }
 
 .status-error {
-  color: #dc2626 !important;
+  color: var(--color-error) !important;
 }
 
 .help-icon {
   margin-left: 0.25rem;
-  color: #9ca3af;
+  color: var(--color-text-soft);
   cursor: help;
 }
 
 .form-input {
   width: 100%;
   padding: 0.5rem 0.75rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--color-border);
   border-radius: 0.375rem;
   font-size: 0.875rem;
 }
@@ -229,77 +228,32 @@ aside footer {
 .form-select {
   width: 100%;
   padding: 0.5rem 0.75rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--color-border);
   border-radius: 0.375rem;
   font-size: 0.875rem;
-  background-color: white;
 }
 
 /*
 CHECKBOX CONTAINERS
 */
-.checkbox-container {
-  flex: 1;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  border: 1px solid;
-}
-
-.privacy-container {
-  background-color: #fffbeb;
-  border-color: #fcd34d;
-}
-/* Espace sous la ligne Privacy Mode */
-.privacy-container .checkbox-label {
-  margin-bottom: 1rem;
-}
-/* Réduire l'espace sous l'input URL de feedback */
-.privacy-container .form-group {
-  margin-bottom: 0.5rem;
-}
-
-.debug-container {
-  background-color: #eff6ff;
-  border-color: #93c5fd;
-}
-
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  font-size: 0.875rem;
-}
-
-.checkbox-input {
-  margin-right: 0.5rem;
-}
-
-.privacy-text {
-  color: #92400e;
-}
-
-.debug-text {
-  color: #1e40af;
-}
-
 
 /* ========== CHAMPS DÉSACTIVÉS ========== */
 /* Inputs et selects */
 .form-input:disabled,
 .form-select:disabled {
-  background-color: #f3f4f6;
-  color: #9ca3af;
+  color: var(--color-text-soft);
   cursor: not-allowed;
 }
 
 /* Labels autour des inputs désactivés */
 .form-group input:disabled + .form-label,
 .form-group select:disabled + .form-label {
-  color: #9ca3af;
+  color: var(--color-text-soft);
 }
 
 /* Checkbox labels (span) */
 .checkbox-label input:disabled ~ span {
-  color: #9ca3af;
+  color: var(--color-text-soft);
   cursor: not-allowed;
   opacity: 0.8;
 }
