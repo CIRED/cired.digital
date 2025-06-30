@@ -5,45 +5,35 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Cirdi - Assistant documentaire scientifique du CIRED</title>
-  <link rel="stylesheet" href="https://unpkg.com/purecss@3.0.0/build/pure-min.css">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@3.0.0/build/grids-responsive-min.css">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js"></script>
-  <link rel="stylesheet" href="page.css">
+  <link rel="stylesheet" href="body.css">
   <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="panels.css">
+  <link rel="stylesheet" href="aside.css">
 </head>
 
 <body>
 
 <nav>
- <button id="config-btn" class="secondary-button">⚙️</button>
- <span id="indicators-container" hidden>
-   <span id="backend-status-indicator">?</span>
-   <span id="model-status-indicator">?</span>
-   <span id="monitor-status-indicator">?</span>
- </span>
-  <button id="profile-btn" class="secondary-button">👤</button>
+  <button id="config-btn" class="ghost-button">⚙️</button>
+  <span class="spacer"></span>
   <button id="help-btn" class="secondary-button">Aide</button>
+  <button id="profile-btn" class="ghost-button">👤</button>
 </nav>
 
 <header>
-    <div id="input-container">
-      <div id="input">
-        <textarea
-          id="user-input"
-          placeholder="Cirdi, que disent les écrits du CIRED sur..."
-          rows="2"
-          ></textarea>
-        <button id="send-btn" class="primary-button" title="Envoyer la question">
-          ➤
-        </button>
-      </div>
-      <div id="input-help">
-        <p>Cirdi parle français et + de 100 langues: Cirdi speaks English – Hablo español – Я говорю по-русски – 我会说中文 – أنا أتكلم العربية.</p>
-        <p>Appuyez sur Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne.</p>
-      </div>
-    </div> <!-- id="input-container" -->
+  <div id="input">
+    <textarea
+      id="user-input"
+      placeholder="Cirdi, que disent les écrits du CIRED sur..."
+      rows="2"
+      ></textarea>
+    <button id="send-btn" class="secondary-button" title="Envoyer la question">➤</button>
+  </div>
+  <div id="input-help">
+    <div>Cirdi parle français et + de 100 langues: Cirdi speaks English – Hablo español – Я говорю по-русски – 我会说中文 – أنا أتكلم العربية.</div>
+    <div>Appuyez sur Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne.</div>
+  </div>
 </header>
 
 <main id="messages-container">
@@ -69,7 +59,7 @@
 <aside hidden id="help-panel">Loading...</aside>
 <script src="help-ui.js"></script>
 
-<aside id="profile-panel" class="hidden">Loading...</aside>
+<aside hidden id="profile-panel">Loading...</aside>
 <script src="profile-ui.js"></script>
 
 <aside hidden id="config-panel">Loading...</aside>

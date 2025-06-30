@@ -2,14 +2,14 @@
 
 
 document.getElementById("profile-panel").innerHTML = `
-  <div id="profile-header">
+  <header>
     <h2>Renseigner mon Profil</h2>
-    <button id="profile-close-btn" class="close-button">✖️</button>
-  </div>
+    <button id="profile-close-btn" class="ghost-button">✖️</button>
+  </header>
 
-  <div class="settings-grid" id="profile-container">
+  <main class="settings-grid" id="profile-container">
     <div class="profile-introduction">
-      <p>Je vous invite à ce questionnaire rapide pour m'aider à décider du sort de Cirdi.
+      <p>Je vous invite à ce questionnaire rapide pour nous aider à décider du sort de Cirdi.
       Voici trois questions sur votre affiliation professionnelle, votre niveau d'expertise en environnement / développement, et votre familiarité avec les technologies d'intelligence artificielle.
       Données anonymes, non redistribuées, modifiables ou supprimables à tout moment ci-dessous.</p>
 
@@ -52,22 +52,23 @@ document.getElementById("profile-panel").innerHTML = `
         </div>
       </div>
 
-      </form>
+    </form>
 
     <div id="profile-actions">
       <button type="button" id="save-profile-btn" class="primary-button">Enregistrer et Fermer</button>
     </div>
 
     <div id="stored-profile">
-    <h3>Données stockées actuellement</h3>
+      <h3>Données stockées actuellement</h3>
       <div id="profile-data-display">Loading...</div>
     </div>
+  </main>
 
-    <div id="profile-footer">
+  <footer>
       <button type="button" id="clear-profile-btn" class="secondary-button">Effacer les données</button>
       <button type="button" id="onboarding-btn" class="secondary-button">Ouvrir le guide de démarrage rapide</button>
     </div>
-  </div>
+  </footer>
 `;
 
 
