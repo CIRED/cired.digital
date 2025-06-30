@@ -32,6 +32,13 @@ Can be rescaled to 4, 8 or 16 vCPU as long as it remains on the AMD architecture
 - Installed `uv` with `pipx install uv`
 - Added `~/.local/bin` to the path with `pipx ensurepath`
 
+## Create 2GB swap file
+sudo fallocate -l 2G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+
 ### Basic security: Enable the firewall
 
 ```bash
