@@ -1,6 +1,17 @@
 /* ==========================================
    CIRDI - SCIENTIFIC DOCUMENT RAG STYLES
+    panels layout
    ========================================== */
+
+
+
+@media (max-width: 500px) {
+  #config-panel,
+  #help-panel,
+  #onboarding-panel {
+    width: 100%;
+  }
+}
 
 /* ==========================================
    CONFIGURATION PANEL
@@ -16,6 +27,7 @@
   top: 0;
   height: 100%;
   width: 25%;
+  min-width: 300px;
   overflow: auto;
   z-index: 1002;
 }
@@ -471,17 +483,6 @@ div#profile-footer {
   text-align: center;
 }
 
-/* ==========================================
-   MOBILE RESPONSIVE STYLES
-   ========================================== */
-
-@media (max-width: 400px) {
-  #config-panel,
-  #help-panel,
-  #onboarding-panel {
-    width: 100%;
-  }
-}
 
 /* ==========================================
    BUTTON STYLES
