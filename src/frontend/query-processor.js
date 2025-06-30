@@ -4,13 +4,23 @@
 
 async function processInput() {
     if (!validateInput()) return;
-    
+
     const context = prepareQueryContext();
     try {
+        uiProcessingStart();
         const response = await executeQuery(context);
-        await renderResponse(response, context);
+        uiProcessingUpdate(response.duration);
+        finalResult = await processStream(response);
+        monitor(MonitorEventType.RESPONSE, {
+            queryId: context.queryId,
+            response: finalResult,
+            processingTime: response.duration,
+            timestamp: new Date().toISOString()
+        });
+        insertArticle(context.config, context.requestBody, finalResult, context.queryId, response.duration);
     } finally {
-        finalizeUI();
+        uiProcessingEnd();
+        debugLog('Message processing completed');
     }
 }
 
@@ -24,118 +34,39 @@ function prepareQueryContext() {
     const queryId = 'query_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
     const config = getConfiguration();
     const requestBody = buildRequestBody(query, config);
-    
+
     debugLog('Starting message send process', { query, queryId, isLoading });
     debugLog('Configuration retrieved', config);
     debugLog('Request body built:', requestBody);
-    
+
     return { query, queryId, config, requestBody };
 }
 
 async function executeQuery(context) {
-    animateWaitStart();
-    
     monitor(MonitorEventType.REQUEST, {
         queryId: context.queryId,
         query: context.query,
         config: context.config,
         requestBody: context.requestBody
     });
-    
+
     try {
         const startTime = Date.now();
         const response = await makeApiRequest(context.config.apiUrl, context.requestBody);
         const duration = Date.now() - startTime;
-        
+
         debugLog('API request completed', {
             apiUrl: context.config.apiUrl,
             status: response.status,
             responseTime: `${duration}ms`,
         });
-        
+
         return { response, duration };
     } catch (err) {
         handleError(err);
         throw err;
     }
 }
-
-async function renderResponse(responseData, context) {
-    const reader = responseData.response.body.getReader();
-    const decoder = new TextDecoder();
-    const startTime = Date.now();
-    
-    let finalAnswer = '';
-    let citations = [];
-    let searchResults = [];
-    
-    try {
-        while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            
-            const chunk = decoder.decode(value, { stream: true });
-            const lines = chunk.split('\n');
-            
-            for (const line of lines) {
-                if (line.trim() === '' || !line.startsWith('data: ')) continue;
-                
-                try {
-                    const eventData = JSON.parse(line.slice(6));
-                    const timestamp = (Date.now() - startTime) / 1000;
-                    
-                    debugLog('Streaming event received', { type: eventData.type, timestamp });
-                    addStreamingEvent(eventData.type, timestamp, eventData.data);
-                    
-                    switch (eventData.type) {
-                        case 'search_results':
-                            searchResults = eventData.data || [];
-                            break;
-                        case 'message':
-                            finalAnswer += eventData.data || '';
-                            break;
-                        case 'citation':
-                            if (eventData.data) citations.push(eventData.data);
-                            break;
-                        case 'final_answer':
-                            finalAnswer = eventData.data || finalAnswer;
-                            break;
-                    }
-                } catch (parseError) {
-                    debugLog('Failed to parse streaming event', { line, error: parseError.message });
-                }
-            }
-        }
-    } finally {
-        reader.releaseLock();
-    }
-    
-    const data = {
-        results: {
-            generated_answer: finalAnswer,
-            citations: citations,
-            search_results: searchResults
-        }
-    };
-    
-    debugLog('Streaming completed, processing final response', data);
-    
-    monitor(MonitorEventType.RESPONSE, {
-        queryId: context.queryId,
-        response: data,
-        processingTime: responseData.duration,
-        timestamp: new Date().toISOString()
-    });
-    
-    insertArticle(context.config, context.requestBody, data, context.queryId, responseData.duration);
-}
-
-function finalizeUI() {
-    animateWaitEnd();
-    hideStreamingEvents();
-    debugLog('Message processing completed');
-}
-
 
 function resetMessageInput() {
     userInput.value = '';

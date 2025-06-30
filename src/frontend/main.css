@@ -238,6 +238,13 @@ img {
   to { transform: rotate(360deg); }
 }
 
+.typing-spinner-stopped {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: #3b82f6;
+ }
+
+
 .streaming-events {
   margin-top: 1rem;
   padding: 0.5rem;
