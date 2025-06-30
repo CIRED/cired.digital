@@ -103,9 +103,6 @@ services:
       - 15672
     env_file:
       - ${ENV_DIR:?ENV_DIR not set}/hatchet.env
-    # Defer warning until memory 60% used
-    environment:
-      - RABBITMQ_VM_MEMORY_HIGH_WATERMARK=0.6
     volumes:
       - hatchet_rabbitmq_data:/var/lib/rabbitmq
       - hatchet_rabbitmq_conf:/etc/rabbitmq/rabbitmq.conf
@@ -116,6 +113,7 @@ services:
       retries: 5
     # For docker compose in non-Swarm mode
     mem_limit: 512M
+    restart: unless-stopped
 
   #
   # Tasks manager
