@@ -29,7 +29,7 @@
 
   /* Panels */
   --color-panel-bg: #e0f2f1;
-  --color-profile-panel-bg: #dbeafe;
+  --color-profile-dialog-bg: #dbeafe;
 
   --shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
