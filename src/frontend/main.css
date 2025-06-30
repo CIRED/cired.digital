@@ -181,7 +181,7 @@ img {
   text-align: center;
 }
 
-.carousel-navigation {
+nav.carousel-navigation {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -241,7 +241,7 @@ img {
 .typing-spinner-stopped {
   display: inline-block;
   margin-right: 0.5rem;
-  color: #3b82f6;
+  color: var(--color-primary);
  }
 
 

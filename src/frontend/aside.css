@@ -5,13 +5,13 @@
    The panel title is an <h2>
    ========================================== */
 
-aside[hidden] {
+aside[hidden], dialog[hidden] {
   display: none;
 }
 
-aside {
+aside, dialog {
   background-color: var(--color-panel-bg);
-  border-right: 1px solid var(--color-border);
+  border: 1px solid var(--color-border);
   padding: 1rem;
   display: block;
   position: fixed;
@@ -25,12 +25,12 @@ aside {
 }
 
 @media (max-width: 500px) {
-aside {
+aside, dialog {
     width: 100%;
   }
 }
 
-aside header {
+aside header, dialog header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,23 +38,23 @@ aside header {
   padding-bottom: 0.5rem;
 }
 
-aside header > h2 {
+aside header > h2, dialog header > h2 {
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--color-text);
   margin: 0;
 }
 
-aside main {
+aside main, dialog main {
   color: var(--color-text);
   line-height: 1.3;
 }
 
-aside section {
+aside section, dialog section {
   margin-bottom: 1.5rem;
 }
 
-aside main h3 {
+aside main h3, dialog main h3 {
   font-size: 1rem;
   font-weight: 600;
   color: var(--color-text);
@@ -62,16 +62,16 @@ aside main h3 {
   padding-bottom: 0.25rem;
 }
 
-aside ul, aside ol {
+aside ul, aside ol, dialog ul, dialog ol {
   margin: 1rem 0;
   padding-left: 1rem;
 }
 
-aside li {
+aside li, dialog li {
   margin-bottom: 0.5rem;
 }
 
-aside footer {
+aside footer, dialog footer {
   margin-top: 1rem;
   text-align: center;
 }
@@ -120,9 +120,9 @@ aside footer {
    PROFILE PANEL
    ========================================== */
 
-#profile-panel {
-  /* Override to look like a centered modal */
-  background-color: var(--color-profile-panel-bg);
+
+#profile-dialog {
+  background-color: var(--color-profile-dialog-bg);
   border-radius: 1rem;
   box-shadow: var(--shadow);
   left: 50%;

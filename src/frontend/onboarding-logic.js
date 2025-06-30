@@ -121,7 +121,7 @@ function addHandlersToOnboarding() {
 
     const openProfileBtn = document.getElementById('open-profile-btn');
     if (openProfileBtn) {
-        openProfileBtn.addEventListener('click', showProfilePanel);
+        openProfileBtn.addEventListener('click', showProfileDialog);
     }
 
     const openHelpBtn = document.getElementById('open-help-btn');
