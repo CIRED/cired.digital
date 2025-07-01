@@ -17,8 +17,8 @@ trap 'log "❌ An unexpected error occurred."' ERR
 
 if $REMOTE_MODE; then
     log "🚀 Starting services remotely on $REMOTE_HOST..."
-    execute_remote "git pull && deploy/ops/up.sh"
-    log "✅ Remote deployment completed successfully."
+    execute_remote "deploy/ops/up.sh"
+    log "✅ Remote services started successfully."
     exit 0
 fi
 
