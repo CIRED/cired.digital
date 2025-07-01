@@ -50,9 +50,6 @@ body {
 /* Desktop: header fits between the nav buttons */
 
 body > nav {
-  top: 1rem;
-  left: 1rem;
-  right: 1rem;
   display: grid;
   grid-template-columns: auto 1fr auto auto;
   grid-template-areas: "config spacer help profile";
@@ -63,7 +60,6 @@ body > nav {
 }
 
 body > header {
-  top: 1rem;
   max-width: 48rem;
   margin: 0 auto;
   padding: 0;
@@ -93,36 +89,34 @@ body > footer {
 
 @media (min-width: 48.01rem) and (max-width: 64rem) {
   body > nav {
-    gap: 0.25rem;
-    left: 0.25rem;
-    right: 0.25rem;
+    gap: 0.5rem;
+    margin: 0.5rem auto;
   }
 
   body > header {
-    width: calc(100% - 12rem); /* More conservative */
+    width: calc(100% - 4rem); /* More conservative */
     max-width: 40rem;
+    margin: 0 auto; /* Center header horizontally */
+    padding: 0.5rem; /* Add padding for better spacing */
   }
 }
 
 /* Mobile */
-/* Header returns to normal flow */
 
 @media (max-width: 48rem) {
   body > nav {
-    position: static;
+    margin: 0.5rem auto; /* Center nav horizontally */
+    padding: 0.5rem; /* Add padding for better spacing */
   }
 
   body > header {
-    position: static;
-    transform: none;
-    width: 100%;
+    padding: 0.5rem; /* Add padding for better spacing */
+    width: 100%; /* Full width for header */
     max-width: 48rem;
-    margin: 0.5rem auto;
-    padding: 0 1rem;
   }
 
   body > main {
-    margin-top: 0;
+    padding: 0.5rem; /* Add padding for better spacing */
   }
 }
 
