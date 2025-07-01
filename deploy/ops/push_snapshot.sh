@@ -11,9 +11,9 @@ source "$SCRIPT_DIR/common_config.sh"
 
 # Default values and parameters
 SNAPSHOT_NAME="${1:-}"
-REMOTE_USER="${2:-admin}"
-REMOTE_HOST="${3:-157.180.70.232}"
-REMOTE_PATH="${4:-/home/admin/cired.digital/data/archived/R2R/}"
+REMOTE_USER="${2:-$REMOTE_USER}"
+REMOTE_HOST="${3:-$REMOTE_HOST}"
+REMOTE_PATH="${4:-$REMOTE_PROJECT_PATH/data/archived/R2R/}"
 
 # Function to display usage information
 usage() {
@@ -23,12 +23,12 @@ usage() {
     echo ""
     echo "Parameters:"
     echo "  snapshot_name  - Name of the snapshot to push (default: latest snapshot)"
-    echo "  remote_user    - Remote SSH username (default: admin)"
-    echo "  remote_host    - Remote SSH host (default: 157.180.70.232)"
-    echo "  remote_path    - Remote path to store snapshots (default: /home/admin/cired.digital/data/archived/R2R/)"
+    echo "  remote_user    - Remote SSH username (default: $REMOTE_USER)"
+    echo "  remote_host    - Remote SSH host (default: $REMOTE_HOST)"
+    echo "  remote_path    - Remote path to store snapshots (default: $REMOTE_PROJECT_PATH/data/archived/R2R/)"
     echo ""
     echo "Example:"
-    echo "  $0 snapshot_2025-05-21_120000 admin 157.180.70.232 /home/admin/backups"
+    echo "  $0 snapshot_2025-05-21_120000 $REMOTE_USER $REMOTE_HOST /home/admin/backups"
     exit 1
 }
 
