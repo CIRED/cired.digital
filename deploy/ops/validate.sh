@@ -27,52 +27,26 @@ trap 'handle_error $LINENO' ERR
 
 # Check R2R health, with retry logic
 check_r2r_health() {
-    log "🔍 Checking R2R health at $HEALTH_ENDPOINT..."
-
-    # First, check if we can connect at all
-    if ! curl -s --connect-timeout 5 --max-time 10 "$HEALTH_ENDPOINT" >/dev/null 2>&1; then
-        log "❌ Cannot connect to R2R at $HEALTH_ENDPOINT"
-        log "   Please ensure R2R is running with: docker compose up -d"
-        log "   Or check if it's running on a different port."
-        return 1
-    fi
-
+    local max_tries=12       # Number of attempts
+    local delay=5            # Delay between attempts (seconds)
+    local try=0
     local response
-    response=$(curl -s --connect-timeout 5 --max-time 10 "$HEALTH_ENDPOINT" 2>/dev/null || echo "CURL_FAILED")
 
-    if [[ "$response" == "CURL_FAILED" ]]; then
-        log "❌ Failed to get response from R2R health endpoint"
-        return 1
-    fi
+    log "🔍 Checking R2R health at $HEALTH_ENDPOINT (up to $((max_tries*delay))s)..."
 
-    log "   Response: $response"
+    until [[ $try -ge $max_tries ]]; do
+        ((try++))
+        response=$(curl -s --connect-timeout 5 --max-time 10 "$HEALTH_ENDPOINT" 2>/dev/null || echo "")
+        if [[ "$response" == '{"results":{"message":"ok"}}' ]]; then
+            log "✅ R2R is healthy (after $try attempt(s))."
+            return 0
+        fi
+        log "⚠️ Attempt $try/$max_tries failed, response='$response'. Retrying in $delay s..."
+        sleep $delay
+    done
 
-    if [[ "$response" == '{"results":{"message":"ok"}}' ]]; then
-        log "✅ R2R is healthy."
-        return 0
-    fi
-
-    log "⚠️ R2R did not respond as expected. Retrying in 10 seconds..."
-    sleep 10
-
-    response=$(curl -s --connect-timeout 5 --max-time 10 "$HEALTH_ENDPOINT" 2>/dev/null || echo "CURL_FAILED")
-
-    if [[ "$response" == "CURL_FAILED" ]]; then
-        log "❌ Failed to get response from R2R health endpoint (retry)"
-        return 1
-    fi
-
-    log "   Retry response: $response"
-
-    if [[ "$response" == '{"results":{"message":"ok"}}' ]]; then
-        log "✅ R2R is healthy (after retry)."
-        return 0
-    else
-        log "❌ R2R is not responding as expected after retry."
-        log "   Expected: {\"results\":{\"message\":\"ok\"}}"
-        log "   Received: $response"
-        return 1
-    fi
+    log "❌ R2R did not respond as expected after $try attempts."
+    return 1
 }
 
 # Check for API keys in the R2R container
@@ -126,15 +100,15 @@ check_container_logs() {
     return 0
 }
 
-# Check if uvx is available
-check_uvx() {
-    if ! command -v uvx >/dev/null 2>&1; then
-        log "❌ uvx is not installed or not in PATH."
+# Check if uv is available
+check_uv() {
+    if ! command -v uv >/dev/null 2>&1; then
+        log "❌ uv is not installed or not in PATH."
         log "   Please install uv: curl -LsSf https://astral.sh/uv/install.sh | sh"
         log "   Or use pipx: pipx install uv"
         exit 1
     fi
-    log "✅ uvx is available."
+    log "✅ uv is available."
 }
 
 # Pre-flight checks
@@ -145,9 +119,6 @@ if ! docker info >/dev/null 2>&1; then
     log "❌ Docker is not running or not accessible."
     exit 1
 fi
-
-# Check if uvx is available
-check_uvx
 
 log "🔍 Checking container logs for errors and warnings..."
 if ! check_container_logs "r2r"; then
@@ -169,27 +140,19 @@ if ! check_r2r_health; then
     exit 1
 fi
 
-check_api_keys
+if ! check_api_keys; then
+    log "❌ API key check failed. Expect R2R to fail AI text generation tests."
+fi
 
-# Run smoke tests using uvx
-log "🧪 Running smoke tests with uvx..."
-
-# Check if smoke test files exist
-if [ ! -f "$SMOKE_DIR/hello_r2r.py" ]; then
-    log "❌ Smoke test file not found: $SMOKE_DIR/hello_r2r.py"
+# Check if uv is available
+if ! check_uv; then
+    log "❌ uv is not available. Cannot proceed with tests."
     exit 1
 fi
 
-if [ ! -f "$SMOKE_DIR/LLM_swap.py" ]; then
-    log "❌ Smoke test file not found: $SMOKE_DIR/LLM_swap.py"
-    exit 1
-fi
-
-# Run the smoke tests with uvx (automatically handles r2r dependency)
-log "🚀 Running hello_r2r.py with uvx..."
-uvx --from r2r python3 "$SMOKE_DIR/hello_r2r.py"
-
-log "🚀 Running LLM_swap.py with uvx..."
-uvx --from r2r python3 "$SMOKE_DIR/LLM_swap.py"
+# Run tests using pytest
+log "🧪 Running tests..."
+cd "$SCRIPT_DIR/../.."
+uv run pytest
 
 log "✅ All R2R validation checks passed successfully!"
