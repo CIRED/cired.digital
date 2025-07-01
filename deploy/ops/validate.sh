@@ -148,22 +148,8 @@ check_api_keys
 # Run smoke tests using uvx
 log "🧪 Running smoke tests with uvx..."
 
-# Check if smoke test files exist
-if [ ! -f "$SMOKE_DIR/hello_r2r.py" ]; then
-    log "❌ Smoke test file not found: $SMOKE_DIR/hello_r2r.py"
-    exit 1
-fi
-
-if [ ! -f "$SMOKE_DIR/LLM_swap.py" ]; then
-    log "❌ Smoke test file not found: $SMOKE_DIR/LLM_swap.py"
-    exit 1
-fi
-
-# Run the smoke tests with uvx (automatically handles r2r dependency)
-log "🚀 Running hello_r2r.py with uvx..."
-uvx --from r2r python3 "$SMOKE_DIR/hello_r2r.py"
-
-log "🚀 Running LLM_swap.py with uvx..."
-uvx --from r2r python3 "$SMOKE_DIR/LLM_swap.py"
+# Run smoke tests using pytest
+log "🧪 Running smoke tests with pytest..."
+uvx --from r2r pytest tests/smoke
 
 log "✅ All R2R validation checks passed successfully!"
