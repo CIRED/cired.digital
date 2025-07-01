@@ -150,9 +150,11 @@ if ! check_uv; then
     exit 1
 fi
 
-# Run tests using pytest
-log "🧪 Running tests..."
+log "📦 Syncing dependencies with dev extras..."
 cd "$SCRIPT_DIR/../.."
+uv sync --extra dev
+
+log "🧪 Running tests..."
 uv run pytest
 
 log "✅ All R2R validation checks passed successfully!"
