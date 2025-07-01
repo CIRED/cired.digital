@@ -45,6 +45,7 @@ dev = [
   "types-requests",
   "types-docker",
   "pandas-stubs",
+  "docker",
 ]
 
 [tool.ruff]

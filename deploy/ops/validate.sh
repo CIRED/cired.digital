@@ -100,15 +100,15 @@ check_container_logs() {
     return 0
 }
 
-# Check if uvx is available
-check_uvx() {
-    if ! command -v uvx >/dev/null 2>&1; then
-        log "❌ uvx is not installed or not in PATH."
+# Check if uv is available
+check_uv() {
+    if ! command -v uv >/dev/null 2>&1; then
+        log "❌ uv is not installed or not in PATH."
         log "   Please install uv: curl -LsSf https://astral.sh/uv/install.sh | sh"
         log "   Or use pipx: pipx install uv"
         exit 1
     fi
-    log "✅ uvx is available."
+    log "✅ uv is available."
 }
 
 # Pre-flight checks
@@ -119,9 +119,6 @@ if ! docker info >/dev/null 2>&1; then
     log "❌ Docker is not running or not accessible."
     exit 1
 fi
-
-# Check if uvx is available
-check_uvx
 
 log "🔍 Checking container logs for errors and warnings..."
 if ! check_container_logs "r2r"; then
@@ -143,13 +140,18 @@ if ! check_r2r_health; then
     exit 1
 fi
 
-check_api_keys
+if ! check_api_keys; then
+    log "❌ API key check failed. Expect R2R to fail AI text generation tests."
+fi
 
-# Run smoke tests using uvx
-log "🧪 Running smoke tests with uvx..."
+# Check if uv is available
+if ! check_uv; then
+    log "❌ uv is not available. Cannot proceed with tests."
+    exit 1
+fi
 
-# Run smoke tests using pytest
-log "🧪 Running smoke tests with pytest..."
+# Run tests using pytest
+log "🧪 Running tests..."
 cd "$SCRIPT_DIR/../.."
 uv run pytest
 
