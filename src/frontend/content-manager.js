@@ -39,41 +39,72 @@ function uiProcessingStart() {
     // Hide the previous articles
     messagesContainer.querySelectorAll('article').forEach(el => el.classList.add('seen'));
 
-    // Add the typing indicator if it doesn't already exist
-    if (!document.getElementById('typing-indicator')) {
-        const spinnerDiv = document.createElement('div');
-        spinnerDiv.id = 'typing-indicator';
-        mainDiv.appendChild(spinnerDiv);
-        spinnerDiv.innerHTML = '<div id="loading-message"><span class="typing-spinner">⟳</span>Recherche dans la base documentaire…</div>';
+    const message = '<div id="loading-message"><span class="typing-spinner">⟳</span>Recherche dans la base documentaire…</div>';
+
+    progressDialog = document.getElementById('progress-dialog');
+    if (progressDialog) {
+        progressDialog.innerHTML = message;
+        progressDialog.hidden = false;
+        progressDialog.showModal();
+    }
+
+}
+
+function uiProcessingRetrievalDone(duration) {
+    debugLog('Updating the UI with processing duration', { duration });
+
+    const seconds = duration / 1000;
+    const retrieveFinished = `<span class="typing-spinner-stopped">✔</span>Recherche documentaire terminée en ${seconds} secondes.`
+    const generationStarted = '<div id="loading-message"><span class="typing-spinner">⟳</span>Génération de la réponse…</div>';
+
+    progressDialog = document.getElementById('progress-dialog');
+    if (progressDialog) {
+        progressDialog.innerHTML = retrieveFinished;
+        progressDialog.innerHTML += generationStarted;
     }
 }
 
-function uiProcessingUpdate(duration) {
-    debugLog('Updating the UI with processing duration', { duration });
+function uiProcessingGenerationDone(duration) {
+    debugLog('Updating the UI with generation duration', { duration });
 
-    const statusDiv = document.getElementById("loading-message");
-    if (statusDiv) {
-        seconds = duration / 1000;
-        statusDiv.innerHTML = `<span class="typing-spinner-stopped">✔</span>Recherche documentaire terminée en ${seconds} secondes.`;
+    const seconds = duration / 1000;
+    const generationFinished = `<span class="typing-spinner-stopped">✔</span>Génération terminée en ${seconds} secondes.`;
+
+    loadingMessage = document.getElementById('loading-message');
+    if (loadingMessage) {
+        loadingMessage.innerHTML = generationFinished;
+        loadingMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 }
 
 function uiProcessingEnd() {
     debugLog('Finalizing the UI after processing');
 
-    // Keep the stream results in debug mode
-    if (typeof debugMode !== 'undefined' && debugMode) {
-        const statusDiv = document.getElementById("loading-message");
-        if (statusDiv) {
-            statusDiv.innerHTML = '<span class="typing-spinner-stopped">✔✔</span>Recherche et Génération terminées.';
+    progressDialog = document.getElementById('progress-dialog');
+    if (progressDialog) {
+        // Add a Close button to the dialog
+        const closeButton = document.createElement('button');
+        closeButton.textContent = 'Fermer';
+        closeButton.className = 'primary-button';
+        closeButton.addEventListener('click', () => {
+            progressDialog.hidden = true;
+            progressDialog.close();
+        });
+        progressDialog.appendChild(closeButton);
+
+        if (typeof debugMode !== 'undefined' && debugMode) {
+            delay = 1000*60*60; // Close after 1 hour in debug mode
+            debugLog('Debug mode is on, keeping the progress dialog open indefinitely');
+        } else {
+            debugLog('Closing the progress dialog after 1 second');
+            delay = 1000; // Close after 1 second in normal mode
         }
-    } else {
-        // Remove the typing indicator
-        const spinnerDiv = document.getElementById('typing-indicator');
-        if (spinnerDiv) {
-            spinnerDiv.remove();
-        }
+        setTimeout(() => {
+            progressDialog.hidden = true;
+            progressDialog.close();
+        }, delay);
     }
+
     messagesContainer.querySelectorAll('article').forEach(el => el.classList.remove('seen'));
     setLoadingState(false);
     userInput.focus();
