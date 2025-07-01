@@ -150,6 +150,7 @@ log "🧪 Running smoke tests with uvx..."
 
 # Run smoke tests using pytest
 log "🧪 Running smoke tests with pytest..."
-uvx --from r2r pytest tests/smoke
+cd "$SCRIPT_DIR/../.."
+uv run pytest
 
 log "✅ All R2R validation checks passed successfully!"
