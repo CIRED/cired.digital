@@ -27,52 +27,26 @@ trap 'handle_error $LINENO' ERR
 
 # Check R2R health, with retry logic
 check_r2r_health() {
-    log "🔍 Checking R2R health at $HEALTH_ENDPOINT..."
-
-    # First, check if we can connect at all
-    if ! curl -s --connect-timeout 5 --max-time 10 "$HEALTH_ENDPOINT" >/dev/null 2>&1; then
-        log "❌ Cannot connect to R2R at $HEALTH_ENDPOINT"
-        log "   Please ensure R2R is running with: docker compose up -d"
-        log "   Or check if it's running on a different port."
-        return 1
-    fi
-
+    local max_tries=12       # Number of attempts
+    local delay=5            # Delay between attempts (seconds)
+    local try=0
     local response
-    response=$(curl -s --connect-timeout 5 --max-time 10 "$HEALTH_ENDPOINT" 2>/dev/null || echo "CURL_FAILED")
 
-    if [[ "$response" == "CURL_FAILED" ]]; then
-        log "❌ Failed to get response from R2R health endpoint"
-        return 1
-    fi
+    log "🔍 Checking R2R health at $HEALTH_ENDPOINT (up to $((max_tries*delay))s)..."
 
-    log "   Response: $response"
+    until [[ $try -ge $max_tries ]]; do
+        ((try++))
+        response=$(curl -s --connect-timeout 5 --max-time 10 "$HEALTH_ENDPOINT" 2>/dev/null || echo "")
+        if [[ "$response" == '{"results":{"message":"ok"}}' ]]; then
+            log "✅ R2R is healthy (after $try attempt(s))."
+            return 0
+        fi
+        log "⚠️ Attempt $try/$max_tries failed, response='$response'. Retrying in $delay s..."
+        sleep $delay
+    done
 
-    if [[ "$response" == '{"results":{"message":"ok"}}' ]]; then
-        log "✅ R2R is healthy."
-        return 0
-    fi
-
-    log "⚠️ R2R did not respond as expected. Retrying in 10 seconds..."
-    sleep 10
-
-    response=$(curl -s --connect-timeout 5 --max-time 10 "$HEALTH_ENDPOINT" 2>/dev/null || echo "CURL_FAILED")
-
-    if [[ "$response" == "CURL_FAILED" ]]; then
-        log "❌ Failed to get response from R2R health endpoint (retry)"
-        return 1
-    fi
-
-    log "   Retry response: $response"
-
-    if [[ "$response" == '{"results":{"message":"ok"}}' ]]; then
-        log "✅ R2R is healthy (after retry)."
-        return 0
-    else
-        log "❌ R2R is not responding as expected after retry."
-        log "   Expected: {\"results\":{\"message\":\"ok\"}}"
-        log "   Received: $response"
-        return 1
-    fi
+    log "❌ R2R did not respond as expected after $try attempts."
+    return 1
 }
 
 # Check for API keys in the R2R container
