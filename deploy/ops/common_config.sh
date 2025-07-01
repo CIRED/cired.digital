@@ -111,18 +111,18 @@ DOCKER_IMAGE="docker.io/sciphiai/r2r:latest"
 DASHBOARD_IMAGE="docker.io/sciphiai/r2r-dashboard:1.0.3"
 
 # Network settings
-SERVER_URL="http://localhost:7272"
+if [[ "${ENVIRONMENT:-}" == "production" ]]; then
+    SERVER_URL="http://r2r-api.cired.digital"
+else
+    # Default to local development server
+    # This can be overridden by setting the SERVER_URL environment variable
+    SERVER_URL="${SERVER_URL:-http://localhost:7272}"
+fi
 HEALTH_ENDPOINT="$SERVER_URL/v3/health"
 
 # Timeout settings
 HEALTH_CHECK_TIMEOUT=10
 DOCKER_STOP_TIMEOUT=15
-
-# Test settings
-SMOKE_DIR="${BASE_DIR}/../tests/smoke-tests"
-TEST_FILE="test.txt"
-TEST_CONTENT="QuetzalX is a person that works at CIRED."
-TEST_QUERY="Who is QuetzalX?"
 
 # --- Logging Utilities ---
 # Usage:
@@ -145,6 +145,12 @@ log() {
     echo -e "${color}[$(date +'%Y-%m-%d %H:%M:%S')] [$level] $*\033[0m" >&2
 }
 
+# Execute a command on a remote server via SSH
+# Usage:
+#   execute_remote "command to run"
+# Example:
+#   execute_remote "docker compose up -d"
+# Note: Ensure SSH access is set up for the remote user and host
 execute_remote() {
     local cmd="$1"
     log "Executing remotely on $REMOTE_HOST: $cmd"
