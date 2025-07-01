@@ -26,6 +26,11 @@ CONFIG_UPSTREAM_DIR="${BASE_DIR}/config.upstream"
 COMPOSE_FILE="${BASE_DIR}/compose.yaml"
 SECRETS_FILE="${BASE_DIR}/${ENV_DIR:?ENV_DIR not set}/r2r-full.env"
 
+# --- Remote Server Configuration ---
+export REMOTE_USER="${REMOTE_USER:-admin}"
+export REMOTE_HOST="${REMOTE_HOST:-157.180.70.232}"
+export REMOTE_PROJECT_PATH="${REMOTE_PROJECT_PATH:-/home/admin/cired.digital}"
+
 # Volume settings
 # data/ is at the same level as src/ but in .gitignore
 DATA_BASE="$(realpath "$BASE_DIR/../data")"
@@ -138,6 +143,15 @@ log() {
     esac
 
     echo -e "${color}[$(date +'%Y-%m-%d %H:%M:%S')] [$level] $*\033[0m" >&2
+}
+
+execute_remote() {
+    local cmd="$1"
+    log "Executing remotely on $REMOTE_HOST: $cmd"
+    if ! ssh "$REMOTE_USER@$REMOTE_HOST" "cd '$REMOTE_PROJECT_PATH' && $cmd"; then
+        log -e "Remote execution failed: $cmd"
+        return 1
+    fi
 }
 
 # Validate required environment variables
