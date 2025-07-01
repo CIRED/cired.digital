@@ -156,6 +156,21 @@ aside footer, dialog footer {
   justify-content: center;
 }
 
+/* ===========================================
+   PROGRESS DIALOG
+   ========================================== */
+
+#progress-dialog {
+  background-color: var(--color-bg);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+#progress-dialog button {
+  display: block;
+  margin: 2rem auto;
+}
+
 /* ==========================================
    CONFIGURATION PANEL
    ========================================== */

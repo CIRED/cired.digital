@@ -9,12 +9,14 @@ async function processInput() {
     try {
         uiProcessingStart();
         const response = await executeQuery(context);
-        uiProcessingUpdate(response.duration);
+        uiProcessingRetrievalDone(response.duration);
         finalResult = await processStream(response);
+        uiProcessingGenerationDone(finalResult.duration);
         monitor(MonitorEventType.RESPONSE, {
             queryId: context.queryId,
             response: finalResult,
-            processingTime: response.duration,
+            retrievalTime: response.duration,
+            generationTime: finalResult.duration,
             timestamp: new Date().toISOString()
         });
         insertArticle(context.config, context.requestBody, finalResult, context.queryId, response.duration);
