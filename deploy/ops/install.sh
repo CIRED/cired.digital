@@ -18,9 +18,16 @@ trap 'log "❌ An unexpected error occurred."' ERR
 #
 log "🔍 Checking required dependencies..."
 
+# Check for git
+if ! command -v git &> /dev/null; then
+  log "❌ Error: 'git' is not installed. Please install git first."
+  log "   On Ubuntu/Debian: sudo apt install git"
+  exit 1
+fi
+log "✅ git is available."
+
 # Verify Docker runs, display version
 ensure_docker --smoke-test
-
 log "🐳 Docker version:"
 docker --version
 
@@ -30,9 +37,19 @@ if ! command -v uv &> /dev/null; then
   log "   You can install it with: pipx install uv"
   exit 1
 fi
+log "✅ uv is available."
 
 #
-# 2. Pulling the docker/ subdir of the R2R repository
+# 2. Install Python dependencies
+#
+log "📦 Installing Python dependencies with uv..."
+cd "$BASE_DIR/.."  # Go to project root where pyproject.toml is located
+uv sync --extra dev
+log "✅ Python dependencies installed successfully."
+
+
+#
+# 3. Pulling the docker/ subdir of the R2R repository
 #
 REPO_URL="https://github.com/SciPhi-AI/R2R.git"
 SOURCE_DIR="docker"
@@ -57,9 +74,14 @@ rm -rf "$TEMP_DIR"
 log "✅ Successfully fetched $SOURCE_DIR from $REPO_URL into $TARGET_DIR."
 
 #
-# 3. Pull R2R images
+# 4. Pull R2R images
 #
 log "📥 Pulling Docker images..."
+cd "$BASE_DIR"  # Back to deploy directory for docker compose
+if ! validate_file "$COMPOSE_FILE"; then
+  log "❌ Error: Docker compose file $COMPOSE_FILE does not exist or is invalid."
+  exit 1
+fi
 docker compose pull
 
 log "✅ Images pulled successfully."
