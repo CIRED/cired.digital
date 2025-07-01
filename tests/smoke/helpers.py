@@ -13,8 +13,6 @@ from r2r import R2RClient
 
 logger = logging.getLogger(__name__)
 
-# Load configuration from common file
-SERVER_URL: str = "http://localhost:7272"
 TEST_FILE: str = "test.txt"
 TEST_CONTENT: str = "QuetzalX is a person that works at CIRED."
 QUERY: str = "Who is QuetzalX?"
@@ -31,9 +29,9 @@ def query_fixture() -> str:
 
 # Setup the client with a test document
 @pytest.fixture(scope="session")
-def client(test_file: Path) -> R2RClient:
+def client(test_file: Path, server_url: str) -> R2RClient:
     """Pytest fixture that returns an R2RClient with a test document."""
-    client = R2RClient(SERVER_URL)
+    client = R2RClient(server_url)  # Use the server_url fixture
 
     document_id = create_or_get_document(client, test_file)
     if not document_id:

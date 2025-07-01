@@ -14,7 +14,7 @@ fi
 
 if $REMOTE_MODE; then
     log "🚀 Starting remote deployment to $REMOTE_HOST..."
-    execute_remote "cd cired.digital && git pull && deploy/ops/down.sh && deploy/ops/up.sh && deploy/ops/validate.sh"
+    execute_remote "git pull && deploy/ops/down.sh && deploy/ops/up.sh && ENVIRONMENT=production deploy/ops/validate.sh"
     log "✅ Remote deployment completed successfully."
 else
     log "🚀 Starting local deployment..."
