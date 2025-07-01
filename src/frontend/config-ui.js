@@ -90,12 +90,12 @@ document.getElementById("config-panel").innerHTML = `
       </label>
     </div>
 
-    <div class="form-group">
+    <!--div class="form-group">
       <label class="checkbox-label">
         <input type="checkbox" id="include-web-search" class="checkbox-input"  disabled>
         <span class="web-search-text"><strong>Recherche Web</strong> – Inclure les résultats web (0.1 cent par question)</span>
       </label>
-    </div>
+    </div-->
 
     </main> <!-- id="settings-container"-->
 `
