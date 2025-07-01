@@ -60,7 +60,17 @@ sudo ufw enable
 - `git clone https://github.com/MinhHaDuong/cired.digital.git`
 
 
-## Start R2R on the remote
+## Automated Remote Deployment
+
+1. `deploy/ops/deploy.sh --remote`     # Automated deployment to production
+
+## Manual Remote Deployment (if needed)
+
+1. `deploy/ops/up.sh --remote`         # Start services remotely
+2. `deploy/ops/down.sh --remote`       # Stop services remotely
+3. `deploy/ops/validate.sh --remote`   # Validate remotely
+
+## Legacy Manual Process (deprecated)
 
 1. ssh -t admin@157.180.70.232 bash     # Login to the VPS
 2. cd cired.digital                     # Project directory
@@ -100,6 +110,18 @@ Warning: R2R tends to display the login popup even when one is already logged in
 3. Open Firefox's console (F12, Console tab) and verify for errors.
 4. Complete the Onboarding procedure.
 
+## Remote Execution Configuration
+
+The deployment scripts now support remote execution via the `--remote` flag. Server configuration is managed in `deploy/ops/common_config.sh`:
+
+- `REMOTE_USER`: SSH username (default: admin)
+- `REMOTE_HOST`: Server IP address (default: 157.180.70.232)  
+- `REMOTE_PROJECT_PATH`: Project path on server (default: /home/admin/cired.digital)
+
+These can be overridden via environment variables if needed.
+
 ## Notes:
 
 The scripts pair `snapshot.sh` / `restore.sh` are for both deployment and recovery.
+
+All deployment scripts (`up.sh`, `down.sh`, `deploy.sh`) now support the `--remote` flag for automated remote execution via SSH.

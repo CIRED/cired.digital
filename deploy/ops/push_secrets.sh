@@ -10,8 +10,8 @@ SECRETS_DIR="$PROJECT_ROOT/../secrets"
 
 source "$SCRIPT_DIR/common_config.sh"
 
-REMOTE_USER="${1:-admin}"
-REMOTE_HOST="${2:-157.180.70.232}"
+REMOTE_USER="${1:-$REMOTE_USER}"
+REMOTE_HOST="${2:-$REMOTE_HOST}"
 REMOTE_PATH="${3:-/home/admin/secrets/}"
 
 usage() {
