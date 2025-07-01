@@ -50,37 +50,26 @@ body {
 /* Desktop: header fits between the nav buttons */
 
 body > nav {
-  position: fixed;
   top: 1rem;
   left: 1rem;
   right: 1rem;
-  z-index: 1000;
-
   display: grid;
   grid-template-columns: auto 1fr auto auto;
   grid-template-areas: "config spacer help profile";
   gap: 1rem;
   align-items: center;
-
   padding: 0;
   margin: 0;
 }
 
 body > header {
-  position: fixed;
   top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999; /* Below nav buttons */
-
-  width: calc(100% - 12rem); /* Account for button space */
   max-width: 48rem;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
 body > main {
-  margin-top: 7.5rem; /* Space for nav + header (input + help text)  */
   max-width: 48rem;
   margin-left: auto;
   margin-right: auto;
@@ -89,7 +78,6 @@ body > main {
   flex-direction: column;
   justify-content: flex-start;
 }
-
 
 body > footer {
   max-width: 64rem;
