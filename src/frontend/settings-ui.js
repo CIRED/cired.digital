@@ -1,4 +1,4 @@
-document.getElementById("config-panel").innerHTML = `
+document.getElementById("settings-panel").innerHTML = `
   <header>
     <button id="config-close-btn" class="ghost-button">✖️</button>
     <h2>Cirdi settings</h2>
@@ -9,7 +9,7 @@ document.getElementById("config-panel").innerHTML = `
     <div class="form-group">
       <div class="label-with-status">
         <label class="form-label">
-          Server URL
+          URL du serveur R2R
           <span class="help-icon" title="Where to find the R2R API endpoint. Try http://cired.digital:7272">ℹ️</span>
         </label>
         <div class="status-text" id="api-status">Status: OK</div>
@@ -20,7 +20,7 @@ document.getElementById("config-panel").innerHTML = `
     <div class="form-group">
       <div class="label-with-status">
         <label class="form-label">
-          Language model
+          Modèle de langage
           <span class="help-icon" title="The LLM used to generate replies. Commercial options disabled for cost control.">ℹ️</span>
         </label>
         <div class="status-text" id="model-status">Status: ?</div><button id="refresh-models-btn" class="secondary-button" hidden>Refresh</button>
@@ -35,7 +35,7 @@ document.getElementById("config-panel").innerHTML = `
 
     <div class="form-group">
       <label class="form-label">
-        Temperature (response creativity)
+        Température (créativité littéraire)
         <span class="help-icon" title="Automatically set to model provider's recommendations.">ℹ️</span>
       </label>
       <input type="number" id="temperature" class="form-input" step="0.05"/>
@@ -43,7 +43,7 @@ document.getElementById("config-panel").innerHTML = `
 
     <div class="form-group">
       <label class="form-label">
-        Max tokens (response length)
+        Max tokens (longueur de la réponse)
         <span class="help-icon" title="Automatically set according to the model.">ℹ️</span>
       </label>
       <input type="number" id="max-tokens" class="form-input" step="100"/>
@@ -72,11 +72,11 @@ document.getElementById("config-panel").innerHTML = `
     <div class="form-group">
       <label class="checkbox-label">
         <input type="checkbox" id="privacy-mode" class="checkbox-input">
-        <span class="privacy-text"><strong>Privacy Mode</strong> – No logging</span>
+        <span class="privacy-text"><strong>Telemetry</strong> enabled</span>
       </label>
       <div class="form-group">
         <div class="label-with-status">
-          <label class="form-label" for="feedback-url">URL du backend de journalisation</label>
+          <label class="form-label" for="feedback-url">URL du serveur Cirdi</label>
           <div class="status-text" id="feedback-status">Chargement…</div>
         </div>
         <input class="form-input" id="feedback-url" type="text" readonly/>
@@ -90,12 +90,12 @@ document.getElementById("config-panel").innerHTML = `
       </label>
     </div>
 
-    <!--div class="form-group">
+    <div class="form-group" hidden>
       <label class="checkbox-label">
         <input type="checkbox" id="include-web-search" class="checkbox-input"  disabled>
         <span class="web-search-text"><strong>Recherche Web</strong> – Inclure les résultats web (0.1 cent par question)</span>
       </label>
-    </div-->
+    </div>
 
     </main> <!-- id="settings-container"-->
 `

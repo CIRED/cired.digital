@@ -17,7 +17,7 @@ const MAX_INPUT_HEIGHT = 120;
 // DOM ELEMENTS
 // ==========================================
 const configBtn = document.getElementById('config-btn');
-const configPanel = document.getElementById('config-panel');
+const configPanel = document.getElementById('settings-panel');
 const mainDiv = document.querySelector('main');
 const messagesContainer = document.getElementById('messages-container');
 const inputDiv = document.getElementById('input');
