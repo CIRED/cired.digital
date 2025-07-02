@@ -9,11 +9,13 @@ const monitorStatusIndicator = document.getElementById('monitor-status-indicator
 
 function updateStatusDisplay() {
     clearChunkCache();
-    fetchApiStatus();
+    updateR2RServerStatus();
 }
 
-function fetchApiStatus() {
-    if (!apiStatusElement) return;
+function updateR2RServerStatus() {
+    apiStatusElement = document.getElementById('r2r-server-status');
+    r2rURLInput = document.getElementById('r2r-url');
+    if (!apiStatusElement || !r2rURLInput) return;
     const r2rURLHealthEndpoint = r2rURLInput.value.replace(/\/$/, '') + '/v3/health';
     fetch(r2rURLHealthEndpoint)
         .then(res => res.json())
@@ -26,7 +28,7 @@ function fetchApiStatus() {
             isBackendOK = true;
 
             if (!wasBackendOK && isBackendOK) {
-                refreshModels();
+                updateModelStatus();
             }
         })
         .catch(() => {
@@ -36,42 +38,76 @@ function fetchApiStatus() {
         });
 }
 
-function fetchMonitorStatus() {
-    if (!cirdiURLInput || !feedbackStatusEl) return;
+function updateCirdiServerStatus() {
+    cirdiURLInput = document.getElementById('cirdi-url');
+    cirdiServerStatusEl = document.getElementById('cirdi-server-status');
+    if (!cirdiURLInput || !cirdiServerStatusEl) return;
     const monitorUrlHealthEndpoint = cirdiURLInput.value.replace(/\/$/, '') + '/health';
     fetch(monitorUrlHealthEndpoint)
         .then(res => res.json())
         .then(data => {
             const s = (data.status || 'unknown').toUpperCase();
-            feedbackStatusEl.textContent = `Server status : ${s}`;
-            feedbackStatusEl.className = s === 'OK' ? 'status-text status-success' : 'status-text status-error';
+            cirdiServerStatusEl.textContent = `Server status : ${s}`;
+            cirdiServerStatusEl.className = s === 'OK' ? 'status-text status-success' : 'status-text status-error';
         })
         .catch(() => {
-            feedbackStatusEl.textContent = 'Server status : Unreachable';
-            feedbackStatusEl.className = 'status-text status-error';
+            cirdiServerStatusEl.textContent = 'Server status : Unreachable';
+            cirdiServerStatusEl.className = 'status-text status-error';
         });
 }
 
-async function refreshModels() {
-    if (!modelStatusElement || !refreshModelsBtn) return;
+function setLLMStatus(status, message = '') {
+    const modelStatusElement = document.getElementById('model-status');
+    const updateModelStatusBtn = document.getElementById('refresh-models-btn');
+    if (!modelStatusElement || !updateModelStatusBtn) return;
 
-    refreshModelsBtn.disabled = true;
+    updateModelStatusBtn.disabled = false;
+    modelStatusElement.className = 'status-text';
+
+    switch (status) {
+        case 'waiting':
+            modelStatusElement.textContent = 'R2R server not available...';
+            modelStatusElement.className += ' status-error';
+            break;
+        case 'testing':
+            modelStatusElement.textContent = 'Asking the model if it is up.';
+            updateModelStatusBtn.disabled = true;
+            break;
+        case 'error':
+            modelStatusElement.textContent = message;
+            modelStatusElement.className += ' status-error';
+            break;
+        case 'success':
+            modelStatusElement.textContent = message || 'Model status : OK';
+            modelStatusElement.className += ' status-success';
+            break;
+        default:
+            modelStatusElement.textContent = 'Model status : Unknown';
+            modelStatusElement.className += ' status-error';
+    }
+}
+
+async function updateModelStatus() {
+    const modelStatusElement = document.getElementById('model-status');
+    const updateModelStatusBtn = document.getElementById('refresh-models-btn');
+    if (!modelStatusElement || !updateModelStatusBtn) return;
 
     if (!isBackendOK) {
-        modelStatusElement.textContent = 'Waiting for server';
-        modelStatusElement.className = 'status-text';
-        refreshModelsBtn.disabled = false;
+        setLLMStatus('waiting');
         return;
     }
 
-    modelStatusElement.textContent = 'Testing model...';
-    modelStatusElement.className = 'status-text';
+    setLLMStatus('testing');
 
     try {
-        const config = getConfiguration();
-        const r2rURL = config.r2rURL;
-        const selectedModel = config.model;
+        const r2rURLInput = document.getElementById('r2r-url');
+        const modelSelect = document.getElementById('model-select');
+        const selectedModel = modelSelect.value;
+        if (!r2rURLInput || !modelSelect || !selectedModel) {
+            throw new Error('Required form elements not found');
+        }
 
+        const endpoint = r2rURLInput.value.replace(/\/$/, '') + '/v3/retrieval/completion';
         const requestBody = {
             messages: [
                 {"role": "system", "content": "Just reply with 'OK', this is a handshake test."},
@@ -85,27 +121,37 @@ async function refreshModels() {
             }
         };
 
-        const response = await fetch(`${r2rURL}/v3/retrieval/completion`, {
+        debugLog(`Sending ${selectedModel} request:`, requestBody);
+        const startTime = performance.now();
+        const response = await fetch(endpoint, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+            headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(requestBody)
         });
 
-        if (response.ok) {
-            const data = await response.json();
-            modelStatusElement.textContent = `Model: ${selectedModel} - OK`;
-            modelStatusElement.className = 'status-text status-success';
-        } else {
-            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        }
+        const endTime = performance.now();
+        const elapsedSeconds = ((endTime - startTime) / 1000).toFixed(1);
 
+        debugLog('LLM test response:', {
+            status: response.status,
+            ok: response.ok,
+            elapsed: `${elapsedSeconds}s`
+        });
+
+        if (response.ok) {
+            setLLMStatus('success', `${selectedModel} response time ${elapsedSeconds}s`);
+        } else {
+            // Try to parse as JSON first, fall back to text
+            let errorMessage;
+            try {
+                const errorData = await response.json();
+                errorMessage = errorData.detail?.message || errorData.message || `HTTP ${response.status}`;
+            } catch {
+                errorMessage = await response.text() || `HTTP ${response.status}`;
+            }
+            setLLMStatus('error', `${selectedModel} ${errorMessage}`);
+        }
     } catch (error) {
-        modelStatusElement.textContent = `Model: ${modelSelect.value} - Error: ${error.message}`;
-        modelStatusElement.className = 'status-text status-error';
-        console.error('Model refresh failed:', error);
-    } finally {
-        refreshModelsBtn.disabled = false;
+        setLLMStatus('error', error.message);
     }
 }
