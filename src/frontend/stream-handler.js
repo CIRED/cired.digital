@@ -79,10 +79,10 @@ function handleMessageStreaming(container, timestamp, data) {
     if (!messageText) return;
 
     // Find or create the message paragraph container
-    let messageContainer = container.querySelector('.streaming-message-container');
-    if (!messageContainer) {
-        messageContainer = document.createElement('div');
-        messageContainer.className = 'streaming-message-container';
+    let streamContainer = container.getElementById('streaming-message-container');
+    if (!streamContainer) {
+        streamContainer = document.createElement('div');
+        streamContainer.id = 'streaming-message-container';
 
         // Add header for the message section
         const messageHeader = document.createElement('div');
@@ -103,13 +103,13 @@ function handleMessageStreaming(container, timestamp, data) {
             word-wrap: break-word;
         `;
 
-        messageContainer.appendChild(messageHeader);
-        messageContainer.appendChild(messageParagraph);
-        container.appendChild(messageContainer);
+        streamContainer.appendChild(messageHeader);
+        streamContainer.appendChild(messageParagraph);
+        container.appendChild(streamContainer);
     }
 
     // Append new text to the paragraph
-    const messageParagraph = messageContainer.querySelector('.streaming-message-text');
+    const messageParagraph = streamContainer.querySelector('.streaming-message-text');
     if (messageParagraph) {
         messageParagraph.textContent += messageText;
 
@@ -317,9 +317,9 @@ function handleMetadata(eventData, streamState) {
 
 function handleCompletion() {
     debugLog('Stream completion event received');
-    const messageContainer = document.querySelector('.streaming-message-container');
-    if (messageContainer) {
-        const header = messageContainer.querySelector('.streaming-event');
+    const streamContainer = document.getElementById('streaming-message-container');
+    if (streamContainer) {
+        const header = streamContainer.querySelector('.streaming-event');
         if (header) {
             header.textContent = header.textContent.replace('generating response...', 'response complete');
         }
