@@ -105,13 +105,14 @@ function initializeSession() {
 
 async function initializeApp() {
   try {
+    setupPageEventListeners();
+
     const env = detectEnvironment();
     settings = selectSettings(env);  // TODO: get rid of this global variable
     populateFormFromSettings(settings);
     setupSettingsListeners();
 
-    setupPageEventListeners();
-
+    initializeHelp();
     initializeProfile();
 
     debugLog('App initialized');

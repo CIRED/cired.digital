@@ -2,10 +2,9 @@
 // onboarding-logic.js
 // ==========================================
 
-const onboardingPanel = document.getElementById('onboarding-panel');
-
-// ==========================================
 // =========== Onboarding State ==============
+// Use localStorage to avoid showing the onboarding panel multiple times
+// across page reloads or sessions.
 
 const PROFILE_ONBOARDED_KEY = 'profile-onboarded';
 
@@ -22,6 +21,7 @@ function showOnboardingPanel() {
 }
 
 function hideOnboardingPanel() {
+    const onboardingPanel = document.getElementById('onboarding-panel');
     if (onboardingPanel) {
         onboardingPanel.hidden = true;
     }
@@ -49,7 +49,7 @@ function clearOnboardingStages() {
 }
 
 function completeStage(stage) {
-    showCompleted(stage);
+    showAsCompleted(stage);
     if (isStageCompleted(stage)) {
         console.warn(`Stage ${stage} is already completed`);
         return;
@@ -65,8 +65,20 @@ function completeStage(stage) {
     }
 }
 
-// ==========================================
-// ==========================================
+function restoreOnboardingStages() {
+    ONBOARDING_STAGES.forEach(stageKey => {
+        if (isStageCompleted(stageKey)) {
+            showAsCompleted(stageKey);
+        }
+    });
+
+    if (isOnboarded()) {
+        debugLog('User already onboarded');
+        showOnboardingCompleted();
+    }
+}
+
+// =========== Onboarding Stages =============
 
 function onFirstResponseCompleted() {
     completeStage('question');
@@ -102,48 +114,22 @@ function restartOnboarding() {
     initializeOnBoarding();
 }
 
+function goInput() {
+    const userInput = document.getElementById('user-input');
+    if (userInput) {
+        userInput.focus();
+        userInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
 function addHandlersToOnboarding() {
-    // Add event listeners for onboarding actions
-    const onboardingCloseBtn = document.getElementById('onboarding-close-btn');
-    if (onboardingCloseBtn) {
-        onboardingCloseBtn.addEventListener('click', handleOnboardingCloseBtn);
-    }
-
-    const onboardingPassBtn = document.getElementById('onboarding-pass-btn');
-    if (onboardingPassBtn) {
-        onboardingPassBtn.addEventListener('click', handleOnboardingPassBtn);
-    }
-
-    const onboardingResetBtn = document.getElementById('onboarding-reset-btn');
-    if (onboardingResetBtn) {
-        onboardingResetBtn.addEventListener('click', restartOnboarding);
-    }
-
-    const openProfileBtn = document.getElementById('open-profile-btn');
-    if (openProfileBtn) {
-        openProfileBtn.addEventListener('click', showProfileDialog);
-    }
-
-    const openHelpBtn = document.getElementById('open-help-btn');
-    if (openHelpBtn) {
-        openHelpBtn.addEventListener('click', showHelpPanel);
-    }
-
-    const helpCloseBtn = document.getElementById('help-close-btn');
-    if (helpCloseBtn) {
-        helpCloseBtn.addEventListener('click', () => onHelpCompleted());
-    }
-
-    const focusInputBtn = document.getElementById('focus-input');
-    if (focusInputBtn) {
-        focusInputBtn.addEventListener('click', () => {
-            const userInput = document.getElementById('user-input');
-            if (userInput) {
-                userInput.focus();
-                userInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        });
-    }
+    attach('onboarding-close-btn', 'click', handleOnboardingCloseBtn);
+    attach('onboarding-pass-btn', 'click', handleOnboardingPassBtn);
+    attach('onboarding-profile-btn', 'click', showProfileDialog);
+    attach('onboarding-reset-btn', 'click', restartOnboarding);
+    attach('open-help-btn', 'click', showHelpPanel);
+    attach('help-close-btn', 'click', () => onHelpCompleted());
+    attach('focus-input-btn', 'click', goInput);
 }
 
 // ==========================================
@@ -157,19 +143,9 @@ function initializeOnBoarding(openAnyway = false) {
     const onboardingPanel = document.getElementById('onboarding-panel');
     onboardingPanel.innerHTML = onboardingHTML;
 
-    // Update for the completed stages
-    ONBOARDING_STAGES.forEach(stageKey => {
-        if (isStageCompleted(stageKey)) {
-            showCompleted(stageKey);
-        }
-    });
-
     addHandlersToOnboarding();
 
-    if (isOnboarded()) {
-        debugLog('User already onboarded');
-        showOnboardingCompleted();
-    }
+    restoreOnboardingStages();
 
     if (!isOnboarded() || openAnyway) {
         onboardingPanel.hidden = false;

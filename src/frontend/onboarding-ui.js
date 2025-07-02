@@ -52,7 +52,7 @@ const onboardingHTML = `
 </footer>
 `;
 
-function showCompleted(stageKey) {
+function showAsCompleted(stageKey) {
     const stageLi = document.getElementById(`onboarding-stage-${stageKey}`);
     if(stageLi) {stageLi.className = 'onboarding-stage-complete'};
 
