@@ -79,7 +79,7 @@ async function fetchChunkData(chunkId, tooltip) {
         }
 
         // Get API URL from configuration
-        const r2rURL = document.getElementById('r2r-url').value || DEFAULT_HOST;
+        const r2rURL = document.getElementById('r2r-url').value;
 
         const startTime = Date.now();
         const response = await fetch(`${r2rURL}/v3/chunks/${chunkId}`, {
