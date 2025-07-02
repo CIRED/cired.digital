@@ -52,7 +52,7 @@ body {
 body > nav {
   display: grid;
   grid-template-columns: auto 1fr auto auto;
-  grid-template-areas: "config spacer help profile";
+  grid-template-areas: "settings spacer help profile";
   gap: 1rem;
   align-items: center;
   padding: 0;
@@ -199,7 +199,7 @@ body > footer a:hover {
    Nav contents
    ========================================== */
 
-#config-btn {grid-area: config;}
+#settings-btn {grid-area: settings;}
 .spacer {grid-area: spacer;}
 #help-btn {grid-area: help;}
 #profile-btn {grid-area: profile;}

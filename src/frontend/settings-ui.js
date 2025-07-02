@@ -1,6 +1,6 @@
 document.getElementById("settings-panel").innerHTML = `
   <header>
-    <button id="config-close-btn" class="ghost-button">✖️</button>
+    <button id="settings-close-btn" class="ghost-button">✖️</button>
     <h2>Cirdi settings</h2>
   </header>
 
@@ -25,7 +25,7 @@ document.getElementById("settings-panel").innerHTML = `
         </label>
         <div class="status-text" id="model-status">Status: ?</div><button id="refresh-models-btn" class="secondary-button" hidden>Refresh</button>
       </div>
-      <select class="form-select" id="model">
+      <select class="form-select" id="model-select">
         <option>Chargement...</option>
       </select>
       <div id="model-info">

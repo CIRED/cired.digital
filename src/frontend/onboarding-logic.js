@@ -26,9 +26,9 @@ function hideOnboardingPanel() {
         onboardingPanel.hidden = true;
     }
 
-    const configBtn = document.getElementById('config-btn');
-    if (configBtn && isOnboarded()) {
-        configBtn.style.display = '';
+    const settingsBtn = document.getElementById('settings-btn');
+    if (settingsBtn && isOnboarded()) {
+        settingsBtn.style.display = '';
     }
 }
 

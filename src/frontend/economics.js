@@ -8,11 +8,11 @@ function presentEconomics(costs) {
     `.replace(/\s+/g, ' ').trim();
 }
 
-function estimateCosts(config, results, duration) {
+function estimateCosts(settings, results, duration) {
     const seconds = duration / 1000; // Convert milliseconds to seconds
     const tokensIn = results.metadata.usage.prompt_tokens || 0;
     const tokensOut = results.metadata.usage.completion_tokens || 0;
-    const modelKey = config.model || 'unknown';
+    const modelKey = settings.model || 'unknown';
     const modelConfig = allSettings.modelDefaults?.[modelKey];
     const tariff = modelConfig?.tariff;
 
@@ -46,7 +46,7 @@ function estimateCosts(config, results, duration) {
 
 
 // Fixed estimateCosts function to handle missing metadata gracefully
-function _estimateCosts(config, results, duration) {
+function _estimateCosts(settings, results, duration) {
     const usage = results.metadata?.usage || {
         prompt_tokens: 0,
         completion_tokens: results.generated_answer?.length || 0,

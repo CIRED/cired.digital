@@ -42,7 +42,7 @@ const onboardingHTML = `
             Ce panneau ne sera plus ouvert automatiquement lorsque vous reviendrez.
             Vous pourrez y réaccéder via le panneau de profil utilisateur.
             <br />
-            Un bouton "Settings" <button id="show-config-btn">⚙️</button> pour utilisateurs avancés sera disponible en haut à gauche après la fermeture de ce guide de démarrage rapide.
+            Un bouton "Settings" <button id="show-settings-btn">⚙️</button> pour utilisateurs avancés sera disponible en haut à gauche après la fermeture de ce guide de démarrage rapide.
     </p>
 </main>
 
