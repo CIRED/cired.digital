@@ -10,6 +10,23 @@ pytest_plugins = ["tests.smoke.helpers"]
 
 
 @pytest.fixture(scope="session")
+def base_url():
+    """
+    Provide the base URL for the application.
+
+    Returns:
+        str: The base URL for the application.
+
+    # You can set BASE_URL environment variable to test the production URL
+    # BASE_URL=http://cired.digital pytest tests/e2e/
+    # This is even possible but not faster than using the default using the local server
+    # BASE_URL=file:///home/haduong/CNRS/projets/actifs/CIRED.digital/cired.digital/src/frontend/index.html pytest tests/e2e/test_prod_homepage.py
+
+    """
+    return os.getenv("BASE_URL", "http://localhost:8080")
+
+
+@pytest.fixture(scope="session")
 def server_url() -> str:
     """
     Provide the server URL based on the ENVIRONMENT variable.
