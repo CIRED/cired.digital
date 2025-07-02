@@ -1,7 +1,5 @@
 // ==========================================
 // ==========================================
-const DEFAULT_HOST = 'http://localhost:7272';
-
 
 let isLoading = false;
 let articleIdCounter = 1;
@@ -10,16 +8,12 @@ let sessionStartTime = null;
 let statusInterval = null;
 let feedbackInterval = null;
 let currentArticleIndex = -1;
-const MAX_INPUT_HEIGHT = 120;
 
 // ==========================================
 // DOM ELEMENTS
 // ==========================================
-const mainDiv = document.querySelector('main');
 const messagesContainer = document.getElementById('messages-container');
-const inputDiv = document.getElementById('input');
 const userInput = document.getElementById('user-input');
-const inputHelp = document.getElementById('input-help');
 
 // ==========================================
 // EVENT LISTENERS SETUP
@@ -27,26 +21,8 @@ const inputHelp = document.getElementById('input-help');
 
 function setupPageEventListeners() {
 
-    userInput.addEventListener('input', function() {
-        // Auto-resize the input field
-        this.style.height = 'auto';
-        // But no more than 120px tall
-        this.style.height = Math.min(this.scrollHeight, MAX_INPUT_HEIGHT) + 'px';
-    });
-
-    const sendBtn = document.getElementById('send-btn');
-    if (sendBtn) {
-        sendBtn.addEventListener('click', processInput);
-    }
-
-    userInput.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter' && !e.shiftKey) {
-        // Don't add a new line
-        e.preventDefault();
-        // Process the message
-        sendBtn.click();
-    }
-    });
+    attach('user-input', 'keydown', handleUserInputKeyDown);
+    attach('send-btn', 'click', processInput);
 
     initializeSession();
 
@@ -64,6 +40,12 @@ function setupPageEventListeners() {
 
 }
 
+function handleUserInputKeyDown(e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+       sendBtn.click();
+    }
+}
 
 function logSessionEnd() {
     if (sessionStartTime) {
@@ -121,31 +103,29 @@ function initializeSession() {
 // INITIALIZATION
 // ==========================================
 
-async function initializeConfig() {
-  if (!loadEnvironmentSettings()) {
-    addMainError("Settings initialization failed. Check console for details.");
-    return;
-  }
+async function initializeApp() {
   try {
-    if (!settings) throw new Error("Settings not loaded. Make sure settings.js is included before settings.js.");
+    const env = detectEnvironment();
+    settings = selectSettings(env);  // TODO: get rid of this global variable
     populateFormFromSettings(settings);
+    setupSettingsListeners();
 
     setupPageEventListeners();
-    setupSettingsListeners();
 
     initializeProfile();
 
-    debugLog('Configuration initialized');
+    debugLog('App initialized');
   } catch (err) {
     addMainError("Initialization failed: " + err.message);
     console.error('Initialization error:', err);
   }
 }
 
+
 if (document.readyState === 'loading') {
      document.addEventListener('DOMContentLoaded', () => {
-         initializeConfig();
+         initializeApp();
      });
 } else {
-    initializeConfig();
+    initializeApp();
 }

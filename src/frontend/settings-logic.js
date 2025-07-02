@@ -37,7 +37,8 @@ function detectEnvironment() {
   return (!hostname || hostname === "doudou" || hostname === "localhost") ? "dev" : "prod";
 }
 
-function validateSettings(env) {
+function selectSettings(env) {
+  // allSettings should be defined in settings.js
   if (!allSettings) {
     throw new Error("allSettings not found. Make sure settings.js is included before settings.js.");
   }
@@ -47,18 +48,7 @@ function validateSettings(env) {
   if (!allSettings.profiles[env]) {
     throw new Error(`Settings inconnus pour '${env}'. Available profiles: ${Object.keys(allSettings.profiles).join(', ')}`);
   }
-}
-
-function loadEnvironmentSettings() {
-  try {
-    const env = detectEnvironment();
-    validateSettings(env);
-    settings = allSettings.profiles[env];
-    return true;
-  } catch (err) {
-    console.error("Settings initialization failed:", err.message);
-    return false;
-  }
+  return allSettings.profiles[env];
 }
 
 // ===== Settings UI Initialization =====
