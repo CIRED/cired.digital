@@ -107,6 +107,8 @@ function uiProcessingEnd() {
 
     messagesContainer.querySelectorAll('article').forEach(el => el.classList.remove('seen'));
     setLoadingState(false);
+
+    const userInput = document.getElementById('user-input');
     userInput.focus();
 }
 
