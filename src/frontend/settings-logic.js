@@ -93,8 +93,8 @@ function populateFormFromSettings(settings) {
   }
 
   const telemetryCheckbox = document.getElementById('telemetry-mode');
-  if (telemetryCheckbox && settings.telemetryMode !== undefined) {
-    telemetryCheckbox.checked = settings.telemetryMode;
+  if (telemetryCheckbox && settings.telemetry !== undefined) {
+    telemetryCheckbox.checked = settings.telemetry;
     overrideTelemetrySettingFromStorage();
   }
 
