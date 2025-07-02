@@ -165,35 +165,9 @@ function handleOpenOnboarding() {
 function initializeProfile() {
     debugLog('Initializing profile system');
 
-    if (profileBtn) {
-        profileBtn.addEventListener('click', showProfileDialog);
-    }
-
-    if (profileCloseBtn) {
-        profileCloseBtn.addEventListener('click', hideProfileDialog);
-    }
-
-    if (saveProfileBtn) {
-        saveProfileBtn.addEventListener('click', handleSaveProfile);
-    }
-
-    if (clearProfileBtn) {
-        clearProfileBtn.addEventListener('click', handleClearProfile);
-    }
-
-    if (onboardingBtn) {
-        onboardingBtn.addEventListener('click', handleOpenOnboarding);
-    }
-
-    debugLog('Profile system initialized');
-}
-
-
-// Initialize the profile system when the script loads
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        initializeProfile();
-    });
-} else {
-    initializeProfile();
+    attach('profile-btn', 'click', showProfileDialog);
+    attach('profile-close-btn', 'click', hideProfileDialog);
+    attach('save-profile-btn', 'click', handleSaveProfile);
+    attach('clear-profile-btn', 'click', handleClearProfile);
+    attach('onboarding-btn', 'click', handleOpenOnboarding);
 }

@@ -11,8 +11,8 @@ const onboardingHTML = `
     <ol>
         <li id="onboarding-stage-question">
             Posez une première question à Cirdi. Le champ de saisie est en haut au centre,
-            le bouton <button class="gost-button">➤</button> lance la requête.
-            <button id="focus-input">Aller au champ de saisie</button>.
+            le bouton <button class="ghost-button">➤</button> lance la requête.
+            <button id="go-input-btn">Aller au champ de saisie</button>.
             <br />
             Première réponse: <span id="question-status">En attente.</span>
         </li>
@@ -21,7 +21,7 @@ const onboardingHTML = `
             quelques mots et un choix entre <button class="ghost-button feedback-up" title="Bonne réponse.">👍</button>
             et <button class="ghost-button feedback-down" title="Réponse insuffisante.">👎</button> pour envoyer.
             <br />
-            Retour d'expérience envoyé: <span id="feedback-status">En attente.</span>
+            Retour d'expérience envoyé: <span id="cirdi-server-status">En attente.</span>
         </li>
         <li id="onboarding-stage-help">
             Ouvrez le mode d'emploi. Le bouton
@@ -42,7 +42,7 @@ const onboardingHTML = `
             Ce panneau ne sera plus ouvert automatiquement lorsque vous reviendrez.
             Vous pourrez y réaccéder via le panneau de profil utilisateur.
             <br />
-            Un bouton "Settings" <button id="show-config-btn">⚙️</button> pour utilisateurs avancés sera disponible en haut à gauche après la fermeture de ce guide de démarrage rapide.
+            Un bouton "Settings" <button id="show-settings-btn">⚙️</button> pour utilisateurs avancés sera disponible en haut à gauche après la fermeture de ce guide de démarrage rapide.
     </p>
 </main>
 
@@ -52,7 +52,7 @@ const onboardingHTML = `
 </footer>
 `;
 
-function showCompleted(stageKey) {
+function showAsCompleted(stageKey) {
     const stageLi = document.getElementById(`onboarding-stage-${stageKey}`);
     if(stageLi) {stageLi.className = 'onboarding-stage-complete'};
 
