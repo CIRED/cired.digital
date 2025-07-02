@@ -79,19 +79,19 @@ function handleMessageStreaming(container, timestamp, data) {
     if (!messageText) return;
 
     // Find or create the message paragraph container
-    let streamContainer = container.getElementById('streaming-message-container');
+    let streamContainer = container.querySelector('#streaming-message-container');
     if (!streamContainer) {
         streamContainer = document.createElement('div');
         streamContainer.id = 'streaming-message-container';
 
         // Add header for the message section
         const messageHeader = document.createElement('div');
-        messageHeader.className = 'streaming-event';
+        messageHeader.id = 'streaming-event';
         messageHeader.textContent = `[${timestamp.toFixed(1)}s] message: generating response...`;
 
         // Create the actual text paragraph
         const messageParagraph = document.createElement('div');
-        messageParagraph.className = 'streaming-message-text';
+        messageParagraph.id = 'streaming-message-text';
         messageParagraph.style.cssText = `
             margin: 8px 0 8px 20px;
             padding: 8px;
@@ -109,7 +109,7 @@ function handleMessageStreaming(container, timestamp, data) {
     }
 
     // Append new text to the paragraph
-    const messageParagraph = streamContainer.querySelector('.streaming-message-text');
+    const messageParagraph = streamContainer.querySelector('#streaming-message-text');
     if (messageParagraph) {
         messageParagraph.textContent += messageText;
 
@@ -319,7 +319,7 @@ function handleCompletion() {
     debugLog('Stream completion event received');
     const streamContainer = document.getElementById('streaming-message-container');
     if (streamContainer) {
-        const header = streamContainer.querySelector('.streaming-event');
+        const header = streamContainer.querySelector('#streaming-event');
         if (header) {
             header.textContent = header.textContent.replace('generating response...', 'response complete');
         }

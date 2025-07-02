@@ -3,9 +3,9 @@ const allSettings = {
     dev: {
       r2rURL: "http://localhost:7272",
       models: [
-        "mistral/open-mistral-7b",
         "mistral/mistral-small-latest",
         "mistral/mistral-medium-latest",
+        "mistral/open-mistral-7b",
         "deepseek/deepseek-chat",
         "deepseek/deepseek-reasoner",
         "anthropic/claude-3-5-haiku-latest",
@@ -27,12 +27,8 @@ const allSettings = {
     prod: {
       r2rURL: "http://r2r-api.cired.digital",
       models: [
-        "mistral/open-mistral-7b",
         "mistral/mistral-small-latest",
         "mistral/mistral-medium-latest",
-        "ollama/mistral-small:24b-3.1-instruct-2503-q8_0",
-        "ollama/mistral-large:latest",
-        "ollama/qwen3:32b",
       ],
       chunkLimit: 10,
       searchStrategy: "vanilla",
