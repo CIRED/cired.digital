@@ -43,7 +43,7 @@ document.getElementById("settings-panel").innerHTML = `
 
     <div class="form-group">
       <label class="form-label">
-        Max tokens (longueur de la réponse)
+        Max tokens (limite la réponse)
         <span class="help-icon" title="Automatically set according to the model.">ℹ️</span>
       </label>
       <input type="number" id="max-tokens" class="form-input" step="100"/>
@@ -72,7 +72,7 @@ document.getElementById("settings-panel").innerHTML = `
     <div class="form-group">
       <label class="checkbox-label">
         <input type="checkbox" id="telemetry-mode">
-        <span>Télémetrie (collecte des données d'utilisation)</span>
+        <span>Télémétrie (collecte des données d'utilisation)</span>
       </label>
       <div class="form-group">
         <div class="label-with-status">
