@@ -65,7 +65,7 @@ async function monitor(eventType, payload) {
         debugLog('Invalid monitor event type', eventType);
         return;
     }
-    const analyticsEndpoint = feedbackUrlInput.value.replace(/\/$/, '') + '/v1/monitor'
+    const analyticsEndpoint = cirdiURLInput.value.replace(/\/$/, '') + '/v1/monitor'
     const timestamp = new Date().toISOString().replace(/[^a-zA-Z0-9]/g, '');
     const data = {
         sessionId,

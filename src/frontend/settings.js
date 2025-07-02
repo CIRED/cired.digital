@@ -1,12 +1,7 @@
 const allSettings = {
   profiles: {
     dev: {
-      apiUrl: "http://localhost:7272",
-      feedbackUrl: "http://localhost:7277",
-      debugMode: true,
-      chunkLimit: 10,
-      searchStrategy: "vanilla",
-      includeWebSearch: false,
+      r2rURL: "http://localhost:7272",
       models: [
         "deepseek/deepseek-reasoner",
         "mistral/mistral-small-latest",
@@ -19,22 +14,29 @@ const allSettings = {
         "ollama/mistral-small:24b-3.1-instruct-2503-q8_0",
         "ollama/mistral-large:latest",
         "ollama/qwen3:32b",
-      ]
-    },
-    prod: {
-      apiUrl: "http://r2r-api.cired.digital",
-      feedbackUrl: "http://cirdi-api.cired.digital",
-      debugMode: false,
+      ],
       chunkLimit: 10,
       searchStrategy: "vanilla",
+      telemetry: true,
+      cirdiURL: "http://localhost:7277",
+      debugMode: true,
       includeWebSearch: false,
+    },
+    prod: {
+      r2rURL: "http://r2r-api.cired.digital",
       models: [
         "mistral/mistral-small-latest",
         "mistral/mistral-medium-latest",
         "ollama/mistral-small:24b-3.1-instruct-2503-q8_0",
         "ollama/mistral-large:latest",
         "ollama/qwen3:32b",
-      ]
+      ],
+      chunkLimit: 10,
+      searchStrategy: "vanilla",
+      telemetry: true,
+      cirdiURL: "http://cirdi-api.cired.digital",
+      debugMode: false,
+      includeWebSearch: false,
     },
   },
 

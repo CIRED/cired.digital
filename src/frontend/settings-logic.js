@@ -57,12 +57,12 @@ function loadSettings() {
 
 function applySettings(settings) {
     // Set API URL
-    if (settings.apiUrl && typeof apiUrlInput !== "undefined") {
-        apiUrlInput.value = settings.apiUrl;
+    if (settings.r2rURL && typeof r2rURLInput !== "undefined") {
+        r2rURLInput.value = settings.r2rURL;
     }
 
-    if (settings.feedbackUrl && typeof feedbackUrlInput !== "undefined") {
-        feedbackUrlInput.value = settings.feedbackUrl;
+    if (settings.cirdiURL && typeof cirdiURLInput !== "undefined") {
+        cirdiURLInput.value = settings.cirdiURL;
     }
 
     // Populate language model select options

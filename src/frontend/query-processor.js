@@ -54,11 +54,11 @@ async function executeQuery(context) {
 
     try {
         const startTime = Date.now();
-        const response = await makeApiRequest(context.config.apiUrl, context.requestBody);
+        const response = await makeApiRequest(context.config.r2rURL, context.requestBody);
         const duration = Date.now() - startTime;
 
         debugLog('API request completed', {
-            apiUrl: context.config.apiUrl,
+            r2rURL: context.config.r2rURL,
             status: response.status,
             responseTime: `${duration}ms`,
         });
@@ -77,7 +77,7 @@ function resetMessageInput() {
 
 function getConfiguration() {
     return {
-        apiUrl: apiUrlInput.value,
+        r2rURL: r2rURLInput.value,
         model: modelSelect.value,
         temperature: parseFloat(temperatureInput.value),
         maxTokens: parseInt(maxTokensInput.value),
@@ -108,8 +108,8 @@ function buildRequestBody(query, config) {
     };
 }
 
-async function makeApiRequest(apiUrl, requestBody) {
-    const response = await fetch(`${apiUrl}/v3/retrieval/rag`, {
+async function makeApiRequest(r2rURL, requestBody) {
+    const response = await fetch(`${r2rURL}/v3/retrieval/rag`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -123,7 +123,7 @@ async function makeApiRequest(apiUrl, requestBody) {
             status: response.status,
             statusText: response.statusText,
             errorData,
-            url: apiUrl
+            url: r2rURL
         });
         throw new Error(`API Error: ${response.status} ${response.statusText}`);
     }

@@ -14,17 +14,17 @@ function updateStatusDisplay() {
 
 function fetchApiStatus() {
     if (!apiStatusElement) return;
-    const apiUrlHealthEndpoint = apiUrlInput.value.replace(/\/$/, '') + '/v3/health';
-    fetch(apiUrlHealthEndpoint)
+    const r2rURLHealthEndpoint = r2rURLInput.value.replace(/\/$/, '') + '/v3/health';
+    fetch(r2rURLHealthEndpoint)
         .then(res => res.json())
         .then(data => {
             const message = data.results?.message?.toUpperCase() || data.status || data.health || 'unknown';
             apiStatusElement.textContent = `Server status: ${message}`;
             apiStatusElement.className = 'status-text status-success';
-            
+
             const wasBackendOK = isBackendOK;
             isBackendOK = true;
-            
+
             if (!wasBackendOK && isBackendOK) {
                 refreshModels();
             }
@@ -37,8 +37,8 @@ function fetchApiStatus() {
 }
 
 function fetchMonitorStatus() {
-    if (!feedbackUrlInput || !feedbackStatusEl) return;
-    const monitorUrlHealthEndpoint = feedbackUrlInput.value.replace(/\/$/, '') + '/health';
+    if (!cirdiURLInput || !feedbackStatusEl) return;
+    const monitorUrlHealthEndpoint = cirdiURLInput.value.replace(/\/$/, '') + '/health';
     fetch(monitorUrlHealthEndpoint)
         .then(res => res.json())
         .then(data => {
@@ -56,20 +56,20 @@ async function refreshModels() {
     if (!modelStatusElement || !refreshModelsBtn) return;
 
     refreshModelsBtn.disabled = true;
-    
+
     if (!isBackendOK) {
         modelStatusElement.textContent = 'Waiting for server';
         modelStatusElement.className = 'status-text';
         refreshModelsBtn.disabled = false;
         return;
     }
-    
+
     modelStatusElement.textContent = 'Testing model...';
     modelStatusElement.className = 'status-text';
 
     try {
         const config = getConfiguration();
-        const apiUrl = config.apiUrl;
+        const r2rURL = config.r2rURL;
         const selectedModel = config.model;
 
         const requestBody = {
@@ -85,7 +85,7 @@ async function refreshModels() {
             }
         };
 
-        const response = await fetch(`${apiUrl}/v3/retrieval/completion`, {
+        const response = await fetch(`${r2rURL}/v3/retrieval/completion`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

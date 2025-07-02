@@ -26,7 +26,7 @@ const inputHelp = document.getElementById('input-help');
 const sendBtn = document.getElementById('send-btn');
 
 // Configuration elements
-const apiUrlInput = document.getElementById('api-url');
+const r2rURLInput = document.getElementById('r2r-url');
 const modelSelect = document.getElementById('model');
 const temperatureInput = document.getElementById('temperature');
 const maxTokensInput = document.getElementById('max-tokens');
@@ -34,9 +34,9 @@ const debugModeCheckbox = document.getElementById('debug-mode');
 const chunkLimitInput = document.getElementById('chunk-limit');
 const searchStrategySelect = document.getElementById('search-strategy');
 const includeWebSearchCheckbox = document.getElementById('include-web-search');
-const apiStatusElement = document.getElementById('api-status');
-const feedbackUrlInput = document.getElementById('feedback-url');
-const feedbackStatusEl = document.getElementById('feedback-status');
+const apiStatusElement = document.getElementById('r2r-server-status');
+const cirdiURLInput = document.getElementById('cirdi-url');
+const feedbackStatusEl = document.getElementById('cirdi-server-status');
 const refreshModelsBtn = document.getElementById('refresh-models-btn');
 const modelStatusElement = document.getElementById('model-status');
 
@@ -89,7 +89,7 @@ function setupEventListeners() {
     });
 
     // Update backend status display when URL changes
-    apiUrlInput.addEventListener('change', updateStatusDisplay);
+    r2rURLInput.addEventListener('change', updateStatusDisplay);
 
     // Set temperature and max-tokens to default values when model changes
     modelSelect.addEventListener('change', () => {
@@ -135,7 +135,7 @@ function setupEventListeners() {
 
     document.getElementById('view-analytics-link').addEventListener('click', function(e) {
         e.preventDefault();
-        window.open(feedbackUrlInput.value.replace(/\/$/, '') + '/v1/view/privacy', '_blank');
+        window.open(cirdiURLInput.value.replace(/\/$/, '') + '/v1/view/privacy', '_blank');
     });
 
 }
@@ -171,10 +171,10 @@ function logSessionEnd() {
 function initializePrivacyMode() {
     debugLog('Initializing privacy mode');
 
-    const privacyCheckbox = document.getElementById('privacy-mode');
+    const privacyCheckbox = document.getElementById('telemetry-mode');
     const statusText = document.getElementById('status-text');
 
-    const privacyMode = localStorage.getItem('privacy-mode') === 'true';
+    const privacyMode = localStorage.getItem('telemetry-mode') === 'true';
     privacyCheckbox.checked = privacyMode;
 
     debugLog('Privacy mode state loaded', { privacyMode });
@@ -182,14 +182,14 @@ function initializePrivacyMode() {
     updatePrivacyStatus();
 
     privacyCheckbox.addEventListener('change', function() {
-        localStorage.setItem('privacy-mode', this.checked);
+        localStorage.setItem('telemetry-mode', this.checked);
         debugLog('Privacy mode toggled', { enabled: this.checked });
         updatePrivacyStatus();
     });
 }
 
 function updatePrivacyStatus() {
-    const privacyMode = localStorage.getItem('privacy-mode') === 'true';
+    const privacyMode = localStorage.getItem('telemetry-mode') === 'true';
     debugLog('Privacy status updated', { privacyMode });
     // Afficher ou masquer le contrôle de l'URL de feedback selon le mode Privacy
     const feedbackGroup = document.querySelector('.privacy-container .form-group');
@@ -199,7 +199,7 @@ function updatePrivacyStatus() {
 }
 
 function isPrivacyModeEnabled() {
-    return localStorage.getItem('privacy-mode') === 'true';
+    return localStorage.getItem('telemetry-mode') === 'true';
 }
 
 // ==========================================

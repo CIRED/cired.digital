@@ -12,9 +12,9 @@ document.getElementById("settings-panel").innerHTML = `
           URL du serveur R2R
           <span class="help-icon" title="Where to find the R2R API endpoint. Try http://cired.digital:7272">ℹ️</span>
         </label>
-        <div class="status-text" id="api-status">Status: OK</div>
+        <div class="status-text" id="r2r-server-status">?</div>
       </div>
-      <input class="form-input" id="api-url" type="text"/>
+      <input class="form-input" id="r2r-url" type="text"/>
     </div>
 
     <div class="form-group">
@@ -71,28 +71,28 @@ document.getElementById("settings-panel").innerHTML = `
 
     <div class="form-group">
       <label class="checkbox-label">
-        <input type="checkbox" id="privacy-mode" class="checkbox-input">
-        <span class="privacy-text"><strong>Telemetry</strong> enabled</span>
+        <input type="checkbox" id="telemetry-mode">
+        <span>Télémetrie (collecte des données d'utilisation)</span>
       </label>
       <div class="form-group">
         <div class="label-with-status">
-          <label class="form-label" for="feedback-url">URL du serveur Cirdi</label>
-          <div class="status-text" id="feedback-status">Chargement…</div>
+          <label class="form-label" for="cirdi-url">URL du serveur Cirdi</label>
+          <div class="status-text" id="cirdi-server-status">?</div>
         </div>
-        <input class="form-input" id="feedback-url" type="text" readonly/>
+        <input class="form-input" id="cirdi-url" type="text" />
       </div>
     </div>
 
     <div class="form-group">
       <label class="checkbox-label">
-        <input type="checkbox" id="debug-mode" class="checkbox-input">
+        <input type="checkbox" id="debug-mode">
         <span class="debug-text"><strong>Debug Mode</strong> – Show response logs in console</span>
       </label>
     </div>
 
     <div class="form-group" hidden>
       <label class="checkbox-label">
-        <input type="checkbox" id="include-web-search" class="checkbox-input"  disabled>
+        <input type="checkbox" id="include-web-search" disabled>
         <span class="web-search-text"><strong>Recherche Web</strong> – Inclure les résultats web (0.1 cent par question)</span>
       </label>
     </div>

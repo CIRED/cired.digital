@@ -21,7 +21,7 @@ const onboardingHTML = `
             quelques mots et un choix entre <button class="ghost-button feedback-up" title="Bonne réponse.">👍</button>
             et <button class="ghost-button feedback-down" title="Réponse insuffisante.">👎</button> pour envoyer.
             <br />
-            Retour d'expérience envoyé: <span id="feedback-status">En attente.</span>
+            Retour d'expérience envoyé: <span id="cirdi-server-status">En attente.</span>
         </li>
         <li id="onboarding-stage-help">
             Ouvrez le mode d'emploi. Le bouton
