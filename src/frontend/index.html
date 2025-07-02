@@ -9,13 +9,13 @@
   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js"></script>
   <link rel="stylesheet" href="body.css">
   <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="aside.css">
+  <link rel="stylesheet" href="dialogs/dialogs.css">
 </head>
 
 <body>
 
 <nav>
-  <button id="config-btn" class="ghost-button">⚙️</button>
+  <button id="settings-btn" class="ghost-button">⚙️</button>
   <span class="spacer"></span>
   <button id="help-btn" class="secondary-button">Aide</button>
   <button id="profile-btn" class="ghost-button">👤</button>
@@ -52,32 +52,33 @@
 </main>
 
 <footer>
+    ⚠️ VERSION BETA - Responsable de projet: <a href="mailto:minh.ha-duong@cnrs.fr">Minh Ha-Duong, CNRS</a><br />
     ⚠️ <strong>Les conversations sont enregistrées pour améliorer le service.</strong><br />
     📊 <a href="#" id="view-analytics-link">Voir les données collectées et la Politique de confidentialité</a>
 </footer>
 
 <aside hidden id="help-panel">Loading...</aside>
-<script src="help-ui.js"></script>
+<script src="dialogs/help-ui.js"></script>
+<script src="dialogs/help-logic.js"></script>
 
 <dialog hidden id="profile-dialog">Loading...</dialog>
-<script src="profile-ui.js"></script>
+<script src="dialogs/profile-ui.js"></script>
+<script src="dialogs/profile-logic.js"></script>
 
-<aside hidden id="config-panel">Loading...</aside>
-<script src="config-ui.js"></script>
+<aside hidden id="settings-panel">Loading...</aside>
+<script src="dialogs/settings-ui.js"></script>
+<script src="dialogs/settings-logic.js"></script>
 
 <aside hidden id="onboarding-panel">Loading...</aside>
-<script src="onboarding-ui.js"></script>
-<script src="onboarding-logic.js"></script>
+<script src="dialogs/onboarding-ui.js"></script>
+<script src="dialogs/onboarding-logic.js"></script>
 
 <dialog hidden id="progress-dialog">Loading...</dialog>
 
 <script src="utils.js"></script>
 <script src="settings.js"></script>
 <script src="status.js"></script>
-<script src="settings-manager.js"></script>
 <script src="app-init.js"></script>
-<script src="help-logic.js"></script>
-<script src="profile-logic.js"></script>
 <script src="content-manager.js"></script>
 <script src="stream-handler.js"></script>
 <script src="economics.js"></script>

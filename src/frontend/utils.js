@@ -1,6 +1,20 @@
 // utils.js
 // Utility functions for the frontend application
 
+function attach(id, event, handler) {
+  // Defensively attach an event listener to an element by ID
+  // If the element is not found, log a warning
+  if (!id || !handler) {
+    console.warn(`attach called with invalid parameters: id=${id}, handler=${handler}`);
+    return;
+  }
+  const element = document.getElementById(id);
+  if (element) {
+    element.addEventListener(event, handler);
+  } else {
+    console.warn(`Element not found for ID: ${id}`);
+  }
+}
 
 // ===========================================
 // Render Markdown in model's reply using marked, then sanitizes using DOMPurify
@@ -33,14 +47,13 @@ function escapeHtml(text) {
         .replace(/'/g, "&#039;");
 }
 
-// Debug logging, conditional on a global debugMode variable
+// Debug logging, only active if debug mode is enabled.
 function debugLog(message, data = null) {
-    if (typeof debugMode !== "undefined" && debugMode) {
-        if (data !== null) {
-            console.log("[DEBUG]", message, data);
-        } else {
-            console.log("[DEBUG]", message);
-        }
+    if (!debugModeOn()) return;
+    if (data !== null) {
+        console.log("[DEBUG]", message, data);
+    } else {
+        console.log("[DEBUG]", message);
     }
 }
 
@@ -60,12 +73,14 @@ const MonitorEventType = {
 
 // Note: Tried sendBeacon a blob instead of fetch, but it didn't work as expected
 async function monitor(eventType, payload) {
-    if (isPrivacyModeEnabled()) return;
+    const telemetryCheckbox = document.getElementById('telemetry-mode');
+    if (!telemetryCheckbox || !telemetryCheckbox.checked) return;
+
     if (!Object.values(MonitorEventType).includes(eventType)) {
         debugLog('Invalid monitor event type', eventType);
         return;
     }
-    const analyticsEndpoint = feedbackUrlInput.value.replace(/\/$/, '') + '/v1/monitor'
+    const analyticsEndpoint = cirdiURLInput.value.replace(/\/$/, '') + '/v1/monitor'
     const timestamp = new Date().toISOString().replace(/[^a-zA-Z0-9]/g, '');
     const data = {
         sessionId,

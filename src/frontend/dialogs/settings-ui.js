@@ -1,6 +1,6 @@
-document.getElementById("config-panel").innerHTML = `
+document.getElementById("settings-panel").innerHTML = `
   <header>
-    <button id="config-close-btn" class="ghost-button">✖️</button>
+    <button id="settings-close-btn" class="ghost-button">✖️</button>
     <h2>Cirdi settings</h2>
   </header>
 
@@ -9,23 +9,23 @@ document.getElementById("config-panel").innerHTML = `
     <div class="form-group">
       <div class="label-with-status">
         <label class="form-label">
-          Server URL
+          URL du serveur R2R
           <span class="help-icon" title="Where to find the R2R API endpoint. Try http://cired.digital:7272">ℹ️</span>
         </label>
-        <div class="status-text" id="api-status">Status: OK</div>
+        <div class="status-text" id="r2r-server-status">?</div>
       </div>
-      <input class="form-input" id="api-url" type="text"/>
+      <input class="form-input" id="r2r-url" type="text"/>
     </div>
 
     <div class="form-group">
       <div class="label-with-status">
         <label class="form-label">
-          Language model
+          Modèle de langage
           <span class="help-icon" title="The LLM used to generate replies. Commercial options disabled for cost control.">ℹ️</span>
         </label>
         <div class="status-text" id="model-status">Status: ?</div><button id="refresh-models-btn" class="secondary-button" hidden>Refresh</button>
       </div>
-      <select class="form-select" id="model">
+      <select class="form-select" id="model-select">
         <option>Chargement...</option>
       </select>
       <div id="model-info">
@@ -35,7 +35,7 @@ document.getElementById("config-panel").innerHTML = `
 
     <div class="form-group">
       <label class="form-label">
-        Temperature (response creativity)
+        Température (créativité littéraire)
         <span class="help-icon" title="Automatically set to model provider's recommendations.">ℹ️</span>
       </label>
       <input type="number" id="temperature" class="form-input" step="0.05"/>
@@ -43,7 +43,7 @@ document.getElementById("config-panel").innerHTML = `
 
     <div class="form-group">
       <label class="form-label">
-        Max tokens (response length)
+        Max tokens (limite la réponse)
         <span class="help-icon" title="Automatically set according to the model.">ℹ️</span>
       </label>
       <input type="number" id="max-tokens" class="form-input" step="100"/>
@@ -71,31 +71,31 @@ document.getElementById("config-panel").innerHTML = `
 
     <div class="form-group">
       <label class="checkbox-label">
-        <input type="checkbox" id="privacy-mode" class="checkbox-input">
-        <span class="privacy-text"><strong>Privacy Mode</strong> – No logging</span>
+        <input type="checkbox" id="telemetry-mode">
+        <span>Télémétrie (collecte des données d'utilisation)</span>
       </label>
       <div class="form-group">
         <div class="label-with-status">
-          <label class="form-label" for="feedback-url">URL du backend de journalisation</label>
-          <div class="status-text" id="feedback-status">Chargement…</div>
+          <label class="form-label" for="cirdi-url">URL du serveur Cirdi</label>
+          <div class="status-text" id="cirdi-server-status">?</div>
         </div>
-        <input class="form-input" id="feedback-url" type="text" readonly/>
+        <input class="form-input" id="cirdi-url" type="text" />
       </div>
     </div>
 
     <div class="form-group">
       <label class="checkbox-label">
-        <input type="checkbox" id="debug-mode" class="checkbox-input">
+        <input type="checkbox" id="debug-mode">
         <span class="debug-text"><strong>Debug Mode</strong> – Show response logs in console</span>
       </label>
     </div>
 
-    <!--div class="form-group">
+    <div class="form-group" hidden>
       <label class="checkbox-label">
-        <input type="checkbox" id="include-web-search" class="checkbox-input"  disabled>
+        <input type="checkbox" id="include-web-search" disabled>
         <span class="web-search-text"><strong>Recherche Web</strong> – Inclure les résultats web (0.1 cent par question)</span>
       </label>
-    </div-->
+    </div>
 
     </main> <!-- id="settings-container"-->
 `

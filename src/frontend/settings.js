@@ -1,16 +1,13 @@
 const allSettings = {
   profiles: {
     dev: {
-      apiUrl: "http://localhost:7272",
-      feedbackUrl: "http://localhost:7277",
-      debugMode: true,
-      chunkLimit: 10,
-      searchStrategy: "vanilla",
-      includeWebSearch: false,
+      r2rURL: "http://localhost:7272",
       models: [
-        "deepseek/deepseek-reasoner",
         "mistral/mistral-small-latest",
         "mistral/mistral-medium-latest",
+        "mistral/open-mistral-7b",
+        "deepseek/deepseek-chat",
+        "deepseek/deepseek-reasoner",
         "anthropic/claude-3-5-haiku-latest",
         "anthropic/claude-sonnet-4-20250514",
         "openai/gpt-4o-mini",
@@ -19,22 +16,26 @@ const allSettings = {
         "ollama/mistral-small:24b-3.1-instruct-2503-q8_0",
         "ollama/mistral-large:latest",
         "ollama/qwen3:32b",
-      ]
-    },
-    prod: {
-      apiUrl: "http://r2r-api.cired.digital",
-      feedbackUrl: "http://cirdi-api.cired.digital",
-      debugMode: false,
+      ],
       chunkLimit: 10,
       searchStrategy: "vanilla",
+      telemetry: true,
+      cirdiURL: "http://localhost:7277",
+      debugMode: true,
       includeWebSearch: false,
+    },
+    prod: {
+      r2rURL: "http://r2r-api.cired.digital",
       models: [
         "mistral/mistral-small-latest",
         "mistral/mistral-medium-latest",
-        "ollama/mistral-small:24b-3.1-instruct-2503-q8_0",
-        "ollama/mistral-large:latest",
-        "ollama/qwen3:32b",
-      ]
+      ],
+      chunkLimit: 10,
+      searchStrategy: "vanilla",
+      telemetry: true,
+      cirdiURL: "http://cirdi-api.cired.digital",
+      debugMode: false,
+      includeWebSearch: false,
     },
   },
 
@@ -71,6 +72,12 @@ const allSettings = {
       defaultMaxTokens: 4096,
       tariff: { input: 0.55, cached: 0.14, output: 2.29, hosting: 3} // Output includes CoT tokens
     },
+    "mistral/open-mistral-7b": {
+      label: "Open mistral 7b at Mistral",
+      defaultTemperature: 0.2,
+      defaultMaxTokens: 1024,
+      tariff: { input: 0.1, output: 0.3, hosting: 3}
+    },
     "mistral/mistral-small-latest": {
       label: "Mistral small latest at Mistral",
       defaultTemperature: 0.2,
@@ -99,7 +106,6 @@ const allSettings = {
       label: "GPT-4o mini at OpenAI",
       defaultTemperature: 0.2,
       defaultMaxTokens: 1024,
-      selected: true,
       tariff: { input: 0.15, cached: 0.075, output: 0.60, hosting: 3}
     },
     "openai/gpt-4.1-mini": {
