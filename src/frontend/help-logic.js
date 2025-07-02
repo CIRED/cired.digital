@@ -15,11 +15,7 @@ function hideHelpPanel() {
 }
 
 function initializeHelp() {
-    const helpPanel = document.getElementById('help-panel');
-    if (!helpPanel) {
-        console.error('Help panel elements not found');
-        return;
-    }
+    debugLog('Initializing help panel');
 
     attach('help-btn', 'click', showHelpPanel)
     attach('help-close-btn', 'click', hideHelpPanel);

@@ -228,3 +228,14 @@ function overrideTelemetrySettingFromStorage() {
     debugLog('Telemetry mode overridden from storage', { enabled: telemetryCheckbox.checked });
   }
 }
+
+function initializeSettings() {
+  const env = detectEnvironment();
+  settings = selectSettings(env);  // TODO: get rid of this global variable
+  populateFormFromSettings(settings);
+
+  // Debug mode checkbox is available now
+  debugLog('Initializing settings panel');
+
+  setupSettingsListeners();
+}

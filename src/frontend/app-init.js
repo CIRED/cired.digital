@@ -107,13 +107,10 @@ async function initializeApp() {
   try {
     setupPageEventListeners();
 
-    const env = detectEnvironment();
-    settings = selectSettings(env);  // TODO: get rid of this global variable
-    populateFormFromSettings(settings);
-    setupSettingsListeners();
-
+    initializeSettings();
     initializeHelp();
     initializeProfile();
+    initializeOnBoarding();
 
     debugLog('App initialized');
   } catch (err) {
@@ -121,7 +118,6 @@ async function initializeApp() {
     console.error('Initialization error:', err);
   }
 }
-
 
 if (document.readyState === 'loading') {
      document.addEventListener('DOMContentLoaded', () => {

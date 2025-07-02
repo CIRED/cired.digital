@@ -122,41 +122,28 @@ function goInput() {
     }
 }
 
-function addHandlersToOnboarding() {
-    attach('onboarding-close-btn', 'click', handleOnboardingCloseBtn);
-    attach('onboarding-pass-btn', 'click', handleOnboardingPassBtn);
-    attach('onboarding-profile-btn', 'click', showProfileDialog);
-    attach('onboarding-reset-btn', 'click', restartOnboarding);
-    attach('open-help-btn', 'click', showHelpPanel);
-    attach('help-close-btn', 'click', () => onHelpCompleted());
-    attach('focus-input-btn', 'click', goInput);
-}
-
 // ==========================================
 // =========== Initialization ===============
 // Called on pageload and on Guide Reset
 // ==========================================
 
 function initializeOnBoarding(openAnyway = false) {
-    debugLog('Initializing the onboarding panel');
+    debugLog('Initializing onboarding panel');
 
     const onboardingPanel = document.getElementById('onboarding-panel');
     onboardingPanel.innerHTML = onboardingHTML;
 
-    addHandlersToOnboarding();
+    attach('onboarding-close-btn', 'click', handleOnboardingCloseBtn);
+    attach('onboarding-pass-btn', 'click', handleOnboardingPassBtn);
+    attach('open-profile-btn', 'click', showProfileDialog);
+    attach('onboarding-reset-btn', 'click', restartOnboarding);
+    attach('open-help-btn', 'click', showHelpPanel);
+    attach('help-close-btn', 'click', () => onHelpCompleted());
+    attach('go-input-btn', 'click', goInput);
 
     restoreOnboardingStages();
 
     if (!isOnboarded() || openAnyway) {
         onboardingPanel.hidden = false;
     }
-}
-
-// Initialize the onboarding system when the script loads
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        initializeOnBoarding();
-    });
-} else {
-    initializeOnBoarding();
 }
