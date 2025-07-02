@@ -86,6 +86,7 @@ function uiProcessingEnd() {
         const closeButton = document.createElement('button');
         closeButton.textContent = 'Fermer';
         closeButton.className = 'primary-button';
+        closeButton.id = 'progress-close-btn';
         closeButton.addEventListener('click', () => {
             progressDialog.hidden = true;
             progressDialog.close();
