@@ -85,7 +85,7 @@ function buildRequestBody(query, settings) {
             search_strategy: settings.searchStrategy,
             limit: settings.chunkLimit
         },
-        rag_generation_settings: {
+        rag_generation_config: {
             model: settings.model,
             temperature: settings.temperature,
             max_tokens: settings.maxTokens,
