@@ -92,7 +92,7 @@ function uiProcessingEnd() {
         });
         progressDialog.appendChild(closeButton);
 
-        if (typeof debugMode !== 'undefined' && debugMode) {
+        if (debugModeOn()) {
             delay = 1000*60*60; // Close after 1 hour in debug mode
             debugLog('Debug mode is on, keeping the progress dialog open indefinitely');
         } else {
@@ -112,7 +112,10 @@ function uiProcessingEnd() {
 
 function setLoadingState(loading) {
     isLoading = loading;
-    sendBtn.disabled = loading;
+    const sendBtn = document.getElementById('send-btn');
+    if (sendBtn) {
+        sendBtn.disabled = loading;
+    }
     debugLog('Loading state set to ' + loading);
 }
 
