@@ -3,9 +3,11 @@ const allSettings = {
     dev: {
       r2rURL: "http://localhost:7272",
       models: [
-        "deepseek/deepseek-reasoner",
+        "mistral/open-mistral-7b",
         "mistral/mistral-small-latest",
         "mistral/mistral-medium-latest",
+        "deepseek/deepseek-chat",
+        "deepseek/deepseek-reasoner",
         "anthropic/claude-3-5-haiku-latest",
         "anthropic/claude-sonnet-4-20250514",
         "openai/gpt-4o-mini",
@@ -25,6 +27,7 @@ const allSettings = {
     prod: {
       r2rURL: "http://r2r-api.cired.digital",
       models: [
+        "mistral/open-mistral-7b",
         "mistral/mistral-small-latest",
         "mistral/mistral-medium-latest",
         "ollama/mistral-small:24b-3.1-instruct-2503-q8_0",
@@ -73,6 +76,12 @@ const allSettings = {
       defaultMaxTokens: 4096,
       tariff: { input: 0.55, cached: 0.14, output: 2.29, hosting: 3} // Output includes CoT tokens
     },
+    "mistral/open-mistral-7b": {
+      label: "Open mistral 7b at Mistral",
+      defaultTemperature: 0.2,
+      defaultMaxTokens: 1024,
+      tariff: { input: 0.1, output: 0.3, hosting: 3}
+    },
     "mistral/mistral-small-latest": {
       label: "Mistral small latest at Mistral",
       defaultTemperature: 0.2,
@@ -101,7 +110,6 @@ const allSettings = {
       label: "GPT-4o mini at OpenAI",
       defaultTemperature: 0.2,
       defaultMaxTokens: 1024,
-      selected: true,
       tariff: { input: 0.15, cached: 0.075, output: 0.60, hosting: 3}
     },
     "openai/gpt-4.1-mini": {
