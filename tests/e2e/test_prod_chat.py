@@ -1,3 +1,5 @@
+"""Tests e2e pour l'interface de chat en production."""
+
 import pytest
 from playwright.sync_api import Page, expect
 

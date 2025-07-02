@@ -1,3 +1,5 @@
+"""Tests e2e pour la page d'accueil de production."""
+
 import pytest
 from playwright.sync_api import Page, expect
 
