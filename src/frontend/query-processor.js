@@ -19,7 +19,7 @@ async function processInput() {
             generationTime: finalResult.duration,
             timestamp: new Date().toISOString()
         });
-        insertArticle(context.config, context.requestBody, finalResult, context.queryId, response.duration);
+        insertArticle(context.settings, context.requestBody, finalResult, context.queryId, response.duration);
     } finally {
         uiProcessingEnd();
         debugLog('Message processing completed');
@@ -34,31 +34,31 @@ function validateInput() {
 function prepareQueryContext() {
     const query = userInput.value.trim();
     const queryId = 'query_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
-    const config = getConfiguration();
-    const requestBody = buildRequestBody(query, config);
+    const settings = getSettings();
+    const requestBody = buildRequestBody(query, settings);
 
     debugLog('Starting message send process', { query, queryId, isLoading });
-    debugLog('Configuration retrieved', config);
+    debugLog('Configuration retrieved', settings);
     debugLog('Request body built:', requestBody);
 
-    return { query, queryId, config, requestBody };
+    return { query, queryId, settings, requestBody };
 }
 
 async function executeQuery(context) {
     monitor(MonitorEventType.REQUEST, {
         queryId: context.queryId,
         query: context.query,
-        config: context.config,
+        settings: context.settings,
         requestBody: context.requestBody
     });
 
     try {
         const startTime = Date.now();
-        const response = await makeApiRequest(context.config.r2rURL, context.requestBody);
+        const response = await makeApiRequest(context.settings.r2rURL, context.requestBody);
         const duration = Date.now() - startTime;
 
         debugLog('API request completed', {
-            r2rURL: context.config.r2rURL,
+            r2rURL: context.settings.r2rURL,
             status: response.status,
             responseTime: `${duration}ms`,
         });
@@ -75,36 +75,24 @@ function resetMessageInput() {
     userInput.style.height = 'auto';
 }
 
-function getConfiguration() {
-    return {
-        r2rURL: r2rURLInput.value,
-        model: modelSelect.value,
-        temperature: parseFloat(temperatureInput.value),
-        maxTokens: parseInt(maxTokensInput.value),
-        chunkLimit: parseInt(chunkLimitInput.value, 10),
-        searchStrategy: searchStrategySelect.value,
-        includeWebSearch: includeWebSearchCheckbox.checked
-    };
-}
-
-function buildRequestBody(query, config) {
+function buildRequestBody(query, settings) {
     return {
         query: query,
         search_mode: 'custom',
         search_settings: {
             use_semantic_search: true,
             use_hybrid_search: true,
-            search_strategy: config.searchStrategy,
-            limit: config.chunkLimit
+            search_strategy: settings.searchStrategy,
+            limit: settings.chunkLimit
         },
-        rag_generation_config: {
-            model: config.model,
-            temperature: config.temperature,
-            max_tokens: config.maxTokens,
+        rag_generation_settings: {
+            model: settings.model,
+            temperature: settings.temperature,
+            max_tokens: settings.maxTokens,
             stream: true
         },
         include_title_if_available: true,
-        include_web_search: config.includeWebSearch,
+        include_web_search: settings.includeWebSearch,
     };
 }
 
@@ -143,7 +131,7 @@ function handleError(err) {
 // RESPONSE HANDLING
 // ==========================================
 
-function insertArticle(config, requestBody, data, queryId, duration) {
+function insertArticle(settings, requestBody, data, queryId, duration) {
     debugLog('Starting response processing', {
         hasContent: !!data.results.generated_answer,
         citationsCount: data.results.citations?.length || 0
@@ -156,7 +144,7 @@ function insertArticle(config, requestBody, data, queryId, duration) {
     replyText = renderFromLLM(content);
 
     const htmlContent =
-        replyTitle(config, requestBody, data, duration) +
+        replyTitle(settings, requestBody, data, duration) +
         replaceCitationMarkers(replyText, citationToDoc) +
         createBibliographyHtml(bibliography);
 
@@ -187,24 +175,26 @@ function insertArticle(config, requestBody, data, queryId, duration) {
 
 // Dynamically show/hide stats divs based on debugMode
 function updateStatsVisibility() {
-    const showStats = typeof debugMode !== "undefined" && debugMode;
-    document.querySelectorAll('.generation-stats, .config-stats').forEach(el => {
+    const showStats = debugModeOn();
+    document.querySelectorAll('.generation-stats, .settings-stats').forEach(el => {
         el.style.display = showStats ? '' : 'none';
     });
 }
 
-function replyTitle(config, requestBody, data, duration) {
+function replyTitle(settings, requestBody, data, duration) {
     const today = new Date();
     const dayDate = today.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
-    const costs = estimateCosts(config, data.results, duration);
+    const costs = estimateCosts(settings, data.results, duration);
     const costEl = presentEconomics(costs);
 
     // Always render the divs, but let updateStatsVisibility control their display
     return `<h2>${escapeHtml(requestBody.query)}</h2>
             <div class="attribution">Generated by Cirdi on ${dayDate}</div>
             <div class="generation-stats">${costEl}</div>
-            <div class="config-stats">Retrieval en mode ${config.searchStrategy} limité à ${config.chunkLimit} segments. Génération avec ${config.model} limité à ${config.maxTokens} tokens out.</div>
+            <div class="settings-stats">Retrieval en mode ${settings.searchStrategy} limité à ${settings.chunkLimit} segments. Génération avec ${settings.model} limité à ${settings.maxTokens} tokens out.</div>
             <hr/>
     `;
 }
+
+attach('debug-mode', 'change', updateStatsVisibility);
