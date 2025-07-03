@@ -12,9 +12,8 @@
 
 ### Dependencies
 
-- Dependencies are defined in `pyproject.toml`
-- Install them with `uv pip install -e ".[dev]"`
-
+- Install the dependencies defined in `pyproject.toml` with `uv pip install -e ".[dev]"`
+- For testing, also install an appropriate browser with `playwright install chromium`
 
 > Maintainer: Minh Ha-Duong (<minh.ha-duong@cnrs.fr>)
 > Last updated: June 2025

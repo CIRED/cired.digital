@@ -14,4 +14,5 @@ def test_hello_r2r(client: R2RClient, QUERY: str) -> None:
     response = client.retrieval.rag(query=QUERY)
     logger.info("R2R response: %r", response)
     answer = response.results.generated_answer or ""
+    print(f"Réponse: {answer}")
     assert answer.strip(), "Réponse vide pour test_hello_r2r"

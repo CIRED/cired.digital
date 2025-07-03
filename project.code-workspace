@@ -17,6 +17,10 @@
             "path": "./deploy"
         },
         {
+            "name": "Tests",
+            "path": "./tests"
+        },
+        {
             "name": "Project Root",
             "path": "./"
         }
@@ -59,6 +63,11 @@
         "editor.codeActionsOnSave": {
             "source.organizeImports": "explicit"
         },
+
+        // Reduce Pylance clutter
+        "python.analysis.typeCheckingMode": "basic",
+        "python.analysis.autoImportCompletions": true,
+        "python.analysis.diagnosticMode": "workspace",
 
         "[python]": {
             "editor.defaultFormatter": "charliermarsh.ruff",
