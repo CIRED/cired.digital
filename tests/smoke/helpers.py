@@ -28,7 +28,7 @@ def query_fixture() -> str:
 
 
 # Setup the client with a test document
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="function")
 def client(test_file: Path, server_url: str) -> R2RClient:
     """Pytest fixture that returns an R2RClient with a test document."""
     client = R2RClient(server_url)  # Use the server_url fixture
@@ -47,11 +47,18 @@ def client(test_file: Path, server_url: str) -> R2RClient:
         delete_document(document_id, client)
 
 
-@pytest.fixture(scope="session")
-def test_file(tmp_path_factory: TempPathFactory) -> Path:
-    """Pytest fixture that creates a temporary test file for document upload."""
-    p: Path = tmp_path_factory.mktemp("smoke") / TEST_FILE
-    p.write_text(TEST_CONTENT, encoding="utf-8")
+@pytest.fixture(scope="function")
+def test_file(tmp_path_factory: TempPathFactory, worker_id: str) -> Path:
+    """Create a unique test file per worker."""
+    if worker_id == "master":
+        # Not running in parallel
+        filename = TEST_FILE
+    else:
+        # Running in parallel, make unique filename
+        filename = f"{worker_id}_{TEST_FILE}"
+
+    p: Path = tmp_path_factory.mktemp("smoke") / filename
+    p.write_text(f"{TEST_CONTENT} (worker: {worker_id})", encoding="utf-8")
     return p
 
 

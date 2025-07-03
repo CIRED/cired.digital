@@ -9,6 +9,12 @@ from docker.models.containers import Container
 pytest_plugins = ["tests.smoke.helpers"]
 
 
+@pytest.fixture
+def test_name(request):
+    """Get the current test name."""
+    return request.node.name
+
+
 @pytest.fixture(scope="session")
 def base_url():
     """
