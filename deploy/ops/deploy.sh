@@ -12,10 +12,27 @@ if [[ "${1:-}" == "--remote" ]]; then
     shift
 fi
 
+
 if $REMOTE_MODE; then
     log "🚀 Starting remote deployment to $REMOTE_HOST..."
-    execute_remote "git pull && deploy/ops/down.sh && deploy/ops/up.sh && ENVIRONMENT=production deploy/ops/validate.sh"
-    log "✅ Remote deployment completed successfully."
+    execute_remote '{
+  set -e
+  echo "[INFO] Cleaning repo"
+  rm -f uv.lock
+  git reset --hard
+  git clean -fd
+  echo "[INFO] Pulling changes"
+  git pull
+  echo "[INFO] Stopping services"
+  deploy/ops/down.sh
+  echo "[INFO] Starting services"
+  deploy/ops/up.sh
+  echo "[INFO] Validating"
+  ENVIRONMENT=production deploy/ops/validate.sh
+} | tee -a ~/deploy.log'
+    log "✅ Running tests on the server."
+    BASE_URL=http://cired.digital pytest -n 8
+    log "✅ Remote deployment completed."
 else
     log "🚀 Starting local deployment..."
     cd "$BASE_DIR/.."
