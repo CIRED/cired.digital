@@ -179,6 +179,12 @@ def test_feedback_buttons_interaction(landing_page):
     expect(thumbs_down_button).to_be_visible(timeout=5000)
     print("Feedback buttons (👍 and 👎) found and visible")
 
+    # Dismiss any tooltips that might be interfering
+    tooltip = page.locator("#document-tooltip")
+    if tooltip.is_visible():
+        page.click("body")  # Click elsewhere to dismiss tooltip
+        expect(tooltip).not_to_be_visible(timeout=2000)
+
     # Click the thumbs up button
     thumbs_up_button.click()
     print("Clicked thumbs up button")
