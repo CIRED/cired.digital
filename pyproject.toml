@@ -45,8 +45,10 @@ dev = [
   "types-requests",
   "types-docker",
   "pandas-stubs",
+  "types-python-magic",
   "docker",
   "pytest-playwright>=0.4.0,<1.0.0",
+  "pytest-xdist>=3.0,<4.0",
 ]
 
 [tool.ruff]
@@ -72,24 +74,37 @@ show_error_codes = true
 
 [[tool.mypy.overrides]]
 module = [
-    "r2r.*",
-    "matplotlib.*",
-    "wordcloud.*",
-    # Add other modules without types here
+  "r2r.*",
+  "matplotlib.*",
+  "wordcloud.*",
+  "pytest_playwright.*",
+  "playwright.*",
+  # Add other modules without types here
 ]
 ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+ignore_missing_imports = true
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+check_untyped_defs = false
+disallow_any_generics = false
+warn_return_any = false
 
 [tool.pytest.ini_options]
 markers = [
   "smoke: tests de bout en bout lents pour la stack R2R",
   "e2e: tests end-to-end avec Playwright",
 ]
-addopts = "--maxfail=1 --strict-markers"
+addopts = [
+  "--maxfail=5",
+  "--strict-markers",
+  "--browser-channel=chromium",
+]
 filterwarnings = [
-  # Ignorer les dépréciations Pydantic V2 concernant la classe Config
+  # Ignore Pydantic V2 DeprecationWarning about Config class
   "ignore:Support for class-based `config` is deprecated:DeprecationWarning:pydantic._internal._config",
-  # Ignorer les dépréciations sur json_encoders
+  # Ignorer depreciations about json_encoders
   "ignore:`json_encoders` is deprecated:DeprecationWarning:pydantic._internal._generate_schema",
 ]
-# Playwright-specific options (optional)
-# addopts = "--maxfail=1 --strict-markers --browser chromium --headed"

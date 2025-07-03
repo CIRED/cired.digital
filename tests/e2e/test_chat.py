@@ -4,17 +4,29 @@ import pytest
 from playwright.sync_api import Page, expect
 
 
-@pytest.mark.e2e
-def test_chat_interface_present(page: Page, base_url: str):
-    """Test that chat interface elements are present."""
+@pytest.fixture(scope="function")
+def landing_page(page: Page, base_url: str):
+    """Prepare the landing page."""
     page.goto(base_url)
 
-    # Wait for SPA to fully load
+    # Wait for the page to be fully loaded
     page.wait_for_load_state("networkidle")
 
-    # Check for the specific chat input and send button
+    # Close the onboarding panel
+    onboarding_close_btn = page.locator("#onboarding-close-btn")
+    onboarding_close_btn.click()
+
+    # Find the specific chat input and send button
     chat_input = page.locator("#user-input")
     send_button = page.locator("#send-btn")
+
+    return page, chat_input, send_button
+
+
+@pytest.mark.e2e
+def test_chat_interface_present(landing_page):
+    """Test that chat interface elements are present."""
+    page, chat_input, send_button = landing_page
 
     # Verify both elements are present and visible
     expect(chat_input).to_be_visible()
@@ -33,26 +45,34 @@ def test_chat_interface_present(page: Page, base_url: str):
 
 @pytest.mark.smoke
 @pytest.mark.e2e
-def test_basic_chat_functionality(page: Page, base_url: str):
+def test_send_btn(landing_page):
+    """Test the send button functionality."""
+    page, chat_input, send_button = landing_page
+    chat_input.fill("Qu'est-ce que le CIRED ?")
+    send_button.click()
+    expect(page.locator("#progress-dialog")).to_be_visible(timeout=1000)
+    print("Click button pressed, progress dialog is visible within 1 second")
+
+
+@pytest.mark.smoke
+@pytest.mark.e2e
+def test_enter_keypress(landing_page):
+    """Test the enter key functionality."""
+    page, chat_input, send_button = landing_page
+    chat_input.fill("Qu'est-ce que le CIRED ?")
+    page.keyboard.press("Enter")
+    expect(page.locator("#progress-dialog")).to_be_visible(timeout=1000)
+    print("Enter key pressed, progress dialog is visible within 1 second")
+
+
+@pytest.mark.smoke
+@pytest.mark.e2e
+def test_basic_chat_functionality(landing_page, test_name):
     """Test sending a message and receiving a response."""
-    page.goto(base_url)
+    page, chat_input, send_button = landing_page
 
-    # Wait for the page to be fully loaded
-    page.wait_for_load_state("networkidle")
-
-    # Close the onboarding panel
-    onboarding_close_btn = page.locator("#onboarding-close-btn")
-    onboarding_close_btn.click()
-
-    # Find the specific chat input and send button
-    chat_input = page.locator("#user-input")
-    send_button = page.locator("#send-btn")
-
-    # Test sending a simple question
+    # Test entering a simple question
     test_message = "Qu'est-ce que le CIRED ?"
-
-    # Clear any existing content and fill the input
-    chat_input.clear()
     chat_input.fill(test_message)
 
     # Verify the text was entered
@@ -98,11 +118,11 @@ def test_basic_chat_functionality(page: Page, base_url: str):
             timeout=30000,  # Give more time for the AI response
         )
         print("Response detected in messages container")
-        page.screenshot(path="test_success_screenshot.png")
+        page.screenshot(path=f"test_success_1_{test_name}.png")
     except Exception as e:
         print(f"Waiting for response failed: {e}")
         # Take a screenshot for debugging
-        page.screenshot(path="test_failure_screenshot.png")
+        page.screenshot(path=f"test_failure_1_{test_name}.png")
 
     ## Click the close button to dismiss the progress dialog
     close_button = page.locator("#progress-close-btn")
@@ -110,7 +130,7 @@ def test_basic_chat_functionality(page: Page, base_url: str):
     close_button.click()
     print("Progress dialog closed")
 
-    page.screenshot(path="test_success2_screenshot.png")
+    page.screenshot(path=f"test_success_2_{test_name}.png")
 
     # Verify response appeared
     final_content = page.text_content("body") or ""
@@ -127,19 +147,10 @@ def test_basic_chat_functionality(page: Page, base_url: str):
 
 
 @pytest.mark.e2e
-def test_feedback_buttons_interaction(page: Page, base_url: str):
+def test_feedback_buttons_interaction(landing_page):
     """Test thumbs up/down feedback functionality."""
-    page.goto(base_url)
-    page.wait_for_load_state("networkidle")
-
-    # First, we need to send a message to get a response with feedback buttons
-    chat_input = page.locator("#user-input")
-    send_button = page.locator("#send-btn")
-
-    # Send a simple question
-    test_message = "Le changement climatique, qu'est-ce que c'est ?"
-    chat_input.fill(test_message)
-
+    page, chat_input, send_button = landing_page
+    chat_input.fill("What is climate change?")
     send_button.click()
 
     # Wait for response to appear
