@@ -17,6 +17,10 @@
             "path": "./deploy"
         },
         {
+            "name": "Tests",
+            "path": "./tests"
+        },
+        {
             "name": "Project Root",
             "path": "./"
         }
