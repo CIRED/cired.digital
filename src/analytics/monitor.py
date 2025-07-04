@@ -64,10 +64,11 @@ async def monitor_event(event: MonitorEvent) -> dict[str, str]:
         Success message.
 
     """
-    # Validate event type
-    #     (already handled by Pydantic/Enum)
-    # Sanitize sessionId, timestamp, eventType for filename
-    #     (also handled frontside, redone as defensive programming)
+    # Sanitize sessionId, timestamp, eventType for filename:
+    #  allow only alphanumeric characters and underscores.
+    # Specially necessary for event.sessionId, which is user-provided
+    # and could contain characters that are not safe for filenames.
+    # This is a security measure to prevent path traversal attacks.
     safe_session = sanitize(event.sessionId)
     safe_timestamp = sanitize(event.timestamp)
     safe_type = sanitize(event.eventType)
