@@ -16,7 +16,7 @@ source "$SCRIPT_DIR/common_config.sh"
 trap 'log "❌ An unexpected error occurred."' ERR
 
 if $REMOTE_MODE; then
-    log "🚀 Starting services remotely on $REMOTE_HOST..."
+    log "🚀 Starting services remotely on $REMOTE_HOST..."As
     execute_remote "deploy/ops/up.sh"
     log "✅ Remote services started successfully."
     exit 0
@@ -26,5 +26,5 @@ validate_config_files
 ensure_docker
 
 log "🚀 Starting services..."
-docker_compose_cmd up -d
+docker_compose_cmd up -d --build monitoring
 log "✅ Docker Compose started successfully."
