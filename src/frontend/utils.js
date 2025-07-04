@@ -72,7 +72,7 @@ const MonitorEventType = {
     VISIBILITY_CHANGE: "visibilityChange",
 };
 
-// Note: Tried sendBeacon a blob instead of fetch, but it didn't work as expected
+// Note: Using fetch for all events - sendBeacon had CORS issues
 async function monitor(eventType, payload) {
     const telemetryCheckbox = document.getElementById('telemetry-mode');
     if (!telemetryCheckbox || !telemetryCheckbox.checked) return;
@@ -94,13 +94,17 @@ async function monitor(eventType, payload) {
         eventType,
         payload
     };
+
     try {
+        // Use fetch for all events
         const response = await fetch(analyticsEndpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
+            body: JSON.stringify(data),
+            keepalive: true,  // Keep alive during page unload
+            credentials: 'omit'  // Don't send credentials to avoid CORS issues
         });
-        debugLog('[MONITOR] event sent', { eventType, status: response.status, ok: response.ok });
+        debugLog('[MONITOR] event sent via fetch', { eventType, status: response.status, ok: response.ok });
     } catch (error) {
         console.error('Error sending monitor event:', error);
     }
