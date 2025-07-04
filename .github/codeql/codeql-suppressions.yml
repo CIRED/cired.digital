@@ -1,0 +1,6 @@
+suppressions:
+  - rule_id: py/path-injection
+    reason: Input is sanitized using `utils.sanitize()`
+    location:
+      file: monitor.py
+      line: 90
