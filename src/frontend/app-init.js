@@ -69,11 +69,14 @@ function generateSessionId() {
      * Generate a unique session ID based on the current timestamp and a random string.
      *
      * This ID is used to track user sessions and interactions.
-     * It is 100% safe for filenames and URL: only alphanums and _.
+     * It is safe for filenames and URL: only alphanums and _.
+     * (but server side should sanitize too, internet transmission may be insecure)
      */
-    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
-            .replace(/[^a-zA-Z0-9_]/g, '');
-}
+    const randomBytes = new Uint8Array(9);
+    window.crypto.getRandomValues(randomBytes);
+    const randomString = Array.from(randomBytes).map(b => b.toString(36)).join('');
+    return 'session_' + Date.now() + '_' + randomString.replace(/[^a-zA-Z0-9_]/g, '');
+
 
 function initializeSession() {
     sessionId = localStorage.getItem('session-id');
