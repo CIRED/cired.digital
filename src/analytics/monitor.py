@@ -70,7 +70,6 @@ async def monitor_event(event: MonitorEvent) -> dict[str, str]:
     # and could contain characters that are not safe for filenames.
     # This is a security measure to prevent path traversal attacks.
     # Tell CodeQL that we trust our sanitize()
-    # codeql[py/path-injection]: input sanitized using utils.sanitize()
     safe_session = sanitize(event.sessionId)
     safe_timestamp = sanitize(event.timestamp)
     safe_type = sanitize(event.eventType)
@@ -87,6 +86,7 @@ async def monitor_event(event: MonitorEvent) -> dict[str, str]:
     # Ensure the resolved file_path is strictly within the intended directory
     if os.path.commonpath([abs_dir_path, file_path]) != abs_dir_path:
         raise ValueError("Invalid file path: potential path traversal detected")
+    # CodeQL alert on next line suppressed because we trust sanitize()
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(event.model_dump(), f, ensure_ascii=False, indent=2)
     return {"message": "Monitor event saved"}
