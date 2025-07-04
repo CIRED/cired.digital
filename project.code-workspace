@@ -9,8 +9,8 @@
             "path": "./src/intake"
         },
         {
-            "name": "Analytics",
-            "path": "./src/analytics"
+            "name": "Monitor",
+            "path": "./src/monitor"
         },
         {
             "name": "Deploy",

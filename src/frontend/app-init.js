@@ -24,15 +24,20 @@ function setupPageEventListeners() {
     attach('user-input', 'keydown', handleUserInputKeyDown);
     attach('send-btn', 'click', processInput);
 
-    initializeSession();
+    document.addEventListener("visibilitychange", logVisibilityChange);
 
-    document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "hidden") {
-        logSessionEnd();
-    }
+    // Monitor dialog/panel opens
+    document.addEventListener('click', (e) => {
+        if (e.target.matches('#help-btn, #settings-btn, #profile-btn, #onboarding-pass-btn, #clipboard-btn')) {
+            monitor(MonitorEventType.USER_INPUT, {
+                action: 'click',
+                element: e.target.id || e.target.className,
+                elementText: e.target.textContent.trim()
+            });
+        }
     });
 
-    // Replace with modal dialog
+    // TODO: Replace with modal dialog
     document.getElementById('view-analytics-link').addEventListener('click', function(e) {
         e.preventDefault();
         window.open(cirdiURLInput.value.replace(/\/$/, '') + '/v1/view/privacy', '_blank');
@@ -47,14 +52,11 @@ function handleUserInputKeyDown(e) {
     }
 }
 
-function logSessionEnd() {
+function logVisibilityChange() {
     if (sessionStartTime) {
-        monitor(MonitorEventType.SESSION_END, {
-            sessionId: sessionId,
-            endTime: new Date().toISOString(),
+        monitor(MonitorEventType.VISIBILITY_CHANGE, {
+            visibilityState: document.visibilityState, // 'visible' or 'hidden'
             sessionDuration: Date.now() - sessionStartTime,
-            endReason: 'visibility_change',
-            userAgent: navigator.userAgent
         });
     }
 };
@@ -80,11 +82,7 @@ function generateSessionId() {
 
 
 function initializeSession() {
-    sessionId = localStorage.getItem('session-id');
-    if (!sessionId) {
-        sessionId = generateSessionId();
-        localStorage.setItem('session-id', sessionId);
-    }
+    sessionId = generateSessionId();
 
     // Gather technical context
     profileOrNothing = getProfile() || null;
@@ -92,14 +90,29 @@ function initializeSession() {
         sessionId: sessionId,
         userAgent: navigator.userAgent,
         language: navigator.language || navigator.userLanguage,
+        languages: navigator.languages || [navigator.language],
+        cookieEnabled: navigator.cookieEnabled,
+        onLine: navigator.onLine,
         screen: {
             width: window.screen.width,
             height: window.screen.height,
-            pixelRatio: window.devicePixelRatio
+            availWidth: window.screen.availWidth,
+            availHeight: window.screen.availHeight,
+            pixelRatio: window.devicePixelRatio,
+            colorDepth: window.screen.colorDepth
         },
+        viewport: {
+            width: window.innerWidth,
+            height: window.innerHeight
+        },
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        profile: profileOrNothing,
+        referrer: document.referrer || null,
+        url: window.location.href,
         profile: profileOrNothing
     };
-    monitor(MonitorEventType.SESSION, technicalContext);
+    // Needs to be called after initializeSettings() defines the monitoring endpoint
+    monitor(MonitorEventType.SESSION_START, technicalContext);
     sessionStartTime = Date.now();
 }
 
@@ -115,6 +128,7 @@ async function initializeApp() {
     initializeHelp();
     initializeProfile();
     initializeOnBoarding();
+    initializeSession();
 
     debugLog('App initialized');
   } catch (err) {

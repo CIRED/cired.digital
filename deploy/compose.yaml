@@ -256,11 +256,11 @@ services:
   #
   monitoring:
     build:
-      context: ../src/analytics
+      context: ../src/monitor
     networks:
       - npm_network
     volumes:
-      - ../reports/analytics-logs:/app/data/logs
+      - ../reports/monitor-logs:/app/data/logs
     restart: unless-stopped
     command: uvicorn monitor:app --host 0.0.0.0 --port 7277
 

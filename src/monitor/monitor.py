@@ -8,7 +8,7 @@ import json
 import os
 from datetime import UTC, datetime
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from models import MonitorEvent
@@ -49,21 +49,57 @@ async def view_privacy() -> FileResponse:
 
 
 @app.post("/v1/monitor")
-async def monitor_event(event: MonitorEvent) -> dict[str, str]:
+async def monitor_event(request: Request) -> dict[str, str]:
     """
     Log monitoring events.
 
     Parameters
     ----------
-    event : MonitorEvent
-        Monitoring event data.
+    request : Request
+        The incoming request containing the event data.
+        Can be sent as JSON (from fetch()) or text/plain (from sendBeacon()).
 
     Returns
     -------
-    dict
+    dict[str, str]
         Success message.
 
     """
+    # Handle both JSON and text/plain (from sendBeacon)
+    content_type = request.headers.get("content-type", "")
+
+    if "application/json" in content_type:
+        # From fetch()
+        event_data = await request.json()
+    else:
+        # From sendBeacon() - comes as text/plain
+        raw_data = await request.body()
+        event_data = json.loads(raw_data.decode("utf-8"))
+
+    # Validate with Pydantic
+    event = MonitorEvent(**event_data)
+
+    # Get real client IP from proxy headers
+    # NPM sets X-Forwarded-For with the original client IP
+    forwarded_for = request.headers.get("x-forwarded-for")
+    if forwarded_for:
+        # X-Forwarded-For can contain multiple IPs: "client, proxy1, proxy2"
+        # The first one is the original client
+        client_ip = forwarded_for.split(",")[0].strip()
+    else:
+        # Fallback to direct connection IP (shouldn't happen with NPM)
+        client_ip = request.client.host if request.client else "unknown"
+
+    enriched_event = {
+        **event.model_dump(),  # Original client data
+        "server_context": {  # Server-added context
+            "client_ip": client_ip,
+            "forwarded_for": forwarded_for,
+            "received_at": datetime.now(UTC).isoformat(),
+            "server_version": "1.0.0",
+        },
+    }
+
     # Sanitize sessionId, timestamp, eventType for filename:
     #  allow only alphanumeric characters and underscores.
     # Specially necessary for event.sessionId, which is user-provided
@@ -86,7 +122,8 @@ async def monitor_event(event: MonitorEvent) -> dict[str, str]:
     # Ensure the resolved file_path is strictly within the intended directory
     if os.path.commonpath([abs_dir_path, file_path]) != abs_dir_path:
         raise ValueError("Invalid file path: potential path traversal detected")
+
     # CodeQL alert on next line suppressed because we trust sanitize()
     with open(file_path, "w", encoding="utf-8") as f:
-        json.dump(event.model_dump(), f, ensure_ascii=False, indent=2)
+        json.dump(enriched_event, f, ensure_ascii=False, indent=2)
     return {"message": "Monitor event saved"}

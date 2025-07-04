@@ -16,10 +16,10 @@ HDM, 2025-07-01
 ### Write logs to a separate volume (optional)
 
 The monitoring service writes logs to `/app/data/logs` in the container,
-and compose.yaml maps this to the `../reports/analytics-logs` directory in the host filesystem. It is a good idea to store this directory on a separate volume because logs grow overtime untill they fill the root filesystem and break things.
+and compose.yaml maps this to the `../reports/monitor-logs` directory in the host filesystem. It is a good idea to store this directory on a separate volume because logs grow overtime untill they fill the root filesystem and break things.
 
 1. Provision a 10GB ext4 formatted volume
-2. Edit fstab to mount it at /home/admin/cired.digital/reports/analytics-logs
+2. Edit fstab to mount it at `/home/admin/cired.digital/reports/monitor-logs`
 3. If already mounted somewhere else: detach it `sudo umount ...` and remount it with `sudo mount -a`.
 4. Update the systemctl fstab cache with `sudo systemctl daemon-reexec`
 
