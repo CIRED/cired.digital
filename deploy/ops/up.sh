@@ -26,5 +26,5 @@ validate_config_files
 ensure_docker
 
 log "🚀 Starting services..."
-docker_compose_cmd up -d
+docker_compose_cmd up -d --build monitoring
 log "✅ Docker Compose started successfully."
