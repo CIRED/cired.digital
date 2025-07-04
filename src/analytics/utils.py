@@ -9,7 +9,8 @@ This module provides:
 
 def sanitize(s: str) -> str:
     """Ensure the string is safe for use as a filename or identifier."""
-    return "".join(c if c.isalnum() else "_" for c in s).strip("_")
+    sanitized = "".join(c if c.isalnum() else "_" for c in s).strip("_")
+    return sanitized[:32]
 
 
 def classify_network(ip_address: str) -> str:
