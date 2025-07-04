@@ -62,13 +62,14 @@ function debugLog(message, data = null) {
 // ===========================================
 
 const MonitorEventType = {
-    SESSION: "session",
+    SESSION_START: "sessionStart",
+    USER_INPUT: "userInput",
     REQUEST: "request",
     RESPONSE: "response",
     ARTICLE: "article",
     FEEDBACK: "feedback",
     USER_PROFILE: "userProfile",
-    SESSION_END: "sessionEnd"
+    VISIBILITY_CHANGE: "visibilityChange",
 };
 
 // Note: Tried sendBeacon a blob instead of fetch, but it didn't work as expected
@@ -78,6 +79,11 @@ async function monitor(eventType, payload) {
 
     if (!Object.values(MonitorEventType).includes(eventType)) {
         debugLog('Invalid monitor event type', eventType);
+        return;
+    }
+    const cirdiURLInput = document.getElementById('cirdi-url');
+    if (!cirdiURLInput || !cirdiURLInput.value) {
+        console.warn('CIRDI URL input not found or empty');
         return;
     }
     const analyticsEndpoint = cirdiURLInput.value.replace(/\/$/, '') + '/v1/monitor'

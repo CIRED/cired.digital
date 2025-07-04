@@ -16,13 +16,14 @@ from pydantic import BaseModel
 class MonitorEventType(str, Enum):
     """Enumeration of allowed event types for monitoring/logging analytics events."""
 
-    SESSION = "session"
+    SESSION_START = "sessionStart"
     REQUEST = "request"
     RESPONSE = "response"
     ARTICLE = "article"
     FEEDBACK = "feedback"
     USER_PROFILE = "userProfile"
-    SESSION_END = "sessionEnd"
+    USER_INPUT = "userInput"
+    VISIBILITY_CHANGE = "visibilityChange"
 
 
 class MonitorEvent(BaseModel):

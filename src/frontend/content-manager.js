@@ -141,7 +141,7 @@ function addFeedback(article) {
     const feedbackDiv = document.createElement('div');
     feedbackDiv.className = 'feedback-container';
     feedbackDiv.innerHTML = `
-        <button class="ghost-button clipboard-button" title="Copier l'article dans le presse-papiers">📋</button>
+        <button id="clipboard-button" class="ghost-button" title="Copier l'article dans le presse-papiers">📋</button>
         <input type="text" class="feedback-input" placeholder="Donnez votre avis sur cette réponse." maxlength="500">
         <button class="ghost-button feedback-up" title="Bonne réponse.">👍</button>
         <button class="ghost-button feedback-down" title="Réponse insuffisante.">👎</button>
