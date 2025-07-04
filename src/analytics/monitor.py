@@ -82,8 +82,8 @@ async def monitor_event(event: MonitorEvent) -> dict[str, str]:
     filename = f"{safe_session}-{safe_timestamp}-{safe_type}.json"
     file_path = os.path.normpath(os.path.join(dir_path, filename))
     abs_dir_path = os.path.abspath(dir_path)
-    abs_file_path = os.path.abspath(file_path)
-    # Ensure the file_path is within the intended directory
+    abs_file_path = os.path.abspath(os.path.normpath(file_path))
+    # Ensure the normalized file_path is within the intended directory
     if not abs_file_path.startswith(abs_dir_path + os.sep):
         raise ValueError("Invalid file path: potential path traversal detected")
     with open(file_path, "w", encoding="utf-8") as f:
