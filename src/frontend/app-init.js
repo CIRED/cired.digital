@@ -76,6 +76,7 @@ function generateSessionId() {
     window.crypto.getRandomValues(randomBytes);
     const randomString = Array.from(randomBytes).map(b => b.toString(36)).join('');
     return 'session_' + Date.now() + '_' + randomString.replace(/[^a-zA-Z0-9_]/g, '');
+}
 
 
 function initializeSession() {
