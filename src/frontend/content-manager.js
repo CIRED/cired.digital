@@ -141,7 +141,7 @@ function addFeedback(article) {
     const feedbackDiv = document.createElement('div');
     feedbackDiv.className = 'feedback-container';
     feedbackDiv.innerHTML = `
-        <button class="ghost-button clipboard-button" title="Copier l'article dans le presse-papiers">📋</button>
+        <button id="clipboard-btn" class="ghost-button" title="Copier l'article dans le presse-papiers">📋</button>
         <input type="text" class="feedback-input" placeholder="Donnez votre avis sur cette réponse." maxlength="500">
         <button class="ghost-button feedback-up" title="Bonne réponse.">👍</button>
         <button class="ghost-button feedback-down" title="Réponse insuffisante.">👎</button>
@@ -151,7 +151,7 @@ function addFeedback(article) {
     article.appendChild(feedbackDiv);
 
     const commentInput = feedbackDiv.querySelector('input[type="text"]');
-    const clipboardBtn = feedbackDiv.querySelector('.clipboard-button');
+    const clipboardBtn = feedbackDiv.querySelector('#clipboard-btn');
 
     clipboardBtn.addEventListener('click', () => {
         copyArticleToClipboard(article);
@@ -209,10 +209,14 @@ function copyArticleToClipboard(article) {
 
   navigator.clipboard.write([clipboardItem]).then(() => {
     debugLog('Article copied to clipboard (rich content)');
-    const clipboardBtn = article.querySelector('.clipboard-button');
-    const originalText = clipboardBtn.textContent;
-    clipboardBtn.textContent = '✓';
-    setTimeout(() => clipboardBtn.textContent = originalText, 1000);
+    // Fix: This should look inside the feedback container, not the whole article
+    const feedbackDiv = article.querySelector('.feedback-container');
+    const clipboardBtn = feedbackDiv?.querySelector('#clipboard-btn');
+    if (clipboardBtn) {
+      const originalText = clipboardBtn.textContent;
+      clipboardBtn.textContent = '✓';
+      setTimeout(() => clipboardBtn.textContent = originalText, 1000);
+    }
   }).catch(err => {
     console.error('Failed to copy to clipboard:', err);
     fallbackCopyToClipboard(plainText);
