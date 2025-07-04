@@ -69,6 +69,8 @@ async def monitor_event(event: MonitorEvent) -> dict[str, str]:
     # Specially necessary for event.sessionId, which is user-provided
     # and could contain characters that are not safe for filenames.
     # This is a security measure to prevent path traversal attacks.
+    # Tell CodeQL that we trust our sanitize() 
+    # codeql[py/path-injection]: input sanitized using utils.sanitize()
     safe_session = sanitize(event.sessionId)
     safe_timestamp = sanitize(event.timestamp)
     safe_type = sanitize(event.eventType)
