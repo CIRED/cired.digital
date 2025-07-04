@@ -28,9 +28,9 @@ services:
   monitoring:
     ports:
       - "7277:7277"
-    # Enable hot reload for dev
     volumes:
-      - ../src/analytics/monitor.py:/app/monitor.py
+      # Enable hot reload for dev
+      - ../src/monitor/monitor.py:/app/monitor.py
     command: uvicorn monitor:app --host 0.0.0.0 --port 7277 --reload
 
   frontend:
