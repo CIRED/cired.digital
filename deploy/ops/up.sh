@@ -16,7 +16,7 @@ source "$SCRIPT_DIR/common_config.sh"
 trap 'log "❌ An unexpected error occurred."' ERR
 
 if $REMOTE_MODE; then
-    log "🚀 Starting services remotely on $REMOTE_HOST..."As
+    log "🚀 Starting services remotely on $REMOTE_HOST..."
     execute_remote "deploy/ops/up.sh"
     log "✅ Remote services started successfully."
     exit 0
