@@ -80,8 +80,8 @@ async def monitor_event(event: MonitorEvent) -> dict[str, str]:
     os.makedirs(dir_path, exist_ok=True)
     # Now save the event as a JSON file
     filename = f"{safe_session}-{safe_timestamp}-{safe_type}.json"
-    file_path = os.path.realpath(os.path.join(dir_path, filename))
-    abs_dir_path = os.path.realpath(dir_path)
+    file_path = os.path.normpath(os.path.realpath(os.path.join(dir_path, filename)))
+    abs_dir_path = os.path.normpath(os.path.realpath(dir_path))
     # Ensure the resolved file_path is strictly within the intended directory
     if os.path.commonpath([abs_dir_path, file_path]) != abs_dir_path:
         raise ValueError("Invalid file path: potential path traversal detected")
