@@ -28,7 +28,7 @@ function setupPageEventListeners() {
 
     // Monitor dialog/panel opens
     document.addEventListener('click', (e) => {
-        if (e.target.matches('#help-btn, #settings-btn, #profile-btn, #onboarding-pass-btn, #clipboard-button')) {
+        if (e.target.matches('#help-btn, #settings-btn, #profile-btn, #onboarding-pass-btn, #clipboard-btn')) {
             monitor(MonitorEventType.USER_INPUT, {
                 action: 'click',
                 element: e.target.id || e.target.className,
@@ -57,7 +57,6 @@ function logVisibilityChange() {
         monitor(MonitorEventType.VISIBILITY_CHANGE, {
             visibilityState: document.visibilityState, // 'visible' or 'hidden'
             sessionDuration: Date.now() - sessionStartTime,
-            userAgent: navigator.userAgent
         });
     }
 };
@@ -91,11 +90,25 @@ function initializeSession() {
         sessionId: sessionId,
         userAgent: navigator.userAgent,
         language: navigator.language || navigator.userLanguage,
+        languages: navigator.languages || [navigator.language],
+        cookieEnabled: navigator.cookieEnabled,
+        onLine: navigator.onLine,
         screen: {
             width: window.screen.width,
             height: window.screen.height,
-            pixelRatio: window.devicePixelRatio
+            availWidth: window.screen.availWidth,
+            availHeight: window.screen.availHeight,
+            pixelRatio: window.devicePixelRatio,
+            colorDepth: window.screen.colorDepth
         },
+        viewport: {
+            width: window.innerWidth,
+            height: window.innerHeight
+        },
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        profile: profileOrNothing,
+        referrer: document.referrer || null,
+        url: window.location.href,
         profile: profileOrNothing
     };
     // Needs to be called after initializeSettings() defines the monitoring endpoint
