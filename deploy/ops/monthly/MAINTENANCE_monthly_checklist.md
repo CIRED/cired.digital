@@ -26,6 +26,7 @@
 
 ### Performance & Resources
 - [ ] Review search/query performance briefly
+- [ ] Pull monitor logs to update the local copy
 - [ ] Clean temp files and prune old logs
 - [ ] Prune unused Docker images
 
