@@ -357,7 +357,7 @@ def write_outputs(rows: list[dict[str, Any]], out_prefix: Path) -> None:  # noqa
 
     # Check if tabulate is available for markdown tables
     try:
-        import tabulate  # type: ignore[import-untyped]  # noqa: F401
+        import tabulate  # noqa: F401
 
         use_markdown = True
     except ImportError:

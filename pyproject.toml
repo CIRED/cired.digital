@@ -31,13 +31,15 @@ dependencies = [
   "matplotlib",
   "wordcloud",
   "pandas",
+  "tabulate",
+  "docker",
 ]
 
 # Note: Ubuntu distro version of `ruff`, `pytest`, `mypy` tend to be old.
 # Rather install the latest version in `.local/bin/` with
 #    `pipx install ruff pytest mypy pre-commit`
 #
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
   "ruff>=0.11.12,<1.0.0",
   "pytest>=7.0,<9.0",
@@ -45,9 +47,7 @@ dev = [
   "pre-commit>=3.0,<5.0",
   "types-requests",
   "pandas-stubs>=2.2.0,!=2.3.0.250702",
-  "docker",
   "types-docker",
-  "tabulate",
   "types-tabulate",
   "pytest-playwright>=0.4.0,<1.0.0",
   "pytest-xdist>=3.0,<4.0",

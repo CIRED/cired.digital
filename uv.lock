@@ -123,6 +123,7 @@ name = "cired-chatbot"
 version = "0.0.1"
 source = { virtual = "." }
 dependencies = [
+    { name = "docker" },
     { name = "fastapi" },
     { name = "matplotlib" },
     { name = "pandas" },
@@ -131,13 +132,13 @@ dependencies = [
     { name = "python-magic" },
     { name = "r2r" },
     { name = "requests" },
+    { name = "tabulate" },
     { name = "uvicorn", extra = ["standard"] },
     { name = "wordcloud" },
 ]
 
-[package.optional-dependencies]
+[package.dev-dependencies]
 dev = [
-    { name = "docker" },
     { name = "mypy" },
     { name = "pandas-stubs" },
     { name = "pre-commit" },
@@ -145,7 +146,6 @@ dev = [
     { name = "pytest-playwright" },
     { name = "pytest-xdist" },
     { name = "ruff" },
-    { name = "tabulate" },
     { name = "types-docker" },
     { name = "types-requests" },
     { name = "types-tabulate" },
@@ -153,30 +153,33 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "docker", marker = "extra == 'dev'" },
+    { name = "docker" },
     { name = "fastapi" },
     { name = "matplotlib" },
-    { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.16,<2.0" },
     { name = "pandas" },
-    { name = "pandas-stubs", marker = "extra == 'dev'", specifier = ">=2.2.0,!=2.3.0.250702" },
-    { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=3.0,<5.0" },
     { name = "pyarrow", specifier = ">=14.0.0" },
     { name = "pydantic", specifier = ">=2.0,<3.0" },
-    { name = "pytest", marker = "extra == 'dev'", specifier = ">=7.0,<9.0" },
-    { name = "pytest-playwright", marker = "extra == 'dev'", specifier = ">=0.4.0,<1.0.0" },
-    { name = "pytest-xdist", marker = "extra == 'dev'", specifier = ">=3.0,<4.0" },
     { name = "python-magic", specifier = ">=0.4.27" },
     { name = "r2r" },
     { name = "requests" },
-    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.11.12,<1.0.0" },
-    { name = "tabulate", marker = "extra == 'dev'" },
-    { name = "types-docker", marker = "extra == 'dev'" },
-    { name = "types-requests", marker = "extra == 'dev'" },
-    { name = "types-tabulate", marker = "extra == 'dev'" },
+    { name = "tabulate" },
     { name = "uvicorn", extras = ["standard"] },
     { name = "wordcloud" },
 ]
-provides-extras = ["dev"]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "mypy", specifier = ">=1.16,<2.0" },
+    { name = "pandas-stubs", specifier = ">=2.2.0,!=2.3.0.250702" },
+    { name = "pre-commit", specifier = ">=3.0,<5.0" },
+    { name = "pytest", specifier = ">=7.0,<9.0" },
+    { name = "pytest-playwright", specifier = ">=0.4.0,<1.0.0" },
+    { name = "pytest-xdist", specifier = ">=3.0,<4.0" },
+    { name = "ruff", specifier = ">=0.11.12,<1.0.0" },
+    { name = "types-docker" },
+    { name = "types-requests" },
+    { name = "types-tabulate" },
+]
 
 [[package]]
 name = "click"

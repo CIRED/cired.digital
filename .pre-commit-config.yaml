@@ -38,4 +38,5 @@ repos:
           - pandas-stubs
           - types-requests
           - r2r
+          - types-tabulate
         # MyPy config is in pyproject.toml
