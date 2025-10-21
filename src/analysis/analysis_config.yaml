@@ -1,0 +1,56 @@
+# analysis_config.yaml — One‑shot, in‑memory analysis for CIRED.digital beta
+
+time:
+  timezone: Europe/Paris
+  start: 2025-07-01
+  end: 2025-09-30
+  include_spillover_sessions: true
+
+exclusions:
+  exclude_bots: true
+  dev_session_prefixes:
+    - "dev_"
+    - "test_"
+  source_file_regex_any:
+    - "/dev/"
+    - "/tests?/"
+  query_regex_any:
+    - "^(?i)test$"
+    - "(?i)lorem"
+    - "(?i)foo|bar|asdf|qwerty"
+  payload_useragent_regex_any:
+    - "(?i)bot|crawler|spider|monitor|uptime"
+  max_events_per_hour_without_requests: 120
+
+dimensions:
+  provenance_values:
+    - CIRED
+    - RENATER
+    - Public
+  access_methods:
+    - Web
+    - Mobile
+    - API
+  theme_source: optional  # "themes" column if present; otherwise join via cired_themes.csv
+
+charts:
+  executive_kpis: true
+  traffic_timeseries: true
+  visit_length_histogram: true
+  visit_depth_histogram: true
+  funnel: true
+  queries_table: true
+  queries_top_terms: true
+  zero_result_queries: true
+  publications_top: true
+  coaccess_pairs: true
+
+files:
+  csv_path: monitor_analysis.csv
+  themes_map_csv: cired_themes.csv  # optional
+  publications_metadata_csv: publications_meta.csv  # optional
+
+export:
+  enable_pdf_export: true
+  enable_png_export: true
+  default_report_title: "CIRED.digital — Beta Snapshot (Jul–Sep 2025)"

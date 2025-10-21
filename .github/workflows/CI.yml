@@ -8,7 +8,7 @@ on:
     branches: [main]
   push:
     branches: [main]
-  workflow_dispatch:  # Allow manual triggering
+  workflow_dispatch:
 
 jobs:
   lint:
@@ -23,28 +23,30 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -e ".[dev]"
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v4
 
-      - name: Verify versions (match local setup)
+      - name: Install dependencies
+        run: uv sync --group dev
+
+      - name: Verify versions
         run: |
-          echo "Python: $(python --version)"
-          echo "Ruff: $(ruff --version)"
-          echo "Mypy: $(mypy --version)"
+          uv run python --version
+          uv run ruff --version
+          uv run mypy --version
 
       - name: Run Ruff linting
-        run: ruff check --output-format=github .
+        run: uv run ruff check --output-format=github .
 
       - name: Run Ruff formatting check
-        run: ruff format --check . || echo "⚠️ Formatting issues found but continuing..."
+        run: uv run ruff format --check .
         continue-on-error: true
 
       - name: Run mypy type checking
-        run: mypy src/
+        run: uv run mypy src/
 
       - name: Run tests (placeholder)
         run: |
           echo "✅ All quality checks passed!"
-          # When you add pytest: pytest tests/ --cov=src/
+          # When you add pytest:
+          # uv run pytest tests/ --cov=src/
