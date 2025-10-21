@@ -47,6 +47,8 @@ data/archived/*
 *.xlsx
 *.db
 *.sqlite3
+*.parquet
+monitor_analysis.md
 /reports/analytics-logs/
 
 # Generated reports
