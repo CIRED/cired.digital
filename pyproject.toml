@@ -33,6 +33,8 @@ dependencies = [
   "pandas",
   "tabulate",
   "docker",
+  "streamlit>=1.28.0",
+  "plotly>=5.0.0",
 ]
 
 # Note: Ubuntu distro version of `ruff`, `pytest`, `mypy` tend to be old.
@@ -81,6 +83,9 @@ module = [
   "wordcloud.*",
   "pytest_playwright.*",
   "playwright.*",
+  "streamlit.*",
+  "plotly.*",
+  "yaml.*",
   # Add other modules without types here
 ]
 ignore_missing_imports = true
