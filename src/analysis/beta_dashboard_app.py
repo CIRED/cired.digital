@@ -33,14 +33,10 @@ def load_config(config_path: Path) -> dict[str, Any]:
         return config
 
 
-def load_data(csv_path: Path) -> pd.DataFrame:
-    """Load and prepare data from CSV or Parquet file."""
-    if csv_path.suffix == ".parquet":
-        df = pd.read_parquet(csv_path)
-    else:
-        df = pd.read_csv(csv_path)
-
-    df["timestamp"] = pd.to_datetime(df["timestamp"])
+def load_data(parquet_path: Path) -> pd.DataFrame:
+    """Load and prepare data from Parquet file."""
+    df = pd.read_parquet(parquet_path)
+    df["timestamp"] = pd.to_datetime(df["timestamp"], format="ISO8601", utc=True)
     return df
 
 
@@ -384,10 +380,10 @@ def main() -> None:
         help="Path to config YAML",
     )
     parser.add_argument(
-        "--csv",
+        "--data",
         type=Path,
         default=Path("data/prepared/monitor_analysis.parquet"),
-        help="Path to data file (CSV or Parquet)",
+        help="Path to Parquet dataset",
     )
     args = parser.parse_args()
 
@@ -399,7 +395,7 @@ def main() -> None:
 
     if "df_raw" not in st.session_state:
         with st.spinner("Loading data..."):
-            st.session_state.df_raw = load_data(args.csv)
+            st.session_state.df_raw = load_data(args.data)
 
     df_raw = st.session_state.df_raw
 

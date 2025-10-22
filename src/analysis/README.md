@@ -26,7 +26,7 @@ Ensure you have the required dependencies installed:
 ```bash
 cd ~/repos/cired.digital
 source .venv/bin/activate
-uv pip install -e ".[dev]"
+uv sync --group dev
 ```
 
 The dashboard requires:
