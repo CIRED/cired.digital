@@ -33,6 +33,12 @@ dependencies = [
   "pandas",
   "tabulate",
   "docker",
+  "streamlit>=1.28.0",
+  "plotly>=5.0.0",
+  "jupyterlab>=4.4.10",
+  "duckdb>=1.0.0",
+  "ibis-framework>=8.0.0",
+  "polars>=1.0.0",
 ]
 
 # Note: Ubuntu distro version of `ruff`, `pytest`, `mypy` tend to be old.
@@ -81,6 +87,12 @@ module = [
   "wordcloud.*",
   "pytest_playwright.*",
   "playwright.*",
+  "streamlit.*",
+  "plotly.*",
+  "yaml.*",
+  "duckdb.*",
+  "ibis.*",
+  "polars.*",
   # Add other modules without types here
 ]
 ignore_missing_imports = true
