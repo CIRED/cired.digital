@@ -54,10 +54,11 @@ monitor_analysis.md
 # Generated reports
 reports/*
 !reports/README.md
+!reports/*ipynb
 
 # Jupyter Notebook
 .ipynb_checkpoints
-*.ipynb
+!*.ipynb
 
 # Distribution / packaging
 .Python
