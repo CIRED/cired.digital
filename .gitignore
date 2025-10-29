@@ -42,6 +42,7 @@ data/active/*
 !data/active/.gitkeep
 data/archived/*
 *.json
+!tests/fixtures/**/*.json
 *.csv
 *.xls
 *.xlsx
