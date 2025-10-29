@@ -59,6 +59,7 @@ dev = [
   "types-tabulate",
   "pytest-playwright>=0.4.0,<1.0.0",
   "pytest-xdist>=3.0,<4.0",
+  "nbstripout>=0.7.1,<1.0.0",
 ]
 
 [tool.ruff]
