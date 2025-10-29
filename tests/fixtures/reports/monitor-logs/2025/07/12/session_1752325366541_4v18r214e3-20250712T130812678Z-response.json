@@ -1,0 +1,560 @@
+{
+  "sessionId": "session_1752325366541_4v18r214e31j1573",
+  "timestamp": "20250712T130812678Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752325687865_g3okwme",
+    "response": {
+      "results": {
+        "generated_answer": "La question de savoir si informer c'est résister peut être abordée à travers plusieurs angles dans le contexte fourni. Voici quelques éléments de réponse basés sur les documents cités :\n\n1. **Rôle de l'information dans la prise de conscience et l'action** :\n   - Informer peut être un acte de résistance face à des enjeux urgents comme le changement climatique. Par exemple, un communiquant souligne l'importance de parler du sujet de manière globale pour convaincre de la réalité et responsabiliser [eeba811], [b435d7e].\n   - Informer permet de rendre compte du réel et de provoquer des changements, ce qui peut être vu comme une forme de résistance contre des attitudes jugées pernicieuses [11991ad].\n\n2. **Débat sur la neutralité et l'engagement** :\n   - La neutralité des médias est remise en question lorsque la menace climatique est urgente et la responsabilité incontournable. Informer de manière engagée peut donc être une forme de résistance contre l'indécision et l'inaction [eeba811], [0ef361d].\n   - La distinction entre information et communication est critiquée, car elle peut permettre aux journalistes de ne pas s'engager, alors qu'il s'agit d'un problème général qui nécessite une action [927328c].\n\n3. **Résistance contre la désinformation et le scepticisme** :\n   - Informer de manière rigoureuse et pluraliste peut être une résistance contre les discours climato-sceptiques qui cherchent à semer le doute et à éviter l'action [b1863e9].\n   - La communication excessive peut créer une bipolarisation du débat, mais une information équilibrée et pluraliste peut contribuer à une meilleure acceptabilité sociale [1c9647a].\n\nEn conclusion, informer peut effectivement être une forme de résistance, notamment lorsqu'il s'agit de rendre compte de réalités urgentes, de provoquer des changements, et de lutter contre la désinformation. Cependant, la manière dont l'information est présentée et le contexte dans lequel elle est diffusée jouent un rôle crucial dans son efficacité en tant qu'acte de résistance.",
+        "citations": [
+          {
+            "id": "eeba811",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 500,
+              "end": 509
+            },
+            "payload": {
+              "id": "eeba811b-e7ae-56f0-975f-182ce549c8dd",
+              "document_id": "2bb4bfb0-91c5-5ef5-83dc-81a23520a462",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC\n\nText: nignore plus leur prégnance dans une société quils tendent à rendre le plus souvent \nindécise  Ce débat pose comme question de principe  : comment concevoir  une telle \nneutralité lorsque l a menace climatique apparaît si urgente, et la responsabilité si \nincontournable  ? \nUn   communiquant   tente alors de rehausser le langage prescripteur de \nlaction  pour des enjeux dinformation posés comme prioritaires, cest -à-dire convaincre \nde la réalité  globale et ne pas la diluer dans les méandres de problèmes plus secondaires, \ndonc responsabiliser et impliquer  : (I)   Il faut parler du sujet bien plus globalement \npour faire passer le message de la CSC et de cette technologie  !  Mais est -ce vraiment \npréparer utilement le terrain local pour un dialogue concerté, nest -ce pas courir le \nrisque inverse dune communication contre -productive  ? Est -il réellement efficace de \ncommuniquer directement une opinion sans le détour dun débat public et légitimant  ?",
+              "metadata": {
+                "title": "Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC",
+                "hal_id": "hal-00870708",
+                "authors": [
+                  "Gilles Mardon"
+                ],
+                "version": "v0",
+                "citation": "Gilles Mardon. Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC. Minh Ha‐Duong and Naceur Chaabane, editors. Le captage et le stockage du CO2. Enjeux techniques et sociaux en France., Quae, p. 83‐109, 2010, Collection Update Sciences & Technologies, ISBN 978‐2‐7592‐0369‐7. ⟨hal-00870708⟩",
+                "source_url": "https://hal.science/hal-00870708",
+                "chunk_order": 154,
+                "description": "Le corpus de ce chapitre est constitué par la transcription intégrale d'un atelier de dialogue tenu en avril 2007, un atelier d'une durée de quelques heures réunissant une cinquantaine de participants. Cet atelier faisait suite à une matinée consacrée à des exposés thématiques relatifs aux multiples enjeux du CSC (*). L'esprit de l'atelier de dialogue était davantage de \" mettre en questions \" l'acceptabilité sociale du CSC que d'y apporter des réponses. Le dialogue ne se déroulait donc sous la pression d'aucun projet territorialisé, notamment de stockage géologique. Le corpus des discussions comprend six dialogues thématiques successifs. C'est le point de vue dialogique qui est retenu, au sens où nous nous attachons aux interventions \" sur \" des interventions, à leur jeu conjonctif-disjonctif plutôt qu'à leur contenu argumentatif, pour saisir ce que peut être la progression d'un dialogue de l'acceptabilité et les modalités d'implication des intervenants dans la construction d'un projet commun. Il s'agit ici d'un dialogue précurseur. En contrepoint du dialogue et de ses effets spécifiques, on trouvera en encadrés le rappel des \" positions \" originales de certains intervenants, résumées par eux et exprimées lors de la table ronde. (*) Captage et Stockage du CO2, ou CSC.",
+                "document_type": "COUV",
+                "publication_date": "2010-02-01",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "Est ce qu’informer c’est résister"
+              }
+            }
+          },
+          {
+            "id": "b435d7e",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 511,
+              "end": 520
+            },
+            "payload": {
+              "id": "b435d7e1-7530-53fd-a649-b0e8bd99ffe0",
+              "document_id": "2bb4bfb0-91c5-5ef5-83dc-81a23520a462",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015818181818181818,
+              "text": "Document Title: Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC\n\nText: donc responsabiliser et impliquer  : (I)   Il faut parler du sujet bien plus globalement \npour faire passer le message de la CSC et de cette technologie  !  Mais est -ce vraiment \npréparer utilement le terrain local pour un dialogue concerté, nest -ce pas courir le \nrisque inverse dune communication contre -productive  ? Est -il réellement efficace de \ncommuniquer directement une opinion sans le détour dun débat public et légitimant  ? \nLe déroulement de la discussion   des enjeux globaux   permet den douter, montrant \nque le CSC peut diviser sans remettre en cause une représentation globale consensuelle, \nmais quune telle division peut aussi déstabiliser lintégrité de cette représentation  \nglobale. Ne vaut -il pas mieux séparer la communication sur le problème global, \nlargement acquis, de linformation exigible sur des options daction et rendue \nindispensable par les débats sur leur acceptabilité  ?  \nLépreuve du temps avec lincertitude asso ciée, mal abordée dans le dialogue des",
+              "metadata": {
+                "title": "Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC",
+                "hal_id": "hal-00870708",
+                "authors": [
+                  "Gilles Mardon"
+                ],
+                "version": "v0",
+                "citation": "Gilles Mardon. Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC. Minh Ha‐Duong and Naceur Chaabane, editors. Le captage et le stockage du CO2. Enjeux techniques et sociaux en France., Quae, p. 83‐109, 2010, Collection Update Sciences & Technologies, ISBN 978‐2‐7592‐0369‐7. ⟨hal-00870708⟩",
+                "source_url": "https://hal.science/hal-00870708",
+                "chunk_order": 155,
+                "description": "Le corpus de ce chapitre est constitué par la transcription intégrale d'un atelier de dialogue tenu en avril 2007, un atelier d'une durée de quelques heures réunissant une cinquantaine de participants. Cet atelier faisait suite à une matinée consacrée à des exposés thématiques relatifs aux multiples enjeux du CSC (*). L'esprit de l'atelier de dialogue était davantage de \" mettre en questions \" l'acceptabilité sociale du CSC que d'y apporter des réponses. Le dialogue ne se déroulait donc sous la pression d'aucun projet territorialisé, notamment de stockage géologique. Le corpus des discussions comprend six dialogues thématiques successifs. C'est le point de vue dialogique qui est retenu, au sens où nous nous attachons aux interventions \" sur \" des interventions, à leur jeu conjonctif-disjonctif plutôt qu'à leur contenu argumentatif, pour saisir ce que peut être la progression d'un dialogue de l'acceptabilité et les modalités d'implication des intervenants dans la construction d'un projet commun. Il s'agit ici d'un dialogue précurseur. En contrepoint du dialogue et de ses effets spécifiques, on trouvera en encadrés le rappel des \" positions \" originales de certains intervenants, résumées par eux et exprimées lors de la table ronde. (*) Captage et Stockage du CO2, ou CSC.",
+                "document_type": "COUV",
+                "publication_date": "2010-02-01",
+                "semantic_rank": 5,
+                "full_text_rank": 200,
+                "associated_query": "Est ce qu’informer c’est résister"
+              }
+            }
+          },
+          {
+            "id": "11991ad",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 692,
+              "end": 701
+            },
+            "payload": {
+              "id": "11991adc-ee2b-5cd9-abb5-becca01534e8",
+              "document_id": "ecc53eec-d4c7-5486-93b8-1a2b985768b2",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.014555555555555556,
+              "text": "Document Title: Les firmes transnationales et l'institution social-historique du changement climatique.\n\nText: Prendre du recul par rapport aux processus à lœuvre, catégoriser le s faits, établir des\ntypologies, mobiliser et travailler certaine s notions et concepts sur lesquels appuyer\nlargumentation, cela ne fait pas partie de leurs préoccupations (du moins pas lorsquils\nproduisent les textes auxquels nous  faisons allusion). Ils visent  dabord à informer, cest-à-\ndire à rendre compte du réel, mais selon leur s schèmes respectifs de représentation et avec\ndes buts concrets : dénoncer de s attitudes jugées pernicie uses, provoquer des changements,",
+              "metadata": {
+                "title": "Les firmes transnationales et l'institution social-historique du changement climatique.",
+                "hal_id": "tel-00169596",
+                "authors": "['Mathias Lefèvre']",
+                "version": "v0",
+                "citation": "Mathias Lefèvre. Les firmes transnationales et l'institution social-historique du changement climatique.. Economies et finances. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2007. Français. ⟨NNT : ⟩. ⟨tel-00169596⟩",
+                "source_url": "https://hal.science/tel-00169596",
+                "chunk_order": 1381,
+                "description": "Notre thèse porte sur les firmes transnationales dont les activités sont mises en cause dans le problème du changement climatique. Elle traite de leurs actions relativement au processus politique engagé par les Etats au début des années 1990 et de leur influence sur la définition des solutions à apporter au problème. Plus précisément, dans le cadre d'une réflexion plus large sur l'institution social-historique du problème - le fait qu'il est institué, moyennant l'imaginaire, dans et par des sociétés particulières, à un moment donné de leur histoire et pour un certain temps -, et considérant la période allant de 1989 à 2001, nous avons voulu élucider deux choses. D'une part, pourquoi, pour (ou contre) quoi et comment ces firmes ont agi (la cause, la fin et la teneur de leurs actions) par rapport au processus politique. D'autre part, dans quelle mesure ces actions (faisant valoir un certain \" pouvoir relationnel \"), mais aussi le seul fait qu'elles existaient (situation dont elles tirent un \" pouvoir institutionnel \"), ont eu des effets sur ce processus et, plus particulièrement, sur la définition des solutions. Le choix d'analyser ces acteurs \" non-étatiques \" majeurs a résulté de deux motivations entremêlées. Celle, principale, de démontrer la nécessité de tenir compte de ces grandes firmes (en sus des Etats, des institutions interétatiques et d'autres acteurs non-étatiques) pour pouvoir comprendre l'évolution du processus politique, et ainsi de remédier au défaut d'études sur le sujet. Par ailleurs, celle de contribuer, en filigrane, à la compréhension de la façon dont le capitalisme, en tant que régime social (type spécifique d'institution de la société) ne pouvant exister que dans et par l'entreprise, affronte ce problème qui, plus que tout autre problème écologique, le met profondément en question, c'est-à-dire le menace.",
+                "document_type": "THESE",
+                "publication_date": "2007-06-18",
+                "semantic_rank": 10,
+                "full_text_rank": 200,
+                "associated_query": "Est ce qu’informer c’est résister"
+              }
+            }
+          },
+          {
+            "id": "eeba811",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 985,
+              "end": 994
+            },
+            "payload": null
+          },
+          {
+            "id": "0ef361d",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 996,
+              "end": 1005
+            },
+            "payload": {
+              "id": "0ef361dc-b84a-5963-8e36-d30b7d5a501d",
+              "document_id": "2bb4bfb0-91c5-5ef5-83dc-81a23520a462",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC\n\nText: Captage et stockage du CO 2 \n106 semble quune réflexion ... quand on sait que les problèmes dinformation en matière de \ncomportement général, ..., sont fondamentaux ... donc dans la mesure où déjà les \nscientifiques ont tendance à ne jamais sengager ... . \nLa distinction communication/information, déjà formulée le matin dun point de vue \nstrictement journalistique, est irritante dans la mesure où la  priori  dobjectivité semble \nprôner une neutr alité absolue des médias  dans la publicité des opinions, alors quon \nnignore plus leur prégnance dans une société quils tendent à rendre le plus souvent \nindécise  Ce débat pose comme question de principe  : comment concevoir  une telle \nneutralité lorsque l a menace climatique apparaît si urgente, et la responsabilité si \nincontournable  ? \nUn   communiquant   tente alors de rehausser le langage prescripteur de \nlaction  pour des enjeux dinformation posés comme prioritaires, cest -à-dire convaincre",
+              "metadata": {
+                "title": "Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC",
+                "hal_id": "hal-00870708",
+                "authors": [
+                  "Gilles Mardon"
+                ],
+                "version": "v0",
+                "citation": "Gilles Mardon. Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC. Minh Ha‐Duong and Naceur Chaabane, editors. Le captage et le stockage du CO2. Enjeux techniques et sociaux en France., Quae, p. 83‐109, 2010, Collection Update Sciences & Technologies, ISBN 978‐2‐7592‐0369‐7. ⟨hal-00870708⟩",
+                "source_url": "https://hal.science/hal-00870708",
+                "chunk_order": 153,
+                "description": "Le corpus de ce chapitre est constitué par la transcription intégrale d'un atelier de dialogue tenu en avril 2007, un atelier d'une durée de quelques heures réunissant une cinquantaine de participants. Cet atelier faisait suite à une matinée consacrée à des exposés thématiques relatifs aux multiples enjeux du CSC (*). L'esprit de l'atelier de dialogue était davantage de \" mettre en questions \" l'acceptabilité sociale du CSC que d'y apporter des réponses. Le dialogue ne se déroulait donc sous la pression d'aucun projet territorialisé, notamment de stockage géologique. Le corpus des discussions comprend six dialogues thématiques successifs. C'est le point de vue dialogique qui est retenu, au sens où nous nous attachons aux interventions \" sur \" des interventions, à leur jeu conjonctif-disjonctif plutôt qu'à leur contenu argumentatif, pour saisir ce que peut être la progression d'un dialogue de l'acceptabilité et les modalités d'implication des intervenants dans la construction d'un projet commun. Il s'agit ici d'un dialogue précurseur. En contrepoint du dialogue et de ses effets spécifiques, on trouvera en encadrés le rappel des \" positions \" originales de certains intervenants, résumées par eux et exprimées lors de la table ronde. (*) Captage et Stockage du CO2, ou CSC.",
+                "document_type": "COUV",
+                "publication_date": "2010-02-01",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "Est ce qu’informer c’est résister"
+              }
+            }
+          },
+          {
+            "id": "927328c",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1205,
+              "end": 1214
+            },
+            "payload": {
+              "id": "927328ce-6247-507f-a6c1-a01a9baa1889",
+              "document_id": "2bb4bfb0-91c5-5ef5-83dc-81a23520a462",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016098765432098764,
+              "text": "Document Title: Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC\n\nText: même pas une croyance collective ... cest comment un jeu daugmentation \ndoppositions va se structurer sur un endroit et faire que ça passera ou ça ne passera \npas . Cette réflexion attire lattention sur la phas e délicate d amorçage  dun dialogue  \nencore informel , la précaution d evant l es contingences locales.  \nUne seconde intervention interpelle les journalistes  : (R)   ... Pour les journalistes, \nfaire cette séparation entre information et communication, essayer d e maintenir une \npluralité des points de vue En matière de changement global, on peut se demander si \ncette dualité est parfaitement pertinente dans la mesure où ça permet aux journalistes \nfinalement de ne pas sengager sous prétexte de ne pas aller dans le  sens de la \ncommunication, mais en même temps il sagit bien dun problème général  ! Donc il me",
+              "metadata": {
+                "title": "Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC",
+                "hal_id": "hal-00870708",
+                "authors": [
+                  "Gilles Mardon"
+                ],
+                "version": "v0",
+                "citation": "Gilles Mardon. Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC. Minh Ha‐Duong and Naceur Chaabane, editors. Le captage et le stockage du CO2. Enjeux techniques et sociaux en France., Quae, p. 83‐109, 2010, Collection Update Sciences & Technologies, ISBN 978‐2‐7592‐0369‐7. ⟨hal-00870708⟩",
+                "source_url": "https://hal.science/hal-00870708",
+                "chunk_order": 152,
+                "description": "Le corpus de ce chapitre est constitué par la transcription intégrale d'un atelier de dialogue tenu en avril 2007, un atelier d'une durée de quelques heures réunissant une cinquantaine de participants. Cet atelier faisait suite à une matinée consacrée à des exposés thématiques relatifs aux multiples enjeux du CSC (*). L'esprit de l'atelier de dialogue était davantage de \" mettre en questions \" l'acceptabilité sociale du CSC que d'y apporter des réponses. Le dialogue ne se déroulait donc sous la pression d'aucun projet territorialisé, notamment de stockage géologique. Le corpus des discussions comprend six dialogues thématiques successifs. C'est le point de vue dialogique qui est retenu, au sens où nous nous attachons aux interventions \" sur \" des interventions, à leur jeu conjonctif-disjonctif plutôt qu'à leur contenu argumentatif, pour saisir ce que peut être la progression d'un dialogue de l'acceptabilité et les modalités d'implication des intervenants dans la construction d'un projet commun. Il s'agit ici d'un dialogue précurseur. En contrepoint du dialogue et de ses effets spécifiques, on trouvera en encadrés le rappel des \" positions \" originales de certains intervenants, résumées par eux et exprimées lors de la table ronde. (*) Captage et Stockage du CO2, ou CSC.",
+                "document_type": "COUV",
+                "publication_date": "2010-02-01",
+                "semantic_rank": 4,
+                "full_text_rank": 200,
+                "associated_query": "Est ce qu’informer c’est résister"
+              }
+            }
+          },
+          {
+            "id": "b1863e9",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1446,
+              "end": 1455
+            },
+            "payload": {
+              "id": "b1863e98-89a8-5f42-b168-5a263ab0df6e",
+              "document_id": "0c210469-2645-5334-a133-eac663df3aeb",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015547619047619046,
+              "text": "Document Title: Le climato-scepticisme Réflexions sur la confusion des genres\n\nText: citoyen et injurient notre aptitude au progrès co mme l'avenir, tout simplement13 . \nEnfin le changement climatique dérange car  il oblige à un examen de nos modes de \nvie, un changement de nos habitudes. Au niveau  individuel, la perspective de devoir lutter \ncontre un phénomène global et in tangible peut susciter un sen timent d/uni0000 impuissance, créateur \nd/uni0000 angoisse ; le discours patelin des climato-sceptiques peut tr ouver du crédit auprès de chacun \ncar il rassure et dissipe cette angoisse. Cassandr e perdra toujours le talent de persuader face à \nun Apollon contrarié dans son entreprise : les promesses dou cereuses d/uni0000 un avenir paisible \nsont plus racoleuses que le s prédictions de malheur. \n \nPour ces raisons, un discours infirmant l/uni0000 exigence d/uni0000 action P trouvera un appui, un \nréseau de financement, une audience. Si nous  percevons comment le climato-scepticisme \nrencontre un écho dans la société, coment il pe ut séduire au niveau individuel, nous ne savons",
+              "metadata": {
+                "title": "Le climato-scepticisme Réflexions sur la confusion des genres",
+                "hal_id": "hal-00716418",
+                "authors": [
+                  "Antonin Pottier"
+                ],
+                "version": "v0",
+                "citation": "Antonin Pottier. Le climato-scepticisme Réflexions sur la confusion des genres. Futuribles, 2011, 380, pp.27-40. ⟨hal-00716418⟩",
+                "source_url": "https://hal.science/hal-00716418",
+                "chunk_order": 35,
+                "description": "L'analyse examine les ressorts sociopsychologiques du discours climato-sceptique. L'auteur distingue deux éléments dans le débat sur le changement climatique : une partie \" diagnostic \" comprenant l'observation du réchauffement de la planète, ses causes (l'émission de gaz à effet de serre) et ses conséquences possibles (scénario tendanciel de bouleversements climatiques de grande ampleur) ; et une partie \" prescription \" qui, tenant compte du diagnostic, propose des mesures politiques et relève non plus d'observations scientifiques mais d'une appréciation morale. Après un rappel de ce qui alimente le débat (la part d'incertitude qui ne peut concerner que la vision prospective découlant de l'observation des faits, et non la qualification des faits observés), Antonin Pottier montre bien que les thèses climato-sceptiques relèvent d'une confusion entre le diagnostic et la prescription : c'est parce qu'ils refusent la nécessité ou le contenu des politiques climatiques qu'ils en viennent à dénier la réalité scientifique du changement climatique, déplaçant le débat et s'enfonçant dans l'erreur. Une posture d'autant plus dommageable qu'elle trouve un écho médiatique important tendant à embrouiller un peu plus les informations à la disposition de l'opinion publique : \" La perception des enjeux contemporains par le citoyen est entravée, au profit des intérêts que fragiliserait une lutte contre les émissions de gaz à effet de serre.",
+                "document_type": "ART",
+                "publication_date": "2011-01-01",
+                "semantic_rank": 6,
+                "full_text_rank": 200,
+                "associated_query": "Est ce qu’informer c’est résister"
+              }
+            }
+          },
+          {
+            "id": "1c9647a",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1629,
+              "end": 1638
+            },
+            "payload": {
+              "id": "1c9647a6-6b00-5e67-9be5-17b3b7659000",
+              "document_id": "2bb4bfb0-91c5-5ef5-83dc-81a23520a462",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01503448275862069,
+              "text": "Document Title: Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC\n\nText: mettent en scène  ! . Effet pervers e t antidémocratique dun pseudo pluralisme en vertu \nduquel communiquer un point de vue représentatif appelle aussitôt un point de vue \n  contradictoire  , même non représentatif ? En  résulterait -il un déficit de la \ncommunication sociale par stérilisation p artielle des débats authentiques  ? Cela pourrait -\nil induire un déficit dacceptabilité sociale  ? Question troublante  ! \nUn journaliste prend enfin la parole sur ce thème de la communication/information, \nexpliquant que (J) au niveau local   une communication  excessive crée une \nbipolarisation du débat  , une agressivité réactive   avec des associations qui se \nmontent et qui ont aussi un langage très excessif   La pluralité de linformation, son",
+              "metadata": {
+                "title": "Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC",
+                "hal_id": "hal-00870708",
+                "authors": [
+                  "Gilles Mardon"
+                ],
+                "version": "v0",
+                "citation": "Gilles Mardon. Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC. Minh Ha‐Duong and Naceur Chaabane, editors. Le captage et le stockage du CO2. Enjeux techniques et sociaux en France., Quae, p. 83‐109, 2010, Collection Update Sciences & Technologies, ISBN 978‐2‐7592‐0369‐7. ⟨hal-00870708⟩",
+                "source_url": "https://hal.science/hal-00870708",
+                "chunk_order": 159,
+                "description": "Le corpus de ce chapitre est constitué par la transcription intégrale d'un atelier de dialogue tenu en avril 2007, un atelier d'une durée de quelques heures réunissant une cinquantaine de participants. Cet atelier faisait suite à une matinée consacrée à des exposés thématiques relatifs aux multiples enjeux du CSC (*). L'esprit de l'atelier de dialogue était davantage de \" mettre en questions \" l'acceptabilité sociale du CSC que d'y apporter des réponses. Le dialogue ne se déroulait donc sous la pression d'aucun projet territorialisé, notamment de stockage géologique. Le corpus des discussions comprend six dialogues thématiques successifs. C'est le point de vue dialogique qui est retenu, au sens où nous nous attachons aux interventions \" sur \" des interventions, à leur jeu conjonctif-disjonctif plutôt qu'à leur contenu argumentatif, pour saisir ce que peut être la progression d'un dialogue de l'acceptabilité et les modalités d'implication des intervenants dans la construction d'un projet commun. Il s'agit ici d'un dialogue précurseur. En contrepoint du dialogue et de ses effets spécifiques, on trouvera en encadrés le rappel des \" positions \" originales de certains intervenants, résumées par eux et exprimées lors de la table ronde. (*) Captage et Stockage du CO2, ou CSC.",
+                "document_type": "COUV",
+                "publication_date": "2010-02-01",
+                "semantic_rank": 8,
+                "full_text_rank": 200,
+                "associated_query": "Est ce qu’informer c’est résister"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "eeba811b-e7ae-56f0-975f-182ce549c8dd",
+            "document_id": "2bb4bfb0-91c5-5ef5-83dc-81a23520a462",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC\n\nText: nignore plus leur prégnance dans une société quils tendent à rendre le plus souvent \nindécise  Ce débat pose comme question de principe  : comment concevoir  une telle \nneutralité lorsque l a menace climatique apparaît si urgente, et la responsabilité si \nincontournable  ? \nUn   communiquant   tente alors de rehausser le langage prescripteur de \nlaction  pour des enjeux dinformation posés comme prioritaires, cest -à-dire convaincre \nde la réalité  globale et ne pas la diluer dans les méandres de problèmes plus secondaires, \ndonc responsabiliser et impliquer  : (I)   Il faut parler du sujet bien plus globalement \npour faire passer le message de la CSC et de cette technologie  !  Mais est -ce vraiment \npréparer utilement le terrain local pour un dialogue concerté, nest -ce pas courir le \nrisque inverse dune communication contre -productive  ? Est -il réellement efficace de \ncommuniquer directement une opinion sans le détour dun débat public et légitimant  ?",
+            "metadata": {
+              "title": "Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC",
+              "hal_id": "hal-00870708",
+              "authors": [
+                "Gilles Mardon"
+              ],
+              "version": "v0",
+              "citation": "Gilles Mardon. Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC. Minh Ha‐Duong and Naceur Chaabane, editors. Le captage et le stockage du CO2. Enjeux techniques et sociaux en France., Quae, p. 83‐109, 2010, Collection Update Sciences & Technologies, ISBN 978‐2‐7592‐0369‐7. ⟨hal-00870708⟩",
+              "source_url": "https://hal.science/hal-00870708",
+              "chunk_order": 154,
+              "description": "Le corpus de ce chapitre est constitué par la transcription intégrale d'un atelier de dialogue tenu en avril 2007, un atelier d'une durée de quelques heures réunissant une cinquantaine de participants. Cet atelier faisait suite à une matinée consacrée à des exposés thématiques relatifs aux multiples enjeux du CSC (*). L'esprit de l'atelier de dialogue était davantage de \" mettre en questions \" l'acceptabilité sociale du CSC que d'y apporter des réponses. Le dialogue ne se déroulait donc sous la pression d'aucun projet territorialisé, notamment de stockage géologique. Le corpus des discussions comprend six dialogues thématiques successifs. C'est le point de vue dialogique qui est retenu, au sens où nous nous attachons aux interventions \" sur \" des interventions, à leur jeu conjonctif-disjonctif plutôt qu'à leur contenu argumentatif, pour saisir ce que peut être la progression d'un dialogue de l'acceptabilité et les modalités d'implication des intervenants dans la construction d'un projet commun. Il s'agit ici d'un dialogue précurseur. En contrepoint du dialogue et de ses effets spécifiques, on trouvera en encadrés le rappel des \" positions \" originales de certains intervenants, résumées par eux et exprimées lors de la table ronde. (*) Captage et Stockage du CO2, ou CSC.",
+              "document_type": "COUV",
+              "publication_date": "2010-02-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Est ce qu’informer c’est résister"
+            }
+          },
+          {
+            "id": "bd3a43db-31d1-5c1e-a394-e590a32284f6",
+            "document_id": "2bb4bfb0-91c5-5ef5-83dc-81a23520a462",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC\n\nText: néchappe pas à certains intervenants.  \nLa première intervention se déclare (R)   politiquement très incorrecte  ,  Il y a \nacceptabilité, réseaux locaux, associations, etc., ... la question est de savoir comment il \nse fait quil y a une opposition locale, qui représente quels intérêts locaux,  comment \nça se fait quon ait pu bloquer quelque chose  ? ... ça devient lieu de crispation, plus \npersonne nose bouger, ... parce quensui te ça devient un enjeu politique ce nest \nmême pas une croyance collective ... cest comment un jeu daugmentation \ndoppositions va se structurer sur un endroit et faire que ça passera ou ça ne passera \npas . Cette réflexion attire lattention sur la phas e délicate d amorçage  dun dialogue  \nencore informel , la précaution d evant l es contingences locales.  \nUne seconde intervention interpelle les journalistes  : (R)   ... Pour les journalistes, \nfaire cette séparation entre information et communication, essayer d e maintenir une",
+            "metadata": {
+              "title": "Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC",
+              "hal_id": "hal-00870708",
+              "authors": [
+                "Gilles Mardon"
+              ],
+              "version": "v0",
+              "citation": "Gilles Mardon. Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC. Minh Ha‐Duong and Naceur Chaabane, editors. Le captage et le stockage du CO2. Enjeux techniques et sociaux en France., Quae, p. 83‐109, 2010, Collection Update Sciences & Technologies, ISBN 978‐2‐7592‐0369‐7. ⟨hal-00870708⟩",
+              "source_url": "https://hal.science/hal-00870708",
+              "chunk_order": 151,
+              "description": "Le corpus de ce chapitre est constitué par la transcription intégrale d'un atelier de dialogue tenu en avril 2007, un atelier d'une durée de quelques heures réunissant une cinquantaine de participants. Cet atelier faisait suite à une matinée consacrée à des exposés thématiques relatifs aux multiples enjeux du CSC (*). L'esprit de l'atelier de dialogue était davantage de \" mettre en questions \" l'acceptabilité sociale du CSC que d'y apporter des réponses. Le dialogue ne se déroulait donc sous la pression d'aucun projet territorialisé, notamment de stockage géologique. Le corpus des discussions comprend six dialogues thématiques successifs. C'est le point de vue dialogique qui est retenu, au sens où nous nous attachons aux interventions \" sur \" des interventions, à leur jeu conjonctif-disjonctif plutôt qu'à leur contenu argumentatif, pour saisir ce que peut être la progression d'un dialogue de l'acceptabilité et les modalités d'implication des intervenants dans la construction d'un projet commun. Il s'agit ici d'un dialogue précurseur. En contrepoint du dialogue et de ses effets spécifiques, on trouvera en encadrés le rappel des \" positions \" originales de certains intervenants, résumées par eux et exprimées lors de la table ronde. (*) Captage et Stockage du CO2, ou CSC.",
+              "document_type": "COUV",
+              "publication_date": "2010-02-01",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Est ce qu’informer c’est résister"
+            }
+          },
+          {
+            "id": "ccfbdc90-bf94-5b3e-82a7-08ce6dd65a1d",
+            "document_id": "ecc53eec-d4c7-5486-93b8-1a2b985768b2",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Les firmes transnationales et l'institution social-historique du changement climatique.\n\nText: téléphones portables, etc., ont très souvent procédé ainsi et, pour certains dentre eux,\ncontinuent à le faire, aussi longtemps  que cela constitue une défense efficace9. En réponse\naux  porteurs de revendications , à ceux qui émettent un grie f ou font part dune crainte,\nil sagit de réfuter leurs thèses  et de contre-argumenter en focalisant sur les incertitudes qui\ncaractérisent la situation. Lat titude est de dire :  pro uvez-nous quil y a péril et que nous\nsommes en cause . Elle est dimposer la char ge de la preuve à ce ux qui se plaignent ou\nsinquiètent. Elle est de promouvoir le dou te, ainsi que des positions différentes.\nDurant la période de politisation de  la thèse dun changement climatique\nanthropogénique, et même plus tard, tant que dimportantes incertitudes demeuraient sur le\nphénomène bio-géo-physico-chimique  et des incertitudes demeurent toujours, même si\nlon en sait davantage quau début des années quatre-vingt-dix , certains des porte-parole",
+            "metadata": {
+              "title": "Les firmes transnationales et l'institution social-historique du changement climatique.",
+              "hal_id": "tel-00169596",
+              "authors": "['Mathias Lefèvre']",
+              "version": "v0",
+              "citation": "Mathias Lefèvre. Les firmes transnationales et l'institution social-historique du changement climatique.. Economies et finances. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2007. Français. ⟨NNT : ⟩. ⟨tel-00169596⟩",
+              "source_url": "https://hal.science/tel-00169596",
+              "chunk_order": 1413,
+              "description": "Notre thèse porte sur les firmes transnationales dont les activités sont mises en cause dans le problème du changement climatique. Elle traite de leurs actions relativement au processus politique engagé par les Etats au début des années 1990 et de leur influence sur la définition des solutions à apporter au problème. Plus précisément, dans le cadre d'une réflexion plus large sur l'institution social-historique du problème - le fait qu'il est institué, moyennant l'imaginaire, dans et par des sociétés particulières, à un moment donné de leur histoire et pour un certain temps -, et considérant la période allant de 1989 à 2001, nous avons voulu élucider deux choses. D'une part, pourquoi, pour (ou contre) quoi et comment ces firmes ont agi (la cause, la fin et la teneur de leurs actions) par rapport au processus politique. D'autre part, dans quelle mesure ces actions (faisant valoir un certain \" pouvoir relationnel \"), mais aussi le seul fait qu'elles existaient (situation dont elles tirent un \" pouvoir institutionnel \"), ont eu des effets sur ce processus et, plus particulièrement, sur la définition des solutions. Le choix d'analyser ces acteurs \" non-étatiques \" majeurs a résulté de deux motivations entremêlées. Celle, principale, de démontrer la nécessité de tenir compte de ces grandes firmes (en sus des Etats, des institutions interétatiques et d'autres acteurs non-étatiques) pour pouvoir comprendre l'évolution du processus politique, et ainsi de remédier au défaut d'études sur le sujet. Par ailleurs, celle de contribuer, en filigrane, à la compréhension de la façon dont le capitalisme, en tant que régime social (type spécifique d'institution de la société) ne pouvant exister que dans et par l'entreprise, affronte ce problème qui, plus que tout autre problème écologique, le met profondément en question, c'est-à-dire le menace.",
+              "document_type": "THESE",
+              "publication_date": "2007-06-18",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Est ce qu’informer c’est résister"
+            }
+          },
+          {
+            "id": "927328ce-6247-507f-a6c1-a01a9baa1889",
+            "document_id": "2bb4bfb0-91c5-5ef5-83dc-81a23520a462",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC\n\nText: même pas une croyance collective ... cest comment un jeu daugmentation \ndoppositions va se structurer sur un endroit et faire que ça passera ou ça ne passera \npas . Cette réflexion attire lattention sur la phas e délicate d amorçage  dun dialogue  \nencore informel , la précaution d evant l es contingences locales.  \nUne seconde intervention interpelle les journalistes  : (R)   ... Pour les journalistes, \nfaire cette séparation entre information et communication, essayer d e maintenir une \npluralité des points de vue En matière de changement global, on peut se demander si \ncette dualité est parfaitement pertinente dans la mesure où ça permet aux journalistes \nfinalement de ne pas sengager sous prétexte de ne pas aller dans le  sens de la \ncommunication, mais en même temps il sagit bien dun problème général  ! Donc il me",
+            "metadata": {
+              "title": "Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC",
+              "hal_id": "hal-00870708",
+              "authors": [
+                "Gilles Mardon"
+              ],
+              "version": "v0",
+              "citation": "Gilles Mardon. Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC. Minh Ha‐Duong and Naceur Chaabane, editors. Le captage et le stockage du CO2. Enjeux techniques et sociaux en France., Quae, p. 83‐109, 2010, Collection Update Sciences & Technologies, ISBN 978‐2‐7592‐0369‐7. ⟨hal-00870708⟩",
+              "source_url": "https://hal.science/hal-00870708",
+              "chunk_order": 152,
+              "description": "Le corpus de ce chapitre est constitué par la transcription intégrale d'un atelier de dialogue tenu en avril 2007, un atelier d'une durée de quelques heures réunissant une cinquantaine de participants. Cet atelier faisait suite à une matinée consacrée à des exposés thématiques relatifs aux multiples enjeux du CSC (*). L'esprit de l'atelier de dialogue était davantage de \" mettre en questions \" l'acceptabilité sociale du CSC que d'y apporter des réponses. Le dialogue ne se déroulait donc sous la pression d'aucun projet territorialisé, notamment de stockage géologique. Le corpus des discussions comprend six dialogues thématiques successifs. C'est le point de vue dialogique qui est retenu, au sens où nous nous attachons aux interventions \" sur \" des interventions, à leur jeu conjonctif-disjonctif plutôt qu'à leur contenu argumentatif, pour saisir ce que peut être la progression d'un dialogue de l'acceptabilité et les modalités d'implication des intervenants dans la construction d'un projet commun. Il s'agit ici d'un dialogue précurseur. En contrepoint du dialogue et de ses effets spécifiques, on trouvera en encadrés le rappel des \" positions \" originales de certains intervenants, résumées par eux et exprimées lors de la table ronde. (*) Captage et Stockage du CO2, ou CSC.",
+              "document_type": "COUV",
+              "publication_date": "2010-02-01",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Est ce qu’informer c’est résister"
+            }
+          },
+          {
+            "id": "b435d7e1-7530-53fd-a649-b0e8bd99ffe0",
+            "document_id": "2bb4bfb0-91c5-5ef5-83dc-81a23520a462",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC\n\nText: donc responsabiliser et impliquer  : (I)   Il faut parler du sujet bien plus globalement \npour faire passer le message de la CSC et de cette technologie  !  Mais est -ce vraiment \npréparer utilement le terrain local pour un dialogue concerté, nest -ce pas courir le \nrisque inverse dune communication contre -productive  ? Est -il réellement efficace de \ncommuniquer directement une opinion sans le détour dun débat public et légitimant  ? \nLe déroulement de la discussion   des enjeux globaux   permet den douter, montrant \nque le CSC peut diviser sans remettre en cause une représentation globale consensuelle, \nmais quune telle division peut aussi déstabiliser lintégrité de cette représentation  \nglobale. Ne vaut -il pas mieux séparer la communication sur le problème global, \nlargement acquis, de linformation exigible sur des options daction et rendue \nindispensable par les débats sur leur acceptabilité  ?  \nLépreuve du temps avec lincertitude asso ciée, mal abordée dans le dialogue des",
+            "metadata": {
+              "title": "Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC",
+              "hal_id": "hal-00870708",
+              "authors": [
+                "Gilles Mardon"
+              ],
+              "version": "v0",
+              "citation": "Gilles Mardon. Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC. Minh Ha‐Duong and Naceur Chaabane, editors. Le captage et le stockage du CO2. Enjeux techniques et sociaux en France., Quae, p. 83‐109, 2010, Collection Update Sciences & Technologies, ISBN 978‐2‐7592‐0369‐7. ⟨hal-00870708⟩",
+              "source_url": "https://hal.science/hal-00870708",
+              "chunk_order": 155,
+              "description": "Le corpus de ce chapitre est constitué par la transcription intégrale d'un atelier de dialogue tenu en avril 2007, un atelier d'une durée de quelques heures réunissant une cinquantaine de participants. Cet atelier faisait suite à une matinée consacrée à des exposés thématiques relatifs aux multiples enjeux du CSC (*). L'esprit de l'atelier de dialogue était davantage de \" mettre en questions \" l'acceptabilité sociale du CSC que d'y apporter des réponses. Le dialogue ne se déroulait donc sous la pression d'aucun projet territorialisé, notamment de stockage géologique. Le corpus des discussions comprend six dialogues thématiques successifs. C'est le point de vue dialogique qui est retenu, au sens où nous nous attachons aux interventions \" sur \" des interventions, à leur jeu conjonctif-disjonctif plutôt qu'à leur contenu argumentatif, pour saisir ce que peut être la progression d'un dialogue de l'acceptabilité et les modalités d'implication des intervenants dans la construction d'un projet commun. Il s'agit ici d'un dialogue précurseur. En contrepoint du dialogue et de ses effets spécifiques, on trouvera en encadrés le rappel des \" positions \" originales de certains intervenants, résumées par eux et exprimées lors de la table ronde. (*) Captage et Stockage du CO2, ou CSC.",
+              "document_type": "COUV",
+              "publication_date": "2010-02-01",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Est ce qu’informer c’est résister"
+            }
+          },
+          {
+            "id": "b1863e98-89a8-5f42-b168-5a263ab0df6e",
+            "document_id": "0c210469-2645-5334-a133-eac663df3aeb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Le climato-scepticisme Réflexions sur la confusion des genres\n\nText: citoyen et injurient notre aptitude au progrès co mme l'avenir, tout simplement13 . \nEnfin le changement climatique dérange car  il oblige à un examen de nos modes de \nvie, un changement de nos habitudes. Au niveau  individuel, la perspective de devoir lutter \ncontre un phénomène global et in tangible peut susciter un sen timent d/uni0000 impuissance, créateur \nd/uni0000 angoisse ; le discours patelin des climato-sceptiques peut tr ouver du crédit auprès de chacun \ncar il rassure et dissipe cette angoisse. Cassandr e perdra toujours le talent de persuader face à \nun Apollon contrarié dans son entreprise : les promesses dou cereuses d/uni0000 un avenir paisible \nsont plus racoleuses que le s prédictions de malheur. \n \nPour ces raisons, un discours infirmant l/uni0000 exigence d/uni0000 action P trouvera un appui, un \nréseau de financement, une audience. Si nous  percevons comment le climato-scepticisme \nrencontre un écho dans la société, coment il pe ut séduire au niveau individuel, nous ne savons",
+            "metadata": {
+              "title": "Le climato-scepticisme Réflexions sur la confusion des genres",
+              "hal_id": "hal-00716418",
+              "authors": [
+                "Antonin Pottier"
+              ],
+              "version": "v0",
+              "citation": "Antonin Pottier. Le climato-scepticisme Réflexions sur la confusion des genres. Futuribles, 2011, 380, pp.27-40. ⟨hal-00716418⟩",
+              "source_url": "https://hal.science/hal-00716418",
+              "chunk_order": 35,
+              "description": "L'analyse examine les ressorts sociopsychologiques du discours climato-sceptique. L'auteur distingue deux éléments dans le débat sur le changement climatique : une partie \" diagnostic \" comprenant l'observation du réchauffement de la planète, ses causes (l'émission de gaz à effet de serre) et ses conséquences possibles (scénario tendanciel de bouleversements climatiques de grande ampleur) ; et une partie \" prescription \" qui, tenant compte du diagnostic, propose des mesures politiques et relève non plus d'observations scientifiques mais d'une appréciation morale. Après un rappel de ce qui alimente le débat (la part d'incertitude qui ne peut concerner que la vision prospective découlant de l'observation des faits, et non la qualification des faits observés), Antonin Pottier montre bien que les thèses climato-sceptiques relèvent d'une confusion entre le diagnostic et la prescription : c'est parce qu'ils refusent la nécessité ou le contenu des politiques climatiques qu'ils en viennent à dénier la réalité scientifique du changement climatique, déplaçant le débat et s'enfonçant dans l'erreur. Une posture d'autant plus dommageable qu'elle trouve un écho médiatique important tendant à embrouiller un peu plus les informations à la disposition de l'opinion publique : \" La perception des enjeux contemporains par le citoyen est entravée, au profit des intérêts que fragiliserait une lutte contre les émissions de gaz à effet de serre.",
+              "document_type": "ART",
+              "publication_date": "2011-01-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Est ce qu’informer c’est résister"
+            }
+          },
+          {
+            "id": "0ef361dc-b84a-5963-8e36-d30b7d5a501d",
+            "document_id": "2bb4bfb0-91c5-5ef5-83dc-81a23520a462",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC\n\nText: Captage et stockage du CO 2 \n106 semble quune réflexion ... quand on sait que les problèmes dinformation en matière de \ncomportement général, ..., sont fondamentaux ... donc dans la mesure où déjà les \nscientifiques ont tendance à ne jamais sengager ... . \nLa distinction communication/information, déjà formulée le matin dun point de vue \nstrictement journalistique, est irritante dans la mesure où la  priori  dobjectivité semble \nprôner une neutr alité absolue des médias  dans la publicité des opinions, alors quon \nnignore plus leur prégnance dans une société quils tendent à rendre le plus souvent \nindécise  Ce débat pose comme question de principe  : comment concevoir  une telle \nneutralité lorsque l a menace climatique apparaît si urgente, et la responsabilité si \nincontournable  ? \nUn   communiquant   tente alors de rehausser le langage prescripteur de \nlaction  pour des enjeux dinformation posés comme prioritaires, cest -à-dire convaincre",
+            "metadata": {
+              "title": "Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC",
+              "hal_id": "hal-00870708",
+              "authors": [
+                "Gilles Mardon"
+              ],
+              "version": "v0",
+              "citation": "Gilles Mardon. Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC. Minh Ha‐Duong and Naceur Chaabane, editors. Le captage et le stockage du CO2. Enjeux techniques et sociaux en France., Quae, p. 83‐109, 2010, Collection Update Sciences & Technologies, ISBN 978‐2‐7592‐0369‐7. ⟨hal-00870708⟩",
+              "source_url": "https://hal.science/hal-00870708",
+              "chunk_order": 153,
+              "description": "Le corpus de ce chapitre est constitué par la transcription intégrale d'un atelier de dialogue tenu en avril 2007, un atelier d'une durée de quelques heures réunissant une cinquantaine de participants. Cet atelier faisait suite à une matinée consacrée à des exposés thématiques relatifs aux multiples enjeux du CSC (*). L'esprit de l'atelier de dialogue était davantage de \" mettre en questions \" l'acceptabilité sociale du CSC que d'y apporter des réponses. Le dialogue ne se déroulait donc sous la pression d'aucun projet territorialisé, notamment de stockage géologique. Le corpus des discussions comprend six dialogues thématiques successifs. C'est le point de vue dialogique qui est retenu, au sens où nous nous attachons aux interventions \" sur \" des interventions, à leur jeu conjonctif-disjonctif plutôt qu'à leur contenu argumentatif, pour saisir ce que peut être la progression d'un dialogue de l'acceptabilité et les modalités d'implication des intervenants dans la construction d'un projet commun. Il s'agit ici d'un dialogue précurseur. En contrepoint du dialogue et de ses effets spécifiques, on trouvera en encadrés le rappel des \" positions \" originales de certains intervenants, résumées par eux et exprimées lors de la table ronde. (*) Captage et Stockage du CO2, ou CSC.",
+              "document_type": "COUV",
+              "publication_date": "2010-02-01",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Est ce qu’informer c’est résister"
+            }
+          },
+          {
+            "id": "1c9647a6-6b00-5e67-9be5-17b3b7659000",
+            "document_id": "2bb4bfb0-91c5-5ef5-83dc-81a23520a462",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC\n\nText: mettent en scène  ! . Effet pervers e t antidémocratique dun pseudo pluralisme en vertu \nduquel communiquer un point de vue représentatif appelle aussitôt un point de vue \n  contradictoire  , même non représentatif ? En  résulterait -il un déficit de la \ncommunication sociale par stérilisation p artielle des débats authentiques  ? Cela pourrait -\nil induire un déficit dacceptabilité sociale  ? Question troublante  ! \nUn journaliste prend enfin la parole sur ce thème de la communication/information, \nexpliquant que (J) au niveau local   une communication  excessive crée une \nbipolarisation du débat  , une agressivité réactive   avec des associations qui se \nmontent et qui ont aussi un langage très excessif   La pluralité de linformation, son",
+            "metadata": {
+              "title": "Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC",
+              "hal_id": "hal-00870708",
+              "authors": [
+                "Gilles Mardon"
+              ],
+              "version": "v0",
+              "citation": "Gilles Mardon. Quelques ouvertures d'un \" atelier de dialogue \" sur l'acceptabilité sociale du CSC. Minh Ha‐Duong and Naceur Chaabane, editors. Le captage et le stockage du CO2. Enjeux techniques et sociaux en France., Quae, p. 83‐109, 2010, Collection Update Sciences & Technologies, ISBN 978‐2‐7592‐0369‐7. ⟨hal-00870708⟩",
+              "source_url": "https://hal.science/hal-00870708",
+              "chunk_order": 159,
+              "description": "Le corpus de ce chapitre est constitué par la transcription intégrale d'un atelier de dialogue tenu en avril 2007, un atelier d'une durée de quelques heures réunissant une cinquantaine de participants. Cet atelier faisait suite à une matinée consacrée à des exposés thématiques relatifs aux multiples enjeux du CSC (*). L'esprit de l'atelier de dialogue était davantage de \" mettre en questions \" l'acceptabilité sociale du CSC que d'y apporter des réponses. Le dialogue ne se déroulait donc sous la pression d'aucun projet territorialisé, notamment de stockage géologique. Le corpus des discussions comprend six dialogues thématiques successifs. C'est le point de vue dialogique qui est retenu, au sens où nous nous attachons aux interventions \" sur \" des interventions, à leur jeu conjonctif-disjonctif plutôt qu'à leur contenu argumentatif, pour saisir ce que peut être la progression d'un dialogue de l'acceptabilité et les modalités d'implication des intervenants dans la construction d'un projet commun. Il s'agit ici d'un dialogue précurseur. En contrepoint du dialogue et de ses effets spécifiques, on trouvera en encadrés le rappel des \" positions \" originales de certains intervenants, résumées par eux et exprimées lors de la table ronde. (*) Captage et Stockage du CO2, ou CSC.",
+              "document_type": "COUV",
+              "publication_date": "2010-02-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Est ce qu’informer c’est résister"
+            }
+          },
+          {
+            "id": "4e1c932b-8316-5042-81cd-d4e7ca879834",
+            "document_id": "c66549ba-13f9-5927-963b-e668560f1939",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Lacan et la connaissance commune : « l’énigme des trois prisonniers »\n\nText: Tout en étant en dehors de la situation (ou extérieur à la situation), il contribue au résultat qui en découle. \nIl est vrai que cela ne ressort pas de façon flagrante dans la mesure où linformation quil livre sur la \ndistribution des disques (entre les blancs et les noirs) ne semble pas constituer une information majeure. \nEn annonçant publiquement la distribution des disq ues, il apprend aux prisonniers quau moins un \ndisque blanc est porté alors que chacun deux le sait puisque chacun observe quau moins un disque \nblanc est porté. Pourtant cest bien à ce niveau que la position du directeur prend tout son sens  : sil \nnava it pas rendu public la distribution des disques, aucun des prisonniers naurait pu déterminer la \ncouleur du disque quil porte.  \n \nPour le voir, distinguons les prisonniers en les nommant i, j et k, et plaçons -nous, par exemple, du point \nde vue de i. En lab sence dannonce du directeur, i voit tout de même que j et k sont parés dun disque",
+            "metadata": {
+              "title": "Lacan et la connaissance commune : « l’énigme des trois prisonniers »",
+              "hal_id": "hal-03046505",
+              "authors": [
+                "Tarik Tazdaït"
+              ],
+              "version": "v0",
+              "citation": "Tarik Tazdaït. Lacan et la connaissance commune : « l’énigme des trois prisonniers ». Erès. Réel de la Science, Réel de la Psychanalyse, Pierre-Christophe Cathelineau, Jean-François Chassaing et Thierry Florentin, pp.229-246, 2020, 9782749266404. ⟨hal-03046505⟩",
+              "source_url": "https://hal.science/hal-03046505",
+              "chunk_order": 25,
+              "description": "En mars 1945, le psychanalyste Jacques Lacan publie un article intitulé « Le Temps Logique et l’Assertion de Certitude Anticipée. Un Nouveau Sophisme ». A sa parution, cet article passe complètement inaperçu tant son contenu tranche avec les précédents travaux de Lacan : il y traite, en effet, d’un problème de logique. Ajoutons que le manque de visibilité dont l’article a souffert est également dû à Lacan dans la mesure où, pendant près de 10 ans, il n’en fera aucune mention donnant l’impression qu’il correspond à une simple parenthèse. Il faudra attendre son Discours de Rome de 1953 et sa rupture avec la Société Psychanalytique de Paris pour qu’il y revienne et en souligne l’importance. Depuis, « Le Temps Logique » a été abondamment commenté, notamment par des psychanalystes et des philosophes. L’un des arguments généralement mis en avant pour justifier son originalité réside dans le mode de raisonnement développé par Lacan, celui-ci étant en lien avec la théorie des jeux.Toutefois, malgré la place prise par cet article en psychanalyse, il reste encore méconnu tant par ceux qui développent la théorie des jeux que de ceux qui l’appliquent. Dans notre article, nous nous sommes proposés d’analyser le mode de raisonnement adopté par Lacan dans le « Temps Logique » afin de montrer combien il a été novateur. Cela nous permet de montrer que, même si cela n’est pas encore reconnu, Lacan a parfaitement sa place dans l’histoire de la théorie des jeux.",
+              "document_type": "COUV",
+              "publication_date": "2020-03-19",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "Est ce qu’informer c’est résister"
+            }
+          },
+          {
+            "id": "11991adc-ee2b-5cd9-abb5-becca01534e8",
+            "document_id": "ecc53eec-d4c7-5486-93b8-1a2b985768b2",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Les firmes transnationales et l'institution social-historique du changement climatique.\n\nText: Prendre du recul par rapport aux processus à lœuvre, catégoriser le s faits, établir des\ntypologies, mobiliser et travailler certaine s notions et concepts sur lesquels appuyer\nlargumentation, cela ne fait pas partie de leurs préoccupations (du moins pas lorsquils\nproduisent les textes auxquels nous  faisons allusion). Ils visent  dabord à informer, cest-à-\ndire à rendre compte du réel, mais selon leur s schèmes respectifs de représentation et avec\ndes buts concrets : dénoncer de s attitudes jugées pernicie uses, provoquer des changements,",
+            "metadata": {
+              "title": "Les firmes transnationales et l'institution social-historique du changement climatique.",
+              "hal_id": "tel-00169596",
+              "authors": "['Mathias Lefèvre']",
+              "version": "v0",
+              "citation": "Mathias Lefèvre. Les firmes transnationales et l'institution social-historique du changement climatique.. Economies et finances. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2007. Français. ⟨NNT : ⟩. ⟨tel-00169596⟩",
+              "source_url": "https://hal.science/tel-00169596",
+              "chunk_order": 1381,
+              "description": "Notre thèse porte sur les firmes transnationales dont les activités sont mises en cause dans le problème du changement climatique. Elle traite de leurs actions relativement au processus politique engagé par les Etats au début des années 1990 et de leur influence sur la définition des solutions à apporter au problème. Plus précisément, dans le cadre d'une réflexion plus large sur l'institution social-historique du problème - le fait qu'il est institué, moyennant l'imaginaire, dans et par des sociétés particulières, à un moment donné de leur histoire et pour un certain temps -, et considérant la période allant de 1989 à 2001, nous avons voulu élucider deux choses. D'une part, pourquoi, pour (ou contre) quoi et comment ces firmes ont agi (la cause, la fin et la teneur de leurs actions) par rapport au processus politique. D'autre part, dans quelle mesure ces actions (faisant valoir un certain \" pouvoir relationnel \"), mais aussi le seul fait qu'elles existaient (situation dont elles tirent un \" pouvoir institutionnel \"), ont eu des effets sur ce processus et, plus particulièrement, sur la définition des solutions. Le choix d'analyser ces acteurs \" non-étatiques \" majeurs a résulté de deux motivations entremêlées. Celle, principale, de démontrer la nécessité de tenir compte de ces grandes firmes (en sus des Etats, des institutions interétatiques et d'autres acteurs non-étatiques) pour pouvoir comprendre l'évolution du processus politique, et ainsi de remédier au défaut d'études sur le sujet. Par ailleurs, celle de contribuer, en filigrane, à la compréhension de la façon dont le capitalisme, en tant que régime social (type spécifique d'institution de la société) ne pouvant exister que dans et par l'entreprise, affronte ce problème qui, plus que tout autre problème écologique, le met profondément en question, c'est-à-dire le menace.",
+              "document_type": "THESE",
+              "publication_date": "2007-06-18",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "Est ce qu’informer c’est résister"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2022,
+            "total_tokens": 2022
+          }
+        }
+      },
+      "duration": 3411
+    },
+    "retrievalTime": 1332,
+    "generationTime": 3411,
+    "timestamp": "2025-07-12T13:08:12.678Z"
+  },
+  "server_context": {
+    "client_ip": "104.28.42.21",
+    "forwarded_for": "104.28.42.21",
+    "received_at": "2025-07-12T13:08:12.968019+00:00",
+    "server_version": "1.0.0"
+  }
+}

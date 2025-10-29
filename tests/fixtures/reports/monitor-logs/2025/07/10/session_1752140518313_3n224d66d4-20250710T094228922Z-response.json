@@ -1,0 +1,472 @@
+{
+  "sessionId": "session_1752140518313_3n224d66d4h5d6n3p",
+  "timestamp": "20250710T094228922Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752140536234_kk0jvcx",
+    "response": {
+      "results": {
+        "generated_answer": "Les séries temporelles sont mentionnées dans plusieurs contextes à travers les documents fournis. Voici quelques références pertinentes :\n\n1. **Interactions d'échelles en économie** : Ce document discute de l'importance de considérer une large gamme d'échelles temporelles pour évaluer les dommages du changement climatique et des événements extrêmes. Il souligne que les pertes de PIB dues aux extrêmes dépendent de la distribution des extrêmes et de la capacité de l'économie à se reconstruire après chaque catastrophe [03d14c5].\n\n2. **Projection des changements climatiques futurs** : Ce document aborde les projections des changements climatiques futurs et mentionne l'importance des échelles spatio-temporelles dans l'analyse des extrêmes climatiques. Il note que la réponse des précipitations horaires ou quotidiennes est plus complexe et peut se traduire par une modification significative des moments d'ordre supérieur de la distribution [30a5ae9].\n\n3. **Stratégies durables pour un service public d'eau à Paris** : Ce document discute de l'importance d'une approche diachronique pour analyser les politiques publiques dans le temps. Il mentionne que les éléments de temporalité sont des causes à part entière de l'action collective étudiée et doivent être analysés [9474063].\n\nCes références montrent que les séries temporelles sont un élément clé dans l'analyse des impacts économiques et climatiques, ainsi que dans la gestion des politiques publiques.",
+        "citations": [
+          {
+            "id": "03d14c5",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 521,
+              "end": 530
+            },
+            "payload": {
+              "id": "03d14c59-97c0-51e1-9baa-3726de3378d7",
+              "document_id": "67831292-ecf2-5f8b-8f7e-d326aeb52e4a",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017156862745098037,
+              "text": "Document Title: Interactions d'échelles en économie : Application à l'évaluation intégré des dommages du changement climatique et des événements extrêmes\n\nText: point il est important de consid erer une large gamme d echelles temporelles.\nSur le long-terme, les pertes de PIB dues aux extrˆ emes d ependent, de\nfacon tr` es non-lin eaire, ` a la fois de la distribution des extrˆ emes et de la ca-\npacited el   economie ` a ﬁnancer et ` a mener la reconstruction apr` es chaque\ncatastrophe. Pour une distribution des extrˆ emes donn ee, il y a une valeur de\nbifurcation de la capacit e de reconstruction : au del` a de cette valeur les pertes\nrestent mod erees, en de c`a elles augmentent tr` es rapidement. Ceci illustre la\ndiﬀerence entre consid erer un  evenement et une distribution d evenements :\nune serie d evenements quasi-n egligeables peut avoir des cons equences si-\ngniﬁcatives au niveau macro- economique. Ceci montre quil est impossible\nde calculer le coˆ ut de certains types de catastrophes ind ependamment des\nautres : elles interagissent de fa con importante.\nCe resultat pourrait aussi aider ` a expliquer labsence de d eveloppement",
+              "metadata": {
+                "title": "Interactions d'échelles en économie : Application à l'évaluation intégré des dommages du changement climatique et des événements extrêmes",
+                "hal_id": "halshs-00008712",
+                "authors": [
+                  "Stéphane Hallegatte"
+                ],
+                "version": "v0",
+                "citation": "Stéphane Hallegatte. Interactions d'échelles en économie : Application à l'évaluation intégré des dommages du changement climatique et des événements extrêmes. 2005. ⟨halshs-00008712⟩",
+                "source_url": "https://hal.science/halshs-00008712",
+                "chunk_order": 791,
+                "description": "Alors que les évaluations des dommages du changement climatique utilisent en général des modèles de croissance qui négligent les déséquilibres économiques, supposés transitoires, cette thèse met en lumière, à partir d'une série d'exercices de modélisation, l'importance des déséquilibres et de la variabilité endogène de l'économie dans l'évaluation des dommages des événements extrêmes et du changement climatique. Elle affirme de plus l'impossibilité de séparer l'évaluation des dommages et la représentation de la croissance et de la dynamique économique : les pertes en bien-être dépendront tout autant de la nature et de l'intensité des impacts que de la dynamique et de la situation de l'économie sur laquelle ils s'appliqueront. Ainsi, les incertitudes sur les dommages futurs du changement climatique proviennent à la fois d'incertitudes scientifiques et de l'incertitude sur l'organisation future de nos économies.",
+                "document_type": "UNDEFINED",
+                "publication_date": "2005-01-01",
+                "semantic_rank": 10,
+                "full_text_rank": 1,
+                "associated_query": "Series temporelle"
+              }
+            }
+          },
+          {
+            "id": "30a5ae9",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 946,
+              "end": 955
+            },
+            "payload": {
+              "id": "30a5ae99-4030-587f-9f39-31d2ccfd5841",
+              "document_id": "d3f3675b-346e-52ef-ada3-da154b075f33",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01638993710691824,
+              "text": "Document Title: Projection des changements climatiques futurs\n\nText: chaudsmêmeen2100enscénario \nRCP8.5(figure5b).Laréponseàcette \nquestionestdoncàmodulerselonle \nscénarioetléchellespatio-temporelle \nconsidérés.\nExtrêmes\nhydrologiques \nAlorsquelaréponsedesextrema de \ntempératureauxforçagesanthropiques \nsexpliqueenbonnepartieparunesim -\npletranslationdeladistributiondes \ntempératuresquotidiennesparle \nréchauffementsimuléenmoyennesai-\nsonnière,laréponsedesprécipitations \nhorairesouquotidiennesestpluscom -\nplexeetpeutsetraduireparunemodifi-\ncationsignificativedesmoments \ndordresupérieurdeladistribution.\nAinsi,danslaplupartdesrégions,on \npeutsattendreàunrenforcementdes \npluieslesplusintensesaucoursdu\nXXI esiècle(etdeleurcontributionaux \nprécipitationstotales).Bienque,pour Température(C)\n1020304050\nGGNorma le1961 1990\nEté2003\nQuantiles207099 ( rcp85)Q1Q10Q50Q90Q99Ecartàlanormale19611990(C)\n1900 1 950 2 000 2 0502 1002024681012\na)Tempé. sais onniè re(été)Europe\nObservations\nhistori cal (31)\nrcp85 (28)\nrcp26 (18)b)Tempé. q uotidienneFrance\n Juin            Ju illet Août",
+              "metadata": {
+                "doi": "10.4267/2042/56362",
+                "title": "Projection des changements climatiques futurs",
+                "hal_id": "halshs-01124443",
+                "authors": [
+                  "Olivier Boucher",
+                  "Jean-Louis Dufresne",
+                  "Jessica Vial",
+                  "Eric Brun",
+                  "Julien Cattiaux",
+                  "Fabrice Chauvin",
+                  "David Salas y Mélia",
+                  "Aurore Voldoire",
+                  "Laurent Bopp",
+                  "Pascale Braconnot",
+                  "Philippe Ciais",
+                  "Pascal Yiou",
+                  "Éric Guilyardi",
+                  "Juliette Mignot",
+                  "Céline Guivarch"
+                ],
+                "version": "v0",
+                "citation": "Olivier Boucher, Jean-Louis Dufresne, Jessica Vial, Eric Brun, Julien Cattiaux, et al.. Projection des changements climatiques futurs. La Météorologie, 2015, numéro spécial climat, 88, pp.56-67. ⟨10.4267/2042/56362⟩. ⟨halshs-01124443⟩",
+                "source_url": "https://doi.org/10.4267/2042/56362",
+                "chunk_order": 71,
+                "description": "Les modèles de climat offrent la possibilité d'anticiper la façon dont le système climatique risque d'être modifié par l'activité humaine au cours du XXIe siècle. Les études s'appuient sur des simulations numériques qui explorent l'évolution du climat moyen et de sa variabilité en fonction de différents scénarios socio-économiques. Nous présentons une sélection de résultats du projet CMIP5 d'intercomparaison demodèles de climat avec un focus illustratif sur les deux modèles français ayant participé à cet exercice. On y décrit les effets attendus des perturbations humaines sur la température de surface, les précipitations, la cryosphère mais aussi les extrêmes météorologiques et le cycle du carbone. Les résultats font ressortir de nombreux aspects fiables, que ce soit sur l'amplitude et la répartition géographique des changements attendus ou sur les processus mis en jeu dans ces changements. Ils montrent aussi les limites de l'exercice prospectif et des incertitudes persistantes sur certains points clés.",
+                "document_type": "ART",
+                "publication_date": "2015-02-23",
+                "semantic_rank": 3,
+                "full_text_rank": 200,
+                "associated_query": "Series temporelle"
+              }
+            }
+          },
+          {
+            "id": "9474063",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1274,
+              "end": 1283
+            },
+            "payload": {
+              "id": "94740633-f2eb-5d05-8e14-a1c5ca6d1992",
+              "document_id": "c59df36b-595d-510c-87b2-aadef7c4d5e3",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.0147909604519774,
+              "text": "Document Title: Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain\n\nText: 45 temporel et les éléments de temporalités sont alors  peu inclus dans l'analyse, dont ils ne forment \nqu'un décor. Deuxièmement, l' approche diachronique  qui étudie moins les fonctions actuelles \nque les chaînes de causalité  temporelles : le déroulement dynamique et les élément s de temporalité \nsont alors des causes à part entière de l'action col lective étudiée, qui sont donc à analyser.  \nNotre cadre danalyse va mobiliser en particulier un e approche diachronique (cf. infra : C2 S1), \nmais plusieurs méthodes sont là encore disponibles po ur étudier le déroulement d'une action \npublique dans le temps. D'une part, des méthodes séquentielles  abordent l'action publique \ncomme une succession détapes intangibles (cf. ANNEXE ). Dautre part, des méthodes \nincrémentales  abordent laction publique comme une succession de déc isions : par exemple, le \n\"modèle de la poubelle\" ( garbage can model)  (COHEN et al., 1972) accorde peu dimportance au",
+              "metadata": {
+                "title": "Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain",
+                "hal_id": "tel-01150236",
+                "authors": [
+                  "Julien Souriau"
+                ],
+                "version": "v0",
+                "citation": "Julien Souriau. Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain. Science politique. AgroParisTech, 2014. Français. ⟨NNT : 2014AGPT0052⟩. ⟨tel-01150236v3⟩",
+                "source_url": "https://hal.science/tel-01150236",
+                "chunk_order": 196,
+                "description": "Le service public d’eau de Paris est indéniablement développé… mais est-il durable ? Comment évaluer et améliorer cette durabilité ? C’est à cette question que nous proposons d’apporter une réponse scientifique. Cette thèse doctorale étudie les stratégies de développement des services publics d’eau et leur durabilité, avec pour principal cas d’étude Paris. En moins de deux siècles, ce service d’eau est passé d’une situation archaïque à la configuration sociotechnique actuelle, et nous souhaitons comprendre dans quelle mesure cette action collective pourra être prolongée – ou pas – à l'avenir. La première partie de cette thèse discute le cadre méthodologique et théorique mobilisé pour étudier ce qui 'gouverne' le développement et la durabilité du service public d’eau à Paris. C’est ce cadre d’analyse général qui est appliqué dans les parties suivantes de cette thèse, pour analyser le temps long : passé, présent et futur. Premièrement, pour comprendre la durabilité du développement passé. Nous expliquons comment un service public d’eau a pu historiquement être développé et perdurer à Paris jusqu'à ce jour. Pour cela, nous étudions les dynamiques à la fois écologiques, techniques, économiques, institutionnelles et politiques de ce développement, afin d'en identifier les principaux moteurs et les limites. Deuxièmement, pour évaluer la durabilité du développement présent. Nous étudions dans quelle mesure les politiques contemporaines (ex : politiques de RSE) changent quelque chose aux configurations, dynamiques et trajectoires héritées du passé. Si les politiques de développement durable actuelles permettent plusieurs améliorations, diverses résistances les rendent marginales ou marginalisées, malgré le consensus en leur faveur. Troisièmement, pour prévoir la durabilité du développement futur. Nous analysons les principales conséquences des projets officiels prévus (ex : Grand Paris de l’eau). En complément, nous proposons une étude prospective de divers scénarios encore possibles à l’avenir, afin de discuter des cheminements qui y mènent et de leurs conséquences, notamment face à la baisse de la demande d’eau observée depuis 1990. L'objectif de cette thèse est autant d'améliorer la compréhension de la notion de durabilité, que de proposer des outils opérationnels pour définir, mener et évaluer des politiques de service public d'eau durables à l’avenir.",
+                "document_type": "THESE",
+                "publication_date": "2014-11-04",
+                "semantic_rank": 9,
+                "full_text_rank": 200,
+                "associated_query": "Series temporelle"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "03d14c59-97c0-51e1-9baa-3726de3378d7",
+            "document_id": "67831292-ecf2-5f8b-8f7e-d326aeb52e4a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017156862745098037,
+            "text": "Document Title: Interactions d'échelles en économie : Application à l'évaluation intégré des dommages du changement climatique et des événements extrêmes\n\nText: point il est important de consid erer une large gamme d echelles temporelles.\nSur le long-terme, les pertes de PIB dues aux extrˆ emes d ependent, de\nfacon tr` es non-lin eaire, ` a la fois de la distribution des extrˆ emes et de la ca-\npacited el   economie ` a ﬁnancer et ` a mener la reconstruction apr` es chaque\ncatastrophe. Pour une distribution des extrˆ emes donn ee, il y a une valeur de\nbifurcation de la capacit e de reconstruction : au del` a de cette valeur les pertes\nrestent mod erees, en de c`a elles augmentent tr` es rapidement. Ceci illustre la\ndiﬀerence entre consid erer un  evenement et une distribution d evenements :\nune serie d evenements quasi-n egligeables peut avoir des cons equences si-\ngniﬁcatives au niveau macro- economique. Ceci montre quil est impossible\nde calculer le coˆ ut de certains types de catastrophes ind ependamment des\nautres : elles interagissent de fa con importante.\nCe resultat pourrait aussi aider ` a expliquer labsence de d eveloppement",
+            "metadata": {
+              "title": "Interactions d'échelles en économie : Application à l'évaluation intégré des dommages du changement climatique et des événements extrêmes",
+              "hal_id": "halshs-00008712",
+              "authors": [
+                "Stéphane Hallegatte"
+              ],
+              "version": "v0",
+              "citation": "Stéphane Hallegatte. Interactions d'échelles en économie : Application à l'évaluation intégré des dommages du changement climatique et des événements extrêmes. 2005. ⟨halshs-00008712⟩",
+              "source_url": "https://hal.science/halshs-00008712",
+              "chunk_order": 791,
+              "description": "Alors que les évaluations des dommages du changement climatique utilisent en général des modèles de croissance qui négligent les déséquilibres économiques, supposés transitoires, cette thèse met en lumière, à partir d'une série d'exercices de modélisation, l'importance des déséquilibres et de la variabilité endogène de l'économie dans l'évaluation des dommages des événements extrêmes et du changement climatique. Elle affirme de plus l'impossibilité de séparer l'évaluation des dommages et la représentation de la croissance et de la dynamique économique : les pertes en bien-être dépendront tout autant de la nature et de l'intensité des impacts que de la dynamique et de la situation de l'économie sur laquelle ils s'appliqueront. Ainsi, les incertitudes sur les dommages futurs du changement climatique proviennent à la fois d'incertitudes scientifiques et de l'incertitude sur l'organisation future de nos économies.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2005-01-01",
+              "semantic_rank": 10,
+              "full_text_rank": 1,
+              "associated_query": "Series temporelle"
+            }
+          },
+          {
+            "id": "247f1fce-08d0-5abb-9da7-39fc9e7f04e1",
+            "document_id": "a3d35f1e-aaa7-5509-8337-f7780ff57f64",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: L'économie dans l'impasse climatique\n\nText: davoir un temps de plus en plus prévisible. En effet, les secondes intercalaires\nsont une source dimprévisibilité qui met en danger la cohérence des systèmes\ndinformation à travers le monde, coordonnés à léchelle atomique. La déﬁnition\ndu jour et de lannée vont probablement passer ainsi dune base solaire à une\nbase atomique, ce qui à terme entraînera un décalage entre le temps mesuré et\nle temps perçu. On voit que les investissements de forme ne sont jamais termi-\nnés et doivent toujours être prolongés, même sur des catégories qui paraissent\nintuitives.\nSi lexistence du temps nous paraît aujourdhui si évidente, cest que le temps\nest omniprésent dans la vie sociale des sociétés modernes. Linsertion des activi-\ntés sociales dans un cadre temporel rigide est un phénomène récent, concomitant\nde la naissance du capitalisme. Les activités étaient auparavant très irrégulières.\nAvec le développement de la production de masse, il y a un besoin de synchroni-",
+            "metadata": {
+              "title": "L'économie dans l'impasse climatique",
+              "hal_id": "tel-01101591",
+              "authors": [
+                "Antonin Pottier"
+              ],
+              "version": "v0",
+              "citation": "Antonin Pottier. L'économie dans l'impasse climatique. Economies et finances. EHESS, 2014. Français. ⟨NNT : ⟩. ⟨tel-01101591⟩",
+              "source_url": "https://hal.science/tel-01101591",
+              "chunk_order": 2113,
+              "description": "Pourquoi les émissions de gaz à effet de serre ne sont-elles pas contrôlées? La thèse interroge la boîte à outil de l'analyse économique néo-classique et pose la question ainsi: comment la théorie économique forme un cadrage mental inadéquat du problème climatique? La thèse identifie des basculements dans l'histoire de l'économie des ressources et montre un oubli récurrent du substrat matériel de la production. La fonction de la production, outil privilégié de modélisation des contraintes techniques, repose sur une méprise, comme l'a enseigné la controverse de Cambridge. L'analyse coût-bénéfice, seul moyen supposé d'avoir une approche non-normative, est privilégié pour traiter du changement climatique, quitte à modéliser des relations inconnues. La fonction des dommages extrapole à partir de préjugés partagés, et les controverses répétées sur l'actualisation font ressortir l'incohérence du cadre macro-économique en vigueur. L'analyse d'un article contemporain explicite le fonctionnement de ce rapport désinvolte au réel: les liens lâches entre la structure mathématique d'un modèle, les mots employés pour le décrire et ses résultats numériques donnent d'extraordinaires marges d'interprétation. Les rapports entre système économique, idéologie et discipline académique sont étudiées au prisme de deux symboles, l'homo economicus et le marché. L'inadéquation de la théorie économique pour traiter du changement climatique a une racine plus profonde dans l'organisation actuelle des sociétés occidentales, centrée sur le marché. Les effets bloquants se font voir aussi bien dans le phénomène sociologique du climato-scepticisme que dans la construction du marché carbone.",
+              "document_type": "THESE",
+              "publication_date": "2014-05-28",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Series temporelle"
+            }
+          },
+          {
+            "id": "d3039497-6706-55a1-8ca7-ab6b228740d3",
+            "document_id": "a3d35f1e-aaa7-5509-8337-f7780ff57f64",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: L'économie dans l'impasse climatique\n\nText: 50 une autre planète\nTtTt+1\nTbTh\nTiSt+1\nStS\n(a)a=0\nTtTt+1\nTlTh\nTiSt+1\nStS\n(b)a=0.05\nFigure 1 .5: Dynamique de Stcomme un modèle réduit de la dynamique de Tt",
+            "metadata": {
+              "title": "L'économie dans l'impasse climatique",
+              "hal_id": "tel-01101591",
+              "authors": [
+                "Antonin Pottier"
+              ],
+              "version": "v0",
+              "citation": "Antonin Pottier. L'économie dans l'impasse climatique. Economies et finances. EHESS, 2014. Français. ⟨NNT : ⟩. ⟨tel-01101591⟩",
+              "source_url": "https://hal.science/tel-01101591",
+              "chunk_order": 323,
+              "description": "Pourquoi les émissions de gaz à effet de serre ne sont-elles pas contrôlées? La thèse interroge la boîte à outil de l'analyse économique néo-classique et pose la question ainsi: comment la théorie économique forme un cadrage mental inadéquat du problème climatique? La thèse identifie des basculements dans l'histoire de l'économie des ressources et montre un oubli récurrent du substrat matériel de la production. La fonction de la production, outil privilégié de modélisation des contraintes techniques, repose sur une méprise, comme l'a enseigné la controverse de Cambridge. L'analyse coût-bénéfice, seul moyen supposé d'avoir une approche non-normative, est privilégié pour traiter du changement climatique, quitte à modéliser des relations inconnues. La fonction des dommages extrapole à partir de préjugés partagés, et les controverses répétées sur l'actualisation font ressortir l'incohérence du cadre macro-économique en vigueur. L'analyse d'un article contemporain explicite le fonctionnement de ce rapport désinvolte au réel: les liens lâches entre la structure mathématique d'un modèle, les mots employés pour le décrire et ses résultats numériques donnent d'extraordinaires marges d'interprétation. Les rapports entre système économique, idéologie et discipline académique sont étudiées au prisme de deux symboles, l'homo economicus et le marché. L'inadéquation de la théorie économique pour traiter du changement climatique a une racine plus profonde dans l'organisation actuelle des sociétés occidentales, centrée sur le marché. Les effets bloquants se font voir aussi bien dans le phénomène sociologique du climato-scepticisme que dans la construction du marché carbone.",
+              "document_type": "THESE",
+              "publication_date": "2014-05-28",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Series temporelle"
+            }
+          },
+          {
+            "id": "30a5ae99-4030-587f-9f39-31d2ccfd5841",
+            "document_id": "d3f3675b-346e-52ef-ada3-da154b075f33",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Projection des changements climatiques futurs\n\nText: chaudsmêmeen2100enscénario \nRCP8.5(figure5b).Laréponseàcette \nquestionestdoncàmodulerselonle \nscénarioetléchellespatio-temporelle \nconsidérés.\nExtrêmes\nhydrologiques \nAlorsquelaréponsedesextrema de \ntempératureauxforçagesanthropiques \nsexpliqueenbonnepartieparunesim -\npletranslationdeladistributiondes \ntempératuresquotidiennesparle \nréchauffementsimuléenmoyennesai-\nsonnière,laréponsedesprécipitations \nhorairesouquotidiennesestpluscom -\nplexeetpeutsetraduireparunemodifi-\ncationsignificativedesmoments \ndordresupérieurdeladistribution.\nAinsi,danslaplupartdesrégions,on \npeutsattendreàunrenforcementdes \npluieslesplusintensesaucoursdu\nXXI esiècle(etdeleurcontributionaux \nprécipitationstotales).Bienque,pour Température(C)\n1020304050\nGGNorma le1961 1990\nEté2003\nQuantiles207099 ( rcp85)Q1Q10Q50Q90Q99Ecartàlanormale19611990(C)\n1900 1 950 2 000 2 0502 1002024681012\na)Tempé. sais onniè re(été)Europe\nObservations\nhistori cal (31)\nrcp85 (28)\nrcp26 (18)b)Tempé. q uotidienneFrance\n Juin            Ju illet Août",
+            "metadata": {
+              "doi": "10.4267/2042/56362",
+              "title": "Projection des changements climatiques futurs",
+              "hal_id": "halshs-01124443",
+              "authors": [
+                "Olivier Boucher",
+                "Jean-Louis Dufresne",
+                "Jessica Vial",
+                "Eric Brun",
+                "Julien Cattiaux",
+                "Fabrice Chauvin",
+                "David Salas y Mélia",
+                "Aurore Voldoire",
+                "Laurent Bopp",
+                "Pascale Braconnot",
+                "Philippe Ciais",
+                "Pascal Yiou",
+                "Éric Guilyardi",
+                "Juliette Mignot",
+                "Céline Guivarch"
+              ],
+              "version": "v0",
+              "citation": "Olivier Boucher, Jean-Louis Dufresne, Jessica Vial, Eric Brun, Julien Cattiaux, et al.. Projection des changements climatiques futurs. La Météorologie, 2015, numéro spécial climat, 88, pp.56-67. ⟨10.4267/2042/56362⟩. ⟨halshs-01124443⟩",
+              "source_url": "https://doi.org/10.4267/2042/56362",
+              "chunk_order": 71,
+              "description": "Les modèles de climat offrent la possibilité d'anticiper la façon dont le système climatique risque d'être modifié par l'activité humaine au cours du XXIe siècle. Les études s'appuient sur des simulations numériques qui explorent l'évolution du climat moyen et de sa variabilité en fonction de différents scénarios socio-économiques. Nous présentons une sélection de résultats du projet CMIP5 d'intercomparaison demodèles de climat avec un focus illustratif sur les deux modèles français ayant participé à cet exercice. On y décrit les effets attendus des perturbations humaines sur la température de surface, les précipitations, la cryosphère mais aussi les extrêmes météorologiques et le cycle du carbone. Les résultats font ressortir de nombreux aspects fiables, que ce soit sur l'amplitude et la répartition géographique des changements attendus ou sur les processus mis en jeu dans ces changements. Ils montrent aussi les limites de l'exercice prospectif et des incertitudes persistantes sur certains points clés.",
+              "document_type": "ART",
+              "publication_date": "2015-02-23",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Series temporelle"
+            }
+          },
+          {
+            "id": "d429ae24-b315-5346-b285-4650bae07601",
+            "document_id": "a3d35f1e-aaa7-5509-8337-f7780ff57f64",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: L'économie dans l'impasse climatique\n\nText: le contenu sémantique du mot temporaire est indéterminé et signiﬁe simplement\n en temps ﬁni . La seconde proposition donne une interprétation substantielle\nau terme temporaire. Dans cette proposition, une durée  temporaire  signiﬁe\nune durée courte à léchelle des constantes de temps des phénomènes étudiés.\nDans le cas de la taxe qui nous occupe, on peut penser que la constante de temps\nest celle de la durée acceptée du cycle des affaires, soit une dizaine dannées.\nSelon cette proposition, la taxe est temporaire si elle ne dure que quelques an-\nnées.\nOn voit ainsi une faille dans lépistémologie réfutationniste appliquée à lécono-\nmie. Elle postule lexistence dune opération de vériﬁcation par laquelle le testeur\npeut attribuer à une proposition une valeur de vérité. Dans cette opération, le tes-\nteur est supposé effectuer une opération purement logique. Cela présuppose que\nla proposition à vériﬁer soit réductible à une proposition logique. Si tel est le cas,",
+            "metadata": {
+              "title": "L'économie dans l'impasse climatique",
+              "hal_id": "tel-01101591",
+              "authors": [
+                "Antonin Pottier"
+              ],
+              "version": "v0",
+              "citation": "Antonin Pottier. L'économie dans l'impasse climatique. Economies et finances. EHESS, 2014. Français. ⟨NNT : ⟩. ⟨tel-01101591⟩",
+              "source_url": "https://hal.science/tel-01101591",
+              "chunk_order": 493,
+              "description": "Pourquoi les émissions de gaz à effet de serre ne sont-elles pas contrôlées? La thèse interroge la boîte à outil de l'analyse économique néo-classique et pose la question ainsi: comment la théorie économique forme un cadrage mental inadéquat du problème climatique? La thèse identifie des basculements dans l'histoire de l'économie des ressources et montre un oubli récurrent du substrat matériel de la production. La fonction de la production, outil privilégié de modélisation des contraintes techniques, repose sur une méprise, comme l'a enseigné la controverse de Cambridge. L'analyse coût-bénéfice, seul moyen supposé d'avoir une approche non-normative, est privilégié pour traiter du changement climatique, quitte à modéliser des relations inconnues. La fonction des dommages extrapole à partir de préjugés partagés, et les controverses répétées sur l'actualisation font ressortir l'incohérence du cadre macro-économique en vigueur. L'analyse d'un article contemporain explicite le fonctionnement de ce rapport désinvolte au réel: les liens lâches entre la structure mathématique d'un modèle, les mots employés pour le décrire et ses résultats numériques donnent d'extraordinaires marges d'interprétation. Les rapports entre système économique, idéologie et discipline académique sont étudiées au prisme de deux symboles, l'homo economicus et le marché. L'inadéquation de la théorie économique pour traiter du changement climatique a une racine plus profonde dans l'organisation actuelle des sociétés occidentales, centrée sur le marché. Les effets bloquants se font voir aussi bien dans le phénomène sociologique du climato-scepticisme que dans la construction du marché carbone.",
+              "document_type": "THESE",
+              "publication_date": "2014-05-28",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Series temporelle"
+            }
+          },
+          {
+            "id": "1d2e6301-62b7-5141-87c1-b3b8e2eed092",
+            "document_id": "d3f3675b-346e-52ef-ada3-da154b075f33",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Projection des changements climatiques futurs\n\nText: anomalieavoisinantles3Cparrapport\nauxnormales1961-1990,ilrejointla \nmoyennedesprojectionsRCP8.5dèsla décennie2040,devenantmêmeun \nextrêmefroiden2100(figure5a).Au \nplusfortdescaniculesdejuinetaoût,\nlestempératuresexceptionnellesde \n2003rejoignentle90 ecentiledeladis -\ntributionsimuléeenfindeXXI esiècle.\nLété2003demeurecependantunété \nanormalementchaudjusquen2100 \ndanslescénarioRCP2.6.Parailleurs,à \nuneéchelledequelquesjoursetlocale \n(enFrance),lesjourslespluschauds \ndaoût2003restentanormalement\nchaudsmêmeen2100enscénario \nRCP8.5(figure5b).Laréponseàcette \nquestionestdoncàmodulerselonle \nscénarioetléchellespatio-temporelle \nconsidérés.\nExtrêmes\nhydrologiques \nAlorsquelaréponsedesextrema de \ntempératureauxforçagesanthropiques \nsexpliqueenbonnepartieparunesim -\npletranslationdeladistributiondes \ntempératuresquotidiennesparle \nréchauffementsimuléenmoyennesai-\nsonnière,laréponsedesprécipitations \nhorairesouquotidiennesestpluscom -\nplexeetpeutsetraduireparunemodifi-\ncationsignificativedesmoments",
+            "metadata": {
+              "doi": "10.4267/2042/56362",
+              "title": "Projection des changements climatiques futurs",
+              "hal_id": "halshs-01124443",
+              "authors": [
+                "Olivier Boucher",
+                "Jean-Louis Dufresne",
+                "Jessica Vial",
+                "Eric Brun",
+                "Julien Cattiaux",
+                "Fabrice Chauvin",
+                "David Salas y Mélia",
+                "Aurore Voldoire",
+                "Laurent Bopp",
+                "Pascale Braconnot",
+                "Philippe Ciais",
+                "Pascal Yiou",
+                "Éric Guilyardi",
+                "Juliette Mignot",
+                "Céline Guivarch"
+              ],
+              "version": "v0",
+              "citation": "Olivier Boucher, Jean-Louis Dufresne, Jessica Vial, Eric Brun, Julien Cattiaux, et al.. Projection des changements climatiques futurs. La Météorologie, 2015, numéro spécial climat, 88, pp.56-67. ⟨10.4267/2042/56362⟩. ⟨halshs-01124443⟩",
+              "source_url": "https://doi.org/10.4267/2042/56362",
+              "chunk_order": 70,
+              "description": "Les modèles de climat offrent la possibilité d'anticiper la façon dont le système climatique risque d'être modifié par l'activité humaine au cours du XXIe siècle. Les études s'appuient sur des simulations numériques qui explorent l'évolution du climat moyen et de sa variabilité en fonction de différents scénarios socio-économiques. Nous présentons une sélection de résultats du projet CMIP5 d'intercomparaison demodèles de climat avec un focus illustratif sur les deux modèles français ayant participé à cet exercice. On y décrit les effets attendus des perturbations humaines sur la température de surface, les précipitations, la cryosphère mais aussi les extrêmes météorologiques et le cycle du carbone. Les résultats font ressortir de nombreux aspects fiables, que ce soit sur l'amplitude et la répartition géographique des changements attendus ou sur les processus mis en jeu dans ces changements. Ils montrent aussi les limites de l'exercice prospectif et des incertitudes persistantes sur certains points clés.",
+              "document_type": "ART",
+              "publication_date": "2015-02-23",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Series temporelle"
+            }
+          },
+          {
+            "id": "2ec83272-6e90-5594-9a74-81a32517b6a3",
+            "document_id": "67831292-ecf2-5f8b-8f7e-d326aeb52e4a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Interactions d'échelles en économie : Application à l'évaluation intégré des dommages du changement climatique et des événements extrêmes\n\nText: Son temps caract eristique est de lordre de 8 ans, il sexplique par le fait que\nla boucle de r etroaction est constitu ee dune chaˆ ıne de processus de temps\ncaract eristiques faibles mais non nul qui se cumulent pour mener ` ac et e m p s\nlong.\nLa retroaction est donc un processus non-instantan e, qui demande du\ntemps pour sinstaller. Ceci doit ˆ etre pris en compte quand on cherche ` am e -\nsurer la RVE, par exemple grˆ ace aux observations d eruptions volcaniques,\ndont les dur ees sont plus courtes que le temps caract eristique de la RVE.\nEn appliquant la relation (3.12) ` a lEq. (3.18) on retrouve le gain statique\ngWV= 38 %. Cette valeur est proche des r esultats de MCG (voir Lindzen\n[1993] ou Schneider et al. [1999]). Cependant, l elicitation des pˆ oles rapide\net lent montre linterˆ et de la m ethodologie : la RVE nest pas un processus\nmonotone responsable dune augmentation du r echauﬀement; cest plutˆ ot un\nprocessus complexe avec sa dynamique propre qui sinscrit dans le temps.",
+            "metadata": {
+              "title": "Interactions d'échelles en économie : Application à l'évaluation intégré des dommages du changement climatique et des événements extrêmes",
+              "hal_id": "halshs-00008712",
+              "authors": [
+                "Stéphane Hallegatte"
+              ],
+              "version": "v0",
+              "citation": "Stéphane Hallegatte. Interactions d'échelles en économie : Application à l'évaluation intégré des dommages du changement climatique et des événements extrêmes. 2005. ⟨halshs-00008712⟩",
+              "source_url": "https://hal.science/halshs-00008712",
+              "chunk_order": 403,
+              "description": "Alors que les évaluations des dommages du changement climatique utilisent en général des modèles de croissance qui négligent les déséquilibres économiques, supposés transitoires, cette thèse met en lumière, à partir d'une série d'exercices de modélisation, l'importance des déséquilibres et de la variabilité endogène de l'économie dans l'évaluation des dommages des événements extrêmes et du changement climatique. Elle affirme de plus l'impossibilité de séparer l'évaluation des dommages et la représentation de la croissance et de la dynamique économique : les pertes en bien-être dépendront tout autant de la nature et de l'intensité des impacts que de la dynamique et de la situation de l'économie sur laquelle ils s'appliqueront. Ainsi, les incertitudes sur les dommages futurs du changement climatique proviennent à la fois d'incertitudes scientifiques et de l'incertitude sur l'organisation future de nos économies.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2005-01-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Series temporelle"
+            }
+          },
+          {
+            "id": "a77a1b82-e3c2-5fa9-a451-95228b7666bd",
+            "document_id": "a3d35f1e-aaa7-5509-8337-f7780ff57f64",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: L'économie dans l'impasse climatique\n\nText: nés et doivent toujours être prolongés, même sur des catégories qui paraissent\nintuitives.\nSi lexistence du temps nous paraît aujourdhui si évidente, cest que le temps\nest omniprésent dans la vie sociale des sociétés modernes. Linsertion des activi-\ntés sociales dans un cadre temporel rigide est un phénomène récent, concomitant\nde la naissance du capitalisme. Les activités étaient auparavant très irrégulières.\nAvec le développement de la production de masse, il y a un besoin de synchroni-\nsation des activités. Le temps simpose progressivement dans les fabriques et la\nvie sociale, dabord avec les beffrois, puis avec les horloges, et, ﬁnalement, avec\nles montres, par lesquelles chaque individu porte sur lui le temps (Thompson,\n1967 ).\nNorbert Elias ( 1996 ) a donné toute sa portée sociologique à lévolution de la\nprésence du temps dans les sociétés. Le temps sert de repère pour les activités\nsociales. Dans les sociétés primitives, il est déterminé de manière discontinue.",
+            "metadata": {
+              "title": "L'économie dans l'impasse climatique",
+              "hal_id": "tel-01101591",
+              "authors": [
+                "Antonin Pottier"
+              ],
+              "version": "v0",
+              "citation": "Antonin Pottier. L'économie dans l'impasse climatique. Economies et finances. EHESS, 2014. Français. ⟨NNT : ⟩. ⟨tel-01101591⟩",
+              "source_url": "https://hal.science/tel-01101591",
+              "chunk_order": 2114,
+              "description": "Pourquoi les émissions de gaz à effet de serre ne sont-elles pas contrôlées? La thèse interroge la boîte à outil de l'analyse économique néo-classique et pose la question ainsi: comment la théorie économique forme un cadrage mental inadéquat du problème climatique? La thèse identifie des basculements dans l'histoire de l'économie des ressources et montre un oubli récurrent du substrat matériel de la production. La fonction de la production, outil privilégié de modélisation des contraintes techniques, repose sur une méprise, comme l'a enseigné la controverse de Cambridge. L'analyse coût-bénéfice, seul moyen supposé d'avoir une approche non-normative, est privilégié pour traiter du changement climatique, quitte à modéliser des relations inconnues. La fonction des dommages extrapole à partir de préjugés partagés, et les controverses répétées sur l'actualisation font ressortir l'incohérence du cadre macro-économique en vigueur. L'analyse d'un article contemporain explicite le fonctionnement de ce rapport désinvolte au réel: les liens lâches entre la structure mathématique d'un modèle, les mots employés pour le décrire et ses résultats numériques donnent d'extraordinaires marges d'interprétation. Les rapports entre système économique, idéologie et discipline académique sont étudiées au prisme de deux symboles, l'homo economicus et le marché. L'inadéquation de la théorie économique pour traiter du changement climatique a une racine plus profonde dans l'organisation actuelle des sociétés occidentales, centrée sur le marché. Les effets bloquants se font voir aussi bien dans le phénomène sociologique du climato-scepticisme que dans la construction du marché carbone.",
+              "document_type": "THESE",
+              "publication_date": "2014-05-28",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Series temporelle"
+            }
+          },
+          {
+            "id": "af7951b9-18de-5be4-8405-a8baf1ce53cf",
+            "document_id": "d3f3675b-346e-52ef-ada3-da154b075f33",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Projection des changements climatiques futurs\n\nText: histori cal (31)\nrcp85 (28)\nrcp26 (18)b)Tempé. q uotidienneFrance\n Juin            Ju illet Août\nFigure5.a)Écartàlanormale 1961-1990delatempératuremoyennée surlété(juin,juillet,août)etlEurope(boîtebleuesurlacarte)pourlesobserva -\ntions(CRUTEM4v,traitnoir),lessimulationshistoriquesindividuelles(traitsbleus)etlesprojections futuresenscénariosRCP8.5(traitsrouges) etRCP2.6 \n(traitsverts).Lenombredesimulationsutiliséesainsiquelesmoyennes densemble lissées(traitsépaisaveccouleurscorrespondantes) sontindiqués. \nLanomaliede2003(2,8C,marquéeparuneétoile)devientfroideenRCP8.5dès2050,maisrestechaudeenRCP2.6jusquen 2100.b)Température quo -\ntidiennedelété2003(juin,juillet,août)moyennéesurlecentredelaFrance(boîtehachurée rougesurlacarte),comparée àlanormale observée (E-OBS, \nnoirépais)etàlamoyenne desquantiles2070-2099 surtouteslessimulations RCP8.5(bleuentreQ1etQ10,rougeentreQ90etQ99,voiréchellede \ndroite).",
+            "metadata": {
+              "doi": "10.4267/2042/56362",
+              "title": "Projection des changements climatiques futurs",
+              "hal_id": "halshs-01124443",
+              "authors": [
+                "Olivier Boucher",
+                "Jean-Louis Dufresne",
+                "Jessica Vial",
+                "Eric Brun",
+                "Julien Cattiaux",
+                "Fabrice Chauvin",
+                "David Salas y Mélia",
+                "Aurore Voldoire",
+                "Laurent Bopp",
+                "Pascale Braconnot",
+                "Philippe Ciais",
+                "Pascal Yiou",
+                "Éric Guilyardi",
+                "Juliette Mignot",
+                "Céline Guivarch"
+              ],
+              "version": "v0",
+              "citation": "Olivier Boucher, Jean-Louis Dufresne, Jessica Vial, Eric Brun, Julien Cattiaux, et al.. Projection des changements climatiques futurs. La Météorologie, 2015, numéro spécial climat, 88, pp.56-67. ⟨10.4267/2042/56362⟩. ⟨halshs-01124443⟩",
+              "source_url": "https://doi.org/10.4267/2042/56362",
+              "chunk_order": 73,
+              "description": "Les modèles de climat offrent la possibilité d'anticiper la façon dont le système climatique risque d'être modifié par l'activité humaine au cours du XXIe siècle. Les études s'appuient sur des simulations numériques qui explorent l'évolution du climat moyen et de sa variabilité en fonction de différents scénarios socio-économiques. Nous présentons une sélection de résultats du projet CMIP5 d'intercomparaison demodèles de climat avec un focus illustratif sur les deux modèles français ayant participé à cet exercice. On y décrit les effets attendus des perturbations humaines sur la température de surface, les précipitations, la cryosphère mais aussi les extrêmes météorologiques et le cycle du carbone. Les résultats font ressortir de nombreux aspects fiables, que ce soit sur l'amplitude et la répartition géographique des changements attendus ou sur les processus mis en jeu dans ces changements. Ils montrent aussi les limites de l'exercice prospectif et des incertitudes persistantes sur certains points clés.",
+              "document_type": "ART",
+              "publication_date": "2015-02-23",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Series temporelle"
+            }
+          },
+          {
+            "id": "94740633-f2eb-5d05-8e14-a1c5ca6d1992",
+            "document_id": "c59df36b-595d-510c-87b2-aadef7c4d5e3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain\n\nText: 45 temporel et les éléments de temporalités sont alors  peu inclus dans l'analyse, dont ils ne forment \nqu'un décor. Deuxièmement, l' approche diachronique  qui étudie moins les fonctions actuelles \nque les chaînes de causalité  temporelles : le déroulement dynamique et les élément s de temporalité \nsont alors des causes à part entière de l'action col lective étudiée, qui sont donc à analyser.  \nNotre cadre danalyse va mobiliser en particulier un e approche diachronique (cf. infra : C2 S1), \nmais plusieurs méthodes sont là encore disponibles po ur étudier le déroulement d'une action \npublique dans le temps. D'une part, des méthodes séquentielles  abordent l'action publique \ncomme une succession détapes intangibles (cf. ANNEXE ). Dautre part, des méthodes \nincrémentales  abordent laction publique comme une succession de déc isions : par exemple, le \n\"modèle de la poubelle\" ( garbage can model)  (COHEN et al., 1972) accorde peu dimportance au",
+            "metadata": {
+              "title": "Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain",
+              "hal_id": "tel-01150236",
+              "authors": [
+                "Julien Souriau"
+              ],
+              "version": "v0",
+              "citation": "Julien Souriau. Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain. Science politique. AgroParisTech, 2014. Français. ⟨NNT : 2014AGPT0052⟩. ⟨tel-01150236v3⟩",
+              "source_url": "https://hal.science/tel-01150236",
+              "chunk_order": 196,
+              "description": "Le service public d’eau de Paris est indéniablement développé… mais est-il durable ? Comment évaluer et améliorer cette durabilité ? C’est à cette question que nous proposons d’apporter une réponse scientifique. Cette thèse doctorale étudie les stratégies de développement des services publics d’eau et leur durabilité, avec pour principal cas d’étude Paris. En moins de deux siècles, ce service d’eau est passé d’une situation archaïque à la configuration sociotechnique actuelle, et nous souhaitons comprendre dans quelle mesure cette action collective pourra être prolongée – ou pas – à l'avenir. La première partie de cette thèse discute le cadre méthodologique et théorique mobilisé pour étudier ce qui 'gouverne' le développement et la durabilité du service public d’eau à Paris. C’est ce cadre d’analyse général qui est appliqué dans les parties suivantes de cette thèse, pour analyser le temps long : passé, présent et futur. Premièrement, pour comprendre la durabilité du développement passé. Nous expliquons comment un service public d’eau a pu historiquement être développé et perdurer à Paris jusqu'à ce jour. Pour cela, nous étudions les dynamiques à la fois écologiques, techniques, économiques, institutionnelles et politiques de ce développement, afin d'en identifier les principaux moteurs et les limites. Deuxièmement, pour évaluer la durabilité du développement présent. Nous étudions dans quelle mesure les politiques contemporaines (ex : politiques de RSE) changent quelque chose aux configurations, dynamiques et trajectoires héritées du passé. Si les politiques de développement durable actuelles permettent plusieurs améliorations, diverses résistances les rendent marginales ou marginalisées, malgré le consensus en leur faveur. Troisièmement, pour prévoir la durabilité du développement futur. Nous analysons les principales conséquences des projets officiels prévus (ex : Grand Paris de l’eau). En complément, nous proposons une étude prospective de divers scénarios encore possibles à l’avenir, afin de discuter des cheminements qui y mènent et de leurs conséquences, notamment face à la baisse de la demande d’eau observée depuis 1990. L'objectif de cette thèse est autant d'améliorer la compréhension de la notion de durabilité, que de proposer des outils opérationnels pour définir, mener et évaluer des politiques de service public d'eau durables à l’avenir.",
+              "document_type": "THESE",
+              "publication_date": "2014-11-04",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "Series temporelle"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1463,
+            "total_tokens": 1463
+          }
+        }
+      },
+      "duration": 3626
+    },
+    "retrievalTime": 9027,
+    "generationTime": 3626,
+    "timestamp": "2025-07-10T09:42:28.922Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T09:42:29.861980+00:00",
+    "server_version": "1.0.0"
+  }
+}

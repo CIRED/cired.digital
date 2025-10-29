@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752170012739_64e6b366d3s5dh2w",
+  "timestamp": "20250710T180440696Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752170680672_6olofok",
+    "query": "Smart Grid Implementation: Economic, Technical, Environmental, and Policy Analysis Towards  Net-Zero Ambition",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "Smart Grid Implementation: Economic, Technical, Environmental, and Policy Analysis Towards  Net-Zero Ambition",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "193.51.120.110",
+    "forwarded_for": "193.51.120.110",
+    "received_at": "2025-07-10T18:04:40.722380+00:00",
+    "server_version": "1.0.0"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752139193050_4h4y2p5i2y451r4z55",
+  "timestamp": "20250710T092105846Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752139265832_epawgwy",
+    "query": "التحول الطاقي في فرنسا",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-medium-latest",
+      "temperature": 2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "التحول الطاقي في فرنسا",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-medium-latest",
+        "temperature": 2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T09:21:07.520347+00:00",
+    "server_version": "1.0.0"
+  }
+}

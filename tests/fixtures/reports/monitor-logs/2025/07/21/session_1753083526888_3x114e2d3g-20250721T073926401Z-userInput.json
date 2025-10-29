@@ -1,0 +1,16 @@
+{
+  "sessionId": "session_1753083526888_3x114e2d3g73294w3e",
+  "timestamp": "20250721T073926401Z",
+  "eventType": "userInput",
+  "payload": {
+    "action": "click",
+    "element": "onboarding-pass-btn",
+    "elementText": "Fermer et passer."
+  },
+  "server_context": {
+    "client_ip": "213.245.17.24",
+    "forwarded_for": "213.245.17.24",
+    "received_at": "2025-07-21T07:39:26.519853+00:00",
+    "server_version": "1.0.0"
+  }
+}

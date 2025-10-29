@@ -1,0 +1,535 @@
+{
+  "sessionId": "session_1752854234742_1b472s4u4p5b1k282x",
+  "timestamp": "20250718T160037450Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752854431526_rozcb75",
+    "response": {
+      "results": {
+        "generated_answer": "Les enjeux macroéconomiques des scénarios de transition énergie-climat sont multiples et complexes. Voici quelques points clés tirés des documents fournis :\n\n1. **Impacts sur la croissance économique et l'emploi** :\n   - Les scénarios de transition énergétique ont des impacts significatifs sur la croissance économique et l'emploi. Il est crucial d'examiner non seulement l'impact agrégé sur la croissance, mais aussi les effets spécifiques sur l'emploi et la facture énergétique des ménages pour évaluer l'acceptabilité des mesures [f1d03ea], [8ef8d57].\n\n2. **Instruments de politique publique** :\n   - Les trajectoires bas-carbone reposent souvent sur la mise en place d'un prix du carbone. Cependant, une palette d'instruments complémentaires est disponible pour organiser la transition bas-carbone, incluant des réformes fiscales, la planification urbaine, les politiques d'infrastructures, et des mécanismes financiers pour déclencher la transition à court terme [1401538], [b988e50].\n\n3. **Coordination internationale et prix des énergies** :\n   - Les scénarios s'insèrent dans un contexte mondial qui influence leur faisabilité et leur impact. La coordination internationale sur le changement climatique, les tensions sur les marchés de l'énergie, notamment pétroliers, et les priorités du changement technique sont des facteurs déterminants [f1d03ea].\n\n4. **Transparence et sensibilité des données** :\n   - La robustesse des scénarios dépend de la transparence des données et des hypothèses sous-jacentes. Il est nécessaire de mener des tests de sensibilité pour tenir compte des incertitudes multiples, telles que l'évolution du prix des énergies et des technologies [8ef8d57].\n\n5. **Intégration des barrières institutionnelles et comportementales** :\n   - Intégrer les barrières institutionnelles, comportementales et de marché permet d'identifier les éventuels co-bénéfices économiques de l'action climatique. Les scénarios reflètent des trajectoires de transformation de long terme mais négligent souvent les enjeux de transition de court-moyen terme [1401538], [b988e50].\n\n6. **Impact sur les ménages et la facture énergétique** :\n   - L'impact des scénarios sur le budget des ménages est un aspect crucial pour évaluer leur acceptabilité. Les mesures doivent être conçues de manière à minimiser les surcoûts pour les ménages tout en encourageant la transition énergétique [8ef8d57].\n\n7. **Politiques complémentaires** :\n   - Les stratégies de transition énergétique doivent être insérées dans un ensemble de mesures qui ne ressortissent pas du seul domaine des politiques énergétiques. Cela inclut des politiques fiscales, des négociations sociales, des réformes des structures de financement, des politiques industrielles et de formation, et des politiques d'infrastructures [82041dd].\n\nCes éléments montrent que les enjeux macroéconomiques des scénarios de transition énergie-climat sont interdépendants et nécessitent une approche holistique pour être pleinement compris et adressés.",
+        "citations": [
+          {
+            "id": "f1d03ea",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 534,
+              "end": 543
+            },
+            "payload": {
+              "id": "f1d03ea0-fab1-5286-8c49-0ece0a161cbd",
+              "document_id": "e35504f5-4edd-58f5-8b59-7be0771edef8",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015818181818181818,
+              "text": "Document Title: Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique\n\nText: Impacts macroéco\nnomiques et résultats du scénario\nI.unc ontexte glob al,unevision \nmondiale\ntout scénario sinsère dans un contexte géné-\nral et une vision mondiale à lhorizon 2050. \nCette vision du monde répond à un ensemble de \nquestions qui sont déterminantes pour pouvoir \nconstruire le scénario. Quel type de coordination \ninternationale sur le changement climatique  ? \nQuelles tensions sur les marchés de lénergie, no-\ntamment pétrolier  ? Quelle s seront les priorités \net orientations du changement technique  ? Quels  \nmodes de consommation prévaudront dans les \néconomies développées et dans les économies \némergentes  ?\nLes hypothèses retenues sont les suivantes : les \nmodes de consommation dans les pays occidentaux \ntels que nous les connaissons aujourdhui, cest-\nà-dire fortement consommateurs de ressources \nnaturelles, se poursuivent. Limpact dun découplage \nentre la croissance et le degré dexploitation des \nressources sera examiné de plus près au chapitre \n4. Le scénario présenté suppose labsence dun",
+              "metadata": {
+                "title": "Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique",
+                "hal_id": "halshs-00797980",
+                "authors": [
+                  "Ruben Bibas",
+                  "Sandrine Mathy",
+                  "Meike Fink"
+                ],
+                "version": "v0",
+                "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique. 2012. ⟨halshs-00797980⟩",
+                "source_url": "https://hal.science/halshs-00797980",
+                "chunk_order": 203,
+                "description": "Cet article trouve son origine dans un double constat : le déficit d'acceptabilité des politiques climatiques d'une part et le déficit de crédibilité, de légitimité et d'appropriation des scénarios de réduction d'émission de gaz à effet de serre d'autre part. Pour répondre à ces limites, nous avons élaboré, au travers d'une concertation associant une cinquantaine de parties prenantes et une cinquantaine d'experts sectoriels, un processus de co-construction d'un scénario \" acceptable \" de réduction des émissions de CO2. Les parties prenantes ont sélectionné les politiques et les mesures qu'ils considèrent comme acceptables. Celles-ci ont également contribué largement à la méthodologie d'élaboration du scénario par la définition d'un cahier des charges qui inclut la nécessaire transparence des données, des tests de sensibilité et la nécessité d'expliciter certains types d'impacts économiques et financiers nécessaires à l'évaluation des trajectoires facteur 4. L'ensemble des politiques considérées comme acceptables est intégré dans le modèle technico-économique Imaclim-R France. Cette plateforme de modélisation adaptée au dialogue entre modélisateurs et partie prenantes ou experts, évalue les impacts sociaux, économiques et financiers de politiques climatiques. Cet exercice de co-construction de scénario fondé sur la concertation alimentant les paramètres d'un modèle technico-économique, fournit une preuve méthodologique par l'exemple qu'un tel processus peut être mis en place. Le scénario reposant sur les politiques et mesures que les parties prenantes considèrent comme acceptables permet de réduire de 68% les émissions de CO2 en 2050 par rapport à 1990, résultat proche de l'objectif de Facteur 4 (soit 75%). Les mesures de réduction des émissions, dont la plus emblématique est la taxe carbone, sont bénéfiques pour l'emploi et la croissance économique, sauf à court terme. Elles permettent en outre de réduire rapidement et durablement le budget des ménages dédié aux services énergétiques. Enfin, le bilan financier agrégé des mesures s'avère positif dès le début de la période. Ce résultat constitue un socle solide sur lequel construire l'acceptabilité des trajectoires Facteur 4.",
+                "document_type": "REPORT",
+                "publication_date": "2012-03-01",
+                "semantic_rank": 5,
+                "full_text_rank": 200,
+                "associated_query": "les enjeux macroéconomiques des scénarios de transition énergie-climat"
+              }
+            }
+          },
+          {
+            "id": "8ef8d57",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 545,
+              "end": 554
+            },
+            "payload": {
+              "id": "8ef8d579-d6f5-5d28-a367-452f9d78ed2c",
+              "document_id": "545cdec1-9c35-541e-bd90-eee4435696e8",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015547619047619046,
+              "text": "Document Title: Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable »\n\nText: robustesse  du processus et des résultats  : \n- Au-delà de limpact agrégé sur la croissance économique, limpact sur lemploi, sur la facture \nénergétique et très spécifiquement sur le budget des ménages sont indispensables pour enrichir \nla discussion autour de lacceptabilité des mesures et des trajectoires.  \n- La transparence des données.  \n- La transparence sur le contexte socio -économique mondial et national encadrant le scénario \npour la France  : évolution d es modes de consommation , niveau de coordination international sur \nle changement climatique, prix des énergies fossiles, orientation du progrès technique  \n- La nécessité de mener des tests de sensibilité au -delà dun scénario central, étant données l es \nincer titudes multiples encadrant lélaboration dun scénario  (évolution du prix des énergies, \ntechnologies ). \nCe cahier d es charges est pris en compte dans la construction du scénario et dans la présentation des \nrésultats par la suite . \nIV. Le scénario  ACC issu de l a concertation",
+              "metadata": {
+                "doi": "10.3406/ecop.2016.8200",
+                "title": "Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable »",
+                "hal_id": "hal-01426322",
+                "authors": [
+                  "Ruben Bibas",
+                  "Sandrine Mathy",
+                  "Meike Fink"
+                ],
+                "version": "v0",
+                "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable ». Economie et Prévision, 2016, 208-209, pp.77-104. ⟨10.3406/ecop.2016.8200⟩. ⟨hal-01426322⟩",
+                "source_url": "https://doi.org/10.3406/ecop.2016.8200",
+                "chunk_order": 88,
+                "description": "La définition des technologies à mobiliser et des politiques à mettre en œuvre pour atteindre l'objectif de division par quatre des émissions de gaz à effet de serre suscite de vifs débats. En ce sens, la réalisation d’un exercice de scénarisation peut permettre d'objectiver l’ensemble des conséquences économiques et sociales d’une trajectoire et ainsi ouvrir le débat sur les visions compatibles avec les objectifs climatiques et énergétiques. Cet article décrit le processus d'élaboration participative par une trentaine de parties prenantes ( issues du secteur privé, du secteur public et de l’Etat, des ONG, des associations de consommateurs, des syndicats, des banques ou des collectivités territoriales) d'un scénario bas carbone pour la France. Les mesures considérées comme acceptables par les parties prenantes sont intégrées dans le modèle technico-économique Imaclim-R France, afin d’évaluer leurs impacts sur les émissions de CO2 et sur l'économie. Le scénario issu de cette concertation atteint une réduction des émissions de CO2 de 68% en 2050, par rapport à 1990, ce qui se rapproche de l’objectif de Facteur 4. Les mesures de réduction des émissions, dont la plus emblématique est la taxe carbone, sont bénéfiques pour l'emploi et la croissance économique, sauf à court terme où le défaut d’anticipation des acteurs ne leur permet pas de se préparer à l’instauration d’une taxe carbone. Les mesures permettent en outre de réduire rapidement et durablement le budget des ménages dédié aux services énergétiques, ainsi que la facture énergétique et la compétitivité industrielle est renforcée.",
+                "document_type": "ART",
+                "publication_date": "2016-01-01",
+                "semantic_rank": 6,
+                "full_text_rank": 200,
+                "associated_query": "les enjeux macroéconomiques des scénarios de transition énergie-climat"
+              }
+            }
+          },
+          {
+            "id": "1401538",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 969,
+              "end": 978
+            },
+            "payload": {
+              "id": "14015381-f1a8-548d-b600-25289f630e1b",
+              "document_id": "f869e286-c118-5bb7-af2a-3d3dc02793f4",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: Hybridization challenges in energy-economy integrated models and representation of the low carbon transition: An application to the Brazilian case\n\nText: cette optique, int egrer les barri `eres et sous-optimalit es institutionnelles, comportemen-\ntales, de march e, principales dans lanalyse, permettrait didentiﬁer les eventuels co-\nbeneﬁces economiques de laction climatique. Troisi `emement, ces sc enarios reﬂ `etent\ndes trajectoires de transformation de long terme et n egligent les enjeux de transition de\ncourt-moyen terme qui se posent et les conditions de d eclenchement de ces transi-\ntions. Enﬁn, dans la plupart des cas, les trajectoires bas-carbone reposent sur la seule\nimpl ementation dun prix du carbone. Pourtant, il existe en pratique tout une palette\ndinstruments disponibles et compl ementaires pour organiser la transition bas-carbone\ndans une perspective multi-objectifs, depuis les r eformes ﬁscales carbones plus larges\njusqu `a la planiﬁcation urbaine et les politiques dinfrastructures, en passant par des\nmecanismes ﬁnanciers pour d eclencher la transition `a court terme.",
+              "metadata": {
+                "title": "Hybridization challenges in energy-economy integrated models and representation of the low carbon transition: An application to the Brazilian case",
+                "hal_id": "tel-01685944",
+                "authors": [
+                  "Julien Lefevre"
+                ],
+                "version": "v0",
+                "citation": "Julien Lefevre. Hybridization challenges in energy-economy integrated models and representation of the low carbon transition: An application to the Brazilian case. Economics and Finance. Université Paris Saclay, 2016. English. ⟨NNT : ⟩. ⟨tel-01685944⟩",
+                "source_url": "https://hal.science/tel-01685944",
+                "chunk_order": 1560,
+                "description": "This thesis provides insights about the hybridization challenges in energy-economy integrated models and about the integrated representation of the low carbon transition, and proposes an application to the Brazilian case. Noting the existing gap between the framing of transition issues towards low carbon economies and the results brought by global integrated models, it provides a guide of the available model toolbox which brings a new view on the internal vision of models about energy-carbon-economy transformation pathways. This makes it possible to better delimit the areas of competence of existing tools and to understand some of their limitations. Our work especially underlies the relevance to work under a hybrid approach which articulates a macroeconomic framework with engineering based representations in order to improve the credibility of the assessments produced and we detail the methodological issues to build multi-sector energy-economy hybrid models. Part of the methodological principles are applied to build a tool to analyze the low carbon transition of the medium run in Brazil. We show how a carbon tax policy makes it possible to articulate several policy objectives until 2030 targeting purchasing power, competitiveness, employment and income distribution, beyond climate goals. Our diagnostic underlies the importance of the structural specifics of the energy-economy context in Brazil and of macroeconomic mechanisms linked to trade and labor market rigidities, which are often overlooked in existing studies. We eventually provide specific insights about the articulation between climate and oil policy in Brazil.",
+                "document_type": "THESE",
+                "publication_date": "2016-10-14",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "les enjeux macroéconomiques des scénarios de transition énergie-climat"
+              }
+            }
+          },
+          {
+            "id": "b988e50",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 980,
+              "end": 989
+            },
+            "payload": {
+              "id": "b988e50f-3a54-58d4-bf9b-2b0c653434c5",
+              "document_id": "6df8980c-b05d-5a29-82cc-53a2613e0045",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01638993710691824,
+              "text": "Document Title: Hybridization challenges in energy-economy integrated models and representation of the low carbon transition : An application to the Brazilian case\n\nText: cette optique, int egrer les barri `eres et sous-optimalit es institutionnelles, comportemen-\ntales, de march e, principales dans lanalyse, permettrait didentiﬁer les eventuels co-\nbeneﬁces economiques de laction climatique. Troisi `emement, ces sc enarios reﬂ `etent\ndes trajectoires de transformation de long terme et n egligent les enjeux de transition de\ncourt-moyen terme qui se posent et les conditions de d eclenchement de ces transi-\ntions. Enﬁn, dans la plupart des cas, les trajectoires bas-carbone reposent sur la seule\nimpl ementation dun prix du carbone. Pourtant, il existe en pratique tout une palette\ndinstruments disponibles et compl ementaires pour organiser la transition bas-carbone\ndans une perspective multi-objectifs, depuis les r eformes ﬁscales carbones plus larges\njusqu `a la planiﬁcation urbaine et les politiques dinfrastructures, en passant par des\nmecanismes ﬁnanciers pour d eclencher la transition `a court terme.",
+              "metadata": {
+                "title": "Hybridization challenges in energy-economy integrated models and representation of the low carbon transition : An application to the Brazilian case",
+                "hal_id": "tel-02923571",
+                "authors": [
+                  "Julien Lefevre"
+                ],
+                "version": "v0",
+                "citation": "Julien Lefevre. Hybridization challenges in energy-economy integrated models and representation of the low carbon transition : An application to the Brazilian case. Economics and Finance. Université Paris Saclay (COmUE), 2016. English. ⟨NNT : 2016SACLA003⟩. ⟨tel-02923571⟩",
+                "source_url": "https://hal.science/tel-02923571",
+                "chunk_order": 1560,
+                "description": "This thesis provides insights about the hybridization challenges in energy-economy integrated models and about the integrated representation of the low carbon transition, and proposes an application to the Brazilian case. Noting the existing gap between the framing of transition issues towards low carbon economies and the results brought by global integrated models, it provides a guide of the available model toolbox which brings a new view on the internal vision of models about energy-carbon-economy transformation pathways. This makes it possible to better delimit the areas of competence of existing tools and to understand some of their limitations. Our work especially underlies the relevance to work under a hybrid approach which articulates a macroeconomic framework with engineering based representations in order to improve the credibility of the assessments produced and we detail the methodological issues to build multi-sector energy-economy hybrid models. Part of the methodological principles are applied to build a tool to analyze the low carbon transition of the medium run in Brazil. We show how a carbon tax policy makes it possible to articulate several policy objectives until 2030 targeting purchasing power, competitiveness, employment and income distribution, beyond climate goals. Our diagnostic underlies the importance of the structural specifics of the energy-economy context in Brazil and of macroeconomic mechanisms linked to trade and labor market rigidities, which are often overlooked in existing studies. We eventually provide specific insights about the articulation between climate and oil policy in Brazil.",
+                "document_type": "THESE",
+                "publication_date": "2016-03-15",
+                "semantic_rank": 3,
+                "full_text_rank": 200,
+                "associated_query": "les enjeux macroéconomiques des scénarios de transition énergie-climat"
+              }
+            }
+          },
+          {
+            "id": "f1d03ea",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1350,
+              "end": 1359
+            },
+            "payload": null
+          },
+          {
+            "id": "8ef8d57",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1677,
+              "end": 1686
+            },
+            "payload": null
+          },
+          {
+            "id": "1401538",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 2064,
+              "end": 2073
+            },
+            "payload": null
+          },
+          {
+            "id": "b988e50",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 2075,
+              "end": 2084
+            },
+            "payload": null
+          },
+          {
+            "id": "8ef8d57",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 2387,
+              "end": 2396
+            },
+            "payload": null
+          },
+          {
+            "id": "82041dd",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2791,
+              "end": 2800
+            },
+            "payload": {
+              "id": "82041ddb-e878-5496-9588-7216146306eb",
+              "document_id": "0173471c-755c-589f-b9b6-9684b59653aa",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: Transitions énergétiques en France: Enseignements d'exercices de prospective\n\nText: Transitions énergétiques en France : enseignements dexercices de \nprospective \n \nContribution au débat national sur la transition énergétique  \n \n \n \nRésumé  \nLe modèle d'équilibre général Imaclim-R France est utilisé pour examiner différentes stratégies de \ntransition énergétique menant à une trajectoire Facteur 4. Le bilan macroéconomique dun jeu \ndhypothèses sur les conditions techniques de loffre et la demande dénergie varie fortement selon \nquil est inséré ou non dans un ens emble de mesures qui ne ressortissent pas du seul domaine des \npolitiques énergétiques : politiques fiscales pour éviter la propagation des surcoûts de lénergie dans \nlappareil de production, négociation sociale et salariale pour gérer le recyclage du produit dune taxe \ncarbone, réforme des structures de financement, politiques industrielles et de formation aux nouveaux \nmétiers, politiques dinfrastructures et changement comportementaux. Nous montrons ensuite",
+              "metadata": {
+                "title": "Transitions énergétiques en France: Enseignements d'exercices de prospective",
+                "hal_id": "halshs-00849948",
+                "authors": "['Ruben Bibas', 'Jean Charles Hourcade']",
+                "version": "v0",
+                "citation": "Ruben Bibas, Jean Charles Hourcade. Transitions énergétiques en France: Enseignements d'exercices de prospective. 2013. ⟨halshs-00849948⟩",
+                "source_url": "https://hal.science/halshs-00849948",
+                "chunk_order": 3,
+                "description": "Le modèle d'équilibre général Imaclim-R France est utilisé pour examiner différentes stratégies de transition énergétique menant à une trajectoire 'Facteur 4'. Le bilan macroéconomique d'un jeu d'hypothèses sur les conditions techniques de l'offre et la demande d'énergie varie fortement selon qu'il est inséré ou non dans un ensemble de mesures qui ne ressortissent pas du seul domaine des politiques énergétiques : politiques fiscales pour éviter la propagation des surcoûts de l'énergie dans l'appareil de production, négociation sociale et salariale pour gérer le recyclage du produit d'une taxe carbone, réforme des structures de financement, politiques industrielles et de formation aux nouveaux métiers, politiques d'infrastructures et changement comportementaux. Nous montrons ensuite comment une politique de financement baissant le coefficient risque des investissements 'bas carbone' permettrait, en améliorant la crédibilité des politiques publiques, de réduire les craintes qui expliquent la frilosité des acteurs économiques et de déclencher une réorientation des investissements plus rapide vers des équipements sobres en énergie. Le bilan macroéconomique change selon les modalités de la transition mais est positif à moyen et long terme en matière de croissance et d'emploi, ceci en raison de la synergie entre trois mécanismes : baisse des importations d'énergie, économies d'énergie libérant le pouvoir d'achat des ménages en biens et services non énergétiques, baisse du coût du travail permis par une taxe carbone. L'accompagnement économique de la transition est décisif pour passer d'un bilan légèrement négatif à court terme à un bilan positif, ce afin de donner le 'grain à moudre' nécessaire pour réduire ces tensions. L'enjeu est un 'effet crédibilité' venant de la conduite cohérente de politiques de prix et de financement guidant les anticipations des acteurs dans un contexte défavorable. Quant au dossier nucléaire, nous faisons apparaître une grande différence entre un nucléaire contraint par des exigences accrues 'de précaution' et une sortie volontariste à l'horizon 2050 avec interdiction de construction de nouvelles centrales. Cette dernière hypothèse suppose, pour respecter le F4, un développement important et précoce du CCS et conduit à un retard de croissance de 4,5 ans sur 40 ans compte non tenu des coûts de reconversion, et, en sens inverse, de changements profonds des comportements et des structures économiques. Des scénarios 'nucléaire de précaution' limitent sa place autour de 40% du mix énergétique à 2050 et permettent de reculer une décision de sortie ou de nouveau déploiement qui pourra être prise plus tard \" en meilleure connaissance de cause \". L'enjeu, aujourd'hui est de se mettre en position de la prendre avec un fort consensus national autour non seulement du choix technologique ultime, quel qu'il soit, mais aussi des politiques économiques et sociales cohérentes avec ce choix.",
+                "document_type": "UNDEFINED",
+                "publication_date": "2013-07-01",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "les enjeux macroéconomiques des scénarios de transition énergie-climat"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "76d552e4-4029-509a-8e0a-626a9caa17e0",
+            "document_id": "b4c26c50-e102-598e-8e0b-99d556cec3eb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Transition énergétique, projets de société et tensions du présent\n\nText: F.  Moisan :  Commentaires  à  partir  des  scénarios  de  transiti on  Ademe  et  leurs  impacts \nmacroéconomiques........................................ ................................................... ..........................38\nP.  Criqui :  Transition  énergétique :  scénarios  structurants,  critères  dévaluation  et  points \naveugles.............................................. ................................................... .....................................50\nJ.-E.  Moncomble :  Commentaires  sur  les  scénarios  français  au  regard  de  la  méthodologie \nprospective de la transition énergétique du World Energy Council...... .......................................66\nTable ronde avec T. Salomon, J.-P. Bompart et les intervenant s.................................................69\nRapport de synthèse par Renaud Crassous........................ ................................................... ......76",
+            "metadata": {
+              "title": "Transition énergétique, projets de société et tensions du présent",
+              "hal_id": "hal-01020566",
+              "authors": "['Minh Ha-Duong', 'Dominique Finon']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Dominique Finon. Transition énergétique, projets de société et tensions du présent. Première journée de Dialogue CNRS sur la transition énergétique en France, une cartographie des enjeux et des controverses., Jun 2013, Paris, France. ⟨hal-01020566⟩",
+              "source_url": "https://hal.science/hal-01020566",
+              "chunk_order": 4,
+              "document_type": "COMM",
+              "publication_date": "2013-06-21",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux macroéconomiques des scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "14015381-f1a8-548d-b600-25289f630e1b",
+            "document_id": "f869e286-c118-5bb7-af2a-3d3dc02793f4",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Hybridization challenges in energy-economy integrated models and representation of the low carbon transition: An application to the Brazilian case\n\nText: cette optique, int egrer les barri `eres et sous-optimalit es institutionnelles, comportemen-\ntales, de march e, principales dans lanalyse, permettrait didentiﬁer les eventuels co-\nbeneﬁces economiques de laction climatique. Troisi `emement, ces sc enarios reﬂ `etent\ndes trajectoires de transformation de long terme et n egligent les enjeux de transition de\ncourt-moyen terme qui se posent et les conditions de d eclenchement de ces transi-\ntions. Enﬁn, dans la plupart des cas, les trajectoires bas-carbone reposent sur la seule\nimpl ementation dun prix du carbone. Pourtant, il existe en pratique tout une palette\ndinstruments disponibles et compl ementaires pour organiser la transition bas-carbone\ndans une perspective multi-objectifs, depuis les r eformes ﬁscales carbones plus larges\njusqu `a la planiﬁcation urbaine et les politiques dinfrastructures, en passant par des\nmecanismes ﬁnanciers pour d eclencher la transition `a court terme.",
+            "metadata": {
+              "title": "Hybridization challenges in energy-economy integrated models and representation of the low carbon transition: An application to the Brazilian case",
+              "hal_id": "tel-01685944",
+              "authors": [
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Julien Lefevre. Hybridization challenges in energy-economy integrated models and representation of the low carbon transition: An application to the Brazilian case. Economics and Finance. Université Paris Saclay, 2016. English. ⟨NNT : ⟩. ⟨tel-01685944⟩",
+              "source_url": "https://hal.science/tel-01685944",
+              "chunk_order": 1560,
+              "description": "This thesis provides insights about the hybridization challenges in energy-economy integrated models and about the integrated representation of the low carbon transition, and proposes an application to the Brazilian case. Noting the existing gap between the framing of transition issues towards low carbon economies and the results brought by global integrated models, it provides a guide of the available model toolbox which brings a new view on the internal vision of models about energy-carbon-economy transformation pathways. This makes it possible to better delimit the areas of competence of existing tools and to understand some of their limitations. Our work especially underlies the relevance to work under a hybrid approach which articulates a macroeconomic framework with engineering based representations in order to improve the credibility of the assessments produced and we detail the methodological issues to build multi-sector energy-economy hybrid models. Part of the methodological principles are applied to build a tool to analyze the low carbon transition of the medium run in Brazil. We show how a carbon tax policy makes it possible to articulate several policy objectives until 2030 targeting purchasing power, competitiveness, employment and income distribution, beyond climate goals. Our diagnostic underlies the importance of the structural specifics of the energy-economy context in Brazil and of macroeconomic mechanisms linked to trade and labor market rigidities, which are often overlooked in existing studies. We eventually provide specific insights about the articulation between climate and oil policy in Brazil.",
+              "document_type": "THESE",
+              "publication_date": "2016-10-14",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux macroéconomiques des scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "b988e50f-3a54-58d4-bf9b-2b0c653434c5",
+            "document_id": "6df8980c-b05d-5a29-82cc-53a2613e0045",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Hybridization challenges in energy-economy integrated models and representation of the low carbon transition : An application to the Brazilian case\n\nText: cette optique, int egrer les barri `eres et sous-optimalit es institutionnelles, comportemen-\ntales, de march e, principales dans lanalyse, permettrait didentiﬁer les eventuels co-\nbeneﬁces economiques de laction climatique. Troisi `emement, ces sc enarios reﬂ `etent\ndes trajectoires de transformation de long terme et n egligent les enjeux de transition de\ncourt-moyen terme qui se posent et les conditions de d eclenchement de ces transi-\ntions. Enﬁn, dans la plupart des cas, les trajectoires bas-carbone reposent sur la seule\nimpl ementation dun prix du carbone. Pourtant, il existe en pratique tout une palette\ndinstruments disponibles et compl ementaires pour organiser la transition bas-carbone\ndans une perspective multi-objectifs, depuis les r eformes ﬁscales carbones plus larges\njusqu `a la planiﬁcation urbaine et les politiques dinfrastructures, en passant par des\nmecanismes ﬁnanciers pour d eclencher la transition `a court terme.",
+            "metadata": {
+              "title": "Hybridization challenges in energy-economy integrated models and representation of the low carbon transition : An application to the Brazilian case",
+              "hal_id": "tel-02923571",
+              "authors": [
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Julien Lefevre. Hybridization challenges in energy-economy integrated models and representation of the low carbon transition : An application to the Brazilian case. Economics and Finance. Université Paris Saclay (COmUE), 2016. English. ⟨NNT : 2016SACLA003⟩. ⟨tel-02923571⟩",
+              "source_url": "https://hal.science/tel-02923571",
+              "chunk_order": 1560,
+              "description": "This thesis provides insights about the hybridization challenges in energy-economy integrated models and about the integrated representation of the low carbon transition, and proposes an application to the Brazilian case. Noting the existing gap between the framing of transition issues towards low carbon economies and the results brought by global integrated models, it provides a guide of the available model toolbox which brings a new view on the internal vision of models about energy-carbon-economy transformation pathways. This makes it possible to better delimit the areas of competence of existing tools and to understand some of their limitations. Our work especially underlies the relevance to work under a hybrid approach which articulates a macroeconomic framework with engineering based representations in order to improve the credibility of the assessments produced and we detail the methodological issues to build multi-sector energy-economy hybrid models. Part of the methodological principles are applied to build a tool to analyze the low carbon transition of the medium run in Brazil. We show how a carbon tax policy makes it possible to articulate several policy objectives until 2030 targeting purchasing power, competitiveness, employment and income distribution, beyond climate goals. Our diagnostic underlies the importance of the structural specifics of the energy-economy context in Brazil and of macroeconomic mechanisms linked to trade and labor market rigidities, which are often overlooked in existing studies. We eventually provide specific insights about the articulation between climate and oil policy in Brazil.",
+              "document_type": "THESE",
+              "publication_date": "2016-03-15",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux macroéconomiques des scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "2e62aa49-3e01-5426-8ea4-15d3208ca218",
+            "document_id": "b4c26c50-e102-598e-8e0b-99d556cec3eb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Transition énergétique, projets de société et tensions du présent\n\nText: transition énergétique).\nRuben  Bibas/Jean-Charles  Hourcade  (CIRED).  Des  scénarios  de  transition  entre \ncontraintes économiques, sociales, et techniques.\nContrepoints :\nFrançois Moisan (Directeur, ADEME). Commentaires à partir des scé narios de transition \nADEME et leurs impacts macroéconomiques\nPatrick  Criqui  (EDDEN-PACTE,  CNRS).  Les  critères  dévaluation  des  scénarios  de \ntransition.\nJean-Eudes  Moncomble (Secrétaire Géneral du CFE). Commentaires  sur les  scénarios \nfrançais au regard de la méthodologie prospective de la transition énergét ique du World \nEnergy Council.\nTable ronde : Thierry Salomon (président de Negawatt), Jean-Pierre Bom pard (CFDT) et \nles intervenants.\nRapporteur : Renaud Crassous (EDF)\n11h15  12h45  Investir sur le long terme et guider la main invisible du marché en \nEurope?\nPrésidence : Patrice Geoffron (CGEMP-Dauphine)\nDominique Finon (CIRED). Régime de marché, politiques bas carbone et poli tiques ENR :",
+            "metadata": {
+              "title": "Transition énergétique, projets de société et tensions du présent",
+              "hal_id": "hal-01020566",
+              "authors": "['Minh Ha-Duong', 'Dominique Finon']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Dominique Finon. Transition énergétique, projets de société et tensions du présent. Première journée de Dialogue CNRS sur la transition énergétique en France, une cartographie des enjeux et des controverses., Jun 2013, Paris, France. ⟨hal-01020566⟩",
+              "source_url": "https://hal.science/hal-01020566",
+              "chunk_order": 902,
+              "document_type": "COMM",
+              "publication_date": "2013-06-21",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux macroéconomiques des scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "f1d03ea0-fab1-5286-8c49-0ece0a161cbd",
+            "document_id": "e35504f5-4edd-58f5-8b59-7be0771edef8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique\n\nText: Impacts macroéco\nnomiques et résultats du scénario\nI.unc ontexte glob al,unevision \nmondiale\ntout scénario sinsère dans un contexte géné-\nral et une vision mondiale à lhorizon 2050. \nCette vision du monde répond à un ensemble de \nquestions qui sont déterminantes pour pouvoir \nconstruire le scénario. Quel type de coordination \ninternationale sur le changement climatique  ? \nQuelles tensions sur les marchés de lénergie, no-\ntamment pétrolier  ? Quelle s seront les priorités \net orientations du changement technique  ? Quels  \nmodes de consommation prévaudront dans les \néconomies développées et dans les économies \némergentes  ?\nLes hypothèses retenues sont les suivantes : les \nmodes de consommation dans les pays occidentaux \ntels que nous les connaissons aujourdhui, cest-\nà-dire fortement consommateurs de ressources \nnaturelles, se poursuivent. Limpact dun découplage \nentre la croissance et le degré dexploitation des \nressources sera examiné de plus près au chapitre \n4. Le scénario présenté suppose labsence dun",
+            "metadata": {
+              "title": "Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique",
+              "hal_id": "halshs-00797980",
+              "authors": [
+                "Ruben Bibas",
+                "Sandrine Mathy",
+                "Meike Fink"
+              ],
+              "version": "v0",
+              "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique. 2012. ⟨halshs-00797980⟩",
+              "source_url": "https://hal.science/halshs-00797980",
+              "chunk_order": 203,
+              "description": "Cet article trouve son origine dans un double constat : le déficit d'acceptabilité des politiques climatiques d'une part et le déficit de crédibilité, de légitimité et d'appropriation des scénarios de réduction d'émission de gaz à effet de serre d'autre part. Pour répondre à ces limites, nous avons élaboré, au travers d'une concertation associant une cinquantaine de parties prenantes et une cinquantaine d'experts sectoriels, un processus de co-construction d'un scénario \" acceptable \" de réduction des émissions de CO2. Les parties prenantes ont sélectionné les politiques et les mesures qu'ils considèrent comme acceptables. Celles-ci ont également contribué largement à la méthodologie d'élaboration du scénario par la définition d'un cahier des charges qui inclut la nécessaire transparence des données, des tests de sensibilité et la nécessité d'expliciter certains types d'impacts économiques et financiers nécessaires à l'évaluation des trajectoires facteur 4. L'ensemble des politiques considérées comme acceptables est intégré dans le modèle technico-économique Imaclim-R France. Cette plateforme de modélisation adaptée au dialogue entre modélisateurs et partie prenantes ou experts, évalue les impacts sociaux, économiques et financiers de politiques climatiques. Cet exercice de co-construction de scénario fondé sur la concertation alimentant les paramètres d'un modèle technico-économique, fournit une preuve méthodologique par l'exemple qu'un tel processus peut être mis en place. Le scénario reposant sur les politiques et mesures que les parties prenantes considèrent comme acceptables permet de réduire de 68% les émissions de CO2 en 2050 par rapport à 1990, résultat proche de l'objectif de Facteur 4 (soit 75%). Les mesures de réduction des émissions, dont la plus emblématique est la taxe carbone, sont bénéfiques pour l'emploi et la croissance économique, sauf à court terme. Elles permettent en outre de réduire rapidement et durablement le budget des ménages dédié aux services énergétiques. Enfin, le bilan financier agrégé des mesures s'avère positif dès le début de la période. Ce résultat constitue un socle solide sur lequel construire l'acceptabilité des trajectoires Facteur 4.",
+              "document_type": "REPORT",
+              "publication_date": "2012-03-01",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux macroéconomiques des scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "8ef8d579-d6f5-5d28-a367-452f9d78ed2c",
+            "document_id": "545cdec1-9c35-541e-bd90-eee4435696e8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable »\n\nText: robustesse  du processus et des résultats  : \n- Au-delà de limpact agrégé sur la croissance économique, limpact sur lemploi, sur la facture \nénergétique et très spécifiquement sur le budget des ménages sont indispensables pour enrichir \nla discussion autour de lacceptabilité des mesures et des trajectoires.  \n- La transparence des données.  \n- La transparence sur le contexte socio -économique mondial et national encadrant le scénario \npour la France  : évolution d es modes de consommation , niveau de coordination international sur \nle changement climatique, prix des énergies fossiles, orientation du progrès technique  \n- La nécessité de mener des tests de sensibilité au -delà dun scénario central, étant données l es \nincer titudes multiples encadrant lélaboration dun scénario  (évolution du prix des énergies, \ntechnologies ). \nCe cahier d es charges est pris en compte dans la construction du scénario et dans la présentation des \nrésultats par la suite . \nIV. Le scénario  ACC issu de l a concertation",
+            "metadata": {
+              "doi": "10.3406/ecop.2016.8200",
+              "title": "Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable »",
+              "hal_id": "hal-01426322",
+              "authors": [
+                "Ruben Bibas",
+                "Sandrine Mathy",
+                "Meike Fink"
+              ],
+              "version": "v0",
+              "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable ». Economie et Prévision, 2016, 208-209, pp.77-104. ⟨10.3406/ecop.2016.8200⟩. ⟨hal-01426322⟩",
+              "source_url": "https://doi.org/10.3406/ecop.2016.8200",
+              "chunk_order": 88,
+              "description": "La définition des technologies à mobiliser et des politiques à mettre en œuvre pour atteindre l'objectif de division par quatre des émissions de gaz à effet de serre suscite de vifs débats. En ce sens, la réalisation d’un exercice de scénarisation peut permettre d'objectiver l’ensemble des conséquences économiques et sociales d’une trajectoire et ainsi ouvrir le débat sur les visions compatibles avec les objectifs climatiques et énergétiques. Cet article décrit le processus d'élaboration participative par une trentaine de parties prenantes ( issues du secteur privé, du secteur public et de l’Etat, des ONG, des associations de consommateurs, des syndicats, des banques ou des collectivités territoriales) d'un scénario bas carbone pour la France. Les mesures considérées comme acceptables par les parties prenantes sont intégrées dans le modèle technico-économique Imaclim-R France, afin d’évaluer leurs impacts sur les émissions de CO2 et sur l'économie. Le scénario issu de cette concertation atteint une réduction des émissions de CO2 de 68% en 2050, par rapport à 1990, ce qui se rapproche de l’objectif de Facteur 4. Les mesures de réduction des émissions, dont la plus emblématique est la taxe carbone, sont bénéfiques pour l'emploi et la croissance économique, sauf à court terme où le défaut d’anticipation des acteurs ne leur permet pas de se préparer à l’instauration d’une taxe carbone. Les mesures permettent en outre de réduire rapidement et durablement le budget des ménages dédié aux services énergétiques, ainsi que la facture énergétique et la compétitivité industrielle est renforcée.",
+              "document_type": "ART",
+              "publication_date": "2016-01-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux macroéconomiques des scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "82041ddb-e878-5496-9588-7216146306eb",
+            "document_id": "0173471c-755c-589f-b9b6-9684b59653aa",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Transitions énergétiques en France: Enseignements d'exercices de prospective\n\nText: Transitions énergétiques en France : enseignements dexercices de \nprospective \n \nContribution au débat national sur la transition énergétique  \n \n \n \nRésumé  \nLe modèle d'équilibre général Imaclim-R France est utilisé pour examiner différentes stratégies de \ntransition énergétique menant à une trajectoire Facteur 4. Le bilan macroéconomique dun jeu \ndhypothèses sur les conditions techniques de loffre et la demande dénergie varie fortement selon \nquil est inséré ou non dans un ens emble de mesures qui ne ressortissent pas du seul domaine des \npolitiques énergétiques : politiques fiscales pour éviter la propagation des surcoûts de lénergie dans \nlappareil de production, négociation sociale et salariale pour gérer le recyclage du produit dune taxe \ncarbone, réforme des structures de financement, politiques industrielles et de formation aux nouveaux \nmétiers, politiques dinfrastructures et changement comportementaux. Nous montrons ensuite",
+            "metadata": {
+              "title": "Transitions énergétiques en France: Enseignements d'exercices de prospective",
+              "hal_id": "halshs-00849948",
+              "authors": "['Ruben Bibas', 'Jean Charles Hourcade']",
+              "version": "v0",
+              "citation": "Ruben Bibas, Jean Charles Hourcade. Transitions énergétiques en France: Enseignements d'exercices de prospective. 2013. ⟨halshs-00849948⟩",
+              "source_url": "https://hal.science/halshs-00849948",
+              "chunk_order": 3,
+              "description": "Le modèle d'équilibre général Imaclim-R France est utilisé pour examiner différentes stratégies de transition énergétique menant à une trajectoire 'Facteur 4'. Le bilan macroéconomique d'un jeu d'hypothèses sur les conditions techniques de l'offre et la demande d'énergie varie fortement selon qu'il est inséré ou non dans un ensemble de mesures qui ne ressortissent pas du seul domaine des politiques énergétiques : politiques fiscales pour éviter la propagation des surcoûts de l'énergie dans l'appareil de production, négociation sociale et salariale pour gérer le recyclage du produit d'une taxe carbone, réforme des structures de financement, politiques industrielles et de formation aux nouveaux métiers, politiques d'infrastructures et changement comportementaux. Nous montrons ensuite comment une politique de financement baissant le coefficient risque des investissements 'bas carbone' permettrait, en améliorant la crédibilité des politiques publiques, de réduire les craintes qui expliquent la frilosité des acteurs économiques et de déclencher une réorientation des investissements plus rapide vers des équipements sobres en énergie. Le bilan macroéconomique change selon les modalités de la transition mais est positif à moyen et long terme en matière de croissance et d'emploi, ceci en raison de la synergie entre trois mécanismes : baisse des importations d'énergie, économies d'énergie libérant le pouvoir d'achat des ménages en biens et services non énergétiques, baisse du coût du travail permis par une taxe carbone. L'accompagnement économique de la transition est décisif pour passer d'un bilan légèrement négatif à court terme à un bilan positif, ce afin de donner le 'grain à moudre' nécessaire pour réduire ces tensions. L'enjeu est un 'effet crédibilité' venant de la conduite cohérente de politiques de prix et de financement guidant les anticipations des acteurs dans un contexte défavorable. Quant au dossier nucléaire, nous faisons apparaître une grande différence entre un nucléaire contraint par des exigences accrues 'de précaution' et une sortie volontariste à l'horizon 2050 avec interdiction de construction de nouvelles centrales. Cette dernière hypothèse suppose, pour respecter le F4, un développement important et précoce du CCS et conduit à un retard de croissance de 4,5 ans sur 40 ans compte non tenu des coûts de reconversion, et, en sens inverse, de changements profonds des comportements et des structures économiques. Des scénarios 'nucléaire de précaution' limitent sa place autour de 40% du mix énergétique à 2050 et permettent de reculer une décision de sortie ou de nouveau déploiement qui pourra être prise plus tard \" en meilleure connaissance de cause \". L'enjeu, aujourd'hui est de se mettre en position de la prendre avec un fort consensus national autour non seulement du choix technologique ultime, quel qu'il soit, mais aussi des politiques économiques et sociales cohérentes avec ce choix.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-07-01",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux macroéconomiques des scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "d675ff9c-a6c1-5149-b093-5eb28075d4e3",
+            "document_id": "e9a105b4-0d9c-543b-ba20-cc91fc37a967",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: LES SCÉNARIOS ÉNERGÉTIQUES DE LA FRANCE 2010-2020, Annexes du Rapport présidé par Pierre Boisson au Commissariat général au plan : Les chemins d'une croissance sobre, 1998.\n\nText: - Les scénarios énergétiques de la France 2010-2020 -\n- 24 -peut avoir un impact considérable sur le bilan énergétique français et sur les\némissions de CO 2 du pays  ;\n \n sur le contexte institutionnel et économique  qui peut conduire à privilégier\nune filière de production pour des impératifs de sécurité des\napprovisionnements ou de diversification, ou encore denvironnement, mais qui\npeut aussi conduire à modifier les logiques de choix, comme peut le faire une\nlarge ouverture à la concurrence.\nLapproche par scénarios a conduit à conjuguer les différentes hypothèses de\nfaçon à obtenir des situations suffisamment contrastées et cohérentes avec les\ngrandes options socio-politiques de chacun des scénarios. Ce parti\nméthodologique ne signifie pas que les hypothèses prises en compte sont jugées\nplus probables que dautres ou quelles doivent être comprises comme des\nrecommandations. Il en va ainsi du taux dactualisation utilisé pour calculer les",
+            "metadata": {
+              "title": "LES SCÉNARIOS ÉNERGÉTIQUES DE LA FRANCE 2010-2020, Annexes du Rapport présidé par Pierre Boisson au Commissariat général au plan : Les chemins d'une croissance sobre, 1998.",
+              "hal_id": "hal-00622856",
+              "authors": [
+                "Olivier Godard"
+              ],
+              "version": "v0",
+              "citation": "Olivier Godard. LES SCÉNARIOS ÉNERGÉTIQUES DE LA FRANCE 2010-2020, Annexes du Rapport présidé par Pierre Boisson au Commissariat général au plan : Les chemins d'une croissance sobre, 1998.. 1998, pp.317- 404. ⟨hal-00622856⟩",
+              "source_url": "https://hal.science/hal-00622856",
+              "chunk_order": 81,
+              "description": "La scène énergétique mondiale, européenne et française est en train de vivre plusieurs bouleversements institutionnels et économiques qui auront des répercussions sur les choix techniques et le développement des filières : privatisation et ouverture des marchés de l'électricité et du gaz à la concurrence ; modification des termes de la compétitivité relative entre filières de la production électrique, en particulier entre le gaz et le nucléaire ; grandes manœuvres industrielles autour des services énergétiques, mêlant les grands opérateurs classiques à de nouveaux venus ; premiers pas d'une prise en compte pratique du risque climatique planétaire résultant des émissions de gaz à effet de serre, avec ses contraintes pesant sur la croissance admissible de la demande et ses effets sur la hiérarchie des sources d'énergie.",
+              "document_type": "OTHER",
+              "publication_date": "1998-09-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux macroéconomiques des scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "34f6188e-e20d-5b36-878d-db77ad446809",
+            "document_id": "44c13335-7d44-5f9a-a1ce-0105947c271d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone\n\nText: 69 \n 7. Résumé et Conclusions   \n \nCette étude présente les éléments de cadrage technologique, organisationnel et \nmacroéconomique des 6 scénario s de transition vers des villes post -carbone tels  que définis \npar la Mission prospective du Ministère  du Développement Durable.  \n \nFigure 47: Six se ntiers de transition  \n \nLes scénario s 1 et 2  privilégient la piste de linnovation technique, en réponse à des \nsignaux -prix. Le scénario montre une modification des comportements des agents suite à une \naugmentation brutale du prix du pétrole. Mais cette modi fication des comportements ne \npermet pas une réponse de grande ampleur, et les émissions ne diminuent que de 35% entre \n2004 et 2050, loin du facteur 4 que la France sest fixé en 2003. Le scénario 2 est un peu plus \noptimiste. Suite à des mesures prises par  la France, notamment par linstauration dune taxe \ncarbone, des technologies plus sobres en énergies fossiles et moins émettrices voient le jour et",
+            "metadata": {
+              "title": "Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone",
+              "hal_id": "hal-00799918",
+              "authors": [
+                "P. C. Allio",
+                "H. Waisman"
+              ],
+              "version": "v0",
+              "citation": "P. C. Allio, H. Waisman. Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone \". 2012, pp.89. ⟨hal-00799918⟩",
+              "source_url": "https://hal.science/hal-00799918",
+              "chunk_order": 235,
+              "description": "This study presents the technological, organizational and macroeconomic contexts of the six transition scenarios to post carbon cities as defined in the program \"Repenser des villes dans une société post-carbone\" (CGDD-ADEME) . The results illustrate the need to act quickly to deal with the inertia of urban systems to allow a greater emissions reduction by 2050, and higher average growth over the next 50 years. For example, the introduction of a faster carbon tax allows a higher emission reduction of nearly 20 points and higher growth rate around 0.05 points. However, the pace of government action is not the only important variable. Acting on price signals only cannot achieve the goal of reducing emissions by a factor four by 2050. Actions on the price of carbon should be accompanied by measures of infrastructure (housing, transportation, energy production) , but also norms that affect urban form (urban tolls, densification). Finally, rethinking development patterns seems necessary to establish a post-carbon society. Economic tools as used in this report can highlight the objectives, but can hardly trace the path to achieve them. The transition to a post-carbon society must be guided by the entire scientific community, whether in the field of innovation technology or social sciences.",
+              "document_type": "REPORT",
+              "publication_date": "2012-04-05",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux macroéconomiques des scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "1590bdaf-a8ce-5bd5-8b80-f346f5a55d84",
+            "document_id": "e9a105b4-0d9c-543b-ba20-cc91fc37a967",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: LES SCÉNARIOS ÉNERGÉTIQUES DE LA FRANCE 2010-2020, Annexes du Rapport présidé par Pierre Boisson au Commissariat général au plan : Les chemins d'une croissance sobre, 1998.\n\nText: mutations économiques, dès lors quelles sont compatibles avec les objectifs et\nle cadre fixés par lui.\nCes trois scénarios ont été conçus pour être également plausibles, complets (tous\nles enjeux qui peuvent compter pour la politique énergétique sont considérés mais\navec des poids relatifs différents) et cohérents. Leur validation a reposé à la fois\nsur le jugement d'experts au sein de lAtelier et de groupes de travail sectoriels, et\nsur la modélisation économique. Dans son inspiration socio-politique de départ,\naucun de ces scénarios nest   tendanciel   ; aucun ne peut être considéré comme\n plus probable   quun autre, même si, de par la nécessité logique, le bilan\nquantitatif de lun dentre eux en 2020 (en loccurrence S2) doit bien être\nencadré par les deux autres.\nDans cette synthèse nous avons opté pour une présentation sectorielle des bilans\nénergétiques prospectifs, de façon à faciliter la comparaison des résultats des trois\nscénarios. On présentera dabord succinctement les hypothèses communes aux",
+            "metadata": {
+              "title": "LES SCÉNARIOS ÉNERGÉTIQUES DE LA FRANCE 2010-2020, Annexes du Rapport présidé par Pierre Boisson au Commissariat général au plan : Les chemins d'une croissance sobre, 1998.",
+              "hal_id": "hal-00622856",
+              "authors": [
+                "Olivier Godard"
+              ],
+              "version": "v0",
+              "citation": "Olivier Godard. LES SCÉNARIOS ÉNERGÉTIQUES DE LA FRANCE 2010-2020, Annexes du Rapport présidé par Pierre Boisson au Commissariat général au plan : Les chemins d'une croissance sobre, 1998.. 1998, pp.317- 404. ⟨hal-00622856⟩",
+              "source_url": "https://hal.science/hal-00622856",
+              "chunk_order": 17,
+              "description": "La scène énergétique mondiale, européenne et française est en train de vivre plusieurs bouleversements institutionnels et économiques qui auront des répercussions sur les choix techniques et le développement des filières : privatisation et ouverture des marchés de l'électricité et du gaz à la concurrence ; modification des termes de la compétitivité relative entre filières de la production électrique, en particulier entre le gaz et le nucléaire ; grandes manœuvres industrielles autour des services énergétiques, mêlant les grands opérateurs classiques à de nouveaux venus ; premiers pas d'une prise en compte pratique du risque climatique planétaire résultant des émissions de gaz à effet de serre, avec ses contraintes pesant sur la croissance admissible de la demande et ses effets sur la hiérarchie des sources d'énergie.",
+              "document_type": "OTHER",
+              "publication_date": "1998-09-01",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux macroéconomiques des scénarios de transition énergie-climat"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 3001,
+            "total_tokens": 3001
+          }
+        }
+      },
+      "duration": 4468
+    },
+    "retrievalTime": 1446,
+    "generationTime": 4468,
+    "timestamp": "2025-07-18T16:00:37.449Z"
+  },
+  "server_context": {
+    "client_ip": "92.170.78.106",
+    "forwarded_for": "92.170.78.106",
+    "received_at": "2025-07-18T16:00:37.524742+00:00",
+    "server_version": "1.0.0"
+  }
+}

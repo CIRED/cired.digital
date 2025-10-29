@@ -1,0 +1,303 @@
+{
+  "sessionId": "session_1752137691874_6v5x52c3w29583f4u",
+  "timestamp": "20250710T091723207Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752139041175_cxot7xx",
+    "response": {
+      "results": {
+        "generated_answer": "Based on the provided context, there is no specific mention of articles by Louis-Gaëtan Giraudet. The context primarily discusses the structure and management of publication lists using SPIP and RSS, but it does not list any articles by Louis-Gaëtan Giraudet. Therefore, I cannot provide a list of his articles from the given information.",
+        "citations": [],
+        "search_results": [
+          {
+            "id": "49fbcba6-cf68-5bf7-8db6-25e30dd96ab4",
+            "document_id": "714095ac-820a-5504-a609-86a3044ea4db",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)\n\nText: <BOUCLE_articlesautres(SYNDIC_ARTICLES){id_syndic}{par\ndate}{inverse}{tags==ARTREVUE|COMMUNICATION}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_articlesautres>\n</ul>\n</B_articlesautres>\n<B_theses>\n<h2>Th&egrave;ses,m&eacute;moiresdeDEAetd'habilitation(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_theses(SYNDIC_ARTICLES){id_syndic}{par\ndate}{inverse}{tags==THESE}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_theses>\n</ul>\n</B_theses>\n<B_autres>\n<h2>Autrespublications(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_autres(SYNDIC_ARTICLES){id_syndic}{pardate}{inverse}{doublons}>",
+            "metadata": {
+              "title": "SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)",
+              "hal_id": "halshs-00008414",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL). 2006. ⟨halshs-00008414⟩",
+              "source_url": "https://hal.science/halshs-00008414",
+              "chunk_order": 36,
+              "description": "Les listes de publications scientifiques sont un élément clé des sites de laboratoires de recherche. Elles sont aussi essentielles aux pages personnelles des chercheurs. Gérer ces listes de façon systématique implique de connecter d'une façon ou d'une autre un serveur web avec une base de donnée des productions scientifiques. Cette note expose comment connecter l'archive ouverte HAL et le système de gestion de contenu SPIP par le protocole RSS.",
+              "document_type": "OTHER",
+              "publication_date": "2006-01-28",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "liste des articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "08f4dcbf-2ea0-5f38-bb5f-9170ca27f76c",
+            "document_id": "714095ac-820a-5504-a609-86a3044ea4db",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)\n\nText: <ul>\n<BOUCLE_theses(SYNDIC_ARTICLES){id_syndic}{par\ndate}{inverse}{tags==THESE}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_theses>\n</ul>\n</B_theses>\n<B_autres>\n<h2>Autrespublications(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_autres(SYNDIC_ARTICLES){id_syndic}{pardate}{inverse}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_autres>\n</ul>\n</B_autres>\n</div><!listepublis>\n13",
+            "metadata": {
+              "title": "SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)",
+              "hal_id": "halshs-00008414",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL). 2006. ⟨halshs-00008414⟩",
+              "source_url": "https://hal.science/halshs-00008414",
+              "chunk_order": 37,
+              "description": "Les listes de publications scientifiques sont un élément clé des sites de laboratoires de recherche. Elles sont aussi essentielles aux pages personnelles des chercheurs. Gérer ces listes de façon systématique implique de connecter d'une façon ou d'une autre un serveur web avec une base de donnée des productions scientifiques. Cette note expose comment connecter l'archive ouverte HAL et le système de gestion de contenu SPIP par le protocole RSS.",
+              "document_type": "OTHER",
+              "publication_date": "2006-01-28",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "liste des articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "832b8464-9050-5b83-92e2-66605aaec2e0",
+            "document_id": "c59df36b-595d-510c-87b2-aadef7c4d5e3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain\n\nText: février 2013) \nGAGNON C.  Le développement durable : un nouveau paradigme scientifique? . In : Sciences \ndu territoire: Perspectives québécoises . [s.l.] : Presses de lUniversité du Québec, 2008. p . 335 361. \nGAILLARD M. Leau de Paris . Martelle Editions.[s.l.] : [s.n.], 1995. 224 p. \nGALBRAITH J.CK. Les mensonges de léconomie : Vérité pour notre temps . [s.l.] : Grasset & Fasquelle, \n2007. 92 p.ISBN : 2246674913. \nGARIEPY M., MARIE M. Ces réseaux qui nous gouvernent? . Paris : LHarmattan, 1997. ISBN : \n2738458106 9782738458100. \nGATTY J.  Lavenir du service public. Monopole, conc urrence et efficacité . Commentaire . \ndécembre 1997. p. 909 916.  \nGAUDIN J.CP. LAction publique : Sociologie et politique . 1ère éd.[s.l.] : Presses Sciences Po et \nDalloz, 2004. 242 p.ISBN : 2247052363. \nGAY J. LAmelioration de lexistence à Paris sous le regne  de Napoleon III: ladministration des services à \nlusage du public . EHESS.[s.l.] : [s.n.], 1986.",
+            "metadata": {
+              "title": "Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain",
+              "hal_id": "tel-01150236",
+              "authors": [
+                "Julien Souriau"
+              ],
+              "version": "v0",
+              "citation": "Julien Souriau. Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain. Science politique. AgroParisTech, 2014. Français. ⟨NNT : 2014AGPT0052⟩. ⟨tel-01150236v3⟩",
+              "source_url": "https://hal.science/tel-01150236",
+              "chunk_order": 1732,
+              "description": "Le service public d’eau de Paris est indéniablement développé… mais est-il durable ? Comment évaluer et améliorer cette durabilité ? C’est à cette question que nous proposons d’apporter une réponse scientifique. Cette thèse doctorale étudie les stratégies de développement des services publics d’eau et leur durabilité, avec pour principal cas d’étude Paris. En moins de deux siècles, ce service d’eau est passé d’une situation archaïque à la configuration sociotechnique actuelle, et nous souhaitons comprendre dans quelle mesure cette action collective pourra être prolongée – ou pas – à l'avenir. La première partie de cette thèse discute le cadre méthodologique et théorique mobilisé pour étudier ce qui 'gouverne' le développement et la durabilité du service public d’eau à Paris. C’est ce cadre d’analyse général qui est appliqué dans les parties suivantes de cette thèse, pour analyser le temps long : passé, présent et futur. Premièrement, pour comprendre la durabilité du développement passé. Nous expliquons comment un service public d’eau a pu historiquement être développé et perdurer à Paris jusqu'à ce jour. Pour cela, nous étudions les dynamiques à la fois écologiques, techniques, économiques, institutionnelles et politiques de ce développement, afin d'en identifier les principaux moteurs et les limites. Deuxièmement, pour évaluer la durabilité du développement présent. Nous étudions dans quelle mesure les politiques contemporaines (ex : politiques de RSE) changent quelque chose aux configurations, dynamiques et trajectoires héritées du passé. Si les politiques de développement durable actuelles permettent plusieurs améliorations, diverses résistances les rendent marginales ou marginalisées, malgré le consensus en leur faveur. Troisièmement, pour prévoir la durabilité du développement futur. Nous analysons les principales conséquences des projets officiels prévus (ex : Grand Paris de l’eau). En complément, nous proposons une étude prospective de divers scénarios encore possibles à l’avenir, afin de discuter des cheminements qui y mènent et de leurs conséquences, notamment face à la baisse de la demande d’eau observée depuis 1990. L'objectif de cette thèse est autant d'améliorer la compréhension de la notion de durabilité, que de proposer des outils opérationnels pour définir, mener et évaluer des politiques de service public d'eau durables à l’avenir.",
+              "document_type": "THESE",
+              "publication_date": "2014-11-04",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "liste des articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "98222240-b3f0-5137-817a-17ac9795e7a9",
+            "document_id": "714095ac-820a-5504-a609-86a3044ea4db",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)\n\nText: </BOUCLE_articlesjournal>\n</ul>\n</B_articlesjournal>\n<B_articlesouvrage>\n<h2>Articlesdansdesouvragesscientifiques(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_articlesouvrage(SYNDIC_ARTICLES){id_syndic}{pardate}{inverse}\n{tags==ARTOUVRAGE}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_articlesouvrage>\n</ul>\n</B_articlesouvrage>\n<B_communications>\n<h2>Articlesdansdesactesdecolloques(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_communications(SYNDIC_ARTICLES){id_syndic}{par\ndate}{inverse}{tags==ARTCOLLOQUE}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_communications>\n</ul>\n</B_communications>\n<B_articlesautres>",
+            "metadata": {
+              "title": "SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)",
+              "hal_id": "halshs-00008414",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL). 2006. ⟨halshs-00008414⟩",
+              "source_url": "https://hal.science/halshs-00008414",
+              "chunk_order": 34,
+              "description": "Les listes de publications scientifiques sont un élément clé des sites de laboratoires de recherche. Elles sont aussi essentielles aux pages personnelles des chercheurs. Gérer ces listes de façon systématique implique de connecter d'une façon ou d'une autre un serveur web avec une base de donnée des productions scientifiques. Cette note expose comment connecter l'archive ouverte HAL et le système de gestion de contenu SPIP par le protocole RSS.",
+              "document_type": "OTHER",
+              "publication_date": "2006-01-28",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "liste des articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "f1dfa751-1de7-5637-9ad0-6ea2cb3f6b47",
+            "document_id": "82c08573-1415-5e7e-a391-79b21211cd1f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550\n\nText: 4 Du\tmême\tauteur\t\nPour\tvoir\tArles ,\tMaison\tdu\tlivre\tfrançais\t1932\t\nInventaire\tgénéral\tdes\tdessins\tdes\técoles\tdu\tNord\t:\tTome\t1.\tÉcole\thollandaise ,\ten\t\ncoll.\tavec\tFrits\tLugt.\tENSBA\t1950\t\n\"L'Académie\td'Architecture\tà\tla\tfin\tdu\tXVIIIe\tsiècle\",\t Gazette\tdes\tBeaux-Arts\tn68,\t\t\n355-394,\t1966. \t\nLa\tSainte\tChapelle,\thistorique\tet\tguide\tdu\tvisiteur,\téditions\tAlbert\tMorancé\t1975.\t\nCatalogues\td'exposition:\t\nLes\tlivres\td'Heures\t1936\t\nArt\titalien\tdes\tXVIIe\tet\tXVIIIe\tsiècles\t1937\t\nArt\tflamand\tdes\tXVe,\tXVIe,\tXVIIe\tsiècles.\tExposition\tde\tdessins,\tlivres\tillustrés\tet\txylographies\tconservés\tdans\tles\tcollections\tde\t\nl'École\tdes\tBeaux\tArts\tet\ttirés\ten\tmajeure\tpartie\tde\tla\tdonation\tJean\tMasson. \tENSBA\t1947 \t\nArt\tgraphique\tau\tmoyen-âge \t:\texposition\tde\tdessin\tmanuscrits\tenluminés,\tgravures\tet\tincunables\tconservés\tdans\tles\tcollections\t\nde\tl'École\tdes\tBeaux\tarts\tet\ttirés\ten\tmajeure\tpartie\tde\tla\tDonation\tJ.\tMasson, \tENSBA\t1953",
+            "metadata": {
+              "title": "A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550",
+              "hal_id": "halshs-02898229",
+              "authors": [
+                "Wanda Rabaud",
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Wanda Rabaud, Nicolas Bouleau. A la source de la Renaissance française, Le livre d'Heures parisien\r\nLivres d'Heures imprimés à Paris entre 1488 et 1550. 2020. ⟨halshs-02898229⟩",
+              "source_url": "https://hal.science/halshs-02898229",
+              "chunk_order": 3,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-07-15",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "liste des articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "b0e535c1-0f80-5a0f-81d9-77e6d30c2655",
+            "document_id": "82c08573-1415-5e7e-a391-79b21211cd1f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550\n\nText: Leur\tsurprenante\tnouveauté \t\nB.\tLES\tSOURCES\tDE\tLA\tREV OLUTION\tDE\t G.\tTORY\tET\tSES\tPROLONGEM ENTS.\t.................................................\t 154\t\nLes\tsources\tde\tla\trévolution\tde\tGeoffroy\tTory\tet\tses\tprolongements \t\nCONCLUSION. \t.................................................................................................................................................... \t163\t\nBIBLIOGRAPHIE \t................................................................................................................................ \t165\t\nREMERCIEMENTS \t.............................................................................................................................\t 166\t\nLIVRES\tD 'HEURES\tCITES ,\tGROUPES\tPAR\tSERIES .\t......................................................................................\t 168\t\nTABLE\tDES\tILLUSTRATIO NS\t.................................................................................................................\t 170",
+            "metadata": {
+              "title": "A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550",
+              "hal_id": "halshs-02898229",
+              "authors": [
+                "Wanda Rabaud",
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Wanda Rabaud, Nicolas Bouleau. A la source de la Renaissance française, Le livre d'Heures parisien\r\nLivres d'Heures imprimés à Paris entre 1488 et 1550. 2020. ⟨halshs-02898229⟩",
+              "source_url": "https://hal.science/halshs-02898229",
+              "chunk_order": 481,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-07-15",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "liste des articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "32aa73f0-6c74-5abf-a402-5eabc46d02bb",
+            "document_id": "c59df36b-595d-510c-87b2-aadef7c4d5e3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain\n\nText: 2738458106 9782738458100. \nGATTY J.  Lavenir du service public. Monopole, conc urrence et efficacité . Commentaire . \ndécembre 1997. p. 909 916.  \nGAUDIN J.CP. LAction publique : Sociologie et politique . 1ère éd.[s.l.] : Presses Sciences Po et \nDalloz, 2004. 242 p.ISBN : 2247052363. \nGAY J. LAmelioration de lexistence à Paris sous le regne  de Napoleon III: ladministration des services à \nlusage du public . EHESS.[s.l.] : [s.n.], 1986.  \nGEORGESCUCROEGEN N. La Décroissance : Entropie, écologie, économie . [s.l.] : PierreCMarcel \nFavre, 1979. 157 p.ISBN : 2869850778. \nGHIOTTI S.  Les Territoires de leau et la décentra lisation. La gouvernance de bassin versant ou \nles limites dune évidence . Développement durable et territoires. Économie, géo graphie, politique, droit, \nsociologie  [En ligne]. 10 février 2006. nDossier 6,. Disponi ble sur : < \nhttp://dx.doi.org/10.4000/developpementdurable.1742 > (consulté le 29 avril 2014)",
+            "metadata": {
+              "title": "Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain",
+              "hal_id": "tel-01150236",
+              "authors": [
+                "Julien Souriau"
+              ],
+              "version": "v0",
+              "citation": "Julien Souriau. Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain. Science politique. AgroParisTech, 2014. Français. ⟨NNT : 2014AGPT0052⟩. ⟨tel-01150236v3⟩",
+              "source_url": "https://hal.science/tel-01150236",
+              "chunk_order": 1733,
+              "description": "Le service public d’eau de Paris est indéniablement développé… mais est-il durable ? Comment évaluer et améliorer cette durabilité ? C’est à cette question que nous proposons d’apporter une réponse scientifique. Cette thèse doctorale étudie les stratégies de développement des services publics d’eau et leur durabilité, avec pour principal cas d’étude Paris. En moins de deux siècles, ce service d’eau est passé d’une situation archaïque à la configuration sociotechnique actuelle, et nous souhaitons comprendre dans quelle mesure cette action collective pourra être prolongée – ou pas – à l'avenir. La première partie de cette thèse discute le cadre méthodologique et théorique mobilisé pour étudier ce qui 'gouverne' le développement et la durabilité du service public d’eau à Paris. C’est ce cadre d’analyse général qui est appliqué dans les parties suivantes de cette thèse, pour analyser le temps long : passé, présent et futur. Premièrement, pour comprendre la durabilité du développement passé. Nous expliquons comment un service public d’eau a pu historiquement être développé et perdurer à Paris jusqu'à ce jour. Pour cela, nous étudions les dynamiques à la fois écologiques, techniques, économiques, institutionnelles et politiques de ce développement, afin d'en identifier les principaux moteurs et les limites. Deuxièmement, pour évaluer la durabilité du développement présent. Nous étudions dans quelle mesure les politiques contemporaines (ex : politiques de RSE) changent quelque chose aux configurations, dynamiques et trajectoires héritées du passé. Si les politiques de développement durable actuelles permettent plusieurs améliorations, diverses résistances les rendent marginales ou marginalisées, malgré le consensus en leur faveur. Troisièmement, pour prévoir la durabilité du développement futur. Nous analysons les principales conséquences des projets officiels prévus (ex : Grand Paris de l’eau). En complément, nous proposons une étude prospective de divers scénarios encore possibles à l’avenir, afin de discuter des cheminements qui y mènent et de leurs conséquences, notamment face à la baisse de la demande d’eau observée depuis 1990. L'objectif de cette thèse est autant d'améliorer la compréhension de la notion de durabilité, que de proposer des outils opérationnels pour définir, mener et évaluer des politiques de service public d'eau durables à l’avenir.",
+              "document_type": "THESE",
+              "publication_date": "2014-11-04",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "liste des articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "c9f5a07f-1c66-5968-a2ae-f39b2e067287",
+            "document_id": "714095ac-820a-5504-a609-86a3044ea4db",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)\n\nText: </B_articlesouvrage>\n<B_communications>\n<h2>Articlesdansdesactesdecolloques(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_communications(SYNDIC_ARTICLES){id_syndic}{par\ndate}{inverse}{tags==ARTCOLLOQUE}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_communications>\n</ul>\n</B_communications>\n<B_articlesautres>\n<h2>Articlesetcommunicationsdansdesrevuesded&eacute;batoud'information\n(#TOTAL_BOUCLE)</h1>\n<ul>\n12",
+            "metadata": {
+              "title": "SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)",
+              "hal_id": "halshs-00008414",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL). 2006. ⟨halshs-00008414⟩",
+              "source_url": "https://hal.science/halshs-00008414",
+              "chunk_order": 35,
+              "description": "Les listes de publications scientifiques sont un élément clé des sites de laboratoires de recherche. Elles sont aussi essentielles aux pages personnelles des chercheurs. Gérer ces listes de façon systématique implique de connecter d'une façon ou d'une autre un serveur web avec une base de donnée des productions scientifiques. Cette note expose comment connecter l'archive ouverte HAL et le système de gestion de contenu SPIP par le protocole RSS.",
+              "document_type": "OTHER",
+              "publication_date": "2006-01-28",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "liste des articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "8b9fc55a-880f-5a1a-90d4-ae15794802da",
+            "document_id": "714095ac-820a-5504-a609-86a3044ea4db",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)\n\nText: Annexe2:squelettedeprésentationdelistedepublication\n<divid=\"listepublis\">\n<B_articlesjournal>\n<h2>Articlesdansdesrevuesscientifiques(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_articlesjournal(SYNDIC_ARTICLES){id_syndic}{pardate}{inverse}\n{tags==ARTJOUR}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_articlesjournal>\n</ul>\n</B_articlesjournal>\n<B_articlesouvrage>\n<h2>Articlesdansdesouvragesscientifiques(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_articlesouvrage(SYNDIC_ARTICLES){id_syndic}{pardate}{inverse}\n{tags==ARTOUVRAGE}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_articlesouvrage>\n</ul>",
+            "metadata": {
+              "title": "SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)",
+              "hal_id": "halshs-00008414",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL). 2006. ⟨halshs-00008414⟩",
+              "source_url": "https://hal.science/halshs-00008414",
+              "chunk_order": 33,
+              "description": "Les listes de publications scientifiques sont un élément clé des sites de laboratoires de recherche. Elles sont aussi essentielles aux pages personnelles des chercheurs. Gérer ces listes de façon systématique implique de connecter d'une façon ou d'une autre un serveur web avec une base de donnée des productions scientifiques. Cette note expose comment connecter l'archive ouverte HAL et le système de gestion de contenu SPIP par le protocole RSS.",
+              "document_type": "OTHER",
+              "publication_date": "2006-01-28",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "liste des articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "3f5c0883-1db1-54bd-9d08-71bbb90eeab5",
+            "document_id": "82c08573-1415-5e7e-a391-79b21211cd1f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550\n\nText: (B.\tN.\tVél.1511),\t\t\t1514\t\t\t(Les\t391). \t\t3série:\t\t\tGermain,\t\t\timpr.\t\t\tpar\tVidoue ,\t\t\t1524\t\t\t(cf.\tVidoue \tpr.\tGodard\t\nM.630)\t\nGeoffroy\tTory \t\n\t1525\timpr.\tpar\tSimon\tde\tCelines.\tEn\tfrançais\t(B.\tN.\tVél.\t1529)\t\t1527\timpr.\tpar\tS.\tDu\tBois,\tHeures\tde\tParis\t\n(B.\tN.\tRés.\tB.\t2942,\tLes\t400)\t\t1529\timpr.\tpar\tlui-même\t(B.\tN.\tVél.\t2914,\tLes\t401) \t\nOlivier\tMallard\t\tsuccesseur\t\tde\t\tG.Tory \t\n\t1541\tHeures\tà\tla\tmoderne \t\t1542\tHeures\tà\tl'antique\tavec\tle\ttriomphe\tde\tla\tVierge\t(B.N.\tRés.\tB.\t21303,\tLes\t\n403)\t\nSimon\tde\tColines \t\t1543\t(B.N.\tRés.\tB.\t27740,\tM.\t108).",
+            "metadata": {
+              "title": "A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550",
+              "hal_id": "halshs-02898229",
+              "authors": [
+                "Wanda Rabaud",
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Wanda Rabaud, Nicolas Bouleau. A la source de la Renaissance française, Le livre d'Heures parisien\r\nLivres d'Heures imprimés à Paris entre 1488 et 1550. 2020. ⟨halshs-02898229⟩",
+              "source_url": "https://hal.science/halshs-02898229",
+              "chunk_order": 416,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-07-15",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "liste des articles de Louis-Gaëtan Giraudet"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 338,
+            "total_tokens": 338
+          }
+        }
+      },
+      "duration": 695
+    },
+    "retrievalTime": 1332,
+    "generationTime": 695,
+    "timestamp": "2025-07-10T09:17:23.207Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T09:17:23.241566+00:00",
+    "server_version": "1.0.0"
+  }
+}

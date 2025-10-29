@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752170012739_64e6b366d3s5dh2w",
+  "timestamp": "20250710T180543664Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752170743654_k399b29",
+    "query": "Smart Grid",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "Smart Grid",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "193.51.120.110",
+    "forwarded_for": "193.51.120.110",
+    "received_at": "2025-07-10T18:05:43.687871+00:00",
+    "server_version": "1.0.0"
+  }
+}

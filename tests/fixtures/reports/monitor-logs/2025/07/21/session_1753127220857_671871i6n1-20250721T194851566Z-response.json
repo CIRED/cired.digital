@@ -1,0 +1,417 @@
+{
+  "sessionId": "session_1753127220857_671871i6n1e523z3i",
+  "timestamp": "20250721T194851566Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1753127327498_7wagkp1",
+    "response": {
+      "results": {
+        "generated_answer": "Les publications du CIRED qui portent sur le prix du carbone incluent :\n\n1. **\"Carbon leakage and competitiveness of cement and steel industries under the EU ETS : much ado about nothing\"** [b5fe240]\n   - Cette publication examine l'impact du prix du carbone sur la compétitivité des industries du ciment et de l'acier sous le système d'échange de quotas d'émission de l'UE (EU ETS).\n\n2. **\"Pour la reconnaissance d'une valeur sociale du carbone dans l'accord-Climat\"** [f147726]\n   - Ce document aborde la nécessité de reconnaître une valeur sociale du carbone dans les accords climatiques, ce qui implique une discussion sur le prix du carbone.\n\nCes publications montrent l'engagement du CIRED dans l'analyse des implications économiques et politiques du prix du carbone.",
+        "citations": [
+          {
+            "id": "b5fe240",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 190,
+              "end": 199
+            },
+            "payload": {
+              "id": "b5fe2405-2c15-52aa-be6b-c7b9a3eeed62",
+              "document_id": "d813ce68-67a0-5a58-bc3a-26ed8ed02697",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: Carbon leakage and competitiveness of cement and steel industries under the EU ETS : much ado about nothing\n\nText: prix du carbone. Dans un second temps, nous estimons é conométriquement cette relation à la fois par \nune régression ARIMA et p ar une régression Prais -Winsten. N ous trouvons que les demandes locales \net internationales  sont des facteurs robustes expliquant les flux commerciaux. Nous ne trouvons  en \nrevanche  pas deffet significatif du prix du carbone sur les importations nettes dacier et de ciment. \nNous en concluons quil ny a pas de preuve de fuites de carbone dans ces secteurs, au moins à court \nterme.  \n \nMots -clés : : EU ETS, compétitivité, fuites de carbone,  industries énergie -intensives, ARIMA, Prais -\nWinsten  \n \n \nCIRED Working Papers Series",
+              "metadata": {
+                "title": "Carbon leakage and competitiveness of cement and steel industries under the EU ETS : much ado about nothing",
+                "hal_id": "hal-00945187",
+                "authors": [
+                  "Frédéric Branger",
+                  "Philippe Quirion",
+                  "Julien Chevallier"
+                ],
+                "version": "v0",
+                "citation": "Frédéric Branger, Philippe Quirion, Julien Chevallier. Carbon leakage and competitiveness of cement and steel industries under the EU ETS : much ado about nothing. 2013. ⟨hal-00945187⟩",
+                "source_url": "https://hal.science/hal-00945187",
+                "chunk_order": 7,
+                "description": "In a world of uneven climate policies, concerns about carbon leakage and competitiveness for heavy industries are the main arguments against the implementation of ambitious climate policies. In this paper we investigate a potential competitiveness-driven carbon leakage due to the European Union Emission Trading scheme (EU ETS). We focus on two energy-intensive sectors, cement and steel, and phases I and II of the EU ETS. From a simple analytical model, we derive an equation linking net imports of cement and steel to local and foreign demand along with carbon price. We then econometrically estimate this relation both with ARIMA regression and Prais-Winsten estimation, finding that local and foreign demand are robust drivers of trade ﬂows. We ﬁnd no signiﬁcant effect of the carbon price on net imports of steel and cement. We conclude that there is no evidence of carbon leakage in these sectors, at least in the short run.",
+                "document_type": "UNDEFINED",
+                "publication_date": "2013-12-10",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "quels sont les publications du CIRED qui portent sur le prix du carbone ?"
+              }
+            }
+          },
+          {
+            "id": "f147726",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 470,
+              "end": 479
+            },
+            "payload": {
+              "id": "f147726d-de75-5963-b3c2-a73a57870b2d",
+              "document_id": "0eb3fc29-f345-5028-bb5e-ff9fb7086733",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.014555555555555556,
+              "text": "Document Title: Pour la reconnaissance d'une valeur sociale du carbone dans l'accord-Climat\n\nText: Ceci dit, affirmer la nécessité dune reconnaissance dun prix de référence  du carbone  dans laccord -\nClimat ne serait pas  vain, parce quil guiderait les décisions dinvestissement et permet trait dass eoir \nde nouveaux modes de financement reconnaissant leur  valeur d abattement du carbone  qui nest \npas internalisée . En aucun cas il ne s agirait  de revenir à lobjectif poursuivi antérieurement de faire \némerger un prix du carbone sur la base de contraintes lors des négociations passées  et qui a  fait \nperdre trop de temps. Il sagit  de donner de façon pragmatique  un guide pour les décisions  dinve stir \net de financer  les investissements en équipements bas carbone , qui ne concerne que les \n                                                           \n1 Directeur de recherche CNRS émérite, chercheur au CIRED et consultant de la Banque Mondiale sur les effets de  \ntarification du carbone sur les politiques énergétiques des pays émergents.",
+              "metadata": {
+                "title": "Pour la reconnaissance d'une valeur sociale du carbone dans l'accord-Climat",
+                "hal_id": "hal-01238998",
+                "authors": [
+                  "Dominique Finon"
+                ],
+                "version": "v0",
+                "citation": "Dominique Finon. Pour la reconnaissance d'une valeur sociale du carbone dans l'accord-Climat. 2015. ⟨hal-01238998⟩",
+                "source_url": "https://hal.science/hal-01238998",
+                "chunk_order": 4,
+                "description": "Mis en ligne sur le site de France Stratégie http://www.strategie.gouv.fr/actualites/reconnaissance-dune-sociale-carbone-laccord-climat Résumé introductif Les économistes s'accordent en général à penser qu'affecter un prix unique aux émissions de carbone à travers un accord international, que ce soit par un prix contraignant (taxe carbone) , ou par un marché de permis reposant sur des engagements contraignants, serait en théorie le moyen le plus efficient au plan mondial, pour inciter à la réduction des émissions vers le niveau souhaitable, en ajoutant des canaux de redistribution vers les pays en développement (voir par exemple Gollier, Tirole, 2015). Mais, compte tenu des réalités de la politique internationale (refus de contraintes et de pénalités par de grands pays metteurs, obstacles à des transferts financiers Nord-Sud considérables en guise de compensations redistributives, etc.), compte tenu aussi des obstacles théoriques émanant des incertitudes sur les coûts des options bas carbone que chaque pays rencontrera pour qu'il s'engage, il n'est pas possible qu'un accord se dégage sur des engagements contraignants ou sur une taxation uniforme. Ceci explique la mise à l'écart d'un prix uniforme du carbone dans le processus de négociation internationale. Ceci dit, affirmer la nécessité d'une reconnaissance d'un prix de référence du carbone dans l'accord-Climat ne serait pas vain, parce qu'il guiderait les décisions d'investissement et permettrait d'asseoir de nouveaux modes de financement reconnaissant leur valeur d'abattement du carbone qui n'est pas internalisée. En aucun cas il ne s'agirait de revenir à l'objectif poursuivi antérieurement de faire émerger un prix du carbone sur la base de contraintes lors des négociations passées et qui a fait perdre trop de temps. Il s'agit de donner de façon pragmatique un guide pour les décisions d'investir et de financer les investissements en équipements bas carbone, qui ne concerne que les",
+                "document_type": "OTHER",
+                "publication_date": "2015-10-16",
+                "semantic_rank": 10,
+                "full_text_rank": 200,
+                "associated_query": "quels sont les publications du CIRED qui portent sur le prix du carbone ?"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "2c99a3f2-ac65-5258-b265-6d76f62300fb",
+            "document_id": "b62e22b9-3f0c-5fb3-96b7-ec0832b1ea11",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Reducing emissions from deforestation and degradation: What contribution from carbon markets?\n\nText: Climate Report No 14  Reducing Emissions from Deforestat ion and Degradation: what Cont ribution from Carbon Markets?  \nRESEARCH PUBLICATIONS OF THE MISSION CLIMAT  \nClimate Reports \nN1* Les fonds d'investissement dans les actifs carbone : état des lieux \n A RIANE  DE DOMINICIS  - January 2005 \nN2* Plan National d'Allocation des Quotas et territoires  \n E MMANUEL ARNAUD  - March 2005 \nN3  Les plateformes de marché et le fonctionnement du système de quotas CO 2\n ROMAIN FREMONT  - June 2005 \nN4* Les enjeux de la réduction des émissions de gaz à effet de serre dans le bâtiment \n EMMANUEL  ARNAUD - September 2005 \nN5 Domestic Offset Projects \n ARIANE  DE DOMINICIS - September 2005 \nN6* Agriculture et réduction des émissions de gaz à effet de serre  \n B ENOIT  LEGUET - September 2005 \nN7* Fonds d'investissement dans les actifs CO 2 : l'accélération  \n A RIANE  DE DOMINICIS - November 2005 \nN8  Overview of European National Allocation Plans  \n C LAIRE  DUFOUR  & A LEXIA  LESEUR - April 2006",
+            "metadata": {
+              "title": "Reducing emissions from deforestation and degradation: What contribution from carbon markets?",
+              "hal_id": "hal-01190162",
+              "authors": [
+                "Valentin Bellassen",
+                "R. Crassous",
+                "L. Dietzsch",
+                "S. Schwartzman"
+              ],
+              "version": "v0",
+              "citation": "Valentin Bellassen, R. Crassous, L. Dietzsch, S. Schwartzman. Reducing emissions from deforestation and degradation: What contribution from carbon markets?. [Research Report] 14, auto-saisine. 2008, 44 p. ⟨hal-01190162⟩",
+              "source_url": "https://hal.science/hal-01190162",
+              "chunk_order": 249,
+              "description": "Tropical deforestation is responsible for 15-20% of total man-made emissions of greenhouse gases. In December 2007, at the international conference of Bali, the United Nations acknowledged that a viable solution to climate change must include a mechanism to limit deforestation and forest degradation. Today, the most widely used economic tool to reduce emissions is carbon markets: caps on emitters, and trade allowed between emitters and reducers, drive a price signal on carbon and provide incentives to control emissions. This report examines the different possibilities to broaden the range of this tool so that it helps reduce emissions from deforestation. The three main possibilities presented are a tax-based fund, the use of auctions revenues, and the issuance of tradable credits. The report does not discuss other instruments unrelated to carbon-related payments. We first summarize existing information on the causes of deforestation, and the impact forest loss has on the global climate. To the contrary of a commonly held view, we find that farmers, more than loggers, are driving deforestation. Some, mostly in Africa, cut the forest to grow staple crops, while others, especially in South America, do so in response to the increasing demand for commercial crops and cattle. Building on this analysis, we describe the different possibilities to link carbon markets to the fight against deforestation. In the latter case of the issuance of tradable credits, we find that while carbon markets could substantially increase the amount of funding available to develop projects and programs that reduce deforestation, demand for carbon credits must keep up with this potential new source of supply, probably around one billion ton of CO2 per year. As an analysis conducted by EDF shows, the emission caps currently advocated by the European Commission for Europe and by the Lieberman-Warner bill for the US would create enough demand to generate a price signal around 20 €/tCO2. Other solutions such as reserve prices in auctions or credits banking have been put forward to mitigate the risk of too many deforestation credits flooding carbon markets. In any case, reducing deforestation and maintaining a high price signal on carbon markets are like conjoined twins in the fight against climate change. Their link can be both a source of strength and vulnerability, but they eventually are both essential to achieve the ultimate goal of stabilizing the climate.",
+              "document_type": "REPORT",
+              "publication_date": "2008-01-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "quels sont les publications du CIRED qui portent sur le prix du carbone ?"
+            }
+          },
+          {
+            "id": "93637197-502f-5931-bcb3-957f3854d215",
+            "document_id": "3e4036d1-c90e-5812-8463-ecb275280f46",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: L’intégration des impacts environnementaux dans l’évaluation des investissements privés\n\nText: cateurs sont produits comme lintensité carbone \ndun fonds12 ou le ratio de CO2 par euro inves -\nti13 mais des enjeux demeurent quant à la défi -\nnition des périmètres retenus14 et de la preuve \nde causalité permettant dapprocher les impacts \nréels des projets.\nDes prix internes du carbone sont utilisés par \ncertains acteurs privés pour intégrer ces enjeux \ndans leurs décisions. Sous limpulsion des ac -\nteurs publics, des valeurs tutélaires (les prix uni -\ntaires) du carbone se développent par ailleurs \nà différentes échelles. Un point commun à ces \nvaleurs est quelles résultent désormais pour la \nplupart dune approche coût-efficacité, ren -\ndue possible par le développement dobjectifs \nenvironnementaux politiquement légitimes15. \nLes approches alternatives, dites coût-avan -\ntage, évaluent la valeur de la tCO2e à partir \ndune évaluation monétaire des dommages as -\nsociés. Or, en plus de leur faisabilité discutable, \nde telles évaluations reposent sur des arbitrages",
+            "metadata": {
+              "title": "L’intégration des impacts environnementaux dans l’évaluation des investissements privés",
+              "hal_id": "hal-03270118",
+              "authors": [
+                "Patricia Crifo",
+                "Yann Kervinio",
+                "Emile Quinet"
+              ],
+              "version": "v0",
+              "citation": "Patricia Crifo, Yann Kervinio, Emile Quinet. L’intégration des impacts environnementaux dans l’évaluation des investissements privés. Transitions. Les nouvelles Annales des Ponts et Chaussées, 2021, 1, pp.76-83. ⟨hal-03270118⟩",
+              "source_url": "https://hal.science/hal-03270118",
+              "chunk_order": 39,
+              "description": "L’urgence écologique appelle à une réorientation marquée des investissements publics et privés des activités défavorables vers des activités plus favorables à l’environnement. La finance verte peut y contribuer, pourvu qu’elle se dote d’outils susceptibles d’intégrer dans une juste mesure les impacts environnementaux dans l’évaluation des investissements. Dans cet article, nous discutons comment le calcul socioéconomique, actuellement employé pour l’évaluation des projets d’investissement de l’État et ses opérateurs, peut constituer un outil utile aux acteurs privés désireux d’intégrer les impacts environnementaux de leurs investissements dans une mesure cohérente avec l’ambition collective en la matière. Nous y mettons en évidence l’intérêt de disposer d’objectifs environnementaux spécifiques et mesurables, qui légitiment et traduisent de manière opérationnelle notre ambition collective face aux défis écologiques actuels.",
+              "document_type": "ART",
+              "publication_date": "2021-07-01",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "quels sont les publications du CIRED qui portent sur le prix du carbone ?"
+            }
+          },
+          {
+            "id": "4986e6bc-b74d-5b15-b59d-2a5a2e633685",
+            "document_id": "d78107de-93fa-502a-86b1-7552dc568f33",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Pour une reconnaissance d’une valeur de référence du carbone dans l’accord Climat\n\nText: Les écarts des évaluations du coût social du carbone du fait de lécart important entre paramètres scientifiques et économiques pour un intervalle de  confiance de 90% sont très importants puisqu e ce \ncoût  sétale de 10 à 222 $/t de carbone, tandis quavec l es hypothèse de  Stern sur le taux \ndactualisation très bas à partir dhorizon de moyen terme ,  les montants sélèvent de 60 à 1025 $/ t \nde carbone  (Grubb et al., 2015)\n10 . Par contraste les agenc es américaine utilisent un prix  de 80 $/tC \n                                                           \n4 IPCC Working Group 3,  \n5 IIASA, 2012, Global Energy Assessment  : Toward a sustainable future. Cambridge (UK)  : Cambridge University \nPress  ; \n6 Cassen C., Guivarch C. et Lecocq F., 201 5, Les cobénéfices des politiques climatiques  : un concept opéant pour \nles négociations climat, Natures Sciences et Sociétés , 23, p. 41- 51. \nVoir aussi Urge -Vorstatz D., Tirado Herrero S., Dubash N -K, Lecocq F., Measuring the co -benefis of climate",
+            "metadata": {
+              "title": "Pour une reconnaissance d’une valeur de référence du carbone dans l’accord Climat",
+              "hal_id": "hal-01239048",
+              "authors": [
+                "Dominique Finon"
+              ],
+              "version": "v0",
+              "citation": "Dominique Finon. Pour une reconnaissance d’une valeur de référence du carbone  dans l’accord Climat. 2015. ⟨hal-01239048⟩",
+              "source_url": "https://hal.science/hal-01239048",
+              "chunk_order": 27,
+              "description": "L'échec du protocole de Kyoto montre qu'il est impossible de s'entendre dans un accord sur le développement d'un prix mondial du carbone qui nécessiterait des engagements contraignants autour des quotas d'émissions. Ceci dit, reconnaître la nécessité d'une valeur de référence du carbone aligné sur la valeur économique et sociale des actions de réduction des émissions ne serait pas vain. Une telle valeur de référence guiderait les décisions d'investissement bas carbone et permettrait d'asseoir de nouveaux modes de financement qui prendrait en compte la valeur d'abattement du carbone qui est mal internalisée par une taxe ou un prix d'ETS. Les décisions de long terme des entreprises et des administrations publiques en matière d'équipements bas carbone, de programmes d'infrastructures (bâtiments, mode de transport, urbanisme) qui ont un surcoût par rapport aux options ordinaires auraient besoin de se baser sur un signal-prix du carbone crédible pour se déclencher. Les agents auraient besoin de se référer à la rentabilité sociale de l'investissement et non pas seulement à sa rentabilité privée. Une telle valeur de référence du carbone permettrait aussi d'asseoir de nouveaux modes de financement innovants qui ne soient pas simplement des arrangements permettant le partage de risque qui sont actuellement proposés et qui reposeraient sur la création d'un actif carbone correspondant aux économie de carbone des projet bas carbone, dont la valeur serait garantie par les Etats et les banques centrales. Au bout du compte, comme l'usage d'un tel prix de référence du carbone ne pèsera pas sur le capital technique en place et les émissions correspondantes, il a beaucoup moins d'effets redistributifs et ne heurte pas de front les intérêts industriels. On pourrait donc s'entendre plus facilement sur la reconnaissance de sa nécessité dans le traité que celle d'engagements ou de prix contraignants. Plus tard cette non-pénalisation des équipements de départ et de leurs émissions permettra de s'entendre sur une valeur élevée et rapidement croissante, nécessaire ppour déclencher des investissements bas carbone très lourds en capital.",
+              "document_type": "OTHER",
+              "publication_date": "2015-09-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "quels sont les publications du CIRED qui portent sur le prix du carbone ?"
+            }
+          },
+          {
+            "id": "35928524-0952-59e0-8162-7ec41643fd00",
+            "document_id": "2ba5439b-43cf-5559-b0db-6d18655ff25d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Les incidences économiques de l'action pour le climat. Compétitivité\n\nText: disent pas. Cest en effet en insistant sur les précautions quimpose linterprétation  de leurs \nrésultats que lon peut poser les jalons des programmes de recherche futurs.  \nLe Chapitre  5 sintéresse à des sujets encore relativement orphelins dans la littérature  : \ndune part, la sortie des énergies fossiles va bouleverser les problématiques daccès aux \nressources au niveau international, les métaux se substituant au pétrole  ; dautre part , au \ncœur de la transition se trouveront les firmes multinationales.  \n                                              \n1 Il existe soixante -dix initiatives visant à imposer un prix du carbone sur les activités émettrices . Elles c ouvrent \n23 % des émissions mondiales. Les prix oscillent entre 0, 5 euro/tCO 2eq et 1 27 euros /tCO 2eq et sont inférieurs \nà 9 euros /tCO 2eq pour plus de 60  % des émissions couvertes  (Carbon Pricing D ashboard  de la Banque \nmondiale, dernière mise à jour en avril 2022) .",
+            "metadata": {
+              "title": "Les incidences économiques de l'action pour le climat. Compétitivité",
+              "hal_id": "hal-04248556",
+              "authors": [
+                "Lionel Fontagné",
+                "Antoine Bouët",
+                "Erica Perego",
+                "Vincent Vicard",
+                "Mathieu Fouquet",
+                "Alexandre Godzinski",
+                "Frédéric Ghersi",
+                "Sébastien Jean",
+                "William l'Heudé",
+                "Vincent Aussilloux",
+                "Romain Schweizer",
+                "Christophe C. Gouel",
+                "Paul Malliet",
+                "François Langot",
+                "Aude Pommeret",
+                "Fabien Tripier"
+              ],
+              "version": "v0",
+              "citation": "Lionel Fontagné, Antoine Bouët, Erica Perego, Vincent Vicard, Mathieu Fouquet, et al.. Les incidences économiques de l'action pour le climat. Compétitivité. France stratégie; Banque de France. 2023. ⟨hal-04248556⟩",
+              "source_url": "https://hal.science/hal-04248556",
+              "chunk_order": 41,
+              "description": "Les conséquences économiques et environnementales des politiques françaises de transition énergétique doivent s’envisager dans le cadre d’une économie ouverte. Tout d’abord, le rythme des efforts et les modalités de la décarbonation de l’activité économique sont en partie dictés au niveau européen, comme dans le cas du marché de quotas d’émission pour les industries hautement émissives. Mais surtout, l’Accord de Paris inscrit l’effort français au sein d’une variété d’engagements nationaux de décarbonation, tant en termes d’ambition que d’instruments mis en œuvre pour y parvenir. Cette diversité des efforts et instruments au niveau international contribue à déterminer les effets économiques des choix faits en matière de politiques climatiques adoptées au niveau européen et français. Ce rapport propose un tour d’horizon synthétique de cette dimension internationale des politiques de transition énergétique. En dépit d’éléments communs, notamment leur objectif final de réduction de l’empreinte carbone de l’activité économique, les politiques climatiques des différents pays sont hétérogènes, qu’il s’agisse de leur ambition – à savoir le niveau de leurs engagements en termes de décarbonation – ou des politiques (prix, réglementations, subventions ou crédits d’impôt) mises en œuvre. Il est dès lors illusoire de tenter de réduire les effets de cette hétérogénéité à une métrique commune de l’effort de chaque pays, comme le serait un équivalent prix des mesures réglementaires ou incitatives en place dans les différents pays.",
+              "document_type": "REPORT",
+              "publication_date": "2023-05-01",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "quels sont les publications du CIRED qui portent sur le prix du carbone ?"
+            }
+          },
+          {
+            "id": "de8868de-3b30-5b20-9fba-93f9287a9eb1",
+            "document_id": "2ba5439b-43cf-5559-b0db-6d18655ff25d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Les incidences économiques de l'action pour le climat. Compétitivité\n\nText: à la somme des taxes (y compris la taxe carbone) incitant à la réduction de la consommation dénergie fossile \n(ECR pour Effective Carbon Rates   OCDE, 2018).  \n3 OCDE (2013), Effective Carbon Prices , Paris, Éditions de  lOCDE.  \n4 Marcantonini C. et Ellerman A. D. (2013),   The cost of abating CO2 emissions by renewable energy incentives \nin Germany  , MIT CEEPR Working Paper 2013 -05, février.  \n5 Black S., Minnett D. N., Parry I. W. H., Roaf J. et Zhunussova K. (2022),   A framework for comparing cli mate \nmitigation policies across countries  , Fonds monétaire international, IMF Working Paper n  2022/254, \ndécembre.  \n6 Contrairement aux mesures règlementaires qui visent à contraindre les émissions au niveau dun certain \nseuil, la tarification carbone sa pplique sur lensemble des émissions observées à un instant donné. Le signal -\nprix crée ainsi une incitation à la décarbonation et donc à la réalisation dinvestissements pour réduire ses",
+            "metadata": {
+              "title": "Les incidences économiques de l'action pour le climat. Compétitivité",
+              "hal_id": "hal-04248556",
+              "authors": [
+                "Lionel Fontagné",
+                "Antoine Bouët",
+                "Erica Perego",
+                "Vincent Vicard",
+                "Mathieu Fouquet",
+                "Alexandre Godzinski",
+                "Frédéric Ghersi",
+                "Sébastien Jean",
+                "William l'Heudé",
+                "Vincent Aussilloux",
+                "Romain Schweizer",
+                "Christophe C. Gouel",
+                "Paul Malliet",
+                "François Langot",
+                "Aude Pommeret",
+                "Fabien Tripier"
+              ],
+              "version": "v0",
+              "citation": "Lionel Fontagné, Antoine Bouët, Erica Perego, Vincent Vicard, Mathieu Fouquet, et al.. Les incidences économiques de l'action pour le climat. Compétitivité. France stratégie; Banque de France. 2023. ⟨hal-04248556⟩",
+              "source_url": "https://hal.science/hal-04248556",
+              "chunk_order": 79,
+              "description": "Les conséquences économiques et environnementales des politiques françaises de transition énergétique doivent s’envisager dans le cadre d’une économie ouverte. Tout d’abord, le rythme des efforts et les modalités de la décarbonation de l’activité économique sont en partie dictés au niveau européen, comme dans le cas du marché de quotas d’émission pour les industries hautement émissives. Mais surtout, l’Accord de Paris inscrit l’effort français au sein d’une variété d’engagements nationaux de décarbonation, tant en termes d’ambition que d’instruments mis en œuvre pour y parvenir. Cette diversité des efforts et instruments au niveau international contribue à déterminer les effets économiques des choix faits en matière de politiques climatiques adoptées au niveau européen et français. Ce rapport propose un tour d’horizon synthétique de cette dimension internationale des politiques de transition énergétique. En dépit d’éléments communs, notamment leur objectif final de réduction de l’empreinte carbone de l’activité économique, les politiques climatiques des différents pays sont hétérogènes, qu’il s’agisse de leur ambition – à savoir le niveau de leurs engagements en termes de décarbonation – ou des politiques (prix, réglementations, subventions ou crédits d’impôt) mises en œuvre. Il est dès lors illusoire de tenter de réduire les effets de cette hétérogénéité à une métrique commune de l’effort de chaque pays, comme le serait un équivalent prix des mesures réglementaires ou incitatives en place dans les différents pays.",
+              "document_type": "REPORT",
+              "publication_date": "2023-05-01",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "quels sont les publications du CIRED qui portent sur le prix du carbone ?"
+            }
+          },
+          {
+            "id": "21dd03c9-e07f-5a70-90d4-4504e835fd61",
+            "document_id": "a031328a-a080-5dab-8717-d6c8ad63d1ac",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Les véhicules électrifiés réduisent-ils les émissions de carbone ? Un raisonnement prospectif\n\nText: C.I.R.E.D.  \nCentre International de Recherches sur l'Environnement et le Développement  \nENPC  & CNRS  (UMR  8568)  / EHESS  / AGROPARISTECH  \n/ CIRAD  / MÉTÉO FRANCE  \n45 bis, avenue de la Belle Gabrielle  \nF-94736 Nogent sur Marne CEDEX  \nTel : (33) 1 43 94 73 73 / Fax : (33) 1 43 94 73 70  \nwww.centre -cired.fr  DOCUMENTS DE TRAVAIL / WORKING PAPERS  \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n  \n \n \n \n \nNo 44-2013 \n \n \n \n \n \n \n \n \n \nLes véhicules électrifiés  réduis ent-ils \nles émissions de carbone  ? \nUn raisonnement prospectif  \n \n \nAdrien Vogt -Schilb  \nCéline Guivarch  \nJean -Charles Hourcade   \n \n \n \n \n \n \n \n January   2013 \n \nCIRED Working Papers Series",
+            "metadata": {
+              "title": "Les véhicules électrifiés réduisent-ils les émissions de carbone ? Un raisonnement prospectif",
+              "hal_id": "hal-00866450",
+              "authors": [
+                "Adrien Vogt-Schilb",
+                "Céline Guivarch",
+                "Jean Charles Hourcade"
+              ],
+              "version": "v0",
+              "citation": "Adrien Vogt-Schilb, Céline Guivarch, Jean Charles Hourcade. Les véhicules électrifiés réduisent-ils les émissions de carbone ? Un raisonnement prospectif. 2013. ⟨hal-00866450⟩",
+              "source_url": "https://hal.science/hal-00866450",
+              "chunk_order": 1,
+              "description": "La pertinence des véhicules électrifiés (VE) pour diminuer les émissions de gaz à effet de serre (GES) est sujette à débat. De nombreuses études fondent le calcul des émissions kilométriques des VE sur le contenu carbone de l'électricité contemporaine. Nous proposons une évaluation qui mobilise une vision cohérente de l'évolution du système énergétique dans lequel les VE doivent s'insérer. Nous utilisons un modèle de simulation prospective pour produire des scénarios contrastés de l'évolution du contenu carbone de l'électricité européenne. Cet exercice suggère que si l'Europe choisit de mettre en place des politiques climatiques destinées à réduire drastiquement ses émissions de GES, le contenu carbone de l'électricité va diminuer rapidement, prolongeant sur le long terme l'avantage actuel des VE sur les véhicules classiques en termes d'émissions par kilomètre.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-01-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "quels sont les publications du CIRED qui portent sur le prix du carbone ?"
+            }
+          },
+          {
+            "id": "b5fe2405-2c15-52aa-be6b-c7b9a3eeed62",
+            "document_id": "d813ce68-67a0-5a58-bc3a-26ed8ed02697",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Carbon leakage and competitiveness of cement and steel industries under the EU ETS : much ado about nothing\n\nText: prix du carbone. Dans un second temps, nous estimons é conométriquement cette relation à la fois par \nune régression ARIMA et p ar une régression Prais -Winsten. N ous trouvons que les demandes locales \net internationales  sont des facteurs robustes expliquant les flux commerciaux. Nous ne trouvons  en \nrevanche  pas deffet significatif du prix du carbone sur les importations nettes dacier et de ciment. \nNous en concluons quil ny a pas de preuve de fuites de carbone dans ces secteurs, au moins à court \nterme.  \n \nMots -clés : : EU ETS, compétitivité, fuites de carbone,  industries énergie -intensives, ARIMA, Prais -\nWinsten  \n \n \nCIRED Working Papers Series",
+            "metadata": {
+              "title": "Carbon leakage and competitiveness of cement and steel industries under the EU ETS : much ado about nothing",
+              "hal_id": "hal-00945187",
+              "authors": [
+                "Frédéric Branger",
+                "Philippe Quirion",
+                "Julien Chevallier"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Branger, Philippe Quirion, Julien Chevallier. Carbon leakage and competitiveness of cement and steel industries under the EU ETS : much ado about nothing. 2013. ⟨hal-00945187⟩",
+              "source_url": "https://hal.science/hal-00945187",
+              "chunk_order": 7,
+              "description": "In a world of uneven climate policies, concerns about carbon leakage and competitiveness for heavy industries are the main arguments against the implementation of ambitious climate policies. In this paper we investigate a potential competitiveness-driven carbon leakage due to the European Union Emission Trading scheme (EU ETS). We focus on two energy-intensive sectors, cement and steel, and phases I and II of the EU ETS. From a simple analytical model, we derive an equation linking net imports of cement and steel to local and foreign demand along with carbon price. We then econometrically estimate this relation both with ARIMA regression and Prais-Winsten estimation, finding that local and foreign demand are robust drivers of trade ﬂows. We ﬁnd no signiﬁcant effect of the carbon price on net imports of steel and cement. We conclude that there is no evidence of carbon leakage in these sectors, at least in the short run.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-12-10",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "quels sont les publications du CIRED qui portent sur le prix du carbone ?"
+            }
+          },
+          {
+            "id": "4f301706-c232-5309-998e-61884483a749",
+            "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: à des publications communes, telles que le livre Pricing Carbon. The European \nUnion Emissions Trading Scheme , chez Cambridge University Press en 2010. Il\nlécrit avec Denny Ellerman, du MIT et Frank Convery de l University College de\nDublin. Puis, en 2011, les presses de lUniver sité Cambridge publient  la traduction en \nanglais de son ouvrage Et pour quelques degrés de plus . Nous soulignons ici limportance de lapproche financière qui \npeut être développée sur lECC, du fait de  lempreinte de ces deux institutions \ncommanditaires. Contrastant avec celle du CIRED, elle lui est quasiment antagoniste \nquant à sa position dans le ch amp de léconomie et vis-à- vis des autres disciplines. \n290\n288:Economic Choices in \na Warming World .  Il recevra un accueil favorable de  la part de Thomas Tietenberg \nhttp://www.cdcclimat.com/De-Kyoto-a-CDC-Climat.html?lang=fr Consulté le 21 octobre 2013. \n289Créée en 2003, cest fondation subventionne des recherches dans le domaine de la finance.",
+            "metadata": {
+              "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+              "hal_id": "tel-01112427",
+              "authors": [
+                "Pauline Huet"
+              ],
+              "version": "v0",
+              "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+              "source_url": "https://hal.science/tel-01112427",
+              "chunk_order": 527,
+              "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+              "document_type": "THESE",
+              "publication_date": "2015-01-15",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "quels sont les publications du CIRED qui portent sur le prix du carbone ?"
+            }
+          },
+          {
+            "id": "9db3dfb4-b251-55b2-a83b-aa99278fc8eb",
+            "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: Économiques (OCDE), dont la di vision de léconomie généra le répertorie les études \nsur les coûts de réduction des émissions de GES existantes, à la fois dans le champ \nacadémique et dans des ins titutions telles que lUS-EPA ou lAgence Internationale \nde lEnergie (AIE)108. LOCDE organise par ailleurs de nombreux séminaires sur le \nRCA avec des acteurs académiques et  publie leurs rapports sur lECC109.\n106Senate Committee on Energy and Natural Resources\n107United States. Congressional Budget Office, Carbon charges as a response to global warming : the \neffects of taxing fossil fuels , Congress of the U.S., Congressional Budget Office, Washington, D.C. , \n1990, p. xvi.\n108Peter Hoeller, Andrew Dean et Jon Nicolaisen, A survey of studies of the costs of reducing \ngreenhouse gas emissions, OECD Economics Department Working Papers , n 89, 1990, 51p.\n109Jean-Charles Hourcade, Richard Baron et Olivier Godard, International economic instruments and \nclimate change , OECD, Paris, 1993, 101p.",
+            "metadata": {
+              "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+              "hal_id": "tel-01112427",
+              "authors": [
+                "Pauline Huet"
+              ],
+              "version": "v0",
+              "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+              "source_url": "https://hal.science/tel-01112427",
+              "chunk_order": 189,
+              "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+              "document_type": "THESE",
+              "publication_date": "2015-01-15",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "quels sont les publications du CIRED qui portent sur le prix du carbone ?"
+            }
+          },
+          {
+            "id": "f147726d-de75-5963-b3c2-a73a57870b2d",
+            "document_id": "0eb3fc29-f345-5028-bb5e-ff9fb7086733",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Pour la reconnaissance d'une valeur sociale du carbone dans l'accord-Climat\n\nText: Ceci dit, affirmer la nécessité dune reconnaissance dun prix de référence  du carbone  dans laccord -\nClimat ne serait pas  vain, parce quil guiderait les décisions dinvestissement et permet trait dass eoir \nde nouveaux modes de financement reconnaissant leur  valeur d abattement du carbone  qui nest \npas internalisée . En aucun cas il ne s agirait  de revenir à lobjectif poursuivi antérieurement de faire \némerger un prix du carbone sur la base de contraintes lors des négociations passées  et qui a  fait \nperdre trop de temps. Il sagit  de donner de façon pragmatique  un guide pour les décisions  dinve stir \net de financer  les investissements en équipements bas carbone , qui ne concerne que les \n                                                           \n1 Directeur de recherche CNRS émérite, chercheur au CIRED et consultant de la Banque Mondiale sur les effets de  \ntarification du carbone sur les politiques énergétiques des pays émergents.",
+            "metadata": {
+              "title": "Pour la reconnaissance d'une valeur sociale du carbone dans l'accord-Climat",
+              "hal_id": "hal-01238998",
+              "authors": [
+                "Dominique Finon"
+              ],
+              "version": "v0",
+              "citation": "Dominique Finon. Pour la reconnaissance d'une valeur sociale du carbone dans l'accord-Climat. 2015. ⟨hal-01238998⟩",
+              "source_url": "https://hal.science/hal-01238998",
+              "chunk_order": 4,
+              "description": "Mis en ligne sur le site de France Stratégie http://www.strategie.gouv.fr/actualites/reconnaissance-dune-sociale-carbone-laccord-climat Résumé introductif Les économistes s'accordent en général à penser qu'affecter un prix unique aux émissions de carbone à travers un accord international, que ce soit par un prix contraignant (taxe carbone) , ou par un marché de permis reposant sur des engagements contraignants, serait en théorie le moyen le plus efficient au plan mondial, pour inciter à la réduction des émissions vers le niveau souhaitable, en ajoutant des canaux de redistribution vers les pays en développement (voir par exemple Gollier, Tirole, 2015). Mais, compte tenu des réalités de la politique internationale (refus de contraintes et de pénalités par de grands pays metteurs, obstacles à des transferts financiers Nord-Sud considérables en guise de compensations redistributives, etc.), compte tenu aussi des obstacles théoriques émanant des incertitudes sur les coûts des options bas carbone que chaque pays rencontrera pour qu'il s'engage, il n'est pas possible qu'un accord se dégage sur des engagements contraignants ou sur une taxation uniforme. Ceci explique la mise à l'écart d'un prix uniforme du carbone dans le processus de négociation internationale. Ceci dit, affirmer la nécessité d'une reconnaissance d'un prix de référence du carbone dans l'accord-Climat ne serait pas vain, parce qu'il guiderait les décisions d'investissement et permettrait d'asseoir de nouveaux modes de financement reconnaissant leur valeur d'abattement du carbone qui n'est pas internalisée. En aucun cas il ne s'agirait de revenir à l'objectif poursuivi antérieurement de faire émerger un prix du carbone sur la base de contraintes lors des négociations passées et qui a fait perdre trop de temps. Il s'agit de donner de façon pragmatique un guide pour les décisions d'investir et de financer les investissements en équipements bas carbone, qui ne concerne que les",
+              "document_type": "OTHER",
+              "publication_date": "2015-10-16",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "quels sont les publications du CIRED qui portent sur le prix du carbone ?"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 773,
+            "total_tokens": 773
+          }
+        }
+      },
+      "duration": 2062
+    },
+    "retrievalTime": 1987,
+    "generationTime": 2062,
+    "timestamp": "2025-07-21T19:48:51.566Z"
+  },
+  "server_context": {
+    "client_ip": "88.174.231.29",
+    "forwarded_for": "88.174.231.29",
+    "received_at": "2025-07-21T19:48:51.435174+00:00",
+    "server_version": "1.0.0"
+  }
+}

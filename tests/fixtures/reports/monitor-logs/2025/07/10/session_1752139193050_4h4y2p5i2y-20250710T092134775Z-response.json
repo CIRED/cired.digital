@@ -1,0 +1,555 @@
+{
+  "sessionId": "session_1752139193050_4h4y2p5i2y451r4z55",
+  "timestamp": "20250710T092134775Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752139282382_zzxddon",
+    "response": {
+      "results": {
+        "generated_answer": "التحول الطاقي في فرنسا يشمل عدة جوانب رئيسية، منها التحول نحو استخدام الطاقة الكهربائية في قطاع النقل، وزيادة الاعتماد على مصادر الطاقة المتجددة. فيما يلي بعض النقاط الرئيسية المستمدة من النتائج المقدمة:\n\n1. **السياسات الحكومية والتشريعات**:\n   - فرنسا لديها سياسة ضريبية على السيارات الجديدة والمستخدمة، والتي تأخذ في الاعتبار الانبعاثات الكربونية. ومع ذلك، فإن هذه السياسة لا تزال غير كافية لتوجيه هيكل الأسطول نحو السيارات الأقل انبعاثًا [e6fa9a9].\n   - هناك ضرائب تطبق على الوقود مثل الضريبة الداخلية على استهلاك المنتجات الطاقوية (TICPE) وضريبة القيمة المضافة (VAT) [ef0168e].\n\n2. **الطاقة الكهربائية في قطاع النقل**:\n   - من المتوقع أن يكون قطاع النقل في فرنسا عالي الكهرباء بحلول عام 2050. حيث تشير السيناريوهات المختلفة إلى أن الطاقة الكهربائية ستشكل نسبة كبيرة من استهلاك الطاقة النهائي في فرنسا [59f6fb1].\n   - في عام 2020، شكلت الكهرباء 25% من استهلاك الطاقة النهائي في فرنسا، وتتميز الكهرباء الفرنسية بكونها منخفضة الانبعاثات الكربونية [9104b89].\n\n3. **الغاز المتجدد ودوره في تحقيق الحياد الكربوني**:\n   - هناك اختلاف في السيناريوهات الطاقوية بشأن دور مختلف مصادر الطاقة، وخاصة الغاز والكهرباء، في تحقيق الحياد الكربوني بحلول عام 2050. على سبيل المثال، تشير استراتيجية الحكومة الفرنسية إلى نظام طاقة عالي الكهرباء، في حين تشير سيناريوهات أخرى إلى دور أكبر للغاز المتجدد [9104b89].\n\n4. **التحديات والتجارب**:\n   - هناك تحديات تواجه التحول الطاقي في فرنسا، مثل الحاجة إلى تطوير البنية التحتية للشحن الكهربائي للسيارات الكهربائية، والتكامل بين مختلف مصادر الطاقة [793d12d].\n   - هناك أيضًا تجارب فاشلة مثل مشروع تبادل البطاريات للسيارات الكهربائية، والذي أظهر أن بناء نشاط اقتصادي حول هذه التكنولوجيا ليس ممكنًا دائمًا [6e84ba6].\n\n5. **المشاريع البحثية والتقارير**:\n   - هناك العديد من المشاريع البحثية والتقارير التي تدرس مسارات التحول الطاقي في فرنسا، مثل تقرير \"Pathways to deep decarbonization of the passenger transport sector in France\" [a1e83c4].\n\nباختصار، التحول الطاقي في فرنسا يشمل مجموعة من السياسات والتشريعات، والتوجه نحو الكهرباء في قطاع النقل، وزيادة الاعتماد على مصادر الطاقة المتجددة، مع وجود تحديات وتجارب مختلفة تواجه هذا التحول.",
+        "citations": [
+          {
+            "id": "e6fa9a9",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 441,
+              "end": 450
+            },
+            "payload": {
+              "id": "e6fa9a96-8012-58fe-89e3-d86803c2e582",
+              "document_id": "5f27781d-6b17-5fcb-b776-d27afb21ce76",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01638993710691824,
+              "text": "Document Title: Parc automobile et effet de serre. Agir sur le parc automobile pour réduire l’effet de serre\n\nText: Pays-Bas.\nFrance\nEn France, la taxe sur les cartes grises quis'applique à toutes les nouvelles immatricula-tions et aux transactions est assise sur la puis-sance fiscale comme la vignette. Depuis l'été1998, les émissions sont un des deux para-mètres du calcul de cette puissance, mais laformule reste obscure et surtout est construitede manière à ne pas trop pénaliser les voiturespuissantes. Une marge de manœuvre pourorienter la structure du parc est ainsi perdue.\nLes taxes à l'achat assises sur le poids",
+              "metadata": {
+                "title": "Parc automobile et effet de serre. Agir sur le parc automobile pour réduire l’effet de serre",
+                "hal_id": "halshs-01366830",
+                "authors": [
+                  "Lionel Cauret",
+                  "Yves Crozet",
+                  "Richard Darbéra",
+                  "Daniel Faudry",
+                  "Nicolas Golovtchenko",
+                  "François Mirabel",
+                  "Jean-Pierre Nicolas",
+                  "Benoît Simon",
+                  "Marie-Christine Zélem"
+                ],
+                "version": "v0",
+                "citation": "Lionel Cauret, Yves Crozet, Richard Darbéra, Daniel Faudry, Nicolas Golovtchenko, et al.. Parc automobile et effet de serre. Agir sur le parc automobile pour réduire l’effet de serre. Iddri, 12, pp.97, 2001, Les cahiers du CLIP, Benjamin Dessus. ⟨halshs-01366830⟩",
+                "source_url": "https://hal.science/halshs-01366830",
+                "chunk_order": 253,
+                "description": "Cette étude traite des conditions du renouvellement du parc automobile afin de mieux maîtriser l'impact sur l'effet de serre. Quels sont les critères d'achat et les conditions d'utilisation des véhicules ? Quelles politiques publiques peuvent orienter le choix des consommateurs et l'offre des constructeurs vers des véhicules moins polluants ? Divers instruments de politiques publiques sont analysés.",
+                "document_type": "OUV",
+                "publication_date": "2001-01-01",
+                "semantic_rank": 3,
+                "full_text_rank": 200,
+                "associated_query": "التحول الطاقي في فرنسا"
+              }
+            }
+          },
+          {
+            "id": "ef0168e",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 571,
+              "end": 580
+            },
+            "payload": {
+              "id": "ef0168ea-61fb-5817-a042-9fd43d6f04e4",
+              "document_id": "b7ef1927-bf9c-53fa-a74b-de08fff61745",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles\n\nText: is deﬁned as the cost of energy (fuel price or electricity price without taxes) in France.\nWe obtain this by looking at current market prices and subtracting taxes for each fuel\nor electricity prices8.\n7. In order to convert CO2 emission per km to fuel consumption we apply the amount of carbon\ndioxide contained in a liter of Gasoline and a liter of Diesel: CO2Diesel =2640 g/Land CO2Gasoline =\n2392 g/Lfrom ecoscore.be. For EV technology we have an equivalent to fuel consumption, the electric\nconsumption is the amount of kWh to drive one km.\n8. Taxes applied on Gasoline and Diesel demand are: VAT to the overall cost and TICPE (\"Taxe\nIntérieur de Consommation sur les Produits Energétiques\" applied on the consumption of Fossil Fuels.\nTCIPE has different tax level for Gasoline and Diesel in 2017. The reference Gasoline and Diesel prices\nwith taxes in 2018 in France are respectively 1.462 and 1.374 e/L (IEA, 2018). Taxes applied to Elec-",
+              "metadata": {
+                "title": "Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles",
+                "hal_id": "tel-02435183",
+                "authors": [
+                  "Juan Vera Molina"
+                ],
+                "version": "v0",
+                "citation": "Juan Vera Molina. Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles. Economics and Finance. Université Paris Saclay (COmUE), 2019. English. ⟨NNT : 2019SACLA021⟩. ⟨tel-02435183⟩",
+                "source_url": "https://hal.science/tel-02435183",
+                "chunk_order": 615,
+                "description": "Policy instruments on passenger vehicle emissions aim at reducing negative environmental externalities from vehicles use. To regulate CO2 emissions, fuel economy standards have been put in place in Europe and in the US, among others. These standards are made more stringent over time. This thesis analyzes how automotive firms anticipate and prepare their future technology portfolio to comply with expected future standards. To do so, we develop a model of optimal technology choice that captures technology diffusion constraints.With this framework, this thesis investigates three policy questions. First, we ask how the form of anticipation can affect near- and long-term technology choices. We find that focusing solely on near-term objectives can lead to failure to comply with a long-term target. In fact, meeting the near-term target is not a necessary nor a sufficient condition to satisfy long-term compliance. Moreover, when there is partial anticipation, as in a myopic view of the future, technology choices will be stuck with low abatement technologies creating a path dependency that limits long-term abatement potential.Second, we ask how much indexing fuel economy standard to mass (as in Europe or China) changes the optimal technology. We show that, for the same emission target, there is no significant difference in the social cost of mobility for an average vehicle with and without mass index. Thus a heavier vehicle fleet has the same cost than a lighter one. However, the technology choices are different, and mass indexed fuel economy standards lead to sidestepping lightweight technologies despite being cost effective from a CO2 emissions abatement point of view.Third, we ask how technology choices change when policies with multiple objectives overlap. We focus on two externalities associated with mobility: CO2 emissions and local air pollution. We show three type of effects of overlapping policies. First, a technology specific policy such as the Zero Emission Vehicle Mandate in combination with a fuel economy standard induces carmakers to develop more expensive green technologies and prevents cheap, dirty technologies from disappearing compared to the case of a fuel economy standard alone. Second, the combination of policies can lead to very high costs when technologies adapted to each policy are very different. Third, we find an ambiguous effect of overlapping policies relative to single-objective policy in terms of emissions performance.",
+                "document_type": "THESE",
+                "publication_date": "2019-09-10",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "التحول الطاقي في فرنسا"
+              }
+            }
+          },
+          {
+            "id": "59f6fb1",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 805,
+              "end": 814
+            },
+            "payload": {
+              "id": "59f6fb1b-ea81-583a-acf2-ed222dd50a10",
+              "document_id": "0c43d617-d68e-5de4-8939-99f18a3e8bcb",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016098765432098764,
+              "text": "Document Title: The importance of renewable gas in achieving carbon-neutrality: Insights from an energy system optimization model\n\nText: 20 \n the transport sector will be highly electrified, while négaWatt suggests a less electrified transport \nsector.  Table 6 shows the percentage  of different energy carriers in Frances  final energy \nconsumption by 2050, for each of the three above mentioned national scenarios and the findings of \nthis study.   \nTable 6. The percentage of each of the main energy carriers in Frances  final energy consumption by 2050 for different \nnational scenarios  \nScenario  Electricity  Gas Heat  network  Direct use/Others  \nSNBC  [4] 56.9%  12.6%  5.1%  25.4%  \nADEME  [3] 39%  24%  8% 24%  \nnégaWatt  [5] 35%  36%  7% 22%  \nThis study  \n(SCC=300/tCO 2) 63.9%  19.7%  10.9%  5.5% (hydrogen)  \nBy making the choice of energy carrier endogenous for different end -uses we conclude that in \noptimal scenarios, the energy system will be highly electrified. Up to  80% of a carbon neutral energy \nsystems primary energy production comes from electricity. Th e transport sector is presented as a",
+              "metadata": {
+                "doi": "10.1016/j.energy.2022.124503",
+                "title": "The importance of renewable gas in achieving carbon-neutrality: Insights from an energy system optimization model",
+                "hal_id": "hal-03833365",
+                "authors": "['Behrang Shirizadeh', 'Philippe Quirion']",
+                "version": "v0",
+                "citation": "Behrang Shirizadeh, Philippe Quirion. The importance of renewable gas in achieving carbon-neutrality: Insights from an energy system optimization model. Energy, 2022, 255, pp.124503. ⟨10.1016/j.energy.2022.124503⟩. ⟨hal-03833365⟩",
+                "source_url": "https://doi.org/10.1016/j.energy.2022.124503",
+                "chunk_order": 89,
+                "document_type": "ART",
+                "publication_date": "2022-09-15",
+                "semantic_rank": 4,
+                "full_text_rank": 200,
+                "associated_query": "التحول الطاقي في فرنسا"
+              }
+            }
+          },
+          {
+            "id": "9104b89",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 948,
+              "end": 957
+            },
+            "payload": {
+              "id": "9104b897-5e1c-5acb-afab-1e3010d5ad14",
+              "document_id": "0c43d617-d68e-5de4-8939-99f18a3e8bcb",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.014555555555555556,
+              "text": "Document Title: The importance of renewable gas in achieving carbon-neutrality: Insights from an energy system optimization model\n\nText: by gas, 9.5% by coal, 10.4% by biofuels and waste and 19.7% by electricity1. Focusing on French \nenergy consumption, in 2020 France consumed 1,562TWh of energy2. The main energy carriers f or \nthe French energy sector were oil and refined petroleum products (41.6%), electricity (25%) and \nnatural gas (20%).  Although French electricity has a very low carbon footprint (34gCO 2eq/kWh e in \n20213), electricity accounts for only one quarter of French final energy consumption and achiev ing \ncarbon -neutrality requires decarbonization of the whole energy sector , not only of the electricity \nsupply.  \nEnergy scenarios aiming at carbon -neutrality by 2050 vary with respect to the role of different \nener gy carriers, particularly gas and electricity. For instance, the French Environment and Energy \nManagement Agency (ADEME)s  Energy -Climate Scenario 2035 -2050 and the French Ministry of \nEcological Transition and Solidaritys  National Low-Carbon Strategy,  feature relatively electrified",
+              "metadata": {
+                "doi": "10.1016/j.energy.2022.124503",
+                "title": "The importance of renewable gas in achieving carbon-neutrality: Insights from an energy system optimization model",
+                "hal_id": "hal-03833365",
+                "authors": "['Behrang Shirizadeh', 'Philippe Quirion']",
+                "version": "v0",
+                "citation": "Behrang Shirizadeh, Philippe Quirion. The importance of renewable gas in achieving carbon-neutrality: Insights from an energy system optimization model. Energy, 2022, 255, pp.124503. ⟨10.1016/j.energy.2022.124503⟩. ⟨hal-03833365⟩",
+                "source_url": "https://doi.org/10.1016/j.energy.2022.124503",
+                "chunk_order": 9,
+                "document_type": "ART",
+                "publication_date": "2022-09-15",
+                "semantic_rank": 10,
+                "full_text_rank": 200,
+                "associated_query": "التحول الطاقي في فرنسا"
+              }
+            }
+          },
+          {
+            "id": "9104b89",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1282,
+              "end": 1291
+            },
+            "payload": null
+          },
+          {
+            "id": "793d12d",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1472,
+              "end": 1481
+            },
+            "payload": {
+              "id": "793d12d8-4791-55c0-a011-18969c438acd",
+              "document_id": "12cfb6f9-bba5-5c7f-bbc2-35015c40000f",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: Expérimenter la vraie vie : le cas de la recharge des véhicules électriques à l’échelle de l’Union européenne\n\nText: Distribuzione  : cest ce qui permettra à Duferco Energ ia dentrer sur le marché de \nlélectro mobilité comme fournisseur de services de recharge. Aux Pays -Bas ce sont de nouveaux \nacteurs (The New Motion, BlueCorner), qui prendront en charge laccès et la co mmercialisation \nde la recharge sur le réseau dE -Laad11. La dissociation entre exploitation technique des bornes \net commercialisation de la recharge  suppose le développement déchanges dinformations entre \nle GRD et les fournisseurs de recharge, en particu lier pour permettre lauthentification des \nusagers à la borne, et lautorisation des actes de recharge  : on est dans un cas typique de \nroaming . Pour des raisons de chronologie, celui -ci est mis en œuvre de façon simple et non \nautomatisée par le transfert d e listings de clients autorisés (système de whitelists , incarné en \nparticulier par le Centraal Interoperabiliteits Register néerlandais, CIR) ou la possibilité",
+              "metadata": {
+                "title": "Expérimenter la vraie vie : le cas de la recharge des véhicules électriques à l’échelle de l’Union européenne",
+                "hal_id": "tel-03700823",
+                "authors": "['Anne Guillemot']",
+                "version": "v0",
+                "citation": "Anne Guillemot. Expérimenter la vraie vie : le cas de la recharge des véhicules électriques à l’échelle de l’Union européenne. Architecture, aménagement de l'espace. École des Ponts ParisTech, 2022. Français. ⟨NNT : 2022ENPC0005⟩. ⟨tel-03700823⟩",
+                "source_url": "https://hal.science/tel-03700823",
+                "chunk_order": 2290,
+                "description": "Depuis le tournant des années 2010, le véhicule électrique (VE) occupe une place centrale dans la stratégie de l’Union européenne (UE) en matière de décarbonation des transports et de développement des carburants alternatifs. L’ambition poursuivie est claire : il s’agit de permettre l’essor du VE sur le marché de masse. Dans cette perspective, la Commission européenne (CE) a porté ses efforts sur le développement de l’infrastructure de recharge, autour de deux préoccupations principales : son déploiement paneuropéen et son harmonisation à travers l’Union. Cette thèse prend pour point de départ la démarche originale imaginée à la Commission européenne pour encourager l’investissement privé et préparer le déploiement à grande échelle de l’infrastructure de recharge sur le réseau transeuropéen de transport (RTE-T) : le co-financement de projets pilotes d’infrastructure, offrant à des entreprises pionnières l’opportunité de tester la relation client en conditions réelles, d’investiguer des modèles d’affaires viables et de déterminer les conditions du passage à l’échelle. L’approche a été désignée sous le terme de « real-life trial ». A partir d’une enquête de type ethnographique conduite en immersion au sein de deux de ces projets, la thèse propose une réflexion sur la nature et les propriétés du « real-life trial » dans la construction d’une offre de recharge pour VE, par-delà le concept proposé par la CE. On montre ainsi comment ces essais en conditions réelles permettent de faire émerger la « vraie vie » de la recharge. On expose en particulier la façon dont les projets imposent des questions jusque-là sous-estimées (la complexité du déploiement des réseaux, la variété des solutions technologiques pour garantir l’accès transfrontière à l’infrastructure) et permettent d’affiner l’objet-même du « real-life trial ». On démontre leur nature résolument expérimentale, négligée a priori par les porteurs de projets. On montre que les projets contribuent moins au test d’une activité commerciale assise sur des technologies qui seraient suffisamment matures qu’à l’exploration et à la mise en forme de nouveaux arrangements socio- techniques (la recharge sur autoroute, la recharge paneuropéenne) et à la maturation de l’écosystème d’acteurs. On montre aussi que les projets de « real-life trial » sont un site d’observation formidable à partir duquel investiguer et décoder la dynamique d’innovation européenne en matière de recharge. En fin de compte, on met en évidence le rôle essentiel de l’expérimentation en conditions réelles, en tant qu’opérateur de transformation, dans la conduite de la transition vers l’électromobilité en Europe, et l’on suggère que ce type de démarche mériterait d’être poursuivi et généralisé.",
+                "document_type": "THESE",
+                "publication_date": "2022-01-31",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "التحول الطاقي في فرنسا"
+              }
+            }
+          },
+          {
+            "id": "6e84ba6",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1628,
+              "end": 1637
+            },
+            "payload": {
+              "id": "6e84ba61-a3cd-56fd-b6e7-07ba05ef6fd3",
+              "document_id": "12cfb6f9-bba5-5c7f-bbc2-35015c40000f",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Expérimenter la vraie vie : le cas de la recharge des véhicules électriques à l’échelle de l’Union européenne\n\nText: particulier de démontrer à quoi pourrait ressembler une infrastructure et une fourniture de \nservice de mobilité paneuropéens en identifiant les conditions dun déploiemen t viable26. Deux \nstations déchange de batteries seront installées dans ce cadre, la première en banlieue de \nCopenhague (juillet 2011), puis à laéroport dAmsterdam -Schiphol (septembre 2012)  ; une \ntroisième à Amsterdam ne verra jamais le jour  du fait de l a faillite de lentreprise au printemps \n2013. Sensuivra le démantèlement des stations déchange de batteries. Les bornes de recharge \ninstallées en complément seront reprises par lénergéticien E.ON. Malgré son échec, ce projet \nincarne lengagement de la C ommission européenne dans la décarbonation du réseau \ntranseuropéen de transport, et il reste perçu comme une source denseignements essentielle (de \nfait, la faillite de lentreprise montrera quil nest pas possible de construire une activité \néconomique au tour de la technologie déchange de batteries). Mais cest le deuxième projet,",
+              "metadata": {
+                "title": "Expérimenter la vraie vie : le cas de la recharge des véhicules électriques à l’échelle de l’Union européenne",
+                "hal_id": "tel-03700823",
+                "authors": "['Anne Guillemot']",
+                "version": "v0",
+                "citation": "Anne Guillemot. Expérimenter la vraie vie : le cas de la recharge des véhicules électriques à l’échelle de l’Union européenne. Architecture, aménagement de l'espace. École des Ponts ParisTech, 2022. Français. ⟨NNT : 2022ENPC0005⟩. ⟨tel-03700823⟩",
+                "source_url": "https://hal.science/tel-03700823",
+                "chunk_order": 483,
+                "description": "Depuis le tournant des années 2010, le véhicule électrique (VE) occupe une place centrale dans la stratégie de l’Union européenne (UE) en matière de décarbonation des transports et de développement des carburants alternatifs. L’ambition poursuivie est claire : il s’agit de permettre l’essor du VE sur le marché de masse. Dans cette perspective, la Commission européenne (CE) a porté ses efforts sur le développement de l’infrastructure de recharge, autour de deux préoccupations principales : son déploiement paneuropéen et son harmonisation à travers l’Union. Cette thèse prend pour point de départ la démarche originale imaginée à la Commission européenne pour encourager l’investissement privé et préparer le déploiement à grande échelle de l’infrastructure de recharge sur le réseau transeuropéen de transport (RTE-T) : le co-financement de projets pilotes d’infrastructure, offrant à des entreprises pionnières l’opportunité de tester la relation client en conditions réelles, d’investiguer des modèles d’affaires viables et de déterminer les conditions du passage à l’échelle. L’approche a été désignée sous le terme de « real-life trial ». A partir d’une enquête de type ethnographique conduite en immersion au sein de deux de ces projets, la thèse propose une réflexion sur la nature et les propriétés du « real-life trial » dans la construction d’une offre de recharge pour VE, par-delà le concept proposé par la CE. On montre ainsi comment ces essais en conditions réelles permettent de faire émerger la « vraie vie » de la recharge. On expose en particulier la façon dont les projets imposent des questions jusque-là sous-estimées (la complexité du déploiement des réseaux, la variété des solutions technologiques pour garantir l’accès transfrontière à l’infrastructure) et permettent d’affiner l’objet-même du « real-life trial ». On démontre leur nature résolument expérimentale, négligée a priori par les porteurs de projets. On montre que les projets contribuent moins au test d’une activité commerciale assise sur des technologies qui seraient suffisamment matures qu’à l’exploration et à la mise en forme de nouveaux arrangements socio- techniques (la recharge sur autoroute, la recharge paneuropéenne) et à la maturation de l’écosystème d’acteurs. On montre aussi que les projets de « real-life trial » sont un site d’observation formidable à partir duquel investiguer et décoder la dynamique d’innovation européenne en matière de recharge. En fin de compte, on met en évidence le rôle essentiel de l’expérimentation en conditions réelles, en tant qu’opérateur de transformation, dans la conduite de la transition vers l’électromobilité en Europe, et l’on suggère que ce type de démarche mériterait d’être poursuivi et généralisé.",
+                "document_type": "THESE",
+                "publication_date": "2022-01-31",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "التحول الطاقي في فرنسا"
+              }
+            }
+          },
+          {
+            "id": "a1e83c4",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1852,
+              "end": 1861
+            },
+            "payload": {
+              "id": "a1e83c4e-beea-5f94-bacb-15af29c2b3fc",
+              "document_id": "11828f56-7a88-5631-a9e8-bc809bf85718",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01503448275862069,
+              "text": "Document Title: Pathways to deep decarbonization of the passenger transport sector in France\n\nText: 30  Pathways to deep decarbonization of the passenger transport sector in France5References (technical)\n z(2008). Energy Technology Perspectives. IEA.\n z(2008). Enquête Nationale Transports et Deplacements, INSEE.\n z(2011). Compte des Transports 2010, CGDD.\n z(2013). Scénarios de lancre pour la transition énergétique, ANCRE.\n z(2013). Vision 2030-2050, Rapport Technique, ADEME .\n z(2014). Chapter 8 - Transport, AR5, IPCC.\n z(2014). Scénario négaWatt 2011-2050, Rapport Technique. négaWatt.\n z(2015). Loi relative à la transition énergétique et pour la croissance verte (LTECV), LOI n2015-992.\n z(2015). Pathways to deep decarbonization in France, DDPP, CIRED, EDDEN, IDDRI.\n z(2015). Stratégie Nationale Bas Carbone, SNBC, Ministère de lEcologie, du Développement Durable et de lEnergie.\n z(2016). 25 années de transports interieurs de voyageurs, CGDD.\n z(2016). Compte des Transports 2015, CGDD.\n z(2016). Projections de la demande de transport sur le long terme. CGDD.",
+              "metadata": {
+                "title": "Pathways to deep decarbonization of the passenger transport sector in France",
+                "hal_id": "hal-01688931",
+                "authors": "['Yann Briand', 'Julien Lefevre', 'Jean-Michel Cayla']",
+                "version": "v0",
+                "citation": "Yann Briand, Julien Lefevre, Jean-Michel Cayla. Pathways to deep decarbonization of the passenger transport sector in France. [Research Report] IDDRI, UMR 8568 CIRED, EDF R&D. 2017. ⟨hal-01688931⟩",
+                "source_url": "https://hal.science/hal-01688931",
+                "chunk_order": 161,
+                "document_type": "REPORT",
+                "publication_date": "2017-01-01",
+                "semantic_rank": 8,
+                "full_text_rank": 200,
+                "associated_query": "التحول الطاقي في فرنسا"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "6e84ba61-a3cd-56fd-b6e7-07ba05ef6fd3",
+            "document_id": "12cfb6f9-bba5-5c7f-bbc2-35015c40000f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Expérimenter la vraie vie : le cas de la recharge des véhicules électriques à l’échelle de l’Union européenne\n\nText: particulier de démontrer à quoi pourrait ressembler une infrastructure et une fourniture de \nservice de mobilité paneuropéens en identifiant les conditions dun déploiemen t viable26. Deux \nstations déchange de batteries seront installées dans ce cadre, la première en banlieue de \nCopenhague (juillet 2011), puis à laéroport dAmsterdam -Schiphol (septembre 2012)  ; une \ntroisième à Amsterdam ne verra jamais le jour  du fait de l a faillite de lentreprise au printemps \n2013. Sensuivra le démantèlement des stations déchange de batteries. Les bornes de recharge \ninstallées en complément seront reprises par lénergéticien E.ON. Malgré son échec, ce projet \nincarne lengagement de la C ommission européenne dans la décarbonation du réseau \ntranseuropéen de transport, et il reste perçu comme une source denseignements essentielle (de \nfait, la faillite de lentreprise montrera quil nest pas possible de construire une activité \néconomique au tour de la technologie déchange de batteries). Mais cest le deuxième projet,",
+            "metadata": {
+              "title": "Expérimenter la vraie vie : le cas de la recharge des véhicules électriques à l’échelle de l’Union européenne",
+              "hal_id": "tel-03700823",
+              "authors": "['Anne Guillemot']",
+              "version": "v0",
+              "citation": "Anne Guillemot. Expérimenter la vraie vie : le cas de la recharge des véhicules électriques à l’échelle de l’Union européenne. Architecture, aménagement de l'espace. École des Ponts ParisTech, 2022. Français. ⟨NNT : 2022ENPC0005⟩. ⟨tel-03700823⟩",
+              "source_url": "https://hal.science/tel-03700823",
+              "chunk_order": 483,
+              "description": "Depuis le tournant des années 2010, le véhicule électrique (VE) occupe une place centrale dans la stratégie de l’Union européenne (UE) en matière de décarbonation des transports et de développement des carburants alternatifs. L’ambition poursuivie est claire : il s’agit de permettre l’essor du VE sur le marché de masse. Dans cette perspective, la Commission européenne (CE) a porté ses efforts sur le développement de l’infrastructure de recharge, autour de deux préoccupations principales : son déploiement paneuropéen et son harmonisation à travers l’Union. Cette thèse prend pour point de départ la démarche originale imaginée à la Commission européenne pour encourager l’investissement privé et préparer le déploiement à grande échelle de l’infrastructure de recharge sur le réseau transeuropéen de transport (RTE-T) : le co-financement de projets pilotes d’infrastructure, offrant à des entreprises pionnières l’opportunité de tester la relation client en conditions réelles, d’investiguer des modèles d’affaires viables et de déterminer les conditions du passage à l’échelle. L’approche a été désignée sous le terme de « real-life trial ». A partir d’une enquête de type ethnographique conduite en immersion au sein de deux de ces projets, la thèse propose une réflexion sur la nature et les propriétés du « real-life trial » dans la construction d’une offre de recharge pour VE, par-delà le concept proposé par la CE. On montre ainsi comment ces essais en conditions réelles permettent de faire émerger la « vraie vie » de la recharge. On expose en particulier la façon dont les projets imposent des questions jusque-là sous-estimées (la complexité du déploiement des réseaux, la variété des solutions technologiques pour garantir l’accès transfrontière à l’infrastructure) et permettent d’affiner l’objet-même du « real-life trial ». On démontre leur nature résolument expérimentale, négligée a priori par les porteurs de projets. On montre que les projets contribuent moins au test d’une activité commerciale assise sur des technologies qui seraient suffisamment matures qu’à l’exploration et à la mise en forme de nouveaux arrangements socio- techniques (la recharge sur autoroute, la recharge paneuropéenne) et à la maturation de l’écosystème d’acteurs. On montre aussi que les projets de « real-life trial » sont un site d’observation formidable à partir duquel investiguer et décoder la dynamique d’innovation européenne en matière de recharge. En fin de compte, on met en évidence le rôle essentiel de l’expérimentation en conditions réelles, en tant qu’opérateur de transformation, dans la conduite de la transition vers l’électromobilité en Europe, et l’on suggère que ce type de démarche mériterait d’être poursuivi et généralisé.",
+              "document_type": "THESE",
+              "publication_date": "2022-01-31",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في فرنسا"
+            }
+          },
+          {
+            "id": "793d12d8-4791-55c0-a011-18969c438acd",
+            "document_id": "12cfb6f9-bba5-5c7f-bbc2-35015c40000f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Expérimenter la vraie vie : le cas de la recharge des véhicules électriques à l’échelle de l’Union européenne\n\nText: Distribuzione  : cest ce qui permettra à Duferco Energ ia dentrer sur le marché de \nlélectro mobilité comme fournisseur de services de recharge. Aux Pays -Bas ce sont de nouveaux \nacteurs (The New Motion, BlueCorner), qui prendront en charge laccès et la co mmercialisation \nde la recharge sur le réseau dE -Laad11. La dissociation entre exploitation technique des bornes \net commercialisation de la recharge  suppose le développement déchanges dinformations entre \nle GRD et les fournisseurs de recharge, en particu lier pour permettre lauthentification des \nusagers à la borne, et lautorisation des actes de recharge  : on est dans un cas typique de \nroaming . Pour des raisons de chronologie, celui -ci est mis en œuvre de façon simple et non \nautomatisée par le transfert d e listings de clients autorisés (système de whitelists , incarné en \nparticulier par le Centraal Interoperabiliteits Register néerlandais, CIR) ou la possibilité",
+            "metadata": {
+              "title": "Expérimenter la vraie vie : le cas de la recharge des véhicules électriques à l’échelle de l’Union européenne",
+              "hal_id": "tel-03700823",
+              "authors": "['Anne Guillemot']",
+              "version": "v0",
+              "citation": "Anne Guillemot. Expérimenter la vraie vie : le cas de la recharge des véhicules électriques à l’échelle de l’Union européenne. Architecture, aménagement de l'espace. École des Ponts ParisTech, 2022. Français. ⟨NNT : 2022ENPC0005⟩. ⟨tel-03700823⟩",
+              "source_url": "https://hal.science/tel-03700823",
+              "chunk_order": 2290,
+              "description": "Depuis le tournant des années 2010, le véhicule électrique (VE) occupe une place centrale dans la stratégie de l’Union européenne (UE) en matière de décarbonation des transports et de développement des carburants alternatifs. L’ambition poursuivie est claire : il s’agit de permettre l’essor du VE sur le marché de masse. Dans cette perspective, la Commission européenne (CE) a porté ses efforts sur le développement de l’infrastructure de recharge, autour de deux préoccupations principales : son déploiement paneuropéen et son harmonisation à travers l’Union. Cette thèse prend pour point de départ la démarche originale imaginée à la Commission européenne pour encourager l’investissement privé et préparer le déploiement à grande échelle de l’infrastructure de recharge sur le réseau transeuropéen de transport (RTE-T) : le co-financement de projets pilotes d’infrastructure, offrant à des entreprises pionnières l’opportunité de tester la relation client en conditions réelles, d’investiguer des modèles d’affaires viables et de déterminer les conditions du passage à l’échelle. L’approche a été désignée sous le terme de « real-life trial ». A partir d’une enquête de type ethnographique conduite en immersion au sein de deux de ces projets, la thèse propose une réflexion sur la nature et les propriétés du « real-life trial » dans la construction d’une offre de recharge pour VE, par-delà le concept proposé par la CE. On montre ainsi comment ces essais en conditions réelles permettent de faire émerger la « vraie vie » de la recharge. On expose en particulier la façon dont les projets imposent des questions jusque-là sous-estimées (la complexité du déploiement des réseaux, la variété des solutions technologiques pour garantir l’accès transfrontière à l’infrastructure) et permettent d’affiner l’objet-même du « real-life trial ». On démontre leur nature résolument expérimentale, négligée a priori par les porteurs de projets. On montre que les projets contribuent moins au test d’une activité commerciale assise sur des technologies qui seraient suffisamment matures qu’à l’exploration et à la mise en forme de nouveaux arrangements socio- techniques (la recharge sur autoroute, la recharge paneuropéenne) et à la maturation de l’écosystème d’acteurs. On montre aussi que les projets de « real-life trial » sont un site d’observation formidable à partir duquel investiguer et décoder la dynamique d’innovation européenne en matière de recharge. En fin de compte, on met en évidence le rôle essentiel de l’expérimentation en conditions réelles, en tant qu’opérateur de transformation, dans la conduite de la transition vers l’électromobilité en Europe, et l’on suggère que ce type de démarche mériterait d’être poursuivi et généralisé.",
+              "document_type": "THESE",
+              "publication_date": "2022-01-31",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في فرنسا"
+            }
+          },
+          {
+            "id": "e6fa9a96-8012-58fe-89e3-d86803c2e582",
+            "document_id": "5f27781d-6b17-5fcb-b776-d27afb21ce76",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Parc automobile et effet de serre. Agir sur le parc automobile pour réduire l’effet de serre\n\nText: Pays-Bas.\nFrance\nEn France, la taxe sur les cartes grises quis'applique à toutes les nouvelles immatricula-tions et aux transactions est assise sur la puis-sance fiscale comme la vignette. Depuis l'été1998, les émissions sont un des deux para-mètres du calcul de cette puissance, mais laformule reste obscure et surtout est construitede manière à ne pas trop pénaliser les voiturespuissantes. Une marge de manœuvre pourorienter la structure du parc est ainsi perdue.\nLes taxes à l'achat assises sur le poids",
+            "metadata": {
+              "title": "Parc automobile et effet de serre. Agir sur le parc automobile pour réduire l’effet de serre",
+              "hal_id": "halshs-01366830",
+              "authors": [
+                "Lionel Cauret",
+                "Yves Crozet",
+                "Richard Darbéra",
+                "Daniel Faudry",
+                "Nicolas Golovtchenko",
+                "François Mirabel",
+                "Jean-Pierre Nicolas",
+                "Benoît Simon",
+                "Marie-Christine Zélem"
+              ],
+              "version": "v0",
+              "citation": "Lionel Cauret, Yves Crozet, Richard Darbéra, Daniel Faudry, Nicolas Golovtchenko, et al.. Parc automobile et effet de serre. Agir sur le parc automobile pour réduire l’effet de serre. Iddri, 12, pp.97, 2001, Les cahiers du CLIP, Benjamin Dessus. ⟨halshs-01366830⟩",
+              "source_url": "https://hal.science/halshs-01366830",
+              "chunk_order": 253,
+              "description": "Cette étude traite des conditions du renouvellement du parc automobile afin de mieux maîtriser l'impact sur l'effet de serre. Quels sont les critères d'achat et les conditions d'utilisation des véhicules ? Quelles politiques publiques peuvent orienter le choix des consommateurs et l'offre des constructeurs vers des véhicules moins polluants ? Divers instruments de politiques publiques sont analysés.",
+              "document_type": "OUV",
+              "publication_date": "2001-01-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في فرنسا"
+            }
+          },
+          {
+            "id": "59f6fb1b-ea81-583a-acf2-ed222dd50a10",
+            "document_id": "0c43d617-d68e-5de4-8939-99f18a3e8bcb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: The importance of renewable gas in achieving carbon-neutrality: Insights from an energy system optimization model\n\nText: 20 \n the transport sector will be highly electrified, while négaWatt suggests a less electrified transport \nsector.  Table 6 shows the percentage  of different energy carriers in Frances  final energy \nconsumption by 2050, for each of the three above mentioned national scenarios and the findings of \nthis study.   \nTable 6. The percentage of each of the main energy carriers in Frances  final energy consumption by 2050 for different \nnational scenarios  \nScenario  Electricity  Gas Heat  network  Direct use/Others  \nSNBC  [4] 56.9%  12.6%  5.1%  25.4%  \nADEME  [3] 39%  24%  8% 24%  \nnégaWatt  [5] 35%  36%  7% 22%  \nThis study  \n(SCC=300/tCO 2) 63.9%  19.7%  10.9%  5.5% (hydrogen)  \nBy making the choice of energy carrier endogenous for different end -uses we conclude that in \noptimal scenarios, the energy system will be highly electrified. Up to  80% of a carbon neutral energy \nsystems primary energy production comes from electricity. Th e transport sector is presented as a",
+            "metadata": {
+              "doi": "10.1016/j.energy.2022.124503",
+              "title": "The importance of renewable gas in achieving carbon-neutrality: Insights from an energy system optimization model",
+              "hal_id": "hal-03833365",
+              "authors": "['Behrang Shirizadeh', 'Philippe Quirion']",
+              "version": "v0",
+              "citation": "Behrang Shirizadeh, Philippe Quirion. The importance of renewable gas in achieving carbon-neutrality: Insights from an energy system optimization model. Energy, 2022, 255, pp.124503. ⟨10.1016/j.energy.2022.124503⟩. ⟨hal-03833365⟩",
+              "source_url": "https://doi.org/10.1016/j.energy.2022.124503",
+              "chunk_order": 89,
+              "document_type": "ART",
+              "publication_date": "2022-09-15",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في فرنسا"
+            }
+          },
+          {
+            "id": "891ddffd-921f-5910-a57a-98248ef8a9e8",
+            "document_id": "9503b4ca-d2a0-5785-ace2-eab2001650bf",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Nouvelles représentations des consommations d'énergie\n\nText: dans les secteurs, soit pour faire \nfonctionner les moyens de transports \n(électricité achetée par la SNCF, \npétrole acheté par les compagnies \ndaviation ou de bus, etc.), soit pour les \nfabriquer (consommation énergétique \ndes constructeurs automobiles français) \n37 I Les Cahiers du Clip n 22 I Nouvelles représentations des consommations dénergie",
+            "metadata": {
+              "title": "Nouvelles représentations des consommations d'énergie",
+              "hal_id": "hal-00865015",
+              "authors": "['Prabodh Pourouchottamin', 'Carine Barbier', 'Lucas Chancel', 'Michel Colombier']",
+              "version": "v0",
+              "citation": "Prabodh Pourouchottamin, Carine Barbier, Lucas Chancel, Michel Colombier. Nouvelles représentations des consommations d'énergie. 2013, pp.82. ⟨hal-00865015⟩",
+              "source_url": "https://hal.science/hal-00865015",
+              "chunk_order": 188,
+              "document_type": "OTHER",
+              "publication_date": "2013-01-01",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في فرنسا"
+            }
+          },
+          {
+            "id": "aa25d993-495d-5f27-b6cc-3803dd0b3838",
+            "document_id": "7ba41e47-fe35-527d-aeb2-87fa8f412eff",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: New representations of energy consumption CLIP, Les cahiers du Club d'Ingénierie Prospective Énergie et Environnement, number 22, October 2013\n\nText: dans les secteurs, soit pour faire \nfonctionner les moyens de transports \n(électricité achetée par la SNCF, \npétrole acheté par les compagnies \ndaviation ou de bus, etc.), soit pour les \nfabriquer (consommation énergétique \ndes constructeurs automobiles français) \n37 I Les Cahiers du Clip n 22 I Nouvelles représentations des consommations dénergie",
+            "metadata": {
+              "title": "New representations of energy consumption CLIP, Les cahiers du Club d'Ingénierie Prospective Énergie et Environnement, number 22, October 2013",
+              "hal_id": "halshs-01822558",
+              "authors": "['Prabodh Pourouchottamin', 'Carine Barbier', 'Lucas Chancel', 'Michel Colombier']",
+              "version": "v0",
+              "citation": "Prabodh Pourouchottamin, Carine Barbier, Lucas Chancel, Michel Colombier. New representations of energy consumption\r\nCLIP, Les cahiers du Club d'Ingénierie Prospective Énergie et Environnement, number 22, October 2013. IDDRI, 22, 2013, Les Cahiers du CLIP. ⟨halshs-01822558⟩",
+              "source_url": "https://hal.science/halshs-01822558",
+              "chunk_order": 189,
+              "document_type": "OUV",
+              "publication_date": "2013-10-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في فرنسا"
+            }
+          },
+          {
+            "id": "ef0168ea-61fb-5817-a042-9fd43d6f04e4",
+            "document_id": "b7ef1927-bf9c-53fa-a74b-de08fff61745",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles\n\nText: is deﬁned as the cost of energy (fuel price or electricity price without taxes) in France.\nWe obtain this by looking at current market prices and subtracting taxes for each fuel\nor electricity prices8.\n7. In order to convert CO2 emission per km to fuel consumption we apply the amount of carbon\ndioxide contained in a liter of Gasoline and a liter of Diesel: CO2Diesel =2640 g/Land CO2Gasoline =\n2392 g/Lfrom ecoscore.be. For EV technology we have an equivalent to fuel consumption, the electric\nconsumption is the amount of kWh to drive one km.\n8. Taxes applied on Gasoline and Diesel demand are: VAT to the overall cost and TICPE (\"Taxe\nIntérieur de Consommation sur les Produits Energétiques\" applied on the consumption of Fossil Fuels.\nTCIPE has different tax level for Gasoline and Diesel in 2017. The reference Gasoline and Diesel prices\nwith taxes in 2018 in France are respectively 1.462 and 1.374 e/L (IEA, 2018). Taxes applied to Elec-",
+            "metadata": {
+              "title": "Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles",
+              "hal_id": "tel-02435183",
+              "authors": [
+                "Juan Vera Molina"
+              ],
+              "version": "v0",
+              "citation": "Juan Vera Molina. Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles. Economics and Finance. Université Paris Saclay (COmUE), 2019. English. ⟨NNT : 2019SACLA021⟩. ⟨tel-02435183⟩",
+              "source_url": "https://hal.science/tel-02435183",
+              "chunk_order": 615,
+              "description": "Policy instruments on passenger vehicle emissions aim at reducing negative environmental externalities from vehicles use. To regulate CO2 emissions, fuel economy standards have been put in place in Europe and in the US, among others. These standards are made more stringent over time. This thesis analyzes how automotive firms anticipate and prepare their future technology portfolio to comply with expected future standards. To do so, we develop a model of optimal technology choice that captures technology diffusion constraints.With this framework, this thesis investigates three policy questions. First, we ask how the form of anticipation can affect near- and long-term technology choices. We find that focusing solely on near-term objectives can lead to failure to comply with a long-term target. In fact, meeting the near-term target is not a necessary nor a sufficient condition to satisfy long-term compliance. Moreover, when there is partial anticipation, as in a myopic view of the future, technology choices will be stuck with low abatement technologies creating a path dependency that limits long-term abatement potential.Second, we ask how much indexing fuel economy standard to mass (as in Europe or China) changes the optimal technology. We show that, for the same emission target, there is no significant difference in the social cost of mobility for an average vehicle with and without mass index. Thus a heavier vehicle fleet has the same cost than a lighter one. However, the technology choices are different, and mass indexed fuel economy standards lead to sidestepping lightweight technologies despite being cost effective from a CO2 emissions abatement point of view.Third, we ask how technology choices change when policies with multiple objectives overlap. We focus on two externalities associated with mobility: CO2 emissions and local air pollution. We show three type of effects of overlapping policies. First, a technology specific policy such as the Zero Emission Vehicle Mandate in combination with a fuel economy standard induces carmakers to develop more expensive green technologies and prevents cheap, dirty technologies from disappearing compared to the case of a fuel economy standard alone. Second, the combination of policies can lead to very high costs when technologies adapted to each policy are very different. Third, we find an ambiguous effect of overlapping policies relative to single-objective policy in terms of emissions performance.",
+              "document_type": "THESE",
+              "publication_date": "2019-09-10",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في فرنسا"
+            }
+          },
+          {
+            "id": "a1e83c4e-beea-5f94-bacb-15af29c2b3fc",
+            "document_id": "11828f56-7a88-5631-a9e8-bc809bf85718",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Pathways to deep decarbonization of the passenger transport sector in France\n\nText: 30  Pathways to deep decarbonization of the passenger transport sector in France5References (technical)\n z(2008). Energy Technology Perspectives. IEA.\n z(2008). Enquête Nationale Transports et Deplacements, INSEE.\n z(2011). Compte des Transports 2010, CGDD.\n z(2013). Scénarios de lancre pour la transition énergétique, ANCRE.\n z(2013). Vision 2030-2050, Rapport Technique, ADEME .\n z(2014). Chapter 8 - Transport, AR5, IPCC.\n z(2014). Scénario négaWatt 2011-2050, Rapport Technique. négaWatt.\n z(2015). Loi relative à la transition énergétique et pour la croissance verte (LTECV), LOI n2015-992.\n z(2015). Pathways to deep decarbonization in France, DDPP, CIRED, EDDEN, IDDRI.\n z(2015). Stratégie Nationale Bas Carbone, SNBC, Ministère de lEcologie, du Développement Durable et de lEnergie.\n z(2016). 25 années de transports interieurs de voyageurs, CGDD.\n z(2016). Compte des Transports 2015, CGDD.\n z(2016). Projections de la demande de transport sur le long terme. CGDD.",
+            "metadata": {
+              "title": "Pathways to deep decarbonization of the passenger transport sector in France",
+              "hal_id": "hal-01688931",
+              "authors": "['Yann Briand', 'Julien Lefevre', 'Jean-Michel Cayla']",
+              "version": "v0",
+              "citation": "Yann Briand, Julien Lefevre, Jean-Michel Cayla. Pathways to deep decarbonization of the passenger transport sector in France. [Research Report] IDDRI, UMR 8568 CIRED, EDF R&D. 2017. ⟨hal-01688931⟩",
+              "source_url": "https://hal.science/hal-01688931",
+              "chunk_order": 161,
+              "document_type": "REPORT",
+              "publication_date": "2017-01-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في فرنسا"
+            }
+          },
+          {
+            "id": "ac9ae805-38b8-59b8-af40-7ba9dfc29d22",
+            "document_id": "a21eb514-df1d-598a-83c0-c7495e9d5329",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Economic and environmental performances of natural gas for heavy trucks: A case study on the French automotive industry supply chain\n\nText: to explain why there has not yet been mass supply chain-wide e nergy transition in Europe.\nThe model we deployed, based on data on French automaker Rena ults real supply chain\nﬂows, estimated the proﬁtability and conversion condition s of each route served. Even\nthough the ﬂows considered are mainly situated in highly-in dustrial northern France, the\nconstraints of this ﬁercely competitive industry apply to p ractically all sectors. Detours\nto reach refuelling stations were identiﬁed as the key facto r, inﬂuencing performances and\nunexpectedly pushing the CNG GHG emissions above diesel GHG emissions. We also\nshowed that a WtW carbon tax or subsidisation was able to inﬂu ence the uptake of partially-\nbiosourced CNG to cut emissions by up to 76%, in which cases th e external costs reduction\nin terms of air pollution, noise and GHG was 50% with bioCNG co mpared to the same\nroute using diesel fuel.\n22",
+            "metadata": {
+              "doi": "10.1016/j.enpol.2020.112019",
+              "title": "Economic and environmental performances of natural gas for heavy trucks: A case study on the French automotive industry supply chain",
+              "hal_id": "hal-03084846",
+              "authors": [
+                "Emilien Ravigné",
+                "P. da Costa"
+              ],
+              "version": "v0",
+              "citation": "Emilien Ravigné, P. da Costa. Economic and environmental performances of natural gas for heavy trucks: A case study on the French automotive industry supply chain. Energy Policy, 2020, pp.112019. ⟨10.1016/j.enpol.2020.112019⟩. ⟨hal-03084846⟩",
+              "source_url": "https://doi.org/10.1016/j.enpol.2020.112019",
+              "chunk_order": 100,
+              "document_type": "ART",
+              "publication_date": "2020-11-01",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في فرنسا"
+            }
+          },
+          {
+            "id": "9104b897-5e1c-5acb-afab-1e3010d5ad14",
+            "document_id": "0c43d617-d68e-5de4-8939-99f18a3e8bcb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: The importance of renewable gas in achieving carbon-neutrality: Insights from an energy system optimization model\n\nText: by gas, 9.5% by coal, 10.4% by biofuels and waste and 19.7% by electricity1. Focusing on French \nenergy consumption, in 2020 France consumed 1,562TWh of energy2. The main energy carriers f or \nthe French energy sector were oil and refined petroleum products (41.6%), electricity (25%) and \nnatural gas (20%).  Although French electricity has a very low carbon footprint (34gCO 2eq/kWh e in \n20213), electricity accounts for only one quarter of French final energy consumption and achiev ing \ncarbon -neutrality requires decarbonization of the whole energy sector , not only of the electricity \nsupply.  \nEnergy scenarios aiming at carbon -neutrality by 2050 vary with respect to the role of different \nener gy carriers, particularly gas and electricity. For instance, the French Environment and Energy \nManagement Agency (ADEME)s  Energy -Climate Scenario 2035 -2050 and the French Ministry of \nEcological Transition and Solidaritys  National Low-Carbon Strategy,  feature relatively electrified",
+            "metadata": {
+              "doi": "10.1016/j.energy.2022.124503",
+              "title": "The importance of renewable gas in achieving carbon-neutrality: Insights from an energy system optimization model",
+              "hal_id": "hal-03833365",
+              "authors": "['Behrang Shirizadeh', 'Philippe Quirion']",
+              "version": "v0",
+              "citation": "Behrang Shirizadeh, Philippe Quirion. The importance of renewable gas in achieving carbon-neutrality: Insights from an energy system optimization model. Energy, 2022, 255, pp.124503. ⟨10.1016/j.energy.2022.124503⟩. ⟨hal-03833365⟩",
+              "source_url": "https://doi.org/10.1016/j.energy.2022.124503",
+              "chunk_order": 9,
+              "document_type": "ART",
+              "publication_date": "2022-09-15",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في فرنسا"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2057,
+            "total_tokens": 2057
+          }
+        }
+      },
+      "duration": 11064
+    },
+    "retrievalTime": 1318,
+    "generationTime": 11064,
+    "timestamp": "2025-07-10T09:21:34.775Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T09:21:36.581151+00:00",
+    "server_version": "1.0.0"
+  }
+}

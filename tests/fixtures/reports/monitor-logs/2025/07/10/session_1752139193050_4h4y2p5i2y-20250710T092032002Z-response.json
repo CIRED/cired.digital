@@ -1,0 +1,314 @@
+{
+  "sessionId": "session_1752139193050_4h4y2p5i2y451r4z55",
+  "timestamp": "20250710T092032002Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752139229566_awwljax",
+    "response": {
+      "results": {
+        "generated_answer": "No response generated.",
+        "citations": [],
+        "search_results": [
+          {
+            "id": "e80495ee-184a-59fa-a518-176e1c178d48",
+            "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: lamélioration de lefficacité énergétique des é quipements de transformation ou dusage final de \nlénergie. Le niveau de taxe requis pour attei ndre un objectif de stabilisa tion donné est déterminé \npar les possibilités de substitution dans le secteur éner gétique, aussi bien du côté de loffre que de la \ndemande, à chaque point du temps sur lensemble de la simulation. Les différences obtenues entre les scénarios \nATC et ETC reposent sur les dynamiques associées à lévolution de ces possibilités de \nsubstitution.  Sans induction du progrès technique , pour une valeur du carbone donnée, les possibilités de \nsubstitution rentables évoluent de façon autonom e en fonction des modifications exogènes des \ncaractéristiques des technologies à faible cont enu carbone. La vitesse de pénétration de ces \ntechnologies dans le parc de pr oduction existant est limitée par le rythme de renouvellement du \ncapital. Plus lobjectif de stabilisation est exigeant,  plus le niveau de taxe requis est important pour",
+            "metadata": {
+              "title": "L'impact du changement technique endogène sur les politiques climatiques",
+              "hal_id": "tel-00489258",
+              "authors": "['Olivier Sassi']",
+              "version": "v0",
+              "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+              "source_url": "https://hal.science/tel-00489258",
+              "chunk_order": 1113,
+              "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+              "document_type": "THESE",
+              "publication_date": "2008-11-21",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في تونس"
+            }
+          },
+          {
+            "id": "7df49d22-408c-5055-a8c5-82507e5ec6f6",
+            "document_id": "48669e50-2daa-5e96-9fdc-88f103f4500a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Trajectoires de décarbonation profonde du transport de marchandises en France\n\nText: Tonnes transportées\nTT (Mt)\nDistance \n(km/TT) \nConso. dénergie \n(MJ/tkm)\nContenu carbone\n(gCO 2eq/MJ)\nScénario 1\nScénario 2 Scénario 1\nScénario 2 Scénario 12010 à 2050(tonne-kilomètre)\nCH4Émissions indirectes\nÉmissions directesCL\nÉlectricité/H 2\nCH4, tout véh.\nCL, autres\nCL, VUL\nCL, PLFluvial\nRail\nRoute",
+            "metadata": {
+              "title": "Trajectoires de décarbonation profonde du transport de marchandises en France",
+              "hal_id": "hal-02865268",
+              "authors": [
+                "Yann Briand",
+                "Johannes Svensson",
+                "Martin Koning",
+                "François Combes",
+                "Gwenaelle Lamy",
+                "Prabodh Pourouchottamin",
+                "Jean-Michel Cayla",
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Yann Briand, Johannes Svensson, Martin Koning, François Combes, Gwenaelle Lamy, et al.. Trajectoires de décarbonation profonde du transport de marchandises en France. [Rapport de recherche] IFSTTAR - Institut Français des Sciences et Technologies des Transports, de l'Aménagement et des Réseaux. 2019, 48 p. ⟨hal-02865268⟩",
+              "source_url": "https://hal.science/hal-02865268",
+              "chunk_order": 282,
+              "description": "Ce document constitue le « rapport descriptif » des scénarios de décarbonation profonde du transport de marchandises en France à l&apos;horizon 2050. Il s&apos;adresse aux différents acteurs de la société qui souhaiteraient découvrir deux histoires cohérentes des principales transformations (sociétales, organisationnelles, technologiques et politiques) menant à la décarbonation de ce secteur ainsi que leurs effets sur un ensemble de dimensions comme le nombre de tonnes transportées, la part du rail, les circulations des véhicules routiers, la demande d&apos;énergie finale ou la place des différents vecteurs énergétiques. Il sera prochainement complété par un « rapport technique » détaillant les hypothèses sous-jacentes prises en compte.",
+              "document_type": "REPORT",
+              "publication_date": "2019-01-01",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في تونس"
+            }
+          },
+          {
+            "id": "66e4ce31-9ea0-5f83-89c0-e5b3cdba145c",
+            "document_id": "3eb539a5-02cd-5dbe-bac1-15a1999bc5da",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Prospective du système alimentaire et de son empreinte énergétique et carbone\n\nText: de transformer les véhicules en lieux de vie. Ces nou -\nvelles automobiles peuvent faire fonction de bureau \nmobile, hybridation du télétravail avec lancien tra -\nvail. Ces nouveautés ultra-technologiques sont res -\ntées principalement accessibles aux plus aisés.\npkm *\n020406080100\npkm\n020406080100\nGWh\n0250500750100012501500*   pkm : passager.kilomètre\n* Présence de biocarburants ou biogazDomicile\nRestauration hors domicile\nTravail\nRestauration hors domicile\nDomicile\nachat - Commerces de proximité\nDomicile\nachat - Grandes surfaces\nMarche\nVélo\nBus car\nMétro tram\nTER-transilien\nDeux-roues motorisés\nVoiture\nE. métabolique\nHydrogène\nDiesel*\nGNV*\nEssence*\nElectricitéFigure 92. Mobilité des ménages\npar motif alimentaire \nFigure 93. Mobilité des ménages \npour lalimentation par mode\nFigure 94. Consommation d'énergie par sourceTendanciel Pari réparateur\nTendanciel Pari réparateur\nTendanciel Pari réparateur020406080100\nDomicile - Restauration hors domicile\nTravail - Restauration hors domicile",
+            "metadata": {
+              "title": "Prospective du système alimentaire et de son empreinte énergétique et carbone",
+              "hal_id": "hal-04455411",
+              "authors": [
+                "Carine Barbier",
+                "Christian Couturier",
+                "Patrice Dumas",
+                "Emmanuelle Kesse-Guyot",
+                "Julia Baudry",
+                "Ivan Pharabod",
+                "Prabodh Pourouchottaminh",
+                "Florence Toilier"
+              ],
+              "version": "v0",
+              "citation": "Carine Barbier, Christian Couturier, Patrice Dumas, Emmanuelle Kesse-Guyot, Julia Baudry, et al.. Prospective du système alimentaire et de son empreinte énergétique et carbone. Centre international de recherche sur l’environnement et le développement (CIRED)-CNRS. 2022. ⟨hal-04455411⟩",
+              "source_url": "https://hal.science/hal-04455411",
+              "chunk_order": 348,
+              "description": "Aller vers la neutralité carbone du système alimentaire du champ à l’assiette à l’horizon 2050 impose une évolution sensible des régimes alimentaires et des arbitrages à différentes étapes : les systèmes de production agricoles et le partage d’usage des sols, le niveau d’importations et d’exportations de produits agricoles et alimentaires et le transport associé, les systèmes de transformation ou encore les modes d’approvisionnement des ménages. Six visions du système alimentaire en 2050 sont décrites dans ce rapport. Cinq scénarios sont communs à l’exer¬cice Transitions 2050 de l’Ademe et un scénario reprend le scénario SNBC-AMS 2019. Les résultats montrent tout d’abord l’importance des synergies possibles entre les préoccupations de santé publique, une plus grande autonomie alimentaire et la protection de l’environnement. La production agricole reste une source majeure d’émissions de gaz à effet de serre en 2050 non seulement pour l’ensemble du système alimentaire mais également dans l’empreinte carbone globale tous secteurs confondus. L’objectif de neutralité carbone impose de réduire drastiquement les émissions de méthane et d’oxyde d’azote. La réduction des pertes et des gaspillages, ainsi qu’une alimentation beaucoup plus végétale et nutritionnellement équilibrée sans surconsommation de calories ou de protéines, sont incontournables. L’évolution des pratiques agricoles doit permettre une meilleure gestion de l’azote en privilégiant la fixation symbiotique, celle-ci pourrait assurer la majorité des apports azotés. Rediriger la production agricole domestique vers le marché intérieur, relocaliser des filières déficitaires sur le terri¬toire, sont également des leviers importants pour réduire les importations de produits agricoles et agroalimentaires. Des millions d’hectares de terres agricoles dans les pays fournisseurs de la France seraient ainsi libérés. Une plus grande autonomie alimentaire peut permettre une division par trois du transport de marchandises, qui pèse de manière non négligeable dans l’empreinte carbone du système alimentaire. Les émissions de CO2 issues de la combustion des énergies fossiles représentent la moitié de l’empreinte carbone du système alimentaire actuel. La sobriété dans les usages, du champ à l’assiette, est la première étape. Elle permettra de limiter les besoins conséquents d’investissement dans des équipements, des motorisations, des organisations logistiques, des bâtiments plus efficaces énergétiquement et la généralisation de l’usage d’énergies décarbonées.",
+              "document_type": "REPORT",
+              "publication_date": "2022-06-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في تونس"
+            }
+          },
+          {
+            "id": "a83f14da-35df-5928-9e33-bc1764f2a931",
+            "document_id": "3eb539a5-02cd-5dbe-bac1-15a1999bc5da",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Prospective du système alimentaire et de son empreinte énergétique et carbone\n\nText: le progrès technologique sur lefficacité énergétique \npermet néanmoins de réduire de 7 TWh la consom -\nmation énergétique du tertiaire alimentaire (34 TWh \nvs 41 TWh) ( Figure 71 ).\npkm *\n020406080100\npkm *\n020406080100\nGWh\n0250500750100012501500*   pkm : passager.kilomètre\n* Présence de biocarburants ou biogazDomicile\nRestauration hors domicile\nTravail\nRestauration hors domicile\nDomicile\nachat - Commerces de proximité\nDomicile\nachat - Grandes surfaces\nMarche\nVélo\nBus car\nMétro tram\nTER-transilien\nDeux-roues motorisés\nVoiture\nE. métabolique\nHydrogène\nDiesel*\nGNV*\nEssence*\nElectricitéFigure 72. Mobilité des ménages\npar motif alimentaire \nFigure 73. Mobilité des ménages \npour lalimentation par mode\nFigure 74. Consommation d'énergie par sourceTendanciel Technologies vertes\nTendanciel Technologies vertes\nTendanciel Technologies vertes020406080100\nDomicile - Restauration hors domicile\nTravail - Restauration hors domicile\nDomicile - achat - Commerces de proximité\nDomicile - achat - Grandes surfaces",
+            "metadata": {
+              "title": "Prospective du système alimentaire et de son empreinte énergétique et carbone",
+              "hal_id": "hal-04455411",
+              "authors": [
+                "Carine Barbier",
+                "Christian Couturier",
+                "Patrice Dumas",
+                "Emmanuelle Kesse-Guyot",
+                "Julia Baudry",
+                "Ivan Pharabod",
+                "Prabodh Pourouchottaminh",
+                "Florence Toilier"
+              ],
+              "version": "v0",
+              "citation": "Carine Barbier, Christian Couturier, Patrice Dumas, Emmanuelle Kesse-Guyot, Julia Baudry, et al.. Prospective du système alimentaire et de son empreinte énergétique et carbone. Centre international de recherche sur l’environnement et le développement (CIRED)-CNRS. 2022. ⟨hal-04455411⟩",
+              "source_url": "https://hal.science/hal-04455411",
+              "chunk_order": 281,
+              "description": "Aller vers la neutralité carbone du système alimentaire du champ à l’assiette à l’horizon 2050 impose une évolution sensible des régimes alimentaires et des arbitrages à différentes étapes : les systèmes de production agricoles et le partage d’usage des sols, le niveau d’importations et d’exportations de produits agricoles et alimentaires et le transport associé, les systèmes de transformation ou encore les modes d’approvisionnement des ménages. Six visions du système alimentaire en 2050 sont décrites dans ce rapport. Cinq scénarios sont communs à l’exer¬cice Transitions 2050 de l’Ademe et un scénario reprend le scénario SNBC-AMS 2019. Les résultats montrent tout d’abord l’importance des synergies possibles entre les préoccupations de santé publique, une plus grande autonomie alimentaire et la protection de l’environnement. La production agricole reste une source majeure d’émissions de gaz à effet de serre en 2050 non seulement pour l’ensemble du système alimentaire mais également dans l’empreinte carbone globale tous secteurs confondus. L’objectif de neutralité carbone impose de réduire drastiquement les émissions de méthane et d’oxyde d’azote. La réduction des pertes et des gaspillages, ainsi qu’une alimentation beaucoup plus végétale et nutritionnellement équilibrée sans surconsommation de calories ou de protéines, sont incontournables. L’évolution des pratiques agricoles doit permettre une meilleure gestion de l’azote en privilégiant la fixation symbiotique, celle-ci pourrait assurer la majorité des apports azotés. Rediriger la production agricole domestique vers le marché intérieur, relocaliser des filières déficitaires sur le terri¬toire, sont également des leviers importants pour réduire les importations de produits agricoles et agroalimentaires. Des millions d’hectares de terres agricoles dans les pays fournisseurs de la France seraient ainsi libérés. Une plus grande autonomie alimentaire peut permettre une division par trois du transport de marchandises, qui pèse de manière non négligeable dans l’empreinte carbone du système alimentaire. Les émissions de CO2 issues de la combustion des énergies fossiles représentent la moitié de l’empreinte carbone du système alimentaire actuel. La sobriété dans les usages, du champ à l’assiette, est la première étape. Elle permettra de limiter les besoins conséquents d’investissement dans des équipements, des motorisations, des organisations logistiques, des bâtiments plus efficaces énergétiquement et la généralisation de l’usage d’énergies décarbonées.",
+              "document_type": "REPORT",
+              "publication_date": "2022-06-01",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في تونس"
+            }
+          },
+          {
+            "id": "bab0bcc1-0333-5b8b-baee-7098b5dcb47b",
+            "document_id": "6cfd6def-292c-5209-9b27-d13598c9c8b1",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Véhicule électrique et forme urbaine : une évaluation prospective\n\nText: Classique Efﬁcace Electrique\nPrix (e) 16 000 22 000 29 000\nConsommation de carburant (L/100km) 6.8 4 0\nConsommation délectricité (kWh/100km) 0 0 20\nConsommation énergétique (kWh/100km) 68 39.5 20\nTABLE 6.1  Caractéristiques des différentes technologies\nDescription Unité Valeur Source\nMoyenne des kilo-\nmètreskm/an 12 800 ENTD (2008)\nEcart type des kilo-\nmétrageskm/an 9 800 ENTD (2008)\nDurée de vie des véhi-\nculesans 15 ENTD (2008)\nTaux dactualisation . 4% Lebegue (2005)\nContenu carbone du\ncarburantgCO 2/l 2500 Observatoire de lenergie (2007)\nContenu carbone de\nlélectricitégCO 2/kWh 86 Doucette and McCulloch (2011)\nTaxe carbone eur/tCO 2 56 Quinet et al. (2009)\nPrix moyen du carbu-\nrant en 2020e/l 1.5 EIA (2013)\nPrix moyen de lélec-\ntricité en 2020e/kWh 0.14 EIA (2013)\nTABLE 6.2  Paramètres pour le calcul des ATCO en 2020\n142",
+            "metadata": {
+              "title": "Véhicule électrique et forme urbaine : une évaluation prospective",
+              "hal_id": "tel-01882700",
+              "authors": [
+                "Manon Solignac"
+              ],
+              "version": "v0",
+              "citation": "Manon Solignac. Véhicule électrique et forme urbaine : une évaluation prospective. Economies et finances. Université Paris-Est, 2018. Français. ⟨NNT : 2018PESC1010⟩. ⟨tel-01882700⟩",
+              "source_url": "https://hal.science/tel-01882700",
+              "chunk_order": 515,
+              "description": "Cette thèse s'intéresse à l'évaluation du potentiel et du coût du véhicule électrique comme solution pour réduire les émissions de CO2 dues au transport de passagers en ville. Elle montre comment intégrer les habitudes de déplacement des usagers dans les méthodologies de quantification modifie ces évaluations. Les analyses portant sur le véhicule électrique calculent généralement un potentiel de réduction d'émissions et un coût sans distinguer les spécificités locales des territoires où ce véhicule pourra être mis en place et de l'utilisation qui en découle. Elles ne tiennent pas compte non plus des autres politiques existantes sur ce territoire, notamment de celles jouant sur la structure de la mobilité, à savoir son volume total et son partage modal. Ainsi, les différentes solutions de réduction d'émission de CO2, technologiques d'un côté et portant sur la structure de la mobilité de l'autre, sont le plus souvent discutées de manière indépendante, et les possibles rétroactions de l'une vers l'autre sont peu analysées. Cette thèse vise donc à considérer conjointement l'introduction d'une solution technologique telle que le véhicule électrique et les structures urbaines dans lesquelles elle se déploie. Pour cela, nous développons un modèle de choix de technologies de véhicules des ménages, et l'intégrons à un modèle d'économie urbaine. Nous nous intéressons dans un premier temps, aux caractéristiques spatiales de la ville et donc à l'usage qui est fait de ce véhicule ; puis, dans un deuxième temps, à la mise en œuvre simultanée d'une solution jouant sur la structure de la mobilité pour réduire les émissions : la ceinture verte. Ces deux analyses nous permettent de mettre en évidence, et de quantifier, l'interdépendance d'une action s'appuyant sur la technologie et d'une autre s'appuyant sur la structure de la mobilité. Enfin, dans un troisième temps, nous introduisons l'hétérogénéité des usages ainsi que l'incertitude sur les prix futurs de l'énergie et les coûts futurs des batteries dans un modèle de calcul de la valeur d'option du déploiement du véhicule électrique. Nous montrons que ces deux éléments conduisent à réviser l'évaluation de la valeur d'option à la hausse",
+              "document_type": "THESE",
+              "publication_date": "2018-01-17",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في تونس"
+            }
+          },
+          {
+            "id": "66fb675f-59b1-55b9-9fc2-bab85810aab9",
+            "document_id": "4291fc51-c0bd-53f4-8a8e-623f200a6515",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Enjeux économiques et énergétiques autours des véhicules électrifiées\n\nText: LES VOITURES  ÉLECTRIFIÉES  (VE X) \n DU POINT  DE VUE DE LÉCONOMIE   \nDE LÉNERGIE  ET DU CLIMAT  \n \nAdrien VOGT-SCHILB  \nvogt@centre -cired.fr  \nTRADD  \n19 février 2013",
+            "metadata": {
+              "title": "Enjeux économiques et énergétiques autours des véhicules électrifiées",
+              "hal_id": "cel-00797596",
+              "authors": [
+                "Adrien Vogt-Schilb"
+              ],
+              "version": "v0",
+              "citation": "Adrien Vogt-Schilb. Enjeux économiques et énergétiques autours des véhicules électrifiées. Master. ENPC, 2013. ⟨cel-00797596⟩",
+              "source_url": "https://hal.science/cel-00797596",
+              "chunk_order": 1,
+              "document_type": "LECTURE",
+              "publication_date": "2013-02-19",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في تونس"
+            }
+          },
+          {
+            "id": "8c202a17-2902-57b7-aaf0-6cd9ecd25802",
+            "document_id": "b4b4cd5f-36df-53df-b062-0cc15c2498c3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Quel rôle pour les scénarios Facteur 4 dans la construction de la décision publique ?\n\nText: disp onible dans la nature a v an t toute transformation. L'énergie nale est l'énergie que l'on consomme c'est à-dire\nl'énergie primaire que l'on a transformée dans les cen trales de pro duction d'électricité, dans les raneries. . . Le\nrapp ort en tre les deux dénit le rendemen t du système énergétique.\n7Le premier scénario Prév ot a été réalisé en 2004. À cette ép o que le prix du baril était aux alen tour de 25$/bl.\n8La tec hnologie Coal T o Liquid (CTL) est une tec hnologie bac kstop, dans le jargon des mo délisateurs, c'est-à-\ndire que le coût de pro duction de carburan t a v ec du CTL b orne le prix du carburan t. A partir du momen t où le\nprix du baril de p étrole attein t le coût de pro duction du CTL (qui ne p ourra que décroître puisque les ressources\nen c harb on son t ab ondan tes), il y aura une substitution du p étrole v ers cette tec hnologie.\n9La date de maturité de la tec hnologie CCS fait l'ob jet d'incertitudes très fortes, malgré les in v estissemen ts",
+            "metadata": {
+              "doi": "10.4000/developpementdurable.8802",
+              "title": "Quel rôle pour les scénarios Facteur 4 dans la construction de la décision publique ?",
+              "hal_id": "halshs-00797419",
+              "authors": "['Sandrine Mathy', 'Meike Fink', 'Ruben Bibas']",
+              "version": "v0",
+              "citation": "Sandrine Mathy, Meike Fink, Ruben Bibas. Quel rôle pour les scénarios Facteur 4 dans la construction de la décision publique ?. Développement durable et territoires, 2011, 2 (1), pp.1-22. ⟨10.4000/developpementdurable.8802⟩. ⟨halshs-00797419⟩",
+              "source_url": "https://doi.org/10.4000/developpementdurable.8802",
+              "chunk_order": 119,
+              "description": "Plusieurs exercices de prospective de long terme ont été élaborés pour définir les trajectoires énergétiques permettant de respecter le Facteur 4 en France. Sept ont été identifiés et sont analysés à la fois du point de vue méthodologique et des résultats. Une réflexion est alors menée sur le rôle de la scénarisation. Paradoxalement, les résultats de ces analyses montrent qu'un seul des scénarios permet d'atteindre le Facteur 4, démontrant ainsi les limites de ces études. D'un point de vue méthodologique, les modèles d'ingénieur utilisés apparaissent comme des boites noires, avec leurs propres hypothèses technologiques et qui rendent les résultats peu appropriables par le non-spécialiste. L'enjeu est donc d'accompagner les travaux de modélisation par des échanges au sein d'une plate-forme entre modélisateurs, économistes, technologues, sociologues et représentants de la société civile. Pour renforcer leur légitimité, ces scénarios doivent ainsi participer à l'appropriation sociale et politique des résultats scientifiques.",
+              "document_type": "ART",
+              "publication_date": "2011-01-01",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في تونس"
+            }
+          },
+          {
+            "id": "4c57f704-0f0c-598b-87ef-7a48d9c63cb2",
+            "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: décennies de la simulation où lintensité carbone du système énergétique devient plus importante \ndans le scénario ETC que dans l ATC. Pour une croissance de la taxe de 1.66 $/tCO 2/an (150$/tCO 2 \nen 2100), linduction du progrès technique permet  dobtenir une décarbonisation supplémentaire \nsupérieure à 2% sur une durée de 40 ans ; cette valeur se réduit à 22 ans pour une croissance de 2.22 \n$/tCO 2/an (200$/tCO 2 en 2100), et à 2 ans pour une croissance de 3.33$/tCO 2/an (300$/tCO 2 en \n2100). Linduction du changement tec hnique permet donc, à niveau de taxe identique, daccélérer la \npénétration des sources dénergie à faible c ontenu carbone pendant la phase transitoire de \ndécarbonisation du système énergétique. Cette accél ération sobserve particulièrement pour des \nprofils de taxe présentant une vitesse de croissance modérée mais disparaît progressivement ou sinverse au fur et à mesure de laugmentation de cette vitesse. Lexplication de ces phénomènes",
+            "metadata": {
+              "title": "L'impact du changement technique endogène sur les politiques climatiques",
+              "hal_id": "tel-00489258",
+              "authors": "['Olivier Sassi']",
+              "version": "v0",
+              "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+              "source_url": "https://hal.science/tel-00489258",
+              "chunk_order": 1126,
+              "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+              "document_type": "THESE",
+              "publication_date": "2008-11-21",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في تونس"
+            }
+          },
+          {
+            "id": "2646b884-f442-59d6-84e2-6b4224127364",
+            "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: levée plus rapide de la contrainte dinertie liée au renouvellement du parc existant. Sur le moyen et \nlong terme, la décarbonisation du système de pr oduction électrique passe, dans les scénarios ATC et \nETC, par lutilisation massive de la tech nologie de captage et stockage du CO 2 après saturation des \ncontraintes liées à la diffusion des technologies nucléaires et renouvelables. Linduction du progrès technique par les politiques climatiques permet une  forte réduction du coût des centrales équipées \nde terminaux de captage et stockage des émissions dans le scénario \nETC. Ces progrès permettent",
+            "metadata": {
+              "title": "L'impact du changement technique endogène sur les politiques climatiques",
+              "hal_id": "tel-00489258",
+              "authors": "['Olivier Sassi']",
+              "version": "v0",
+              "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+              "source_url": "https://hal.science/tel-00489258",
+              "chunk_order": 1140,
+              "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+              "document_type": "THESE",
+              "publication_date": "2008-11-21",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في تونس"
+            }
+          },
+          {
+            "id": "684cbb92-9dec-5391-92e4-7ab63454f6e5",
+            "document_id": "12cfb6f9-bba5-5c7f-bbc2-35015c40000f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Expérimenter la vraie vie : le cas de la recharge des véhicules électriques à l’échelle de l’Union européenne\n\nText: par caténaires). La transfo rmation est alors poussée par cet ensemble de   mutations \ntechnologiques qui font plus que se dessiner aujourdhui, et ces changements de comportements \nen matière de mobilité, que ce soit les politiques urbaines ou les nouveaux modes de \nconsommation   (Ent retien chez une SCA, juillet 2015).  \n Les distributeurs de carburant  \nEn ce qui concerne les distributeurs de carburant, lintérêt très variable pour le projet CORRI -\nDOOR (cf. le Chapitre 5) nest pas (nécessairement)  synonyme de désintérêt pour \nlélectro mobilité et la recharge. On observe quune grande compagnie pétrolière se sent concernée",
+            "metadata": {
+              "title": "Expérimenter la vraie vie : le cas de la recharge des véhicules électriques à l’échelle de l’Union européenne",
+              "hal_id": "tel-03700823",
+              "authors": "['Anne Guillemot']",
+              "version": "v0",
+              "citation": "Anne Guillemot. Expérimenter la vraie vie : le cas de la recharge des véhicules électriques à l’échelle de l’Union européenne. Architecture, aménagement de l'espace. École des Ponts ParisTech, 2022. Français. ⟨NNT : 2022ENPC0005⟩. ⟨tel-03700823⟩",
+              "source_url": "https://hal.science/tel-03700823",
+              "chunk_order": 1874,
+              "description": "Depuis le tournant des années 2010, le véhicule électrique (VE) occupe une place centrale dans la stratégie de l’Union européenne (UE) en matière de décarbonation des transports et de développement des carburants alternatifs. L’ambition poursuivie est claire : il s’agit de permettre l’essor du VE sur le marché de masse. Dans cette perspective, la Commission européenne (CE) a porté ses efforts sur le développement de l’infrastructure de recharge, autour de deux préoccupations principales : son déploiement paneuropéen et son harmonisation à travers l’Union. Cette thèse prend pour point de départ la démarche originale imaginée à la Commission européenne pour encourager l’investissement privé et préparer le déploiement à grande échelle de l’infrastructure de recharge sur le réseau transeuropéen de transport (RTE-T) : le co-financement de projets pilotes d’infrastructure, offrant à des entreprises pionnières l’opportunité de tester la relation client en conditions réelles, d’investiguer des modèles d’affaires viables et de déterminer les conditions du passage à l’échelle. L’approche a été désignée sous le terme de « real-life trial ». A partir d’une enquête de type ethnographique conduite en immersion au sein de deux de ces projets, la thèse propose une réflexion sur la nature et les propriétés du « real-life trial » dans la construction d’une offre de recharge pour VE, par-delà le concept proposé par la CE. On montre ainsi comment ces essais en conditions réelles permettent de faire émerger la « vraie vie » de la recharge. On expose en particulier la façon dont les projets imposent des questions jusque-là sous-estimées (la complexité du déploiement des réseaux, la variété des solutions technologiques pour garantir l’accès transfrontière à l’infrastructure) et permettent d’affiner l’objet-même du « real-life trial ». On démontre leur nature résolument expérimentale, négligée a priori par les porteurs de projets. On montre que les projets contribuent moins au test d’une activité commerciale assise sur des technologies qui seraient suffisamment matures qu’à l’exploration et à la mise en forme de nouveaux arrangements socio- techniques (la recharge sur autoroute, la recharge paneuropéenne) et à la maturation de l’écosystème d’acteurs. On montre aussi que les projets de « real-life trial » sont un site d’observation formidable à partir duquel investiguer et décoder la dynamique d’innovation européenne en matière de recharge. En fin de compte, on met en évidence le rôle essentiel de l’expérimentation en conditions réelles, en tant qu’opérateur de transformation, dans la conduite de la transition vers l’électromobilité en Europe, et l’on suggère que ce type de démarche mériterait d’être poursuivi et généralisé.",
+              "document_type": "THESE",
+              "publication_date": "2022-01-31",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "التحول الطاقي في تونس"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          }
+        }
+      },
+      "duration": 821
+    },
+    "retrievalTime": 1600,
+    "generationTime": 821,
+    "timestamp": "2025-07-10T09:20:32.002Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T09:20:33.797896+00:00",
+    "server_version": "1.0.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "sessionId": "session_1752505435734_2a4l4n6c262u1d3w70",
+  "timestamp": "20250714T150356650Z",
+  "eventType": "visibilityChange",
+  "payload": {
+    "visibilityState": "hidden",
+    "sessionDuration": 830
+  },
+  "server_context": {
+    "client_ip": "86.238.242.220",
+    "forwarded_for": "86.238.242.220",
+    "received_at": "2025-07-14T15:03:58.333404+00:00",
+    "server_version": "1.0.0"
+  }
+}

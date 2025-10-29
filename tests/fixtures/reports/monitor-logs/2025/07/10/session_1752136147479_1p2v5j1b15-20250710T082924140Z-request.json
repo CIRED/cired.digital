@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752136147479_1p2v5j1b153h5r2o4h",
+  "timestamp": "20250710T082924140Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752136164121_ura1tg4",
+    "query": "qu'est ce que le modèle res-IRF ?",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "qu'est ce que le modèle res-IRF ?",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T08:29:24.166062+00:00",
+    "server_version": "1.0.0"
+  }
+}

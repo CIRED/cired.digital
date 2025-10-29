@@ -1,0 +1,306 @@
+{
+  "sessionId": "session_1752324436901_531m2y2w226a312t3x",
+  "timestamp": "20250712T125625655Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752324983431_h2f2due",
+    "response": {
+      "results": {
+        "generated_answer": "The provided context does not contain any information about Lucie Ricq or her work. Therefore, I cannot answer the query based on the given context.",
+        "citations": [],
+        "search_results": [
+          {
+            "id": "c7370b10-4b2e-502d-a9c6-2d80a934d12a",
+            "document_id": "ea2f7dee-164c-52fa-9df4-1a4524efa623",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Le terrain ? C'est ce qui résiste\n\nText: quinstance  expérientielle  et épistémique,  favorise  lémergence  dun  point  de  vue  inventif  sur le  \nraisonnement scientifique. Si la théorie deleuzienne du signe nous a permis de définir le terrain par la  \nfonction de la résistance, il sagit à présent détudier les formes et les effets de cette fonction dans les  \nfaits. \n2.Le travail en Sicile, retour sur lœuvre de Renée Rochefort\nDe façon à apprécier la portée cognitive de lexpérience sensible du terrain, compris selon la fonction  \nde la résistance, nous portons notre regard vers la thèse de Renée Rochefort  (1961) :  Le travail en \nSicile . Conduite sous la direction de Maurice Le Lannou dans les années 1950, cette thèse a  \nmarqué son époque par la nouveauté de ses préoccupations et son regard critique sur la façon de  \nfaire  de  la  géographie.  Plus  quun  travail isolé,  elle  est  aujourdhui  considérée  comme  un  des  \nouvrages  annonciateurs  dune  évolution disciplinaire,  marquée  par  laffirmation  de la  géographie",
+            "metadata": {
+              "title": "Le terrain ? C'est ce qui résiste",
+              "hal_id": "halshs-00290459",
+              "authors": [
+                "Olivier Labussiere",
+                "Julien Aldhuy"
+              ],
+              "version": "v0",
+              "citation": "Olivier Labussiere, Julien Aldhuy. Le terrain ? C'est ce qui résiste. A travers l'espace de la méthode : les dimensions du terrain en géographie, Jun 2008, Arras, France. ⟨halshs-00290459⟩",
+              "source_url": "https://hal.science/halshs-00290459",
+              "chunk_order": 44,
+              "description": "Alors que les postures objectiviste et subjectiviste tendent à réduire le terrain au rôle de dispositif commode de validation ou d'invalidation du raisonnement scientifique, cet article interroge la portée cognitive de l'expérience sensible du terrain. Notre attention pour le sensible vise à donner une place à la contingence ; de sorte que le terrain ne constituerait plus une boîte noire mais permettrait de s'interroger sur le rôle des pratiques qui lui sont associées dans la production des connaissances. Ce niveau d'analyse a pu être identifié du côté des théories non-représentationnelles, en raison de leur préoccupation forte pour les enjeux liés à l'action, à l'émergence et à l'invention. Toutefois, au-delà des fumées de la bataille entre tenants d'une approche représentationnelle et non-représentationnelle, une posture plus nuancée s'est dégagée de la pensée deleuzienne. En soulignant l'attention de cette dernière pour la secondarité des formes, il devient possible de concilier l'intérêt de la géographie pour les formes constituées dans le temps de l'histoire et la façon dont la pratique, loin d'être confinée dans une lecture descriptive, peut se trouver interrogée par les réalités complexes dont elles sont porteuses. Cette posture nous permet de caractériser le terrain par une fonction transverse au sensible et à l'intelligible, la résistance. Le travail en Sicile de Renée Rochefort est approché comme un matériau susceptible d'illustrer cette fonction et d'en expliciter les enjeux en géographie.",
+              "document_type": "COMM",
+              "publication_date": "2008-06-18",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "What did Lucie Ricq work on"
+            }
+          },
+          {
+            "id": "21664fcc-fe5f-5a2b-8b14-d0a016e2bc97",
+            "document_id": "82c08573-1415-5e7e-a391-79b21211cd1f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550\n\nText: Cette\tsimplicité\tlui\touvrit\tbien\tdes\tamitiés\tdurant\tsa\tcarrière\ten\tparticulier\tcelle\tde\tPierre\tCurie\tqui\tle\ttint\tau\tcourant\t\nde\tses\ttravaux\tsur\tla\tradioactivité.\tWanda\tavait\tconservé\tune\tlettre\toù\tPierre\tCurie\traconte\tà\tEleuthère\tMascart\tun\tvoyage\t\n88 \"Sur les modifications quéprouve la lumière par suite  du mouvement de la source lumineuse et du mouvement de lobservateur\"  Annales \nscientifiques de lÉ.N.S. 2e série , tome 1 (1872), p. 157 -214; (deuxième partie)  tome 3 (1874), p. 363 -420. \n89 Langevin, P. (s.  d.) Annales des Mines, voir http://www.annales.org/archives/x/mascart.html . Mascart obtint pour ce remarquable ensemble de \ntravaux le grand prix des sciences mathématiques en 1874, puis le prix Lacaze en 1875. Comment se fa it-il qu'il fallut trente ans pour que les \nconséquences théoriques du principe de relativité soient conceptualisées sous la plume de Poincaré (conférence de Saint louis  de Louisiane septembre",
+            "metadata": {
+              "title": "A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550",
+              "hal_id": "halshs-02898229",
+              "authors": [
+                "Wanda Rabaud",
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Wanda Rabaud, Nicolas Bouleau. A la source de la Renaissance française, Le livre d'Heures parisien\r\nLivres d'Heures imprimés à Paris entre 1488 et 1550. 2020. ⟨halshs-02898229⟩",
+              "source_url": "https://hal.science/halshs-02898229",
+              "chunk_order": 455,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-07-15",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "What did Lucie Ricq work on"
+            }
+          },
+          {
+            "id": "c8d8f398-d0fb-54c0-8219-c2b299c4cf29",
+            "document_id": "f94f49c0-67a3-5881-96c6-c7299ed4f032",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: The game is afoot: The French reaction to game theory in the fifties\n\nText: mathematicians who had participated in this seminar accepted to work with him. In fact, the two major \nbeneficiaries were Lacan and Piaget. As for  Riguet , he recalled later that at the time of the seminar,  I \nwas somewhat hesitant to choose between Lévi -Strauss and Jacques Lacan, and I finally chose Jacques \nLacans supervision. Lévi -Strauss had proposed I formalize the history of nexuses with string games, \nmore exactly, among Indians. This pr oposal was far from stimulating me. (Riguet, 2011, p. 98). Riguet \nalso became Lacans mathematical advisor.  For his part, Piaget, getting introduced to Mandelbrot,",
+            "metadata": {
+              "doi": "10.1215/00182702-8906005",
+              "title": "The game is afoot: The French reaction to game theory in the fifties",
+              "hal_id": "hal-03081226",
+              "authors": "['Rabia Nessah', 'Tarik Tazdaït', 'Mehrdad Vahabi']",
+              "version": "v0",
+              "citation": "Rabia Nessah, Tarik Tazdaït, Mehrdad Vahabi. The game is afoot: The French reaction to game theory in the fifties. History of Political Economy, 2021, 53 (2), pp.243-278. ⟨10.1215/00182702-8906005⟩. ⟨hal-03081226⟩",
+              "source_url": "https://doi.org/10.1215/00182702-8906005",
+              "chunk_order": 74,
+              "description": "In this paper, we are interested in exploring the history of game theory in France, and particularly the way it was received and was diffused in the fifties. It will be shown that France was the most fertile soil in the whole continental Europe for a multidisciplinary welcoming to game theory. Reviewing certain aspects of the intellectual trajectory of the mathematician Guilbaud, the ethnologist Lévi-Strauss and the psychanalyst Lacan, we show how each of them, in his own way, played a key role in advancing game theory: (1) Guilbaud for his constancy in disseminating game theory (and mathematics in general) (2) Lévi-Strauss for his original interpretation of game theory that had some impact on social sciences; and (3) Lacan for using the contributions of game theory. Lacan and Lévi-Strauss were particularly convincing since they were instructed on request about the principles of game theory by Guilbaud.",
+              "document_type": "ART",
+              "publication_date": "2021-01-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "What did Lucie Ricq work on"
+            }
+          },
+          {
+            "id": "961cbfe1-6c39-5462-afbb-67c47c68cc20",
+            "document_id": "bff986e7-8240-5d6f-bfb5-0d8344092f5a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Pour une évaluation globale des OGM : Des perspectives épistémologiques renouvelées pour l'analyse des risques programme « EvaGlo » dans le cadre du programme « RiskOgm » (rapport complet)\n\nText: p. 40/40 Anne-Françoise Schmid est MCF HDR à lINSA de Lyon, Laboratoire EVS, UMR 5600, chercheur invité à la chaire TMCI, laboratoire CGS, MinesParisTech, chercheur associé au Laboratoire dHistoire des Sciences et de Philosophie - Archives Henri Poincaré, UMR 7117, Université de Lorraine. Philosophe et épistémologue, elle est léditrice de Bertrand Russell et de Louis Couturat, spécialiste de Henri Poincaré, fondatrice de lépistémologie générique.       Coordinateur( du( groupe( de( réflexion(:( Martin( Rémondet.(Chargé\" de\" mission\"au\" Haut\" Conseil\" des\"biotechnologies,\" Martin\" Rémondet\" est\" diplômé\" de\" lInstitut\" dEtudes\" Politiques\" de\" Bordeaux\" et\"Docteur\" en\" sociologie\" (Ecole\" des\" Mines).\" Il\" a\" ensuite\" travaillé\" au\" sein\" de\"lUnité\" \"Sciences\" en\"Société\"\" (SenS)\" de\" lINRA.\" Ses\" recherches\" ont\" principalement\" porté\" sur\" le\" gouvernement\" des\"sciences\" contemporaines\" du\" vivant.\" Il\" est\" aujourdhui\" chargé\" de\" mission\" au\" HCB,\" en\"",
+            "metadata": {
+              "title": "Pour une évaluation globale des OGM : Des perspectives épistémologiques renouvelées pour l'analyse des risques programme « EvaGlo » dans le cadre du programme « RiskOgm » (rapport complet)",
+              "hal_id": "hal-01300736",
+              "authors": [
+                "Martin Rémondet",
+                "Frédéric Jacquemart",
+                "Véronique Thomas-Vaslin",
+                "Léo Coutellec",
+                "Jacques Blondel",
+                "Nicolas Bouleau",
+                "Patrick Gaudray",
+                "Catherine Larrère",
+                "Anne-Françoise Schmid"
+              ],
+              "version": "v0",
+              "citation": "Martin Rémondet, Frédéric Jacquemart, Véronique Thomas-Vaslin, Léo Coutellec, Jacques Blondel, et al.. Pour une évaluation globale des OGM : Des perspectives épistémologiques renouvelées pour l'analyse des risques programme « EvaGlo » dans le cadre du programme « RiskOgm » (rapport complet) . [Rapport de recherche] Ministère de l'écologie et du développement durable. 2014. ⟨hal-01300736⟩",
+              "source_url": "https://hal.science/hal-01300736",
+              "chunk_order": 807,
+              "description": "La synthèse de ce rapport est décrite dans ce document: Frédéric Jacquemart, Véronique Thomas-Vaslin, Léo Coutellec. Pour une évaluation globale des OGM : Des perspectives épistémologiques renouvelées pour l'analyse des risques . [Rapport de recherche] Ministère de l'Ecologie, du Développement durable et de l'Energie 2016, http://www.rechercheriskogm.fr/fr/page/evaglo. <hal-01298382>",
+              "document_type": "REPORT",
+              "publication_date": "2014-09-18",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "What did Lucie Ricq work on"
+            }
+          },
+          {
+            "id": "5c032a2c-ebcf-5f44-abde-b89176e7cc00",
+            "document_id": "89f42bcc-a446-5cd9-bf31-730db3333274",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Jacques Lacan and game theory: an early contribution to common knowledge reasoning\n\nText: researchers in social sciences18 and were the initiators of interdisciplinarity, an approach \ninaugurated in the United States, aiming at reconciling academic disciplines.19  \n \nAlthough Lévi -Strauss did much to bring these mathematicians together around him, there is no \ndoubt that it was Lacan who benefited the most  from it.20 In particular, he forged close \nrelationships  with Guilbaud and Riguet . Riguet  (2011) reports that his meeting with Lacan took \nplace at the interdisciplinary seminar that Lévi -Strauss organized during the years  1953 -1954. It \nresponded  to his  desire to meet a theoretical and practical psychoanalyst  (Riguet 2011, 98). It \nalso responded to a request from Lacan who, to mark his interest in formalization, entrusted Riguet \nwith a cop y of his 1945 article. The  rapprochement with Lacan le d Riguet,  on the one hand, to \nfollow Lacan s seminar  from 1954 to 1958 (date of his departure to Zurich to work  for IBM) and,",
+            "metadata": {
+              "doi": "10.1080/09672567.2021.1908392",
+              "title": "Jacques Lacan and game theory: an early contribution to common knowledge reasoning",
+              "hal_id": "hal-03179414",
+              "authors": "['Pierre Courtois', 'Tarik Tazdaït']",
+              "version": "v0",
+              "citation": "Pierre Courtois, Tarik Tazdaït. Jacques Lacan and game theory: an early contribution to common knowledge reasoning. European Journal of the History of Economic Thought, 2021, 28 (5), pp.844-869. ⟨10.1080/09672567.2021.1908392⟩. ⟨hal-03179414⟩",
+              "source_url": "https://doi.org/10.1080/09672567.2021.1908392",
+              "chunk_order": 69,
+              "description": "Lacan’s contribution in applying and promoting game theory in the early 1950s is mostly ignored in the history of game theory. Yet his early analyses of logical reasoning made him one of the first social scientists to consider the importance of the hypothesis of common knowledge. By retracing Lacan’s path in his discovery of game theory, we show how much he has been a precursor in applying it. While accommodating a narrative approach, he demonstrated rigour and originality. Soliciting mathematicians open to interdisciplinarity, he introduced as early as 1945 modes of reasoning which corresponds to reasoning based on common knowledge.",
+              "document_type": "ART",
+              "publication_date": "2021-01-01",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "What did Lucie Ricq work on"
+            }
+          },
+          {
+            "id": "9a611b2b-48e0-56e3-a280-b8b8c6b46663",
+            "document_id": "89f42bcc-a446-5cd9-bf31-730db3333274",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Jacques Lacan and game theory: an early contribution to common knowledge reasoning\n\nText: place at the interdisciplinary seminar that Lévi -Strauss organized during the years  1953 -1954. It \nresponded  to his  desire to meet a theoretical and practical psychoanalyst  (Riguet 2011, 98). It \nalso responded to a request from Lacan who, to mark his interest in formalization, entrusted Riguet \nwith a cop y of his 1945 article. The  rapprochement with Lacan le d Riguet,  on the one hand, to \nfollow Lacan s seminar  from 1954 to 1958 (date of his departure to Zurich to work  for IBM) and, \non the other, to become his mathematics advisor  (Nessah et al.  2021).  On his side,  Lévi-Strauss \n                                                           \n17 Add that Lacan later refined his position to argue that the unconscio us is structured like a language in his seminar \non January 22, 1964 (Lacan, 1998  [1973 ], 20).  \n18 For example, Mandelbrot co -edited the book Etudes d'Epistémologie Génétique vol. II  with Piaget and the",
+            "metadata": {
+              "doi": "10.1080/09672567.2021.1908392",
+              "title": "Jacques Lacan and game theory: an early contribution to common knowledge reasoning",
+              "hal_id": "hal-03179414",
+              "authors": "['Pierre Courtois', 'Tarik Tazdaït']",
+              "version": "v0",
+              "citation": "Pierre Courtois, Tarik Tazdaït. Jacques Lacan and game theory: an early contribution to common knowledge reasoning. European Journal of the History of Economic Thought, 2021, 28 (5), pp.844-869. ⟨10.1080/09672567.2021.1908392⟩. ⟨hal-03179414⟩",
+              "source_url": "https://doi.org/10.1080/09672567.2021.1908392",
+              "chunk_order": 70,
+              "description": "Lacan’s contribution in applying and promoting game theory in the early 1950s is mostly ignored in the history of game theory. Yet his early analyses of logical reasoning made him one of the first social scientists to consider the importance of the hypothesis of common knowledge. By retracing Lacan’s path in his discovery of game theory, we show how much he has been a precursor in applying it. While accommodating a narrative approach, he demonstrated rigour and originality. Soliciting mathematicians open to interdisciplinarity, he introduced as early as 1945 modes of reasoning which corresponds to reasoning based on common knowledge.",
+              "document_type": "ART",
+              "publication_date": "2021-01-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "What did Lucie Ricq work on"
+            }
+          },
+          {
+            "id": "0b5798c6-6413-528c-a6d0-c203cc9e4c6f",
+            "document_id": "f94f49c0-67a3-5881-96c6-c7299ed4f032",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: The game is afoot: The French reaction to game theory in the fifties\n\nText: started to meet each other to work on the structure and establish bridges between human sciences and \nmathematics. This statement does not allow us to know whether their joint work was a long term project \n(expressing Lacan s and Lévi -Strausss real desire to acquire mathematical instruments from Guilbaud) or just a \ntemporary one. Having contacted Elisabeth Roudinesco in this respect, she brought the following clarifications  in \nan email dated August 13, 2017 to our attention:  I checked my notes and I am able to respond with certainty. In \nmy interview with Guilbaud on Octobre 10, 1985, he very clearly says that there were several meetings between \nBenveniste, Lacan, Lévi -Strauss and himself during 1951. Lévi -Strauss also confir med this point. These meetings \nwere about the structure, game theory, praxeology, possible relationships between human sciences and \nmathematics. But afterwards, it was only with Lacan that the work was continued, to the point that Guilbaud",
+            "metadata": {
+              "doi": "10.1215/00182702-8906005",
+              "title": "The game is afoot: The French reaction to game theory in the fifties",
+              "hal_id": "hal-03081226",
+              "authors": "['Rabia Nessah', 'Tarik Tazdaït', 'Mehrdad Vahabi']",
+              "version": "v0",
+              "citation": "Rabia Nessah, Tarik Tazdaït, Mehrdad Vahabi. The game is afoot: The French reaction to game theory in the fifties. History of Political Economy, 2021, 53 (2), pp.243-278. ⟨10.1215/00182702-8906005⟩. ⟨hal-03081226⟩",
+              "source_url": "https://doi.org/10.1215/00182702-8906005",
+              "chunk_order": 50,
+              "description": "In this paper, we are interested in exploring the history of game theory in France, and particularly the way it was received and was diffused in the fifties. It will be shown that France was the most fertile soil in the whole continental Europe for a multidisciplinary welcoming to game theory. Reviewing certain aspects of the intellectual trajectory of the mathematician Guilbaud, the ethnologist Lévi-Strauss and the psychanalyst Lacan, we show how each of them, in his own way, played a key role in advancing game theory: (1) Guilbaud for his constancy in disseminating game theory (and mathematics in general) (2) Lévi-Strauss for his original interpretation of game theory that had some impact on social sciences; and (3) Lacan for using the contributions of game theory. Lacan and Lévi-Strauss were particularly convincing since they were instructed on request about the principles of game theory by Guilbaud.",
+              "document_type": "ART",
+              "publication_date": "2021-01-01",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "What did Lucie Ricq work on"
+            }
+          },
+          {
+            "id": "35d20301-1457-571c-95ad-23f6884f6dd8",
+            "document_id": "c80c6616-01e0-5156-bc93-47598d23ac2b",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: How to allocate mitigation efforts between home insulation, fuel switch and fuel decarbonization? Insights from the French residential sector\n\nText: accessed at the following URL/DOI: https://doi.org/\n10.5281/zenodo.10409266 . Res-IRF 4.0 code can be\nfreely accessed at the following URL/DOI: https://doi.\norg/10.5281/zenodo.10409266 .CRediTauthorshipcontribution\nstatement\nCeliaEscribe : Conceptualization, Methodology, Data\ncuration, Software, Formal analysis, Investigation,\nWritingoriginal draft, Writingreview & editing.\nLucasVivier : Conceptualization, Methodology, Data\ncuration, Software, Formal analysis, Investigation,\nWritingoriginal draft, Writingreview & edit-\ning.Louis-Ga etan Giraudet : Conceptualization,\nMethodology, Funding acquisition, Writingreview\n& editingPhilippe Quirion : Conceptualization,\nMethodology, Funding acquisition, Writingreview\n& editing\nConflictofinterest\nThe authors declare that they have no known compet-\ning financial interests or personal relationships that\ncould have appeared to influence the work reported\nin this paper.\nORCIDiDs\nCélia Escribe https://orcid.org/0009-0001-5866-\n8332",
+            "metadata": {
+              "doi": "10.1088/1748-9326/ad3a7f",
+              "title": "How to allocate mitigation efforts between home insulation, fuel switch and fuel decarbonization? Insights from the French residential sector",
+              "hal_id": "hal-04861252",
+              "authors": "['Célia Escribe', 'Lucas Vivier', 'Louis-Gaëtan Giraudet', 'Philippe Quirion']",
+              "version": "v0",
+              "citation": "Célia Escribe, Lucas Vivier, Louis-Gaëtan Giraudet, Philippe Quirion. How to allocate mitigation efforts between home insulation, fuel switch and fuel decarbonization? Insights from the French residential sector. Environmental Research Letters, 2024, 19 (5), pp.054018. ⟨10.1088/1748-9326/ad3a7f⟩. ⟨hal-04861252⟩",
+              "source_url": "https://doi.org/10.1088/1748-9326/ad3a7f",
+              "chunk_order": 77,
+              "description": "Reducing greenhouse gas emissions in residential buildings relies on three channels that are rarely assessed together—insulating homes, switching to low-carbon heating systems and decarbonizing heating fuels. Their combination results from an interplay between top-down planning of the energy system and decentralized policies for the residential sector—insulation subsidies in particular. In this paper, we examine how the design of insulation subsidies influences the allocation of efforts between these three channels. To do so, we use an innovative framework coupling a highly detailed model of residential energy demand with a highly detailed model of the energy system, both focused on France. We find that the most cost-effective effort allocation to reach carbon neutrality implies 19% emission reductions from home insulation, 36% from fuel switch and 45% from fuel decarbonization. This however requires perfectly targeted subsidies. In three alternative, arguably more realistic subsidy scenarios, we find that total system cost is increased by 11%–16%. Our results highlight the key role played by subsidy specifications in determining the trade-off between insulation and fuel switch, e.g. insulation investments doubles, and heat pump adoption is 19% lower, when subsidies are restricted to the most comprehensive measures. Finally, alternative assumptions regarding the availability of renewable energy sources—biogas in particular—imply stronger energy efficiency efforts.",
+              "document_type": "ART",
+              "publication_date": "2024-04-16",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "What did Lucie Ricq work on"
+            }
+          },
+          {
+            "id": "b6aa1282-b4a1-508d-afad-d2946696ba61",
+            "document_id": "89f42bcc-a446-5cd9-bf31-730db3333274",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Jacques Lacan and game theory: an early contribution to common knowledge reasoning\n\nText: Bertrand Crettez, Régis Deloche, Antoine Missemer, Olivier Musy, Emmanuel Petit, Philippe \nQuirion, Gilles Rotillo n, Elisabeth Ro udinesco, Christian Schmidt, Philippe Solal,  and Manon \nThobois  for their inspiring and insightful remarks on earlier versions of this paper . T. Tazdaït \nacknowledges the support from Campus France (Cèdre research project No. 42315RA). \nObviously, all the remaining errors are ours.  \n \nReferences  \n \nApostel , L., B. Mandelbrot , and J. Piaget . 1957 . Etudes dEpistémologie Génétique vol. II  : Logique et Equilibre . \nParis : Presses Universitaires de France.  \n \n                                                           \n41 Again, and conforming with all authors quoting Lacans work on the topic, both Lasry and L evine did not refer to \nLacan original works but to  Écrits .",
+            "metadata": {
+              "doi": "10.1080/09672567.2021.1908392",
+              "title": "Jacques Lacan and game theory: an early contribution to common knowledge reasoning",
+              "hal_id": "hal-03179414",
+              "authors": "['Pierre Courtois', 'Tarik Tazdaït']",
+              "version": "v0",
+              "citation": "Pierre Courtois, Tarik Tazdaït. Jacques Lacan and game theory: an early contribution to common knowledge reasoning. European Journal of the History of Economic Thought, 2021, 28 (5), pp.844-869. ⟨10.1080/09672567.2021.1908392⟩. ⟨hal-03179414⟩",
+              "source_url": "https://doi.org/10.1080/09672567.2021.1908392",
+              "chunk_order": 139,
+              "description": "Lacan’s contribution in applying and promoting game theory in the early 1950s is mostly ignored in the history of game theory. Yet his early analyses of logical reasoning made him one of the first social scientists to consider the importance of the hypothesis of common knowledge. By retracing Lacan’s path in his discovery of game theory, we show how much he has been a precursor in applying it. While accommodating a narrative approach, he demonstrated rigour and originality. Soliciting mathematicians open to interdisciplinarity, he introduced as early as 1945 modes of reasoning which corresponds to reasoning based on common knowledge.",
+              "document_type": "ART",
+              "publication_date": "2021-01-01",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "What did Lucie Ricq work on"
+            }
+          },
+          {
+            "id": "2d2f83cd-8d39-5b88-9c77-06fe76ac4003",
+            "document_id": "a3d35f1e-aaa7-5509-8337-f7780ff57f64",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: L'économie dans l'impasse climatique\n\nText: suite à lécriture mathématique (on connaît les travaux de Sraffa qui ont ressuscité\nles méthodes ricardiennes ; pour une relecture macro-économique du  système \nricardien, cf. Cohen ( 1996 )). Cependant, ses lois ne sont pas des hypothèses ni des\nvérités a priori , mais abstraites de la réalité pour fournir une représentation théo-\nrique du système économique. Les faits sont analysés puis regroupés dans des\nprincipes généraux. Ces principes généraux fournissent ensuite une explication\nsynthétique dun phénomène particulier (Depoortère, 2013 ). Cette reconstruction\nsynthétique des faits, assortie de conditions ceteris paribus , nest pas une déri-\nvation mécanique de conséquences à partir des principes. Elle témoigne dune\nattention à des processus se déroulant hors du champ économique, hors des lois\nposées, mais qui inﬂuent sur le fait particulier (Mouchot, 1996 , chap. 10).\nLanalyse ricardienne est située dans le contexte social de lAngleterre du xixe",
+            "metadata": {
+              "title": "L'économie dans l'impasse climatique",
+              "hal_id": "tel-01101591",
+              "authors": [
+                "Antonin Pottier"
+              ],
+              "version": "v0",
+              "citation": "Antonin Pottier. L'économie dans l'impasse climatique. Economies et finances. EHESS, 2014. Français. ⟨NNT : ⟩. ⟨tel-01101591⟩",
+              "source_url": "https://hal.science/tel-01101591",
+              "chunk_order": 2034,
+              "description": "Pourquoi les émissions de gaz à effet de serre ne sont-elles pas contrôlées? La thèse interroge la boîte à outil de l'analyse économique néo-classique et pose la question ainsi: comment la théorie économique forme un cadrage mental inadéquat du problème climatique? La thèse identifie des basculements dans l'histoire de l'économie des ressources et montre un oubli récurrent du substrat matériel de la production. La fonction de la production, outil privilégié de modélisation des contraintes techniques, repose sur une méprise, comme l'a enseigné la controverse de Cambridge. L'analyse coût-bénéfice, seul moyen supposé d'avoir une approche non-normative, est privilégié pour traiter du changement climatique, quitte à modéliser des relations inconnues. La fonction des dommages extrapole à partir de préjugés partagés, et les controverses répétées sur l'actualisation font ressortir l'incohérence du cadre macro-économique en vigueur. L'analyse d'un article contemporain explicite le fonctionnement de ce rapport désinvolte au réel: les liens lâches entre la structure mathématique d'un modèle, les mots employés pour le décrire et ses résultats numériques donnent d'extraordinaires marges d'interprétation. Les rapports entre système économique, idéologie et discipline académique sont étudiées au prisme de deux symboles, l'homo economicus et le marché. L'inadéquation de la théorie économique pour traiter du changement climatique a une racine plus profonde dans l'organisation actuelle des sociétés occidentales, centrée sur le marché. Les effets bloquants se font voir aussi bien dans le phénomène sociologique du climato-scepticisme que dans la construction du marché carbone.",
+              "document_type": "THESE",
+              "publication_date": "2014-05-28",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "What did Lucie Ricq work on"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 148,
+            "total_tokens": 148
+          }
+        }
+      },
+      "duration": 410
+    },
+    "retrievalTime": 1801,
+    "generationTime": 410,
+    "timestamp": "2025-07-12T12:56:25.655Z"
+  },
+  "server_context": {
+    "client_ip": "80.239.186.181",
+    "forwarded_for": "80.239.186.181",
+    "received_at": "2025-07-12T12:56:26.522042+00:00",
+    "server_version": "1.0.0"
+  }
+}

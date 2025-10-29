@@ -1,0 +1,500 @@
+{
+  "sessionId": "session_1753114240935_1p5k13q3b1n456c1k",
+  "timestamp": "20250721T161058192Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1753114251594_jevsevu",
+    "response": {
+      "results": {
+        "generated_answer": "The timeline for implementing the ban on diesel and petrol motorcycles in Hanoi by July 2026 might indeed be considered rushed, given the current state of infrastructure and supporting mechanisms for electric vehicles (EVs). Here are some points to consider:\n\n1. **Infrastructure Development**: The transition to electric vehicles requires significant infrastructure development, including charging stations, battery recycling facilities, and smart grid systems [3d79b67]. These developments take time and substantial investment.\n\n2. **Battery Recycling**: The most popular models of electric scooters currently use lead-acid batteries, which pose environmental risks if not properly recycled. Developing an efficient recycling system is crucial and will take time to implement [3d79b67].\n\n3. **Policy and Planning**: The Vietnamese government has shown a willingness to transition to cleaner energy sources, but the implementation of such policies can be slow. For instance, the government has been cautious in touching the energy sector, and investors are wary of stranded assets [332b801], [daf1223]. This caution could also apply to the transition from petrol and diesel motorcycles to electric ones.\n\n4. **Comparative Examples**: Other cities and countries have set longer timelines for similar transitions. For example, Beijing aims to reduce the share of fuel-powered vehicles to 0% by 2050, with intermediate targets set for 2020, 2030, and 2040 [b00f55a]. France plans to ban all internal combustion engine (ICE) vehicles by 2040, while Norway and the Netherlands aim to do so by 2025 and 2030, respectively [193f23d].\n\n5. **Economic and Social Considerations**: The livelihoods of many people depend on petrol and diesel motorcycles. A rushed transition could disproportionately affect these individuals, highlighting the need for a more gradual approach that includes support mechanisms for those affected [3d79b67].\n\nGiven these factors, it is reasonable to argue that the timeline for the ban might be too rushed. A more gradual approach, coupled with significant investment in infrastructure and support for affected individuals, would likely be more effective in achieving the goal of reducing air pollution without causing undue economic and social disruption. The exact time required for such preparations would depend on various factors, including the pace of infrastructure development, policy implementation, and public acceptance.",
+        "citations": [
+          {
+            "id": "3d79b67",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 462,
+              "end": 471
+            },
+            "payload": {
+              "id": "3d79b67d-3b5f-543c-94d2-c05b1c23fc8b",
+              "document_id": "703866d3-0ce7-5fb1-9e11-9015fc5e28a6",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: Rest in peace Moped, electric scooters are there\n\nText: and systems are required to make the electric vehicles a part of the \nsmart grid. Another problem which remains to be managed is that \nthe most popular models have a lead-acid battery. Lead pollutes, \nespecially in countries where the recycling system is inefficient, \nand each battery contains 10kg of it.\nBut at the city scale, the environmental benefits are clear: the e-\nvehicles are silent and release no exhaust fumes. The advantages \nregarding the local air quality are especially important in Asian \ncapitals, which are the most polluted cities in the world. According \nto our estimates6, a typical gas scooter emits 0.1g of fine \nparticulates per kilometer, or 400g per year. A typical electric \nscooter causes ten times less emissions, in a country like Vietnam \nwhere half of the electricity comes from coal.\nThe market cannot be trusted to produce lighter and cleaner gas \nvehicles. The switch to electric two wheelers and cleaner power \nappears a more powerful way to solve the Asian cities air quality",
+              "metadata": {
+                "title": "Rest in peace Moped, electric scooters are there",
+                "hal_id": "hal-01274178",
+                "authors": "['Minh Ha-Duong']",
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Rest in peace Moped, electric scooters are there. 2016. ⟨hal-01274178⟩",
+                "source_url": "https://hal.science/hal-01274178",
+                "chunk_order": 9,
+                "description": "In the last decade two-wheeler electric vehicles have been taking over the streets of Asian capitals, to the point that it is time to declare the gas moped commercially dead. Rest in peace",
+                "document_type": "OTHER",
+                "publication_date": "2016-02-12",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?"
+              }
+            }
+          },
+          {
+            "id": "3d79b67",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 778,
+              "end": 787
+            },
+            "payload": null
+          },
+          {
+            "id": "332b801",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1082,
+              "end": 1091
+            },
+            "payload": {
+              "id": "332b8017-19fe-58ce-9c80-ab1f739b0464",
+              "document_id": "d86a9cb0-a74b-5789-9db5-4012ac60ebdc",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Stranded assets risk derails Vietnam's plan for new coal power plants\n\nText: industry with a feed in tariff of 9.35 cents per kWh, the  \ngovernment is moving towards auctions to reduce the costs.  \nAccording to  (Jakob Lundsager, Nguyen Ngoc Hung, and  \nMikael  Togeby  2019) ,  by  2030  the  levelized  costs  of  \nelectricity generation from wind and solar energy will be  \nsignificantly lower than those from coal and gas in Vietnam.\niii)  The environmental standards can only get strict er. The \ncapital Hanoi is  into the top three most polluted cities in  \nSoutheast Asia  (Phan 2019).  In 2015, coal power plants  \ncaused less PM2.5 air pollution in Hanoi than agriculture,  \ntransport or industry, but by 2030 the power sector  would \neasily  become  the  leading  source  of  PM2.5  pollution  in  \nHanoi (Amann et al. 2019), if the planned coal plants were  \nopened. The  energy  sector  is  responsible  for  most  of  \nVietnams GHG emissions increase by 320% between 2010  \nand 2030  in its INDCs business as usual scenario .  While",
+              "metadata": {
+                "title": "Stranded assets risk derails Vietnam's plan for new coal power plants",
+                "hal_id": "halshs-02263622",
+                "authors": [
+                  "Minh Ha-Duong"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Stranded assets risk derails Vietnam's plan for new coal power plants. IAEE Energy Forum, 2020, 102, pp.27-29. ⟨halshs-02263622⟩",
+                "source_url": "https://hal.science/halshs-02263622",
+                "chunk_order": 15,
+                "description": "In 2016, Vietnam planned to build a fleet of new coal-fired power plants, expanding capacity to 54.5 GW in 2030, from 13.1 GW in 2015. Three years later, the risk of stranded assets not only made this plan sub-optimal, it also made it infeasible because investors are looking elsewhere.",
+                "document_type": "ART",
+                "publication_date": "2020-01-01",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?"
+              }
+            }
+          },
+          {
+            "id": "daf1223",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1093,
+              "end": 1102
+            },
+            "payload": {
+              "id": "daf12237-c880-5530-a304-2d2a8a308443",
+              "document_id": "d86a9cb0-a74b-5789-9db5-4012ac60ebdc",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.014555555555555556,
+              "text": "Document Title: Stranded assets risk derails Vietnam's plan for new coal power plants\n\nText: same  thing  is  not  likely  to  work  better.  Because  of  the \nstranded assets problem, private and public investors have  \nless  and  less  interest  in  building  coal  power  plants  in \nVietnam.\nSince  investors  recognize  that  the  economic  window  to  \nbuild new coal generation projects in Vietnam is closed,  \nonly  already  permi,  only  fourtted  coal  power  generation  \nunits with a scheduled completion in or before 2025 should  \nbe kept in the next plan. The government can terminate all  \nother projects on the basis of Circular 43  (Trần Tuấn Anh \n2016), since they are late, and relieve investors who are  \nstruggling to obtain financing and the administrative and the  \nsocial licenses to operate.\nWe hope that the 13th National Congress in January 2021  \nwill adapt the Asian concept of ecological civilization as a  key goal for Vietnamese society; leading to stricter pollution  \ncontrol norms; higher fossil fuel taxes and import duties;",
+              "metadata": {
+                "title": "Stranded assets risk derails Vietnam's plan for new coal power plants",
+                "hal_id": "halshs-02263622",
+                "authors": [
+                  "Minh Ha-Duong"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Stranded assets risk derails Vietnam's plan for new coal power plants. IAEE Energy Forum, 2020, 102, pp.27-29. ⟨halshs-02263622⟩",
+                "source_url": "https://hal.science/halshs-02263622",
+                "chunk_order": 22,
+                "description": "In 2016, Vietnam planned to build a fleet of new coal-fired power plants, expanding capacity to 54.5 GW in 2030, from 13.1 GW in 2015. Three years later, the risk of stranded assets not only made this plan sub-optimal, it also made it infeasible because investors are looking elsewhere.",
+                "document_type": "ART",
+                "publication_date": "2020-01-01",
+                "semantic_rank": 10,
+                "full_text_rank": 200,
+                "associated_query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?"
+              }
+            }
+          },
+          {
+            "id": "b00f55a",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1454,
+              "end": 1463
+            },
+            "payload": {
+              "id": "b00f55aa-2629-5261-8d42-828060391483",
+              "document_id": "f121ae9d-ab87-57a2-b562-86296aabb248",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: L'économie politique des politiques carbone dans les pays en développement. Priorité aux instruments non tarifaires\n\nText: élevée des carburants, les gra ndes villes chinoises polluées mettent en  œuvre des réglementations \nvisant à ce que la part  de véhicules à carburant immatriculés tombe à 0% d'ici 2050, avec  des \nobjectifs i ntermédiaires par exemple de  90% en 2020, 70% en 20 30 et 30% en 2040 , comme à Pékin . \nBien que ce tte mesure soit axée sur la qualit é de l'air, elle a un co -bénéfice important de  réduction \ndes émissions de carbone  par les transports urbains3. \n \nSi l'objectif est d'éliminer progressivement les équipements les plus inefficaces et les plus ém etteurs \ndans les diff érentes catégories d'usage  de l'énergie, l 'interdiction de  long terme  est très efficace  \ngrâce à la clarté du signal , même si , en théorie, elle peut ne pas être efficiente économiqu ement . \nToutefois, les interdictions concernant les équi pements inef ficaces doivent être conçues  de manière \nappropriée en laissant  aux propriétaires de véhicules l e temps de s'adapter et leur accordant des",
+              "metadata": {
+                "title": "L'économie politique des politiques carbone dans les pays en développement. Priorité aux instruments non tarifaires",
+                "hal_id": "hal-02436646",
+                "authors": [
+                  "Dominique Finon"
+                ],
+                "version": "v0",
+                "citation": "Dominique Finon. L'économie politique des politiques carbone dans les pays en développement. Priorité aux instruments non tarifaires. Revue d'économie politique, A paraître. ⟨hal-02436646⟩",
+                "source_url": "https://hal.science/hal-02436646",
+                "chunk_order": 51,
+                "description": "L'économie politique des politiques carbone dans les pays en développement. Priorité aux instruments non tarifaires Dominique FINON, Directeur de recherche CNRS émérite Novembre 2019 Soumis à la Revue d'Economie Politique Résumé La tarification du carbone n'est pas appropriée en tant qu'instrument principal des politiques climatiques dans les économies émergents et en développement, du fait des contraintes d'économie politique qui sont plus importantes que celles qui, dans les pays de l'OCDE, rendent déjà délicat l'usage du prix du carbone. Les instruments autres que le prix-normes d'efficacité, régulation baséesur des instruments market-based, subventions aux technologies propres, programmes publics d'infrastructures-doivent être utilisés de préférence à la tarification du carbone pour orienter les choix technologiques et les infrastructures qui sont les principaux moyens de réaliser l'objectif carbone. En outre, même si, en théorie, les ensembles de mesures utilisant des instruments autres que les prix du carbone sont moins efficaces socialement, ils permettent aux gouvernements de contourner les contraintes d'économie politique, car leurs coûts pour les consommateurs et les citoyens sont moins importants, moins visibles et plus circonscrits que les effets de la tarification du carbone, tandis qu'ils ne sont moins régressifs. Mots-clés: politique publique, environnement (changement climatique), pays en développement, taxation, règlementation, redistribution, The political economy of climate policy instruments in developing countries: Priority to non price instrument Summary Carbon pricing might not be appropriate as the main element of the carbon policy package in emerging and developing countries (DCs), because the political economy constraints are greater than in developed countries. Non-price instruments and policies such as efficiency standards, market-oriented regulation, subsidies for clean technologies and public programs involving low carbon infrastructure should be preferentially developed to deal with market and regulatory failures, which are more widespread than in developed countries. These approaches are most effective in orientating technology and infrastructure, the principal means to achieving the mitigation imperative in DCs. Moreover, even if, in theory, policy packages using non-price instruments are less socially efficient than those focused on carbon pricing, they allow governments to circumvent political economy constraints, because their costs to consumers and citizens are not generalized and tend to be much less visible, while their redistributive effects are, if appropriately designed, generally not too regressive.",
+                "document_type": "ART",
+                "publication_date": "2020-01-01",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?"
+              }
+            }
+          },
+          {
+            "id": "193f23d",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1617,
+              "end": 1626
+            },
+            "payload": {
+              "id": "193f23dc-f908-551f-a4f6-8445b36062a1",
+              "document_id": "b7ef1927-bf9c-53fa-a74b-de08fff61745",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.0147909604519774,
+              "text": "Document Title: Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles\n\nText: 5.4. Discussion and Conclusion 163\npolicy outcomes and promoting solutions that are compatible with a large range of\nobjectives.\nThe overlapping of policies is not limited to two policies, in current markets\nthere are more than two policies on vehicles emissions that can produce less obvious\nimplications. In the French market, three distinctive policies are applied to vehicle\nemissions: a CO 2emission regulation, an Air Quality emission standard and a fee\nand rebate based on CO 2emission. We have not analyzed the combination of three\npolicies, further research should investigate what are the implications of a larger\npolicy package. There are policy announcements that show a willing to transition\nfrom fossil-fuel vehicles to electric vehicles. These policy signals are more severe\npolicy constraints, in France the government plans to ban all ICE vehicles in 2040.\nThe Netherlands and Norway plan to ban the same category of vehicles as early as\n2030 and 2025 respectively.",
+              "metadata": {
+                "title": "Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles",
+                "hal_id": "tel-02435183",
+                "authors": [
+                  "Juan Vera Molina"
+                ],
+                "version": "v0",
+                "citation": "Juan Vera Molina. Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles. Economics and Finance. Université Paris Saclay (COmUE), 2019. English. ⟨NNT : 2019SACLA021⟩. ⟨tel-02435183⟩",
+                "source_url": "https://hal.science/tel-02435183",
+                "chunk_order": 815,
+                "description": "Policy instruments on passenger vehicle emissions aim at reducing negative environmental externalities from vehicles use. To regulate CO2 emissions, fuel economy standards have been put in place in Europe and in the US, among others. These standards are made more stringent over time. This thesis analyzes how automotive firms anticipate and prepare their future technology portfolio to comply with expected future standards. To do so, we develop a model of optimal technology choice that captures technology diffusion constraints.With this framework, this thesis investigates three policy questions. First, we ask how the form of anticipation can affect near- and long-term technology choices. We find that focusing solely on near-term objectives can lead to failure to comply with a long-term target. In fact, meeting the near-term target is not a necessary nor a sufficient condition to satisfy long-term compliance. Moreover, when there is partial anticipation, as in a myopic view of the future, technology choices will be stuck with low abatement technologies creating a path dependency that limits long-term abatement potential.Second, we ask how much indexing fuel economy standard to mass (as in Europe or China) changes the optimal technology. We show that, for the same emission target, there is no significant difference in the social cost of mobility for an average vehicle with and without mass index. Thus a heavier vehicle fleet has the same cost than a lighter one. However, the technology choices are different, and mass indexed fuel economy standards lead to sidestepping lightweight technologies despite being cost effective from a CO2 emissions abatement point of view.Third, we ask how technology choices change when policies with multiple objectives overlap. We focus on two externalities associated with mobility: CO2 emissions and local air pollution. We show three type of effects of overlapping policies. First, a technology specific policy such as the Zero Emission Vehicle Mandate in combination with a fuel economy standard induces carmakers to develop more expensive green technologies and prevents cheap, dirty technologies from disappearing compared to the case of a fuel economy standard alone. Second, the combination of policies can lead to very high costs when technologies adapted to each policy are very different. Third, we find an ambiguous effect of overlapping policies relative to single-objective policy in terms of emissions performance.",
+                "document_type": "THESE",
+                "publication_date": "2019-09-10",
+                "semantic_rank": 9,
+                "full_text_rank": 200,
+                "associated_query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?"
+              }
+            }
+          },
+          {
+            "id": "3d79b67",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1917,
+              "end": 1926
+            },
+            "payload": null
+          }
+        ],
+        "search_results": [
+          {
+            "id": "332b8017-19fe-58ce-9c80-ab1f739b0464",
+            "document_id": "d86a9cb0-a74b-5789-9db5-4012ac60ebdc",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Stranded assets risk derails Vietnam's plan for new coal power plants\n\nText: industry with a feed in tariff of 9.35 cents per kWh, the  \ngovernment is moving towards auctions to reduce the costs.  \nAccording to  (Jakob Lundsager, Nguyen Ngoc Hung, and  \nMikael  Togeby  2019) ,  by  2030  the  levelized  costs  of  \nelectricity generation from wind and solar energy will be  \nsignificantly lower than those from coal and gas in Vietnam.\niii)  The environmental standards can only get strict er. The \ncapital Hanoi is  into the top three most polluted cities in  \nSoutheast Asia  (Phan 2019).  In 2015, coal power plants  \ncaused less PM2.5 air pollution in Hanoi than agriculture,  \ntransport or industry, but by 2030 the power sector  would \neasily  become  the  leading  source  of  PM2.5  pollution  in  \nHanoi (Amann et al. 2019), if the planned coal plants were  \nopened. The  energy  sector  is  responsible  for  most  of  \nVietnams GHG emissions increase by 320% between 2010  \nand 2030  in its INDCs business as usual scenario .  While",
+            "metadata": {
+              "title": "Stranded assets risk derails Vietnam's plan for new coal power plants",
+              "hal_id": "halshs-02263622",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Stranded assets risk derails Vietnam's plan for new coal power plants. IAEE Energy Forum, 2020, 102, pp.27-29. ⟨halshs-02263622⟩",
+              "source_url": "https://hal.science/halshs-02263622",
+              "chunk_order": 15,
+              "description": "In 2016, Vietnam planned to build a fleet of new coal-fired power plants, expanding capacity to 54.5 GW in 2030, from 13.1 GW in 2015. Three years later, the risk of stranded assets not only made this plan sub-optimal, it also made it infeasible because investors are looking elsewhere.",
+              "document_type": "ART",
+              "publication_date": "2020-01-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?"
+            }
+          },
+          {
+            "id": "3d79b67d-3b5f-543c-94d2-c05b1c23fc8b",
+            "document_id": "703866d3-0ce7-5fb1-9e11-9015fc5e28a6",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Rest in peace Moped, electric scooters are there\n\nText: and systems are required to make the electric vehicles a part of the \nsmart grid. Another problem which remains to be managed is that \nthe most popular models have a lead-acid battery. Lead pollutes, \nespecially in countries where the recycling system is inefficient, \nand each battery contains 10kg of it.\nBut at the city scale, the environmental benefits are clear: the e-\nvehicles are silent and release no exhaust fumes. The advantages \nregarding the local air quality are especially important in Asian \ncapitals, which are the most polluted cities in the world. According \nto our estimates6, a typical gas scooter emits 0.1g of fine \nparticulates per kilometer, or 400g per year. A typical electric \nscooter causes ten times less emissions, in a country like Vietnam \nwhere half of the electricity comes from coal.\nThe market cannot be trusted to produce lighter and cleaner gas \nvehicles. The switch to electric two wheelers and cleaner power \nappears a more powerful way to solve the Asian cities air quality",
+            "metadata": {
+              "title": "Rest in peace Moped, electric scooters are there",
+              "hal_id": "hal-01274178",
+              "authors": "['Minh Ha-Duong']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Rest in peace Moped, electric scooters are there. 2016. ⟨hal-01274178⟩",
+              "source_url": "https://hal.science/hal-01274178",
+              "chunk_order": 9,
+              "description": "In the last decade two-wheeler electric vehicles have been taking over the streets of Asian capitals, to the point that it is time to declare the gas moped commercially dead. Rest in peace",
+              "document_type": "OTHER",
+              "publication_date": "2016-02-12",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?"
+            }
+          },
+          {
+            "id": "068c084f-ebaf-5072-8fbe-a9ea0736e0f3",
+            "document_id": "aa3f1add-b404-54b6-ae87-5e6f32599018",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: The potential for mitigation of CO2 emissions in Vietnam's power sector\n\nText: (3% in coastal zones and 8% in inland areas) by 2070. The typhoon and the intensity of storms are  \nexpected to grow so that 80-90% of populations could potentially be directly affected by typhoons.\nWith regards to local pollution, the air pollution problem in Vietnamese cities is less catastrophic  \nthan in other Asian cities, but is still serious. For example, air pollution caused approximately 22%  \nof cases of chronic pneumonia and one-third of respiratory inflammations in Vietnam during 2001-\n2003 (USAID, 2007). Although the concentrations of SO 2 and NOX in the air of Ha Noi and Ho Chi  \nMinh cities during 1997-2002 were generally below the national levels, they are likely to increase  \ngiven the increase in fossil fuel use, and may soon exceed these levels.\nThere is a conflict in the Vietnamese electricity planning process between increasing capacity in a  \nrapid  and  cost-effective  manner  by  adding  more  coal-fired  power  plants  and  addressing",
+            "metadata": {
+              "title": "The potential for mitigation of CO2 emissions in Vietnam's power sector",
+              "hal_id": "halshs-00441085",
+              "authors": [
+                "Nhan Thanh Nguyen",
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Nhan Thanh Nguyen, Minh Ha-Duong. The potential for mitigation of CO2 emissions in Vietnam's power sector. Fourth GMSARN International Conference: Energy security and climate change problems and issues in GMS, Nov 2009, Ha Long, Vietnam. ⟨halshs-00441085⟩",
+              "source_url": "https://hal.science/halshs-00441085",
+              "chunk_order": 23,
+              "description": "This manuscript examines CO2 emissions from Vietnam's power sector using an expanded Integrated Resource Planning model. The potential effects of the following alternative policy options are examined: energy efficiency, favorably imported generation fuels, nuclear energy, renewable energy, and an internalized positive carbon value. The baseline in terms of cumulative CO2 emissions over 2010-2030 is 3.6 Gt. Lighting energy efficiency improvements offers 14% of no-regret abatement of CO2 emissions. Developing nuclear and renewable energy could help meet the challenges of the increases in electricity demand, the dependence on imported fuels for electricity generation in the context of carbon constraints applied in a developing country. When CO2 costs increase from 1 $/t to 30 $/t, building 10 GW of nuclear generation capacity implies an increase in abatement levels from 24% to 46%. Using renewable energy abates CO2 levels by between 14% and 46%. At 2 $/tCO2, the model predicts an abatement of 0.77 Gt from using wind power at prime locations as well as energy from small hydro, wood residue and wood plantations, suggesting Clean Development Mechanism opportunities. At 10 $/tCO2, the model predicts an abatement of 1.4 Gt when efficient gas plants are substituted for coal generation and when the potential for wind energy is economically developed further than in the former model.",
+              "document_type": "COMM",
+              "publication_date": "2009-11-25",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?"
+            }
+          },
+          {
+            "id": "c4e7aa9d-25c4-5e9a-a272-feded9e46610",
+            "document_id": "d86a9cb0-a74b-5789-9db5-4012ac60ebdc",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Stranded assets risk derails Vietnam's plan for new coal power plants\n\nText: Southeast Asia  (Phan 2019).  In 2015, coal power plants  \ncaused less PM2.5 air pollution in Hanoi than agriculture,  \ntransport or industry, but by 2030 the power sector  would \neasily  become  the  leading  source  of  PM2.5  pollution  in  \nHanoi (Amann et al. 2019), if the planned coal plants were  \nopened. The  energy  sector  is  responsible  for  most  of  \nVietnams GHG emissions increase by 320% between 2010  \nand 2030  in its INDCs business as usual scenario .  While \nVietnams climate change policy has been slow to touch the \nenergy  sector,  cautious  investors  would  assume  that  \nsomething  such  as  an  increasing  Renewable  Portfolio  \nStandards ma, only foury happen within the next few years.\nA global analysis of 6  685 coal plants  (Gray et al. 2018) \nfinds  that  it  is  now  cheaper  to  build  new  renewable  \ngeneration than to run 35 percent of coal plants worldwide.  \nFor  those  companies,  holding  on  to  coal  power  plants",
+            "metadata": {
+              "title": "Stranded assets risk derails Vietnam's plan for new coal power plants",
+              "hal_id": "halshs-02263622",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Stranded assets risk derails Vietnam's plan for new coal power plants. IAEE Energy Forum, 2020, 102, pp.27-29. ⟨halshs-02263622⟩",
+              "source_url": "https://hal.science/halshs-02263622",
+              "chunk_order": 16,
+              "description": "In 2016, Vietnam planned to build a fleet of new coal-fired power plants, expanding capacity to 54.5 GW in 2030, from 13.1 GW in 2015. Three years later, the risk of stranded assets not only made this plan sub-optimal, it also made it infeasible because investors are looking elsewhere.",
+              "document_type": "ART",
+              "publication_date": "2020-01-01",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?"
+            }
+          },
+          {
+            "id": "3aedf126-a11a-5a3b-b0c3-c3fb7d0af954",
+            "document_id": "399b8a5a-bc57-5942-9a4d-b4257a3a6029",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Decoupling urban transport from GHG emissions in Indian cities--A critical review and perspectives\n\nText: Indian cities), it is essential to implement road sh aring policies to accommodating growing numbers of motor \nvehicles while allowing non-motorised modes of transport to continue to flourish in safety and contribute to energy savings, air pollution and noises reduction and public health.   Public policies are needed to restrict excessive car use  in  favour of high-quality public transit system in Indian \ncities. Some experiences can be learnt from other Asian cities such as Singapore and Hong Kong which put in \nplace a comprehensive TMD measures: high purchase tax and licence registration fees (vehicle quota system), \nroad use restriction, Area Licensing Zone which restri cts the access to CBD is comb ined with high taxes and \nparking fees, road pricing system (Poudenx, 2008). However, putting place these in struments requires significant",
+            "metadata": {
+              "doi": "10.1016/j.enpol.2011.03.049",
+              "title": "Decoupling urban transport from GHG emissions in Indian cities--A critical review and perspectives",
+              "hal_id": "hal-00596587",
+              "authors": [
+                "Jun Li"
+              ],
+              "version": "v0",
+              "citation": "Jun Li. Decoupling urban transport from GHG emissions in Indian cities--A critical review and perspectives. Energy Policy, 2011, 39 (6), pp.3503-3514. ⟨10.1016/j.enpol.2011.03.049⟩. ⟨hal-00596587⟩",
+              "source_url": "https://doi.org/10.1016/j.enpol.2011.03.049",
+              "chunk_order": 92,
+              "description": "How to sustain rapid economic and urban growth with minimised detriment to environment is a key challenge for sustainable development and climate change mitigation in developing countries, which face constraints of technical and financial resources scarcity as well as dearth of infrastructure governance capacity. This paper attempts to address this question by investigating the driving forces of transport demand and relevant policy measures that facilitate mitigating GHG emissions in the urban transport sector in Indian cities based on a critical review of the literature. Our overview of existing literature and international experiences suggests that it is critical to improve urban governance in transport infrastructure quality and develop efficient public transport, coupled with integrated land use/transport planning as well as economic instruments. This will allow Indian cities to embark on a sustainable growth pathway by decoupling transport services demand of GHG emissions in the longer term. Appropriate policy instruments need to be selected to reconcile the imperatives of economic and urban growth, aspiration to higher quality of life, improvements in social welfare, urban transportrelated energy consumption and GHG emissions mitigation target in Indian cities.",
+              "document_type": "ART",
+              "publication_date": "2011-04-22",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?"
+            }
+          },
+          {
+            "id": "108be6fc-388c-55b3-8032-aa6601ec9f6a",
+            "document_id": "1a024579-7b5d-580b-93fd-a0fa985e238d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Synthesis Report on Socio-environmental Impacts of Coal and Coal-fired Power Plants in Vietnam\n\nText: Dung announced in January 2016 his governments intention to review development plans\nof all new coal plants and halt any new coal power development. More specifically, mid-\nJanuary 2016, he signalled a reduced role for new coal fired power stations in the countrys\nforthcoming  power  plans  and  an  expanded  role  for  renewable  energy  by  stating  [in\nVietnamese]:\nThere is a need to closely monitor environmental issues, especially in stringent\nmonitoring of coal-fired power plants; to review development plan of all coal-fired\npower plants and halt any new coal power development; to begin replacing coal\nwith natural gas; to responsibly implement all international commitments in cutting\ndown GHG emissions; to accelerate investment in renewable energy, including\nbuilding  market  mechanisms,  encouraging  policies  and  initiatives,  and  attract\ninvestment for solar and wind energy\nIt is not yet clear how and at which speed these policy goals may be implemented. There is",
+            "metadata": {
+              "title": "Synthesis Report on Socio-environmental Impacts of Coal and Coal-fired Power Plants in Vietnam",
+              "hal_id": "hal-01441680",
+              "authors": "['Minh Ha-Duong', 'an Ha Truong', 'Hong Nam Nguyen', 'Hoang Anh Nguyen Trinh']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong, an Ha Truong, Hong Nam Nguyen, Hoang Anh Nguyen Trinh. Synthesis Report on Socio-environmental Impacts of Coal and Coal-fired Power Plants in Vietnam. [Technical Report] Vietnam Sustainable Energy Alliance. 2016. ⟨hal-01441680⟩",
+              "source_url": "https://hal.science/hal-01441680",
+              "chunk_order": 62,
+              "description": "This report shows the impacts of coal mining and coal-based electricity generation on the Vietnamese society and environment. Five impacts categories were examined: water, air and soil pollution, local people’s livelihood and health. We studied impacts now and extrapolated according to Vietnam’s current Power Development Plan –namely PDP VII revised– which prescribes to expand the coal-fired power capacity from about 10 GW today in 2015 to 55 GW by 2030. Results show that coal mining and coal-based electricity generation have high, unsustainable, local impacts. Our studies found that levels of dust in the air systematically exceeded the legal safe standards. So did the level of heavy metals and other toxic pollutants in the water we studied. We observed resettlement issues which were not solved appropriately, and local job creation promises which were not followed up in action. We assess that by 2030, Vietnam’s coal power plants would create 30 million tonnes of coal ash to be disposed. We estimate that the PDP VII entails importing at least 50 million tonnes of coal per year in 2030. This would compromise energy independence, creating national security risks. We argue further that a fivefold expansion of coal power generation capacity is incompatible with the humanity’s goal of stabilizing climate change below 2°C of global warming. In conclusion, we propose engineering and public policy recommendations towards the green growth strategy of Vietnam, which would better integrate the country in the world’s energy transition towards a low carbon society.",
+              "document_type": "REPORT",
+              "publication_date": "2016-06-30",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?"
+            }
+          },
+          {
+            "id": "b00f55aa-2629-5261-8d42-828060391483",
+            "document_id": "f121ae9d-ab87-57a2-b562-86296aabb248",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: L'économie politique des politiques carbone dans les pays en développement. Priorité aux instruments non tarifaires\n\nText: élevée des carburants, les gra ndes villes chinoises polluées mettent en  œuvre des réglementations \nvisant à ce que la part  de véhicules à carburant immatriculés tombe à 0% d'ici 2050, avec  des \nobjectifs i ntermédiaires par exemple de  90% en 2020, 70% en 20 30 et 30% en 2040 , comme à Pékin . \nBien que ce tte mesure soit axée sur la qualit é de l'air, elle a un co -bénéfice important de  réduction \ndes émissions de carbone  par les transports urbains3. \n \nSi l'objectif est d'éliminer progressivement les équipements les plus inefficaces et les plus ém etteurs \ndans les diff érentes catégories d'usage  de l'énergie, l 'interdiction de  long terme  est très efficace  \ngrâce à la clarté du signal , même si , en théorie, elle peut ne pas être efficiente économiqu ement . \nToutefois, les interdictions concernant les équi pements inef ficaces doivent être conçues  de manière \nappropriée en laissant  aux propriétaires de véhicules l e temps de s'adapter et leur accordant des",
+            "metadata": {
+              "title": "L'économie politique des politiques carbone dans les pays en développement. Priorité aux instruments non tarifaires",
+              "hal_id": "hal-02436646",
+              "authors": [
+                "Dominique Finon"
+              ],
+              "version": "v0",
+              "citation": "Dominique Finon. L'économie politique des politiques carbone dans les pays en développement. Priorité aux instruments non tarifaires. Revue d'économie politique, A paraître. ⟨hal-02436646⟩",
+              "source_url": "https://hal.science/hal-02436646",
+              "chunk_order": 51,
+              "description": "L'économie politique des politiques carbone dans les pays en développement. Priorité aux instruments non tarifaires Dominique FINON, Directeur de recherche CNRS émérite Novembre 2019 Soumis à la Revue d'Economie Politique Résumé La tarification du carbone n'est pas appropriée en tant qu'instrument principal des politiques climatiques dans les économies émergents et en développement, du fait des contraintes d'économie politique qui sont plus importantes que celles qui, dans les pays de l'OCDE, rendent déjà délicat l'usage du prix du carbone. Les instruments autres que le prix-normes d'efficacité, régulation baséesur des instruments market-based, subventions aux technologies propres, programmes publics d'infrastructures-doivent être utilisés de préférence à la tarification du carbone pour orienter les choix technologiques et les infrastructures qui sont les principaux moyens de réaliser l'objectif carbone. En outre, même si, en théorie, les ensembles de mesures utilisant des instruments autres que les prix du carbone sont moins efficaces socialement, ils permettent aux gouvernements de contourner les contraintes d'économie politique, car leurs coûts pour les consommateurs et les citoyens sont moins importants, moins visibles et plus circonscrits que les effets de la tarification du carbone, tandis qu'ils ne sont moins régressifs. Mots-clés: politique publique, environnement (changement climatique), pays en développement, taxation, règlementation, redistribution, The political economy of climate policy instruments in developing countries: Priority to non price instrument Summary Carbon pricing might not be appropriate as the main element of the carbon policy package in emerging and developing countries (DCs), because the political economy constraints are greater than in developed countries. Non-price instruments and policies such as efficiency standards, market-oriented regulation, subsidies for clean technologies and public programs involving low carbon infrastructure should be preferentially developed to deal with market and regulatory failures, which are more widespread than in developed countries. These approaches are most effective in orientating technology and infrastructure, the principal means to achieving the mitigation imperative in DCs. Moreover, even if, in theory, policy packages using non-price instruments are less socially efficient than those focused on carbon pricing, they allow governments to circumvent political economy constraints, because their costs to consumers and citizens are not generalized and tend to be much less visible, while their redistributive effects are, if appropriately designed, generally not too regressive.",
+              "document_type": "ART",
+              "publication_date": "2020-01-01",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?"
+            }
+          },
+          {
+            "id": "ffaea038-6602-524c-928c-84abc940c943",
+            "document_id": "bcd76e4e-c525-5b69-9b6c-144d459991e1",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Three scenarios for coal power in Vietnam\n\nText: none is commissioned after the end of 2022. \nThe 13th National Congress in January 2021 \nadapts the Asian concept of ecological \ncivilization as a key goal for Vietnamese \nsociety, and directs the country to accelerate \nthe energy transition. MONRE imposes stricter \npollution control norms, MOF raise fossil fuel \ntaxes and import duties. The National \nAssembly votes a 2021 Renewable Energy Law, \nit enacts Renewable Portfolio Standards also \nfor BOT plants. In application, Prime Ministers \norders MOIT to submit a coal exit plan to be \nintegrated in PDP8 revision. Coal power plants \ncannot operate profitably after 2035, they are decommissioned at 20 years. The coal exit is \ncomplete before 2045.\nTrajectories\nWe simulated the trajectories corresponding \nto these narratives using a table of coal power \ngeneration units in Vietnam, according to the \nMarch 2019 report by EVN4. The thin line above \nthe Blazing Up scenario represents PDP7A \ncoal generation capacity objectives formulated",
+            "metadata": {
+              "title": "Three scenarios for coal power in Vietnam",
+              "hal_id": "halshs-02263898",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Three scenarios for coal power in Vietnam. 2019. ⟨halshs-02263898v2⟩",
+              "source_url": "https://hal.science/halshs-02263898",
+              "chunk_order": 8,
+              "description": "This note offers three narratives about the future of coal based electricity generation in Vietnam. \"Blazing up\" corresponds to the power development plan 7 revised and updated as of March 2019. \"Closed window\" tells what we think would happen under pure market forces. \"Coal peak\" tells what could happen if the State continues to steer the electricity system into the energy transition, decisively and without imposing high costs to stakeholders.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2019-08-07",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?"
+            }
+          },
+          {
+            "id": "193f23dc-f908-551f-a4f6-8445b36062a1",
+            "document_id": "b7ef1927-bf9c-53fa-a74b-de08fff61745",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles\n\nText: 5.4. Discussion and Conclusion 163\npolicy outcomes and promoting solutions that are compatible with a large range of\nobjectives.\nThe overlapping of policies is not limited to two policies, in current markets\nthere are more than two policies on vehicles emissions that can produce less obvious\nimplications. In the French market, three distinctive policies are applied to vehicle\nemissions: a CO 2emission regulation, an Air Quality emission standard and a fee\nand rebate based on CO 2emission. We have not analyzed the combination of three\npolicies, further research should investigate what are the implications of a larger\npolicy package. There are policy announcements that show a willing to transition\nfrom fossil-fuel vehicles to electric vehicles. These policy signals are more severe\npolicy constraints, in France the government plans to ban all ICE vehicles in 2040.\nThe Netherlands and Norway plan to ban the same category of vehicles as early as\n2030 and 2025 respectively.",
+            "metadata": {
+              "title": "Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles",
+              "hal_id": "tel-02435183",
+              "authors": [
+                "Juan Vera Molina"
+              ],
+              "version": "v0",
+              "citation": "Juan Vera Molina. Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles. Economics and Finance. Université Paris Saclay (COmUE), 2019. English. ⟨NNT : 2019SACLA021⟩. ⟨tel-02435183⟩",
+              "source_url": "https://hal.science/tel-02435183",
+              "chunk_order": 815,
+              "description": "Policy instruments on passenger vehicle emissions aim at reducing negative environmental externalities from vehicles use. To regulate CO2 emissions, fuel economy standards have been put in place in Europe and in the US, among others. These standards are made more stringent over time. This thesis analyzes how automotive firms anticipate and prepare their future technology portfolio to comply with expected future standards. To do so, we develop a model of optimal technology choice that captures technology diffusion constraints.With this framework, this thesis investigates three policy questions. First, we ask how the form of anticipation can affect near- and long-term technology choices. We find that focusing solely on near-term objectives can lead to failure to comply with a long-term target. In fact, meeting the near-term target is not a necessary nor a sufficient condition to satisfy long-term compliance. Moreover, when there is partial anticipation, as in a myopic view of the future, technology choices will be stuck with low abatement technologies creating a path dependency that limits long-term abatement potential.Second, we ask how much indexing fuel economy standard to mass (as in Europe or China) changes the optimal technology. We show that, for the same emission target, there is no significant difference in the social cost of mobility for an average vehicle with and without mass index. Thus a heavier vehicle fleet has the same cost than a lighter one. However, the technology choices are different, and mass indexed fuel economy standards lead to sidestepping lightweight technologies despite being cost effective from a CO2 emissions abatement point of view.Third, we ask how technology choices change when policies with multiple objectives overlap. We focus on two externalities associated with mobility: CO2 emissions and local air pollution. We show three type of effects of overlapping policies. First, a technology specific policy such as the Zero Emission Vehicle Mandate in combination with a fuel economy standard induces carmakers to develop more expensive green technologies and prevents cheap, dirty technologies from disappearing compared to the case of a fuel economy standard alone. Second, the combination of policies can lead to very high costs when technologies adapted to each policy are very different. Third, we find an ambiguous effect of overlapping policies relative to single-objective policy in terms of emissions performance.",
+              "document_type": "THESE",
+              "publication_date": "2019-09-10",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?"
+            }
+          },
+          {
+            "id": "daf12237-c880-5530-a304-2d2a8a308443",
+            "document_id": "d86a9cb0-a74b-5789-9db5-4012ac60ebdc",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Stranded assets risk derails Vietnam's plan for new coal power plants\n\nText: same  thing  is  not  likely  to  work  better.  Because  of  the \nstranded assets problem, private and public investors have  \nless  and  less  interest  in  building  coal  power  plants  in \nVietnam.\nSince  investors  recognize  that  the  economic  window  to  \nbuild new coal generation projects in Vietnam is closed,  \nonly  already  permi,  only  fourtted  coal  power  generation  \nunits with a scheduled completion in or before 2025 should  \nbe kept in the next plan. The government can terminate all  \nother projects on the basis of Circular 43  (Trần Tuấn Anh \n2016), since they are late, and relieve investors who are  \nstruggling to obtain financing and the administrative and the  \nsocial licenses to operate.\nWe hope that the 13th National Congress in January 2021  \nwill adapt the Asian concept of ecological civilization as a  key goal for Vietnamese society; leading to stricter pollution  \ncontrol norms; higher fossil fuel taxes and import duties;",
+            "metadata": {
+              "title": "Stranded assets risk derails Vietnam's plan for new coal power plants",
+              "hal_id": "halshs-02263622",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Stranded assets risk derails Vietnam's plan for new coal power plants. IAEE Energy Forum, 2020, 102, pp.27-29. ⟨halshs-02263622⟩",
+              "source_url": "https://hal.science/halshs-02263622",
+              "chunk_order": 22,
+              "description": "In 2016, Vietnam planned to build a fleet of new coal-fired power plants, expanding capacity to 54.5 GW in 2030, from 13.1 GW in 2015. Three years later, the risk of stranded assets not only made this plan sub-optimal, it also made it infeasible because investors are looking elsewhere.",
+              "document_type": "ART",
+              "publication_date": "2020-01-01",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2451,
+            "total_tokens": 2451
+          }
+        }
+      },
+      "duration": 4766
+    },
+    "retrievalTime": 1801,
+    "generationTime": 4766,
+    "timestamp": "2025-07-21T16:10:58.192Z"
+  },
+  "server_context": {
+    "client_ip": "86.238.242.220",
+    "forwarded_for": "86.238.242.220",
+    "received_at": "2025-07-21T16:10:58.326437+00:00",
+    "server_version": "1.0.0"
+  }
+}

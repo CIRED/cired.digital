@@ -1,0 +1,531 @@
+{
+  "sessionId": "session_1752137691874_6v5x52c3w29583f4u",
+  "timestamp": "20250710T094232174Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752140538946_1vjvxbl",
+    "response": {
+      "results": {
+        "generated_answer": "Il était une fois, dans un royaume appelé France, où les maisons et les appartements étaient de plus en plus vieux et gourmands en énergie. Les habitants commençaient à ressentir les effets de cette situation, avec des factures d'énergie de plus en plus élevées et une empreinte carbone qui ne cessait de croître. Le gouvernement, conscient de ces problèmes, décida de lancer une grande aventure : la rénovation énergétique des logements.\n\n### Les Premières Étapes\n\nAu début des années 2000, la France mit en place plusieurs politiques pour encourager les propriétaires à améliorer l'efficacité énergétique de leurs logements. Parmi ces mesures, on trouvait le taux de TVA réduit, le Crédit d'Impôt Développement Durable (CIDD), et l'Eco Prêt à Taux Zéro (EcoPTZ) [4243a0c]. Ces incitations étaient conçues pour aider les ménages à financer les travaux de rénovation.\n\nCependant, malgré ces efforts, les résultats étaient loin des objectifs fixés. Entre 2012 et 2014, seulement entre 60 000 et 75 000 logements étaient rénovés chaque année, selon les données de l'ANAH [ac9f548]. Les statistiques montraient que la France était encore loin de ses ambitions, notamment en raison de la complexité des décisions dans les copropriétés et de la méfiance des propriétaires face aux risques liés aux rénovations [1862624].\n\n### Les Défis et les Progrès\n\nLes données disponibles sur le parc de logements et la dynamique de rénovation énergétique se sont améliorées, mais des imprécisions subsistaient concernant le nombre de passoires thermiques et les flux annuels de rénovation [2d81b3e]. Malgré ces lacunes, les politiques de rénovation énergétique restaient justifiées.\n\nLe gouvernement français fixa des objectifs ambitieux : rénover 500 000 logements par an à partir de 2017 et atteindre un parc immobilier entièrement rénové selon les normes BBC (Bâtiment Basse Consommation) d'ici 2050 [4243a0c]. Pour y parvenir, il fallut combiner des politiques incitatives, réglementaires et d'information, comme le Diagnostic de Performance Energétique (DPE) [cd9a41f].\n\n### Les Résultats et les Perspectives\n\nMalheureusement, le rythme des rénovations était encore insuffisant pour atteindre les objectifs fixés. Des travaux prospectifs montraient que l'élimination totale des logements les moins performants (étiquettes F et G) n'interviendrait qu'en 2040, sous l'hypothèse que les aides existantes soient élargies au parc locatif [56a735d].\n\nCependant, des progrès étaient observés dans le logement social, où la législation imposait la remise à neuf des logements pour abaisser leur consommation énergétique [1862624]. Cette fraction du parc immobilier, plus structurée, avançait plus rapidement que les copropriétés, où la complexité des décisions ralentissait les avancées.\n\n### Conclusion\n\nL'histoire de la rénovation énergétique en France est une aventure en cours, marquée par des défis et des progrès. Les politiques publiques continuent d'évoluer pour encourager les ménages à améliorer l'efficacité énergétique de leurs logements. Avec des objectifs ambitieux et des efforts concertés, la France espère transformer son parc immobilier en un modèle de durabilité et d'efficacité énergétique.\n\nEt ainsi, chers habitants de France, continuez à œuvrer pour un avenir plus vert et plus économe en énergie, car chaque geste compte dans cette grande aventure collective.",
+        "citations": [
+          {
+            "id": "4243a0c",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 764,
+              "end": 773
+            },
+            "payload": {
+              "id": "4243a0c1-65d6-5330-8d1f-a10e8ae5bc62",
+              "document_id": "05cff8a4-8d4a-521a-ac4b-27f9d7c6b7f0",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES\n\nText: 7 \n par rapport à la référence 2012, en visant un objec tif intermédiaire de 20% en 2030 , et de \n disposer dun parc immobilier dont lensemble des  bâtiments sont rénovés en fonction des \nnormes bâtiment basse consommation (BBC) ou assim ilé, à horizon 2050 . Pour ce faire,  la \nFrance se fixe comme objectif de rénover énergétiqu ement 500 000 logements par an à \ncompter de 2017. 13  \nAfin datteindre ces objectifs, la France, tout com me de nombreux pays en proie aux \nmêmes problématiques énergétiques, met en place un ensemble politiques publiques visant à \npromouvoir lefficacité énergétique dans le secteur  résidentiel. Sur le modèle des  Carrots, \nSticks, and Sermons , elle combine des politiques incitatives, telles que le taux de TVA réduit \ndepuis 1999, le Crédit dImpôt Développement Durabl e (CIDD) depuis 2005 ou encore lEco Prêt \nà Taux Zéro (EcoPTZ) depuis 2009, tous trois subven tionnant linvestissement des ménages dans",
+              "metadata": {
+                "title": "ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES",
+                "hal_id": "tel-01618117",
+                "authors": "['Marie-Laure Nauleau']",
+                "version": "v0",
+                "citation": "Marie-Laure Nauleau. ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES. Economics and Finance. EHESS-Paris, 2015. English. ⟨NNT : ⟩. ⟨tel-01618117⟩",
+                "source_url": "https://hal.science/tel-01618117",
+                "chunk_order": 79,
+                "description": "Given the share of the residential sector in households’ energy consumption, residential energy retrofitting is a burning issue in the climate change policy strategy. All the investment barriers faced by households invite us to explore the investment factors and to assess the efficiency of public policies. In a first part, the thesis studies the investment factors by estimating a discrete choice model on data from the French annual “Energy Management” survey conducted by Ademe, particularly focusing on factors heterogeneity among retrofitting types. A second part of the thesis deals with the assessment of public policy promoting energy efficiency, both from the demand and the supply sides of the energy efficiency markets. Regarding the demand side, the thesis uses two complementary methods: an ex-post econometric study focuses on the French tax credit called Crédit d’Impôt Développement Durable implemented in 2005 while an ex-ante study uses a hybrid energy-economy model to compare different policies. Regarding the supply side, given the high degree of concentration on the energy efficiency markets, we use a theoretical model to assess public policy efficiency in the presence of three markets imperfections: the negative externality linked to CO2 and the imperfections of market competition and information inducing price-quality discrimination.",
+                "document_type": "THESE",
+                "publication_date": "2015-06-18",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "raconte une histoire sur la rénovation énergétique des logements en france"
+              }
+            }
+          },
+          {
+            "id": "ac9f548",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1069,
+              "end": 1078
+            },
+            "payload": {
+              "id": "ac9f5486-5354-52c4-b286-4fd268a638cb",
+              "document_id": "05cff8a4-8d4a-521a-ac4b-27f9d7c6b7f0",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016098765432098764,
+              "text": "Document Title: ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES\n\nText: dénergie importantes. Parmi les statistiques sur l es rénovations lourdes, il existe notamment \ncelles du fichier SGFGAS 15 , sur les rénovations bénéficiant du prêt à taux zé ro EcoPTZ et devant \ncombiner plusieurs types de travaux, qui chiffrent entre 30 000 et 80 000 le nombre de \nlogements rénovés par an entre 2009 et 2013 (voir c hapitre 3); celles de lANAH 16 , sur les \nrénovations bénéficiant de ses programmes daides e t soumises à des gains defficacité \nénergétique minimaux, qui chiffrent entre 60 000 et  75 000 le nombre de logements rénovés \npar an entre 2012 et 2014. Daprès lObservatoire P ermanent de lamélioration ENnergétique du \nlogement, le nombre de rénovations thermiques globales  troi s étoiles 17  réalisées en une \nseule fois est de 135 000 en 2011 et de 90 000 en 2 013 (OPEN 2015) . Ces statistiques ne \npermettent pas de quantification précise de la réno vation sur lensemble du parc, notamment \nen raison du cumul possible entre les aides ou du m anque de données sur le logement social.",
+              "metadata": {
+                "title": "ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES",
+                "hal_id": "tel-01618117",
+                "authors": "['Marie-Laure Nauleau']",
+                "version": "v0",
+                "citation": "Marie-Laure Nauleau. ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES. Economics and Finance. EHESS-Paris, 2015. English. ⟨NNT : ⟩. ⟨tel-01618117⟩",
+                "source_url": "https://hal.science/tel-01618117",
+                "chunk_order": 85,
+                "description": "Given the share of the residential sector in households’ energy consumption, residential energy retrofitting is a burning issue in the climate change policy strategy. All the investment barriers faced by households invite us to explore the investment factors and to assess the efficiency of public policies. In a first part, the thesis studies the investment factors by estimating a discrete choice model on data from the French annual “Energy Management” survey conducted by Ademe, particularly focusing on factors heterogeneity among retrofitting types. A second part of the thesis deals with the assessment of public policy promoting energy efficiency, both from the demand and the supply sides of the energy efficiency markets. Regarding the demand side, the thesis uses two complementary methods: an ex-post econometric study focuses on the French tax credit called Crédit d’Impôt Développement Durable implemented in 2005 while an ex-ante study uses a hybrid energy-economy model to compare different policies. Regarding the supply side, given the high degree of concentration on the energy efficiency markets, we use a theoretical model to assess public policy efficiency in the presence of three markets imperfections: the negative externality linked to CO2 and the imperfections of market competition and information inducing price-quality discrimination.",
+                "document_type": "THESE",
+                "publication_date": "2015-06-18",
+                "semantic_rank": 4,
+                "full_text_rank": 200,
+                "associated_query": "raconte une histoire sur la rénovation énergétique des logements en france"
+              }
+            }
+          },
+          {
+            "id": "1862624",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1305,
+              "end": 1314
+            },
+            "payload": {
+              "id": "1862624f-4be4-55c6-8bcf-abfafef9b42e",
+              "document_id": "e35504f5-4edd-58f5-8b59-7be0771edef8",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01503448275862069,
+              "text": "Document Title: Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique\n\nText: linstauration de mécanismes de tiers-financement, \nne suffisent pas à atténuer suffisamment laversion \nau risque des propriétaires de maisons individuelles \net de logements en copropriétés pour ces réova-tions ambitieuses. \nLe rythme de transition est bien supérieur dans \nle logement social. Ceci est cohérent avec la lé-\ngislation française imposant la remise à neuf de \ntous les logements sociaux en vue dabaisser à \n150 kWh/m2/an la consommation énergétique des \nlogements consommant actuellement plus de 230 \nkWh/m2/an dici 20208. Ajoutons que cette fraction \ndu parc immobilier est aussi la plus structurée et nest donc pas confrontée aux mêmes défis que les \ncopropriétés, pour lesquelles la complexité de la \nprise de décision ralentit fortement les avancées.\nLes graphiques sur les pages 14 et 15 représen-\ntent les transitions des classes énergétiques et \nlévolution du mix énergétique du parc immobilier \nexistant et neuf respectivement dans les maisons \nindividuelles, les logements sociaux, les coproprié-",
+              "metadata": {
+                "title": "Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique",
+                "hal_id": "halshs-00797980",
+                "authors": [
+                  "Ruben Bibas",
+                  "Sandrine Mathy",
+                  "Meike Fink"
+                ],
+                "version": "v0",
+                "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique. 2012. ⟨halshs-00797980⟩",
+                "source_url": "https://hal.science/halshs-00797980",
+                "chunk_order": 92,
+                "description": "Cet article trouve son origine dans un double constat : le déficit d'acceptabilité des politiques climatiques d'une part et le déficit de crédibilité, de légitimité et d'appropriation des scénarios de réduction d'émission de gaz à effet de serre d'autre part. Pour répondre à ces limites, nous avons élaboré, au travers d'une concertation associant une cinquantaine de parties prenantes et une cinquantaine d'experts sectoriels, un processus de co-construction d'un scénario \" acceptable \" de réduction des émissions de CO2. Les parties prenantes ont sélectionné les politiques et les mesures qu'ils considèrent comme acceptables. Celles-ci ont également contribué largement à la méthodologie d'élaboration du scénario par la définition d'un cahier des charges qui inclut la nécessaire transparence des données, des tests de sensibilité et la nécessité d'expliciter certains types d'impacts économiques et financiers nécessaires à l'évaluation des trajectoires facteur 4. L'ensemble des politiques considérées comme acceptables est intégré dans le modèle technico-économique Imaclim-R France. Cette plateforme de modélisation adaptée au dialogue entre modélisateurs et partie prenantes ou experts, évalue les impacts sociaux, économiques et financiers de politiques climatiques. Cet exercice de co-construction de scénario fondé sur la concertation alimentant les paramètres d'un modèle technico-économique, fournit une preuve méthodologique par l'exemple qu'un tel processus peut être mis en place. Le scénario reposant sur les politiques et mesures que les parties prenantes considèrent comme acceptables permet de réduire de 68% les émissions de CO2 en 2050 par rapport à 1990, résultat proche de l'objectif de Facteur 4 (soit 75%). Les mesures de réduction des émissions, dont la plus emblématique est la taxe carbone, sont bénéfiques pour l'emploi et la croissance économique, sauf à court terme. Elles permettent en outre de réduire rapidement et durablement le budget des ménages dédié aux services énergétiques. Enfin, le bilan financier agrégé des mesures s'avère positif dès le début de la période. Ce résultat constitue un socle solide sur lequel construire l'acceptabilité des trajectoires Facteur 4.",
+                "document_type": "REPORT",
+                "publication_date": "2012-03-01",
+                "semantic_rank": 8,
+                "full_text_rank": 200,
+                "associated_query": "raconte une histoire sur la rénovation énergétique des logements en france"
+              }
+            }
+          },
+          {
+            "id": "2d81b3e",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1572,
+              "end": 1581
+            },
+            "payload": {
+              "id": "2d81b3e8-e1f3-5d72-99d5-57314c092866",
+              "document_id": "50fbff88-d757-5a4e-ba84-e2b597916f44",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015818181818181818,
+              "text": "Document Title: La difficile quantification de la place du bâtiment dans la décarbonation\n\nText: France. Les données disponibles sur le parc de logements et la dynamique \nde rénovation énergétique se sont grandement améliorées ces dernières an -\nnées, mais se heurtent encore à des imprécisions concernant le nombre de \npassoires thermiques, les flux annuels de rénovation et lampleur des éco -\nnomies dénergie réalisées. Si ces lacunes ne permettent pas de répondre \nprécisément à la question posée, elles ne remettent pas pour autant en cause \nle bien-fondé des politiques de rénovation énergétique.\nEnergy efficiency improvements are notoriously slow in the construction sector, \ndespite claims that opportunities to reduce emissions are abundant and inex -\npensive. Should we therefore focus on improving building envelopes or decar -\nbonizing energy carriers? Here, we review the available data to answer these \nquestions, focusing on the residential sector, which accounts for about 25% of \nfinal energy consumption in France. Knowledge of the housing stock and dy -",
+              "metadata": {
+                "title": "La difficile quantification de la place du bâtiment dans la décarbonation",
+                "hal_id": "hal-03946309",
+                "authors": [
+                  "Louis-Gaëtan Giraudet",
+                  "Lucas Vivier"
+                ],
+                "version": "v0",
+                "citation": "Louis-Gaëtan Giraudet, Lucas Vivier. La difficile quantification de la place du bâtiment dans la décarbonation. Transitions. Les nouvelles Annales des Ponts et Chaussées, 2022, Bâtiments et construction en transition, 2, pp.12-19. ⟨hal-03946309⟩",
+                "source_url": "https://hal.science/hal-03946309",
+                "chunk_order": 2,
+                "description": "Les progrès d’amélioration énergétique des bâtiments semblent relativement lents, en dépit d’opportunités de réduction des émissions de gaz à effet supposées abondantes et peu coûteuses. Dès lors, vaut-il mieux insister sur l’amélioration de l’efficacité énergétique ou sur la décarbonation des vecteurs d’énergie ? Cet article présente l’état des connaissances pour le secteur résidentiel, qui représente environ 25 % de la consommation d’énergie totale en France. Les données disponibles sur le parc de logements et la dynamique de rénovation énergétique se sont grandement améliorées ces dernières années, mais se heurtent encore à des imprécisions concernant le nombre de « passoires thermiques », les flux annuels de rénovation et l’ampleur des économies d’énergie réalisées. Si ces lacunes ne permettent pas de répondre précisément à la question posée, elles ne remettent pas pour autant en cause le bien-fondé des politiques de rénovation énergétique.",
+                "document_type": "ART",
+                "publication_date": "2022-12-01",
+                "semantic_rank": 5,
+                "full_text_rank": 200,
+                "associated_query": "raconte une histoire sur la rénovation énergétique des logements en france"
+              }
+            }
+          },
+          {
+            "id": "4243a0c",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1886,
+              "end": 1895
+            },
+            "payload": null
+          },
+          {
+            "id": "cd9a41f",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2047,
+              "end": 2056
+            },
+            "payload": {
+              "id": "cd9a41fd-d6e1-589b-903c-6ed18d641b08",
+              "document_id": "05cff8a4-8d4a-521a-ac4b-27f9d7c6b7f0",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES\n\nText: la rénovation énergétique; des politiques réglement aires, telles que la nouvelle réglementation \nthermique sur les constructions neuves (2012); et d es politiques dinformation, telles que le \nDiagnostic de Performance Energétique (DPE), label informant sur lefficacité énergétique du \nlogement (obligatoire à la vente depuis 2006 et à l a location depuis 2007), ou la mise en place \ndun guichet unique pour simplifier la recherche d information des ménages (numéro vert de \nlADEME depuis 2013).  \nOr, au vu des statistiques sur les consommations én ergétiques résidentielles ou sur la \nrénovation énergétique, il semble que la France soi t encore loin datteindre ses objectifs. Le \nCentre dEtudes et de Recherches sur lEnergie (CER EN) publie chaque année les niveaux de \nconsommations énergétiques résidentielles. En 5 ans , sur la période 2008/2012, les \nconsommations dénergie du parc des résidences prin cipales nont diminué que de 7%, 10% si",
+              "metadata": {
+                "title": "ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES",
+                "hal_id": "tel-01618117",
+                "authors": "['Marie-Laure Nauleau']",
+                "version": "v0",
+                "citation": "Marie-Laure Nauleau. ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES. Economics and Finance. EHESS-Paris, 2015. English. ⟨NNT : ⟩. ⟨tel-01618117⟩",
+                "source_url": "https://hal.science/tel-01618117",
+                "chunk_order": 81,
+                "description": "Given the share of the residential sector in households’ energy consumption, residential energy retrofitting is a burning issue in the climate change policy strategy. All the investment barriers faced by households invite us to explore the investment factors and to assess the efficiency of public policies. In a first part, the thesis studies the investment factors by estimating a discrete choice model on data from the French annual “Energy Management” survey conducted by Ademe, particularly focusing on factors heterogeneity among retrofitting types. A second part of the thesis deals with the assessment of public policy promoting energy efficiency, both from the demand and the supply sides of the energy efficiency markets. Regarding the demand side, the thesis uses two complementary methods: an ex-post econometric study focuses on the French tax credit called Crédit d’Impôt Développement Durable implemented in 2005 while an ex-ante study uses a hybrid energy-economy model to compare different policies. Regarding the supply side, given the high degree of concentration on the energy efficiency markets, we use a theoretical model to assess public policy efficiency in the presence of three markets imperfections: the negative externality linked to CO2 and the imperfections of market competition and information inducing price-quality discrimination.",
+                "document_type": "THESE",
+                "publication_date": "2015-06-18",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "raconte une histoire sur la rénovation énergétique des logements en france"
+              }
+            }
+          },
+          {
+            "id": "56a735d",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2421,
+              "end": 2430
+            },
+            "payload": {
+              "id": "56a735d1-77b7-5f6f-b705-6446be4d27b9",
+              "document_id": "29cf713f-6c5c-5afb-98dc-7ea4463b9ccc",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.0147909604519774,
+              "text": "Document Title: Taxe carbone, le retour, à quelles conditions ?\n\nText: transition écologique .  \n \nDans le logement, l e rythme actuel des rénovations énergétiques , et surtout lampleur des \ntravaux réalisés sont insuffisants pour atteindre les objectifs fixés par le gouvernement, qui \nvise léradication des logements  les moins performants (étiquettes énergétiques F et G) dici \n2025\n34. Des travaux prospectifs montrent que leur diminution pourrait atteindre -75 % en 2025 \nmais que leur élimination totale n'interviendrait qu'en 2040, sous lhypothèse que les aides \nexistant es soient élargies au parc locatif35. Dune part, il sagirait daugmenter le montant des \naides pour les rénovations performantes  ainsi que de donner accès à des éco- prêts à taux \nzéro ou réduit36. Dautre part, i l sagirait de rendre obligatoire la rénovation énergétique pour \n                                                        \n32 Le chèque énergie est un dispositif de lutte contre la précarité énergétique mis en place en 2018 et",
+              "metadata": {
+                "title": "Taxe carbone, le retour, à quelles conditions ?",
+                "hal_id": "hal-03403204",
+                "authors": "['Audrey Berry', 'Eloi Laurent']",
+                "version": "v0",
+                "citation": "Audrey Berry, Eloi Laurent. Taxe carbone, le retour, à quelles conditions ?. 2019. ⟨hal-03403204⟩",
+                "source_url": "https://hal.science/hal-03403204",
+                "chunk_order": 100,
+                "description": "La perspective d’une reprise de la hausse de la fiscalité carbone française, suspendue en décembre 2018, s’est précisée à l’occasion du « grand débat national » et plusieurs propositions d’amélioration du dispositif existant ont été avancées dans le débat public, visant en particulier sa dimension sociale. Nous proposons à notre tour dans cet article une nouvelle fiscalité carbone, dénommée « contribution climat anti-pauvreté énergétique », que nous inscrivons dans son cadre écologique, social, juridique et politique. Nous commençons par formuler, à la lumière des trois échecs successifs de 2001, 2010 et 2018, quatre critères de réussite d’une fiscalité carbone : son efficacité écologique, sa justice sociale, sa conformité juridique et enfin son acceptabilité politique. Nous détaillons ensuite pour chaque critère les modalités que nous envisageons afin d’assurer la réussite de notre proposition. Répondant notamment aux revendications de justice sociale et d’équité fiscale du mouvement des « gilets jaunes », la fiscalité carbone que nous proposons permettrait à 50% des ménages français de recevoir plus qu’ils ne paient, les recettes additionnelles dégagées permettant de réduire considérablement la précarité énergétique qui touche des millions de Français.",
+                "document_type": "UNDEFINED",
+                "publication_date": "2019-04-01",
+                "semantic_rank": 9,
+                "full_text_rank": 200,
+                "associated_query": "raconte une histoire sur la rénovation énergétique des logements en france"
+              }
+            }
+          },
+          {
+            "id": "1862624",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 2600,
+              "end": 2609
+            },
+            "payload": null
+          }
+        ],
+        "search_results": [
+          {
+            "id": "47d73d0a-73fd-5b06-bd77-e1a8611ad3a2",
+            "document_id": "05cff8a4-8d4a-521a-ac4b-27f9d7c6b7f0",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES\n\nText: par an entre 2012 et 2014. Daprès lObservatoire P ermanent de lamélioration ENnergétique du \nlogement, le nombre de rénovations thermiques globales  troi s étoiles 17  réalisées en une \nseule fois est de 135 000 en 2011 et de 90 000 en 2 013 (OPEN 2015) . Ces statistiques ne \npermettent pas de quantification précise de la réno vation sur lensemble du parc, notamment \nen raison du cumul possible entre les aides ou du m anque de données sur le logement social. \nElles montrent néanmoins que lon est loin des obje ctifs fixés, dautant plus que lactuel projet \nde loi vise des rénovations permettant datteindre des niveaux de performance BBC, ce qui est \nloin dêtre le cas pour la très grande majorité des  travaux réalisés. \nLe double constat dun volontarisme politique dans la mise en œuvre de programmes \nvisant à promouvoir linvestissement dans lefficac ité énergétique des logements et de la \nfaiblesse des résultats au vu des objectifs fixés a mène à sinterroger sur la pertinence et",
+            "metadata": {
+              "title": "ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES",
+              "hal_id": "tel-01618117",
+              "authors": "['Marie-Laure Nauleau']",
+              "version": "v0",
+              "citation": "Marie-Laure Nauleau. ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES. Economics and Finance. EHESS-Paris, 2015. English. ⟨NNT : ⟩. ⟨tel-01618117⟩",
+              "source_url": "https://hal.science/tel-01618117",
+              "chunk_order": 86,
+              "description": "Given the share of the residential sector in households’ energy consumption, residential energy retrofitting is a burning issue in the climate change policy strategy. All the investment barriers faced by households invite us to explore the investment factors and to assess the efficiency of public policies. In a first part, the thesis studies the investment factors by estimating a discrete choice model on data from the French annual “Energy Management” survey conducted by Ademe, particularly focusing on factors heterogeneity among retrofitting types. A second part of the thesis deals with the assessment of public policy promoting energy efficiency, both from the demand and the supply sides of the energy efficiency markets. Regarding the demand side, the thesis uses two complementary methods: an ex-post econometric study focuses on the French tax credit called Crédit d’Impôt Développement Durable implemented in 2005 while an ex-ante study uses a hybrid energy-economy model to compare different policies. Regarding the supply side, given the high degree of concentration on the energy efficiency markets, we use a theoretical model to assess public policy efficiency in the presence of three markets imperfections: the negative externality linked to CO2 and the imperfections of market competition and information inducing price-quality discrimination.",
+              "document_type": "THESE",
+              "publication_date": "2015-06-18",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique des logements en france"
+            }
+          },
+          {
+            "id": "cd9a41fd-d6e1-589b-903c-6ed18d641b08",
+            "document_id": "05cff8a4-8d4a-521a-ac4b-27f9d7c6b7f0",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES\n\nText: la rénovation énergétique; des politiques réglement aires, telles que la nouvelle réglementation \nthermique sur les constructions neuves (2012); et d es politiques dinformation, telles que le \nDiagnostic de Performance Energétique (DPE), label informant sur lefficacité énergétique du \nlogement (obligatoire à la vente depuis 2006 et à l a location depuis 2007), ou la mise en place \ndun guichet unique pour simplifier la recherche d information des ménages (numéro vert de \nlADEME depuis 2013).  \nOr, au vu des statistiques sur les consommations én ergétiques résidentielles ou sur la \nrénovation énergétique, il semble que la France soi t encore loin datteindre ses objectifs. Le \nCentre dEtudes et de Recherches sur lEnergie (CER EN) publie chaque année les niveaux de \nconsommations énergétiques résidentielles. En 5 ans , sur la période 2008/2012, les \nconsommations dénergie du parc des résidences prin cipales nont diminué que de 7%, 10% si",
+            "metadata": {
+              "title": "ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES",
+              "hal_id": "tel-01618117",
+              "authors": "['Marie-Laure Nauleau']",
+              "version": "v0",
+              "citation": "Marie-Laure Nauleau. ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES. Economics and Finance. EHESS-Paris, 2015. English. ⟨NNT : ⟩. ⟨tel-01618117⟩",
+              "source_url": "https://hal.science/tel-01618117",
+              "chunk_order": 81,
+              "description": "Given the share of the residential sector in households’ energy consumption, residential energy retrofitting is a burning issue in the climate change policy strategy. All the investment barriers faced by households invite us to explore the investment factors and to assess the efficiency of public policies. In a first part, the thesis studies the investment factors by estimating a discrete choice model on data from the French annual “Energy Management” survey conducted by Ademe, particularly focusing on factors heterogeneity among retrofitting types. A second part of the thesis deals with the assessment of public policy promoting energy efficiency, both from the demand and the supply sides of the energy efficiency markets. Regarding the demand side, the thesis uses two complementary methods: an ex-post econometric study focuses on the French tax credit called Crédit d’Impôt Développement Durable implemented in 2005 while an ex-ante study uses a hybrid energy-economy model to compare different policies. Regarding the supply side, given the high degree of concentration on the energy efficiency markets, we use a theoretical model to assess public policy efficiency in the presence of three markets imperfections: the negative externality linked to CO2 and the imperfections of market competition and information inducing price-quality discrimination.",
+              "document_type": "THESE",
+              "publication_date": "2015-06-18",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique des logements en france"
+            }
+          },
+          {
+            "id": "860fbf98-c1d2-5404-af13-201c893abd5c",
+            "document_id": "ff96cb05-8dab-5c25-9bda-53cf508d2490",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle\n\nText: faveur du développement durable : Une résidence principale su r sept rénovée entre 2005 et 2008 , INSEE \nPREMIERE , n1316 \nJaccard, M., M. Dennis, 2006, Estimating home energy decision parameters for a hybrid energy -economy \npolicy model, Environmental Modeling and Assessment , 11(2):91-100 \nJacquot, A., 2007,  La demande potentielle de logements: un chiffrage à lhorizon 2020  , Notes de synthèse \ndu SESP , n165, 41-48 \nJaffe, A.B., R.N. Stavins, 1994, Energy -efficiency investments and public policy, The Energy Journal , 15(2):43-\n65 \nLagandré, E., 2006,  Lamélioration énergétique des logements existants. Le rôle des artis ans dans \nlinformation de leurs clients  , Les Annales de la recherche urbaine , n103, pp. 95-99 \nLagandré, E., D. Marchio, P. Rivière, M. Jorio, 2010,  Quels niveaux de per formance pour la rénovation \nénergétique ? Un détour conceptuel pour éclairer les débats , Revue de lénergie , 598:392-397",
+            "metadata": {
+              "title": "Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle",
+              "hal_id": "tel-00599374",
+              "authors": [
+                "Louis-Gaëtan Giraudet"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet. Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle. Economies et finances. Université Paris-Est, 2011. Français. ⟨NNT : 2011PEST1139⟩. ⟨tel-00599374v2⟩",
+              "source_url": "https://hal.science/tel-00599374",
+              "chunk_order": 559,
+              "description": "Cette thèse évalue l'efficacité de différentes formes de taxes, subventions et réglementations mises en place pour corriger les défaillances de marché qui s'opposent aux économies d'énergie. Elle mobilise plusieurs approches, selon un degré de complexité croissant. Dans un premier temps, un modèle microéconomique standard est développé pour comparer les performances statiques des différents instruments. Dans un deuxième temps, la représentation des comportements des consommateurs est approfondie dans un modèle de prospective de la consommation d'énergie pour le chauffage des ménages français, qui permet d'identifier les mécanismes dynamiques par lesquels les instruments peuvent corriger les principales défaillances de marché. Dans un troisième temps, une évaluation empirique des dispositifs de « certificats blancs » – obligations échangeables d'économies d'énergie imposées aux opérateurs énergétiques – est menée à partir d'une comparaison des expériences britannique, italienne et française, en intégrant les institutions dans l'analyse. Le croisement de ces différentes approches montre que : (i) les taxes sur l'énergie, qui encouragent à la fois l'investissement dans l'efficacité énergétique et la sobriété des comportements, sont particulièrement efficaces ; (ii) les réglementations sur l'efficacité énergétique ont un impact significatif sur la diffusion des technologies efficaces ; (iii) les subventions à l'efficacité énergétique génèrent un effet rebond important ; (iv) en fonction de l'environnement institutionnel dans lequel ils s'insèrent, les « certificats blancs » combinent les propriétés de ces instruments. Appliquée en France au secteur du bâtiment résidentiel, la combinaison la plus efficace de ces instruments ne permet pas d'atteindre les objectifs d'économies d'énergie définis dans le cadre du Grenelle de l'environnement",
+              "document_type": "THESE",
+              "publication_date": "2011-03-28",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique des logements en france"
+            }
+          },
+          {
+            "id": "ac9f5486-5354-52c4-b286-4fd268a638cb",
+            "document_id": "05cff8a4-8d4a-521a-ac4b-27f9d7c6b7f0",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES\n\nText: dénergie importantes. Parmi les statistiques sur l es rénovations lourdes, il existe notamment \ncelles du fichier SGFGAS 15 , sur les rénovations bénéficiant du prêt à taux zé ro EcoPTZ et devant \ncombiner plusieurs types de travaux, qui chiffrent entre 30 000 et 80 000 le nombre de \nlogements rénovés par an entre 2009 et 2013 (voir c hapitre 3); celles de lANAH 16 , sur les \nrénovations bénéficiant de ses programmes daides e t soumises à des gains defficacité \nénergétique minimaux, qui chiffrent entre 60 000 et  75 000 le nombre de logements rénovés \npar an entre 2012 et 2014. Daprès lObservatoire P ermanent de lamélioration ENnergétique du \nlogement, le nombre de rénovations thermiques globales  troi s étoiles 17  réalisées en une \nseule fois est de 135 000 en 2011 et de 90 000 en 2 013 (OPEN 2015) . Ces statistiques ne \npermettent pas de quantification précise de la réno vation sur lensemble du parc, notamment \nen raison du cumul possible entre les aides ou du m anque de données sur le logement social.",
+            "metadata": {
+              "title": "ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES",
+              "hal_id": "tel-01618117",
+              "authors": "['Marie-Laure Nauleau']",
+              "version": "v0",
+              "citation": "Marie-Laure Nauleau. ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES. Economics and Finance. EHESS-Paris, 2015. English. ⟨NNT : ⟩. ⟨tel-01618117⟩",
+              "source_url": "https://hal.science/tel-01618117",
+              "chunk_order": 85,
+              "description": "Given the share of the residential sector in households’ energy consumption, residential energy retrofitting is a burning issue in the climate change policy strategy. All the investment barriers faced by households invite us to explore the investment factors and to assess the efficiency of public policies. In a first part, the thesis studies the investment factors by estimating a discrete choice model on data from the French annual “Energy Management” survey conducted by Ademe, particularly focusing on factors heterogeneity among retrofitting types. A second part of the thesis deals with the assessment of public policy promoting energy efficiency, both from the demand and the supply sides of the energy efficiency markets. Regarding the demand side, the thesis uses two complementary methods: an ex-post econometric study focuses on the French tax credit called Crédit d’Impôt Développement Durable implemented in 2005 while an ex-ante study uses a hybrid energy-economy model to compare different policies. Regarding the supply side, given the high degree of concentration on the energy efficiency markets, we use a theoretical model to assess public policy efficiency in the presence of three markets imperfections: the negative externality linked to CO2 and the imperfections of market competition and information inducing price-quality discrimination.",
+              "document_type": "THESE",
+              "publication_date": "2015-06-18",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique des logements en france"
+            }
+          },
+          {
+            "id": "2d81b3e8-e1f3-5d72-99d5-57314c092866",
+            "document_id": "50fbff88-d757-5a4e-ba84-e2b597916f44",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: La difficile quantification de la place du bâtiment dans la décarbonation\n\nText: France. Les données disponibles sur le parc de logements et la dynamique \nde rénovation énergétique se sont grandement améliorées ces dernières an -\nnées, mais se heurtent encore à des imprécisions concernant le nombre de \npassoires thermiques, les flux annuels de rénovation et lampleur des éco -\nnomies dénergie réalisées. Si ces lacunes ne permettent pas de répondre \nprécisément à la question posée, elles ne remettent pas pour autant en cause \nle bien-fondé des politiques de rénovation énergétique.\nEnergy efficiency improvements are notoriously slow in the construction sector, \ndespite claims that opportunities to reduce emissions are abundant and inex -\npensive. Should we therefore focus on improving building envelopes or decar -\nbonizing energy carriers? Here, we review the available data to answer these \nquestions, focusing on the residential sector, which accounts for about 25% of \nfinal energy consumption in France. Knowledge of the housing stock and dy -",
+            "metadata": {
+              "title": "La difficile quantification de la place du bâtiment dans la décarbonation",
+              "hal_id": "hal-03946309",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Lucas Vivier"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Lucas Vivier. La difficile quantification de la place du bâtiment dans la décarbonation. Transitions. Les nouvelles Annales des Ponts et Chaussées, 2022, Bâtiments et construction en transition, 2, pp.12-19. ⟨hal-03946309⟩",
+              "source_url": "https://hal.science/hal-03946309",
+              "chunk_order": 2,
+              "description": "Les progrès d’amélioration énergétique des bâtiments semblent relativement lents, en dépit d’opportunités de réduction des émissions de gaz à effet supposées abondantes et peu coûteuses. Dès lors, vaut-il mieux insister sur l’amélioration de l’efficacité énergétique ou sur la décarbonation des vecteurs d’énergie ? Cet article présente l’état des connaissances pour le secteur résidentiel, qui représente environ 25 % de la consommation d’énergie totale en France. Les données disponibles sur le parc de logements et la dynamique de rénovation énergétique se sont grandement améliorées ces dernières années, mais se heurtent encore à des imprécisions concernant le nombre de « passoires thermiques », les flux annuels de rénovation et l’ampleur des économies d’énergie réalisées. Si ces lacunes ne permettent pas de répondre précisément à la question posée, elles ne remettent pas pour autant en cause le bien-fondé des politiques de rénovation énergétique.",
+              "document_type": "ART",
+              "publication_date": "2022-12-01",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique des logements en france"
+            }
+          },
+          {
+            "id": "c03e3854-df4a-52e2-9de2-9aea13aafacf",
+            "document_id": "50fbff88-d757-5a4e-ba84-e2b597916f44",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: La difficile quantification de la place du bâtiment dans la décarbonation\n\nText: tif sur lamélioration de lefficacité énergétique \ndes bâtiments ou sur la décarbonation des vec -\nteurs dénergie? Il reste aujourdhui difficile \nde répondre à cette question, en raison, no -\ntamment, dimprécisions dans les données de \nstock de bâtiments et de flux de rénovation éner -\ngétique. Nous dressons ici un état des lieux des \ndonnées disponibles, en mettant en exergue \nles possibilités de modélisation ouvertes par \nles progrès récents et les points damélioration \nrestants. Nous nous concentrons sur le volet \nrésidentiel, qui représente les deux tiers de la \nconsommation dénergie du secteur du bâti -\nment, lui-même représentant plus de 40 % de la \nconsommation dénergie totale en France1.\nLe stock de logements\nLa performance énergétique du parc de loge -\nments est aujourdhui finement décrite grâce \nà trois vagues de recensement réalisées au \ncours des quinze dernières années. Une in -\ncertitude importante demeure néanmoins \nquant au nombre de passoires thermiques",
+            "metadata": {
+              "title": "La difficile quantification de la place du bâtiment dans la décarbonation",
+              "hal_id": "hal-03946309",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Lucas Vivier"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Lucas Vivier. La difficile quantification de la place du bâtiment dans la décarbonation. Transitions. Les nouvelles Annales des Ponts et Chaussées, 2022, Bâtiments et construction en transition, 2, pp.12-19. ⟨hal-03946309⟩",
+              "source_url": "https://hal.science/hal-03946309",
+              "chunk_order": 8,
+              "description": "Les progrès d’amélioration énergétique des bâtiments semblent relativement lents, en dépit d’opportunités de réduction des émissions de gaz à effet supposées abondantes et peu coûteuses. Dès lors, vaut-il mieux insister sur l’amélioration de l’efficacité énergétique ou sur la décarbonation des vecteurs d’énergie ? Cet article présente l’état des connaissances pour le secteur résidentiel, qui représente environ 25 % de la consommation d’énergie totale en France. Les données disponibles sur le parc de logements et la dynamique de rénovation énergétique se sont grandement améliorées ces dernières années, mais se heurtent encore à des imprécisions concernant le nombre de « passoires thermiques », les flux annuels de rénovation et l’ampleur des économies d’énergie réalisées. Si ces lacunes ne permettent pas de répondre précisément à la question posée, elles ne remettent pas pour autant en cause le bien-fondé des politiques de rénovation énergétique.",
+              "document_type": "ART",
+              "publication_date": "2022-12-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique des logements en france"
+            }
+          },
+          {
+            "id": "4243a0c1-65d6-5330-8d1f-a10e8ae5bc62",
+            "document_id": "05cff8a4-8d4a-521a-ac4b-27f9d7c6b7f0",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES\n\nText: 7 \n par rapport à la référence 2012, en visant un objec tif intermédiaire de 20% en 2030 , et de \n disposer dun parc immobilier dont lensemble des  bâtiments sont rénovés en fonction des \nnormes bâtiment basse consommation (BBC) ou assim ilé, à horizon 2050 . Pour ce faire,  la \nFrance se fixe comme objectif de rénover énergétiqu ement 500 000 logements par an à \ncompter de 2017. 13  \nAfin datteindre ces objectifs, la France, tout com me de nombreux pays en proie aux \nmêmes problématiques énergétiques, met en place un ensemble politiques publiques visant à \npromouvoir lefficacité énergétique dans le secteur  résidentiel. Sur le modèle des  Carrots, \nSticks, and Sermons , elle combine des politiques incitatives, telles que le taux de TVA réduit \ndepuis 1999, le Crédit dImpôt Développement Durabl e (CIDD) depuis 2005 ou encore lEco Prêt \nà Taux Zéro (EcoPTZ) depuis 2009, tous trois subven tionnant linvestissement des ménages dans",
+            "metadata": {
+              "title": "ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES",
+              "hal_id": "tel-01618117",
+              "authors": "['Marie-Laure Nauleau']",
+              "version": "v0",
+              "citation": "Marie-Laure Nauleau. ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES. Economics and Finance. EHESS-Paris, 2015. English. ⟨NNT : ⟩. ⟨tel-01618117⟩",
+              "source_url": "https://hal.science/tel-01618117",
+              "chunk_order": 79,
+              "description": "Given the share of the residential sector in households’ energy consumption, residential energy retrofitting is a burning issue in the climate change policy strategy. All the investment barriers faced by households invite us to explore the investment factors and to assess the efficiency of public policies. In a first part, the thesis studies the investment factors by estimating a discrete choice model on data from the French annual “Energy Management” survey conducted by Ademe, particularly focusing on factors heterogeneity among retrofitting types. A second part of the thesis deals with the assessment of public policy promoting energy efficiency, both from the demand and the supply sides of the energy efficiency markets. Regarding the demand side, the thesis uses two complementary methods: an ex-post econometric study focuses on the French tax credit called Crédit d’Impôt Développement Durable implemented in 2005 while an ex-ante study uses a hybrid energy-economy model to compare different policies. Regarding the supply side, given the high degree of concentration on the energy efficiency markets, we use a theoretical model to assess public policy efficiency in the presence of three markets imperfections: the negative externality linked to CO2 and the imperfections of market competition and information inducing price-quality discrimination.",
+              "document_type": "THESE",
+              "publication_date": "2015-06-18",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique des logements en france"
+            }
+          },
+          {
+            "id": "1862624f-4be4-55c6-8bcf-abfafef9b42e",
+            "document_id": "e35504f5-4edd-58f5-8b59-7be0771edef8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique\n\nText: linstauration de mécanismes de tiers-financement, \nne suffisent pas à atténuer suffisamment laversion \nau risque des propriétaires de maisons individuelles \net de logements en copropriétés pour ces réova-tions ambitieuses. \nLe rythme de transition est bien supérieur dans \nle logement social. Ceci est cohérent avec la lé-\ngislation française imposant la remise à neuf de \ntous les logements sociaux en vue dabaisser à \n150 kWh/m2/an la consommation énergétique des \nlogements consommant actuellement plus de 230 \nkWh/m2/an dici 20208. Ajoutons que cette fraction \ndu parc immobilier est aussi la plus structurée et nest donc pas confrontée aux mêmes défis que les \ncopropriétés, pour lesquelles la complexité de la \nprise de décision ralentit fortement les avancées.\nLes graphiques sur les pages 14 et 15 représen-\ntent les transitions des classes énergétiques et \nlévolution du mix énergétique du parc immobilier \nexistant et neuf respectivement dans les maisons \nindividuelles, les logements sociaux, les coproprié-",
+            "metadata": {
+              "title": "Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique",
+              "hal_id": "halshs-00797980",
+              "authors": [
+                "Ruben Bibas",
+                "Sandrine Mathy",
+                "Meike Fink"
+              ],
+              "version": "v0",
+              "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique. 2012. ⟨halshs-00797980⟩",
+              "source_url": "https://hal.science/halshs-00797980",
+              "chunk_order": 92,
+              "description": "Cet article trouve son origine dans un double constat : le déficit d'acceptabilité des politiques climatiques d'une part et le déficit de crédibilité, de légitimité et d'appropriation des scénarios de réduction d'émission de gaz à effet de serre d'autre part. Pour répondre à ces limites, nous avons élaboré, au travers d'une concertation associant une cinquantaine de parties prenantes et une cinquantaine d'experts sectoriels, un processus de co-construction d'un scénario \" acceptable \" de réduction des émissions de CO2. Les parties prenantes ont sélectionné les politiques et les mesures qu'ils considèrent comme acceptables. Celles-ci ont également contribué largement à la méthodologie d'élaboration du scénario par la définition d'un cahier des charges qui inclut la nécessaire transparence des données, des tests de sensibilité et la nécessité d'expliciter certains types d'impacts économiques et financiers nécessaires à l'évaluation des trajectoires facteur 4. L'ensemble des politiques considérées comme acceptables est intégré dans le modèle technico-économique Imaclim-R France. Cette plateforme de modélisation adaptée au dialogue entre modélisateurs et partie prenantes ou experts, évalue les impacts sociaux, économiques et financiers de politiques climatiques. Cet exercice de co-construction de scénario fondé sur la concertation alimentant les paramètres d'un modèle technico-économique, fournit une preuve méthodologique par l'exemple qu'un tel processus peut être mis en place. Le scénario reposant sur les politiques et mesures que les parties prenantes considèrent comme acceptables permet de réduire de 68% les émissions de CO2 en 2050 par rapport à 1990, résultat proche de l'objectif de Facteur 4 (soit 75%). Les mesures de réduction des émissions, dont la plus emblématique est la taxe carbone, sont bénéfiques pour l'emploi et la croissance économique, sauf à court terme. Elles permettent en outre de réduire rapidement et durablement le budget des ménages dédié aux services énergétiques. Enfin, le bilan financier agrégé des mesures s'avère positif dès le début de la période. Ce résultat constitue un socle solide sur lequel construire l'acceptabilité des trajectoires Facteur 4.",
+              "document_type": "REPORT",
+              "publication_date": "2012-03-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique des logements en france"
+            }
+          },
+          {
+            "id": "56a735d1-77b7-5f6f-b705-6446be4d27b9",
+            "document_id": "29cf713f-6c5c-5afb-98dc-7ea4463b9ccc",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Taxe carbone, le retour, à quelles conditions ?\n\nText: transition écologique .  \n \nDans le logement, l e rythme actuel des rénovations énergétiques , et surtout lampleur des \ntravaux réalisés sont insuffisants pour atteindre les objectifs fixés par le gouvernement, qui \nvise léradication des logements  les moins performants (étiquettes énergétiques F et G) dici \n2025\n34. Des travaux prospectifs montrent que leur diminution pourrait atteindre -75 % en 2025 \nmais que leur élimination totale n'interviendrait qu'en 2040, sous lhypothèse que les aides \nexistant es soient élargies au parc locatif35. Dune part, il sagirait daugmenter le montant des \naides pour les rénovations performantes  ainsi que de donner accès à des éco- prêts à taux \nzéro ou réduit36. Dautre part, i l sagirait de rendre obligatoire la rénovation énergétique pour \n                                                        \n32 Le chèque énergie est un dispositif de lutte contre la précarité énergétique mis en place en 2018 et",
+            "metadata": {
+              "title": "Taxe carbone, le retour, à quelles conditions ?",
+              "hal_id": "hal-03403204",
+              "authors": "['Audrey Berry', 'Eloi Laurent']",
+              "version": "v0",
+              "citation": "Audrey Berry, Eloi Laurent. Taxe carbone, le retour, à quelles conditions ?. 2019. ⟨hal-03403204⟩",
+              "source_url": "https://hal.science/hal-03403204",
+              "chunk_order": 100,
+              "description": "La perspective d’une reprise de la hausse de la fiscalité carbone française, suspendue en décembre 2018, s’est précisée à l’occasion du « grand débat national » et plusieurs propositions d’amélioration du dispositif existant ont été avancées dans le débat public, visant en particulier sa dimension sociale. Nous proposons à notre tour dans cet article une nouvelle fiscalité carbone, dénommée « contribution climat anti-pauvreté énergétique », que nous inscrivons dans son cadre écologique, social, juridique et politique. Nous commençons par formuler, à la lumière des trois échecs successifs de 2001, 2010 et 2018, quatre critères de réussite d’une fiscalité carbone : son efficacité écologique, sa justice sociale, sa conformité juridique et enfin son acceptabilité politique. Nous détaillons ensuite pour chaque critère les modalités que nous envisageons afin d’assurer la réussite de notre proposition. Répondant notamment aux revendications de justice sociale et d’équité fiscale du mouvement des « gilets jaunes », la fiscalité carbone que nous proposons permettrait à 50% des ménages français de recevoir plus qu’ils ne paient, les recettes additionnelles dégagées permettant de réduire considérablement la précarité énergétique qui touche des millions de Français.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2019-04-01",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique des logements en france"
+            }
+          },
+          {
+            "id": "8d2cefe2-290b-5d55-ac9c-8572cc0b0ff2",
+            "document_id": "f8244ee2-795c-5600-b1d3-92b65d1b1cd2",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel\n\nText: 77 \n 6 Conclusion  \nLa présente étude a été réalisée sur un périmètre couvrant 61% des consommations d énergie du parc \nrésidentiel, soit 16% de la consommation dénergie finale totale  en France . Malgré certains dispositifs \nnon pris en compte, comme le programme   Habiter mieux   de lANAH , léco -prêt logement social  ou la \ncampagne de mobilisation  FAIRE  , elle offre un panorama relativement complet de la panoplie des \npolitique s de rénovation énergétique des logements.  Si la plupart des effets estimés sur la période 2012 -\n2017 correspondent aux ordres de de grandeurs observés , lécart important qui sobserve sur lEPTZ met \nen évidence la nécessité dapprofondir les recherches sur cet instrument.  \nLa principale conclusion des t ravaux est quune  augmentation des taux daide et une amélioration du \nrecours aux aides dans le parc locatif privé  semblent nécessaires pour atteindre les divers objectifs de la",
+            "metadata": {
+              "title": "Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel",
+              "hal_id": "hal-01955954",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Cyril Bourgeois",
+                "Philippe Quirion",
+                "David Glotin"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Cyril Bourgeois, Philippe Quirion, David Glotin. Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel. [Rapport de recherche] CIRED CNRS; ecole des ponts paristech. 2018. ⟨hal-01955954v2⟩",
+              "source_url": "https://hal.science/hal-01955954",
+              "chunk_order": 272,
+              "document_type": "REPORT",
+              "publication_date": "2018-12-21",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique des logements en france"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 3363,
+            "total_tokens": 3363
+          }
+        }
+      },
+      "duration": 5294
+    },
+    "retrievalTime": 7925,
+    "generationTime": 5294,
+    "timestamp": "2025-07-10T09:42:32.174Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T09:42:32.153171+00:00",
+    "server_version": "1.0.0"
+  }
+}

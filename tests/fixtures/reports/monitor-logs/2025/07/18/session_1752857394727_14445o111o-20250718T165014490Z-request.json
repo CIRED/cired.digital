@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752857394727_14445o111o94k471d",
+  "timestamp": "20250718T165014490Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752857414482_z0if2uh",
+    "query": "les valeurs de référence d'élasticité de la courbe salaires-chômage",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "les valeurs de référence d'élasticité de la courbe salaires-chômage",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "92.170.78.106",
+    "forwarded_for": "92.170.78.106",
+    "received_at": "2025-07-18T16:50:14.181730+00:00",
+    "server_version": "1.0.0"
+  }
+}

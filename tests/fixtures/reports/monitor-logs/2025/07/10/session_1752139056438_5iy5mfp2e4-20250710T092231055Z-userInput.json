@@ -1,0 +1,16 @@
+{
+  "sessionId": "session_1752139056438_5iy5mfp2e4ycu",
+  "timestamp": "20250710T092231055Z",
+  "eventType": "userInput",
+  "payload": {
+    "action": "click",
+    "element": "profile-btn",
+    "elementText": "👤"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T09:22:33.050858+00:00",
+    "server_version": "1.0.0"
+  }
+}

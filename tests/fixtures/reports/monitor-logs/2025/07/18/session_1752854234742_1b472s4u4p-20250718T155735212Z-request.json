@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752854234742_1b472s4u4p5b1k282x",
+  "timestamp": "20250718T155735212Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752854255194_tkbz6u2",
+    "query": "les scénarios de transition énergie-climat",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "les scénarios de transition énergie-climat",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "92.170.78.106",
+    "forwarded_for": "92.170.78.106",
+    "received_at": "2025-07-18T15:57:35.284896+00:00",
+    "server_version": "1.0.0"
+  }
+}

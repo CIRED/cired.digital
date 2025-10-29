@@ -1,0 +1,478 @@
+{
+  "sessionId": "session_1752920690572_4n4i614m6p4o2k6a13",
+  "timestamp": "20250719T102510377Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752920703278_uzeendu",
+    "response": {
+      "results": {
+        "generated_answer": "La sortie des énergies fossiles a un impact variable sur le PIB, selon les scénarios et les politiques mises en place. Voici quelques points clés tirés des documents fournis :\n\n1. **Impact à moyen et long terme** :\n   - À moyen terme (2030), l'impact des scénarios de prix des ressources fossiles sur le PIB est relativement faible, avec un PIB plus élevé pour des prix des fossiles plus faibles, malgré une taxe carbone plus élevée. À long terme (2050), cette différence s'amplifie. Les prix élevés des fossiles et une taxe carbone importante pèsent fortement sur le PIB [c7a1f9c].\n   - Les politiques climatiques et la maîtrise de la demande d'énergie (MDE) ont un impact positif sur le PIB. Plus ces politiques sont ambitieuses, plus la valeur moyenne du PIB augmente [c7a1f9c].\n\n2. **Recyclage des revenus de la taxe carbone** :\n   - Le recyclage des revenus de la taxe carbone vers une baisse des charges sur le travail conduit à un PIB plus élevé que le recyclage vers un chèque vert forfaitaire. Cela rend la production française plus compétitive [1d2c9b3].\n\n3. **Pertes de PIB dues à la raréfaction des fossiles** :\n   - Les politiques climatiques réduisent significativement les pertes de PIB dues à la raréfaction des fossiles. En moyenne, les pertes sont réduites et les scénarios à pertes très fortes sont supprimés, créant une résilience à la montée des prix des fossiles [bce14d8].\n\n4. **Impact des politiques climatiques** :\n   - Les politiques climatiques peuvent entraîner un ralentissement transitoire du taux de croissance du PIB, notamment au début de leur mise en place. Cependant, à long terme, elles peuvent avoir un impact positif en réduisant les dommages du changement climatique [c3048c7].\n\n5. **Impact sur les économies dépendantes des fossiles** :\n   - Les pays fortement dépendants des énergies fossiles pourraient subir des pertes de recettes importantes, ce qui affecterait leur PIB. Cependant, des transferts nets importants pourraient atténuer cet impact pour certains pays [17f2ff3].\n\nEn résumé, la sortie des fossiles peut avoir un impact négatif à court terme sur le PIB, mais des politiques climatiques bien conçues et le recyclage des revenus de la taxe carbone peuvent atténuer ces effets et même conduire à une augmentation du PIB à long terme.",
+        "citations": [
+          {
+            "id": "c7a1f9c",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 572,
+              "end": 581
+            },
+            "payload": {
+              "id": "c7a1f9cb-03d8-59ea-bf78-52988552f460",
+              "document_id": "421459de-3ddb-5e4c-8dc5-b017556372c3",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Impact macroéconomique du rythme de déclassement des centrales nucléaires sur la période 2010-2050\n\nText: 26 / 54 Limpact des scénarios de prix des ressources fossiles sur le PIB est relativement faible sur \nle moyen terme (2030) avec un PIB plus haut pour des valeurs des fossiles plus faibles, malgré une \ntaxe carbone bien plus élevée. A long terme (2050), la différence  samplifie.  Leffet cumulé de prix \nfossiles élevés et d une taxe carbone plus importante pèse alors  fortement sur le PIB.  Cette \ndifférence de niveau de PIB, aussi bien à long terme qu à court terme,  traduit  le fait que dans les \ndeux cas, l on assiste à une augmentation des prix de l énergie. Dans le premier cas, cela traduit une \naugmentation de la rente qui sort de l économie pour aller rétribuer les producteurs de fossiles alors \nque dans le second cas, cette rente, via la taxe carbone payée à l Etat, es t recyclée dans l économie.  \nLimpact des politiques et mesures et de la MDE sont quant à elles toutes positives. Plus \nelles sont  ambitieuses , plus la valeur moyenne du PIB augmente . Ce résultat est la combinaison",
+              "metadata": {
+                "title": "Impact macroéconomique du rythme de déclassement des centrales nucléaires sur la période 2010-2050",
+                "hal_id": "halshs-00800393",
+                "authors": "['Ruben Bibas', 'Sandrine Mathy', 'Jean Charles Hourcade']",
+                "version": "v0",
+                "citation": "Ruben Bibas, Sandrine Mathy, Jean Charles Hourcade. Impact macroéconomique du rythme de déclassement des centrales nucléaires sur la période 2010-2050. 2012. ⟨halshs-00800393⟩",
+                "source_url": "https://hal.science/halshs-00800393",
+                "chunk_order": 87,
+                "description": "Dans le cadre de scénarios facteur 4, et de la mise en œuvre d'une taxe carbone endogène au modèle pour respecter cette contrainte, l'analyse de sensibilité aux paramètres que sont le prix des énergies fossiles, la mise en œuvre de politiques et mesures, et de maîtrise de la demande d'électricité, le recyclage des revenus de la taxe carbone, le coût d'investissement des EPR et le rythme de déclassement des centrales s'est concentrée sur la valeur de la taxe à mettre en œuvre et sur l'impact sur le PIB. Ces deux éléments d'analyse montrent que le facteur le plus important pour faire baisser la taxe carbone nécessaire pour respecter la contrainte et ne pas grever la croissance économique est la mise en œuvre de politiques et mesures ambitieuses de maîtrise de la demande d'énergie. Le recyclage des revenus de la taxe sur la baisse des charges sur le travail contribuent également à la croissance économique même si du coup le niveau de taxe nécessaire s'avère plus élevé. L'impact du rythme de déclassement des centrales est important mais principalement sur le moyen terme et peu sur le long terme.",
+                "document_type": "REPORT",
+                "publication_date": "2012-02-09",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "l'impact de la sortie des fossiles sur le PIB"
+              }
+            }
+          },
+          {
+            "id": "c7a1f9c",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 771,
+              "end": 780
+            },
+            "payload": null
+          },
+          {
+            "id": "1d2c9b3",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1054,
+              "end": 1063
+            },
+            "payload": {
+              "id": "1d2c9b35-9f22-57ff-b9d6-42cb083bc902",
+              "document_id": "421459de-3ddb-5e4c-8dc5-b017556372c3",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016098765432098764,
+              "text": "Document Title: Impact macroéconomique du rythme de déclassement des centrales nucléaires sur la période 2010-2050\n\nText: production française sera plus compétitive.  Ceci explique pourquoi le PIB avec recyclage du produit \nde la taxe carbone vers une baisse des charges sur le travail est en moyenne plus élevé sur toute la \npériode que le PIB où le produit de la taxe est recyclé vers un chèque vert forfaitaire.  \nEn ce qui concerne les hypothèses nucléaires, le coût d investisse ment (parmi les \nalternatives étudiées) du nucléaire n a que très peu d impact sur la valeur moyenne du PIB, le \nniveau de pénétration du nucléaire étant équivalent dans les deux cas. En revanche, le scénario de \ndéclassement a un fort impact, tout au moins à  court terme. De manière homogène, sur la période \n2020 -2030, la prolongation de la durée de vie des centrales augmente la valeur moyenne du PIB, car \nrend l objectif plus facile à atteindre (en permettant la production d une énergie décarbonée). A plus \nlong terme, le scénario le plus favorable semble être le scénario médian (prolongement d une",
+              "metadata": {
+                "title": "Impact macroéconomique du rythme de déclassement des centrales nucléaires sur la période 2010-2050",
+                "hal_id": "halshs-00800393",
+                "authors": "['Ruben Bibas', 'Sandrine Mathy', 'Jean Charles Hourcade']",
+                "version": "v0",
+                "citation": "Ruben Bibas, Sandrine Mathy, Jean Charles Hourcade. Impact macroéconomique du rythme de déclassement des centrales nucléaires sur la période 2010-2050. 2012. ⟨halshs-00800393⟩",
+                "source_url": "https://hal.science/halshs-00800393",
+                "chunk_order": 91,
+                "description": "Dans le cadre de scénarios facteur 4, et de la mise en œuvre d'une taxe carbone endogène au modèle pour respecter cette contrainte, l'analyse de sensibilité aux paramètres que sont le prix des énergies fossiles, la mise en œuvre de politiques et mesures, et de maîtrise de la demande d'électricité, le recyclage des revenus de la taxe carbone, le coût d'investissement des EPR et le rythme de déclassement des centrales s'est concentrée sur la valeur de la taxe à mettre en œuvre et sur l'impact sur le PIB. Ces deux éléments d'analyse montrent que le facteur le plus important pour faire baisser la taxe carbone nécessaire pour respecter la contrainte et ne pas grever la croissance économique est la mise en œuvre de politiques et mesures ambitieuses de maîtrise de la demande d'énergie. Le recyclage des revenus de la taxe sur la baisse des charges sur le travail contribuent également à la croissance économique même si du coup le niveau de taxe nécessaire s'avère plus élevé. L'impact du rythme de déclassement des centrales est important mais principalement sur le moyen terme et peu sur le long terme.",
+                "document_type": "REPORT",
+                "publication_date": "2012-02-09",
+                "semantic_rank": 4,
+                "full_text_rank": 200,
+                "associated_query": "l'impact de la sortie des fossiles sur le PIB"
+              }
+            }
+          },
+          {
+            "id": "bce14d8",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1385,
+              "end": 1394
+            },
+            "payload": {
+              "id": "bce14d8b-6631-5ae9-a6f9-95577d0484e6",
+              "document_id": "98975b6d-1277-5710-b1ab-8d96e6dd9c23",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01503448275862069,
+              "text": "Document Title: Produire des scénarios par centaines : Comment les démarches statistiques renouvellent les approches prospectives\n\nText: Version 7 du 5 septembre  2013  \n Figure 4  : Pertes de PIB  selon  les scénarios   \nLa comparaison des deux histogrammes montre lintérêt des politiques climatiques pour  \nréduire  les pertes de PIB dues à la  raréfaction des  fossiles (adapté de Rozenberg et al., 2010)  \n \nEn moyenne, les pertes sont significativement réduites dans les scénario s avec politiques climatiques \n(lhistogramme est décalé vers la droite)  ; de plus, les politiques climatiques suppriment les scénarios à \npertes très fortes (queue gauche de la distribution noire) en créant une résilience à la montée des prix \ndes fossiles, via un signal prix plus précoce et mieux anticipé.  \nOn peut par ailleurs quantifier cette assurance, qui sélève en moyenne sur ces scénarios à 11  500 \nmilliards de dollars, cest -à-dire 19% du PIB mondial de 2009.  \nIdentification  des trajectoires socio -économiques  de référence  \nUne autre question qui trouve une réponse ici concerne la caractéris ation, sous forme de scénarios",
+              "metadata": {
+                "title": "Produire des scénarios par centaines : Comment les démarches statistiques renouvellent les approches prospectives",
+                "hal_id": "hal-01018477",
+                "authors": "['Céline Guivarch', 'J. Rozenberg']",
+                "version": "v0",
+                "citation": "Céline Guivarch, J. Rozenberg. Produire des scénarios par centaines : Comment les démarches statistiques renouvellent les approches prospectives. Futuribles, 2014, 398, pp.49-56. ⟨hal-01018477⟩",
+                "source_url": "https://hal.science/hal-01018477",
+                "chunk_order": 29,
+                "description": "Most foresight exercises requiring a quantitative assessment of the scenarios proceed in two stages. They begin with a qualitative exploration of determining factors, from which a limited range of sets of hypotheses are chosen, producing a-similarly limited-range of scenarios. A mathematical model is then applied which translates the selected hypotheses into input data, in order to quantify the various scenarios identified. Nevertheless, as this article stresses, the increasing complexity of contexts and the possible interplay between the different factors at work in the various fields of study have cast doubt on the appropriateness of this mode of operation. The representativeness of hypotheses selected is no longer any guarantee of the quality of the scenarios deriving from them. This is why, in this article, Guivarch and Rozenberg propose a different way of proceeding, retaining all the determining factors identified in the field of study and running the models hundreds or thousands of times to get as many scenarios as possible from them. Qualitative choices are then made in a second phase, in the \"target- space\" of these scenarios. Guivarch and Rozenberg outline this alternative method here, which consists in building databases of scenarios in order to explore the areas of uncertainty. They also indicate the advantages this represents for foresight studies and present an actual example of the use of this method in the field of climate change economics.",
+                "document_type": "ART",
+                "publication_date": "2014-01-01",
+                "semantic_rank": 8,
+                "full_text_rank": 200,
+                "associated_query": "l'impact de la sortie des fossiles sur le PIB"
+              }
+            }
+          },
+          {
+            "id": "c3048c7",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1706,
+              "end": 1715
+            },
+            "payload": {
+              "id": "c3048c78-60e6-54fd-8cff-a565a2044548",
+              "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: carbone du fait (i) dune perte de compétitivité que subissent les biens exportés liée à lintensité carbone élevée de leur production, (ii) dune réduction en volume de la \nconsommation mondiale de bien industriel s associée à laccélération du phénomène de \ndématérialisation des économies induit par la ta xe et (iii) dune réduc tion générale de la \nconsommation de matières premières, en par ticulier de pétrole et de charbon, que ces \nrégions exportent massiveme nt dans la référence. \n \nFinalement, le Tableau 20 compare limpact  des politiques climatiques sur le taux de \ncroissance annuel moyen du PIB dans les scénarios \nETC 450 ppmv et ETC_I  450 ppmv. Nous \nretrouvons dans ce tableau la période de ralentissement transitoire qui apparaît au début de la mise \nen place des politiques dans les deux scénarios cons idérés (période 2010-2030). Au cours de cette \nphase, les pertes de taux de croissance sont, en  absolu, plus importantes dans les régions non",
+              "metadata": {
+                "title": "L'impact du changement technique endogène sur les politiques climatiques",
+                "hal_id": "tel-00489258",
+                "authors": "['Olivier Sassi']",
+                "version": "v0",
+                "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+                "source_url": "https://hal.science/tel-00489258",
+                "chunk_order": 1239,
+                "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+                "document_type": "THESE",
+                "publication_date": "2008-11-21",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "l'impact de la sortie des fossiles sur le PIB"
+              }
+            }
+          },
+          {
+            "id": "17f2ff3",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2008,
+              "end": 2017
+            },
+            "payload": {
+              "id": "17f2ff3b-78c0-5390-b9d4-1e0adfc02845",
+              "document_id": "3fe238fa-6fc5-5bbd-8935-8330fe4d544b",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.0147909604519774,
+              "text": "Document Title: Un Plan mondial pour le climat et contre l'extrême pauvreté\n\nText: gérie, lIrak, lIran et la Libye combinent une économie fortement dépendante\naux énergies fossiles et un PIB insuffisant pour surmonter la perte de recettes\ntirées de la vente dhydrocarbures (Muttitt & Kartha 2020). Des pays comme le\nNigeria, lAngola et le Congo dépendent également fortement des fossiles, mais\nle revenu de base leur procurerait des transferts nets importants, grâce à leur\nfaible empreinte carbone.\n19.Cf. Jacobson et al. (2017). Daprès cette étude, 22 pays feraient face à une\nperte nette demplois. Les pays les plus touchés seraient Brunei (9 % des emplois\ndétruits en net), la Libye (7 %), le Qatar (6 %), la Norvège (5 %), le Koweït (5 %),\nlArabie Saoudite (3 %) et lIrak (2 %).\n20.Pai et al. (2021). Plus que la quantité demplois, cest la qualité et la\nlocalisation des emplois créés qui peut poser problème (Haywood et al. 2021).\n21. Frey & Osborne (2017); Hatzius et al. (2023); Lassébie & Quintini (2022).\n22. Cf. ourworldindata.org et Herrendorf et al. (2014).\n117",
+              "metadata": {
+                "title": "Un Plan mondial pour le climat et contre l'extrême pauvreté",
+                "hal_id": "hal-04866011",
+                "authors": [
+                  "Adrien Fabre"
+                ],
+                "version": "v0",
+                "citation": "Adrien Fabre. Un Plan mondial pour le climat et contre l'extrême pauvreté. Le Bord de l'eau, 2024, 978-2-38519-071-2. ⟨hal-04866011⟩",
+                "source_url": "https://hal.science/hal-04866011",
+                "chunk_order": 350,
+                "document_type": "OUV",
+                "publication_date": "2024-09-13",
+                "semantic_rank": 9,
+                "full_text_rank": 200,
+                "associated_query": "l'impact de la sortie des fossiles sur le PIB"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "bc425188-a137-5099-93b4-bd94f5214a69",
+            "document_id": "421459de-3ddb-5e4c-8dc5-b017556372c3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017156862745098037,
+            "text": "Document Title: Impact macroéconomique du rythme de déclassement des centrales nucléaires sur la période 2010-2050\n\nText: la durée de vie des centrales, le scénario de coût haut du nucléaire à 3636 /kW et le scénario de \nsortie du nucléaire. Néanmoins les prix plus hauts de l'électricité ne se retrouvent que partiellement \ndans le budget des ménages puisque l'électricité ne constitue qu'une part minoritaire du panier \nénergétique des ménages. Enfin l'impact sur le PIB reste faible pour ces deux scénarios. Ces \ntendances haussières du prix de l'électricité et du budget énergie des ménages, ainsi que la forte \nhausse des émissions  dans le cas d'une sortie du nucléaire sont par contre amorties par des \npolitiques et mesures permettant de réduire la demande d'énergie dan s tous les secteurs.  \nDans le cadre de scénarios facteur 4, et de la mise en œuvre d'une taxe carbone endogène au \nmodèle pour respecter cette contrainte, l'analyse de sensibilité aux paramètres que sont le prix des \nénergies fossiles, la mise en œuvre de pol itiques et mesures, et de maîtrise de la demande",
+            "metadata": {
+              "title": "Impact macroéconomique du rythme de déclassement des centrales nucléaires sur la période 2010-2050",
+              "hal_id": "halshs-00800393",
+              "authors": "['Ruben Bibas', 'Sandrine Mathy', 'Jean Charles Hourcade']",
+              "version": "v0",
+              "citation": "Ruben Bibas, Sandrine Mathy, Jean Charles Hourcade. Impact macroéconomique du rythme de déclassement des centrales nucléaires sur la période 2010-2050. 2012. ⟨halshs-00800393⟩",
+              "source_url": "https://hal.science/halshs-00800393",
+              "chunk_order": 106,
+              "description": "Dans le cadre de scénarios facteur 4, et de la mise en œuvre d'une taxe carbone endogène au modèle pour respecter cette contrainte, l'analyse de sensibilité aux paramètres que sont le prix des énergies fossiles, la mise en œuvre de politiques et mesures, et de maîtrise de la demande d'électricité, le recyclage des revenus de la taxe carbone, le coût d'investissement des EPR et le rythme de déclassement des centrales s'est concentrée sur la valeur de la taxe à mettre en œuvre et sur l'impact sur le PIB. Ces deux éléments d'analyse montrent que le facteur le plus important pour faire baisser la taxe carbone nécessaire pour respecter la contrainte et ne pas grever la croissance économique est la mise en œuvre de politiques et mesures ambitieuses de maîtrise de la demande d'énergie. Le recyclage des revenus de la taxe sur la baisse des charges sur le travail contribuent également à la croissance économique même si du coup le niveau de taxe nécessaire s'avère plus élevé. L'impact du rythme de déclassement des centrales est important mais principalement sur le moyen terme et peu sur le long terme.",
+              "document_type": "REPORT",
+              "publication_date": "2012-02-09",
+              "semantic_rank": 10,
+              "full_text_rank": 1,
+              "associated_query": "l'impact de la sortie des fossiles sur le PIB"
+            }
+          },
+          {
+            "id": "c7a1f9cb-03d8-59ea-bf78-52988552f460",
+            "document_id": "421459de-3ddb-5e4c-8dc5-b017556372c3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Impact macroéconomique du rythme de déclassement des centrales nucléaires sur la période 2010-2050\n\nText: 26 / 54 Limpact des scénarios de prix des ressources fossiles sur le PIB est relativement faible sur \nle moyen terme (2030) avec un PIB plus haut pour des valeurs des fossiles plus faibles, malgré une \ntaxe carbone bien plus élevée. A long terme (2050), la différence  samplifie.  Leffet cumulé de prix \nfossiles élevés et d une taxe carbone plus importante pèse alors  fortement sur le PIB.  Cette \ndifférence de niveau de PIB, aussi bien à long terme qu à court terme,  traduit  le fait que dans les \ndeux cas, l on assiste à une augmentation des prix de l énergie. Dans le premier cas, cela traduit une \naugmentation de la rente qui sort de l économie pour aller rétribuer les producteurs de fossiles alors \nque dans le second cas, cette rente, via la taxe carbone payée à l Etat, es t recyclée dans l économie.  \nLimpact des politiques et mesures et de la MDE sont quant à elles toutes positives. Plus \nelles sont  ambitieuses , plus la valeur moyenne du PIB augmente . Ce résultat est la combinaison",
+            "metadata": {
+              "title": "Impact macroéconomique du rythme de déclassement des centrales nucléaires sur la période 2010-2050",
+              "hal_id": "halshs-00800393",
+              "authors": "['Ruben Bibas', 'Sandrine Mathy', 'Jean Charles Hourcade']",
+              "version": "v0",
+              "citation": "Ruben Bibas, Sandrine Mathy, Jean Charles Hourcade. Impact macroéconomique du rythme de déclassement des centrales nucléaires sur la période 2010-2050. 2012. ⟨halshs-00800393⟩",
+              "source_url": "https://hal.science/halshs-00800393",
+              "chunk_order": 87,
+              "description": "Dans le cadre de scénarios facteur 4, et de la mise en œuvre d'une taxe carbone endogène au modèle pour respecter cette contrainte, l'analyse de sensibilité aux paramètres que sont le prix des énergies fossiles, la mise en œuvre de politiques et mesures, et de maîtrise de la demande d'électricité, le recyclage des revenus de la taxe carbone, le coût d'investissement des EPR et le rythme de déclassement des centrales s'est concentrée sur la valeur de la taxe à mettre en œuvre et sur l'impact sur le PIB. Ces deux éléments d'analyse montrent que le facteur le plus important pour faire baisser la taxe carbone nécessaire pour respecter la contrainte et ne pas grever la croissance économique est la mise en œuvre de politiques et mesures ambitieuses de maîtrise de la demande d'énergie. Le recyclage des revenus de la taxe sur la baisse des charges sur le travail contribuent également à la croissance économique même si du coup le niveau de taxe nécessaire s'avère plus élevé. L'impact du rythme de déclassement des centrales est important mais principalement sur le moyen terme et peu sur le long terme.",
+              "document_type": "REPORT",
+              "publication_date": "2012-02-09",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "l'impact de la sortie des fossiles sur le PIB"
+            }
+          },
+          {
+            "id": "66ae6efb-589b-5a01-af13-cb812c9eeaec",
+            "document_id": "8a0349b0-3a72-5657-834a-3748506ed952",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES\n\nText: Le premier test effectué en conservant consta nts les autres paramètres du modèle, montre que la \nconjonction de cette quasi indexati on et dune taxe carbone (Tableau  10) conduit à un recul significatif \ndu PIB réel (-3,1%), qui entraîne dans sa chute l emploi total (-2,5%) et la consommation des ménages \n(-1,0%). \n \nRecyclage Baisse des cotisations \nOption budgétaire RDPC \nBoucle salaire-chômage Sur le sala ire nominal Sur le salaire réel \nProduit intérieur brut réel +2,1% -3,1% \nEmploi total (éq. temps plein) +4,1% -2,5% \nPrix de production composite -1,2% +8,1% \nIntensité en travail du bien composite +1,6% +0,5% Cons. effective des ménages avec GEE +1,8% -1,0% Cons. composite des ménages +1,9% -0,8% \nVolume des exportations de bien \ncomposite +0,7% -4,0% \nProportion de bien composite importée -1,0% +7,1% \nPression fiscale (pts de pourcentage) -0,40 +1,54 \nRDPC : ratio de la dette publique au PIB constant \nTableau 10 Sensibilité des effets  dune taxe carbone de 400/tCO 2  \nà la réaction des salaires nets",
+            "metadata": {
+              "title": "Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES",
+              "hal_id": "halshs-00458205",
+              "authors": [
+                "Frédéric Ghersi",
+                "Emmanuel Combet",
+                "Jean Charles Hourcade",
+                "Camille Thubin"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Ghersi, Emmanuel Combet, Jean Charles Hourcade, Camille Thubin. Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES. 2010. ⟨halshs-00458205⟩",
+              "source_url": "https://hal.science/halshs-00458205",
+              "chunk_order": 274,
+              "description": "Cette étude offre une vision d'ensemble des enjeux de mise en oeuvre et d'évolution d'une fiscalité carbone en France. Elle s'applique à ne pas dissocier son évaluation des grands défis économiques et sociaux à venir et montre qu'un recours à la taxation du carbone offre sur le long terme plus de marges de manoeuvre qu'elle n'en supprime. Sans aller jusqu'aux détails précis de sa mise en ouvre, elle vise à clarifier les mécanismes mis en jeu et à apprécier, pour un même ensemble de critères, les impacts chiffrés de plusieurs dispositifs. Il apparaît que les dispositifs qui offrent le plus de marge de manoeuvre pour concilier les objectifs de climat, croissance, emploi, distribution des revenus et compétitivité des entreprises, combinent deux modes de redistribution du produit de la taxe carbone : d'un côté, en finançant des mesures compensatoires pour les populations et les activités les plus impactées, de l'autre, comme ressource alternative au financement des retraites pour contenir la hausse future des cotisations sociales. La conclusion majeure est que, sans une telle réforme, qui engage la négociation sociale au-delà des seuls enjeux climatiques, il sera difficile, au cours du prochain demi-siècle, de réaliser un découplage drastique entre émissions de gaz à effet de serre et croissance.",
+              "document_type": "OTHER",
+              "publication_date": "2010-01-04",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "l'impact de la sortie des fossiles sur le PIB"
+            }
+          },
+          {
+            "id": "d66179ae-002e-5656-8bd6-2b69d27f0bec",
+            "document_id": "8a0349b0-3a72-5657-834a-3748506ed952",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES\n\nText: inférieures, une facture pétrolière réduite de 4,3 à 4,5 milliards deuros, un PIB inférieur de 0,8% ou \nsupérieur de 2,1%, une consommation des ménages de 0,4 à 1,8% supérieure, et une consommation \ndes couches défavorisées faiblement ou fortement améliorée (+0,2% à +6,2%). \nIl nest pas aisé dinterpréter ce que signifient de  tels chiffres. Veut-on faire peur et lon dira \nque lécart de niveaux dactivité porte sur 48 milliards deuros ; veut-on rassurer et lon fera valoir \nquil ne sagit, sur les quinze ans de la réforme, que dun écart de taux annuel de croissance inférieur à \n0,2%. On peut prendre une mesure plus juste de l enjeu en remarquant que les trajectoires les plus \noptimistes et les plus pessimistes auraient condui t à atteindre en février 2004 ou en avril 2005 le \nniveau de revenu observé en décembre 2004, soit un  écart de croissance de plus dun an, quil faut \ncompléter dun écart de 922 000 emplois. Sans être dr amatiques (une taxe carbone nest ni un désastre",
+            "metadata": {
+              "title": "Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES",
+              "hal_id": "halshs-00458205",
+              "authors": [
+                "Frédéric Ghersi",
+                "Emmanuel Combet",
+                "Jean Charles Hourcade",
+                "Camille Thubin"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Ghersi, Emmanuel Combet, Jean Charles Hourcade, Camille Thubin. Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES. 2010. ⟨halshs-00458205⟩",
+              "source_url": "https://hal.science/halshs-00458205",
+              "chunk_order": 468,
+              "description": "Cette étude offre une vision d'ensemble des enjeux de mise en oeuvre et d'évolution d'une fiscalité carbone en France. Elle s'applique à ne pas dissocier son évaluation des grands défis économiques et sociaux à venir et montre qu'un recours à la taxation du carbone offre sur le long terme plus de marges de manoeuvre qu'elle n'en supprime. Sans aller jusqu'aux détails précis de sa mise en ouvre, elle vise à clarifier les mécanismes mis en jeu et à apprécier, pour un même ensemble de critères, les impacts chiffrés de plusieurs dispositifs. Il apparaît que les dispositifs qui offrent le plus de marge de manoeuvre pour concilier les objectifs de climat, croissance, emploi, distribution des revenus et compétitivité des entreprises, combinent deux modes de redistribution du produit de la taxe carbone : d'un côté, en finançant des mesures compensatoires pour les populations et les activités les plus impactées, de l'autre, comme ressource alternative au financement des retraites pour contenir la hausse future des cotisations sociales. La conclusion majeure est que, sans une telle réforme, qui engage la négociation sociale au-delà des seuls enjeux climatiques, il sera difficile, au cours du prochain demi-siècle, de réaliser un découplage drastique entre émissions de gaz à effet de serre et croissance.",
+              "document_type": "OTHER",
+              "publication_date": "2010-01-04",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "l'impact de la sortie des fossiles sur le PIB"
+            }
+          },
+          {
+            "id": "1d2c9b35-9f22-57ff-b9d6-42cb083bc902",
+            "document_id": "421459de-3ddb-5e4c-8dc5-b017556372c3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Impact macroéconomique du rythme de déclassement des centrales nucléaires sur la période 2010-2050\n\nText: production française sera plus compétitive.  Ceci explique pourquoi le PIB avec recyclage du produit \nde la taxe carbone vers une baisse des charges sur le travail est en moyenne plus élevé sur toute la \npériode que le PIB où le produit de la taxe est recyclé vers un chèque vert forfaitaire.  \nEn ce qui concerne les hypothèses nucléaires, le coût d investisse ment (parmi les \nalternatives étudiées) du nucléaire n a que très peu d impact sur la valeur moyenne du PIB, le \nniveau de pénétration du nucléaire étant équivalent dans les deux cas. En revanche, le scénario de \ndéclassement a un fort impact, tout au moins à  court terme. De manière homogène, sur la période \n2020 -2030, la prolongation de la durée de vie des centrales augmente la valeur moyenne du PIB, car \nrend l objectif plus facile à atteindre (en permettant la production d une énergie décarbonée). A plus \nlong terme, le scénario le plus favorable semble être le scénario médian (prolongement d une",
+            "metadata": {
+              "title": "Impact macroéconomique du rythme de déclassement des centrales nucléaires sur la période 2010-2050",
+              "hal_id": "halshs-00800393",
+              "authors": "['Ruben Bibas', 'Sandrine Mathy', 'Jean Charles Hourcade']",
+              "version": "v0",
+              "citation": "Ruben Bibas, Sandrine Mathy, Jean Charles Hourcade. Impact macroéconomique du rythme de déclassement des centrales nucléaires sur la période 2010-2050. 2012. ⟨halshs-00800393⟩",
+              "source_url": "https://hal.science/halshs-00800393",
+              "chunk_order": 91,
+              "description": "Dans le cadre de scénarios facteur 4, et de la mise en œuvre d'une taxe carbone endogène au modèle pour respecter cette contrainte, l'analyse de sensibilité aux paramètres que sont le prix des énergies fossiles, la mise en œuvre de politiques et mesures, et de maîtrise de la demande d'électricité, le recyclage des revenus de la taxe carbone, le coût d'investissement des EPR et le rythme de déclassement des centrales s'est concentrée sur la valeur de la taxe à mettre en œuvre et sur l'impact sur le PIB. Ces deux éléments d'analyse montrent que le facteur le plus important pour faire baisser la taxe carbone nécessaire pour respecter la contrainte et ne pas grever la croissance économique est la mise en œuvre de politiques et mesures ambitieuses de maîtrise de la demande d'énergie. Le recyclage des revenus de la taxe sur la baisse des charges sur le travail contribuent également à la croissance économique même si du coup le niveau de taxe nécessaire s'avère plus élevé. L'impact du rythme de déclassement des centrales est important mais principalement sur le moyen terme et peu sur le long terme.",
+              "document_type": "REPORT",
+              "publication_date": "2012-02-09",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "l'impact de la sortie des fossiles sur le PIB"
+            }
+          },
+          {
+            "id": "1b18866a-b94c-584e-8b18-87f1cbbd10d8",
+            "document_id": "98975b6d-1277-5710-b1ab-8d96e6dd9c23",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Produire des scénarios par centaines : Comment les démarches statistiques renouvellent les approches prospectives\n\nText: contre lincertitude sur ressources fossiles.  \nLa figure 4  représente la variation de PIB mondial due à une raréfaction des ressources fossiles, pour \nlensemble des scénarios. Lhistogramme noir décrit les scénari os sans politique climatique tandis que \nlhistogramme rouge décrit les scénarios avec des politiques permettant de limiter le réchauffement \nclimatique à 3C.  \n \n                                                           \n2 Le premier bénéfice des politiques climatique réside naturellement dans la réduction des dommages du \nchangement climatique.",
+            "metadata": {
+              "title": "Produire des scénarios par centaines : Comment les démarches statistiques renouvellent les approches prospectives",
+              "hal_id": "hal-01018477",
+              "authors": "['Céline Guivarch', 'J. Rozenberg']",
+              "version": "v0",
+              "citation": "Céline Guivarch, J. Rozenberg. Produire des scénarios par centaines : Comment les démarches statistiques renouvellent les approches prospectives. Futuribles, 2014, 398, pp.49-56. ⟨hal-01018477⟩",
+              "source_url": "https://hal.science/hal-01018477",
+              "chunk_order": 28,
+              "description": "Most foresight exercises requiring a quantitative assessment of the scenarios proceed in two stages. They begin with a qualitative exploration of determining factors, from which a limited range of sets of hypotheses are chosen, producing a-similarly limited-range of scenarios. A mathematical model is then applied which translates the selected hypotheses into input data, in order to quantify the various scenarios identified. Nevertheless, as this article stresses, the increasing complexity of contexts and the possible interplay between the different factors at work in the various fields of study have cast doubt on the appropriateness of this mode of operation. The representativeness of hypotheses selected is no longer any guarantee of the quality of the scenarios deriving from them. This is why, in this article, Guivarch and Rozenberg propose a different way of proceeding, retaining all the determining factors identified in the field of study and running the models hundreds or thousands of times to get as many scenarios as possible from them. Qualitative choices are then made in a second phase, in the \"target- space\" of these scenarios. Guivarch and Rozenberg outline this alternative method here, which consists in building databases of scenarios in order to explore the areas of uncertainty. They also indicate the advantages this represents for foresight studies and present an actual example of the use of this method in the field of climate change economics.",
+              "document_type": "ART",
+              "publication_date": "2014-01-01",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "l'impact de la sortie des fossiles sur le PIB"
+            }
+          },
+          {
+            "id": "43f4854e-104c-5b32-85fe-b224bee846bd",
+            "document_id": "1ea817c8-976a-523a-a786-cf977ae7b78d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt\n\nText: 15 restent fixes mais que le montant des importations augmente proportionnell ement à la \nhausse des énergies fossile , doù une baisse du contenu en emploi de ces trois branches. \nPour le prix futur des énergies fossiles, dans la variante centrale, nous retenons les \ntrajectoires du World Energy Outlook  2012 , plus précisément le scénar io Current Policies  \n(Agence internationale de lénergie, 2012). La partie 4 fournit  une étude de sensibilité sur \nce point  et la Figure 8 présente  lévolution des prix des énergies fossiles . \nComme toutes les études input -output , celle -ci repose sur une séri e dhypothèses discutables, \ncomme toutes les hypothèses, mais qui présentent lavantage dêtre classiques (elles nont pas \nété choisies à dessein pour obtenir certains résultats) et transparentes. En particulier, on \nsuppose que les coefficients techniques sont fixes (pour une année donnée)  : dans les deux \nscénarios, un euro de dépense adressée à une branche génèrera le même nombre demplois",
+            "metadata": {
+              "title": "L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt",
+              "hal_id": "hal-00866447",
+              "authors": [
+                "Philippe Quirion"
+              ],
+              "version": "v0",
+              "citation": "Philippe Quirion. L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt. 2013. ⟨hal-00866447⟩",
+              "source_url": "https://hal.science/hal-00866447",
+              "chunk_order": 68,
+              "description": "Nous étudions l'impact sur l'emploi en France de la mise en œuvre du scénario de transition énergétique construit par l'Association négaWatt (2011), qui prévoit un développement massif des économies d'énergie (par le biais de mesures de sobriété et d'efficacité énergétiques) et des énergies renouvelables entre 2012 et 2050. Par rapport à 2010, ce scénario aboutit à une division par deux des émissions de CO2 d'origine énergétique en France en 2030 et à une division par 16 en 2050, sans capture-stockage du CO2, sans mise en œuvre de nouvelle centrale nucléaire et en fermant les centrales existantes au bout de 40 ans d'exploitation au maximum. Nous calculons l'effet sur l'emploi de la mise en œuvre de ce scénario en comparaison avec un scénario tendanciel qui prolonge les évolutions récentes et prend en compte les politiques déjà décidées. La méthode retenue pour calculer l'effet sur l'emploi de chaque scénario consiste à calculer le coût des principales options techniques et organisationnelles retenues, à ventiler ces coûts entre les 118 branches de l'économie française et à multiplier ces coûts par le contenu en emploi de chaque branche. Ce dernier élément est estimé par une analyse input-output, ce qui permet de comptabiliser les emplois générés par la production de l'ensemble des consommations intermédiaires. L'un des deux scénarios étant plus coûteux que l'autre, il faut prendre en compte l'effet négatif sur l'emploi du financement de ce surcoût. Pour cela, on fait l'hypothèse que ce surcoût est supporté par les ménages et que ces derniers diminuent en conséquence leur consommation du même montant et de manière homothétique. Ainsi, on évite de biaiser les résultats en faveur du scénario le plus coûteux. La mise en œuvre du scénario négaWatt aboutit à un effet positif sur l'emploi, de l'ordre de +240 000 emplois équivalent temps-plein en 2020 et 630 000 en 2030. Nous étudions la sensibilité des résultats aux hypothèses sur les prix de l'énergie importée, l'évolution de la productivité du travail, la répartition du coût entre ménages et administrations publiques, et enfin l'arbitrage consommation-épargne. L'effet sur l'emploi reste largement positif dans tous les cas.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-04-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "l'impact de la sortie des fossiles sur le PIB"
+            }
+          },
+          {
+            "id": "c3048c78-60e6-54fd-8cff-a565a2044548",
+            "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: carbone du fait (i) dune perte de compétitivité que subissent les biens exportés liée à lintensité carbone élevée de leur production, (ii) dune réduction en volume de la \nconsommation mondiale de bien industriel s associée à laccélération du phénomène de \ndématérialisation des économies induit par la ta xe et (iii) dune réduc tion générale de la \nconsommation de matières premières, en par ticulier de pétrole et de charbon, que ces \nrégions exportent massiveme nt dans la référence. \n \nFinalement, le Tableau 20 compare limpact  des politiques climatiques sur le taux de \ncroissance annuel moyen du PIB dans les scénarios \nETC 450 ppmv et ETC_I  450 ppmv. Nous \nretrouvons dans ce tableau la période de ralentissement transitoire qui apparaît au début de la mise \nen place des politiques dans les deux scénarios cons idérés (période 2010-2030). Au cours de cette \nphase, les pertes de taux de croissance sont, en  absolu, plus importantes dans les régions non",
+            "metadata": {
+              "title": "L'impact du changement technique endogène sur les politiques climatiques",
+              "hal_id": "tel-00489258",
+              "authors": "['Olivier Sassi']",
+              "version": "v0",
+              "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+              "source_url": "https://hal.science/tel-00489258",
+              "chunk_order": 1239,
+              "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+              "document_type": "THESE",
+              "publication_date": "2008-11-21",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "l'impact de la sortie des fossiles sur le PIB"
+            }
+          },
+          {
+            "id": "bce14d8b-6631-5ae9-a6f9-95577d0484e6",
+            "document_id": "98975b6d-1277-5710-b1ab-8d96e6dd9c23",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Produire des scénarios par centaines : Comment les démarches statistiques renouvellent les approches prospectives\n\nText: Version 7 du 5 septembre  2013  \n Figure 4  : Pertes de PIB  selon  les scénarios   \nLa comparaison des deux histogrammes montre lintérêt des politiques climatiques pour  \nréduire  les pertes de PIB dues à la  raréfaction des  fossiles (adapté de Rozenberg et al., 2010)  \n \nEn moyenne, les pertes sont significativement réduites dans les scénario s avec politiques climatiques \n(lhistogramme est décalé vers la droite)  ; de plus, les politiques climatiques suppriment les scénarios à \npertes très fortes (queue gauche de la distribution noire) en créant une résilience à la montée des prix \ndes fossiles, via un signal prix plus précoce et mieux anticipé.  \nOn peut par ailleurs quantifier cette assurance, qui sélève en moyenne sur ces scénarios à 11  500 \nmilliards de dollars, cest -à-dire 19% du PIB mondial de 2009.  \nIdentification  des trajectoires socio -économiques  de référence  \nUne autre question qui trouve une réponse ici concerne la caractéris ation, sous forme de scénarios",
+            "metadata": {
+              "title": "Produire des scénarios par centaines : Comment les démarches statistiques renouvellent les approches prospectives",
+              "hal_id": "hal-01018477",
+              "authors": "['Céline Guivarch', 'J. Rozenberg']",
+              "version": "v0",
+              "citation": "Céline Guivarch, J. Rozenberg. Produire des scénarios par centaines : Comment les démarches statistiques renouvellent les approches prospectives. Futuribles, 2014, 398, pp.49-56. ⟨hal-01018477⟩",
+              "source_url": "https://hal.science/hal-01018477",
+              "chunk_order": 29,
+              "description": "Most foresight exercises requiring a quantitative assessment of the scenarios proceed in two stages. They begin with a qualitative exploration of determining factors, from which a limited range of sets of hypotheses are chosen, producing a-similarly limited-range of scenarios. A mathematical model is then applied which translates the selected hypotheses into input data, in order to quantify the various scenarios identified. Nevertheless, as this article stresses, the increasing complexity of contexts and the possible interplay between the different factors at work in the various fields of study have cast doubt on the appropriateness of this mode of operation. The representativeness of hypotheses selected is no longer any guarantee of the quality of the scenarios deriving from them. This is why, in this article, Guivarch and Rozenberg propose a different way of proceeding, retaining all the determining factors identified in the field of study and running the models hundreds or thousands of times to get as many scenarios as possible from them. Qualitative choices are then made in a second phase, in the \"target- space\" of these scenarios. Guivarch and Rozenberg outline this alternative method here, which consists in building databases of scenarios in order to explore the areas of uncertainty. They also indicate the advantages this represents for foresight studies and present an actual example of the use of this method in the field of climate change economics.",
+              "document_type": "ART",
+              "publication_date": "2014-01-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "l'impact de la sortie des fossiles sur le PIB"
+            }
+          },
+          {
+            "id": "17f2ff3b-78c0-5390-b9d4-1e0adfc02845",
+            "document_id": "3fe238fa-6fc5-5bbd-8935-8330fe4d544b",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Un Plan mondial pour le climat et contre l'extrême pauvreté\n\nText: gérie, lIrak, lIran et la Libye combinent une économie fortement dépendante\naux énergies fossiles et un PIB insuffisant pour surmonter la perte de recettes\ntirées de la vente dhydrocarbures (Muttitt & Kartha 2020). Des pays comme le\nNigeria, lAngola et le Congo dépendent également fortement des fossiles, mais\nle revenu de base leur procurerait des transferts nets importants, grâce à leur\nfaible empreinte carbone.\n19.Cf. Jacobson et al. (2017). Daprès cette étude, 22 pays feraient face à une\nperte nette demplois. Les pays les plus touchés seraient Brunei (9 % des emplois\ndétruits en net), la Libye (7 %), le Qatar (6 %), la Norvège (5 %), le Koweït (5 %),\nlArabie Saoudite (3 %) et lIrak (2 %).\n20.Pai et al. (2021). Plus que la quantité demplois, cest la qualité et la\nlocalisation des emplois créés qui peut poser problème (Haywood et al. 2021).\n21. Frey & Osborne (2017); Hatzius et al. (2023); Lassébie & Quintini (2022).\n22. Cf. ourworldindata.org et Herrendorf et al. (2014).\n117",
+            "metadata": {
+              "title": "Un Plan mondial pour le climat et contre l'extrême pauvreté",
+              "hal_id": "hal-04866011",
+              "authors": [
+                "Adrien Fabre"
+              ],
+              "version": "v0",
+              "citation": "Adrien Fabre. Un Plan mondial pour le climat et contre l'extrême pauvreté. Le Bord de l'eau, 2024, 978-2-38519-071-2. ⟨hal-04866011⟩",
+              "source_url": "https://hal.science/hal-04866011",
+              "chunk_order": 350,
+              "document_type": "OUV",
+              "publication_date": "2024-09-13",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "l'impact de la sortie des fossiles sur le PIB"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2285,
+            "total_tokens": 2285
+          }
+        }
+      },
+      "duration": 4600
+    },
+    "retrievalTime": 2487,
+    "generationTime": 4600,
+    "timestamp": "2025-07-19T10:25:10.377Z"
+  },
+  "server_context": {
+    "client_ip": "93.5.218.62",
+    "forwarded_for": "93.5.218.62",
+    "received_at": "2025-07-19T10:25:10.504737+00:00",
+    "server_version": "1.0.0"
+  }
+}

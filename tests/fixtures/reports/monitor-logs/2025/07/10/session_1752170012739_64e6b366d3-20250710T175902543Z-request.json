@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752170012739_64e6b366d3s5dh2w",
+  "timestamp": "20250710T175902543Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752170342525_v7kwx7t",
+    "query": "WP5 will assess externalities such as CO₂ emissions, job creation, and\nother indirect economic effects.\n\n-   Estimating the expected reduction in greenhouse gas emissions\n    through scenario-based forecasting.\n\n-   Evaluating the economic impact, including job creation, energy\n    savings, and long-term financial sustainability.\n\nDeliverable: Technical report on IMACLIM model scenario simulations.\nAcademic manuscript.",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "WP5 will assess externalities such as CO₂ emissions, job creation, and\nother indirect economic effects.\n\n-   Estimating the expected reduction in greenhouse gas emissions\n    through scenario-based forecasting.\n\n-   Evaluating the economic impact, including job creation, energy\n    savings, and long-term financial sustainability.\n\nDeliverable: Technical report on IMACLIM model scenario simulations.\nAcademic manuscript.",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "193.51.120.110",
+    "forwarded_for": "193.51.120.110",
+    "received_at": "2025-07-10T17:59:02.565857+00:00",
+    "server_version": "1.0.0"
+  }
+}

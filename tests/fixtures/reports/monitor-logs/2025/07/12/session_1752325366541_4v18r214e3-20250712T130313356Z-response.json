@@ -1,0 +1,520 @@
+{
+  "sessionId": "session_1752325366541_4v18r214e31j1573",
+  "timestamp": "20250712T130313356Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752325388850_u8cl9yz",
+    "response": {
+      "results": {
+        "generated_answer": "Pour une conférence scientifique, voici une liste des documents et éléments à emmener, basée sur les informations fournies :\n\n1. **Documents administratifs** :\n   - Ordre de mission [a114673].\n   - Reçu de paiement des frais d'inscription, si applicable [a114673].\n   - Billet de transport électronique [a114673].\n   - Réservation et adresse de l'hébergement [a114673].\n   - Documents de voyage : passeport, certificats de santé [a114673].\n\n2. **Documents relatifs à la conférence** :\n   - Programme de la conférence avec les lieux et points de rencontre [a114673].\n   - Livre des résumés (version électronique) [a114673].\n   - Résumé de votre session : jour, durée, heure de votre présentation [a114673].\n   - Nom du président de session et des autres intervenants [a114673].\n   - Titre et résumé de votre présentation, tels qu'annoncés au public [a114673].\n   - Exemplaire papier du manuscrit que vous présentez [a114673].\n\n3. **Autres éléments utiles** :\n   - Cartes de visite [a114673].\n   - Vérifiez les prévisions météorologiques avant de faire vos bagages. Apportez toujours un maillot de bain [a114673].\n\n4. **Considérations supplémentaires** :\n   - Ne engagez aucune dépense sans connaître les réglementations de remboursement [a114673].\n   - Si le CNRS paie pour la mission, utilisez ses systèmes en ligne pour les voyages et l'hébergement [a114673].\n\nCes éléments devraient vous aider à bien préparer votre participation à une conférence scientifique.",
+        "citations": [
+          {
+            "id": "a114673",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 182,
+              "end": 191
+            },
+            "payload": {
+              "id": "a114673d-2e7b-5369-ac60-45851f34c6a0",
+              "document_id": "6644d400-78d7-54cc-b07c-1ea25723bcfc",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: Research howtos. Three fascicles for students, analysts and their supervisors\n\nText: Howto 23: Before a conference\nBring the following documents for any mission.\nOrdre de mission.\nReceipt of paying the registration fees, if any.\nTransport e-ticket.\nPlan for transfer from station/airport to hotel/Airbnb.\nAccommodation reservation number and address.\nTravel document: passport, health certificates.\nBusiness cards.\nFor a conference, also bring:\nThe programme, with location, meeting point.\nBook of abstracts. Only take the electronic version.\nBrief of your session. Day, duration, time of your \npresentation.\nName of session chair and other speakers.\nYour presentations title and summary, as announced to the \naudience.\nHardcopy of the manuscript you present.\nI bring a paper copy whenever I anticipate I may need it.\nNever engage an expense without knowing its refund regulations.\nIf CNRS pays for the mission, you must use its online systems for \ntravel and accommodation .\nCheck the weather forecasts before packing. Always bring swimsuit.\nHDMs Research Howtos, 1st ed., 2022-07-05 print37",
+              "metadata": {
+                "title": "Research howtos. Three fascicles for students, analysts and their supervisors",
+                "hal_id": "hal-03775853",
+                "authors": [
+                  "Minh Ha-Duong"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Research howtos. Three fascicles for students, analysts and their supervisors. 2022. ⟨hal-03775853⟩",
+                "source_url": "https://hal.science/hal-03775853",
+                "chunk_order": 63,
+                "description": "Here is a compact handbook for learning and mastering the rules of quality in scholarly studies, based on more than thirty years of experience conducting interdisciplinary research, training Master and Doctoral students and supervising junior analysts. This handbook defines soft skills, the way of the researcher, in one-page practical notes covering all the need-to-know trade procedures. To learn about the fine art of data analysis, modelling, visualization, statistics or software engineering, you will find more specialised guidance elsewhere... This handbook shows how to conduct quality research at three levels: the article, the scientist, and the project team levels. Thus, the first fascicle explains how to write high-quality scholarly work. The second is about winning the reputation game. The third is about managing teams and research projects.",
+                "document_type": "OUV",
+                "publication_date": "2022-07-05",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "Que faut il emmener en conf scientifique liste"
+              }
+            }
+          },
+          {
+            "id": "a114673",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 254,
+              "end": 263
+            },
+            "payload": null
+          },
+          {
+            "id": "a114673",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 303,
+              "end": 312
+            },
+            "payload": null
+          },
+          {
+            "id": "a114673",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 359,
+              "end": 368
+            },
+            "payload": null
+          },
+          {
+            "id": "a114673",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 429,
+              "end": 438
+            },
+            "payload": null
+          },
+          {
+            "id": "a114673",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 555,
+              "end": 564
+            },
+            "payload": null
+          },
+          {
+            "id": "a114673",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 612,
+              "end": 621
+            },
+            "payload": null
+          },
+          {
+            "id": "a114673",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 695,
+              "end": 704
+            },
+            "payload": null
+          },
+          {
+            "id": "a114673",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 766,
+              "end": 775
+            },
+            "payload": null
+          },
+          {
+            "id": "a114673",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 848,
+              "end": 857
+            },
+            "payload": null
+          },
+          {
+            "id": "a114673",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 914,
+              "end": 923
+            },
+            "payload": null
+          },
+          {
+            "id": "a114673",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 980,
+              "end": 989
+            },
+            "payload": null
+          },
+          {
+            "id": "a114673",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1101,
+              "end": 1110
+            },
+            "payload": null
+          },
+          {
+            "id": "a114673",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1236,
+              "end": 1245
+            },
+            "payload": null
+          },
+          {
+            "id": "a114673",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1350,
+              "end": 1359
+            },
+            "payload": null
+          }
+        ],
+        "search_results": [
+          {
+            "id": "aae857b2-7769-5cd1-b6b1-d6c1c262ee64",
+            "document_id": "5471c63c-ef30-577b-93e1-7fdc061bb310",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Rapport de prospective du Conseil scientifique de l’Institut des sciences humaines et sociales du CNRS\n\nText: 45 \n CoNRS    Comité national de la recherche scientifique  \nCSI   Conseil Scientifique dInstitut  \nDARIAH   Digital Research Infrastructure for t he Arts and Humanities  \nDAS    Directeur adjoint scientifique  \nDIST     Direction de linformation scientifique et technique du CNRS  \nDSI    Direction des systèmes dinformation  \nEHESS     École des hautes études en sciences sociales  \nENS    École Normale Supérieur e \nEPCS    Établissement public de coopération scientifique  \nEPHE    École pratique des hautes études  \nEPSCP    Établissement public à caractère scientifique , culturel et professionnel  \nEPST     Établissement public à caractère scientifique et technologique  \nEquip Ex   Équipement d excellence  \nESR   Enseignement supérieur et recherche  \nESS   European Social Survey  \nFMSH    Fédération des maisons des sciences de l Homme  \nGED    Grand équipement d ocumentaire  \nGDR    Groupement de recherche  \nGDRI    Groupement de recherche inter national  \nGIS   Groupement dintérêt scientifique",
+            "metadata": {
+              "title": "Rapport de prospective du Conseil scientifique de l’Institut des sciences humaines et sociales du CNRS",
+              "hal_id": "hal-01785343",
+              "authors": [
+                "Catherine Alès",
+                "Richard Arena",
+                "Astrid Brandt-Grau",
+                "Naceur Chaabane",
+                "Geneviève Cortes",
+                "Renaud Crespin",
+                "Julien Fretel",
+                "Delphine Gardey",
+                "Ivan Guermeur",
+                "Lamine Gueye",
+                "Lilian Haegeman",
+                "Antony Hostein",
+                "Hélène Michel",
+                "Anneliese Nef",
+                "Nathalie Vienne-Guerrin",
+                "Nathalie Le Tellier-Becquart",
+                "Cécile Michel",
+                "Rossana Vaccaro",
+                "Emmanuel Didier",
+                "Philippe Auvergnon",
+                "Lena Inowlocki"
+              ],
+              "version": "v0",
+              "citation": "Catherine Alès, Richard Arena, Astrid Brandt-Grau, Naceur Chaabane, Geneviève Cortes, et al.. Rapport de prospective du Conseil scientifique de l’Institut des sciences humaines et sociales du CNRS. [Rapport de recherche] CNRS. 2016. ⟨hal-01785343⟩",
+              "source_url": "https://hal.science/hal-01785343",
+              "chunk_order": 249,
+              "document_type": "REPORT",
+              "publication_date": "2016-10-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Que faut il emmener en conf scientifique liste"
+            }
+          },
+          {
+            "id": "a114673d-2e7b-5369-ac60-45851f34c6a0",
+            "document_id": "6644d400-78d7-54cc-b07c-1ea25723bcfc",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Research howtos. Three fascicles for students, analysts and their supervisors\n\nText: Howto 23: Before a conference\nBring the following documents for any mission.\nOrdre de mission.\nReceipt of paying the registration fees, if any.\nTransport e-ticket.\nPlan for transfer from station/airport to hotel/Airbnb.\nAccommodation reservation number and address.\nTravel document: passport, health certificates.\nBusiness cards.\nFor a conference, also bring:\nThe programme, with location, meeting point.\nBook of abstracts. Only take the electronic version.\nBrief of your session. Day, duration, time of your \npresentation.\nName of session chair and other speakers.\nYour presentations title and summary, as announced to the \naudience.\nHardcopy of the manuscript you present.\nI bring a paper copy whenever I anticipate I may need it.\nNever engage an expense without knowing its refund regulations.\nIf CNRS pays for the mission, you must use its online systems for \ntravel and accommodation .\nCheck the weather forecasts before packing. Always bring swimsuit.\nHDMs Research Howtos, 1st ed., 2022-07-05 print37",
+            "metadata": {
+              "title": "Research howtos. Three fascicles for students, analysts and their supervisors",
+              "hal_id": "hal-03775853",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Research howtos. Three fascicles for students, analysts and their supervisors. 2022. ⟨hal-03775853⟩",
+              "source_url": "https://hal.science/hal-03775853",
+              "chunk_order": 63,
+              "description": "Here is a compact handbook for learning and mastering the rules of quality in scholarly studies, based on more than thirty years of experience conducting interdisciplinary research, training Master and Doctoral students and supervising junior analysts. This handbook defines soft skills, the way of the researcher, in one-page practical notes covering all the need-to-know trade procedures. To learn about the fine art of data analysis, modelling, visualization, statistics or software engineering, you will find more specialised guidance elsewhere... This handbook shows how to conduct quality research at three levels: the article, the scientist, and the project team levels. Thus, the first fascicle explains how to write high-quality scholarly work. The second is about winning the reputation game. The third is about managing teams and research projects.",
+              "document_type": "OUV",
+              "publication_date": "2022-07-05",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Que faut il emmener en conf scientifique liste"
+            }
+          },
+          {
+            "id": "ff7f7098-1f67-559c-9447-32c7cd506538",
+            "document_id": "bff986e7-8240-5d6f-bfb5-0d8344092f5a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Pour une évaluation globale des OGM : Des perspectives épistémologiques renouvelées pour l'analyse des risques programme « EvaGlo » dans le cadre du programme « RiskOgm » (rapport complet)\n\nText: 22 constituent une menace, surtout au cas où les résultats des recherches scientifiques sont utilisés contre les intérêts vitaux de l'humanité pour la préparation de guerres de  destruction massive ou pour l'exploitation d'une nation par une autre, et en tout état de cause, poser des problèmes éthiques et juridiques complexes, b. Que, pour faire face à cette situation, les États membres devraient mettre en place ou concevoir des mécanismes pour l'élaboration et la mise en oeuvre de politiques scientifiques et technologiques adéquates, c'est-à-dire de politiques qui viseraient à éviter les dangers éventuels et à tirer pleinement parti des aspects positifs des découvertes scientifiques et des innovations et applications technologiques   avec une définition de la science comme suit :   Le mot science désigne l'entreprise par laquelle l'homme, agissant individuellement ou en groupes, petits ou grands, fait un effort organisé pour découvrir et maîtriser au moyen de l'étude objective de phénomènes observés la",
+            "metadata": {
+              "title": "Pour une évaluation globale des OGM : Des perspectives épistémologiques renouvelées pour l'analyse des risques programme « EvaGlo » dans le cadre du programme « RiskOgm » (rapport complet)",
+              "hal_id": "hal-01300736",
+              "authors": [
+                "Martin Rémondet",
+                "Frédéric Jacquemart",
+                "Véronique Thomas-Vaslin",
+                "Léo Coutellec",
+                "Jacques Blondel",
+                "Nicolas Bouleau",
+                "Patrick Gaudray",
+                "Catherine Larrère",
+                "Anne-Françoise Schmid"
+              ],
+              "version": "v0",
+              "citation": "Martin Rémondet, Frédéric Jacquemart, Véronique Thomas-Vaslin, Léo Coutellec, Jacques Blondel, et al.. Pour une évaluation globale des OGM : Des perspectives épistémologiques renouvelées pour l'analyse des risques programme « EvaGlo » dans le cadre du programme « RiskOgm » (rapport complet) . [Rapport de recherche] Ministère de l'écologie et du développement durable. 2014. ⟨hal-01300736⟩",
+              "source_url": "https://hal.science/hal-01300736",
+              "chunk_order": 135,
+              "description": "La synthèse de ce rapport est décrite dans ce document: Frédéric Jacquemart, Véronique Thomas-Vaslin, Léo Coutellec. Pour une évaluation globale des OGM : Des perspectives épistémologiques renouvelées pour l'analyse des risques . [Rapport de recherche] Ministère de l'Ecologie, du Développement durable et de l'Energie 2016, http://www.rechercheriskogm.fr/fr/page/evaglo. <hal-01298382>",
+              "document_type": "REPORT",
+              "publication_date": "2014-09-18",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Que faut il emmener en conf scientifique liste"
+            }
+          },
+          {
+            "id": "8228971e-f97b-5ab4-8cb3-5b950413a063",
+            "document_id": "bff986e7-8240-5d6f-bfb5-0d8344092f5a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Pour une évaluation globale des OGM : Des perspectives épistémologiques renouvelées pour l'analyse des risques programme « EvaGlo » dans le cadre du programme « RiskOgm » (rapport complet)\n\nText: La composition décidée par celui qui prépare l'urne est alors retrouvée par celui qui procède aux tirages, vérifiant le théorème de Bernouilli et ce, même si un expérimentateur  normal  de passage constate que tout est foutraque pour lui.    L'important n'est pas l'impossible nature vraie de la chose, mais l'homogénéité de la source de sens dans un corpus, dans le cadre général  d'une intentionnalité.                                                               20 Sur le caractère religieux de la science contemporaine, voir par exemple Matthieu Calame (2011)   Lettre ouverte aux scientistes  Ed. Charles Léopold Mayer. 21 C'est à dire cohérent avec la satisfaction de la source de sens intentionnelle.",
+            "metadata": {
+              "title": "Pour une évaluation globale des OGM : Des perspectives épistémologiques renouvelées pour l'analyse des risques programme « EvaGlo » dans le cadre du programme « RiskOgm » (rapport complet)",
+              "hal_id": "hal-01300736",
+              "authors": [
+                "Martin Rémondet",
+                "Frédéric Jacquemart",
+                "Véronique Thomas-Vaslin",
+                "Léo Coutellec",
+                "Jacques Blondel",
+                "Nicolas Bouleau",
+                "Patrick Gaudray",
+                "Catherine Larrère",
+                "Anne-Françoise Schmid"
+              ],
+              "version": "v0",
+              "citation": "Martin Rémondet, Frédéric Jacquemart, Véronique Thomas-Vaslin, Léo Coutellec, Jacques Blondel, et al.. Pour une évaluation globale des OGM : Des perspectives épistémologiques renouvelées pour l'analyse des risques programme « EvaGlo » dans le cadre du programme « RiskOgm » (rapport complet) . [Rapport de recherche] Ministère de l'écologie et du développement durable. 2014. ⟨hal-01300736⟩",
+              "source_url": "https://hal.science/hal-01300736",
+              "chunk_order": 74,
+              "description": "La synthèse de ce rapport est décrite dans ce document: Frédéric Jacquemart, Véronique Thomas-Vaslin, Léo Coutellec. Pour une évaluation globale des OGM : Des perspectives épistémologiques renouvelées pour l'analyse des risques . [Rapport de recherche] Ministère de l'Ecologie, du Développement durable et de l'Energie 2016, http://www.rechercheriskogm.fr/fr/page/evaglo. <hal-01298382>",
+              "document_type": "REPORT",
+              "publication_date": "2014-09-18",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Que faut il emmener en conf scientifique liste"
+            }
+          },
+          {
+            "id": "49b576af-a3b7-5969-aa78-d4b37dbc420d",
+            "document_id": "04042578-5f75-50e0-84f8-b3e544155014",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: LA SCIENCE COMME CE QUI EST A TRANSMETTRE\n\nText: est\t si\t problématique\t aujourd'hui\t que\t nous\t devons\t élargir\tles\t moyens\t de\t connaissance,\t afin\t de\tmieux\tpenser\tl'éventuel.\tMais\tcomment\tdépasser\tla\tscience\tnomologique\t?\tEn\tpensant\tla\tscience\tcomme\tce\t qui\t est\t à\t transmettre.\t Cette\t idée\t nest\t pas\t neuve\t:\t Vitruve\t plaidait\t déjà\t ce\t point\t de\t vue\t dans\t son\tDe\tArchitectura.\t\tencadré\tTRANSMETTRE\tDES\tCRAINTES\tRéfléchissons\tpar\texemple\tà\tla\ttransmission\tdu\tsavoir\tentre\tle\tcompagnon\tet\tl'apprenti\t:\tle\tmaître\tne\tse\tcontente\tpas\tde\ttransmettre\tpositivement\tles\ttechniques\tutiles\tou\tles\tgestes\tefficaces.\tIl\ttransmet\tsurtout\tles\tquestions\tà\tse\tposer\tet\tles\tcraintes\tà\tavoir\t:\t\til\tfaut\tfaire\tattention\tà\tceci\tou\tà\tcela\t.\t\t\tIl\ty\ta\taussi\tdes\tcraintes\tà\ttransmettre.\tCest\tici\tque\tse\tferme\tla\tboucle\t:\tle\tsouci,\tla\tcrainte\tsont\tfaits\tde\tla\tmême\tétoffe\tpsychologique\tque\tl'interprétation\t(cf.\tla\tpsychanalyse\tet\tparticulièrement\tles\tthèses\tde\tLacan\tsur\tle\tsavoir).\t\t\t\tFAIRE\tENTRER\tLES\tCRAINTES\tDANS\tLE\tTRAVAIL\tSCIENTIFIQUE\t\tLes\t craintes\t sont\t initialement",
+            "metadata": {
+              "title": "LA SCIENCE COMME CE QUI EST A TRANSMETTRE",
+              "hal_id": "halshs-01465986",
+              "authors": [
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Nicolas Bouleau. LA SCIENCE COMME CE QUI EST A TRANSMETTRE. La jaune et la rouge [revue mensuelle de la société amicale des anciens élèves de l'Ecole Polytechnique], 2017, 722, pp.24-27. ⟨halshs-01465986⟩",
+              "source_url": "https://hal.science/halshs-01465986",
+              "chunk_order": 12,
+              "description": "A une approche de la connaissance encore largement positiviste, Nicolas Bouleau propose de substituer une approche fondée sur l'importance de l'interprétation. Dans un monde fait d'éventualités multiples, il s'agit de faire entrer les craintes dans le travail scientifique pour les épurer en craintes « désintéressées ».",
+              "document_type": "ART",
+              "publication_date": "2017-02-01",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Que faut il emmener en conf scientifique liste"
+            }
+          },
+          {
+            "id": "0b29d69e-32ba-5937-ba04-43d300e31c12",
+            "document_id": "b68cee1e-2d35-502e-8c96-c30aee8c333d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Sur la Responsabilité de l'ESR en ces temps incertains\n\nText: sociales, naturelles, ou de lingénieur en étroite interaction avec le tiers secteur de la recherche. Ce sont tous nos rapports à la nature, à la technique, au travail, à la connaissance comme à la transmission, au faire société, à lidée de progrès et dun avenir commun, qui sont à repenser dans ce nouvel état desprit. Il faut bien admettre, en préalable, que nous ne savons pas exactement où\tnos pensées et nos recherches nous mèneront. Nous savons en revanche où\tnous ne voulons pas aller5 et nentendons pas, face à\tde tels enjeux, nous retrancher derrière une illusoire neutralité\taxiologique du savant29. Les temps sont fortement incertains, il va nous falloir expérimenter30 pour passer de ladaptation2 avec laquelle nous avons démarré\tcet écrit à\tla transformation3 que nous souhaitons à\tla fois stimuler, accompagner et incarner. Les raisons dy croire ne manquent pas. Les points dappui sont nombreux dans lhéritage scientifique, social, politique, et culturel qui nous revient. La confiance quune large part de la",
+            "metadata": {
+              "title": "Sur la Responsabilité de l'ESR en ces temps incertains",
+              "hal_id": "hal-03145453",
+              "authors": "['Olivier Ragueneau', 'Xavier Capet', 'V. Guillet', 'Tamara Ben Ari', 'O Berné', 'Olivier Aumont', 'G Guimbretière', 'Évelyne Lhoste', 'Xavier Anglaret', 'Camille Noûs']",
+              "version": "v0",
+              "citation": "Olivier Ragueneau, Xavier Capet, V. Guillet, Tamara Ben Ari, O Berné, et al.. Sur la Responsabilité de l'ESR en ces temps incertains. [0] Labo1point5. 2020. ⟨hal-03145453⟩",
+              "source_url": "https://hal.science/hal-03145453",
+              "chunk_order": 42,
+              "document_type": "REPORT",
+              "publication_date": "2020-01-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Que faut il emmener en conf scientifique liste"
+            }
+          },
+          {
+            "id": "d2c57b3b-d966-567d-8a50-c3928657a4ad",
+            "document_id": "04042578-5f75-50e0-84f8-b3e544155014",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: LA SCIENCE COMME CE QUI EST A TRANSMETTRE\n\nText: LA\tSCIENCE\tCOMME\tCE\tQUI\tEST\tA\tTRANSMETTRE\t\t\tNicolas\tBouleau,\t\t\t\t\t\t\t\t\tLA\tJAUNE\tET\tLA\tROUGE\t\tn722\t\tp24-27\t\t\tA\tune\tapproche\tde\tla\tconnaissance\tencore\tlargement\tpositiviste,\tNicolas\tBouleau\tpropose\tde\tsubstituer\tune\tapproche\tfondée\tsur\tlimportance\tde\tlinterprétation.\tDans\tun\tmonde\tfait\td'éventualités\tmultiples,\til\tsagit\tde\tfaire\tentrer\tles\tcraintes\tdans\tle\ttravail\tscientifique\tpour\tles\tépurer\ten\tcraintes\t\tdésintéressées\t.\t\t\tLa\t science\t est\t encore\t aujourd'hui\t essentiellement\t positiviste,\t sinspirant\t donc\t dun\t courant\t datant\t de\t la\tmême\t époque\t que\t le\t marxisme,\t fondée\t comme\t lui\t sur\t une\t croyance\t absolue\t en\t un\t progrès\t technique\tporteur\tde\tgrandes\tpromesses.\tNous\tsommes\tlà\tavant\tla\tprise\tde\tconscience\tenvironnementale\tdu\tdernier\ttiers\tdu\t20ème\tsiècle\t:\tavec\tle\tpremier\trapport\tdu\tClub\tde\tRome\ten\t1972,\tle\trapport\tBrundtland\tde\t1987,\tle\tsommet\t de\t la\t Terre\t de\t Rio\t 1990\t cest\t la\t prise\t de\t conscience\t progressive\t que\t la\t planète\t est\t finie,",
+            "metadata": {
+              "title": "LA SCIENCE COMME CE QUI EST A TRANSMETTRE",
+              "hal_id": "halshs-01465986",
+              "authors": [
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Nicolas Bouleau. LA SCIENCE COMME CE QUI EST A TRANSMETTRE. La jaune et la rouge [revue mensuelle de la société amicale des anciens élèves de l'Ecole Polytechnique], 2017, 722, pp.24-27. ⟨halshs-01465986⟩",
+              "source_url": "https://hal.science/halshs-01465986",
+              "chunk_order": 1,
+              "description": "A une approche de la connaissance encore largement positiviste, Nicolas Bouleau propose de substituer une approche fondée sur l'importance de l'interprétation. Dans un monde fait d'éventualités multiples, il s'agit de faire entrer les craintes dans le travail scientifique pour les épurer en craintes « désintéressées ».",
+              "document_type": "ART",
+              "publication_date": "2017-02-01",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Que faut il emmener en conf scientifique liste"
+            }
+          },
+          {
+            "id": "cabe7043-4786-50cd-add4-d1d63f98cfb0",
+            "document_id": "a3d35f1e-aaa7-5509-8337-f7780ff57f64",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: L'économie dans l'impasse climatique\n\nText: 5.1 le circuit du climato -scepticisme 301\ngroupe. On retrouve donc une intentionnalité (la situation est  agie  par quel-\nquun), un sens (lévolution a un but caché) et un espoir (le renversement du\npetit groupe permettra dorienter lévolution à son propre proﬁt). À lencontre\ndes théories du complot, les sciences sociales nous enseignent que les structures\nde la société sont bien plus fréquemment des conséquences non intentionnelles,\nles effets imprévus dune série dactes accomplis pour des raisons propres5. La\ndécouverte des effets imprévus peut même être vue comme lacte de naissance\ndes sciences sociales modernes (Dupuy, 1992 ).\nLe lien entre croyance dans les théories du complot et climato-scepticisme est\nillustré par une enquête de Lewandowsky et al. ( 2013 ). La croyance dans la théo-\nrie du complot pour certains événements (lalunissage dAppolo 13, lextrater-\nrestre de Roswell) est un bon prédicteur du climato-scepticisme. Les deux autres",
+            "metadata": {
+              "title": "L'économie dans l'impasse climatique",
+              "hal_id": "tel-01101591",
+              "authors": [
+                "Antonin Pottier"
+              ],
+              "version": "v0",
+              "citation": "Antonin Pottier. L'économie dans l'impasse climatique. Economies et finances. EHESS, 2014. Français. ⟨NNT : ⟩. ⟨tel-01101591⟩",
+              "source_url": "https://hal.science/tel-01101591",
+              "chunk_order": 1785,
+              "description": "Pourquoi les émissions de gaz à effet de serre ne sont-elles pas contrôlées? La thèse interroge la boîte à outil de l'analyse économique néo-classique et pose la question ainsi: comment la théorie économique forme un cadrage mental inadéquat du problème climatique? La thèse identifie des basculements dans l'histoire de l'économie des ressources et montre un oubli récurrent du substrat matériel de la production. La fonction de la production, outil privilégié de modélisation des contraintes techniques, repose sur une méprise, comme l'a enseigné la controverse de Cambridge. L'analyse coût-bénéfice, seul moyen supposé d'avoir une approche non-normative, est privilégié pour traiter du changement climatique, quitte à modéliser des relations inconnues. La fonction des dommages extrapole à partir de préjugés partagés, et les controverses répétées sur l'actualisation font ressortir l'incohérence du cadre macro-économique en vigueur. L'analyse d'un article contemporain explicite le fonctionnement de ce rapport désinvolte au réel: les liens lâches entre la structure mathématique d'un modèle, les mots employés pour le décrire et ses résultats numériques donnent d'extraordinaires marges d'interprétation. Les rapports entre système économique, idéologie et discipline académique sont étudiées au prisme de deux symboles, l'homo economicus et le marché. L'inadéquation de la théorie économique pour traiter du changement climatique a une racine plus profonde dans l'organisation actuelle des sociétés occidentales, centrée sur le marché. Les effets bloquants se font voir aussi bien dans le phénomène sociologique du climato-scepticisme que dans la construction du marché carbone.",
+              "document_type": "THESE",
+              "publication_date": "2014-05-28",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Que faut il emmener en conf scientifique liste"
+            }
+          },
+          {
+            "id": "8db21495-64fc-5298-a6d7-48f206098de0",
+            "document_id": "bff986e7-8240-5d6f-bfb5-0d8344092f5a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Pour une évaluation globale des OGM : Des perspectives épistémologiques renouvelées pour l'analyse des risques programme « EvaGlo » dans le cadre du programme « RiskOgm » (rapport complet)\n\nText: 16  Une abondante littérature existe concernant le problème de la confirmation des énoncés ou des modèles scientifiques28. L'objectif ici, rappelons-le, n'est pas d'entrer dans ce savant et riche débat, mais de nous servir de cet exemple pour aborder les concepts en rapport avec l'évaluation de nos actes dans un contexte moderne, c'est à dire en évolution rapide, pour ne pas dire explosive.   Le rapport à la connaissance, constitutif des objets et des événements, peut être encore éclairé par la prédiction, autre forme de pari dont l'importance dans la confirmation scientifique ne saurait être minimisée. Après avoir effleuré ce thème, nous tenterons ensuite de montrer la place incontournable de l'indicible (ou ineffable) dans la possibilité du discours.  La prédiction (à propos de)   De nombreux travaux existent concernant le problème de la confirmation des énoncés ou des modèles scientifiques. L'objectif ici, rappelons-le, n'est pas d'entrer dans ce savant et riche débat, mais de nous en servir pour aborder",
+            "metadata": {
+              "title": "Pour une évaluation globale des OGM : Des perspectives épistémologiques renouvelées pour l'analyse des risques programme « EvaGlo » dans le cadre du programme « RiskOgm » (rapport complet)",
+              "hal_id": "hal-01300736",
+              "authors": [
+                "Martin Rémondet",
+                "Frédéric Jacquemart",
+                "Véronique Thomas-Vaslin",
+                "Léo Coutellec",
+                "Jacques Blondel",
+                "Nicolas Bouleau",
+                "Patrick Gaudray",
+                "Catherine Larrère",
+                "Anne-Françoise Schmid"
+              ],
+              "version": "v0",
+              "citation": "Martin Rémondet, Frédéric Jacquemart, Véronique Thomas-Vaslin, Léo Coutellec, Jacques Blondel, et al.. Pour une évaluation globale des OGM : Des perspectives épistémologiques renouvelées pour l'analyse des risques programme « EvaGlo » dans le cadre du programme « RiskOgm » (rapport complet) . [Rapport de recherche] Ministère de l'écologie et du développement durable. 2014. ⟨hal-01300736⟩",
+              "source_url": "https://hal.science/hal-01300736",
+              "chunk_order": 90,
+              "description": "La synthèse de ce rapport est décrite dans ce document: Frédéric Jacquemart, Véronique Thomas-Vaslin, Léo Coutellec. Pour une évaluation globale des OGM : Des perspectives épistémologiques renouvelées pour l'analyse des risques . [Rapport de recherche] Ministère de l'Ecologie, du Développement durable et de l'Energie 2016, http://www.rechercheriskogm.fr/fr/page/evaglo. <hal-01298382>",
+              "document_type": "REPORT",
+              "publication_date": "2014-09-18",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "Que faut il emmener en conf scientifique liste"
+            }
+          },
+          {
+            "id": "77600760-d2a6-5b26-8fa1-07b4f96db119",
+            "document_id": "86c2a42a-fd13-5463-b0ce-7f1f0ec27169",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: « La recherche en pratique(s) » : un cycle de rendez-vous pour sensibiliser et former les chercheurs & doctorants du CIRED\n\nText: CONSTAT \n  Évolution rapide  des pratiques de recherche et du \npaysage de la science ouverte\n  Une interlocutrice à distance  via lune des tutelles \ndu laboratoire, mais pas de personnel sur place pour \naccompagner les chercheurs et doctorants\n  Information principalement par mail sur ces sujets\nLe CIRED \n= Centre international de recherche sur lenvironnement et le développement\n IDÉE \n  Partir des besoins exprimés  par les chercheurs et \ndoctorants du laboratoire sur les problématiques liées \nà leurs pratiques\n  Créer un cycle de rendez-vous  sur ces sujets\n  Adapter le contenu & le format  de chaque rendez-\nvous aux besoins précis des collègues\n THÉMATIQUES abordées... \n  Science  ouverte  principalement\n  Modèles économiques de lédition scientifique\n  Données de la recherche : \n   - aspects juridiques\n   - éléments de politique institutionnelle\n  Intégrité scientifique\n ... & à venir i    \n  Communication avec les médias\n  Épijournaux3  \n  Revues prédatrices, douteuses et de la zone dite  grise",
+            "metadata": {
+              "title": "« La recherche en pratique(s) » : un cycle de rendez-vous pour sensibiliser et former les chercheurs & doctorants du CIRED",
+              "hal_id": "hal-04311547",
+              "authors": [
+                "Estelle Carciofi"
+              ],
+              "version": "v0",
+              "citation": "Estelle Carciofi. « La recherche en pratique(s) » : un cycle de rendez-vous pour sensibiliser et former les chercheurs & doctorants du CIRED. Pratiquer la science ouverte : des services et des compétences en action, Jul 2023, Paris, France. ⟨hal-04311547⟩",
+              "source_url": "https://hal.science/hal-04311547",
+              "chunk_order": 4,
+              "description": "« La Recherche en pratique(s) » est un cycle de rendez-vous dont le but est de sensibiliser et former les chercheurs et doctorants du CIRED [le centre international de recherche sur l'environnement et le développement] sur les enjeux cruciaux associés à leurs pratiques de recherche d'une manière claire et dynamique, grâce à des intervenants de qualité et à un format variable en fonction des thématiques. Ces thématiques concernent principalement la science ouverte (données de la recherche, libre accès, édition scientifique, ...).",
+              "document_type": "POSTER",
+              "publication_date": "2023-07-04",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "Que faut il emmener en conf scientifique liste"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1462,
+            "total_tokens": 1462
+          }
+        }
+      },
+      "duration": 2499
+    },
+    "retrievalTime": 1978,
+    "generationTime": 2499,
+    "timestamp": "2025-07-12T13:03:13.356Z"
+  },
+  "server_context": {
+    "client_ip": "104.28.42.17",
+    "forwarded_for": "104.28.42.17",
+    "received_at": "2025-07-12T13:03:13.526449+00:00",
+    "server_version": "1.0.0"
+  }
+}

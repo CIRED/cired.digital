@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752920690572_4n4i614m6p4o2k6a13",
+  "timestamp": "20250719T102503288Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752920703278_uzeendu",
+    "query": "l'impact de la sortie des fossiles sur le PIB",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "l'impact de la sortie des fossiles sur le PIB",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "93.5.218.62",
+    "forwarded_for": "93.5.218.62",
+    "received_at": "2025-07-19T10:25:03.323584+00:00",
+    "server_version": "1.0.0"
+  }
+}

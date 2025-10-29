@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752137723364_6y2xy3v6v1n72261j",
+  "timestamp": "20250710T092954784Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752139794757_z784z4d",
+    "query": "Le CIRED",
+    "settings": {
+      "r2rURL": "http://localhost:7272",
+      "model": "openai/gpt-4.1",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "Le CIRED",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "openai/gpt-4.1",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "172.18.0.1",
+    "forwarded_for": null,
+    "received_at": "2025-07-10T09:29:54.790176+00:00",
+    "server_version": "1.0.0"
+  }
+}

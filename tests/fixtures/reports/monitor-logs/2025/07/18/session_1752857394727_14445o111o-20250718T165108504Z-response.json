@@ -1,0 +1,542 @@
+{
+  "sessionId": "session_1752857394727_14445o111o94k471d",
+  "timestamp": "20250718T165108504Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752857464203_pglt0qu",
+    "response": {
+      "results": {
+        "generated_answer": "L'élasticité de la courbe salaire-chômage est un concept économique qui mesure la sensibilité des salaires au taux de chômage. Plus précisément, elle quantifie la variation des salaires en réponse à une variation du taux de chômage. Une élasticité négative indique que lorsque le taux de chômage augmente, les salaires tendent à diminuer, et vice versa.\n\nDans les documents fournis, plusieurs références à l'élasticité de la courbe salaire-chômage sont faites :\n\n1. **Valeur de l'élasticité** : Dans le document [c0ecc64], il est mentionné que l'élasticité de la courbe salaire-chômage est prise égale à -0,1, une valeur qui ressort de la plupart des analyses économétriques (Blanchflower et Oswald, 1995).\n\n2. **Interprétation de l'élasticité** : Le document [2452fab] explique que l'élasticité de la courbe salaire-chômage peut être vue comme l'aptitude de l'économie à s'adapter en prix ou en quantités après un choc. Elle amplifie la décroissance des revenus des salaires suite à une baisse de production de l'économie.\n\n3. **Modélisation de la courbe salaire-chômage** : Le document [067331c] décrit comment le modèle utilise une courbe salaire-chômage pour déduire les variations de salaire moyen réel en fonction du taux de chômage, traduite par l'élasticité \\( \\sigma_{wU} \\).\n\n4. **Impact sur les simulations** : Les documents [73cec52], [4ac54f5], et [b65ea34] mentionnent des simulations basées sur une boucle salaire-chômage nominale, qui supposent une variation des cotisations sociales salariales et qui illustrent l'impact de l'élasticité sur les salaires nets.\n\nEn résumé, l'élasticité de la courbe salaire-chômage est un paramètre clé dans l'analyse des relations entre salaires et chômage, et elle est souvent calibrée à -0,1 dans les modèles économiques.",
+        "citations": [
+          {
+            "id": "c0ecc64",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 512,
+              "end": 521
+            },
+            "payload": {
+              "id": "c0ecc64e-be08-5076-b76f-d29814c886cc",
+              "document_id": "8a0349b0-3a72-5657-834a-3748506ed952",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01638993710691824,
+              "text": "Document Title: Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES\n\nText: sappuie sur les modèles de négociations salariales (Layard et Nickell, 1986) et de salaire efficient (Shapiro et \nStiglitz, 1984). Lélasticité de la c ourbe salaire-chômage est prise égale à -0,1, valeur ressortant de la plupart \ndes analyses économétriques (Bl anchflower et Oswald, 1995). Par défaut, cest le salaire réel (indexé sur les \nprix à la consommation) qui entre dans la spécification de la boucle salaire-chômage. Alternativement, nous \nprenons une spécification dans laquelle cest le salaire nom inal (non indexé sur le niv eau des prix) qui est relié \nau niveau de chômage. \nEncart 4 Huit scénarios de transition vers une France Facteur 4 \nSupposons maintenant que soient adoptées des politiques publiques actives en matière \ndinfrastructures, de régulation du marché de limm obilier et de planification urbaine, pour réduire \nfortement les tendances à létalement du tissu urbain  et à la création de zones pour lesquelles une",
+              "metadata": {
+                "title": "Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES",
+                "hal_id": "halshs-00458205",
+                "authors": [
+                  "Frédéric Ghersi",
+                  "Emmanuel Combet",
+                  "Jean Charles Hourcade",
+                  "Camille Thubin"
+                ],
+                "version": "v0",
+                "citation": "Frédéric Ghersi, Emmanuel Combet, Jean Charles Hourcade, Camille Thubin. Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES. 2010. ⟨halshs-00458205⟩",
+                "source_url": "https://hal.science/halshs-00458205",
+                "chunk_order": 305,
+                "description": "Cette étude offre une vision d'ensemble des enjeux de mise en oeuvre et d'évolution d'une fiscalité carbone en France. Elle s'applique à ne pas dissocier son évaluation des grands défis économiques et sociaux à venir et montre qu'un recours à la taxation du carbone offre sur le long terme plus de marges de manoeuvre qu'elle n'en supprime. Sans aller jusqu'aux détails précis de sa mise en ouvre, elle vise à clarifier les mécanismes mis en jeu et à apprécier, pour un même ensemble de critères, les impacts chiffrés de plusieurs dispositifs. Il apparaît que les dispositifs qui offrent le plus de marge de manoeuvre pour concilier les objectifs de climat, croissance, emploi, distribution des revenus et compétitivité des entreprises, combinent deux modes de redistribution du produit de la taxe carbone : d'un côté, en finançant des mesures compensatoires pour les populations et les activités les plus impactées, de l'autre, comme ressource alternative au financement des retraites pour contenir la hausse future des cotisations sociales. La conclusion majeure est que, sans une telle réforme, qui engage la négociation sociale au-delà des seuls enjeux climatiques, il sera difficile, au cours du prochain demi-siècle, de réaliser un découplage drastique entre émissions de gaz à effet de serre et croissance.",
+                "document_type": "OTHER",
+                "publication_date": "2010-01-04",
+                "semantic_rank": 3,
+                "full_text_rank": 200,
+                "associated_query": "l'élasticité de la courbe salaire-chômage"
+              }
+            }
+          },
+          {
+            "id": "2452fab",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 760,
+              "end": 769
+            },
+            "payload": {
+              "id": "2452fabe-aef7-59f2-8bd4-feaa2ef9158f",
+              "document_id": "545cdec1-9c35-541e-bd90-eee4435696e8",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable »\n\nText: 7 \n (iii) la variation des niveaux de salaires jouant en retour sur les prix . Une courbes salaire -chômage \nrelie négativement le niveau de salaire au niveau de chômage. Ce ci amplifi e la décroissance des \nrevenus des salaires suite à une  baisse de production de l'économie : une baisse de la production \naugmen te le taux de chômage et induit donc une baisse d es niveaux de salaires. L'amplification \ndépend de l'élasticité de la courbe salaire -chômage, qui peut être vue d'une certaine  manière \ncomme l'aptitude de l'économie à s'adapter en prix ou en quantités après  un choc. L a modi fication  \ndes salaires joue en retour sur le vecteur des prix à travers la part des coûts salariaux  dans les coûts \nde production, ce qui restaure en partie la compétitivité et ajuste la  balance commerciale.  Cet eff et \nentre également dans la boucle de rétroaction via les revenus des ménages.  \nLes deux premières boucles de rétroaction ont un  effet amplificateur sur les variations de",
+              "metadata": {
+                "doi": "10.3406/ecop.2016.8200",
+                "title": "Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable »",
+                "hal_id": "hal-01426322",
+                "authors": [
+                  "Ruben Bibas",
+                  "Sandrine Mathy",
+                  "Meike Fink"
+                ],
+                "version": "v0",
+                "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable ». Economie et Prévision, 2016, 208-209, pp.77-104. ⟨10.3406/ecop.2016.8200⟩. ⟨hal-01426322⟩",
+                "source_url": "https://doi.org/10.3406/ecop.2016.8200",
+                "chunk_order": 42,
+                "description": "La définition des technologies à mobiliser et des politiques à mettre en œuvre pour atteindre l'objectif de division par quatre des émissions de gaz à effet de serre suscite de vifs débats. En ce sens, la réalisation d’un exercice de scénarisation peut permettre d'objectiver l’ensemble des conséquences économiques et sociales d’une trajectoire et ainsi ouvrir le débat sur les visions compatibles avec les objectifs climatiques et énergétiques. Cet article décrit le processus d'élaboration participative par une trentaine de parties prenantes ( issues du secteur privé, du secteur public et de l’Etat, des ONG, des associations de consommateurs, des syndicats, des banques ou des collectivités territoriales) d'un scénario bas carbone pour la France. Les mesures considérées comme acceptables par les parties prenantes sont intégrées dans le modèle technico-économique Imaclim-R France, afin d’évaluer leurs impacts sur les émissions de CO2 et sur l'économie. Le scénario issu de cette concertation atteint une réduction des émissions de CO2 de 68% en 2050, par rapport à 1990, ce qui se rapproche de l’objectif de Facteur 4. Les mesures de réduction des émissions, dont la plus emblématique est la taxe carbone, sont bénéfiques pour l'emploi et la croissance économique, sauf à court terme où le défaut d’anticipation des acteurs ne leur permet pas de se préparer à l’instauration d’une taxe carbone. Les mesures permettent en outre de réduire rapidement et durablement le budget des ménages dédié aux services énergétiques, ainsi que la facture énergétique et la compétitivité industrielle est renforcée.",
+                "document_type": "ART",
+                "publication_date": "2016-01-01",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "l'élasticité de la courbe salaire-chômage"
+              }
+            }
+          },
+          {
+            "id": "067331c",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1088,
+              "end": 1097
+            },
+            "payload": {
+              "id": "067331cf-4d0d-5d33-bb2f-a411e93284b6",
+              "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: Plutôtquedecaractériser uncomportement doffredetravail,lemodèlesecontentede\ndéduirelesvariations deudunecourbesalairechômage, quidécritunecorrélation empirique entre\nunecibledévolution dusalairemoyenréelwetletauxdechômageu,traduiteparlélasticité wU:\n 0\n0w\nuwUσ\nwwu\nIP (130) \nSansprendrepartipouruneinterprétation entermesdepouvoirdenégociation dusalarié\nfaceàsonemployeur, oupourlesthéoriesdusalairedefficience, lintuition sousjacenteet\nimmédiate estquetoutehausseduchômagecréeunepressionàlabaissesurlessalaires.IPw\ndésignelindicedeprixquiestpriscommeréférence danslesnégociations salariales. \nPlusieursalternatives dindexation etdesensibilité wUdusalairenégociéàlévolution du\nchômagepeuventêtreconsidérées. \nDanslaconfiguration deréférence dumodèle,cesontlesprixinternationaux quiserventde\nréférence pourlindexation, cecipourrendrecomptedundeseffetsdelaconcurrence \ninternationale surlesmarchésdesbiensetservices.Puisquecesprixsontfixes(hypothèse petit",
+              "metadata": {
+                "title": "Fiscalité carbone et progrès social. Application au cas français",
+                "hal_id": "tel-00813550",
+                "authors": [
+                  "Emmanuel Combet"
+                ],
+                "version": "v0",
+                "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+                "source_url": "https://hal.science/tel-00813550",
+                "chunk_order": 1676,
+                "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+                "document_type": "THESE",
+                "publication_date": "2013-04-09",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "l'élasticité de la courbe salaire-chômage"
+              }
+            }
+          },
+          {
+            "id": "73cec52",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1336,
+              "end": 1345
+            },
+            "payload": {
+              "id": "73cec520-f202-562b-a147-95792b464742",
+              "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015818181818181818,
+              "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: 57 On remarquera que cette baisse diminue avec louverture de léconomie en raison de la pression à la hausse sur les salaires \nquinduit la progression de la demande ad ressée aux systèmes productifs nationaux. \n58 Les 52 simulations (13 réformes, 4 niveaux de taxe) assise s sur une boucle salaire-chômage nominale et supposant une \nvariation des cotisations sociales salariales ont été r éalisées pour la commission Rocard (Combet et al., 2010a). 5% 7% 9%Taux de chômage Ratiodugaindesalairenet\nàlabaissedeCSS\n150%\n100%\n50%\n0%",
+              "metadata": {
+                "title": "Fiscalité carbone et progrès social. Application au cas français",
+                "hal_id": "tel-00813550",
+                "authors": [
+                  "Emmanuel Combet"
+                ],
+                "version": "v0",
+                "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+                "source_url": "https://hal.science/tel-00813550",
+                "chunk_order": 1044,
+                "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+                "document_type": "THESE",
+                "publication_date": "2013-04-09",
+                "semantic_rank": 5,
+                "full_text_rank": 200,
+                "associated_query": "l'élasticité de la courbe salaire-chômage"
+              }
+            }
+          },
+          {
+            "id": "4ac54f5",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1347,
+              "end": 1356
+            },
+            "payload": {
+              "id": "4ac54f59-17ed-57bf-93e8-441670303116",
+              "document_id": "8a0349b0-3a72-5657-834a-3748506ed952",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015547619047619046,
+              "text": "Document Title: Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES\n\nText: baisse des cotisations salariales ; pour 45 dentre e lles, elle est supérieure à 75% de cette baisse \n(Figure 9).  \n \n \nLes points représentent les 52 simulations (13 réformes x 4 niveaux de taxe) assises sur une \nboucle salaire-chômage nominale et supposant une vari ation des cotisations sociales salariales \n(CSS) réalisées pour ce rapport. \nFigure 9 Progression du salaire net rapportée à la baisse des cotisat ions salariales,  \n52 simulations assises sur boucle  salaire-chômage nominale \n                                                                 \n53 Dont on peut remarquer quelle diminue av ec louverture de léconomie, et la pressi on à la hausse sur les salaires que la \nprogression concomitante de lemploi provoque. \n54 Les 52 simulations (13 réformes, 4 niv eaux de taxe) assises sur une  boucle salaire-chômage no minale et supposant une \nvariation des cotisations sociales sala riales (CSS) réalisées pour ce rapport. 0% 50% 100%150%\n5% 7% 9%Taux de chômage Ratio du gain de salaire net",
+              "metadata": {
+                "title": "Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES",
+                "hal_id": "halshs-00458205",
+                "authors": [
+                  "Frédéric Ghersi",
+                  "Emmanuel Combet",
+                  "Jean Charles Hourcade",
+                  "Camille Thubin"
+                ],
+                "version": "v0",
+                "citation": "Frédéric Ghersi, Emmanuel Combet, Jean Charles Hourcade, Camille Thubin. Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES. 2010. ⟨halshs-00458205⟩",
+                "source_url": "https://hal.science/halshs-00458205",
+                "chunk_order": 283,
+                "description": "Cette étude offre une vision d'ensemble des enjeux de mise en oeuvre et d'évolution d'une fiscalité carbone en France. Elle s'applique à ne pas dissocier son évaluation des grands défis économiques et sociaux à venir et montre qu'un recours à la taxation du carbone offre sur le long terme plus de marges de manoeuvre qu'elle n'en supprime. Sans aller jusqu'aux détails précis de sa mise en ouvre, elle vise à clarifier les mécanismes mis en jeu et à apprécier, pour un même ensemble de critères, les impacts chiffrés de plusieurs dispositifs. Il apparaît que les dispositifs qui offrent le plus de marge de manoeuvre pour concilier les objectifs de climat, croissance, emploi, distribution des revenus et compétitivité des entreprises, combinent deux modes de redistribution du produit de la taxe carbone : d'un côté, en finançant des mesures compensatoires pour les populations et les activités les plus impactées, de l'autre, comme ressource alternative au financement des retraites pour contenir la hausse future des cotisations sociales. La conclusion majeure est que, sans une telle réforme, qui engage la négociation sociale au-delà des seuls enjeux climatiques, il sera difficile, au cours du prochain demi-siècle, de réaliser un découplage drastique entre émissions de gaz à effet de serre et croissance.",
+                "document_type": "OTHER",
+                "publication_date": "2010-01-04",
+                "semantic_rank": 6,
+                "full_text_rank": 200,
+                "associated_query": "l'élasticité de la courbe salaire-chômage"
+              }
+            }
+          },
+          {
+            "id": "b65ea34",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1361,
+              "end": 1370
+            },
+            "payload": {
+              "id": "b65ea34a-b081-543e-a3b0-384c02be4956",
+              "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01503448275862069,
+              "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: plusenfaveurdessalariésquelechômageestbas.Or,pour31de52denossimulations58,lahausse\ndessalairesnetsparrapportàlaréférence 2004eststrictement supérieure àlabaissedes\ncotisations salariales ;pour45dentreelles,elleestsupérieure à75%decettebaisse(Figure42).\n \nLes points représentent les 52 simulations (13 ré formes x 4 niveaux de taxe) assises sur une \nboucle salaire-chômage nominale et supposant une variation des cotisations sociales \nsalariales. Ces simulations ont été réalisées pour la commission Rocard (Combet et al., 2010a). \nFigure 42 Progression du salaire net rapportée à la baisse des cotisat ions salariales,  \n52 simulations assises sur la boucle salaire-chômage nominale \nCetterécupération parlessalariésdunepartietrèssignificative delabaissedescotisations \nnempêche pasdesgainsdecompétitivité, etcesontdailleurscesgainsdecompétitivité quiouvrent\nlavoieàdesgainsdecroissance. Pourrendrecerésultatplustangiblenouspouvonslillustrerdela\nfaçonsuivante:",
+              "metadata": {
+                "title": "Fiscalité carbone et progrès social. Application au cas français",
+                "hal_id": "tel-00813550",
+                "authors": [
+                  "Emmanuel Combet"
+                ],
+                "version": "v0",
+                "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+                "source_url": "https://hal.science/tel-00813550",
+                "chunk_order": 1042,
+                "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+                "document_type": "THESE",
+                "publication_date": "2013-04-09",
+                "semantic_rank": 8,
+                "full_text_rank": 200,
+                "associated_query": "l'élasticité de la courbe salaire-chômage"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "b6f90e6a-41ba-53e3-955d-52902dc6bbc8",
+            "document_id": "c78131be-16ed-5eb2-b860-d3e66409ee05",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Taxe carbone, une mesure socialement régressive ? Vrais problèmes et faux débats\n\nText: de flexibilité limitée des salaires, nous utilisons une wage curve  (Blanchflower \net Oswald, 2005), qui corrèle salaire moyen nominal et taux de chômage. Ce \nchoix du salaire nominal au lieu du salaire réel traduit les contraintes concurrentielles qui pèsent sur le marché de lemploi français. Le contexte de modération salariale quil impose limite les effets de propagation de la hausse des prix de lénergie et accélère la subs titution en faveur du travail, mais il \nautorise aussi des pertes de salaire réel plus substantielles. En outre, ne disposant pas dune description des marchés de lemploi pour nos classes de référence, nous supposons que le taux de chômage de chacune delles évolue, en pourcentage, comme la variation agrégée demploi. Les classes sont dautant plus sensibles à cette variation agrégée quelles ont un taux de chômage élevé. Ce choix a le mérite de la simplicité mais devra être revu dans \ndes travaux futurs. \nAvec ce dispositif de modélisation, nous avons simulé cinq réformes",
+            "metadata": {
+              "title": "Taxe carbone, une mesure socialement régressive ? Vrais problèmes et faux débats",
+              "hal_id": "hal-00866409",
+              "authors": [
+                "Emmanuel Combet",
+                "Frédéric Ghersi",
+                "Jean Charles Hourcade"
+              ],
+              "version": "v0",
+              "citation": "Emmanuel Combet, Frédéric Ghersi, Jean Charles Hourcade. Taxe carbone, une mesure socialement régressive ? Vrais problèmes et faux débats. 2009. ⟨hal-00866409⟩",
+              "source_url": "https://hal.science/hal-00866409",
+              "chunk_order": 49,
+              "description": "Cet article vise à dissiper les malentendus sur les impacts distributifs de taxes carbone, malentendus qui constituent un obstacle jusqu'ici dirimant à leur plus ample examen dans les débats publics. Il met en évidence l'écart entre les analyses en équilibre partiel, proches de la perception du coût de la fiscalité par les agents, et les analyses en équilibre général qui cernent la réalité de son coût ultime. Il montre que l'impact réel sur les écarts de revenu entre ménages n'est pas mécaniquement déterminé par les budgets énergie de départ et leur degré de flexibilité et qu'il dépend des modalités de recyclage du produit des taxes et de leurs effets macro-économiques. La comparaison de cinq dispositifs de recyclage met en évidence des zones d'arbitrage entre maximisation de la consommation globale, maximisation de la consommation des populations à bas revenus et réduction des inégalités.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2009-01-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "l'élasticité de la courbe salaire-chômage"
+            }
+          },
+          {
+            "id": "2452fabe-aef7-59f2-8bd4-feaa2ef9158f",
+            "document_id": "545cdec1-9c35-541e-bd90-eee4435696e8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable »\n\nText: 7 \n (iii) la variation des niveaux de salaires jouant en retour sur les prix . Une courbes salaire -chômage \nrelie négativement le niveau de salaire au niveau de chômage. Ce ci amplifi e la décroissance des \nrevenus des salaires suite à une  baisse de production de l'économie : une baisse de la production \naugmen te le taux de chômage et induit donc une baisse d es niveaux de salaires. L'amplification \ndépend de l'élasticité de la courbe salaire -chômage, qui peut être vue d'une certaine  manière \ncomme l'aptitude de l'économie à s'adapter en prix ou en quantités après  un choc. L a modi fication  \ndes salaires joue en retour sur le vecteur des prix à travers la part des coûts salariaux  dans les coûts \nde production, ce qui restaure en partie la compétitivité et ajuste la  balance commerciale.  Cet eff et \nentre également dans la boucle de rétroaction via les revenus des ménages.  \nLes deux premières boucles de rétroaction ont un  effet amplificateur sur les variations de",
+            "metadata": {
+              "doi": "10.3406/ecop.2016.8200",
+              "title": "Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable »",
+              "hal_id": "hal-01426322",
+              "authors": [
+                "Ruben Bibas",
+                "Sandrine Mathy",
+                "Meike Fink"
+              ],
+              "version": "v0",
+              "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable ». Economie et Prévision, 2016, 208-209, pp.77-104. ⟨10.3406/ecop.2016.8200⟩. ⟨hal-01426322⟩",
+              "source_url": "https://doi.org/10.3406/ecop.2016.8200",
+              "chunk_order": 42,
+              "description": "La définition des technologies à mobiliser et des politiques à mettre en œuvre pour atteindre l'objectif de division par quatre des émissions de gaz à effet de serre suscite de vifs débats. En ce sens, la réalisation d’un exercice de scénarisation peut permettre d'objectiver l’ensemble des conséquences économiques et sociales d’une trajectoire et ainsi ouvrir le débat sur les visions compatibles avec les objectifs climatiques et énergétiques. Cet article décrit le processus d'élaboration participative par une trentaine de parties prenantes ( issues du secteur privé, du secteur public et de l’Etat, des ONG, des associations de consommateurs, des syndicats, des banques ou des collectivités territoriales) d'un scénario bas carbone pour la France. Les mesures considérées comme acceptables par les parties prenantes sont intégrées dans le modèle technico-économique Imaclim-R France, afin d’évaluer leurs impacts sur les émissions de CO2 et sur l'économie. Le scénario issu de cette concertation atteint une réduction des émissions de CO2 de 68% en 2050, par rapport à 1990, ce qui se rapproche de l’objectif de Facteur 4. Les mesures de réduction des émissions, dont la plus emblématique est la taxe carbone, sont bénéfiques pour l'emploi et la croissance économique, sauf à court terme où le défaut d’anticipation des acteurs ne leur permet pas de se préparer à l’instauration d’une taxe carbone. Les mesures permettent en outre de réduire rapidement et durablement le budget des ménages dédié aux services énergétiques, ainsi que la facture énergétique et la compétitivité industrielle est renforcée.",
+              "document_type": "ART",
+              "publication_date": "2016-01-01",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "l'élasticité de la courbe salaire-chômage"
+            }
+          },
+          {
+            "id": "c0ecc64e-be08-5076-b76f-d29814c886cc",
+            "document_id": "8a0349b0-3a72-5657-834a-3748506ed952",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES\n\nText: sappuie sur les modèles de négociations salariales (Layard et Nickell, 1986) et de salaire efficient (Shapiro et \nStiglitz, 1984). Lélasticité de la c ourbe salaire-chômage est prise égale à -0,1, valeur ressortant de la plupart \ndes analyses économétriques (Bl anchflower et Oswald, 1995). Par défaut, cest le salaire réel (indexé sur les \nprix à la consommation) qui entre dans la spécification de la boucle salaire-chômage. Alternativement, nous \nprenons une spécification dans laquelle cest le salaire nom inal (non indexé sur le niv eau des prix) qui est relié \nau niveau de chômage. \nEncart 4 Huit scénarios de transition vers une France Facteur 4 \nSupposons maintenant que soient adoptées des politiques publiques actives en matière \ndinfrastructures, de régulation du marché de limm obilier et de planification urbaine, pour réduire \nfortement les tendances à létalement du tissu urbain  et à la création de zones pour lesquelles une",
+            "metadata": {
+              "title": "Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES",
+              "hal_id": "halshs-00458205",
+              "authors": [
+                "Frédéric Ghersi",
+                "Emmanuel Combet",
+                "Jean Charles Hourcade",
+                "Camille Thubin"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Ghersi, Emmanuel Combet, Jean Charles Hourcade, Camille Thubin. Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES. 2010. ⟨halshs-00458205⟩",
+              "source_url": "https://hal.science/halshs-00458205",
+              "chunk_order": 305,
+              "description": "Cette étude offre une vision d'ensemble des enjeux de mise en oeuvre et d'évolution d'une fiscalité carbone en France. Elle s'applique à ne pas dissocier son évaluation des grands défis économiques et sociaux à venir et montre qu'un recours à la taxation du carbone offre sur le long terme plus de marges de manoeuvre qu'elle n'en supprime. Sans aller jusqu'aux détails précis de sa mise en ouvre, elle vise à clarifier les mécanismes mis en jeu et à apprécier, pour un même ensemble de critères, les impacts chiffrés de plusieurs dispositifs. Il apparaît que les dispositifs qui offrent le plus de marge de manoeuvre pour concilier les objectifs de climat, croissance, emploi, distribution des revenus et compétitivité des entreprises, combinent deux modes de redistribution du produit de la taxe carbone : d'un côté, en finançant des mesures compensatoires pour les populations et les activités les plus impactées, de l'autre, comme ressource alternative au financement des retraites pour contenir la hausse future des cotisations sociales. La conclusion majeure est que, sans une telle réforme, qui engage la négociation sociale au-delà des seuls enjeux climatiques, il sera difficile, au cours du prochain demi-siècle, de réaliser un découplage drastique entre émissions de gaz à effet de serre et croissance.",
+              "document_type": "OTHER",
+              "publication_date": "2010-01-04",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "l'élasticité de la courbe salaire-chômage"
+            }
+          },
+          {
+            "id": "9dc99eda-6fc3-5847-828c-5283e44bb32a",
+            "document_id": "8a0349b0-3a72-5657-834a-3748506ed952",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES\n\nText: 53 Dont on peut remarquer quelle diminue av ec louverture de léconomie, et la pressi on à la hausse sur les salaires que la \nprogression concomitante de lemploi provoque. \n54 Les 52 simulations (13 réformes, 4 niv eaux de taxe) assises sur une  boucle salaire-chômage no minale et supposant une \nvariation des cotisations sociales sala riales (CSS) réalisées pour ce rapport. 0% 50% 100%150%\n5% 7% 9%Taux de chômage Ratio du gain de salaire net \nà la baisse de CSS",
+            "metadata": {
+              "title": "Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES",
+              "hal_id": "halshs-00458205",
+              "authors": [
+                "Frédéric Ghersi",
+                "Emmanuel Combet",
+                "Jean Charles Hourcade",
+                "Camille Thubin"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Ghersi, Emmanuel Combet, Jean Charles Hourcade, Camille Thubin. Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES. 2010. ⟨halshs-00458205⟩",
+              "source_url": "https://hal.science/halshs-00458205",
+              "chunk_order": 284,
+              "description": "Cette étude offre une vision d'ensemble des enjeux de mise en oeuvre et d'évolution d'une fiscalité carbone en France. Elle s'applique à ne pas dissocier son évaluation des grands défis économiques et sociaux à venir et montre qu'un recours à la taxation du carbone offre sur le long terme plus de marges de manoeuvre qu'elle n'en supprime. Sans aller jusqu'aux détails précis de sa mise en ouvre, elle vise à clarifier les mécanismes mis en jeu et à apprécier, pour un même ensemble de critères, les impacts chiffrés de plusieurs dispositifs. Il apparaît que les dispositifs qui offrent le plus de marge de manoeuvre pour concilier les objectifs de climat, croissance, emploi, distribution des revenus et compétitivité des entreprises, combinent deux modes de redistribution du produit de la taxe carbone : d'un côté, en finançant des mesures compensatoires pour les populations et les activités les plus impactées, de l'autre, comme ressource alternative au financement des retraites pour contenir la hausse future des cotisations sociales. La conclusion majeure est que, sans une telle réforme, qui engage la négociation sociale au-delà des seuls enjeux climatiques, il sera difficile, au cours du prochain demi-siècle, de réaliser un découplage drastique entre émissions de gaz à effet de serre et croissance.",
+              "document_type": "OTHER",
+              "publication_date": "2010-01-04",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "l'élasticité de la courbe salaire-chômage"
+            }
+          },
+          {
+            "id": "73cec520-f202-562b-a147-95792b464742",
+            "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: 57 On remarquera que cette baisse diminue avec louverture de léconomie en raison de la pression à la hausse sur les salaires \nquinduit la progression de la demande ad ressée aux systèmes productifs nationaux. \n58 Les 52 simulations (13 réformes, 4 niveaux de taxe) assise s sur une boucle salaire-chômage nominale et supposant une \nvariation des cotisations sociales salariales ont été r éalisées pour la commission Rocard (Combet et al., 2010a). 5% 7% 9%Taux de chômage Ratiodugaindesalairenet\nàlabaissedeCSS\n150%\n100%\n50%\n0%",
+            "metadata": {
+              "title": "Fiscalité carbone et progrès social. Application au cas français",
+              "hal_id": "tel-00813550",
+              "authors": [
+                "Emmanuel Combet"
+              ],
+              "version": "v0",
+              "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+              "source_url": "https://hal.science/tel-00813550",
+              "chunk_order": 1044,
+              "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+              "document_type": "THESE",
+              "publication_date": "2013-04-09",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "l'élasticité de la courbe salaire-chômage"
+            }
+          },
+          {
+            "id": "4ac54f59-17ed-57bf-93e8-441670303116",
+            "document_id": "8a0349b0-3a72-5657-834a-3748506ed952",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES\n\nText: baisse des cotisations salariales ; pour 45 dentre e lles, elle est supérieure à 75% de cette baisse \n(Figure 9).  \n \n \nLes points représentent les 52 simulations (13 réformes x 4 niveaux de taxe) assises sur une \nboucle salaire-chômage nominale et supposant une vari ation des cotisations sociales salariales \n(CSS) réalisées pour ce rapport. \nFigure 9 Progression du salaire net rapportée à la baisse des cotisat ions salariales,  \n52 simulations assises sur boucle  salaire-chômage nominale \n                                                                 \n53 Dont on peut remarquer quelle diminue av ec louverture de léconomie, et la pressi on à la hausse sur les salaires que la \nprogression concomitante de lemploi provoque. \n54 Les 52 simulations (13 réformes, 4 niv eaux de taxe) assises sur une  boucle salaire-chômage no minale et supposant une \nvariation des cotisations sociales sala riales (CSS) réalisées pour ce rapport. 0% 50% 100%150%\n5% 7% 9%Taux de chômage Ratio du gain de salaire net",
+            "metadata": {
+              "title": "Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES",
+              "hal_id": "halshs-00458205",
+              "authors": [
+                "Frédéric Ghersi",
+                "Emmanuel Combet",
+                "Jean Charles Hourcade",
+                "Camille Thubin"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Ghersi, Emmanuel Combet, Jean Charles Hourcade, Camille Thubin. Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES. 2010. ⟨halshs-00458205⟩",
+              "source_url": "https://hal.science/halshs-00458205",
+              "chunk_order": 283,
+              "description": "Cette étude offre une vision d'ensemble des enjeux de mise en oeuvre et d'évolution d'une fiscalité carbone en France. Elle s'applique à ne pas dissocier son évaluation des grands défis économiques et sociaux à venir et montre qu'un recours à la taxation du carbone offre sur le long terme plus de marges de manoeuvre qu'elle n'en supprime. Sans aller jusqu'aux détails précis de sa mise en ouvre, elle vise à clarifier les mécanismes mis en jeu et à apprécier, pour un même ensemble de critères, les impacts chiffrés de plusieurs dispositifs. Il apparaît que les dispositifs qui offrent le plus de marge de manoeuvre pour concilier les objectifs de climat, croissance, emploi, distribution des revenus et compétitivité des entreprises, combinent deux modes de redistribution du produit de la taxe carbone : d'un côté, en finançant des mesures compensatoires pour les populations et les activités les plus impactées, de l'autre, comme ressource alternative au financement des retraites pour contenir la hausse future des cotisations sociales. La conclusion majeure est que, sans une telle réforme, qui engage la négociation sociale au-delà des seuls enjeux climatiques, il sera difficile, au cours du prochain demi-siècle, de réaliser un découplage drastique entre émissions de gaz à effet de serre et croissance.",
+              "document_type": "OTHER",
+              "publication_date": "2010-01-04",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "l'élasticité de la courbe salaire-chômage"
+            }
+          },
+          {
+            "id": "067331cf-4d0d-5d33-bb2f-a411e93284b6",
+            "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: Plutôtquedecaractériser uncomportement doffredetravail,lemodèlesecontentede\ndéduirelesvariations deudunecourbesalairechômage, quidécritunecorrélation empirique entre\nunecibledévolution dusalairemoyenréelwetletauxdechômageu,traduiteparlélasticité wU:\n 0\n0w\nuwUσ\nwwu\nIP (130) \nSansprendrepartipouruneinterprétation entermesdepouvoirdenégociation dusalarié\nfaceàsonemployeur, oupourlesthéoriesdusalairedefficience, lintuition sousjacenteet\nimmédiate estquetoutehausseduchômagecréeunepressionàlabaissesurlessalaires.IPw\ndésignelindicedeprixquiestpriscommeréférence danslesnégociations salariales. \nPlusieursalternatives dindexation etdesensibilité wUdusalairenégociéàlévolution du\nchômagepeuventêtreconsidérées. \nDanslaconfiguration deréférence dumodèle,cesontlesprixinternationaux quiserventde\nréférence pourlindexation, cecipourrendrecomptedundeseffetsdelaconcurrence \ninternationale surlesmarchésdesbiensetservices.Puisquecesprixsontfixes(hypothèse petit",
+            "metadata": {
+              "title": "Fiscalité carbone et progrès social. Application au cas français",
+              "hal_id": "tel-00813550",
+              "authors": [
+                "Emmanuel Combet"
+              ],
+              "version": "v0",
+              "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+              "source_url": "https://hal.science/tel-00813550",
+              "chunk_order": 1676,
+              "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+              "document_type": "THESE",
+              "publication_date": "2013-04-09",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "l'élasticité de la courbe salaire-chômage"
+            }
+          },
+          {
+            "id": "b65ea34a-b081-543e-a3b0-384c02be4956",
+            "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: plusenfaveurdessalariésquelechômageestbas.Or,pour31de52denossimulations58,lahausse\ndessalairesnetsparrapportàlaréférence 2004eststrictement supérieure àlabaissedes\ncotisations salariales ;pour45dentreelles,elleestsupérieure à75%decettebaisse(Figure42).\n \nLes points représentent les 52 simulations (13 ré formes x 4 niveaux de taxe) assises sur une \nboucle salaire-chômage nominale et supposant une variation des cotisations sociales \nsalariales. Ces simulations ont été réalisées pour la commission Rocard (Combet et al., 2010a). \nFigure 42 Progression du salaire net rapportée à la baisse des cotisat ions salariales,  \n52 simulations assises sur la boucle salaire-chômage nominale \nCetterécupération parlessalariésdunepartietrèssignificative delabaissedescotisations \nnempêche pasdesgainsdecompétitivité, etcesontdailleurscesgainsdecompétitivité quiouvrent\nlavoieàdesgainsdecroissance. Pourrendrecerésultatplustangiblenouspouvonslillustrerdela\nfaçonsuivante:",
+            "metadata": {
+              "title": "Fiscalité carbone et progrès social. Application au cas français",
+              "hal_id": "tel-00813550",
+              "authors": [
+                "Emmanuel Combet"
+              ],
+              "version": "v0",
+              "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+              "source_url": "https://hal.science/tel-00813550",
+              "chunk_order": 1042,
+              "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+              "document_type": "THESE",
+              "publication_date": "2013-04-09",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "l'élasticité de la courbe salaire-chômage"
+            }
+          },
+          {
+            "id": "7b5aa86e-c576-5a11-a84e-cd5bdde51196",
+            "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: région, le taux de chômage est ensuite donné par la différence entre le travail total requis et la \npopulation active act\nkL: \n,k , j\nkQ\nzact\nkk j\nj\nact\nkLl\nL\n=\n (2.13)  \n \nLe taux de chômage zk a un effet décroissant sur lensemble des salaires sectoriels wk,i selon \nune courbe formellement similaire à une courbe sal aire-chômage classique (Fi gure 5), dont on peut \nretrouver une discussion détaillée dans Blanchflower et Oswald (1995). En fait, cette courbe peut \nêtre interprétée de multiples faç ons, notamment en considérant le pouvoir de négociati on salariale et \nla rareté de loffre de travail. Nous rajoutons à ces interprétations usuelles un élément de lecture qui \nconcerne léconomie informelle . En effet, dans un grand no mbre de systèmes économiques \nnationaux ou régionaux, le salaire formel ne re présente pas lessentiel des revenus obtenus en \néchange du travail effectif. De pl us, les notions dactivité salaria le ou de population active varient",
+            "metadata": {
+              "title": "L'impact du changement technique endogène sur les politiques climatiques",
+              "hal_id": "tel-00489258",
+              "authors": "['Olivier Sassi']",
+              "version": "v0",
+              "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+              "source_url": "https://hal.science/tel-00489258",
+              "chunk_order": 380,
+              "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+              "document_type": "THESE",
+              "publication_date": "2008-11-21",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "l'élasticité de la courbe salaire-chômage"
+            }
+          },
+          {
+            "id": "2720416a-5943-522c-b542-91a1395de192",
+            "document_id": "73bd29bb-f792-5850-bd47-87e7e7573013",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit\n\nText: taux de chômage déquilibre, liés par une élasticité 𝜎𝑤𝑢. À chaque année de projection, le niveau de \nsalaire réel 𝑤\n𝐼𝑃𝐶 compatible avec le taux de chômage observé à lannée de calibrage 20 21 est défini \ncomme le salaire moyen observé en 20 21, multiplié par les gains de productivité du travail 𝜙𝐿 : \n 𝑤\n𝐼𝑃𝐶=𝜙𝐿 𝐴𝑤 𝑢𝜎𝑤𝑢 (19b)  \navec 𝐴𝑤 une constante calibrée en 20 21. \nLe taux de chômage est trivialement défini comme la dotation en travail inemployée  : \n 𝑢=1 𝐿𝑖 𝑖=𝐸,𝑄\n𝐿 (20) \nPour chaque secteur, la consommation de travail et la production sont liées via l'intensité en travail  : \n 𝐿𝑖=𝜆𝑖 𝑌𝑖 (21) \nLorsque  le marché des capitaux  est supposé parfait , les demandes des deux productions épuisent la \ndotation en capital 𝐾, ajustée dune trajectoire exogène de taux dutilisation des capacités 𝜏𝐾 afin de \ngarantir au modèle des propriétés de croissance équilibrée (voir Section 3.1) : \n  𝐾𝑖\n𝑖=𝐸,𝑄=𝜏𝐾 𝐾 (22) \nAlternativement, à linstar de la courbe salaire -chômage utilisée pour spécifier une rigidité du salaire",
+            "metadata": {
+              "title": "Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit",
+              "hal_id": "hal-04384918",
+              "authors": [
+                "Frédéric Ghersi",
+                "Adam Poupard",
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Ghersi, Adam Poupard, Julien Lefevre. Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit. CIRED/SMASH. 2024. ⟨hal-04384918⟩",
+              "source_url": "https://hal.science/hal-04384918",
+              "chunk_order": 185,
+              "document_type": "REPORT",
+              "publication_date": "2024-01-01",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "l'élasticité de la courbe salaire-chômage"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1773,
+            "total_tokens": 1773
+          }
+        }
+      },
+      "duration": 2867
+    },
+    "retrievalTime": 1427,
+    "generationTime": 2867,
+    "timestamp": "2025-07-18T16:51:08.503Z"
+  },
+  "server_context": {
+    "client_ip": "92.170.78.106",
+    "forwarded_for": "92.170.78.106",
+    "received_at": "2025-07-18T16:51:08.594815+00:00",
+    "server_version": "1.0.0"
+  }
+}

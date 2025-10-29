@@ -1,0 +1,500 @@
+{
+  "sessionId": "session_1752846574354_4a5q332c1l3o3r1b3",
+  "timestamp": "20250718T135039895Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752846637143_jcpwb60",
+    "response": {
+      "results": {
+        "generated_answer": "Je n'ai pas trouvé d'informations spécifiques sur les publications récentes de \"vired\" dans les résultats de recherche fournis. Cependant, je peux vous suggérer de consulter les archives ouvertes mentionnées dans les documents [ebdcc53] et [7feca38], qui pourraient contenir des publications pertinentes. Vous pouvez également explorer les listes de publications gérées par SPIP dans la recherche, comme mentionné dans les documents [8b9fc55], [08f4dcb], et [49fbcba].",
+        "citations": [
+          {
+            "id": "ebdcc53",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 227,
+              "end": 236
+            },
+            "payload": {
+              "id": "ebdcc538-5131-5f54-b7dc-d3a6b8085bd6",
+              "document_id": "4f7e2a71-2344-5225-8eca-e5ac848f5c0a",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire)\n\nText: Éliane Daphy  et Minh Ha -Duong              Jai vu que tétais connu de Hal                          VRS382 09 -2010  13/16 \n \n \n  \n \nIll. 15. Mais parlons -en quand même [Ch. 56].  \nQuelques lectures pour aller plus loin  \nAudier Florence, 2010,   Les publications ouvertes : coopération ou concurrence?  , Hermès  57 : 87-90.  \n[2010 oai:hal.archives -ouvertes.fr:hal -00517879 http://hal.archives -ouvertes.fr/hal -00517879/fr/ ] \nBergson, Henri, 2008 [1900], Le rire. Essai sur la signification du comique. Québec, Cl assiques des sciences sociales, \nhttp://dx.doi.org/doi:10.1522/cla.beh.rir  [1924, Paris : Éditions Alcan]  \nChanier Thierry, 2004 (octobre), Archives ouvertes et publication scientifique. Comment mett re en place l'accès libre aux résultats de la recherche ? , \noai:archivesic.ccsd.cnrs.fr:sic_00001103 http://archivesic.ccsd.cnrs.fr/sic_00001103/fr/  [2005, Paris, LHarmattan, 186 p.]  \nChartron  Ghislaine, 2007,   Évolution de l'édition scientifique, 15 ans après  , Actes EUTIC 2007 Athènes ,",
+              "metadata": {
+                "title": "Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire)",
+                "hal_id": "sic_00518786",
+                "authors": [
+                  "Eliane Daphy",
+                  "Minh Ha-Duong"
+                ],
+                "version": "v0",
+                "citation": "Eliane Daphy, Minh Ha-Duong. Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire). 2010. ⟨sic_00518786⟩",
+                "source_url": "https://hal.science/sic_00518786",
+                "chunk_order": 63,
+                "description": "L'auto-archivage permet le libre accès au savoir scientifique, mais repose encore trop sur l'altruisme des auteurs. Pour massifier et systématiser cette pratique, des actions plus fortes sont nécessaires. Le conte à rire narre les déboires d'un chercheur \"connu de Hal\" à l'insu de son plein gré, découvrant qu'il a 148 notices bibliographiques sur un serveur d'archives ouvertes. Co-auteurs de l'encart : \"Pour le dépôt en archives ouvertes des productions scientifiques\" : Vincent Battesti, Eliane Daphy, Christine Eisenbeis, Minh Ha-Duong.",
+                "document_type": "OTHER",
+                "publication_date": "2010-09-01",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "Donne moi list de publication de recent de vired"
+              }
+            }
+          },
+          {
+            "id": "7feca38",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 240,
+              "end": 249
+            },
+            "payload": {
+              "id": "7feca38e-4297-5c7d-a107-5c45dcabb327",
+              "document_id": "4f7e2a71-2344-5225-8eca-e5ac848f5c0a",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.0147909604519774,
+              "text": "Document Title: Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire)\n\nText: Centre nationalisé des recherchants soviétiques / École des haut eurs éclairées de la sagesse sauvegardée Vous \npouvez consulter sur cette archive ouverte  Hal-SHS.  toutes les publications du CRMST  \nqui participe au mouvement international Open Archive Initiative   \n Et voilà le travail  ! Et Vous, Monsieur, je clique sur   consultation, liste par auteur   \n \nJe clique sur la lettre D, voilà votre nom. Regardez, Monsieur Déhaire -Déheu, cest magnifique  !  \nOn a mis tout, tout  ! Vos livres, vos articles dans Le Vespéral de Référence , vos interventions dans des séminaires, \nvos publications à paraître annoncées sur votre page web personnelle sur le site du labo et dans le rapport dactivités. \nVous avez 148 archives ouvertes  ! Jespère que vous êtes content ?  \n \n \n \n \nIll. 11. Légende inutile. [Ch. 40 ]",
+              "metadata": {
+                "title": "Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire)",
+                "hal_id": "sic_00518786",
+                "authors": [
+                  "Eliane Daphy",
+                  "Minh Ha-Duong"
+                ],
+                "version": "v0",
+                "citation": "Eliane Daphy, Minh Ha-Duong. Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire). 2010. ⟨sic_00518786⟩",
+                "source_url": "https://hal.science/sic_00518786",
+                "chunk_order": 51,
+                "description": "L'auto-archivage permet le libre accès au savoir scientifique, mais repose encore trop sur l'altruisme des auteurs. Pour massifier et systématiser cette pratique, des actions plus fortes sont nécessaires. Le conte à rire narre les déboires d'un chercheur \"connu de Hal\" à l'insu de son plein gré, découvrant qu'il a 148 notices bibliographiques sur un serveur d'archives ouvertes. Co-auteurs de l'encart : \"Pour le dépôt en archives ouvertes des productions scientifiques\" : Vincent Battesti, Eliane Daphy, Christine Eisenbeis, Minh Ha-Duong.",
+                "document_type": "OTHER",
+                "publication_date": "2010-09-01",
+                "semantic_rank": 9,
+                "full_text_rank": 200,
+                "associated_query": "Donne moi list de publication de recent de vired"
+              }
+            }
+          },
+          {
+            "id": "8b9fc55",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 433,
+              "end": 442
+            },
+            "payload": {
+              "id": "8b9fc55a-880f-5a1a-90d4-ae15794802da",
+              "document_id": "714095ac-820a-5504-a609-86a3044ea4db",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)\n\nText: Annexe2:squelettedeprésentationdelistedepublication\n<divid=\"listepublis\">\n<B_articlesjournal>\n<h2>Articlesdansdesrevuesscientifiques(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_articlesjournal(SYNDIC_ARTICLES){id_syndic}{pardate}{inverse}\n{tags==ARTJOUR}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_articlesjournal>\n</ul>\n</B_articlesjournal>\n<B_articlesouvrage>\n<h2>Articlesdansdesouvragesscientifiques(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_articlesouvrage(SYNDIC_ARTICLES){id_syndic}{pardate}{inverse}\n{tags==ARTOUVRAGE}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_articlesouvrage>\n</ul>",
+              "metadata": {
+                "title": "SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)",
+                "hal_id": "halshs-00008414",
+                "authors": [
+                  "Minh Ha-Duong"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong. SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL). 2006. ⟨halshs-00008414⟩",
+                "source_url": "https://hal.science/halshs-00008414",
+                "chunk_order": 33,
+                "description": "Les listes de publications scientifiques sont un élément clé des sites de laboratoires de recherche. Elles sont aussi essentielles aux pages personnelles des chercheurs. Gérer ces listes de façon systématique implique de connecter d'une façon ou d'une autre un serveur web avec une base de donnée des productions scientifiques. Cette note expose comment connecter l'archive ouverte HAL et le système de gestion de contenu SPIP par le protocole RSS.",
+                "document_type": "OTHER",
+                "publication_date": "2006-01-28",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "Donne moi list de publication de recent de vired"
+              }
+            }
+          },
+          {
+            "id": "08f4dcb",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 444,
+              "end": 453
+            },
+            "payload": {
+              "id": "08f4dcbf-2ea0-5f38-bb5f-9170ca27f76c",
+              "document_id": "714095ac-820a-5504-a609-86a3044ea4db",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01638993710691824,
+              "text": "Document Title: SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)\n\nText: <ul>\n<BOUCLE_theses(SYNDIC_ARTICLES){id_syndic}{par\ndate}{inverse}{tags==THESE}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_theses>\n</ul>\n</B_theses>\n<B_autres>\n<h2>Autrespublications(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_autres(SYNDIC_ARTICLES){id_syndic}{pardate}{inverse}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_autres>\n</ul>\n</B_autres>\n</div><!listepublis>\n13",
+              "metadata": {
+                "title": "SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)",
+                "hal_id": "halshs-00008414",
+                "authors": [
+                  "Minh Ha-Duong"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong. SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL). 2006. ⟨halshs-00008414⟩",
+                "source_url": "https://hal.science/halshs-00008414",
+                "chunk_order": 37,
+                "description": "Les listes de publications scientifiques sont un élément clé des sites de laboratoires de recherche. Elles sont aussi essentielles aux pages personnelles des chercheurs. Gérer ces listes de façon systématique implique de connecter d'une façon ou d'une autre un serveur web avec une base de donnée des productions scientifiques. Cette note expose comment connecter l'archive ouverte HAL et le système de gestion de contenu SPIP par le protocole RSS.",
+                "document_type": "OTHER",
+                "publication_date": "2006-01-28",
+                "semantic_rank": 3,
+                "full_text_rank": 200,
+                "associated_query": "Donne moi list de publication de recent de vired"
+              }
+            }
+          },
+          {
+            "id": "49fbcba",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 458,
+              "end": 467
+            },
+            "payload": {
+              "id": "49fbcba6-cf68-5bf7-8db6-25e30dd96ab4",
+              "document_id": "714095ac-820a-5504-a609-86a3044ea4db",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016098765432098764,
+              "text": "Document Title: SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)\n\nText: <BOUCLE_articlesautres(SYNDIC_ARTICLES){id_syndic}{par\ndate}{inverse}{tags==ARTREVUE|COMMUNICATION}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_articlesautres>\n</ul>\n</B_articlesautres>\n<B_theses>\n<h2>Th&egrave;ses,m&eacute;moiresdeDEAetd'habilitation(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_theses(SYNDIC_ARTICLES){id_syndic}{par\ndate}{inverse}{tags==THESE}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_theses>\n</ul>\n</B_theses>\n<B_autres>\n<h2>Autrespublications(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_autres(SYNDIC_ARTICLES){id_syndic}{pardate}{inverse}{doublons}>",
+              "metadata": {
+                "title": "SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)",
+                "hal_id": "halshs-00008414",
+                "authors": [
+                  "Minh Ha-Duong"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong. SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL). 2006. ⟨halshs-00008414⟩",
+                "source_url": "https://hal.science/halshs-00008414",
+                "chunk_order": 36,
+                "description": "Les listes de publications scientifiques sont un élément clé des sites de laboratoires de recherche. Elles sont aussi essentielles aux pages personnelles des chercheurs. Gérer ces listes de façon systématique implique de connecter d'une façon ou d'une autre un serveur web avec une base de donnée des productions scientifiques. Cette note expose comment connecter l'archive ouverte HAL et le système de gestion de contenu SPIP par le protocole RSS.",
+                "document_type": "OTHER",
+                "publication_date": "2006-01-28",
+                "semantic_rank": 4,
+                "full_text_rank": 200,
+                "associated_query": "Donne moi list de publication de recent de vired"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "8b9fc55a-880f-5a1a-90d4-ae15794802da",
+            "document_id": "714095ac-820a-5504-a609-86a3044ea4db",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)\n\nText: Annexe2:squelettedeprésentationdelistedepublication\n<divid=\"listepublis\">\n<B_articlesjournal>\n<h2>Articlesdansdesrevuesscientifiques(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_articlesjournal(SYNDIC_ARTICLES){id_syndic}{pardate}{inverse}\n{tags==ARTJOUR}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_articlesjournal>\n</ul>\n</B_articlesjournal>\n<B_articlesouvrage>\n<h2>Articlesdansdesouvragesscientifiques(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_articlesouvrage(SYNDIC_ARTICLES){id_syndic}{pardate}{inverse}\n{tags==ARTOUVRAGE}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_articlesouvrage>\n</ul>",
+            "metadata": {
+              "title": "SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)",
+              "hal_id": "halshs-00008414",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL). 2006. ⟨halshs-00008414⟩",
+              "source_url": "https://hal.science/halshs-00008414",
+              "chunk_order": 33,
+              "description": "Les listes de publications scientifiques sont un élément clé des sites de laboratoires de recherche. Elles sont aussi essentielles aux pages personnelles des chercheurs. Gérer ces listes de façon systématique implique de connecter d'une façon ou d'une autre un serveur web avec une base de donnée des productions scientifiques. Cette note expose comment connecter l'archive ouverte HAL et le système de gestion de contenu SPIP par le protocole RSS.",
+              "document_type": "OTHER",
+              "publication_date": "2006-01-28",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Donne moi list de publication de recent de vired"
+            }
+          },
+          {
+            "id": "ebdcc538-5131-5f54-b7dc-d3a6b8085bd6",
+            "document_id": "4f7e2a71-2344-5225-8eca-e5ac848f5c0a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire)\n\nText: Éliane Daphy  et Minh Ha -Duong              Jai vu que tétais connu de Hal                          VRS382 09 -2010  13/16 \n \n \n  \n \nIll. 15. Mais parlons -en quand même [Ch. 56].  \nQuelques lectures pour aller plus loin  \nAudier Florence, 2010,   Les publications ouvertes : coopération ou concurrence?  , Hermès  57 : 87-90.  \n[2010 oai:hal.archives -ouvertes.fr:hal -00517879 http://hal.archives -ouvertes.fr/hal -00517879/fr/ ] \nBergson, Henri, 2008 [1900], Le rire. Essai sur la signification du comique. Québec, Cl assiques des sciences sociales, \nhttp://dx.doi.org/doi:10.1522/cla.beh.rir  [1924, Paris : Éditions Alcan]  \nChanier Thierry, 2004 (octobre), Archives ouvertes et publication scientifique. Comment mett re en place l'accès libre aux résultats de la recherche ? , \noai:archivesic.ccsd.cnrs.fr:sic_00001103 http://archivesic.ccsd.cnrs.fr/sic_00001103/fr/  [2005, Paris, LHarmattan, 186 p.]  \nChartron  Ghislaine, 2007,   Évolution de l'édition scientifique, 15 ans après  , Actes EUTIC 2007 Athènes ,",
+            "metadata": {
+              "title": "Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire)",
+              "hal_id": "sic_00518786",
+              "authors": [
+                "Eliane Daphy",
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Eliane Daphy, Minh Ha-Duong. Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire). 2010. ⟨sic_00518786⟩",
+              "source_url": "https://hal.science/sic_00518786",
+              "chunk_order": 63,
+              "description": "L'auto-archivage permet le libre accès au savoir scientifique, mais repose encore trop sur l'altruisme des auteurs. Pour massifier et systématiser cette pratique, des actions plus fortes sont nécessaires. Le conte à rire narre les déboires d'un chercheur \"connu de Hal\" à l'insu de son plein gré, découvrant qu'il a 148 notices bibliographiques sur un serveur d'archives ouvertes. Co-auteurs de l'encart : \"Pour le dépôt en archives ouvertes des productions scientifiques\" : Vincent Battesti, Eliane Daphy, Christine Eisenbeis, Minh Ha-Duong.",
+              "document_type": "OTHER",
+              "publication_date": "2010-09-01",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Donne moi list de publication de recent de vired"
+            }
+          },
+          {
+            "id": "08f4dcbf-2ea0-5f38-bb5f-9170ca27f76c",
+            "document_id": "714095ac-820a-5504-a609-86a3044ea4db",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)\n\nText: <ul>\n<BOUCLE_theses(SYNDIC_ARTICLES){id_syndic}{par\ndate}{inverse}{tags==THESE}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_theses>\n</ul>\n</B_theses>\n<B_autres>\n<h2>Autrespublications(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_autres(SYNDIC_ARTICLES){id_syndic}{pardate}{inverse}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_autres>\n</ul>\n</B_autres>\n</div><!listepublis>\n13",
+            "metadata": {
+              "title": "SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)",
+              "hal_id": "halshs-00008414",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL). 2006. ⟨halshs-00008414⟩",
+              "source_url": "https://hal.science/halshs-00008414",
+              "chunk_order": 37,
+              "description": "Les listes de publications scientifiques sont un élément clé des sites de laboratoires de recherche. Elles sont aussi essentielles aux pages personnelles des chercheurs. Gérer ces listes de façon systématique implique de connecter d'une façon ou d'une autre un serveur web avec une base de donnée des productions scientifiques. Cette note expose comment connecter l'archive ouverte HAL et le système de gestion de contenu SPIP par le protocole RSS.",
+              "document_type": "OTHER",
+              "publication_date": "2006-01-28",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Donne moi list de publication de recent de vired"
+            }
+          },
+          {
+            "id": "49fbcba6-cf68-5bf7-8db6-25e30dd96ab4",
+            "document_id": "714095ac-820a-5504-a609-86a3044ea4db",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)\n\nText: <BOUCLE_articlesautres(SYNDIC_ARTICLES){id_syndic}{par\ndate}{inverse}{tags==ARTREVUE|COMMUNICATION}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_articlesautres>\n</ul>\n</B_articlesautres>\n<B_theses>\n<h2>Th&egrave;ses,m&eacute;moiresdeDEAetd'habilitation(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_theses(SYNDIC_ARTICLES){id_syndic}{par\ndate}{inverse}{tags==THESE}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_theses>\n</ul>\n</B_theses>\n<B_autres>\n<h2>Autrespublications(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_autres(SYNDIC_ARTICLES){id_syndic}{pardate}{inverse}{doublons}>",
+            "metadata": {
+              "title": "SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)",
+              "hal_id": "halshs-00008414",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL). 2006. ⟨halshs-00008414⟩",
+              "source_url": "https://hal.science/halshs-00008414",
+              "chunk_order": 36,
+              "description": "Les listes de publications scientifiques sont un élément clé des sites de laboratoires de recherche. Elles sont aussi essentielles aux pages personnelles des chercheurs. Gérer ces listes de façon systématique implique de connecter d'une façon ou d'une autre un serveur web avec une base de donnée des productions scientifiques. Cette note expose comment connecter l'archive ouverte HAL et le système de gestion de contenu SPIP par le protocole RSS.",
+              "document_type": "OTHER",
+              "publication_date": "2006-01-28",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Donne moi list de publication de recent de vired"
+            }
+          },
+          {
+            "id": "b0e535c1-0f80-5a0f-81d9-77e6d30c2655",
+            "document_id": "82c08573-1415-5e7e-a391-79b21211cd1f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550\n\nText: Leur\tsurprenante\tnouveauté \t\nB.\tLES\tSOURCES\tDE\tLA\tREV OLUTION\tDE\t G.\tTORY\tET\tSES\tPROLONGEM ENTS.\t.................................................\t 154\t\nLes\tsources\tde\tla\trévolution\tde\tGeoffroy\tTory\tet\tses\tprolongements \t\nCONCLUSION. \t.................................................................................................................................................... \t163\t\nBIBLIOGRAPHIE \t................................................................................................................................ \t165\t\nREMERCIEMENTS \t.............................................................................................................................\t 166\t\nLIVRES\tD 'HEURES\tCITES ,\tGROUPES\tPAR\tSERIES .\t......................................................................................\t 168\t\nTABLE\tDES\tILLUSTRATIO NS\t.................................................................................................................\t 170",
+            "metadata": {
+              "title": "A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550",
+              "hal_id": "halshs-02898229",
+              "authors": [
+                "Wanda Rabaud",
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Wanda Rabaud, Nicolas Bouleau. A la source de la Renaissance française, Le livre d'Heures parisien\r\nLivres d'Heures imprimés à Paris entre 1488 et 1550. 2020. ⟨halshs-02898229⟩",
+              "source_url": "https://hal.science/halshs-02898229",
+              "chunk_order": 481,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-07-15",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Donne moi list de publication de recent de vired"
+            }
+          },
+          {
+            "id": "4d7d2d8a-0285-5baf-9ff1-9b1a2fbb0c34",
+            "document_id": "4f7e2a71-2344-5225-8eca-e5ac848f5c0a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire)\n\nText: Avec notre collection darch ives ouvertes, on proue bien que nous sommes le meilleur laboratoire \ndexcellence, Monsieur. Regardez, je vous montre.  \nMa Petite sactive  sur lordinateur  : sur la page daccueil saffiche le titre  :  \n Archives ouvertes du CRMST   \n3 documents,  4850 notic es \nEt un texte de présentation  : \n Bienvenue sur la collection des Archives ouvertes du CRMST  \nCentre de recherche en modernité sociétale transformationnelle - Unité moderne de recherche 79232  \nCentre nationalisé des recherchants soviétiques / École des haut eurs éclairées de la sagesse sauvegardée Vous \npouvez consulter sur cette archive ouverte  Hal-SHS.  toutes les publications du CRMST  \nqui participe au mouvement international Open Archive Initiative   \n Et voilà le travail  ! Et Vous, Monsieur, je clique sur   consultation, liste par auteur   \n \nJe clique sur la lettre D, voilà votre nom. Regardez, Monsieur Déhaire -Déheu, cest magnifique  !",
+            "metadata": {
+              "title": "Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire)",
+              "hal_id": "sic_00518786",
+              "authors": [
+                "Eliane Daphy",
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Eliane Daphy, Minh Ha-Duong. Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire). 2010. ⟨sic_00518786⟩",
+              "source_url": "https://hal.science/sic_00518786",
+              "chunk_order": 50,
+              "description": "L'auto-archivage permet le libre accès au savoir scientifique, mais repose encore trop sur l'altruisme des auteurs. Pour massifier et systématiser cette pratique, des actions plus fortes sont nécessaires. Le conte à rire narre les déboires d'un chercheur \"connu de Hal\" à l'insu de son plein gré, découvrant qu'il a 148 notices bibliographiques sur un serveur d'archives ouvertes. Co-auteurs de l'encart : \"Pour le dépôt en archives ouvertes des productions scientifiques\" : Vincent Battesti, Eliane Daphy, Christine Eisenbeis, Minh Ha-Duong.",
+              "document_type": "OTHER",
+              "publication_date": "2010-09-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Donne moi list de publication de recent de vired"
+            }
+          },
+          {
+            "id": "0344286f-59a5-5eb1-8bdb-d91f1464abca",
+            "document_id": "c43bd317-ec3c-57af-8bab-cc6b95570a9a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Évaluation des coûts du réseau Natura 2000 pour les habitats marins Rapport final\n\nText: Publications\nélectroniques \nAMURESérie \nISSN 1951-6428Rapports\nwww.umr-amure.fr",
+            "metadata": {
+              "title": "Évaluation des coûts du réseau Natura 2000 pour les habitats marins Rapport final",
+              "hal_id": "hal-03655013",
+              "authors": [
+                "Pierre Scemama",
+                "Charlène Kermagoret",
+                "Alexia Rivallin",
+                "Fanny Le Fur",
+                "Frédérique Alban",
+                "Harold Levrel",
+                "Rémi Mongruel"
+              ],
+              "version": "v0",
+              "citation": "Pierre Scemama, Charlène Kermagoret, Alexia Rivallin, Fanny Le Fur, Frédérique Alban, et al.. Évaluation des coûts du réseau Natura 2000 pour les habitats marins Rapport final. [Rapport de recherche] UMR AMURE. 2022. ⟨hal-03655013⟩",
+              "source_url": "https://hal.science/hal-03655013",
+              "chunk_order": 711,
+              "description": "pas de résumé",
+              "document_type": "REPORT",
+              "publication_date": "2022-04-29",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Donne moi list de publication de recent de vired"
+            }
+          },
+          {
+            "id": "f14e67f6-b0b1-5860-940d-f280cba2dab7",
+            "document_id": "27031447-638a-5dc1-8a26-6bc27206ec9d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: L'homme et la lagune : de l'espace naturel à l'espace urbanisé\n\nText: LHOMME\nETbLA\nLAGUNE\nDeblespacebnaturel\nàblespaceborganisé\nÉditeursbscientifiques\npírnérèGpérréquéSGóëoùíGıírnézzéTzóëñtSGrénóíùGpùíyS\nuóùùísGpoëtsëñSGzuóïóGtozzétóSGsmméGéêónoTéssé\n199801Clarac26:01Clarac26  22/08/09  15:06  Page3",
+            "metadata": {
+              "title": "L'homme et la lagune : de l'espace naturel à l'espace urbanisé",
+              "hal_id": "hal-01442742",
+              "authors": [
+                "Bernard Barraqué",
+                "Nicole Vernazza-Licht",
+                "Daniel Bley",
+                "Gilles Boëtsch",
+                "L. Fozzati",
+                "Emma Rabino-Massa"
+              ],
+              "version": "v0",
+              "citation": "Bernard Barraqué, Nicole Vernazza-Licht, Daniel Bley, Gilles Boëtsch, L. Fozzati, et al. (Dir.). L'homme et la lagune : de l'espace naturel à l'espace urbanisé. BARRAQUE B., VERNAZZA-LICHT N., BLEY D., BOËTSCH G., FOZZATI L., RABINO-MASSA E. (ss. dir.). Editions de Bergier, 321 p., 1998, Travaux de la SEH, Vernazza-Licht Nicole, 2-9511840-3-4. ⟨hal-01442742⟩",
+              "source_url": "https://hal.science/hal-01442742",
+              "chunk_order": 6,
+              "description": "Partout dans le monde, les zones humides reculent. Malgré des prises de conscience récentes elles continuent en Europe à reculer rapidement, alors que les 6% des terres émergées qu’elles représentent sont aussi importants pour la biodiversité qu’ils sont menacés. La moitié de la population mondiale vit à proximité de la mer, et c’est là qu’elle s’accroît le plus. D’où la pression sur les espaces littoraux humides. Ils peuvent être détruits directement, par drainage ou comblement, mais aussi indirectement en fonction de l’évolution des usages de l’eau dans l’ensemble des bassins amont. En France, leur réduction est forte : le Languedoc-Roussillon aurait perdu plus de 20% de ses zones humides côtières en deux siècles, et la Bretagne 40% en 30 ans depuis 1960. Le tourisme estival accroît encore la pression démographique sur le littoral. En Italie, la situation est également préoccupante, en particulier en ce qui concerne la lagune la plus célèbre du monde. L’ouvrage aborde pour l’essentiel des études de cas dans l’espace méditerranéen. Quelques contributions cependant ont traité de lieux où les étangs, bien que littoraux, sont d’eau douce, ou qui sont sur le rivage de l’Atlantique. Certains de nos collègues anthropologues ont élargi notre horizon à l’Afrique et à l’Amérique centrale, où c’était un lac salé qui était au coeur de l’analyse. Mais certainement, la contribution la plus exceptionnelle, la plus décalée par rapport à l’objet central du colloque, aura été celle de Jacqueline Clarac de Briceño : venue du Vénézuela, cette anthropologue et ethnopsychiatre nous a parlé de lagunes, mais au sens hispano-américain, c’est à dire de petits lacs d’eau douce de montagne ! Sa présence était cependant pleinement justifiée. Le Vénézuela, comme son nom l’indique, est une petite Venise qui est devenue grande à partir des lagunes de Maracaïbo : pour des Européens de toutes façons, il garde le secret d’un grand espace lacunaire. Enfin, et justement, la lagune française, comme la laguna espagnole, emportent cette caractéristique d’espace de l’oubli, et d’espace un temps oublié par la modernité, voire même frappé d’infamie par les aménageurs. Lorsque ceux-ci décident de gérer les lagunes à leur manière, ils découvrent la difficulté de l’entreprise, et même ils échouent souvent. Le cas apporté des montagnes andines confirme ce que disent la plupart des auteurs de ce livre, qui ont eux regardé des espaces de bord de mer : c’est qu’une lagune est en fait un espace humanisé d’une façon particulière, dans un équilibre subtil et fragile avec la nature. Supprimons les indiens, interdisons leurs pratiques, au nom de leur incompatibilité avec des formes modernes de tourisme ou d’exploitation, et les lagunes disparaîtront rapidement ! Allons plus loin : sans un entretien particulier, sans donc une volonté d’un groupe social local, les espaces littoraux, en particulier les étangs, sont le plus souvent condamnés soit au comblement, soit à se noyer dans la mer. Comme le répète Bernard Picon depuis des années, la Camargue n’est pas un espace naturel qui aurait échappé à l’homme, et qui à ce titre devrait être protégé : c’est un espace artificiel, fabriqué par des sociétés humaines qui l’exploitent intelligemment, en en respectant les dispositions propres. C’est un cas fréquent dans l’histoire ou autour de la terre. Les économistes de l’environnement constatent la difficulté à établir clairement la valeur des espaces littoraux, soumis qu’ils sont à des usages, voire à des non-usages, qui s’enchevêtrent. C’est la problématique de gestion du patrimoine commun : sa gestion économiquement rationnelle suppose d’avoir des informations dont le coût d’obtention est élevé, en particulier pour organiser les transactions entre les agents économiques, alors que les pratiques combinées de ceux-ci, stabilisées dans des coutumes traditionnelles, ont à l’inverse augmenté la valeur globale de ce patrimoine. Il est alors difficile de savoir qui est responsable de quel changement de valeur, et inversement quel est l’intérêt précis de chaque type d’usager ou d’agent économique. D’où la particularité et la sophistication des modèles et des méthodes à employer dans ces cas. Tel est l’enseignement de cet ouvrage : si les zones humides littorales les plus intéressantes sont souvent des espaces anthropisés, leur protection dépend de la compréhension des interactions entre les hommes, et entre les hommes et l’eau, voire de la capacité de maintien des sociétés concernées, dans une dynamique positive. L’opposition des écologistes à l’aménagement hydraulique intempestif est justifié, mais si leur contre-proposition consiste seulement à préserver la nature comme si elle avait toujours été ainsi, on verse dans une sorte de contre-idéologie. Le tourisme de masse est responsable d’une dégradation dramatique de certains littoraux, il en est même venu à tuer son propre objet; tout le monde en convient. Mais ni une renaturation pure, ni un tourisme vert ne suffisent à redonner un horizon durable aux espaces concernés. Le pire serait que des projets de type écologique viennent venir servir d’alibi, par des réalisations sur les marges, à la poursuite d’un modèle de développement qui détruit la relation société-nature si subtile qui explique et produit largement la lagune. Le cas de Venise est ici particulièrement illustratif, et pour tout dire, il illustre cette contradiction. Voilà trente ans qu’on dit qu’il faut sauver Venise. Venise s’enfonce dans l’eau, suite à la modification fondamentale de l’hydrogéologie due aux aménagements du delta du Pô, et surtout à l’installation de la raffinerie de Marghera au fond de la lagune. A celà s’ajoute la surexploitation des eaux souterraines, et le fait que la route d’accès à la ville entrave la circulation de l’eau, qui produirait aussi des effets secondaires d’enfoncement. Lors de tempêtes conjuguées avec la marée, des dégâts catastrophiques se sont produits, et le phénomène des Acque alte prend de l’importance. Mais ces constatations une fois faites, on ne met pas en oeuvre la solution qui vient immédiatement à l’esprit : déplacer la raffinerie ailleurs, pour ne plus avoir besoin du chenal d’accès pour les grands pétroliers. Et, plus généralement, revenir à un équilibre entre économie et nature plus traditionnel, et plus durable. Bien au contraire, on multiplie les projets technologiques les plus ambitieux, et pour tout dire les plus mythiques, comme Jean-Pierre Gaudin est venu nous le rappeler : barrages mobiles pour arrêter l’eau, digues perpendiculaires aux plages pour casser les vagues en cas de tempête, etc. Certes, la restauration environnementale, notamment des prés salés qu’on appelle Barenas, tient une bonne place dans les plaquettes descriptives du projet intégré, mais celui-ci reste de toutes façons centré sur le sauvetage du patrimoine architectural. Une opération qui prête également à controverse, puisque c’est en partie le succès touristique de Venise qui y rend la vie impossible … pour ses propres habitants. L’importance de la réunion des textes tient précisément à cette observation : la gestion durable des espaces de grande valeur environnementale passe par la mobilisation des connaissances des sciences de l’homme et de la société, au moins autant que par la projection dans la technologie, ou dans la nature naturelle. L'ouvrage est divisé en 4 parties : - L'éventail des perceptions et des représentations des milieux lagunaires ; - L'Archéologie et l'histoire du peuplement de ces espaces ; - Les fragilités réciproques des sociétés locales et des espaces littoraux ; - Vers la gestion durable des systèmes socio-écologiques des lagunes",
+              "document_type": "OUV",
+              "publication_date": "1998-01-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Donne moi list de publication de recent de vired"
+            }
+          },
+          {
+            "id": "7feca38e-4297-5c7d-a107-5c45dcabb327",
+            "document_id": "4f7e2a71-2344-5225-8eca-e5ac848f5c0a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire)\n\nText: Centre nationalisé des recherchants soviétiques / École des haut eurs éclairées de la sagesse sauvegardée Vous \npouvez consulter sur cette archive ouverte  Hal-SHS.  toutes les publications du CRMST  \nqui participe au mouvement international Open Archive Initiative   \n Et voilà le travail  ! Et Vous, Monsieur, je clique sur   consultation, liste par auteur   \n \nJe clique sur la lettre D, voilà votre nom. Regardez, Monsieur Déhaire -Déheu, cest magnifique  !  \nOn a mis tout, tout  ! Vos livres, vos articles dans Le Vespéral de Référence , vos interventions dans des séminaires, \nvos publications à paraître annoncées sur votre page web personnelle sur le site du labo et dans le rapport dactivités. \nVous avez 148 archives ouvertes  ! Jespère que vous êtes content ?  \n \n \n \n \nIll. 11. Légende inutile. [Ch. 40 ]",
+            "metadata": {
+              "title": "Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire)",
+              "hal_id": "sic_00518786",
+              "authors": [
+                "Eliane Daphy",
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Eliane Daphy, Minh Ha-Duong. Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire). 2010. ⟨sic_00518786⟩",
+              "source_url": "https://hal.science/sic_00518786",
+              "chunk_order": 51,
+              "description": "L'auto-archivage permet le libre accès au savoir scientifique, mais repose encore trop sur l'altruisme des auteurs. Pour massifier et systématiser cette pratique, des actions plus fortes sont nécessaires. Le conte à rire narre les déboires d'un chercheur \"connu de Hal\" à l'insu de son plein gré, découvrant qu'il a 148 notices bibliographiques sur un serveur d'archives ouvertes. Co-auteurs de l'encart : \"Pour le dépôt en archives ouvertes des productions scientifiques\" : Vincent Battesti, Eliane Daphy, Christine Eisenbeis, Minh Ha-Duong.",
+              "document_type": "OTHER",
+              "publication_date": "2010-09-01",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "Donne moi list de publication de recent de vired"
+            }
+          },
+          {
+            "id": "b963d7b4-0790-5a1d-810e-109ea5bd425b",
+            "document_id": "86c2a42a-fd13-5463-b0ce-7f1f0ec27169",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: « La recherche en pratique(s) » : un cycle de rendez-vous pour sensibiliser et former les chercheurs & doctorants du CIRED\n\nText: Créer un cycle de rendez-vous  sur ces sujets\n  Adapter le contenu & le format  de chaque rendez-\nvous aux besoins précis des collègues\n THÉMATIQUES abordées... \n  Science  ouverte  principalement\n  Modèles économiques de lédition scientifique\n  Données de la recherche : \n   - aspects juridiques\n   - éléments de politique institutionnelle\n  Intégrité scientifique\n ... & à venir i    \n  Communication avec les médias\n  Épijournaux3  \n  Revues prédatrices, douteuses et de la zone dite  grise \n  Cycle de vie dune donnée de recherche\nDemain, faudra-t-il [systématiquement] payr pour publi r ?\nscience ouverte édition scientifique\nauteur-payeur  Présentation des différents modèles économiques en vigueur dans lédition scientifique\n  Panorama des évolutions en cours \n  Zoom sur le modèle auteur-payeur (parfois appelé à tort Gold Open Access) et les risques quil \nprésente\n  Pistes de solutions possibles à léchelle individuelle, collective et institutionnelle\n RÉALISATION \n  Priorisation  des thématiques",
+            "metadata": {
+              "title": "« La recherche en pratique(s) » : un cycle de rendez-vous pour sensibiliser et former les chercheurs & doctorants du CIRED",
+              "hal_id": "hal-04311547",
+              "authors": [
+                "Estelle Carciofi"
+              ],
+              "version": "v0",
+              "citation": "Estelle Carciofi. « La recherche en pratique(s) » : un cycle de rendez-vous pour sensibiliser et former les chercheurs & doctorants du CIRED. Pratiquer la science ouverte : des services et des compétences en action, Jul 2023, Paris, France. ⟨hal-04311547⟩",
+              "source_url": "https://hal.science/hal-04311547",
+              "chunk_order": 5,
+              "description": "« La Recherche en pratique(s) » est un cycle de rendez-vous dont le but est de sensibiliser et former les chercheurs et doctorants du CIRED [le centre international de recherche sur l'environnement et le développement] sur les enjeux cruciaux associés à leurs pratiques de recherche d'une manière claire et dynamique, grâce à des intervenants de qualité et à un format variable en fonction des thématiques. Ces thématiques concernent principalement la science ouverte (données de la recherche, libre accès, édition scientifique, ...).",
+              "document_type": "POSTER",
+              "publication_date": "2023-07-04",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "Donne moi list de publication de recent de vired"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 468,
+            "total_tokens": 468
+          }
+        }
+      },
+      "duration": 730
+    },
+    "retrievalTime": 1986,
+    "generationTime": 730,
+    "timestamp": "2025-07-18T13:50:39.895Z"
+  },
+  "server_context": {
+    "client_ip": "37.171.99.233",
+    "forwarded_for": "37.171.99.233",
+    "received_at": "2025-07-18T13:50:40.366983+00:00",
+    "server_version": "1.0.0"
+  }
+}

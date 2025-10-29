@@ -1,0 +1,444 @@
+{
+  "sessionId": "session_1752134107494_f2a4x3f6ij1a6v1k",
+  "timestamp": "20250710T091533647Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752138928652_sjfk36k",
+    "response": {
+      "results": {
+        "generated_answer": "Here are some articles and publications by Frédéric Ghersi:\n\n1. **Ghersi, F. (2016).** Projet RISKERGY, Rapport final. CIRED, 84 p. [5e7a166]\n   - [http://www2.centre-cired.fr/IMG/pdf/riskergy_cired_16dec16.pdf](http://www2.centre-cired.fr/IMG/pdf/riskergy_cired_16dec16.pdf)\n\n2. **Schers, J., Ghersi, F., Lecocq, F. (2015).** Green Growth and its Implications for Public Policy: The case of South Africa. Études de l'AFD 4, AFD, Paris, 153 p. [5e7a166]\n   - [http://www2.centre-cired.fr/IMG/pdf/etudeafd4.pdf](http://www2.centre-cired.fr/IMG/pdf/etudeafd4.pdf)\n\n3. **Boitier, B., Callonec, G., Douillard, P., Épaulard, A., Ghersi, F., Masson, E., Mathy, S. (2015).** La transition énergétique vue par les modèles macroéconomiques. Document de travail n° 2015-05, France Stratégie, Paris, France. 36 pp. [5e7a166]\n   - [http://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/dt_n5-comparaison_modeles.pdf](http://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/dt_n5-comparaison_modeles.pdf)\n\n4. **Ghersi, F. (2015).** Macroeconomic modelling of electric cars penetration in EU 28. Scenario results. CIRED Document de travail 58-2015, CIRED, Paris, France. 32 pp. [5e7a166]\n   - [http://www.centre-cired.fr/IMG/pdf/ciredwp-201458.pdf](http://www.centre-cired.fr/IMG/pdf/ciredwp-201458.pdf)\n\n5. **De Lauretis, S., Ghersi, F., Cayla, J.-M. (2017).** Energy consumption and activity patterns: an analysis extended to total time and energy use for French households. Applied Energy 206: 634-648. [e6fb147]\n   - [http://www2.centre-cired.fr/IMG/pdf/delauretisghersicayla2017.pdf](http://www2.centre-cired.fr/IMG/pdf/delauretisghersicayla2017.pdf)\n\n6. **Ghersi, F. (2015).** Hybrid Bottom-up/Top-down Energy and Economy Outlooks: A Review of IMACLIM-S Experiments. Frontiers in Environmental Science 3 (74): 1-18. [e6fb147]\n\n7. **Ghersi, F. (2014).** The IMACLIM-P model version 3.4. CIRED Document de travail 57-2014, CIRED, Paris, France. 42 pp. [21b4db8]\n   - [http://www.centre-cired.fr/IMG/pdf/ciredwp-201457.pdf](http://www.centre-cired.fr/IMG/pdf/ciredwp-201457.pdf)\n\n8. **Ghersi, F., Ricci, O. (2014).** A macro-micro outlook on fuel poverty in 2035 France. CIRED Document de travail 56-2015, CIRED, Paris, France. 28 pp. [21b4db8]\n   - [http://www.centre-cired.fr/IMG/pdf/CIREDWP-201456.pdf](http://www.centre-cired.fr/IMG/pdf/CIREDWP-201456.pdf)\n\n9. **Ghersi, F. (2014).** Macroeconomic modelling of electrified mobility systems in 2030 European Union. CIRED Document de travail 55-2014, CIRED, Paris, France. 32 pp. [21b4db8]\n   - [http://www.centre-cired.fr/IMG",
+        "citations": [
+          {
+            "id": "5e7a166",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 132,
+              "end": 141
+            },
+            "payload": {
+              "id": "5e7a166a-4eac-5184-9ca6-3334150fbd59",
+              "document_id": "654f943f-6431-5b7a-a8fc-81552aa74d23",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints\n\nText: Curriculum Vitae  \n 12 Autres publications  \nGhersi, F. (2016). Projet RISKERGY, Rapport final . CIRED, 84 p.   \nhttp://www2.centre -cired.fr/IMG/pdf/riskergy_cired_16dec16.pdf  \nSchers, J., Ghersi, F., Lecocq, F. (2015). Green Growth and its Implications for Public Policy The case of \nSouth Afr ica. Études de lAFD  4, AFD, Paris, 153 p.   \nhttp://www2.centre -cired.fr/IMG/pdf/etudeafd4.pdf   \nBoitier, B., Callonec, G., Douillard, P., Épaulard, A., Ghersi, F., Masson, E., Mathy, S. (2015). La transition \nénergétique vue par les modèles macroéconomiques. Document de travail n 2015 -05, France Stratégie, \nParis, France. 36 pp.   \nhttp://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/dt_n5 -comparaison_modeles.pdf   \nGhersi, F. (2015). Macroeconomic modelling  of electric cars penetration in EU 28. Scenario results. CIRED \nDocument de travail 58 -2015, CIRED, Paris,  France. 32 pp.   \nhttp://www.centre -cired.fr/IMG/pdf/ciredwp -201458.pdf",
+              "metadata": {
+                "title": "Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints",
+                "hal_id": "tel-04481011",
+                "authors": "['Frédéric Ghersi']",
+                "version": "v0",
+                "citation": "Frédéric Ghersi. Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints. Economics and Finance. Université Paris-Nanterre, 2019. ⟨tel-04481011⟩",
+                "source_url": "https://hal.science/tel-04481011",
+                "chunk_order": 37,
+                "document_type": "HDR",
+                "publication_date": "2019-09-19",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "Articles de F. Ghersi"
+              }
+            }
+          },
+          {
+            "id": "5e7a166",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 444,
+              "end": 453
+            },
+            "payload": null
+          },
+          {
+            "id": "5e7a166",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 804,
+              "end": 813
+            },
+            "payload": null
+          },
+          {
+            "id": "5e7a166",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1196,
+              "end": 1205
+            },
+            "payload": null
+          },
+          {
+            "id": "e6fb147",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1524,
+              "end": 1533
+            },
+            "payload": {
+              "id": "e6fb1479-96f0-5977-9628-bfda995e7b84",
+              "document_id": "654f943f-6431-5b7a-a8fc-81552aa74d23",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints\n\nText: Curriculum Vitae  \n 10 2001 -2003  CIRED, UMR 8568   \nDoctorant.  \n1999 -2000  Resources for the Future , Washington D.C., États -Unis   \nCoopérant scientifique.  \n1997 -1998  CIRED, CNRS -EHESS (UMR 8568).   \nStagiaire HEC puis DEA.  \nPublications et travaux  \nThèse  de Doctorat  \nChangement technique et double dividende décotaxes  : un essai sur la  confluence des prospectives \nénergétique et macro -économique . EHESS, Paris (2003). 289 p.   \nhttp://www2.centre -cired.fr/IMG/pdf/these_ghersi.pdf   \nPublications dans des revues à comité de l ecture et chapitres douvrages  \nDe Lauretis, S., Ghersi, F., Cayla, J. -M. (2017). Energy consumption and activity patterns: an analysis \nextended to total time and energy use for French households. Applied Energy  206: 634-648.  \nhttp://www2.centre -cired.fr/IMG/pdf/delauretisghersicayla2017.pdf   \nGhersi, F. (2015) . Hybrid Bottom -up/Top -down Energy and Economy Outlooks: A Review of IMACLIM -S \nExperiments . Frontiers in Environmental Science  3 (74): 1-18.",
+              "metadata": {
+                "title": "Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints",
+                "hal_id": "tel-04481011",
+                "authors": "['Frédéric Ghersi']",
+                "version": "v0",
+                "citation": "Frédéric Ghersi. Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints. Economics and Finance. Université Paris-Nanterre, 2019. ⟨tel-04481011⟩",
+                "source_url": "https://hal.science/tel-04481011",
+                "chunk_order": 27,
+                "document_type": "HDR",
+                "publication_date": "2019-09-19",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "Articles de F. Ghersi"
+              }
+            }
+          },
+          {
+            "id": "e6fb147",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1840,
+              "end": 1849
+            },
+            "payload": null
+          },
+          {
+            "id": "21b4db8",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1974,
+              "end": 1983
+            },
+            "payload": {
+              "id": "21b4db86-0fca-5169-9581-6aa92fd6b416",
+              "document_id": "654f943f-6431-5b7a-a8fc-81552aa74d23",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01503448275862069,
+              "text": "Document Title: Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints\n\nText: Ghersi, F. (2014). The IMACLIM -P model version 3.4. CIRED Document de travail 57 -2014, CIRED, Paris, \nFrance. 42 pp .  \nhttp://www.centre -cired.fr/IMG/pdf/ciredwp -201457.pdf   \nGhersi, F., Ricci, O. (2014). A macro -micro outlook on fuel poverty in 2035 France. CIRED Document de \ntravail 56 -2015, CIRED, Pa ris, France. 28 pp.   \nhttp://www.centre -cired.fr/IMG/pdf/CIREDWP -201456.pdf   \nGhersi, F. (2014). Macroeconomic modelling  of electrified mobility systems in 2030 European Union. \nCIRED Docum ent de travail 55 -2014, CIRED, Paris, France. 32pp.   \nhttp://www.centre -cired.fr/IMG/pdf/CIREDWP -201455.pdf   \nGhersi, F. (2014). Gestion des précarités actuelles et prévention des précari tés futures, un jeu à plusieurs \nvariables de commande. In Ha -Duong, M. Finon, D. (éd.), Maîtriser la demande d'énergie, une option \nconsensuelle face à ses obstacles , actes électroniques de la troisième journée de dialogue CNRS sur la \ntransition énergétique  en France, CIRED, Paris, France, pp. 155 -175.",
+              "metadata": {
+                "title": "Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints",
+                "hal_id": "tel-04481011",
+                "authors": "['Frédéric Ghersi']",
+                "version": "v0",
+                "citation": "Frédéric Ghersi. Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints. Economics and Finance. Université Paris-Nanterre, 2019. ⟨tel-04481011⟩",
+                "source_url": "https://hal.science/tel-04481011",
+                "chunk_order": 39,
+                "document_type": "HDR",
+                "publication_date": "2019-09-19",
+                "semantic_rank": 8,
+                "full_text_rank": 200,
+                "associated_query": "Articles de F. Ghersi"
+              }
+            }
+          },
+          {
+            "id": "21b4db8",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 2256,
+              "end": 2265
+            },
+            "payload": null
+          },
+          {
+            "id": "21b4db8",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 2553,
+              "end": 2562
+            },
+            "payload": null
+          }
+        ],
+        "search_results": [
+          {
+            "id": "72d527bd-e624-5a8f-a7af-abc34f5b2e33",
+            "document_id": "c5cbce26-bfb6-5555-8e25-6a722a3bd543",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017156862745098037,
+            "text": "Document Title: Politiques climatiques justes et changement technique : essais sur les impacts distributifs et l'acceptabilité sociale des mesures de neutralité carbone\n\nText: 7. This dissertation\nList of articles from the thesis\nChapter 2: Ravigné, E., Ghersi, F., & Nadaud, F. (2022). Is a fair energy transition\npossible? Evidence from the French low-carbon strategy. Ecological Economics, 196,\n107397. doi; 10.1016/j.ecolecon.2022.107397.\nChapter 4: Ravigné, E., & Da Costa, P. (2021). Economic and environmental\nperformances of natural gas for heavy trucks: A case study on the French automotive\nindustry supply chain. Energy Policy, 149, 112019. doi: 10.1016/j.enpol.2020.112019.\nMain conferences and invited seminars\nChapter 1: Ravigné, E., & Nadaud, F., Can a carbon tax increase emissions? The\nbackfire effect of carbon tax recycling\nAnnual conference of the European Association of Environmental and Resource\nEconomists (EAERE), 2022, Rimini, Italy\nPublic Economic Theory conference (PET), 2022, Marseille, France\nJournées de Micro-économie appliquée (JMA), 2022, Rennes, France\nBerlin School of Economics workshop, 2022, Berlin, Germany",
+            "metadata": {
+              "title": "Politiques climatiques justes et changement technique : essais sur les impacts distributifs et l'acceptabilité sociale des mesures de neutralité carbone",
+              "hal_id": "tel-04001107",
+              "authors": "['Emilien Ravigne']",
+              "version": "v0",
+              "citation": "Emilien Ravigne. Politiques climatiques justes et changement technique : essais sur les impacts distributifs et l'acceptabilité sociale des mesures de neutralité carbone. Economics and Finance. Université Paris-Saclay, 2022. English. ⟨NNT : 2022UPASI013⟩. ⟨tel-04001107⟩",
+              "source_url": "https://hal.science/tel-04001107",
+              "chunk_order": 255,
+              "description": "Climate change mitigation policies will require investments and generate new costs for society. This dissertation examines how these costs will be distributed across the population : house-holds and workers. I mix approaches and methodologies to give a comprehensive overview of the inequalities induced by climate policies. The first part focuses on households consumption. The first chapter studies the carbon tax and the backfire effects of recycling its revenues to households. The second chapter assesses the distributional impact of a package of climate policies in France up to 2035. The second part studies employment and wages through technical change. The third chapter proposes a theoretical model to di˙erentiate the directions of technical change and their deter-minants. The fourth chapter is a case-stydy of a low-carbon technology.",
+              "document_type": "THESE",
+              "publication_date": "2022-12-08",
+              "semantic_rank": 10,
+              "full_text_rank": 1,
+              "associated_query": "Articles de F. Ghersi"
+            }
+          },
+          {
+            "id": "5e7a166a-4eac-5184-9ca6-3334150fbd59",
+            "document_id": "654f943f-6431-5b7a-a8fc-81552aa74d23",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints\n\nText: Curriculum Vitae  \n 12 Autres publications  \nGhersi, F. (2016). Projet RISKERGY, Rapport final . CIRED, 84 p.   \nhttp://www2.centre -cired.fr/IMG/pdf/riskergy_cired_16dec16.pdf  \nSchers, J., Ghersi, F., Lecocq, F. (2015). Green Growth and its Implications for Public Policy The case of \nSouth Afr ica. Études de lAFD  4, AFD, Paris, 153 p.   \nhttp://www2.centre -cired.fr/IMG/pdf/etudeafd4.pdf   \nBoitier, B., Callonec, G., Douillard, P., Épaulard, A., Ghersi, F., Masson, E., Mathy, S. (2015). La transition \nénergétique vue par les modèles macroéconomiques. Document de travail n 2015 -05, France Stratégie, \nParis, France. 36 pp.   \nhttp://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/dt_n5 -comparaison_modeles.pdf   \nGhersi, F. (2015). Macroeconomic modelling  of electric cars penetration in EU 28. Scenario results. CIRED \nDocument de travail 58 -2015, CIRED, Paris,  France. 32 pp.   \nhttp://www.centre -cired.fr/IMG/pdf/ciredwp -201458.pdf",
+            "metadata": {
+              "title": "Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints",
+              "hal_id": "tel-04481011",
+              "authors": "['Frédéric Ghersi']",
+              "version": "v0",
+              "citation": "Frédéric Ghersi. Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints. Economics and Finance. Université Paris-Nanterre, 2019. ⟨tel-04481011⟩",
+              "source_url": "https://hal.science/tel-04481011",
+              "chunk_order": 37,
+              "document_type": "HDR",
+              "publication_date": "2019-09-19",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Articles de F. Ghersi"
+            }
+          },
+          {
+            "id": "78855f78-4da1-526d-9e15-8ea16a9f9058",
+            "document_id": "654f943f-6431-5b7a-a8fc-81552aa74d23",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints\n\nText: Curriculum Vitae  \n9 Frédéric Ghersi  \nNé le 19 août 1974 à Bourg Saint -Maurice (Savoie).  \nNationalité française.  \n \nCNRS, Chargé de recherche de première classe (CR1).  \nCIRED - Centre  International de Recherche sur lEnvironnement et le Développement  \n45 bis, avenue de la Belle Gabrielle  \n94738 Nogent -sur-Marne CEDEX  \nTél. : 01 43 94 73 73  \nFax : 01 43 94 73 70  \nghersi@centre -cired.fr  \nPage pers onnelle  : https://www.centre -cired.fr/frederic -ghersi/   \nFormation  \n2001 -2003  Doctorat  en sciences économiques à lÉcole des Hautes Études en Sciences Sociales (EHESS), \nsous la direction de Jean -Charles Hourcade. Thèse  : Changement technique et double dividende \ndécotaxes  : un essai sur la confluence des prospectives énergétique et macro -économique , \nsoutenue le 1er avril 2003 avec mention très honorable et félicitations du jury.  \n1997 -1998  Diplôme dÉtudes Approfondies , programme doctoral Analyse et Politique Économiques,",
+            "metadata": {
+              "title": "Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints",
+              "hal_id": "tel-04481011",
+              "authors": "['Frédéric Ghersi']",
+              "version": "v0",
+              "citation": "Frédéric Ghersi. Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints. Economics and Finance. Université Paris-Nanterre, 2019. ⟨tel-04481011⟩",
+              "source_url": "https://hal.science/tel-04481011",
+              "chunk_order": 24,
+              "document_type": "HDR",
+              "publication_date": "2019-09-19",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Articles de F. Ghersi"
+            }
+          },
+          {
+            "id": "20acf2d7-b391-597b-b13f-24091759e671",
+            "document_id": "2450ab02-5d21-512d-810e-78510a43bbc9",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Le principe de précaution : renégocier les conditions de l'agir en univers controversé\n\nText: HAL Id: halshs-00619172\nhttps://shs.hal.science/halshs-00619172v1\nSubmitted on 5 Sep 2011\nHAL is a multi-disciplinary open access\narchive for the deposit and dissemination of sci-\nentific research documents, whether they are pub-\nlished or not. The documents may come from\nteaching and research institutions in F rance or\nabroad, or from public or private research centers.Larchive ouverte pluridisciplinaire HAL , est\ndestinée au dépôt et à la diffusion de documents\nscientifiques de niveau recherche, publiés ou non,\némanant des établissements denseignement et de\nrecherche français ou étrangers, des laboratoires\npublics ou privés.\nLe principe de précaution : renégocier les conditions de\nlagir en univers controversé\nOlivier Godard\nT o cite this version:\nOlivier Godard. Le principe de précaution : renégocier les conditions de lagir en univers controversé.\nNatures Sciences Sociétés, 1998, 6 (1), pp.41-45. halshs-00619172",
+            "metadata": {
+              "title": "Le principe de précaution : renégocier les conditions de l'agir en univers controversé",
+              "hal_id": "halshs-00619172",
+              "authors": [
+                "Olivier Godard"
+              ],
+              "version": "v0",
+              "citation": "Olivier Godard. Le principe de précaution : renégocier les conditions de l'agir en univers controversé. Natures Sciences Sociétés, 1998, 6 (1), pp.41-45. ⟨halshs-00619172⟩",
+              "source_url": "https://hal.science/halshs-00619172",
+              "chunk_order": 0,
+              "description": "Parmi les orientations qu'on peut dessiner pour frayer la voie d'une pratique raisonnable de la précaution, la nécessité peut-être la plus impérieuse pour les entrepreneurs qui créent des risques pour autrui est de mettre la gestion de ces risques en partage et en délibération dans la société globale, contre les stratégies du secret. De nouveaux partenariats sont à inventer pour parvenir à sortir la gestion du risque du seul monde des décideurs et des experts. Lorsqu'elle est profondément ébranlée, la confiance ne se rétablit pas par des coups de communication ou de publicité. Aux comités d'experts doivent être adjoints de nouveaux types de forums, que certains appellent hybrides, où il serait possible de voir représenter, au plus près des groupes concernés, le point de vue des gens ordinaires. La restauration de la crédibilité de l'information passe par l'association des groupes concernés à son élaboration et à sa vérification. La deuxième orientation est celle d'une prise en charge précoce, graduelle, mais réversible des risques au-delà des exigences réglementaires du moment : l'organisation d'une veille sur les menaces, la constitution de réseaux d'experts prêts à être mobilisés, le recours à une expertise pluraliste, la définition de sortes d'échelles de Richter des étapes de l'élaboration scientifique afin de définir différents degrés de mesure de sauvegarde et de précaution, l'adoption de mesures provisoires de sauvegarde qui pourront être réexaminées en fonction des informations nouvelles, telles sont quelques unes des composantes d'une stratégie de précaution dont les modalités restent largement à inventer. Finalement, les responsables publics et privés doivent se pénétrer d'une idée simple : définir ce qu'est le risque acceptable est l'affaire de tous, et pas seulement celle des experts. C'est en le reconnaissant qu'on pourra passer du \" risque acceptable \" au \" risque accepté \" car géré dans une culture de précaution.",
+              "document_type": "ART",
+              "publication_date": "1998-09-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Articles de F. Ghersi"
+            }
+          },
+          {
+            "id": "412e2380-89d8-5246-8fcb-0d2146a3f679",
+            "document_id": "bd119a04-f1fc-5e94-9987-091a3ca7001e",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: A Climate Finance Initiative To Achieve the Paris Agreement and Strenghten Sustainable Development\n\nText: 77    Annexes  with the cooperation of Frédéric GHERSI researcher CNRS at CIRED",
+            "metadata": {
+              "title": "A Climate Finance Initiative To Achieve the Paris Agreement and Strenghten Sustainable Development",
+              "hal_id": "hal-02121231",
+              "authors": "['Dipak Dasgupta', 'Jean-Charles Hourcade', 'Seyni Nafo']",
+              "version": "v0",
+              "citation": "Dipak Dasgupta, Jean-Charles Hourcade, Seyni Nafo. A Climate Finance Initiative To Achieve the Paris Agreement and Strenghten Sustainable Development. [Research Report] CIRED. 2019. ⟨hal-02121231⟩",
+              "source_url": "https://hal.science/hal-02121231",
+              "chunk_order": 403,
+              "document_type": "REPORT",
+              "publication_date": "2019-04-23",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Articles de F. Ghersi"
+            }
+          },
+          {
+            "id": "49fbcba6-cf68-5bf7-8db6-25e30dd96ab4",
+            "document_id": "714095ac-820a-5504-a609-86a3044ea4db",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)\n\nText: <BOUCLE_articlesautres(SYNDIC_ARTICLES){id_syndic}{par\ndate}{inverse}{tags==ARTREVUE|COMMUNICATION}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_articlesautres>\n</ul>\n</B_articlesautres>\n<B_theses>\n<h2>Th&egrave;ses,m&eacute;moiresdeDEAetd'habilitation(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_theses(SYNDIC_ARTICLES){id_syndic}{par\ndate}{inverse}{tags==THESE}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_theses>\n</ul>\n</B_theses>\n<B_autres>\n<h2>Autrespublications(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_autres(SYNDIC_ARTICLES){id_syndic}{pardate}{inverse}{doublons}>",
+            "metadata": {
+              "title": "SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)",
+              "hal_id": "halshs-00008414",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL). 2006. ⟨halshs-00008414⟩",
+              "source_url": "https://hal.science/halshs-00008414",
+              "chunk_order": 36,
+              "description": "Les listes de publications scientifiques sont un élément clé des sites de laboratoires de recherche. Elles sont aussi essentielles aux pages personnelles des chercheurs. Gérer ces listes de façon systématique implique de connecter d'une façon ou d'une autre un serveur web avec une base de donnée des productions scientifiques. Cette note expose comment connecter l'archive ouverte HAL et le système de gestion de contenu SPIP par le protocole RSS.",
+              "document_type": "OTHER",
+              "publication_date": "2006-01-28",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Articles de F. Ghersi"
+            }
+          },
+          {
+            "id": "3b443285-7b94-5615-bacf-b42d11d989c8",
+            "document_id": "1a1accc7-e37a-5de4-b956-4fb396bed71b",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: De l'usage du principe de précaution en univers controversé : entre débats publics et expertise\n\nText: HAL Id: halshs-00618221\nhttps://shs.hal.science/halshs-00618221v1\nSubmitted on 1 Sep 2011\nHAL is a multi-disciplinary open access\narchive for the deposit and dissemination of sci-\nentific research documents, whether they are pub-\nlished or not. The documents may come from\nteaching and research institutions in F rance or\nabroad, or from public or private research centers.Larchive ouverte pluridisciplinaire HAL , est\ndestinée au dépôt et à la diffusion de documents\nscientifiques de niveau recherche, publiés ou non,\némanant des établissements denseignement et de\nrecherche français ou étrangers, des laboratoires\npublics ou privés.\nDe lusage du principe de précaution en univers\ncontroversé : entre débats publics et expertise\nOlivier Godard\nT o cite this version:\nOlivier Godard. De lusage du principe de précaution en univers controversé : entre débats publics et\nexpertise. F uturibles, 1999, 239-240, pp.37-60. halshs-00618221",
+            "metadata": {
+              "title": "De l'usage du principe de précaution en univers controversé : entre débats publics et expertise",
+              "hal_id": "halshs-00618221",
+              "authors": [
+                "Olivier Godard"
+              ],
+              "version": "v0",
+              "citation": "Olivier Godard. De l'usage du principe de précaution en univers controversé : entre débats publics et expertise. Futuribles, 1999, 239-240, pp.37-60. ⟨halshs-00618221⟩",
+              "source_url": "https://hal.science/halshs-00618221",
+              "chunk_order": 0,
+              "description": "Depuis quelques années une nouvelle référence normative est apparue dans le champ de l'environnement : le principe de précaution. Il a commencé à être reconnu par le droit international et par le droit interne. Certains y voient une source de nouvelles obligations contraignant les responsables publics à refuser l'autorisation d'une activité ou d'un produit tant que demeurent des doutes sur l'existence possible de risques pour la santé et l'environnement. Avec cette interprétation, le principe serait l'instrument qui permettrait de mettre fin à l'indécision et aux boucles enchevêtrées des controverses scientifiques et sociales. L'article montre cependant que cette interprétation ne correspond pas aux définitions retenues dans les textes juridiques et qu'elle est indéfendable. En univers scientifiquement controversé, le principe n'a pas vocation à réduire l'incertitude mais au contraire à la porter comme question vivante dans la société. L'enjeu en est l'invention de nouvelles procédures collectives dans le cadre desquelles les acteurs sociaux seront amenés à faire face de façon explicite et raisonnable aux situations de risques. Il y a deux voies concurrentes pour le faire : une logique de décision reposant sur l'expertise et celle s'appuyant sur des procédures \" démocratiques \", qui combinent débats publics et implication des citoyens. Est-il possible d'éviter de s'enfermer dans le vieux conflit entre ces deux voies ? L'étude des rôles assumés, le plus souvent de façon tacite, par les groupes d'experts fait ressortir les questions pour lesquelles des procédures d'association des citoyens et de débat public organisé devraient être développées.",
+              "document_type": "ART",
+              "publication_date": "1999-03-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Articles de F. Ghersi"
+            }
+          },
+          {
+            "id": "e6fb1479-96f0-5977-9628-bfda995e7b84",
+            "document_id": "654f943f-6431-5b7a-a8fc-81552aa74d23",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints\n\nText: Curriculum Vitae  \n 10 2001 -2003  CIRED, UMR 8568   \nDoctorant.  \n1999 -2000  Resources for the Future , Washington D.C., États -Unis   \nCoopérant scientifique.  \n1997 -1998  CIRED, CNRS -EHESS (UMR 8568).   \nStagiaire HEC puis DEA.  \nPublications et travaux  \nThèse  de Doctorat  \nChangement technique et double dividende décotaxes  : un essai sur la  confluence des prospectives \nénergétique et macro -économique . EHESS, Paris (2003). 289 p.   \nhttp://www2.centre -cired.fr/IMG/pdf/these_ghersi.pdf   \nPublications dans des revues à comité de l ecture et chapitres douvrages  \nDe Lauretis, S., Ghersi, F., Cayla, J. -M. (2017). Energy consumption and activity patterns: an analysis \nextended to total time and energy use for French households. Applied Energy  206: 634-648.  \nhttp://www2.centre -cired.fr/IMG/pdf/delauretisghersicayla2017.pdf   \nGhersi, F. (2015) . Hybrid Bottom -up/Top -down Energy and Economy Outlooks: A Review of IMACLIM -S \nExperiments . Frontiers in Environmental Science  3 (74): 1-18.",
+            "metadata": {
+              "title": "Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints",
+              "hal_id": "tel-04481011",
+              "authors": "['Frédéric Ghersi']",
+              "version": "v0",
+              "citation": "Frédéric Ghersi. Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints. Economics and Finance. Université Paris-Nanterre, 2019. ⟨tel-04481011⟩",
+              "source_url": "https://hal.science/tel-04481011",
+              "chunk_order": 27,
+              "document_type": "HDR",
+              "publication_date": "2019-09-19",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Articles de F. Ghersi"
+            }
+          },
+          {
+            "id": "21b4db86-0fca-5169-9581-6aa92fd6b416",
+            "document_id": "654f943f-6431-5b7a-a8fc-81552aa74d23",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints\n\nText: Ghersi, F. (2014). The IMACLIM -P model version 3.4. CIRED Document de travail 57 -2014, CIRED, Paris, \nFrance. 42 pp .  \nhttp://www.centre -cired.fr/IMG/pdf/ciredwp -201457.pdf   \nGhersi, F., Ricci, O. (2014). A macro -micro outlook on fuel poverty in 2035 France. CIRED Document de \ntravail 56 -2015, CIRED, Pa ris, France. 28 pp.   \nhttp://www.centre -cired.fr/IMG/pdf/CIREDWP -201456.pdf   \nGhersi, F. (2014). Macroeconomic modelling  of electrified mobility systems in 2030 European Union. \nCIRED Docum ent de travail 55 -2014, CIRED, Paris, France. 32pp.   \nhttp://www.centre -cired.fr/IMG/pdf/CIREDWP -201455.pdf   \nGhersi, F. (2014). Gestion des précarités actuelles et prévention des précari tés futures, un jeu à plusieurs \nvariables de commande. In Ha -Duong, M. Finon, D. (éd.), Maîtriser la demande d'énergie, une option \nconsensuelle face à ses obstacles , actes électroniques de la troisième journée de dialogue CNRS sur la \ntransition énergétique  en France, CIRED, Paris, France, pp. 155 -175.",
+            "metadata": {
+              "title": "Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints",
+              "hal_id": "tel-04481011",
+              "authors": "['Frédéric Ghersi']",
+              "version": "v0",
+              "citation": "Frédéric Ghersi. Producing economy-wide outlooks of energy transitions: hybrid modelling open to second best constraints. Economics and Finance. Université Paris-Nanterre, 2019. ⟨tel-04481011⟩",
+              "source_url": "https://hal.science/tel-04481011",
+              "chunk_order": 39,
+              "document_type": "HDR",
+              "publication_date": "2019-09-19",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Articles de F. Ghersi"
+            }
+          },
+          {
+            "id": "2a8c2018-d2eb-5a6c-8e17-697ef5ebc4f1",
+            "document_id": "e07d385e-18bc-5262-a060-8d5cc6d4b700",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: French R&Dialogue Council Vision Paper\n\nText: HAL Id: hal-01151458\nhttps://hal.science/hal-01151458v1\nSubmitted on 22 May 2015\nHAL is a multi-disciplinary open access\narchive for the deposit and dissemination of sci-\nentific research documents, whether they are pub-\nlished or not. The documents may come from\nteaching and research institutions in F rance or\nabroad, or from public or private research centers.Larchive ouverte pluridisciplinaire HAL , est\ndestinée au dépôt et à la diffusion de documents\nscientifiques de niveau recherche, publiés ou non,\némanant des établissements denseignement et de\nrecherche français ou étrangers, des laboratoires\npublics ou privés.\nF rench R&Dialogue Council Vision Paper\nMiriame Cherbib, Minh Ha-Duong, Marie Gastine, Quang Chan V ong,\nLaurent Dumergues, Benoît de Guillebon\nT o cite this version:\nMiriame Cherbib, Minh Ha-Duong, Marie Gastine, Quang Chan V ong, Laurent Dumergues, et al..\nF rench R&Dialogue Council Vision Paper. [Research Report] CIRED/SMASH. 2015. hal-01151458",
+            "metadata": {
+              "title": "French R&Dialogue Council Vision Paper",
+              "hal_id": "hal-01151458",
+              "authors": "['Miriame Cherbib', 'Minh Ha-Duong', 'Marie Gastine', 'Quang Chan Vong', 'Laurent Dumergues', 'Benoît de Guillebon']",
+              "version": "v0",
+              "citation": "Miriame Cherbib, Minh Ha-Duong, Marie Gastine, Quang Chan Vong, Laurent Dumergues, et al.. French R&Dialogue Council Vision Paper. [Research Report] CIRED/SMASH. 2015. ⟨hal-01151458⟩",
+              "source_url": "https://hal.science/hal-01151458",
+              "chunk_order": 0,
+              "description": "This document is the R&Dialogue French national dialogue council vision paper. The French national dialogue started in July 2014 and ended in February 2015. The vision paper is the result of the discussions between the 47 council members organized by thematic groups: i. wind power: social acceptance and difficulties; ii. oil and dependence; iii. energy transition and European construction; iv. territorial organization of the energy transition. The final and plenary meeting of the French national council was the opportunity to present the thematic common visions to all its members. This manuscript – available in French and English – is the final and agreed version of these common visions of the energy transition.",
+              "document_type": "REPORT",
+              "publication_date": "2015-05-07",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "Articles de F. Ghersi"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2599,
+            "total_tokens": 2599
+          }
+        }
+      },
+      "duration": 3823
+    },
+    "retrievalTime": 1157,
+    "generationTime": 3823,
+    "timestamp": "2025-07-10T09:15:33.647Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.112.3",
+    "forwarded_for": "193.51.112.3",
+    "received_at": "2025-07-10T09:15:34.399637+00:00",
+    "server_version": "1.0.0"
+  }
+}

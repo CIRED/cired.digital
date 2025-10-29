@@ -1,0 +1,45 @@
+{
+  "sessionId": "session_1752134176025_3x2b5j1e5n2v4l622p",
+  "timestamp": "20250710T075616048Z",
+  "eventType": "sessionStart",
+  "payload": {
+    "sessionId": "session_1752134176025_3x2b5j1e5n2v4l622p",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0",
+    "language": "en-US",
+    "languages": [
+      "en-US",
+      "en"
+    ],
+    "cookieEnabled": true,
+    "onLine": true,
+    "screen": {
+      "width": 1920,
+      "height": 1080,
+      "availWidth": 1920,
+      "availHeight": 1080,
+      "pixelRatio": 1,
+      "colorDepth": 24
+    },
+    "viewport": {
+      "width": 1492,
+      "height": 948
+    },
+    "timezone": "Europe/Paris",
+    "profile": {
+      "organization": "media",
+      "knowledge": "expert",
+      "usage": "expert",
+      "createdAt": "2025-07-04T15:05:01.576Z",
+      "updatedAt": "2025-07-04T15:05:01.576Z",
+      "id": "3348e7aa-19dc-4289-ace8-c4fb0ddc20bc"
+    },
+    "referrer": null,
+    "url": "file:///home/haduong/CNRS/projets/actifs/CIRED.digital/cired.digital/src/frontend/index.html"
+  },
+  "server_context": {
+    "client_ip": "172.18.0.1",
+    "forwarded_for": null,
+    "received_at": "2025-07-10T07:56:16.060872+00:00",
+    "server_version": "1.0.0"
+  }
+}

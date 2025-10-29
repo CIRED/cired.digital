@@ -1,0 +1,634 @@
+{
+  "sessionId": "session_1752324436901_531m2y2w226a312t3x",
+  "timestamp": "20250712T125335016Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752324810777_3w8a4d5",
+    "response": {
+      "results": {
+        "generated_answer": "Philippe Quirion has worked on several research topics related to energy economics and environmental policies. Here are some of his notable works:\n\n1. **Impact of Energy Transition on Employment**:\n   - Quirion analyzed the net effect on employment due to the energy transition in France using an input-output analysis of the négaWatt scenario [595a53d], [36964ce], [9f8c67e].\n\n2. **Energy Saving Policies**:\n   - He has worked on comparing and combining energy-saving policies to evaluate if proposed residential sector policies meet French official targets [39d294a].\n\n3. **General Equilibrium Impact of Energy-Saving Policies**:\n   - Quirion, along with Meriem Hamdi-Cherif, studied the general equilibrium impact of an energy-saving policy in the public sector [595a53d], [36964ce].\n\n4. **European Union Emissions Trading System**:\n   - He co-authored a paper questioning whether the European Union Emissions Trading System should be discarded [4865d98].\n\n5. **Green Technology Support Policies**:\n   - Quirion, along with Oskar Lecuyer, assessed the climate and energy policy mix for France as part of the CECILIA 2050 project [bfa1ed6], [418452c].\n\n6. **Optimal Zero-Emission Electricity System for France**:\n   - He co-authored a working paper on the cost of an optimal zero-emission electricity system for France, with and without nuclear energy [6533cf1].\n\n7. **Transition Énergétique and Employment**:\n   - Quirion, along with Quentin Perrier, explored the impact of shifting investments towards low-carbon sectors on employment [96e7d0a].\n\nThese works highlight Quirion's extensive research in the field of energy economics, environmental policies, and their impacts on employment and the economy.",
+        "citations": [
+          {
+            "id": "595a53d",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 344,
+              "end": 353
+            },
+            "payload": {
+              "id": "595a53dd-2ff6-596f-b151-9495d0fa2fe0",
+              "document_id": "bfb05d91-0d91-581d-8655-95d1b66b69df",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017156862745098037,
+              "text": "Document Title: Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi\n\nText: In:Ecological Economics 55.4, pp. 564583. issn: 09218009. doi: 10.1016 /\nj.ecolecon. 2004 .12.021.\nPearce, David (1991). The role of carbon taxes in adjusting to global warming.\nIn:Economic Journal 101.407, pp. 93848.\nPigou,ArthurCecil(1920). TheEconomicsofWelfare .London:MacmillanandCo.\nPollin, Robert et al. (2015). Global green growth : Clean Energy Industrial Invest-\nments and Expanding . Tech. rep. Vienna and Seoul: United Nations Industrial\nDevelopment Organization and Global Green Growth Institute.\nQuirion, Philippe (2013). Leffet net sur lemploi de la transition énergétique en\nFrance:Uneanalyseinput-outputduscénarionégaWatt.In: CIRED Working\nPapers2013.46.\nQuirion, Philippe and Meriem Hamdi-Cherif (2007). General equilibrium im-\npactofanenergy-savingpolicyinthepublicsector.In: EnvironmentalandRe-\nsourceEconomics 38.2,pp.245258.issn:0924-6460.doi: 10.1007 /s10640 -\n006 -9075 -2.\nScott, Michael J. et al. (2008). The impact of DOE building technology energy",
+              "metadata": {
+                "title": "Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi",
+                "hal_id": "tel-01663759",
+                "authors": [
+                  "Quentin Perrier"
+                ],
+                "version": "v0",
+                "citation": "Quentin Perrier. Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi. Économie et finance quantitative [q-fin]. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2017. Français. ⟨NNT : ⟩. ⟨tel-01663759⟩",
+                "source_url": "https://hal.science/tel-01663759",
+                "chunk_order": 629,
+                "description": "Dans cette thèse, je discute deux questions autour de la transition énergétique : comment définir une stratégie face aux nombreuses incertitudes et aux inerties des systèmes, et quels sont impacts sur l’emploi de cette transition ? Pour étudier le choix d’une stratégie, je m’intéresse au cas du secteur électrique français. Les réacteurs nucléaires arrivent au terme de leur durée de vie initiale, mais ils peuvent être rénovés moyennant un investissement estimé à 100 milliards d'euros pour l'ensemble du parc. Combien de centrales faut-il rénover ? En mobilisant un modèle d'optimisation et la méthode de \"Robust Decision Making\", je montre qu’au vu des estimations actuelles, les stratégies les plus intéressantes consistent à fermer 7 à 14 réacteurs et à les remplacer par des énergies renouvelables. Sur le volet de l’emploi, je m’intéresse tout d’abord à la notion de contenu en emploi. Je propose une méthodologie nouvelle permettant de décomposer ce contenu, afin de mettre en évidence, pour chaque branche économique, l’importance relative de ses constituants : les taux d’importations, les taxes et subventions, la part du travail dans la valeur ajoutée et le niveau de salaire. J'étudie ensuite l’impact d’une réallocation des investissements vers des secteurs bas-carbone à l'aide de modèles d'équilibre général, dont j'explicite les mécanismes économiques sous-jacents. Mes résultats indiquent qu'encourager les secteurs avec une forte part du travail dans la valeur ajoutée ou de faibles salaires permet de créer de l'emploi, mais ils nuancent les bénéfices à encourager des secteurs peu importateurs.",
+                "document_type": "THESE",
+                "publication_date": "2017-11-20",
+                "semantic_rank": 10,
+                "full_text_rank": 1,
+                "associated_query": "What did Philippe Quirion work on"
+              }
+            }
+          },
+          {
+            "id": "36964ce",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 355,
+              "end": 364
+            },
+            "payload": {
+              "id": "36964ce0-bcec-531b-b3ec-231cd3815f52",
+              "document_id": "bfb05d91-0d91-581d-8655-95d1b66b69df",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017094017094017092,
+              "text": "Document Title: Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi\n\nText: Quirion, Philippe (2013). Leffet net sur lemploi de la transition énergétique en\nFrance:Uneanalyseinput-outputduscénarionégaWatt.In: CIRED Working\nPapers2013.46.\nQuirion, Philippe and Meriem Hamdi-Cherif (2007). General equilibrium im-\npactofanenergy-savingpolicyinthepublicsector.In: EnvironmentalandRe-\nsourceEconomics 38.2,pp.245258.issn:0924-6460.doi: 10.1007 /s10640 -\n006 -9075 -2.\nScott, Michael J. et al. (2008). The impact of DOE building technology energy\nefficiencyprogramsonU.S.employment,income,andinvestment.In: Energy\nEconomics 30.5, pp. 22832301. issn: 01409883. doi: 10.1016 / j . eneco .\n2007 .09.001.\nSen, A. (1963). Neo-Classical and Neo-Keynesian Theories of Distribution. In:\nEconomic Record 39.85, pp. 5364. issn: 14754932. doi: 10.1111 / j .1475 -\n4932 .1963 .tb01459 .x.\nSiegfried, John et al. (2000). The Economics of Sports Facilities and Their Com-\nmunities. In: The Journal Of Economic Perspectives 14.3, pp. 95114.\nSirkis,A.etal.(2015).Movingthetrillions:adebateonpositivepricingofmitiga-",
+              "metadata": {
+                "title": "Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi",
+                "hal_id": "tel-01663759",
+                "authors": [
+                  "Quentin Perrier"
+                ],
+                "version": "v0",
+                "citation": "Quentin Perrier. Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi. Économie et finance quantitative [q-fin]. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2017. Français. ⟨NNT : ⟩. ⟨tel-01663759⟩",
+                "source_url": "https://hal.science/tel-01663759",
+                "chunk_order": 630,
+                "description": "Dans cette thèse, je discute deux questions autour de la transition énergétique : comment définir une stratégie face aux nombreuses incertitudes et aux inerties des systèmes, et quels sont impacts sur l’emploi de cette transition ? Pour étudier le choix d’une stratégie, je m’intéresse au cas du secteur électrique français. Les réacteurs nucléaires arrivent au terme de leur durée de vie initiale, mais ils peuvent être rénovés moyennant un investissement estimé à 100 milliards d'euros pour l'ensemble du parc. Combien de centrales faut-il rénover ? En mobilisant un modèle d'optimisation et la méthode de \"Robust Decision Making\", je montre qu’au vu des estimations actuelles, les stratégies les plus intéressantes consistent à fermer 7 à 14 réacteurs et à les remplacer par des énergies renouvelables. Sur le volet de l’emploi, je m’intéresse tout d’abord à la notion de contenu en emploi. Je propose une méthodologie nouvelle permettant de décomposer ce contenu, afin de mettre en évidence, pour chaque branche économique, l’importance relative de ses constituants : les taux d’importations, les taxes et subventions, la part du travail dans la valeur ajoutée et le niveau de salaire. J'étudie ensuite l’impact d’une réallocation des investissements vers des secteurs bas-carbone à l'aide de modèles d'équilibre général, dont j'explicite les mécanismes économiques sous-jacents. Mes résultats indiquent qu'encourager les secteurs avec une forte part du travail dans la valeur ajoutée ou de faibles salaires permet de créer de l'emploi, mais ils nuancent les bénéfices à encourager des secteurs peu importateurs.",
+                "document_type": "THESE",
+                "publication_date": "2017-11-20",
+                "semantic_rank": 10,
+                "full_text_rank": 2,
+                "associated_query": "What did Philippe Quirion work on"
+              }
+            }
+          },
+          {
+            "id": "9f8c67e",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 366,
+              "end": 375
+            },
+            "payload": {
+              "id": "9f8c67e3-2ef2-5a74-823f-b2d92f5554df",
+              "document_id": "1ea817c8-976a-523a-a786-cf977ae7b78d",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016975308641975308,
+              "text": "Document Title: L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt\n\nText: No 46-2013 \n \n  \n \n \n \n \n \n \nLeffet net sur l'emploi de la transition \nénergétique en France  : \nUne analyse input -output  du scénario négaWatt  \n \n \n \n \nPhilippe Quirion  \n  \n \n \n \n \n \nApril 2013  \n \nCIRED Working Papers Series",
+              "metadata": {
+                "title": "L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt",
+                "hal_id": "hal-00866447",
+                "authors": [
+                  "Philippe Quirion"
+                ],
+                "version": "v0",
+                "citation": "Philippe Quirion. L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt. 2013. ⟨hal-00866447⟩",
+                "source_url": "https://hal.science/hal-00866447",
+                "chunk_order": 1,
+                "description": "Nous étudions l'impact sur l'emploi en France de la mise en œuvre du scénario de transition énergétique construit par l'Association négaWatt (2011), qui prévoit un développement massif des économies d'énergie (par le biais de mesures de sobriété et d'efficacité énergétiques) et des énergies renouvelables entre 2012 et 2050. Par rapport à 2010, ce scénario aboutit à une division par deux des émissions de CO2 d'origine énergétique en France en 2030 et à une division par 16 en 2050, sans capture-stockage du CO2, sans mise en œuvre de nouvelle centrale nucléaire et en fermant les centrales existantes au bout de 40 ans d'exploitation au maximum. Nous calculons l'effet sur l'emploi de la mise en œuvre de ce scénario en comparaison avec un scénario tendanciel qui prolonge les évolutions récentes et prend en compte les politiques déjà décidées. La méthode retenue pour calculer l'effet sur l'emploi de chaque scénario consiste à calculer le coût des principales options techniques et organisationnelles retenues, à ventiler ces coûts entre les 118 branches de l'économie française et à multiplier ces coûts par le contenu en emploi de chaque branche. Ce dernier élément est estimé par une analyse input-output, ce qui permet de comptabiliser les emplois générés par la production de l'ensemble des consommations intermédiaires. L'un des deux scénarios étant plus coûteux que l'autre, il faut prendre en compte l'effet négatif sur l'emploi du financement de ce surcoût. Pour cela, on fait l'hypothèse que ce surcoût est supporté par les ménages et que ces derniers diminuent en conséquence leur consommation du même montant et de manière homothétique. Ainsi, on évite de biaiser les résultats en faveur du scénario le plus coûteux. La mise en œuvre du scénario négaWatt aboutit à un effet positif sur l'emploi, de l'ordre de +240 000 emplois équivalent temps-plein en 2020 et 630 000 en 2030. Nous étudions la sensibilité des résultats aux hypothèses sur les prix de l'énergie importée, l'évolution de la productivité du travail, la répartition du coût entre ménages et administrations publiques, et enfin l'arbitrage consommation-épargne. L'effet sur l'emploi reste largement positif dans tous les cas.",
+                "document_type": "UNDEFINED",
+                "publication_date": "2013-04-01",
+                "semantic_rank": 10,
+                "full_text_rank": 4,
+                "associated_query": "What did Philippe Quirion work on"
+              }
+            }
+          },
+          {
+            "id": "39d294a",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 559,
+              "end": 568
+            },
+            "payload": {
+              "id": "39d294a0-9955-5816-86a2-4bb7cf27227b",
+              "document_id": "09264d1f-963e-5db4-af42-4b0a46324546",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017033542976939202,
+              "text": "Document Title: Comparing and combining energy saving policies : Will proposed residential sector policies meet French official targets ?\n\nText: C.I.R.E.D.  \nCentre International de Recherch es sur l'Environnement et le Développement  \nUMR  8568  CNRS  / EHESS  / ENPC  / ENGREF  \n/ CIRAD  / METEO FRANCE  \n45 bis, avenue de la Belle Gabrielle  \nF-94736 Nogent sur Marne CEDEX  \nTel : (33) 1 43 94 73 73 / Fax : (33) 1 43 94 73 70  \nwww.centre -cired.fr  DOCUMENTS DE TRAVAIL / WORKING PAPERS  \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n  \n \n \n \n \nNo 34-2011 \n \n \n \n \n \n \n \n \n \nComparing and combining energy saving \npolicies  : will proposed residential sector \npolicies meet French official targets?  \n \n \n \n \nLouis -Gaëtan Giraudet \nCéline Guivarch  \nPhilippe Quirion  \n \n \n \n \nJuly 2011 \n \nCIRED Working Papers Series",
+              "metadata": {
+                "title": "Comparing and combining energy saving policies : Will proposed residential sector policies meet French official targets ?",
+                "hal_id": "hal-00866424",
+                "authors": [
+                  "Louis-Gaëtan Giraudet",
+                  "Céline Guivarch",
+                  "Philippe Quirion"
+                ],
+                "version": "v0",
+                "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion. Comparing and combining energy saving policies : Will proposed residential sector policies meet French official targets ?. 2011. ⟨hal-00866424⟩",
+                "source_url": "https://hal.science/hal-00866424",
+                "chunk_order": 2,
+                "description": "This paper assesses the impact of French policies for residential space-heating energy consumption, both enacted (tax credits for the purchase of energy efficient durables, soft loans for retrofitting actions, stringent building codes) and anticipated (carbon tax, retrofitting obligation). It uses a hybrid energy-economy model incorporating specific features of energy conservation, notably the rebound effect and some \"barriers\" to energy efficiency such as split incentives and imperfect information. Forward-looking simulations show that (i) stand-alone policies improve the energy efficiency of the building stock but, with the exception of carbon tax, generate a rebound effect ; (ii) interactions among instruments are roughly additive ; (iii) a combination of all policies fails to meet Government conservation targets.",
+                "document_type": "UNDEFINED",
+                "publication_date": "2011-07-01",
+                "semantic_rank": 10,
+                "full_text_rank": 3,
+                "associated_query": "What did Philippe Quirion work on"
+              }
+            }
+          },
+          {
+            "id": "595a53d",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 765,
+              "end": 774
+            },
+            "payload": null
+          },
+          {
+            "id": "36964ce",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 776,
+              "end": 785
+            },
+            "payload": null
+          },
+          {
+            "id": "4865d98",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 948,
+              "end": 957
+            },
+            "payload": {
+              "id": "4865d981-185d-5c78-bcf5-81c181cb2901",
+              "document_id": "af55cfc7-6894-5b92-a498-f3a50531cf57",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016919191919191917,
+              "text": "Document Title: The European Union Emissions Trading System : should we throw the flagship out with the bathwater ?\n\nText: No 48-2013 \n \n  \n \n \n \n \n \n \nThe European Union Emissions Trading \nSystem: should we throw the  flagship out \nwith the bathwater?  \n \n \n Frédéric Branger  \n Oskar Lecuyer  \n Philippe Quirion  \n  \n \n \n \n \n \nJuly 2013  \n \nCIRED Working Papers Series",
+              "metadata": {
+                "title": "The European Union Emissions Trading System : should we throw the flagship out with the bathwater ?",
+                "hal_id": "hal-00866408",
+                "authors": "['Frédéric Branger', 'Oskar Lecuyer', 'Philippe Quirion']",
+                "version": "v0",
+                "citation": "Frédéric Branger, Oskar Lecuyer, Philippe Quirion. The European Union Emissions Trading System : should we throw the flagship out with the bathwater ?. 2013. ⟨hal-00866408⟩",
+                "source_url": "https://hal.science/hal-00866408",
+                "chunk_order": 1,
+                "description": "The European Union Emissions Trading System (EU-ETS), presented as the ''flagship'' of European climate policy, is subject to many criticisms from different stakeholders. Criticisms include the insufficient carbon emissions reduction, the competitiveness losses and the induced carbon leakages, the unfair distributional effects, the frauds and the existence of several other overlapping climate policy instruments. We review these criticisms and find the EU-ETS brought small but real abatements. The competitiveness losses and carbon leakages do not seem to have occurred. The distributional effects have indeed been unfair and fraud has been important. Finally, the scheme does not justify abandoning other climate policies. Some of these problems could have been avoided and can still be corrected by rethinking flexibility mechanisms and by adding some control over the carbon price.",
+                "document_type": "UNDEFINED",
+                "publication_date": "2013-07-01",
+                "semantic_rank": 10,
+                "full_text_rank": 5,
+                "associated_query": "What did Philippe Quirion work on"
+              }
+            }
+          },
+          {
+            "id": "bfa1ed6",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1132,
+              "end": 1141
+            },
+            "payload": {
+              "id": "bfa1ed66-8a4c-5fba-bef9-bbe43f606f76",
+              "document_id": "403c2598-d487-5596-a194-4176af09239c",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016865079365079364,
+              "text": "Document Title: When should green technology support policies supplement the carbon price? The case of the electricity sector\n\nText: Stavins, R., Jaffe, A., Newell, R., 2004 . A Tale of Two Market Failures: Tech-\nnology and Environmental Policy. Discussion Papers dp- 04-38. Resources\nFor the Future.\nCDDAT ,2010 . Projet de loi Grenelle 2. Projet de loi portant engagement\nnational pour lenvironnement 2449 . Commission Du Développement\nDurable Et De Laménagement Du Territoire.\nCECILIA 2050,2013 . Choosing Efﬁcient Combinations of Policy Instruments\nfor Low-carbon development and Innovation to Achieve Europes 2050\nclimate targets. Oskar Lecuyer and Philippe Quirion. Project CECILIA 2050:\nWorking Package 1.2Assessing the climate and energy policy mix: Coun-\ntry report for France.\nCGDD ,2012 . Le crédit dimpôt développement durable : 1,4million de\nbénéﬁciaires en 2010 , très majoritairement propriétaires de maisons in-\ndividuelles. Service de léconomie, de lévaluation et de lintégration\ndu développement durable n 147. Commissariat Général Au Développe-\nment Durable,.\nCGDD ,2013 . Tableau De Bord Éolien-photovoltaïque, Premier Trimestre 2013 .",
+              "metadata": {
+                "title": "When should green technology support policies supplement the carbon price? The case of the electricity sector",
+                "hal_id": "tel-00914477",
+                "authors": "['Oskar Lecuyer']",
+                "version": "v0",
+                "citation": "Oskar Lecuyer. When should green technology support policies supplement the carbon price? The case of the electricity sector. Economics and Finance. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2013. English. ⟨NNT : ⟩. ⟨tel-00914477⟩",
+                "source_url": "https://hal.science/tel-00914477",
+                "chunk_order": 675,
+                "description": "This thesis contributes to the literature on optimal policy choice. It studies the use of policy combinations to mitigate greenhouse gases emissions from electricity production. One finding applies to cases where uncertainty is such that the risk of a nil carbon price cannot be excluded. A cap on emissions alone may then not trigger enough abatements, justifying the addition of e.g. a renewable subsidy. When considering a transition toward a carbon-free electricity sector, capital accumulation causes complex dynamic effects to happen. We find that decisions taken by comparing the levelized costs of abatement technologies, even including carbon costs, would favor intermediate technologies (e.g. gas plants) to the detriment of more-expensive but lower-carbon technologies (renewable power), leading to a suboptimal investment schedule. This thesis also studies the effects of marginal policy changes in a mix comprising the main French instruments. We find that surprisingly, adding a tariff for renewables financed by a tax on electricity consumption to a cap on emissions and a subsidy for energy efficiency will reduce the consumer electricity price when the non-renewable production is fixed and does not depend on the carbon price. The assessment of the French climate policies in the electricity sector shows that overlapping policies for mitigation may be justified by multiple carbon price failures, even if the ideal long-term policy mix depends on the carbon price trajectory.",
+                "document_type": "THESE",
+                "publication_date": "2013-11-29",
+                "semantic_rank": 10,
+                "full_text_rank": 6,
+                "associated_query": "What did Philippe Quirion work on"
+              }
+            }
+          },
+          {
+            "id": "418452c",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1143,
+              "end": 1152
+            },
+            "payload": {
+              "id": "418452c4-43a9-524b-ab8c-2c55ea80dcfb",
+              "document_id": "403c2598-d487-5596-a194-4176af09239c",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016812865497076022,
+              "text": "Document Title: When should green technology support policies supplement the carbon price? The case of the electricity sector\n\nText: /b.sc/i.sc/b.sc/l.sc/i.sc/o.sc/g.sc/r.sc/a.sc/p.sc/h.sc/i.sc/e.sc /g.sc/eacute.sc/n.sc/eacute.sc/r.sc/a.sc/l.sc/e.sc 161\nCDDAT ,2010 . Projet de loi Grenelle 2. Projet de loi portant engagement\nnational pour lenvironnement 2449 . Commission Du Développement\nDurable Et De Laménagement Du Territoire.\nCECILIA 2050,2013 . Choosing Efﬁcient Combinations of Policy Instruments\nfor Low-carbon development and Innovation to Achieve Europes 2050\nclimate targets. Oskar Lecuyer and Philippe Quirion. Project CECILIA 2050:\nWorking Package 1.2Assessing the climate and energy policy mix: Coun-\ntry report for France.\nCGDD ,2012 . Le crédit dimpôt développement durable : 1,4million de\nbénéﬁciaires en 2010 , très majoritairement propriétaires de maisons in-\ndividuelles. Service de léconomie, de lévaluation et de lintégration\ndu développement durable n 147. Commissariat Général Au Développe-\nment Durable,.\nCGDD ,2013 . Tableau De Bord Éolien-photovoltaïque, Premier Trimestre 2013 .",
+              "metadata": {
+                "title": "When should green technology support policies supplement the carbon price? The case of the electricity sector",
+                "hal_id": "tel-00914477",
+                "authors": "['Oskar Lecuyer']",
+                "version": "v0",
+                "citation": "Oskar Lecuyer. When should green technology support policies supplement the carbon price? The case of the electricity sector. Economics and Finance. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2013. English. ⟨NNT : ⟩. ⟨tel-00914477⟩",
+                "source_url": "https://hal.science/tel-00914477",
+                "chunk_order": 863,
+                "description": "This thesis contributes to the literature on optimal policy choice. It studies the use of policy combinations to mitigate greenhouse gases emissions from electricity production. One finding applies to cases where uncertainty is such that the risk of a nil carbon price cannot be excluded. A cap on emissions alone may then not trigger enough abatements, justifying the addition of e.g. a renewable subsidy. When considering a transition toward a carbon-free electricity sector, capital accumulation causes complex dynamic effects to happen. We find that decisions taken by comparing the levelized costs of abatement technologies, even including carbon costs, would favor intermediate technologies (e.g. gas plants) to the detriment of more-expensive but lower-carbon technologies (renewable power), leading to a suboptimal investment schedule. This thesis also studies the effects of marginal policy changes in a mix comprising the main French instruments. We find that surprisingly, adding a tariff for renewables financed by a tax on electricity consumption to a cap on emissions and a subsidy for energy efficiency will reduce the consumer electricity price when the non-renewable production is fixed and does not depend on the carbon price. The assessment of the French climate policies in the electricity sector shows that overlapping policies for mitigation may be justified by multiple carbon price failures, even if the ideal long-term policy mix depends on the carbon price trajectory.",
+                "document_type": "THESE",
+                "publication_date": "2013-11-29",
+                "semantic_rank": 10,
+                "full_text_rank": 7,
+                "associated_query": "What did Philippe Quirion work on"
+              }
+            }
+          },
+          {
+            "id": "6533cf1",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1354,
+              "end": 1363
+            },
+            "payload": {
+              "id": "6533cf17-18be-5180-afce-daba006bf579",
+              "document_id": "55b6ee6e-baf2-52bb-9bbc-8420ab5e49ac",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016762452107279693,
+              "text": "Document Title: Coût d'un système électrique optimal sans émissions de CO2 pour la France, avec et sans nucléaire Centre international de recherche sur l'environnement et le développement\n\nText: Philippe Quirion, Behrang Shirizadeh \n(CIRED)CIRED Working Paper\nN 2020-75 - Janvier 2020\nCoût dun système électrique optimal \nsans émissions de CO2 pour la France, \navec et sans nucléaire\nContact : quirion@centre-cired.fr \nJardin Tropical de Paris -- 45bis, avenue de la Belle Gabrielle 94736 Nogent-sur-Marne Cedex  Site web: www.centre-cired.fr    Twitter: @cired8568     Centre international de recherche sur lenvironnement et le développement\nUnité mixte de recherche CNRS - ENPC - Cirad - EHESS - AgroParisTech",
+              "metadata": {
+                "title": "Coût d'un système électrique optimal sans émissions de CO2 pour la France, avec et sans nucléaire Centre international de recherche sur l'environnement et le développement",
+                "hal_id": "hal-02434990",
+                "authors": "['Philippe Quirion', 'Behrang Shirizadeh']",
+                "version": "v0",
+                "citation": "Philippe Quirion, Behrang Shirizadeh. Coût d'un système électrique optimal sans émissions de CO2 pour la France, avec et sans nucléaire Centre international de recherche sur l'environnement et le développement. 2020. ⟨hal-02434990⟩",
+                "source_url": "https://hal.science/hal-02434990",
+                "chunk_order": 2,
+                "document_type": "UNDEFINED",
+                "publication_date": "2020-01-10",
+                "semantic_rank": 10,
+                "full_text_rank": 8,
+                "associated_query": "What did Philippe Quirion work on"
+              }
+            }
+          },
+          {
+            "id": "96e7d0a",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1539,
+              "end": 1548
+            },
+            "payload": {
+              "id": "96e7d0a6-bdbd-5025-bd78-e6a54a285b82",
+              "document_id": "bfb05d91-0d91-581d-8655-95d1b66b69df",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016713747645951033,
+              "text": "Document Title: Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi\n\nText: Listedesarticlestirésdelathèse\nChapter 2: Perrier, Quentin (2017). The French nuclear bet. Nota di Lavoro,\nFondazione Eni Enrico Mattei , 2017.018.\nChapter 3: Perrier, Quentin et Philippe Quirion (2017). La transition énergé-\ntiqueest-ellefavorableauxbranchesàfortcontenuenemploi? Uneanalyseinput-\noutpout pour la France. Revue dEconomie Politique 127(6).\nChapter 4: Perrier, Quentin et Philippe Quirion (2017). How shifting invest-\nmenttowardslow-carbonsectorsimpactsemployment: threedeterminantsunder\nscrutiny. CIRED Working Paper , 2017- 66.\nxiii",
+              "metadata": {
+                "title": "Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi",
+                "hal_id": "tel-01663759",
+                "authors": [
+                  "Quentin Perrier"
+                ],
+                "version": "v0",
+                "citation": "Quentin Perrier. Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi. Économie et finance quantitative [q-fin]. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2017. Français. ⟨NNT : ⟩. ⟨tel-01663759⟩",
+                "source_url": "https://hal.science/tel-01663759",
+                "chunk_order": 27,
+                "description": "Dans cette thèse, je discute deux questions autour de la transition énergétique : comment définir une stratégie face aux nombreuses incertitudes et aux inerties des systèmes, et quels sont impacts sur l’emploi de cette transition ? Pour étudier le choix d’une stratégie, je m’intéresse au cas du secteur électrique français. Les réacteurs nucléaires arrivent au terme de leur durée de vie initiale, mais ils peuvent être rénovés moyennant un investissement estimé à 100 milliards d'euros pour l'ensemble du parc. Combien de centrales faut-il rénover ? En mobilisant un modèle d'optimisation et la méthode de \"Robust Decision Making\", je montre qu’au vu des estimations actuelles, les stratégies les plus intéressantes consistent à fermer 7 à 14 réacteurs et à les remplacer par des énergies renouvelables. Sur le volet de l’emploi, je m’intéresse tout d’abord à la notion de contenu en emploi. Je propose une méthodologie nouvelle permettant de décomposer ce contenu, afin de mettre en évidence, pour chaque branche économique, l’importance relative de ses constituants : les taux d’importations, les taxes et subventions, la part du travail dans la valeur ajoutée et le niveau de salaire. J'étudie ensuite l’impact d’une réallocation des investissements vers des secteurs bas-carbone à l'aide de modèles d'équilibre général, dont j'explicite les mécanismes économiques sous-jacents. Mes résultats indiquent qu'encourager les secteurs avec une forte part du travail dans la valeur ajoutée ou de faibles salaires permet de créer de l'emploi, mais ils nuancent les bénéfices à encourager des secteurs peu importateurs.",
+                "document_type": "THESE",
+                "publication_date": "2017-11-20",
+                "semantic_rank": 10,
+                "full_text_rank": 9,
+                "associated_query": "What did Philippe Quirion work on"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "595a53dd-2ff6-596f-b151-9495d0fa2fe0",
+            "document_id": "bfb05d91-0d91-581d-8655-95d1b66b69df",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017156862745098037,
+            "text": "Document Title: Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi\n\nText: In:Ecological Economics 55.4, pp. 564583. issn: 09218009. doi: 10.1016 /\nj.ecolecon. 2004 .12.021.\nPearce, David (1991). The role of carbon taxes in adjusting to global warming.\nIn:Economic Journal 101.407, pp. 93848.\nPigou,ArthurCecil(1920). TheEconomicsofWelfare .London:MacmillanandCo.\nPollin, Robert et al. (2015). Global green growth : Clean Energy Industrial Invest-\nments and Expanding . Tech. rep. Vienna and Seoul: United Nations Industrial\nDevelopment Organization and Global Green Growth Institute.\nQuirion, Philippe (2013). Leffet net sur lemploi de la transition énergétique en\nFrance:Uneanalyseinput-outputduscénarionégaWatt.In: CIRED Working\nPapers2013.46.\nQuirion, Philippe and Meriem Hamdi-Cherif (2007). General equilibrium im-\npactofanenergy-savingpolicyinthepublicsector.In: EnvironmentalandRe-\nsourceEconomics 38.2,pp.245258.issn:0924-6460.doi: 10.1007 /s10640 -\n006 -9075 -2.\nScott, Michael J. et al. (2008). The impact of DOE building technology energy",
+            "metadata": {
+              "title": "Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi",
+              "hal_id": "tel-01663759",
+              "authors": [
+                "Quentin Perrier"
+              ],
+              "version": "v0",
+              "citation": "Quentin Perrier. Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi. Économie et finance quantitative [q-fin]. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2017. Français. ⟨NNT : ⟩. ⟨tel-01663759⟩",
+              "source_url": "https://hal.science/tel-01663759",
+              "chunk_order": 629,
+              "description": "Dans cette thèse, je discute deux questions autour de la transition énergétique : comment définir une stratégie face aux nombreuses incertitudes et aux inerties des systèmes, et quels sont impacts sur l’emploi de cette transition ? Pour étudier le choix d’une stratégie, je m’intéresse au cas du secteur électrique français. Les réacteurs nucléaires arrivent au terme de leur durée de vie initiale, mais ils peuvent être rénovés moyennant un investissement estimé à 100 milliards d'euros pour l'ensemble du parc. Combien de centrales faut-il rénover ? En mobilisant un modèle d'optimisation et la méthode de \"Robust Decision Making\", je montre qu’au vu des estimations actuelles, les stratégies les plus intéressantes consistent à fermer 7 à 14 réacteurs et à les remplacer par des énergies renouvelables. Sur le volet de l’emploi, je m’intéresse tout d’abord à la notion de contenu en emploi. Je propose une méthodologie nouvelle permettant de décomposer ce contenu, afin de mettre en évidence, pour chaque branche économique, l’importance relative de ses constituants : les taux d’importations, les taxes et subventions, la part du travail dans la valeur ajoutée et le niveau de salaire. J'étudie ensuite l’impact d’une réallocation des investissements vers des secteurs bas-carbone à l'aide de modèles d'équilibre général, dont j'explicite les mécanismes économiques sous-jacents. Mes résultats indiquent qu'encourager les secteurs avec une forte part du travail dans la valeur ajoutée ou de faibles salaires permet de créer de l'emploi, mais ils nuancent les bénéfices à encourager des secteurs peu importateurs.",
+              "document_type": "THESE",
+              "publication_date": "2017-11-20",
+              "semantic_rank": 10,
+              "full_text_rank": 1,
+              "associated_query": "What did Philippe Quirion work on"
+            }
+          },
+          {
+            "id": "36964ce0-bcec-531b-b3ec-231cd3815f52",
+            "document_id": "bfb05d91-0d91-581d-8655-95d1b66b69df",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017094017094017092,
+            "text": "Document Title: Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi\n\nText: Quirion, Philippe (2013). Leffet net sur lemploi de la transition énergétique en\nFrance:Uneanalyseinput-outputduscénarionégaWatt.In: CIRED Working\nPapers2013.46.\nQuirion, Philippe and Meriem Hamdi-Cherif (2007). General equilibrium im-\npactofanenergy-savingpolicyinthepublicsector.In: EnvironmentalandRe-\nsourceEconomics 38.2,pp.245258.issn:0924-6460.doi: 10.1007 /s10640 -\n006 -9075 -2.\nScott, Michael J. et al. (2008). The impact of DOE building technology energy\nefficiencyprogramsonU.S.employment,income,andinvestment.In: Energy\nEconomics 30.5, pp. 22832301. issn: 01409883. doi: 10.1016 / j . eneco .\n2007 .09.001.\nSen, A. (1963). Neo-Classical and Neo-Keynesian Theories of Distribution. In:\nEconomic Record 39.85, pp. 5364. issn: 14754932. doi: 10.1111 / j .1475 -\n4932 .1963 .tb01459 .x.\nSiegfried, John et al. (2000). The Economics of Sports Facilities and Their Com-\nmunities. In: The Journal Of Economic Perspectives 14.3, pp. 95114.\nSirkis,A.etal.(2015).Movingthetrillions:adebateonpositivepricingofmitiga-",
+            "metadata": {
+              "title": "Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi",
+              "hal_id": "tel-01663759",
+              "authors": [
+                "Quentin Perrier"
+              ],
+              "version": "v0",
+              "citation": "Quentin Perrier. Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi. Économie et finance quantitative [q-fin]. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2017. Français. ⟨NNT : ⟩. ⟨tel-01663759⟩",
+              "source_url": "https://hal.science/tel-01663759",
+              "chunk_order": 630,
+              "description": "Dans cette thèse, je discute deux questions autour de la transition énergétique : comment définir une stratégie face aux nombreuses incertitudes et aux inerties des systèmes, et quels sont impacts sur l’emploi de cette transition ? Pour étudier le choix d’une stratégie, je m’intéresse au cas du secteur électrique français. Les réacteurs nucléaires arrivent au terme de leur durée de vie initiale, mais ils peuvent être rénovés moyennant un investissement estimé à 100 milliards d'euros pour l'ensemble du parc. Combien de centrales faut-il rénover ? En mobilisant un modèle d'optimisation et la méthode de \"Robust Decision Making\", je montre qu’au vu des estimations actuelles, les stratégies les plus intéressantes consistent à fermer 7 à 14 réacteurs et à les remplacer par des énergies renouvelables. Sur le volet de l’emploi, je m’intéresse tout d’abord à la notion de contenu en emploi. Je propose une méthodologie nouvelle permettant de décomposer ce contenu, afin de mettre en évidence, pour chaque branche économique, l’importance relative de ses constituants : les taux d’importations, les taxes et subventions, la part du travail dans la valeur ajoutée et le niveau de salaire. J'étudie ensuite l’impact d’une réallocation des investissements vers des secteurs bas-carbone à l'aide de modèles d'équilibre général, dont j'explicite les mécanismes économiques sous-jacents. Mes résultats indiquent qu'encourager les secteurs avec une forte part du travail dans la valeur ajoutée ou de faibles salaires permet de créer de l'emploi, mais ils nuancent les bénéfices à encourager des secteurs peu importateurs.",
+              "document_type": "THESE",
+              "publication_date": "2017-11-20",
+              "semantic_rank": 10,
+              "full_text_rank": 2,
+              "associated_query": "What did Philippe Quirion work on"
+            }
+          },
+          {
+            "id": "39d294a0-9955-5816-86a2-4bb7cf27227b",
+            "document_id": "09264d1f-963e-5db4-af42-4b0a46324546",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017033542976939202,
+            "text": "Document Title: Comparing and combining energy saving policies : Will proposed residential sector policies meet French official targets ?\n\nText: C.I.R.E.D.  \nCentre International de Recherch es sur l'Environnement et le Développement  \nUMR  8568  CNRS  / EHESS  / ENPC  / ENGREF  \n/ CIRAD  / METEO FRANCE  \n45 bis, avenue de la Belle Gabrielle  \nF-94736 Nogent sur Marne CEDEX  \nTel : (33) 1 43 94 73 73 / Fax : (33) 1 43 94 73 70  \nwww.centre -cired.fr  DOCUMENTS DE TRAVAIL / WORKING PAPERS  \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n  \n \n \n \n \nNo 34-2011 \n \n \n \n \n \n \n \n \n \nComparing and combining energy saving \npolicies  : will proposed residential sector \npolicies meet French official targets?  \n \n \n \n \nLouis -Gaëtan Giraudet \nCéline Guivarch  \nPhilippe Quirion  \n \n \n \n \nJuly 2011 \n \nCIRED Working Papers Series",
+            "metadata": {
+              "title": "Comparing and combining energy saving policies : Will proposed residential sector policies meet French official targets ?",
+              "hal_id": "hal-00866424",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Céline Guivarch",
+                "Philippe Quirion"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion. Comparing and combining energy saving policies : Will proposed residential sector policies meet French official targets ?. 2011. ⟨hal-00866424⟩",
+              "source_url": "https://hal.science/hal-00866424",
+              "chunk_order": 2,
+              "description": "This paper assesses the impact of French policies for residential space-heating energy consumption, both enacted (tax credits for the purchase of energy efficient durables, soft loans for retrofitting actions, stringent building codes) and anticipated (carbon tax, retrofitting obligation). It uses a hybrid energy-economy model incorporating specific features of energy conservation, notably the rebound effect and some \"barriers\" to energy efficiency such as split incentives and imperfect information. Forward-looking simulations show that (i) stand-alone policies improve the energy efficiency of the building stock but, with the exception of carbon tax, generate a rebound effect ; (ii) interactions among instruments are roughly additive ; (iii) a combination of all policies fails to meet Government conservation targets.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2011-07-01",
+              "semantic_rank": 10,
+              "full_text_rank": 3,
+              "associated_query": "What did Philippe Quirion work on"
+            }
+          },
+          {
+            "id": "0e4c605b-ad48-5003-b602-3fd40411b35f",
+            "document_id": "fe258f2f-944a-5d49-aaec-9d2bfe94f00a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Dialogues autour de la création mathématique\n\nText: fidèlement. L'œuvre de Choquet est considérable. Il est surtout connu pour deux ensembles de travaux, l'un concernant les frontières, les simplexes, les cônes faiblement complets et la représentation des mesures comme barycentres de mesures portées par les points extrémaux, splendide théorème avec lequel on peut obtenir immédiatement plusieurs théorèmes fondamentaux d'analyse fonctionnelle, l'autre relatif à la théorie des capacités, notion d'électrostatique utilisée par Norbert Wiener pour l'étude des irrégularités en théorie du potentiel, qu'il a généralisée en une véritable théorie de la mesure non linéaire et son théorème de capacitabilité des ensembles analytiques a trouvé une application directe en probabilités pour démontrer la mesurabilité des temps d'entrée. Mais au delà de ces deux grandes investigations, ses très nombreux travaux montrent une ouverture et une disponibilité d'esprit impressionnante pour transformer des questions apparemment anecdotiques en problèmes plus généraux et parvenir à les",
+            "metadata": {
+              "title": "Dialogues autour de la création mathématique",
+              "hal_id": "halshs-00346564",
+              "authors": [
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Nicolas Bouleau. Dialogues autour de la création mathématique. Nicolas Bouleau. Association Laplace-Gauss, pp.93, 1997. ⟨halshs-00346564⟩",
+              "source_url": "https://hal.science/halshs-00346564",
+              "chunk_order": 33,
+              "description": "Réflexions des mathématiciens Laurent Schwartz, Gustave Choquet, Paul Malliavin, Paul-André Meyer, David Nualart, Nicola El Karoui, Richard Gundy, Masatoshi Fukushima, Denis Feyel, Gabriel Mokobodzki, sur le thème de la création mathématique",
+              "document_type": "OUV",
+              "publication_date": "1997-01-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "What did Philippe Quirion work on"
+            }
+          },
+          {
+            "id": "9f8c67e3-2ef2-5a74-823f-b2d92f5554df",
+            "document_id": "1ea817c8-976a-523a-a786-cf977ae7b78d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016975308641975308,
+            "text": "Document Title: L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt\n\nText: No 46-2013 \n \n  \n \n \n \n \n \n \nLeffet net sur l'emploi de la transition \nénergétique en France  : \nUne analyse input -output  du scénario négaWatt  \n \n \n \n \nPhilippe Quirion  \n  \n \n \n \n \n \nApril 2013  \n \nCIRED Working Papers Series",
+            "metadata": {
+              "title": "L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt",
+              "hal_id": "hal-00866447",
+              "authors": [
+                "Philippe Quirion"
+              ],
+              "version": "v0",
+              "citation": "Philippe Quirion. L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt. 2013. ⟨hal-00866447⟩",
+              "source_url": "https://hal.science/hal-00866447",
+              "chunk_order": 1,
+              "description": "Nous étudions l'impact sur l'emploi en France de la mise en œuvre du scénario de transition énergétique construit par l'Association négaWatt (2011), qui prévoit un développement massif des économies d'énergie (par le biais de mesures de sobriété et d'efficacité énergétiques) et des énergies renouvelables entre 2012 et 2050. Par rapport à 2010, ce scénario aboutit à une division par deux des émissions de CO2 d'origine énergétique en France en 2030 et à une division par 16 en 2050, sans capture-stockage du CO2, sans mise en œuvre de nouvelle centrale nucléaire et en fermant les centrales existantes au bout de 40 ans d'exploitation au maximum. Nous calculons l'effet sur l'emploi de la mise en œuvre de ce scénario en comparaison avec un scénario tendanciel qui prolonge les évolutions récentes et prend en compte les politiques déjà décidées. La méthode retenue pour calculer l'effet sur l'emploi de chaque scénario consiste à calculer le coût des principales options techniques et organisationnelles retenues, à ventiler ces coûts entre les 118 branches de l'économie française et à multiplier ces coûts par le contenu en emploi de chaque branche. Ce dernier élément est estimé par une analyse input-output, ce qui permet de comptabiliser les emplois générés par la production de l'ensemble des consommations intermédiaires. L'un des deux scénarios étant plus coûteux que l'autre, il faut prendre en compte l'effet négatif sur l'emploi du financement de ce surcoût. Pour cela, on fait l'hypothèse que ce surcoût est supporté par les ménages et que ces derniers diminuent en conséquence leur consommation du même montant et de manière homothétique. Ainsi, on évite de biaiser les résultats en faveur du scénario le plus coûteux. La mise en œuvre du scénario négaWatt aboutit à un effet positif sur l'emploi, de l'ordre de +240 000 emplois équivalent temps-plein en 2020 et 630 000 en 2030. Nous étudions la sensibilité des résultats aux hypothèses sur les prix de l'énergie importée, l'évolution de la productivité du travail, la répartition du coût entre ménages et administrations publiques, et enfin l'arbitrage consommation-épargne. L'effet sur l'emploi reste largement positif dans tous les cas.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-04-01",
+              "semantic_rank": 10,
+              "full_text_rank": 4,
+              "associated_query": "What did Philippe Quirion work on"
+            }
+          },
+          {
+            "id": "4865d981-185d-5c78-bcf5-81c181cb2901",
+            "document_id": "af55cfc7-6894-5b92-a498-f3a50531cf57",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016919191919191917,
+            "text": "Document Title: The European Union Emissions Trading System : should we throw the flagship out with the bathwater ?\n\nText: No 48-2013 \n \n  \n \n \n \n \n \n \nThe European Union Emissions Trading \nSystem: should we throw the  flagship out \nwith the bathwater?  \n \n \n Frédéric Branger  \n Oskar Lecuyer  \n Philippe Quirion  \n  \n \n \n \n \n \nJuly 2013  \n \nCIRED Working Papers Series",
+            "metadata": {
+              "title": "The European Union Emissions Trading System : should we throw the flagship out with the bathwater ?",
+              "hal_id": "hal-00866408",
+              "authors": "['Frédéric Branger', 'Oskar Lecuyer', 'Philippe Quirion']",
+              "version": "v0",
+              "citation": "Frédéric Branger, Oskar Lecuyer, Philippe Quirion. The European Union Emissions Trading System : should we throw the flagship out with the bathwater ?. 2013. ⟨hal-00866408⟩",
+              "source_url": "https://hal.science/hal-00866408",
+              "chunk_order": 1,
+              "description": "The European Union Emissions Trading System (EU-ETS), presented as the ''flagship'' of European climate policy, is subject to many criticisms from different stakeholders. Criticisms include the insufficient carbon emissions reduction, the competitiveness losses and the induced carbon leakages, the unfair distributional effects, the frauds and the existence of several other overlapping climate policy instruments. We review these criticisms and find the EU-ETS brought small but real abatements. The competitiveness losses and carbon leakages do not seem to have occurred. The distributional effects have indeed been unfair and fraud has been important. Finally, the scheme does not justify abandoning other climate policies. Some of these problems could have been avoided and can still be corrected by rethinking flexibility mechanisms and by adding some control over the carbon price.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-07-01",
+              "semantic_rank": 10,
+              "full_text_rank": 5,
+              "associated_query": "What did Philippe Quirion work on"
+            }
+          },
+          {
+            "id": "bfa1ed66-8a4c-5fba-bef9-bbe43f606f76",
+            "document_id": "403c2598-d487-5596-a194-4176af09239c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016865079365079364,
+            "text": "Document Title: When should green technology support policies supplement the carbon price? The case of the electricity sector\n\nText: Stavins, R., Jaffe, A., Newell, R., 2004 . A Tale of Two Market Failures: Tech-\nnology and Environmental Policy. Discussion Papers dp- 04-38. Resources\nFor the Future.\nCDDAT ,2010 . Projet de loi Grenelle 2. Projet de loi portant engagement\nnational pour lenvironnement 2449 . Commission Du Développement\nDurable Et De Laménagement Du Territoire.\nCECILIA 2050,2013 . Choosing Efﬁcient Combinations of Policy Instruments\nfor Low-carbon development and Innovation to Achieve Europes 2050\nclimate targets. Oskar Lecuyer and Philippe Quirion. Project CECILIA 2050:\nWorking Package 1.2Assessing the climate and energy policy mix: Coun-\ntry report for France.\nCGDD ,2012 . Le crédit dimpôt développement durable : 1,4million de\nbénéﬁciaires en 2010 , très majoritairement propriétaires de maisons in-\ndividuelles. Service de léconomie, de lévaluation et de lintégration\ndu développement durable n 147. Commissariat Général Au Développe-\nment Durable,.\nCGDD ,2013 . Tableau De Bord Éolien-photovoltaïque, Premier Trimestre 2013 .",
+            "metadata": {
+              "title": "When should green technology support policies supplement the carbon price? The case of the electricity sector",
+              "hal_id": "tel-00914477",
+              "authors": "['Oskar Lecuyer']",
+              "version": "v0",
+              "citation": "Oskar Lecuyer. When should green technology support policies supplement the carbon price? The case of the electricity sector. Economics and Finance. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2013. English. ⟨NNT : ⟩. ⟨tel-00914477⟩",
+              "source_url": "https://hal.science/tel-00914477",
+              "chunk_order": 675,
+              "description": "This thesis contributes to the literature on optimal policy choice. It studies the use of policy combinations to mitigate greenhouse gases emissions from electricity production. One finding applies to cases where uncertainty is such that the risk of a nil carbon price cannot be excluded. A cap on emissions alone may then not trigger enough abatements, justifying the addition of e.g. a renewable subsidy. When considering a transition toward a carbon-free electricity sector, capital accumulation causes complex dynamic effects to happen. We find that decisions taken by comparing the levelized costs of abatement technologies, even including carbon costs, would favor intermediate technologies (e.g. gas plants) to the detriment of more-expensive but lower-carbon technologies (renewable power), leading to a suboptimal investment schedule. This thesis also studies the effects of marginal policy changes in a mix comprising the main French instruments. We find that surprisingly, adding a tariff for renewables financed by a tax on electricity consumption to a cap on emissions and a subsidy for energy efficiency will reduce the consumer electricity price when the non-renewable production is fixed and does not depend on the carbon price. The assessment of the French climate policies in the electricity sector shows that overlapping policies for mitigation may be justified by multiple carbon price failures, even if the ideal long-term policy mix depends on the carbon price trajectory.",
+              "document_type": "THESE",
+              "publication_date": "2013-11-29",
+              "semantic_rank": 10,
+              "full_text_rank": 6,
+              "associated_query": "What did Philippe Quirion work on"
+            }
+          },
+          {
+            "id": "418452c4-43a9-524b-ab8c-2c55ea80dcfb",
+            "document_id": "403c2598-d487-5596-a194-4176af09239c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016812865497076022,
+            "text": "Document Title: When should green technology support policies supplement the carbon price? The case of the electricity sector\n\nText: /b.sc/i.sc/b.sc/l.sc/i.sc/o.sc/g.sc/r.sc/a.sc/p.sc/h.sc/i.sc/e.sc /g.sc/eacute.sc/n.sc/eacute.sc/r.sc/a.sc/l.sc/e.sc 161\nCDDAT ,2010 . Projet de loi Grenelle 2. Projet de loi portant engagement\nnational pour lenvironnement 2449 . Commission Du Développement\nDurable Et De Laménagement Du Territoire.\nCECILIA 2050,2013 . Choosing Efﬁcient Combinations of Policy Instruments\nfor Low-carbon development and Innovation to Achieve Europes 2050\nclimate targets. Oskar Lecuyer and Philippe Quirion. Project CECILIA 2050:\nWorking Package 1.2Assessing the climate and energy policy mix: Coun-\ntry report for France.\nCGDD ,2012 . Le crédit dimpôt développement durable : 1,4million de\nbénéﬁciaires en 2010 , très majoritairement propriétaires de maisons in-\ndividuelles. Service de léconomie, de lévaluation et de lintégration\ndu développement durable n 147. Commissariat Général Au Développe-\nment Durable,.\nCGDD ,2013 . Tableau De Bord Éolien-photovoltaïque, Premier Trimestre 2013 .",
+            "metadata": {
+              "title": "When should green technology support policies supplement the carbon price? The case of the electricity sector",
+              "hal_id": "tel-00914477",
+              "authors": "['Oskar Lecuyer']",
+              "version": "v0",
+              "citation": "Oskar Lecuyer. When should green technology support policies supplement the carbon price? The case of the electricity sector. Economics and Finance. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2013. English. ⟨NNT : ⟩. ⟨tel-00914477⟩",
+              "source_url": "https://hal.science/tel-00914477",
+              "chunk_order": 863,
+              "description": "This thesis contributes to the literature on optimal policy choice. It studies the use of policy combinations to mitigate greenhouse gases emissions from electricity production. One finding applies to cases where uncertainty is such that the risk of a nil carbon price cannot be excluded. A cap on emissions alone may then not trigger enough abatements, justifying the addition of e.g. a renewable subsidy. When considering a transition toward a carbon-free electricity sector, capital accumulation causes complex dynamic effects to happen. We find that decisions taken by comparing the levelized costs of abatement technologies, even including carbon costs, would favor intermediate technologies (e.g. gas plants) to the detriment of more-expensive but lower-carbon technologies (renewable power), leading to a suboptimal investment schedule. This thesis also studies the effects of marginal policy changes in a mix comprising the main French instruments. We find that surprisingly, adding a tariff for renewables financed by a tax on electricity consumption to a cap on emissions and a subsidy for energy efficiency will reduce the consumer electricity price when the non-renewable production is fixed and does not depend on the carbon price. The assessment of the French climate policies in the electricity sector shows that overlapping policies for mitigation may be justified by multiple carbon price failures, even if the ideal long-term policy mix depends on the carbon price trajectory.",
+              "document_type": "THESE",
+              "publication_date": "2013-11-29",
+              "semantic_rank": 10,
+              "full_text_rank": 7,
+              "associated_query": "What did Philippe Quirion work on"
+            }
+          },
+          {
+            "id": "6533cf17-18be-5180-afce-daba006bf579",
+            "document_id": "55b6ee6e-baf2-52bb-9bbc-8420ab5e49ac",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016762452107279693,
+            "text": "Document Title: Coût d'un système électrique optimal sans émissions de CO2 pour la France, avec et sans nucléaire Centre international de recherche sur l'environnement et le développement\n\nText: Philippe Quirion, Behrang Shirizadeh \n(CIRED)CIRED Working Paper\nN 2020-75 - Janvier 2020\nCoût dun système électrique optimal \nsans émissions de CO2 pour la France, \navec et sans nucléaire\nContact : quirion@centre-cired.fr \nJardin Tropical de Paris -- 45bis, avenue de la Belle Gabrielle 94736 Nogent-sur-Marne Cedex  Site web: www.centre-cired.fr    Twitter: @cired8568     Centre international de recherche sur lenvironnement et le développement\nUnité mixte de recherche CNRS - ENPC - Cirad - EHESS - AgroParisTech",
+            "metadata": {
+              "title": "Coût d'un système électrique optimal sans émissions de CO2 pour la France, avec et sans nucléaire Centre international de recherche sur l'environnement et le développement",
+              "hal_id": "hal-02434990",
+              "authors": "['Philippe Quirion', 'Behrang Shirizadeh']",
+              "version": "v0",
+              "citation": "Philippe Quirion, Behrang Shirizadeh. Coût d'un système électrique optimal sans émissions de CO2 pour la France, avec et sans nucléaire Centre international de recherche sur l'environnement et le développement. 2020. ⟨hal-02434990⟩",
+              "source_url": "https://hal.science/hal-02434990",
+              "chunk_order": 2,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-01-10",
+              "semantic_rank": 10,
+              "full_text_rank": 8,
+              "associated_query": "What did Philippe Quirion work on"
+            }
+          },
+          {
+            "id": "96e7d0a6-bdbd-5025-bd78-e6a54a285b82",
+            "document_id": "bfb05d91-0d91-581d-8655-95d1b66b69df",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016713747645951033,
+            "text": "Document Title: Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi\n\nText: Listedesarticlestirésdelathèse\nChapter 2: Perrier, Quentin (2017). The French nuclear bet. Nota di Lavoro,\nFondazione Eni Enrico Mattei , 2017.018.\nChapter 3: Perrier, Quentin et Philippe Quirion (2017). La transition énergé-\ntiqueest-ellefavorableauxbranchesàfortcontenuenemploi? Uneanalyseinput-\noutpout pour la France. Revue dEconomie Politique 127(6).\nChapter 4: Perrier, Quentin et Philippe Quirion (2017). How shifting invest-\nmenttowardslow-carbonsectorsimpactsemployment: threedeterminantsunder\nscrutiny. CIRED Working Paper , 2017- 66.\nxiii",
+            "metadata": {
+              "title": "Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi",
+              "hal_id": "tel-01663759",
+              "authors": [
+                "Quentin Perrier"
+              ],
+              "version": "v0",
+              "citation": "Quentin Perrier. Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi. Économie et finance quantitative [q-fin]. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2017. Français. ⟨NNT : ⟩. ⟨tel-01663759⟩",
+              "source_url": "https://hal.science/tel-01663759",
+              "chunk_order": 27,
+              "description": "Dans cette thèse, je discute deux questions autour de la transition énergétique : comment définir une stratégie face aux nombreuses incertitudes et aux inerties des systèmes, et quels sont impacts sur l’emploi de cette transition ? Pour étudier le choix d’une stratégie, je m’intéresse au cas du secteur électrique français. Les réacteurs nucléaires arrivent au terme de leur durée de vie initiale, mais ils peuvent être rénovés moyennant un investissement estimé à 100 milliards d'euros pour l'ensemble du parc. Combien de centrales faut-il rénover ? En mobilisant un modèle d'optimisation et la méthode de \"Robust Decision Making\", je montre qu’au vu des estimations actuelles, les stratégies les plus intéressantes consistent à fermer 7 à 14 réacteurs et à les remplacer par des énergies renouvelables. Sur le volet de l’emploi, je m’intéresse tout d’abord à la notion de contenu en emploi. Je propose une méthodologie nouvelle permettant de décomposer ce contenu, afin de mettre en évidence, pour chaque branche économique, l’importance relative de ses constituants : les taux d’importations, les taxes et subventions, la part du travail dans la valeur ajoutée et le niveau de salaire. J'étudie ensuite l’impact d’une réallocation des investissements vers des secteurs bas-carbone à l'aide de modèles d'équilibre général, dont j'explicite les mécanismes économiques sous-jacents. Mes résultats indiquent qu'encourager les secteurs avec une forte part du travail dans la valeur ajoutée ou de faibles salaires permet de créer de l'emploi, mais ils nuancent les bénéfices à encourager des secteurs peu importateurs.",
+              "document_type": "THESE",
+              "publication_date": "2017-11-20",
+              "semantic_rank": 10,
+              "full_text_rank": 9,
+              "associated_query": "What did Philippe Quirion work on"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1708,
+            "total_tokens": 1708
+          }
+        }
+      },
+      "duration": 2695
+    },
+    "retrievalTime": 1542,
+    "generationTime": 2695,
+    "timestamp": "2025-07-12T12:53:35.016Z"
+  },
+  "server_context": {
+    "client_ip": "80.239.186.179",
+    "forwarded_for": "80.239.186.179",
+    "received_at": "2025-07-12T12:53:35.526937+00:00",
+    "server_version": "1.0.0"
+  }
+}

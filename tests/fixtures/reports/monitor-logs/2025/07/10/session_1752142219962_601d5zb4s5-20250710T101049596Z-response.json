@@ -1,0 +1,608 @@
+{
+  "sessionId": "session_1752142219962_601d5zb4s5d3u476c",
+  "timestamp": "20250710T101049596Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752142245476_knz470e",
+    "response": {
+      "results": {
+        "generated_answer": "Dr. Minh Ha-Duong's research fields and expertise include:\n\n1. **Energy Economics**: He specializes in energy economics, which involves the study of production and consumption of energy and the interaction of these activities with the economy [e44141d].\n\n2. **Integrated Assessment Modeling**: His work involves integrated assessment modeling, which combines various disciplinary perspectives to evaluate complex systems, such as climate change and sustainable development [a4c13df].\n\n3. **Sustainable Development**: He is an expert in sustainable development, focusing on clean energy and sustainable development strategies, particularly in the context of developing countries like Vietnam [f1fec56], [12f193d].\n\n4. **Climate Change and CO2 Capture & Storage (CCS)**: His research includes studies on climate change, CO2 capture and storage, and the economic efficiency of storing CO2 in leaky reservoirs [99ca6d0], [568cb38].\n\n5. **Global Change and Economic Theory**: His interests extend to the study of irreversibility and imprecise probabilities in economic theory and global change [a4c13df].\n\n6. **Stratospheric Ozone Protection**: He has contributed to research on proactive stratospheric ozone protection scenarios [568cb38].\n\n7. **Risk Aversion and Intergenerational Equity**: His work also covers topics such as risk aversion and intergenerational equity in the context of climate change [568cb38].\n\n8. **Clean Energy and Sustainable Development**: He is involved in research and academic collaboration opportunities in clean energy and sustainable development, aiming to drive energy ambitions and meet development needs [f1fec56].\n\nThese fields and expertise are supported by his extensive experience as a senior researcher at the Centre National de la Recherche Scientifique (CNRS) in Paris, France, and his role as a Lead Author for the Intergovernmental Panel on Climate Change (IPCC), which was co-awarded the Nobel Prize for Peace in 2007 [7f81567], [e44141d].",
+        "citations": [
+          {
+            "id": "e44141d",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 243,
+              "end": 252
+            },
+            "payload": {
+              "id": "e44141dd-81d8-5b2f-b987-ec0de2ca949c",
+              "document_id": "058dccf3-7ec9-506c-9dd9-5eb21cdb489d",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: Foreword for Compassion in the Era of AI\n\nText: influenced Thanh's approach to Compassion and human interaction.\nDespite his professional endeavors, Thanh places great importance on family. He is a \ndevoted father to two young daughters, Kitty and Lucky. His love for them is evident in the \npoetry he writes for them, and he considers being a friend to his children a privilege. This \npersonal experience of fatherhood has undoubtedly shaped his views on Compassion and its\nrole in family life.\n1Prof. Minh Ha-Duong is Research Director at the French National Centre for Scientific Research (CNRS), \nspecializing in energy economics, integrated assessment, and sustainable development. An international \nexpert, Prof. Ha-Duong has contributed as a Nobel-winning IPCC Lead Author.\n1",
+              "metadata": {
+                "title": "Foreword for Compassion in the Era of AI",
+                "hal_id": "hal-04738233",
+                "authors": "['Minh Ha-Duong']",
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Foreword for Compassion in the Era of AI. Ha Huy Thanh. Compassion in the AI era, DISA Library, 2024. ⟨hal-04738233⟩",
+                "source_url": "https://hal.science/hal-04738233",
+                "chunk_order": 4,
+                "description": "This foreword introduces a book on Compassion in the AI era, providing context on the author's background and previous work on Compassion. It discusses the book's visionary approach and practical proposals for integrating Compassion into AI development. The foreword reviews the current state of AI and Compassion research, highlighting recent studies on AI-generated empathy and human-AI alignment in moral decision-making. It emphasizes the urgency of embedding Compassion in AI systems and the need for benchmarking AI models on moral and emotional capabilities. The foreword concludes by praising the book's accessible writing style and its potential to inspire readers to contribute to a more compassionate future.",
+                "document_type": "COUV",
+                "publication_date": "2024-01-01",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "Minh ha duagon research fields and expertise"
+              }
+            }
+          },
+          {
+            "id": "a4c13df",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 473,
+              "end": 482
+            },
+            "payload": {
+              "id": "a4c13df0-1f4a-532c-bc65-366f6b968168",
+              "document_id": "01b1f455-f73d-5f4d-b625-a4a1a318bbe3",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.0147909604519774,
+              "text": "Document Title: Policy framework and systems management of global climate change\n\nText: Biographical Sketches  \n \nMinh Ha-Duong works at the Centre International de Recherche sur l'Environnement et le Developpement (CIRED) in \nNogent-sur-Marne, France. He is Chargé  de Recherche at the French Centre National de la Recherche Scientifique \n(CNRS), France. During 2000-2002, he was visiting scholar at the Center for Integrated Study of the Human Dimensions of Global Change, Carnegie Mellon University, Department of Engineering and Public Policy. His research interests are \nintegrated assessment modeling, irreversibility and impreci se probabilities in economic theory and global change. \n Jean-Charles Hourcade leads the Centre International de R echerche sur l'Environnement et le Developpement (CIRED) \nin Paris. He is Directeur de Recherch e at CNRS and Directeur d'Etudes at th e Ecole des Hautes Etudes en Sciences \nSociales in Paris, France.",
+              "metadata": {
+                "title": "Policy framework and systems management of global climate change",
+                "hal_id": "halshs-00001125",
+                "authors": [
+                  "Minh Ha-Duong",
+                  "Jean Charles Hourcade"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong, Jean Charles Hourcade. Policy framework and systems management of global climate change. Encyclopedia of Life Support Systems, EOLSS Publisher Co., Oxford, UK, chapter 1.4.7, 2002. ⟨halshs-00001125⟩",
+                "source_url": "https://hal.science/halshs-00001125",
+                "chunk_order": 178,
+                "description": "Climate change is representative of a general class of environmental issues where decisions have to be taken under controversies. The policy framework for these kinds of decisions is defined by three important traits: scientific ignorance, mediatization and the need for innovation. Scientific ignorance is an issue here because decisions must be taken before the end of scientific controversies about the predictability of future climate. Mediatization is key because agents can't have a sensible experience of the global climate change, and some interest-holders (future generations, distant countries) cannot participate directly in the decision. Third, the need for innovation is crucial because today's technology offers the only alternative between fossil fuels and nuclear power as a main primary energy source.In the case of climate change, the institutional context is the United Nations Framework Convention on Climate Change. The making of global environmental policy is framed not upon a hypothetical code of international law (there is no such a thing), but upon a body of doctrine arising from consistent reference to a given set of principles. The key principles are sustainability (satisfying the need of present generations without preventing future generations to satisfy theirs), precaution (ignorance is not an excuse for inaction), the common but differentiated responsibility (developed countries take the lead in action against climate change), and economic efficiency (which lead to prefer flexible instruments over blind regulation).Given the scientific controversies and the fuzziness of guiding principles, no clear-cut demonstration could justify the choice of a theoretically optimum course of action, even in the short term. Historically, climate negotiations can be seen as an oscillation between two regulation modes. On one side is coordinated policies and measures, where countries adopt an uniform international rate of carbon tax. On the other side is emission trading, where a defined emission reduction target is allocated to each country.",
+                "document_type": "COUV",
+                "publication_date": "2002-01-01",
+                "semantic_rank": 9,
+                "full_text_rank": 200,
+                "associated_query": "Minh ha duagon research fields and expertise"
+              }
+            }
+          },
+          {
+            "id": "f1fec56",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 691,
+              "end": 700
+            },
+            "payload": {
+              "id": "f1fec56d-aa5d-5799-8d15-74caea6a93df",
+              "document_id": "d44fe2c4-b86c-52e9-a4e0-fd6dc965bf76",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015547619047619046,
+              "text": "Document Title: Vietnam's Way To Global Leadership in Sustainable Energy\n\nText: Building Vietnam's clean energy workforce is critical to meeting development needs:\n1.Update curricula and expand energy programs at universities and vocational schools\n2.Establish national centers of excellence for energy research and innovation, starting \nfor example with offshore wind power technology and solar+storage technology.\n3.Develop industry partnerships and apprenticeships to provide hands-on training\nA comprehensive approach to human resource development will ensure Vietnam has the \ntalent to drive its energy ambitions. Ho Chi Minh said, \" Học để mà làm, làm để mà phụng sự đất \nnước\" (Learn in order to work, work to serve the country). In that spirit, I am always looking \npersonally for academic collaboration opportunities, please contact me if you need a \nengineer-economist professor, expert on clean energy and sustainable development.\nAbout the author\nDr. Minh Ha-Duong is Directeur de recherche at CIRED, CNRS. Campus du Jardin Tropical,",
+              "metadata": {
+                "title": "Vietnam's Way To Global Leadership in Sustainable Energy",
+                "hal_id": "hal-04519631",
+                "authors": [
+                  "Minh Ha-Duong",
+                  "Thái An",
+                  "Tuấn Anh"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong, Thái An, Tuấn Anh. Vietnam's Way To Global Leadership in Sustainable Energy. 2024. ⟨hal-04519631⟩",
+                "source_url": "https://hal.science/hal-04519631",
+                "chunk_order": 18,
+                "description": "The main message is that Vietnam aspires to become a global role model in sustainable development, particularly in building a green economy, ensuring social equity during the energy transition, and leading climate action on the international stage. Vietnam has potential to inspire other nations and suggests concrete actions to attract investment, develop human resources, and collaborate with international partners, especially France and Europe, in the field of renewable energy. The vision for Vietnam is to harness its strategic advantages, such as its location, vibrant economy, and commitment to green growth, to showcase how a country can achieve rapid economic development while transitioning to a low-carbon future. The interview discusses key strategies, policies, and initiatives that Vietnam should prioritize, with a focus on green finance, innovation, just energy transition, international cooperation, and capacity building in the energy sector.",
+                "document_type": "OTHER",
+                "publication_date": "2024-03-23",
+                "semantic_rank": 6,
+                "full_text_rank": 200,
+                "associated_query": "Minh ha duagon research fields and expertise"
+              }
+            }
+          },
+          {
+            "id": "12f193d",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 702,
+              "end": 711
+            },
+            "payload": {
+              "id": "12f193d5-a27e-5719-818b-aa1ee2aa4132",
+              "document_id": "d44fe2c4-b86c-52e9-a4e0-fd6dc965bf76",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01638993710691824,
+              "text": "Document Title: Vietnam's Way To Global Leadership in Sustainable Energy\n\nText: talent to drive its energy ambitions. Ho Chi Minh said, \" Học để mà làm, làm để mà phụng sự đất \nnước\" (Learn in order to work, work to serve the country). In that spirit, I am always looking \npersonally for academic collaboration opportunities, please contact me if you need a \nengineer-economist professor, expert on clean energy and sustainable development.\nAbout the author\nDr. Minh Ha-Duong is Directeur de recherche at CIRED, CNRS. Campus du Jardin Tropical, \n45 avenue de la Belle Gabrielle, 94736 Nogent sur Marne, France. haduong@centre-cired.fr . \nORCID 0000-0001-9988-2100, https://minh.haduong.com .\nAcknowledgements\nImagined by me, written with AI. Contents based solely on the authorss works and fully \nhuman edited. Questions by Dr. Phuong Tra Tran , IPAG and A VSE Global.\n5",
+              "metadata": {
+                "title": "Vietnam's Way To Global Leadership in Sustainable Energy",
+                "hal_id": "hal-04519631",
+                "authors": [
+                  "Minh Ha-Duong",
+                  "Thái An",
+                  "Tuấn Anh"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong, Thái An, Tuấn Anh. Vietnam's Way To Global Leadership in Sustainable Energy. 2024. ⟨hal-04519631⟩",
+                "source_url": "https://hal.science/hal-04519631",
+                "chunk_order": 19,
+                "description": "The main message is that Vietnam aspires to become a global role model in sustainable development, particularly in building a green economy, ensuring social equity during the energy transition, and leading climate action on the international stage. Vietnam has potential to inspire other nations and suggests concrete actions to attract investment, develop human resources, and collaborate with international partners, especially France and Europe, in the field of renewable energy. The vision for Vietnam is to harness its strategic advantages, such as its location, vibrant economy, and commitment to green growth, to showcase how a country can achieve rapid economic development while transitioning to a low-carbon future. The interview discusses key strategies, policies, and initiatives that Vietnam should prioritize, with a focus on green finance, innovation, just energy transition, international cooperation, and capacity building in the energy sector.",
+                "document_type": "OTHER",
+                "publication_date": "2024-03-23",
+                "semantic_rank": 3,
+                "full_text_rank": 200,
+                "associated_query": "Minh ha duagon research fields and expertise"
+              }
+            }
+          },
+          {
+            "id": "99ca6d0",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 906,
+              "end": 915
+            },
+            "payload": {
+              "id": "99ca6d09-b31f-559f-bc99-61b40be11a28",
+              "document_id": "67c93534-1484-5842-939c-fac4cb18d699",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31\n\nText: Hoang Anh Nguyen Trinh , Minh Ha-Duong. \nPerspective of CO2 capture & storage (CCS) \ndevelopment in Vietnam: Results from expert \ninterviews. International Journal of Greenhouse Gas \nControl, 2015, 37, pp.220-227.  \n<10.1016/j.ijggc.2015.03.019>\nTwo publication in a national journal, both describing \nresearch performed at the lab during the project:\nHong Nam Nguyen, Minh Ha-Duong, Laurent Van \nde Steene. A critical look at rice husk gasification in \nCambodia: Technology and sustainability . Vietnam \nAcademy of Science and Technology Journal of \nScience and Technology, 2015, pp 247- 252. \nXuan Truong Nguyen, Dinh Quang Nguyen, Tung \nTran. Power control of a photovoltaic system \nconnected to a distribution grid in Vietnam. Vietnam \nAcademy of Science and Technology Journal of \nScience and Technology, V ol 53 (3A), 2015, pp.331- \n336.\n3.2. SCIENTIFIC COMMUNICATIONS AND POSTERS\nThe archive inculdes eleven communications in international \nconferences, most of those (Toulouse, Shenzhen, Berlin,",
+              "metadata": {
+                "title": "Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31",
+                "hal_id": "hal-01264985",
+                "authors": [
+                  "Minh Ha-Duong",
+                  "Hoang Anh Tran"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong, Hoang Anh Tran. Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31. [Research Report] USTH. 2016. ⟨hal-01264985⟩",
+                "source_url": "https://hal.science/hal-01264985",
+                "chunk_order": 24,
+                "description": "The Clean Energy and Sustainable Development laboratory – CleanED – was established in December 2014 with support from USTH and French Embassy in Hanoi. In September 2015, CleanED lab counted five researchers from France and Vietnam, five doctoral fellows and two internationally qualified staff. This international and interdisciplinary research team gets the mission to contribute to the green growth of the energy sector in Vietnam. Its expertise ranges from engineering to public policy on: Natural resources characterization and management Biomass and waste to energy conversion process technologies Energy systems optimization from smart grid to national plans",
+                "document_type": "REPORT",
+                "publication_date": "2016-01-27",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "Minh ha duagon research fields and expertise"
+              }
+            }
+          },
+          {
+            "id": "568cb38",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 917,
+              "end": 926
+            },
+            "payload": {
+              "id": "568cb38c-9ec6-5ff0-9f5b-bd9e14bee363",
+              "document_id": "7839d6c4-94a9-5d7d-91d5-4f32596b6cf6",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.014555555555555556,
+              "text": "Document Title: Modèles de précaution en économie: introduction aux probabilités imprécises\n\nText: Minh Ha-Duong and David Keith. Carbon storage : the economic efﬁciency of sto-\nring CO 2in leaky reservoirs. Clean Technology and Environmental Policy , 5(2/3),\nOctober2003. Special issue on Technologiesfor Sustainable Development.\nMinh Ha-Duong, Gérard Mégie, and Didier Hauglustaine. A pro-active stratospheric\nozoneprotectionscenario. GlobalEnvironmentalChange ,13(1):4349,April2003.\nMinh Ha-Duong and Nicolas Treich. Risk aversion, intergenerational equity and cli-\nmatechange. Environmentaland ResourceEconomics ,28(2) :195207, June 2004.\nR.E.Haber,R.H.Haber,A.Alique,andS.Ros. Applicationofknowledge-basedsys-\ntemsforsupervisionandcontrolofmachiningprocesses. volumeII.WorldScientiﬁc\nPub. Co., May 2002. ISBN 981-02-4514-9. URL http://www.cse.dmu.ac.\nuk/~yangli/handbook.htm . 2 volume set. Vol. I Fundamentals published\ndec.2001, ISBN : 981-02-4973-X. Vol.II ISBN : 981-02-4974-8.\nJoseph Y. Halpern, editor. Reasoning about Uncertainty . MIT Press, 2003. ISBN 9\n780262083201.",
+              "metadata": {
+                "title": "Modèles de précaution en économie: introduction aux probabilités imprécises",
+                "hal_id": "halshs-00007520",
+                "authors": "['Minh Ha-Duong']",
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Modèles de précaution en économie: introduction aux probabilités imprécises. Economies et finances. Université Panthéon-Sorbonne - Paris I, 2005. ⟨halshs-00007520⟩",
+                "source_url": "https://hal.science/halshs-00007520",
+                "chunk_order": 767,
+                "description": "Ce mémoire présente une recherche pour mieux traiter les problèmes d'environnement globaux en améliorant la prise en compte du risque et de l'incertitude dans les modèles numériques interdisciplinaires. La revue des approches de la décision ---utilisant ou non les probabilités subjectives--- montre que la première représentation de la précaution est le modèle de décision séquentielle. Dans ce cadre, ce texte présente les résultats du modèle intégré DIAM résolu en programmation dynamique stochastique concernant la question du tempo de l'action contre le changement climatique. La seconde partie de l'ouvrage propose une vision alternative de la précaution, basée sur le rejet de l'axiome de complétude des préférences de Savage. Cela conduit à définir un critère de décision rationnel en situation d'information imprécise. Ce critère est discuté avec la théorie des probabilités imprécises, en visant à unifier les différentes approches proposées dans la littérature (Shackle et Zadeh, Dempster et Shafer, Smets, Gilboa et Schmeidler, Walley). Les applications présentées en troisième partie concernent la causalité en épidémiologie, l'élicitation et la fusion des opinions d'experts ainsi que les règles de la prospective.",
+                "document_type": "HDR",
+                "publication_date": "2005-12-07",
+                "semantic_rank": 10,
+                "full_text_rank": 200,
+                "associated_query": "Minh ha duagon research fields and expertise"
+              }
+            }
+          },
+          {
+            "id": "a4c13df",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1089,
+              "end": 1098
+            },
+            "payload": null
+          },
+          {
+            "id": "568cb38",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1225,
+              "end": 1234
+            },
+            "payload": null
+          },
+          {
+            "id": "568cb38",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1400,
+              "end": 1409
+            },
+            "payload": null
+          },
+          {
+            "id": "f1fec56",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1634,
+              "end": 1643
+            },
+            "payload": null
+          },
+          {
+            "id": "7f81567",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1958,
+              "end": 1967
+            },
+            "payload": {
+              "id": "7f81567b-f2d9-5d58-94c2-37b1a37f5c5c",
+              "document_id": "befd3526-9ca6-5cc9-a9f4-1c3a59b8a5da",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Research excellence à la Française\n\nText: Dr. Minh Ha-Duong is a senior researcher at the Centre National de la \nRecherche Scientiﬁque (CNRS) in Paris, France. He has more than thirty \nyears of experience in conducting and supervising research, and was \nLead Author of the Intergovernmental Panel on Climate Change, co-\nawarded the Nobel Prize for Peace in 2007.\n\u000b\f\r\nHa-Duong (2024) Research Excellence à la Française: Fi4984ty How-Tos for \nStudents and Professionals ISBN 9798303200531 (print)\nExcept chapter 11, this handbook is licensed under Creative Commons \nAttribution-NonCommercial-Sharealike 4.0 International ( CC BY-NC-\nSA). You may share and adapt for science, education and other non-\ncommercial purposes, provided you give appropriate credit.",
+              "metadata": {
+                "title": "Research excellence à la Française",
+                "hal_id": "hal-04850819",
+                "authors": "['Minh Ha-Duong']",
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Research excellence à la Française. Self published, pp.81, 2024, 979-8303200531. ⟨hal-04850819⟩",
+                "source_url": "https://hal.science/hal-04850819",
+                "chunk_order": 1,
+                "description": "This guide provides essential insights for both international students and established researchers to succeed in the French research ecosystem. From producing high-quality academic work to mastering digital research tools, from understanding French institutional culture to delivering impactful presentations, this comprehensive manual offers systematic solutions for excelling in today's competitive research environment. Written by Dr. Minh Ha-Duong, a senior CNRS researcher and former Lead Author of the Nobel Peace Prize-winning IPCC, the book features: Proven strategies for scholarly writing and publication Expert guidance on leveraging AI and managing digital libraries Essential insights into French research institutions and culture Professional techniques for academic presentations and communication Evidence-based productivity practices for sustained excellence The print edition includes an exclusive bonus chapter on research productivity life hacks.",
+                "document_type": "OUV",
+                "publication_date": "2024-12-11",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "Minh ha duagon research fields and expertise"
+              }
+            }
+          },
+          {
+            "id": "e44141d",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1969,
+              "end": 1978
+            },
+            "payload": null
+          }
+        ],
+        "search_results": [
+          {
+            "id": "7f81567b-f2d9-5d58-94c2-37b1a37f5c5c",
+            "document_id": "befd3526-9ca6-5cc9-a9f4-1c3a59b8a5da",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Research excellence à la Française\n\nText: Dr. Minh Ha-Duong is a senior researcher at the Centre National de la \nRecherche Scientiﬁque (CNRS) in Paris, France. He has more than thirty \nyears of experience in conducting and supervising research, and was \nLead Author of the Intergovernmental Panel on Climate Change, co-\nawarded the Nobel Prize for Peace in 2007.\n\u000b\f\r\nHa-Duong (2024) Research Excellence à la Française: Fi4984ty How-Tos for \nStudents and Professionals ISBN 9798303200531 (print)\nExcept chapter 11, this handbook is licensed under Creative Commons \nAttribution-NonCommercial-Sharealike 4.0 International ( CC BY-NC-\nSA). You may share and adapt for science, education and other non-\ncommercial purposes, provided you give appropriate credit.",
+            "metadata": {
+              "title": "Research excellence à la Française",
+              "hal_id": "hal-04850819",
+              "authors": "['Minh Ha-Duong']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Research excellence à la Française. Self published, pp.81, 2024, 979-8303200531. ⟨hal-04850819⟩",
+              "source_url": "https://hal.science/hal-04850819",
+              "chunk_order": 1,
+              "description": "This guide provides essential insights for both international students and established researchers to succeed in the French research ecosystem. From producing high-quality academic work to mastering digital research tools, from understanding French institutional culture to delivering impactful presentations, this comprehensive manual offers systematic solutions for excelling in today's competitive research environment. Written by Dr. Minh Ha-Duong, a senior CNRS researcher and former Lead Author of the Nobel Peace Prize-winning IPCC, the book features: Proven strategies for scholarly writing and publication Expert guidance on leveraging AI and managing digital libraries Essential insights into French research institutions and culture Professional techniques for academic presentations and communication Evidence-based productivity practices for sustained excellence The print edition includes an exclusive bonus chapter on research productivity life hacks.",
+              "document_type": "OUV",
+              "publication_date": "2024-12-11",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Minh ha duagon research fields and expertise"
+            }
+          },
+          {
+            "id": "99ca6d09-b31f-559f-bc99-61b40be11a28",
+            "document_id": "67c93534-1484-5842-939c-fac4cb18d699",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31\n\nText: Hoang Anh Nguyen Trinh , Minh Ha-Duong. \nPerspective of CO2 capture & storage (CCS) \ndevelopment in Vietnam: Results from expert \ninterviews. International Journal of Greenhouse Gas \nControl, 2015, 37, pp.220-227.  \n<10.1016/j.ijggc.2015.03.019>\nTwo publication in a national journal, both describing \nresearch performed at the lab during the project:\nHong Nam Nguyen, Minh Ha-Duong, Laurent Van \nde Steene. A critical look at rice husk gasification in \nCambodia: Technology and sustainability . Vietnam \nAcademy of Science and Technology Journal of \nScience and Technology, 2015, pp 247- 252. \nXuan Truong Nguyen, Dinh Quang Nguyen, Tung \nTran. Power control of a photovoltaic system \nconnected to a distribution grid in Vietnam. Vietnam \nAcademy of Science and Technology Journal of \nScience and Technology, V ol 53 (3A), 2015, pp.331- \n336.\n3.2. SCIENTIFIC COMMUNICATIONS AND POSTERS\nThe archive inculdes eleven communications in international \nconferences, most of those (Toulouse, Shenzhen, Berlin,",
+            "metadata": {
+              "title": "Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31",
+              "hal_id": "hal-01264985",
+              "authors": [
+                "Minh Ha-Duong",
+                "Hoang Anh Tran"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Hoang Anh Tran. Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31. [Research Report] USTH. 2016. ⟨hal-01264985⟩",
+              "source_url": "https://hal.science/hal-01264985",
+              "chunk_order": 24,
+              "description": "The Clean Energy and Sustainable Development laboratory – CleanED – was established in December 2014 with support from USTH and French Embassy in Hanoi. In September 2015, CleanED lab counted five researchers from France and Vietnam, five doctoral fellows and two internationally qualified staff. This international and interdisciplinary research team gets the mission to contribute to the green growth of the energy sector in Vietnam. Its expertise ranges from engineering to public policy on: Natural resources characterization and management Biomass and waste to energy conversion process technologies Energy systems optimization from smart grid to national plans",
+              "document_type": "REPORT",
+              "publication_date": "2016-01-27",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Minh ha duagon research fields and expertise"
+            }
+          },
+          {
+            "id": "12f193d5-a27e-5719-818b-aa1ee2aa4132",
+            "document_id": "d44fe2c4-b86c-52e9-a4e0-fd6dc965bf76",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Vietnam's Way To Global Leadership in Sustainable Energy\n\nText: talent to drive its energy ambitions. Ho Chi Minh said, \" Học để mà làm, làm để mà phụng sự đất \nnước\" (Learn in order to work, work to serve the country). In that spirit, I am always looking \npersonally for academic collaboration opportunities, please contact me if you need a \nengineer-economist professor, expert on clean energy and sustainable development.\nAbout the author\nDr. Minh Ha-Duong is Directeur de recherche at CIRED, CNRS. Campus du Jardin Tropical, \n45 avenue de la Belle Gabrielle, 94736 Nogent sur Marne, France. haduong@centre-cired.fr . \nORCID 0000-0001-9988-2100, https://minh.haduong.com .\nAcknowledgements\nImagined by me, written with AI. Contents based solely on the authorss works and fully \nhuman edited. Questions by Dr. Phuong Tra Tran , IPAG and A VSE Global.\n5",
+            "metadata": {
+              "title": "Vietnam's Way To Global Leadership in Sustainable Energy",
+              "hal_id": "hal-04519631",
+              "authors": [
+                "Minh Ha-Duong",
+                "Thái An",
+                "Tuấn Anh"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Thái An, Tuấn Anh. Vietnam's Way To Global Leadership in Sustainable Energy. 2024. ⟨hal-04519631⟩",
+              "source_url": "https://hal.science/hal-04519631",
+              "chunk_order": 19,
+              "description": "The main message is that Vietnam aspires to become a global role model in sustainable development, particularly in building a green economy, ensuring social equity during the energy transition, and leading climate action on the international stage. Vietnam has potential to inspire other nations and suggests concrete actions to attract investment, develop human resources, and collaborate with international partners, especially France and Europe, in the field of renewable energy. The vision for Vietnam is to harness its strategic advantages, such as its location, vibrant economy, and commitment to green growth, to showcase how a country can achieve rapid economic development while transitioning to a low-carbon future. The interview discusses key strategies, policies, and initiatives that Vietnam should prioritize, with a focus on green finance, innovation, just energy transition, international cooperation, and capacity building in the energy sector.",
+              "document_type": "OTHER",
+              "publication_date": "2024-03-23",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Minh ha duagon research fields and expertise"
+            }
+          },
+          {
+            "id": "da68b822-d0a0-531f-98ba-9d96a2734614",
+            "document_id": "67c93534-1484-5842-939c-fac4cb18d699",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31\n\nText: fired power plants in Vietnam.\nMr. Minh Long HOANG - a former USTH Bachelor student -  \nwas graduated in july 2015. His research subject is \nContribution to the study of the distributed system PV stand \nalone. Optimization of output power for PV system by using \nMAC method, under supervision of Dr. Nguyen Xuan \nTruong.\nIn addition, we received Mr. Luc BACHELET , a French \nengineering student at AgroParis Tech, for a 6 months \ninternship starting in September 2015.\n9",
+            "metadata": {
+              "title": "Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31",
+              "hal_id": "hal-01264985",
+              "authors": [
+                "Minh Ha-Duong",
+                "Hoang Anh Tran"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Hoang Anh Tran. Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31. [Research Report] USTH. 2016. ⟨hal-01264985⟩",
+              "source_url": "https://hal.science/hal-01264985",
+              "chunk_order": 58,
+              "description": "The Clean Energy and Sustainable Development laboratory – CleanED – was established in December 2014 with support from USTH and French Embassy in Hanoi. In September 2015, CleanED lab counted five researchers from France and Vietnam, five doctoral fellows and two internationally qualified staff. This international and interdisciplinary research team gets the mission to contribute to the green growth of the energy sector in Vietnam. Its expertise ranges from engineering to public policy on: Natural resources characterization and management Biomass and waste to energy conversion process technologies Energy systems optimization from smart grid to national plans",
+              "document_type": "REPORT",
+              "publication_date": "2016-01-27",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Minh ha duagon research fields and expertise"
+            }
+          },
+          {
+            "id": "24d6fc67-9390-56e1-a320-b4d118770ce0",
+            "document_id": "0ad29e47-0759-53ae-a1eb-1c77b0d362ea",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Programming Sustainable Development in a Developing Country: A Social Optimization of the Vietnamese Power Sector A\n\nText: in debt to close friends in Vietnam: Mr. Minh Khoa Tran (Institute of Energy), Mrs. Huong Giang \nPham (MOIT), Ngoc Tuyen Phan (Institute of Energy),  and Minh Quoc Binh Phan \n(PetroVietnam) for their helpful support and data r elated to the issues in my research study.   \nThis research was made possible from a three:year P h.D research grant offered by the Centre \nNational de la Recherche Scientifique (CNRS) of Fra nce. I also wish to thank the CTSC Chair of \nlEcole des Mines, France for providing me addition al grant to perform a special study on the \nissue of Carbon Capture and Storage as a major part  of this research thesis. Many thanks are due \nto the International de Recherche sur lEnvironneme nt et le Developpement (CIRED), France for \nproviding necessary facilities and administrative s upports during the past 3 years. \nI would also thank the family of Mr. Tuan Ha:Duong and Madame Françoise Pair for their kindly \nhosting me in Antony (France) since the first day o f my arrival in France.",
+            "metadata": {
+              "title": "Programming Sustainable Development in a Developing Country: A Social Optimization of the Vietnamese Power Sector A",
+              "hal_id": "tel-00593573",
+              "authors": [
+                "Nhan Thanh Nguyen"
+              ],
+              "version": "v0",
+              "citation": "Nhan Thanh Nguyen. Programming Sustainable Development in a Developing Country: A Social Optimization of the Vietnamese Power Sector A. Economics and Finance. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2011. English. ⟨NNT : ⟩. ⟨tel-00593573⟩",
+              "source_url": "https://hal.science/tel-00593573",
+              "chunk_order": 8,
+              "description": "The kernel of this dissertation aims to exploit by optimisation methods and empirical studies the issues of sustainable development in the Vietnamese power sector for the next thirty years. It then examines the ways to implement sustainable energy options for the power sector in practice. To accomplish these two objectives, the study focuses on different, but related, issues with these two methodologies: (i) In the first part, we develop the bottom-up Integrated Resource Planning (IRP) model to provide a more exhaustive assessment of the current state and future prospects for the Vietnamese power sector in next three decades. Then, using a comparative analysis and a vulnerability analysis that is based on the IRP simulation, we analyze energy-development-related vulnerabilities that the sector could face, in terms of economic and socioenvironmental dimensions. We further develop the IRP model, in such a way representing realistically the marginal abatement costs of carbon emission reduction by considering non-zero carbon values and carbon emission constraints, in order to simulate sustainable energy supply options for the power sector. (ii) In the second part, we study the major barriers against the wider adoption of sustainable energy development options in practice by using analytical hierarchy process-based formal surveys among national experts. Then, we use an empirical analysis approach to examine different appropriate policy means including incentive instruments/schemes and sector reform for such sustainability of the power sector. To the end, we analyze the access to feasible financing sources for sustainable development in the Vietnamese power sector.",
+              "document_type": "THESE",
+              "publication_date": "2011-03-30",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Minh ha duagon research fields and expertise"
+            }
+          },
+          {
+            "id": "f1fec56d-aa5d-5799-8d15-74caea6a93df",
+            "document_id": "d44fe2c4-b86c-52e9-a4e0-fd6dc965bf76",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Vietnam's Way To Global Leadership in Sustainable Energy\n\nText: Building Vietnam's clean energy workforce is critical to meeting development needs:\n1.Update curricula and expand energy programs at universities and vocational schools\n2.Establish national centers of excellence for energy research and innovation, starting \nfor example with offshore wind power technology and solar+storage technology.\n3.Develop industry partnerships and apprenticeships to provide hands-on training\nA comprehensive approach to human resource development will ensure Vietnam has the \ntalent to drive its energy ambitions. Ho Chi Minh said, \" Học để mà làm, làm để mà phụng sự đất \nnước\" (Learn in order to work, work to serve the country). In that spirit, I am always looking \npersonally for academic collaboration opportunities, please contact me if you need a \nengineer-economist professor, expert on clean energy and sustainable development.\nAbout the author\nDr. Minh Ha-Duong is Directeur de recherche at CIRED, CNRS. Campus du Jardin Tropical,",
+            "metadata": {
+              "title": "Vietnam's Way To Global Leadership in Sustainable Energy",
+              "hal_id": "hal-04519631",
+              "authors": [
+                "Minh Ha-Duong",
+                "Thái An",
+                "Tuấn Anh"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Thái An, Tuấn Anh. Vietnam's Way To Global Leadership in Sustainable Energy. 2024. ⟨hal-04519631⟩",
+              "source_url": "https://hal.science/hal-04519631",
+              "chunk_order": 18,
+              "description": "The main message is that Vietnam aspires to become a global role model in sustainable development, particularly in building a green economy, ensuring social equity during the energy transition, and leading climate action on the international stage. Vietnam has potential to inspire other nations and suggests concrete actions to attract investment, develop human resources, and collaborate with international partners, especially France and Europe, in the field of renewable energy. The vision for Vietnam is to harness its strategic advantages, such as its location, vibrant economy, and commitment to green growth, to showcase how a country can achieve rapid economic development while transitioning to a low-carbon future. The interview discusses key strategies, policies, and initiatives that Vietnam should prioritize, with a focus on green finance, innovation, just energy transition, international cooperation, and capacity building in the energy sector.",
+              "document_type": "OTHER",
+              "publication_date": "2024-03-23",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Minh ha duagon research fields and expertise"
+            }
+          },
+          {
+            "id": "e44141dd-81d8-5b2f-b987-ec0de2ca949c",
+            "document_id": "058dccf3-7ec9-506c-9dd9-5eb21cdb489d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Foreword for Compassion in the Era of AI\n\nText: influenced Thanh's approach to Compassion and human interaction.\nDespite his professional endeavors, Thanh places great importance on family. He is a \ndevoted father to two young daughters, Kitty and Lucky. His love for them is evident in the \npoetry he writes for them, and he considers being a friend to his children a privilege. This \npersonal experience of fatherhood has undoubtedly shaped his views on Compassion and its\nrole in family life.\n1Prof. Minh Ha-Duong is Research Director at the French National Centre for Scientific Research (CNRS), \nspecializing in energy economics, integrated assessment, and sustainable development. An international \nexpert, Prof. Ha-Duong has contributed as a Nobel-winning IPCC Lead Author.\n1",
+            "metadata": {
+              "title": "Foreword for Compassion in the Era of AI",
+              "hal_id": "hal-04738233",
+              "authors": "['Minh Ha-Duong']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Foreword for Compassion in the Era of AI. Ha Huy Thanh. Compassion in the AI era, DISA Library, 2024. ⟨hal-04738233⟩",
+              "source_url": "https://hal.science/hal-04738233",
+              "chunk_order": 4,
+              "description": "This foreword introduces a book on Compassion in the AI era, providing context on the author's background and previous work on Compassion. It discusses the book's visionary approach and practical proposals for integrating Compassion into AI development. The foreword reviews the current state of AI and Compassion research, highlighting recent studies on AI-generated empathy and human-AI alignment in moral decision-making. It emphasizes the urgency of embedding Compassion in AI systems and the need for benchmarking AI models on moral and emotional capabilities. The foreword concludes by praising the book's accessible writing style and its potential to inspire readers to contribute to a more compassionate future.",
+              "document_type": "COUV",
+              "publication_date": "2024-01-01",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Minh ha duagon research fields and expertise"
+            }
+          },
+          {
+            "id": "e84dfc6b-4832-5e77-8f3e-fe3ff601a917",
+            "document_id": "67c93534-1484-5842-939c-fac4cb18d699",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31\n\nText: Hong Nam\nNGUYENnguyen-hong.nam@usth.edu.vnGraduate student at\nUSTH doctoral school50%\n(other 50% USTH staff)\nDuy An\nPHAMphamduyan.iph@gmail.comGraduate student in France,\n911 program12 month (10 abroad)\nAn Ha\nTRUONGtruonganha87@gmail.com USTH Master student 10 month (6 abroad)\nVu Trung\nTRUONGtvtrung@gmail.com USTH Master student 6 months '(2 abroad)\nNguyen Tri\nLE trytri@live.com USTH Master student 4 month (3 abroad)\nManh Tuan\nDUONGmanhtuan228@gmail.com USTH Master student 6 month (5 abroad)\nMinh Long\nHOANGhoangminhlong94@gmail.com USTH Bachelor student 3 month\nLuc\nBACHELETluc.bachelet@gmail.com Agro ParisTech 2nd year student4 months\nTable 4: USTH and foreign graduate students involved at CleanED lab in 2015",
+            "metadata": {
+              "title": "Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31",
+              "hal_id": "hal-01264985",
+              "authors": [
+                "Minh Ha-Duong",
+                "Hoang Anh Tran"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Hoang Anh Tran. Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31. [Research Report] USTH. 2016. ⟨hal-01264985⟩",
+              "source_url": "https://hal.science/hal-01264985",
+              "chunk_order": 52,
+              "description": "The Clean Energy and Sustainable Development laboratory – CleanED – was established in December 2014 with support from USTH and French Embassy in Hanoi. In September 2015, CleanED lab counted five researchers from France and Vietnam, five doctoral fellows and two internationally qualified staff. This international and interdisciplinary research team gets the mission to contribute to the green growth of the energy sector in Vietnam. Its expertise ranges from engineering to public policy on: Natural resources characterization and management Biomass and waste to energy conversion process technologies Energy systems optimization from smart grid to national plans",
+              "document_type": "REPORT",
+              "publication_date": "2016-01-27",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Minh ha duagon research fields and expertise"
+            }
+          },
+          {
+            "id": "a4c13df0-1f4a-532c-bc65-366f6b968168",
+            "document_id": "01b1f455-f73d-5f4d-b625-a4a1a318bbe3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Policy framework and systems management of global climate change\n\nText: Biographical Sketches  \n \nMinh Ha-Duong works at the Centre International de Recherche sur l'Environnement et le Developpement (CIRED) in \nNogent-sur-Marne, France. He is Chargé  de Recherche at the French Centre National de la Recherche Scientifique \n(CNRS), France. During 2000-2002, he was visiting scholar at the Center for Integrated Study of the Human Dimensions of Global Change, Carnegie Mellon University, Department of Engineering and Public Policy. His research interests are \nintegrated assessment modeling, irreversibility and impreci se probabilities in economic theory and global change. \n Jean-Charles Hourcade leads the Centre International de R echerche sur l'Environnement et le Developpement (CIRED) \nin Paris. He is Directeur de Recherch e at CNRS and Directeur d'Etudes at th e Ecole des Hautes Etudes en Sciences \nSociales in Paris, France.",
+            "metadata": {
+              "title": "Policy framework and systems management of global climate change",
+              "hal_id": "halshs-00001125",
+              "authors": [
+                "Minh Ha-Duong",
+                "Jean Charles Hourcade"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Jean Charles Hourcade. Policy framework and systems management of global climate change. Encyclopedia of Life Support Systems, EOLSS Publisher Co., Oxford, UK, chapter 1.4.7, 2002. ⟨halshs-00001125⟩",
+              "source_url": "https://hal.science/halshs-00001125",
+              "chunk_order": 178,
+              "description": "Climate change is representative of a general class of environmental issues where decisions have to be taken under controversies. The policy framework for these kinds of decisions is defined by three important traits: scientific ignorance, mediatization and the need for innovation. Scientific ignorance is an issue here because decisions must be taken before the end of scientific controversies about the predictability of future climate. Mediatization is key because agents can't have a sensible experience of the global climate change, and some interest-holders (future generations, distant countries) cannot participate directly in the decision. Third, the need for innovation is crucial because today's technology offers the only alternative between fossil fuels and nuclear power as a main primary energy source.In the case of climate change, the institutional context is the United Nations Framework Convention on Climate Change. The making of global environmental policy is framed not upon a hypothetical code of international law (there is no such a thing), but upon a body of doctrine arising from consistent reference to a given set of principles. The key principles are sustainability (satisfying the need of present generations without preventing future generations to satisfy theirs), precaution (ignorance is not an excuse for inaction), the common but differentiated responsibility (developed countries take the lead in action against climate change), and economic efficiency (which lead to prefer flexible instruments over blind regulation).Given the scientific controversies and the fuzziness of guiding principles, no clear-cut demonstration could justify the choice of a theoretically optimum course of action, even in the short term. Historically, climate negotiations can be seen as an oscillation between two regulation modes. On one side is coordinated policies and measures, where countries adopt an uniform international rate of carbon tax. On the other side is emission trading, where a defined emission reduction target is allocated to each country.",
+              "document_type": "COUV",
+              "publication_date": "2002-01-01",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "Minh ha duagon research fields and expertise"
+            }
+          },
+          {
+            "id": "568cb38c-9ec6-5ff0-9f5b-bd9e14bee363",
+            "document_id": "7839d6c4-94a9-5d7d-91d5-4f32596b6cf6",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Modèles de précaution en économie: introduction aux probabilités imprécises\n\nText: Minh Ha-Duong and David Keith. Carbon storage : the economic efﬁciency of sto-\nring CO 2in leaky reservoirs. Clean Technology and Environmental Policy , 5(2/3),\nOctober2003. Special issue on Technologiesfor Sustainable Development.\nMinh Ha-Duong, Gérard Mégie, and Didier Hauglustaine. A pro-active stratospheric\nozoneprotectionscenario. GlobalEnvironmentalChange ,13(1):4349,April2003.\nMinh Ha-Duong and Nicolas Treich. Risk aversion, intergenerational equity and cli-\nmatechange. Environmentaland ResourceEconomics ,28(2) :195207, June 2004.\nR.E.Haber,R.H.Haber,A.Alique,andS.Ros. Applicationofknowledge-basedsys-\ntemsforsupervisionandcontrolofmachiningprocesses. volumeII.WorldScientiﬁc\nPub. Co., May 2002. ISBN 981-02-4514-9. URL http://www.cse.dmu.ac.\nuk/~yangli/handbook.htm . 2 volume set. Vol. I Fundamentals published\ndec.2001, ISBN : 981-02-4973-X. Vol.II ISBN : 981-02-4974-8.\nJoseph Y. Halpern, editor. Reasoning about Uncertainty . MIT Press, 2003. ISBN 9\n780262083201.",
+            "metadata": {
+              "title": "Modèles de précaution en économie: introduction aux probabilités imprécises",
+              "hal_id": "halshs-00007520",
+              "authors": "['Minh Ha-Duong']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Modèles de précaution en économie: introduction aux probabilités imprécises. Economies et finances. Université Panthéon-Sorbonne - Paris I, 2005. ⟨halshs-00007520⟩",
+              "source_url": "https://hal.science/halshs-00007520",
+              "chunk_order": 767,
+              "description": "Ce mémoire présente une recherche pour mieux traiter les problèmes d'environnement globaux en améliorant la prise en compte du risque et de l'incertitude dans les modèles numériques interdisciplinaires. La revue des approches de la décision ---utilisant ou non les probabilités subjectives--- montre que la première représentation de la précaution est le modèle de décision séquentielle. Dans ce cadre, ce texte présente les résultats du modèle intégré DIAM résolu en programmation dynamique stochastique concernant la question du tempo de l'action contre le changement climatique. La seconde partie de l'ouvrage propose une vision alternative de la précaution, basée sur le rejet de l'axiome de complétude des préférences de Savage. Cela conduit à définir un critère de décision rationnel en situation d'information imprécise. Ce critère est discuté avec la théorie des probabilités imprécises, en visant à unifier les différentes approches proposées dans la littérature (Shackle et Zadeh, Dempster et Shafer, Smets, Gilboa et Schmeidler, Walley). Les applications présentées en troisième partie concernent la causalité en épidémiologie, l'élicitation et la fusion des opinions d'experts ainsi que les règles de la prospective.",
+              "document_type": "HDR",
+              "publication_date": "2005-12-07",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "Minh ha duagon research fields and expertise"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1979,
+            "total_tokens": 1979
+          }
+        }
+      },
+      "duration": 2512
+    },
+    "retrievalTime": 1593,
+    "generationTime": 2512,
+    "timestamp": "2025-07-10T10:10:49.596Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T10:10:51.368293+00:00",
+    "server_version": "1.0.0"
+  }
+}

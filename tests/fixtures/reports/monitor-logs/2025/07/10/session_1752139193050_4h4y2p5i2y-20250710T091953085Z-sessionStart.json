@@ -1,0 +1,43 @@
+{
+  "sessionId": "session_1752139193050_4h4y2p5i2y451r4z55",
+  "timestamp": "20250710T091953085Z",
+  "eventType": "sessionStart",
+  "payload": {
+    "sessionId": "session_1752139193050_4h4y2p5i2y451r4z55",
+    "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36",
+    "language": "en-US",
+    "languages": [
+      "en-US"
+    ],
+    "cookieEnabled": true,
+    "onLine": true,
+    "screen": {
+      "width": 432,
+      "height": 960,
+      "availWidth": 432,
+      "availHeight": 960,
+      "pixelRatio": 2.5,
+      "colorDepth": 24
+    },
+    "viewport": {
+      "width": 432,
+      "height": 837
+    },
+    "timezone": "Europe/Paris",
+    "profile": {
+      "organization": "",
+      "knowledge": "",
+      "usage": "",
+      "createdAt": null,
+      "updatedAt": null
+    },
+    "referrer": "android-app://com.google.android.gm/",
+    "url": "http://cired.digital/"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T09:19:55.013172+00:00",
+    "server_version": "1.0.0"
+  }
+}

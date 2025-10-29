@@ -1,0 +1,484 @@
+{
+  "sessionId": "session_1752324436901_531m2y2w226a312t3x",
+  "timestamp": "20250712T125137251Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752324687457_rkqdprv",
+    "response": {
+      "results": {
+        "generated_answer": "D'après les résultats de recherche fournis, Jean-Charles Hourcade semble être l'un des chercheurs les plus connus et influents du CIRED. Il est mentionné à plusieurs reprises dans les documents, notamment pour son rôle de direction et son expertise en économie des changements climatiques [47068b4], [08425a3]. Il est également souligné qu'il était le seul, à une certaine époque, à être titulaire d'une thèse d'État parmi les chercheurs pressentis pour prendre la succession de Sachs, ce qui a probablement joué un rôle dans son intronisation [08425a3].\n\nD'autres chercheurs comme Céline Guivarch [8d7d6be], Meriem Hamdi-Cherif [6f902b3], et Harold Levrel [09ef3c3] sont également mentionnés, mais sans la même fréquence ou le même niveau de détail que Jean-Charles Hourcade.",
+        "citations": [
+          {
+            "id": "47068b4",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 289,
+              "end": 298
+            },
+            "payload": {
+              "id": "47068b49-4976-50d1-89fb-f203c7e4016a",
+              "document_id": "27230f06-35bc-5322-be84-06851a5e9539",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)\n\nText: Pourfairevivrecetteéquipe,leCIREDabesoindetrouverconstamment denouvelles sources\n\n530 Dans les années 1970, avec la MSH dirigée par He ller, le CIRED met en place une importante unité de \ndocumentation, centre névralgique de lexpertise sur lécodéveloppement. \n531 Le GRSD occupait un bureau 4 rue de Chevreuse, siège de lAssociation des femmes diplômées de luniversité, \nquil partageait avec Daniel Thorner. \n532 Entretien avec K. Vinaver et K. Sachs, octobre 2017.  \n533 Entretien avec D. Théry, novembre 2017. \n534 Entretien avec J.-C. Hourcade, décembre 2017. \n535 Entretien avec S. Passaris, janvier 2018. Les stagiair es recrutés sont à limage de cette diversification : \narchitectes, ingénieurs, agronomes.  Rapport dactivités du CIRED, 1977, archives du CIRED, Paris.",
+              "metadata": {
+                "title": "The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)",
+                "hal_id": "hal-04891263",
+                "authors": "['C. Cassen']",
+                "version": "v0",
+                "citation": "C. Cassen. The climate/development dilemma in international climate negotiations: \r\nHistory of a climate‐centric reductionism (english traduction)\r\n(1990‐2022). 2025. ⟨hal-04891263⟩",
+                "source_url": "https://hal.science/hal-04891263",
+                "chunk_order": 2727,
+                "description": "The dissertation examines the persistent climate‐centric approach of the international climate negotiations and its related tension with development issues. It analyzes this tension through the coevolution between the main policy instruments adopted within the UNFCCC and a climate policy engineering, in which techno‐economic modeling occupies a distinctive position. Chapter 1 presents an interdisciplinary approach to analyzing these co‐evolutions and mobilises the concept of path dependency. It draws on a variety of sources, including academic and grey literature, CIRED archives and stakeholder interviews. The second part of the dissertation (chapters 2 and 3) examines two dimensions of a path‐dependent process that has led to a climate‐centric approach, including the coordination of negotiations around targets, from the Kyoto Protocol to the Paris Agreement, and persistent equity concerns about a burden‐sharing approach. The contribution to this path dependent process of energy economic experts from North countries, primarily in international fora and organisations is examined at four key moments: i) the European ecotax project (1990‐1992), ii) the negotiations on the flexibility mechanisms of the Kyoto Protocol (1995‐2001), iii) the adoption of mechanisms dedicated to South countries prior to Bali (NAMAs) (2001‐2007), and iv) the institutionalisation of the 2°C objective (2007‐2014). The third part analyzes the role of Integrated Assessment Models (IAMs) as a specific facet of the climate policy engineering in the climate‐centric approach of the negotiations. Chapter 4 shows that the reorientation of the policy agenda towards energy issues in the 80s had a significant impact on modeling efforts, particularly on the new IAMs that emerged following the institutionalization of the climate change issue. Chapter 5 shows how IAMs then became central in producing scenarios consistent with the 2°C target, based on a 'techno‐centric' approach. To that end, the IAM community relied on a repertoire of modeling practices and close collaboration with IPCC Group III (Chapter 6). The fourth part describes a fifth post‐Paris moment first characterized by a persistent gap between the long‐term transition scenarios generated by IAMs, in line with the IPCC AR5, and the short‐term challenges of accelerating the low‐carbon transition, as discussed in Chapter 7. Chapter 8 also highlights the growing role of modeling communities in the construction of national decarbonisation strategies and the organiszational and scientific challenges they face. The dissertation concludes that the incremental dynamics of change in the UNFCCC policy instruments have co‐evolved with opposite conceptions of the climate‐development nexus within a climate policy engineering, due to both strategies of alignment with the negotiating agenda and internal dynamics (techno‐centric reductionism, North‐South asymmetry, community effect). The conclusion calls for a more in‐depth examination of recent change and continuity within this technoeconomic expertise and of its interfaces within the current climate negotiations.",
+                "document_type": "TRAD",
+                "publication_date": "2025-01-16",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "Qui est le chercheur ou la chercheuse la plus connue du CIRED"
+              }
+            }
+          },
+          {
+            "id": "08425a3",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 300,
+              "end": 309
+            },
+            "payload": {
+              "id": "08425a37-3879-5dc8-b565-c46a84d669cb",
+              "document_id": "27230f06-35bc-5322-be84-06851a5e9539",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01638993710691824,
+              "text": "Document Title: The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)\n\nText: pour regrouper des chercheurs issus de disciplines variées  et travaillant sur des aires communes (voir Popa, 2015). \nCompte tenu de son profil interdisciplinaire, le CIRED pouvait avoir vocation à rejoindre ce pôle. \n590 PV du Conseil scientifique de lEHESS du 20 mai 1986, op.cit.  Le refus transparaît déjà dans Godard et al. \n(1985) où le CIRED veut être identifié comme un  centre thématique  (p. 4) et non centré sur une aire donnée. \nVoir aussi entretien avec J.-C. Hourcade, mars 2018. \n591 Nicolon ayant renoncé, Hourcade était le seul, à lépoque , à être titulaire dune thèse dÉtat (Hourcade, 1984) \ndans les chercheurs pressentis pour prendre la succession de Sachs, ce qui a probablement joué un rôle dans son \nintronisation. Entretien avec D. Théry, novembre 2017 ; entretien avec J.-C. Hourcade, mars 2018.",
+              "metadata": {
+                "title": "The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)",
+                "hal_id": "hal-04891263",
+                "authors": "['C. Cassen']",
+                "version": "v0",
+                "citation": "C. Cassen. The climate/development dilemma in international climate negotiations: \r\nHistory of a climate‐centric reductionism (english traduction)\r\n(1990‐2022). 2025. ⟨hal-04891263⟩",
+                "source_url": "https://hal.science/hal-04891263",
+                "chunk_order": 2786,
+                "description": "The dissertation examines the persistent climate‐centric approach of the international climate negotiations and its related tension with development issues. It analyzes this tension through the coevolution between the main policy instruments adopted within the UNFCCC and a climate policy engineering, in which techno‐economic modeling occupies a distinctive position. Chapter 1 presents an interdisciplinary approach to analyzing these co‐evolutions and mobilises the concept of path dependency. It draws on a variety of sources, including academic and grey literature, CIRED archives and stakeholder interviews. The second part of the dissertation (chapters 2 and 3) examines two dimensions of a path‐dependent process that has led to a climate‐centric approach, including the coordination of negotiations around targets, from the Kyoto Protocol to the Paris Agreement, and persistent equity concerns about a burden‐sharing approach. The contribution to this path dependent process of energy economic experts from North countries, primarily in international fora and organisations is examined at four key moments: i) the European ecotax project (1990‐1992), ii) the negotiations on the flexibility mechanisms of the Kyoto Protocol (1995‐2001), iii) the adoption of mechanisms dedicated to South countries prior to Bali (NAMAs) (2001‐2007), and iv) the institutionalisation of the 2°C objective (2007‐2014). The third part analyzes the role of Integrated Assessment Models (IAMs) as a specific facet of the climate policy engineering in the climate‐centric approach of the negotiations. Chapter 4 shows that the reorientation of the policy agenda towards energy issues in the 80s had a significant impact on modeling efforts, particularly on the new IAMs that emerged following the institutionalization of the climate change issue. Chapter 5 shows how IAMs then became central in producing scenarios consistent with the 2°C target, based on a 'techno‐centric' approach. To that end, the IAM community relied on a repertoire of modeling practices and close collaboration with IPCC Group III (Chapter 6). The fourth part describes a fifth post‐Paris moment first characterized by a persistent gap between the long‐term transition scenarios generated by IAMs, in line with the IPCC AR5, and the short‐term challenges of accelerating the low‐carbon transition, as discussed in Chapter 7. Chapter 8 also highlights the growing role of modeling communities in the construction of national decarbonisation strategies and the organiszational and scientific challenges they face. The dissertation concludes that the incremental dynamics of change in the UNFCCC policy instruments have co‐evolved with opposite conceptions of the climate‐development nexus within a climate policy engineering, due to both strategies of alignment with the negotiating agenda and internal dynamics (techno‐centric reductionism, North‐South asymmetry, community effect). The conclusion calls for a more in‐depth examination of recent change and continuity within this technoeconomic expertise and of its interfaces within the current climate negotiations.",
+                "document_type": "TRAD",
+                "publication_date": "2025-01-16",
+                "semantic_rank": 3,
+                "full_text_rank": 200,
+                "associated_query": "Qui est le chercheur ou la chercheuse la plus connue du CIRED"
+              }
+            }
+          },
+          {
+            "id": "08425a3",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 544,
+              "end": 553
+            },
+            "payload": null
+          },
+          {
+            "id": "8d7d6be",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 598,
+              "end": 607
+            },
+            "payload": {
+              "id": "8d7d6be8-fa2c-5939-80c3-27741f798f8f",
+              "document_id": "b7ef1927-bf9c-53fa-a74b-de08fff61745",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016098765432098764,
+              "text": "Document Title: Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles\n\nText: Céline Guivarch sans qui je naurais jamais pu mener à bout cette recherche et qui\na été toujours disponible surtout dans les moments où javais plus de doutes sur ce\nprojet.\nJe suis très reconnaissant de laccueil que jai eu au sein du CIRED au Jardin\nTropicale. Je garde de très bons souvenirs des discussions multidisciplinaires avec\ntoute léquipe. Cette richesse sur la diversité de proﬁls et de sujets de discussions\nma nourri énormément et je serais toujours reconnaissant. Je vais toujours penser\nau CIRED comme la maison qui ma donné lopportunité dépanouir mes compé-\ntences scientiﬁques. Je tiens à remercier à tous les chercheurs, doctorants, stagiaires\net personnel administratif de lunité, et plus particulièrement à mes collègues de bu-\nreau Philippe Quirion, Aurélie Mejean, Florian Leblanc et Manon Solignac avec qui\njai eu des discussions très riches et des conseils très pratiques.\nPendant ces années passées au sein de Renault, jai pu rencontrer des per-",
+              "metadata": {
+                "title": "Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles",
+                "hal_id": "tel-02435183",
+                "authors": [
+                  "Juan Vera Molina"
+                ],
+                "version": "v0",
+                "citation": "Juan Vera Molina. Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles. Economics and Finance. Université Paris Saclay (COmUE), 2019. English. ⟨NNT : 2019SACLA021⟩. ⟨tel-02435183⟩",
+                "source_url": "https://hal.science/tel-02435183",
+                "chunk_order": 13,
+                "description": "Policy instruments on passenger vehicle emissions aim at reducing negative environmental externalities from vehicles use. To regulate CO2 emissions, fuel economy standards have been put in place in Europe and in the US, among others. These standards are made more stringent over time. This thesis analyzes how automotive firms anticipate and prepare their future technology portfolio to comply with expected future standards. To do so, we develop a model of optimal technology choice that captures technology diffusion constraints.With this framework, this thesis investigates three policy questions. First, we ask how the form of anticipation can affect near- and long-term technology choices. We find that focusing solely on near-term objectives can lead to failure to comply with a long-term target. In fact, meeting the near-term target is not a necessary nor a sufficient condition to satisfy long-term compliance. Moreover, when there is partial anticipation, as in a myopic view of the future, technology choices will be stuck with low abatement technologies creating a path dependency that limits long-term abatement potential.Second, we ask how much indexing fuel economy standard to mass (as in Europe or China) changes the optimal technology. We show that, for the same emission target, there is no significant difference in the social cost of mobility for an average vehicle with and without mass index. Thus a heavier vehicle fleet has the same cost than a lighter one. However, the technology choices are different, and mass indexed fuel economy standards lead to sidestepping lightweight technologies despite being cost effective from a CO2 emissions abatement point of view.Third, we ask how technology choices change when policies with multiple objectives overlap. We focus on two externalities associated with mobility: CO2 emissions and local air pollution. We show three type of effects of overlapping policies. First, a technology specific policy such as the Zero Emission Vehicle Mandate in combination with a fuel economy standard induces carmakers to develop more expensive green technologies and prevents cheap, dirty technologies from disappearing compared to the case of a fuel economy standard alone. Second, the combination of policies can lead to very high costs when technologies adapted to each policy are very different. Third, we find an ambiguous effect of overlapping policies relative to single-objective policy in terms of emissions performance.",
+                "document_type": "THESE",
+                "publication_date": "2019-09-10",
+                "semantic_rank": 4,
+                "full_text_rank": 200,
+                "associated_query": "Qui est le chercheur ou la chercheuse la plus connue du CIRED"
+              }
+            }
+          },
+          {
+            "id": "6f902b3",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 629,
+              "end": 638
+            },
+            "payload": {
+              "id": "6f902b3f-ea27-586d-8679-90b4ae6d38d7",
+              "document_id": "1edd5637-65fd-518c-bb0b-27fd40417798",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015547619047619046,
+              "text": "Document Title: Correcting the 'self-trade' issue in the GTAPAgg software - Technical paper\n\nText: Correspondence Address : \nMeriem Hamdi -Cherif    \nCIRED ,  45 bis avenue de la Belle Gabrielle, 94736  Nogent -sur-Marne CEDEX  , France.   \nTel: +33  1 43 94 73 74  \nEmail : hcmeriem@centre -cired.fr  \n                                                   \n1 Research fellow at CIRED.  Meriem Hamdi -Cherifs work was supported by the Chair Modeling for sustainable development, \nled by MINES ParisTech, École des Ponts ParisTech, AgroParisTech and ParisTech, and financed by ADEME, EDF, Renault, \nSchneider Electric  and Total. The views expressed in this article are those of the authors and do not necessarily reflect the views \nof the above -mentioned institutions.  \n2 Chargé de Recherche (Research fellow) CNRS (Centre National de la Recherche Scientifique), CIRED.",
+              "metadata": {
+                "title": "Correcting the 'self-trade' issue in the GTAPAgg software - Technical paper",
+                "hal_id": "hal-00866558",
+                "authors": "['Meriem Hamdi-Cherif', 'Frédéric Ghersi']",
+                "version": "v0",
+                "citation": "Meriem Hamdi-Cherif, Frédéric Ghersi. Correcting the 'self-trade' issue in the GTAPAgg software - Technical paper. 2012. ⟨hal-00866558⟩",
+                "source_url": "https://hal.science/hal-00866558",
+                "chunk_order": 12,
+                "description": "The successive versions of the GTAP databases are provided with GTAPAgg, a programme that computes values of the series of the database for any regional and sectoral aggregation. A 'self-trade' issue arises from the fact that GTAPAgg aggregates the several series concerned with international trade, like any other series, by simply summing them up : the resulting series include a share of exports and imports happening between the aggregated regions, which should rather be treated as economic flows internal to the region resulting from the aggregation process. This paper details a method that aims at solving this shortcoming, and discusses the importance of doing so. A first section puts the research question into context and discusses its likely importance when using GTAP as a calibration dataset for computable general equilibrium modelling. A second section details the analytics of the method proposed to correct the aggregation process, in the broader framework of a programme extending GTAPAgg to the production of national account matrixes in the standard United Nations format. An appendix provides the code of the extended aggregation programme developed.",
+                "document_type": "UNDEFINED",
+                "publication_date": "2012-04-01",
+                "semantic_rank": 6,
+                "full_text_rank": 200,
+                "associated_query": "Qui est le chercheur ou la chercheuse la plus connue du CIRED"
+              }
+            }
+          },
+          {
+            "id": "09ef3c3",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 657,
+              "end": 666
+            },
+            "payload": {
+              "id": "09ef3c30-a9a5-5a6b-a897-b91d04512d1a",
+              "document_id": "de4c4c57-1c50-5c4e-be83-81ce233b6aaf",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.0147909604519774,
+              "text": "Document Title: L'économicisation de la nature, réalités historiques et mythes contemporains\n\nText: 1 harold.levrel@agroparistech.fr | CIRED  Centre international de recherche sur lenvironnement et le développement, 45 bis av. de la Belle Gabrielle, 94736 Nogent-sur-Marne Cedex, France. 2 missemer@centre-cired.fr | CIRED  Centre international de recherche sur lenvironnement et le développement, 45 bis av. de la Belle Gabrielle, 94736 Nogent-sur-Marne Cedex, France.",
+              "metadata": {
+                "title": "L'économicisation de la nature, réalités historiques et mythes contemporains",
+                "hal_id": "halshs-01387121",
+                "authors": [
+                  "Harold Levrel",
+                  "Antoine Missemer"
+                ],
+                "version": "v0",
+                "citation": "Harold Levrel, Antoine Missemer. L'économicisation de la nature, réalités historiques et mythes contemporains. 2016. ⟨halshs-01387121⟩",
+                "source_url": "https://hal.science/halshs-01387121",
+                "chunk_order": 4,
+                "description": "Il est fréquent d’entendre dans le débat public et scientifique que l’économie, en investissant les sujets environnementaux, a fini par aliéner l’essence même de la nature, vue désormais comme un ensemble de biens, de services et de capitaux à préserver, voire à faire fructifier, sans égard pour les dimensions extra-économiques et symboliques qu’elle revêt. Cette économicisation de la nature s’exprimerait à travers des mécanismes de monétarisation, de privatisation et de marchandisation regrettables. Sans doute ces phénomènes sont-ils bien réels. Ils méritent néanmoins d’être examinés de près pour constater d’une part qu’ils ne sont pas nouveaux dans l’histoire des rapports homme-nature, et pour souligner d’autre part qu’ils entrent en concurrence avec des logiques de dés-économicisation de la nature, qu’il s’agit aussi de prendre en compte aujourd’hui. Notre contribution a donc pour ambition d’éclaircir le débat, en distinguant ce qui relève de la réalité et ce qui relève davantage du mythe dans cette économicisation de la nature, en soulignant que cette dernière n’est ni nouvelle, ni irréversible, ni univoque et qu’elle ne semble pas indéfectiblement liée à l’essor du (néo)libéralisme.",
+                "document_type": "UNDEFINED",
+                "publication_date": "2016-10-25",
+                "semantic_rank": 9,
+                "full_text_rank": 200,
+                "associated_query": "Qui est le chercheur ou la chercheuse la plus connue du CIRED"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "47068b49-4976-50d1-89fb-f203c7e4016a",
+            "document_id": "27230f06-35bc-5322-be84-06851a5e9539",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)\n\nText: Pourfairevivrecetteéquipe,leCIREDabesoindetrouverconstamment denouvelles sources\n\n530 Dans les années 1970, avec la MSH dirigée par He ller, le CIRED met en place une importante unité de \ndocumentation, centre névralgique de lexpertise sur lécodéveloppement. \n531 Le GRSD occupait un bureau 4 rue de Chevreuse, siège de lAssociation des femmes diplômées de luniversité, \nquil partageait avec Daniel Thorner. \n532 Entretien avec K. Vinaver et K. Sachs, octobre 2017.  \n533 Entretien avec D. Théry, novembre 2017. \n534 Entretien avec J.-C. Hourcade, décembre 2017. \n535 Entretien avec S. Passaris, janvier 2018. Les stagiair es recrutés sont à limage de cette diversification : \narchitectes, ingénieurs, agronomes.  Rapport dactivités du CIRED, 1977, archives du CIRED, Paris.",
+            "metadata": {
+              "title": "The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)",
+              "hal_id": "hal-04891263",
+              "authors": "['C. Cassen']",
+              "version": "v0",
+              "citation": "C. Cassen. The climate/development dilemma in international climate negotiations: \r\nHistory of a climate‐centric reductionism (english traduction)\r\n(1990‐2022). 2025. ⟨hal-04891263⟩",
+              "source_url": "https://hal.science/hal-04891263",
+              "chunk_order": 2727,
+              "description": "The dissertation examines the persistent climate‐centric approach of the international climate negotiations and its related tension with development issues. It analyzes this tension through the coevolution between the main policy instruments adopted within the UNFCCC and a climate policy engineering, in which techno‐economic modeling occupies a distinctive position. Chapter 1 presents an interdisciplinary approach to analyzing these co‐evolutions and mobilises the concept of path dependency. It draws on a variety of sources, including academic and grey literature, CIRED archives and stakeholder interviews. The second part of the dissertation (chapters 2 and 3) examines two dimensions of a path‐dependent process that has led to a climate‐centric approach, including the coordination of negotiations around targets, from the Kyoto Protocol to the Paris Agreement, and persistent equity concerns about a burden‐sharing approach. The contribution to this path dependent process of energy economic experts from North countries, primarily in international fora and organisations is examined at four key moments: i) the European ecotax project (1990‐1992), ii) the negotiations on the flexibility mechanisms of the Kyoto Protocol (1995‐2001), iii) the adoption of mechanisms dedicated to South countries prior to Bali (NAMAs) (2001‐2007), and iv) the institutionalisation of the 2°C objective (2007‐2014). The third part analyzes the role of Integrated Assessment Models (IAMs) as a specific facet of the climate policy engineering in the climate‐centric approach of the negotiations. Chapter 4 shows that the reorientation of the policy agenda towards energy issues in the 80s had a significant impact on modeling efforts, particularly on the new IAMs that emerged following the institutionalization of the climate change issue. Chapter 5 shows how IAMs then became central in producing scenarios consistent with the 2°C target, based on a 'techno‐centric' approach. To that end, the IAM community relied on a repertoire of modeling practices and close collaboration with IPCC Group III (Chapter 6). The fourth part describes a fifth post‐Paris moment first characterized by a persistent gap between the long‐term transition scenarios generated by IAMs, in line with the IPCC AR5, and the short‐term challenges of accelerating the low‐carbon transition, as discussed in Chapter 7. Chapter 8 also highlights the growing role of modeling communities in the construction of national decarbonisation strategies and the organiszational and scientific challenges they face. The dissertation concludes that the incremental dynamics of change in the UNFCCC policy instruments have co‐evolved with opposite conceptions of the climate‐development nexus within a climate policy engineering, due to both strategies of alignment with the negotiating agenda and internal dynamics (techno‐centric reductionism, North‐South asymmetry, community effect). The conclusion calls for a more in‐depth examination of recent change and continuity within this technoeconomic expertise and of its interfaces within the current climate negotiations.",
+              "document_type": "TRAD",
+              "publication_date": "2025-01-16",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Qui est le chercheur ou la chercheuse la plus connue du CIRED"
+            }
+          },
+          {
+            "id": "6f40a9ff-359e-51f9-a845-343116938ca9",
+            "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: lÉnergie, section française de lIAEE. . Par léquipe du CIRED, elle collabore à un \nréseau francilien de recherche sur le développement soutenable qui regroupe des \nlaboratoires et centres de recherche de disciplines variées. Elle travaille également \navec léquipe liée à Patrick Criqui à Grenobl e. Enfin, au niveau international, son \nréseau est lié avec celui du GIEC. En effet, le CIRED fut, dès les débuts de \nlorganisation, le lieu de re crutement privilégié des économistes et experts français \nchoisis pour rédiger les rapports. Le centre a ainsi développé des collaborations avec \nles chercheurs de luniversité de Camb ridge (et notamment Michael Grubb et le \n297Voir partenaires et réseau : http://www.modelisation-prospective.org/equipe.html consulté le 25 \nfévrier 2014.",
+            "metadata": {
+              "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+              "hal_id": "tel-01112427",
+              "authors": [
+                "Pauline Huet"
+              ],
+              "version": "v0",
+              "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+              "source_url": "https://hal.science/tel-01112427",
+              "chunk_order": 541,
+              "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+              "document_type": "THESE",
+              "publication_date": "2015-01-15",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Qui est le chercheur ou la chercheuse la plus connue du CIRED"
+            }
+          },
+          {
+            "id": "08425a37-3879-5dc8-b565-c46a84d669cb",
+            "document_id": "27230f06-35bc-5322-be84-06851a5e9539",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)\n\nText: pour regrouper des chercheurs issus de disciplines variées  et travaillant sur des aires communes (voir Popa, 2015). \nCompte tenu de son profil interdisciplinaire, le CIRED pouvait avoir vocation à rejoindre ce pôle. \n590 PV du Conseil scientifique de lEHESS du 20 mai 1986, op.cit.  Le refus transparaît déjà dans Godard et al. \n(1985) où le CIRED veut être identifié comme un  centre thématique  (p. 4) et non centré sur une aire donnée. \nVoir aussi entretien avec J.-C. Hourcade, mars 2018. \n591 Nicolon ayant renoncé, Hourcade était le seul, à lépoque , à être titulaire dune thèse dÉtat (Hourcade, 1984) \ndans les chercheurs pressentis pour prendre la succession de Sachs, ce qui a probablement joué un rôle dans son \nintronisation. Entretien avec D. Théry, novembre 2017 ; entretien avec J.-C. Hourcade, mars 2018.",
+            "metadata": {
+              "title": "The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)",
+              "hal_id": "hal-04891263",
+              "authors": "['C. Cassen']",
+              "version": "v0",
+              "citation": "C. Cassen. The climate/development dilemma in international climate negotiations: \r\nHistory of a climate‐centric reductionism (english traduction)\r\n(1990‐2022). 2025. ⟨hal-04891263⟩",
+              "source_url": "https://hal.science/hal-04891263",
+              "chunk_order": 2786,
+              "description": "The dissertation examines the persistent climate‐centric approach of the international climate negotiations and its related tension with development issues. It analyzes this tension through the coevolution between the main policy instruments adopted within the UNFCCC and a climate policy engineering, in which techno‐economic modeling occupies a distinctive position. Chapter 1 presents an interdisciplinary approach to analyzing these co‐evolutions and mobilises the concept of path dependency. It draws on a variety of sources, including academic and grey literature, CIRED archives and stakeholder interviews. The second part of the dissertation (chapters 2 and 3) examines two dimensions of a path‐dependent process that has led to a climate‐centric approach, including the coordination of negotiations around targets, from the Kyoto Protocol to the Paris Agreement, and persistent equity concerns about a burden‐sharing approach. The contribution to this path dependent process of energy economic experts from North countries, primarily in international fora and organisations is examined at four key moments: i) the European ecotax project (1990‐1992), ii) the negotiations on the flexibility mechanisms of the Kyoto Protocol (1995‐2001), iii) the adoption of mechanisms dedicated to South countries prior to Bali (NAMAs) (2001‐2007), and iv) the institutionalisation of the 2°C objective (2007‐2014). The third part analyzes the role of Integrated Assessment Models (IAMs) as a specific facet of the climate policy engineering in the climate‐centric approach of the negotiations. Chapter 4 shows that the reorientation of the policy agenda towards energy issues in the 80s had a significant impact on modeling efforts, particularly on the new IAMs that emerged following the institutionalization of the climate change issue. Chapter 5 shows how IAMs then became central in producing scenarios consistent with the 2°C target, based on a 'techno‐centric' approach. To that end, the IAM community relied on a repertoire of modeling practices and close collaboration with IPCC Group III (Chapter 6). The fourth part describes a fifth post‐Paris moment first characterized by a persistent gap between the long‐term transition scenarios generated by IAMs, in line with the IPCC AR5, and the short‐term challenges of accelerating the low‐carbon transition, as discussed in Chapter 7. Chapter 8 also highlights the growing role of modeling communities in the construction of national decarbonisation strategies and the organiszational and scientific challenges they face. The dissertation concludes that the incremental dynamics of change in the UNFCCC policy instruments have co‐evolved with opposite conceptions of the climate‐development nexus within a climate policy engineering, due to both strategies of alignment with the negotiating agenda and internal dynamics (techno‐centric reductionism, North‐South asymmetry, community effect). The conclusion calls for a more in‐depth examination of recent change and continuity within this technoeconomic expertise and of its interfaces within the current climate negotiations.",
+              "document_type": "TRAD",
+              "publication_date": "2025-01-16",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Qui est le chercheur ou la chercheuse la plus connue du CIRED"
+            }
+          },
+          {
+            "id": "8d7d6be8-fa2c-5939-80c3-27741f798f8f",
+            "document_id": "b7ef1927-bf9c-53fa-a74b-de08fff61745",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles\n\nText: Céline Guivarch sans qui je naurais jamais pu mener à bout cette recherche et qui\na été toujours disponible surtout dans les moments où javais plus de doutes sur ce\nprojet.\nJe suis très reconnaissant de laccueil que jai eu au sein du CIRED au Jardin\nTropicale. Je garde de très bons souvenirs des discussions multidisciplinaires avec\ntoute léquipe. Cette richesse sur la diversité de proﬁls et de sujets de discussions\nma nourri énormément et je serais toujours reconnaissant. Je vais toujours penser\nau CIRED comme la maison qui ma donné lopportunité dépanouir mes compé-\ntences scientiﬁques. Je tiens à remercier à tous les chercheurs, doctorants, stagiaires\net personnel administratif de lunité, et plus particulièrement à mes collègues de bu-\nreau Philippe Quirion, Aurélie Mejean, Florian Leblanc et Manon Solignac avec qui\njai eu des discussions très riches et des conseils très pratiques.\nPendant ces années passées au sein de Renault, jai pu rencontrer des per-",
+            "metadata": {
+              "title": "Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles",
+              "hal_id": "tel-02435183",
+              "authors": [
+                "Juan Vera Molina"
+              ],
+              "version": "v0",
+              "citation": "Juan Vera Molina. Technology Choices under Emissions Policy and Technology Diffusion constraints : the case of Passenger Vehicles. Economics and Finance. Université Paris Saclay (COmUE), 2019. English. ⟨NNT : 2019SACLA021⟩. ⟨tel-02435183⟩",
+              "source_url": "https://hal.science/tel-02435183",
+              "chunk_order": 13,
+              "description": "Policy instruments on passenger vehicle emissions aim at reducing negative environmental externalities from vehicles use. To regulate CO2 emissions, fuel economy standards have been put in place in Europe and in the US, among others. These standards are made more stringent over time. This thesis analyzes how automotive firms anticipate and prepare their future technology portfolio to comply with expected future standards. To do so, we develop a model of optimal technology choice that captures technology diffusion constraints.With this framework, this thesis investigates three policy questions. First, we ask how the form of anticipation can affect near- and long-term technology choices. We find that focusing solely on near-term objectives can lead to failure to comply with a long-term target. In fact, meeting the near-term target is not a necessary nor a sufficient condition to satisfy long-term compliance. Moreover, when there is partial anticipation, as in a myopic view of the future, technology choices will be stuck with low abatement technologies creating a path dependency that limits long-term abatement potential.Second, we ask how much indexing fuel economy standard to mass (as in Europe or China) changes the optimal technology. We show that, for the same emission target, there is no significant difference in the social cost of mobility for an average vehicle with and without mass index. Thus a heavier vehicle fleet has the same cost than a lighter one. However, the technology choices are different, and mass indexed fuel economy standards lead to sidestepping lightweight technologies despite being cost effective from a CO2 emissions abatement point of view.Third, we ask how technology choices change when policies with multiple objectives overlap. We focus on two externalities associated with mobility: CO2 emissions and local air pollution. We show three type of effects of overlapping policies. First, a technology specific policy such as the Zero Emission Vehicle Mandate in combination with a fuel economy standard induces carmakers to develop more expensive green technologies and prevents cheap, dirty technologies from disappearing compared to the case of a fuel economy standard alone. Second, the combination of policies can lead to very high costs when technologies adapted to each policy are very different. Third, we find an ambiguous effect of overlapping policies relative to single-objective policy in terms of emissions performance.",
+              "document_type": "THESE",
+              "publication_date": "2019-09-10",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Qui est le chercheur ou la chercheuse la plus connue du CIRED"
+            }
+          },
+          {
+            "id": "92ffec51-4c60-5db7-a129-f94698a5e087",
+            "document_id": "86c2a42a-fd13-5463-b0ce-7f1f0ec27169",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: « La recherche en pratique(s) » : un cycle de rendez-vous pour sensibiliser et former les chercheurs & doctorants du CIRED\n\nText: modèles économiques dans lédition scientifique (notamment du modèle auteur-\npayeur  \npar Karim Ramdani  (mathématicien, DR4 Inria5, membre du CoSO6)\nvenu au CIRED spécialement (depuis Nancy)\n11 avril 2023\n14h00-15h30 (présentation puis échanges avec la salle) LA RECHERCHE EN PRATIQUE(S) \nun cycle de rendez-vous pour sensibiliser et former les chercheurs & doctorants du CIRED  \nsur les enjeux cruciaux liés à leurs pratiques de recherche, dont la science ouverte\nEstelle Carciofi, chargée de médiation scientifique CNRS1 au CIRED2 (estelle.carciofi@cnrs.fr)\n CONSTAT \n  Évolution rapide  des pratiques de recherche et du \npaysage de la science ouverte\n  Une interlocutrice à distance  via lune des tutelles \ndu laboratoire, mais pas de personnel sur place pour \naccompagner les chercheurs et doctorants\n  Information principalement par mail sur ces sujets\nLe CIRED \n= Centre international de recherche sur lenvironnement et le développement\n IDÉE \n  Partir des besoins exprimés  par les chercheurs et",
+            "metadata": {
+              "title": "« La recherche en pratique(s) » : un cycle de rendez-vous pour sensibiliser et former les chercheurs & doctorants du CIRED",
+              "hal_id": "hal-04311547",
+              "authors": [
+                "Estelle Carciofi"
+              ],
+              "version": "v0",
+              "citation": "Estelle Carciofi. « La recherche en pratique(s) » : un cycle de rendez-vous pour sensibiliser et former les chercheurs & doctorants du CIRED. Pratiquer la science ouverte : des services et des compétences en action, Jul 2023, Paris, France. ⟨hal-04311547⟩",
+              "source_url": "https://hal.science/hal-04311547",
+              "chunk_order": 3,
+              "description": "« La Recherche en pratique(s) » est un cycle de rendez-vous dont le but est de sensibiliser et former les chercheurs et doctorants du CIRED [le centre international de recherche sur l'environnement et le développement] sur les enjeux cruciaux associés à leurs pratiques de recherche d'une manière claire et dynamique, grâce à des intervenants de qualité et à un format variable en fonction des thématiques. Ces thématiques concernent principalement la science ouverte (données de la recherche, libre accès, édition scientifique, ...).",
+              "document_type": "POSTER",
+              "publication_date": "2023-07-04",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Qui est le chercheur ou la chercheuse la plus connue du CIRED"
+            }
+          },
+          {
+            "id": "6f902b3f-ea27-586d-8679-90b4ae6d38d7",
+            "document_id": "1edd5637-65fd-518c-bb0b-27fd40417798",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Correcting the 'self-trade' issue in the GTAPAgg software - Technical paper\n\nText: Correspondence Address : \nMeriem Hamdi -Cherif    \nCIRED ,  45 bis avenue de la Belle Gabrielle, 94736  Nogent -sur-Marne CEDEX  , France.   \nTel: +33  1 43 94 73 74  \nEmail : hcmeriem@centre -cired.fr  \n                                                   \n1 Research fellow at CIRED.  Meriem Hamdi -Cherifs work was supported by the Chair Modeling for sustainable development, \nled by MINES ParisTech, École des Ponts ParisTech, AgroParisTech and ParisTech, and financed by ADEME, EDF, Renault, \nSchneider Electric  and Total. The views expressed in this article are those of the authors and do not necessarily reflect the views \nof the above -mentioned institutions.  \n2 Chargé de Recherche (Research fellow) CNRS (Centre National de la Recherche Scientifique), CIRED.",
+            "metadata": {
+              "title": "Correcting the 'self-trade' issue in the GTAPAgg software - Technical paper",
+              "hal_id": "hal-00866558",
+              "authors": "['Meriem Hamdi-Cherif', 'Frédéric Ghersi']",
+              "version": "v0",
+              "citation": "Meriem Hamdi-Cherif, Frédéric Ghersi. Correcting the 'self-trade' issue in the GTAPAgg software - Technical paper. 2012. ⟨hal-00866558⟩",
+              "source_url": "https://hal.science/hal-00866558",
+              "chunk_order": 12,
+              "description": "The successive versions of the GTAP databases are provided with GTAPAgg, a programme that computes values of the series of the database for any regional and sectoral aggregation. A 'self-trade' issue arises from the fact that GTAPAgg aggregates the several series concerned with international trade, like any other series, by simply summing them up : the resulting series include a share of exports and imports happening between the aggregated regions, which should rather be treated as economic flows internal to the region resulting from the aggregation process. This paper details a method that aims at solving this shortcoming, and discusses the importance of doing so. A first section puts the research question into context and discusses its likely importance when using GTAP as a calibration dataset for computable general equilibrium modelling. A second section details the analytics of the method proposed to correct the aggregation process, in the broader framework of a programme extending GTAPAgg to the production of national account matrixes in the standard United Nations format. An appendix provides the code of the extended aggregation programme developed.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2012-04-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Qui est le chercheur ou la chercheuse la plus connue du CIRED"
+            }
+          },
+          {
+            "id": "b005a7ff-d3b4-5b30-82ff-618d5928df1e",
+            "document_id": "86c2a42a-fd13-5463-b0ce-7f1f0ec27169",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: « La recherche en pratique(s) » : un cycle de rendez-vous pour sensibiliser et former les chercheurs & doctorants du CIRED\n\nText: émanant des établissements denseignement et de\nrecherche français ou étrangers, des laboratoires\npublics ou privés.\nDistributed under a Creative Commons Attribution - NonCommercial - NoDerivatives 4.0\nInternational License\n La recherche en pratique(s) : un cycle de rendez-vous\npour sensibiliser et former les chercheurs & doctorants\ndu CIRED\nEstelle Carciofi\nTo cite this version:\nEstelle Carciofi.  La recherche en pratique(s) : un cycle de rendez-vous pour sensibiliser et former\nles chercheurs & doctorants du CIRED. Pratiquer la science ouverte: des services et des compétences\nen action, Jul 2023, Paris, France. hal-04311547",
+            "metadata": {
+              "title": "« La recherche en pratique(s) » : un cycle de rendez-vous pour sensibiliser et former les chercheurs & doctorants du CIRED",
+              "hal_id": "hal-04311547",
+              "authors": [
+                "Estelle Carciofi"
+              ],
+              "version": "v0",
+              "citation": "Estelle Carciofi. « La recherche en pratique(s) » : un cycle de rendez-vous pour sensibiliser et former les chercheurs & doctorants du CIRED. Pratiquer la science ouverte : des services et des compétences en action, Jul 2023, Paris, France. ⟨hal-04311547⟩",
+              "source_url": "https://hal.science/hal-04311547",
+              "chunk_order": 1,
+              "description": "« La Recherche en pratique(s) » est un cycle de rendez-vous dont le but est de sensibiliser et former les chercheurs et doctorants du CIRED [le centre international de recherche sur l'environnement et le développement] sur les enjeux cruciaux associés à leurs pratiques de recherche d'une manière claire et dynamique, grâce à des intervenants de qualité et à un format variable en fonction des thématiques. Ces thématiques concernent principalement la science ouverte (données de la recherche, libre accès, édition scientifique, ...).",
+              "document_type": "POSTER",
+              "publication_date": "2023-07-04",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Qui est le chercheur ou la chercheuse la plus connue du CIRED"
+            }
+          },
+          {
+            "id": "8fd98c62-540e-545c-8eb1-47b4b60fcbf7",
+            "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: collaboration entre le CIRED et le Centre  de Mathématiques A ppliquée de lÉcole \ndes Mines, elle fut créée en 2008 avec le s outien et limplication dacteurs industriels \ntels que Total, Renault ou EDF, mais aussi de lAgence de lEnvironnement et de la \nMaîtrise de lEnergie. La Chaire sinsère dans un réseau de recherche \ninterdisciplinaire et international297\n296Bien que des échanges se tiennent, notamment par le biais de lAssociation des Économistes de \nlÉnergie, section française de lIAEE. . Par léquipe du CIRED, elle collabore à un \nréseau francilien de recherche sur le développement soutenable qui regroupe des \nlaboratoires et centres de recherche de disciplines variées. Elle travaille également \navec léquipe liée à Patrick Criqui à Grenobl e. Enfin, au niveau international, son \nréseau est lié avec celui du GIEC. En effet, le CIRED fut, dès les débuts de \nlorganisation, le lieu de re crutement privilégié des économistes et experts français",
+            "metadata": {
+              "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+              "hal_id": "tel-01112427",
+              "authors": [
+                "Pauline Huet"
+              ],
+              "version": "v0",
+              "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+              "source_url": "https://hal.science/tel-01112427",
+              "chunk_order": 540,
+              "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+              "document_type": "THESE",
+              "publication_date": "2015-01-15",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Qui est le chercheur ou la chercheuse la plus connue du CIRED"
+            }
+          },
+          {
+            "id": "09ef3c30-a9a5-5a6b-a897-b91d04512d1a",
+            "document_id": "de4c4c57-1c50-5c4e-be83-81ce233b6aaf",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: L'économicisation de la nature, réalités historiques et mythes contemporains\n\nText: 1 harold.levrel@agroparistech.fr | CIRED  Centre international de recherche sur lenvironnement et le développement, 45 bis av. de la Belle Gabrielle, 94736 Nogent-sur-Marne Cedex, France. 2 missemer@centre-cired.fr | CIRED  Centre international de recherche sur lenvironnement et le développement, 45 bis av. de la Belle Gabrielle, 94736 Nogent-sur-Marne Cedex, France.",
+            "metadata": {
+              "title": "L'économicisation de la nature, réalités historiques et mythes contemporains",
+              "hal_id": "halshs-01387121",
+              "authors": [
+                "Harold Levrel",
+                "Antoine Missemer"
+              ],
+              "version": "v0",
+              "citation": "Harold Levrel, Antoine Missemer. L'économicisation de la nature, réalités historiques et mythes contemporains. 2016. ⟨halshs-01387121⟩",
+              "source_url": "https://hal.science/halshs-01387121",
+              "chunk_order": 4,
+              "description": "Il est fréquent d’entendre dans le débat public et scientifique que l’économie, en investissant les sujets environnementaux, a fini par aliéner l’essence même de la nature, vue désormais comme un ensemble de biens, de services et de capitaux à préserver, voire à faire fructifier, sans égard pour les dimensions extra-économiques et symboliques qu’elle revêt. Cette économicisation de la nature s’exprimerait à travers des mécanismes de monétarisation, de privatisation et de marchandisation regrettables. Sans doute ces phénomènes sont-ils bien réels. Ils méritent néanmoins d’être examinés de près pour constater d’une part qu’ils ne sont pas nouveaux dans l’histoire des rapports homme-nature, et pour souligner d’autre part qu’ils entrent en concurrence avec des logiques de dés-économicisation de la nature, qu’il s’agit aussi de prendre en compte aujourd’hui. Notre contribution a donc pour ambition d’éclaircir le débat, en distinguant ce qui relève de la réalité et ce qui relève davantage du mythe dans cette économicisation de la nature, en soulignant que cette dernière n’est ni nouvelle, ni irréversible, ni univoque et qu’elle ne semble pas indéfectiblement liée à l’essor du (néo)libéralisme.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2016-10-25",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "Qui est le chercheur ou la chercheuse la plus connue du CIRED"
+            }
+          },
+          {
+            "id": "871ed780-9dcb-5d66-b881-874330cf790a",
+            "document_id": "9193be88-2308-56e7-b3b4-5e7a7c674d68",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Quelles sont les conséquences des évolutions des fondamentaux et de l'organisation du système électrique sur la construction tarifaire et les missions portées par le tarif ?\n\nText: ont été plus que précieuses.\nMon insertion au sein du CIRED ma permis dadoucir ma découverte et ma\nconfrontation au monde de la recherche académique. Heureusement pour moi, le\nCIRED est un environnement bienveillant et accueillant qui ma donné lopportu-\nnité dapprendre et ma accompagné tout au long de cette expérience. Jaimerais\nremercier tous les collègues que jai eu la chance de côtoyer et qui mont beaucoup\nappris.\nJai aussi eu la chance de travailler au sein du département de R&D de RTE.\nQuelle na pas été ma surprise du niveau stratosphérique de connaissance et dex-\npertise du collectif auquel jai été intégré. Je vais pointer du doigt et remercier tout\nparticulièrement, JYB, Virginie, Marc et H qui sont les principaux responsables de\nmon étonnement. La pertinence de leurs analyses et létendue de leur connaissance\nont, me semble-t-il, la bonne propriété dêtre infinies. RTE a de la chance de vous\navoir.\nJen profite également pour remercier tous les collègues doctorants que jai pu",
+            "metadata": {
+              "title": "Quelles sont les conséquences des évolutions des fondamentaux et de l'organisation du système électrique sur la construction tarifaire et les missions portées par le tarif ?",
+              "hal_id": "tel-04024031",
+              "authors": [
+                "Thomas Verderi"
+              ],
+              "version": "v0",
+              "citation": "Thomas Verderi. Quelles sont les conséquences des évolutions des fondamentaux et de l'organisation du système électrique sur la construction tarifaire et les missions portées par le tarif ?. Economies et finances. École des Ponts ParisTech, 2022. Français. ⟨NNT : 2022ENPC0035⟩. ⟨tel-04024031⟩",
+              "source_url": "https://hal.science/tel-04024031",
+              "chunk_order": 21,
+              "description": "La thèse porte sur les évolutions possibles du modèle tarifaire français dans un contexte de transition énergétique : développement de la mobilité électrique, décentralisation de la production électrique. Elle analyse ces enjeux d’un point de vue économique et sociologique. Elle traite des conséquences du développement des énergies renouvelables sur les courbes de charge résiduelles des postes sources de réseau de transport (différence entre la consommation et la production locale décentralisée). Un modèle qui prend en entrée des scénarios nationaux de prospective et qui effectue une descente d’échelle à la maille des postes sources a été développé, afin d’explorer les enjeux de calibrage du réseau dans un contexte de production plus ou moins décentralisée. Les résultats montrent que le développement des énergies renouvelables va fortement modifier les formes des courbes de charge résiduelles et les relations entre les variables utilisées pour construire le tarif du réseau de transport. Ces effets seront particulièrement importants sur les postes desservant des zones rurales : ce sont des postes caractérisés par de faibles consommations électriques mais qui sont destinés à accueillir des capacités de production électrique décentralisée. Ensuite, les travaux portent sur les hétérogénéités des coûts réseaux. Le principe de solidarité territoriale et la péréquation tarifaire font que les fortes disparités géographiques de coûts réseaux ne sont actuellement pas retranscrites dans les tarifs électriques. Un travail important de constitution d’une base de données géographique des coûts réseaux à l’horizon 2030, a été effectué. L’analyse de ces données met en évidence de très fortes disparités de coûts par habitant entre les communes urbaines et rurales. A horizon 2030, les investissements ont tendance à augmenter cet écart entre coût moyen urbain et rural : ils sont plus importants en volume par habitant dans les zones rurales. Cependant, les mouvements de population semblent contrarier cet effet si bien que la répartition semble plus égalitaire en 2030 qu’en 2020. Enfin, il semble que la répartition géographique des investissements ne remette pas en cause l’existence de la péréquation tarifaire. Puis l’analyse des différentiations géographiques en s’intéressant à l’autoproduction collective, objet assez récent dans le système électrique et dont la définition est encore en train de se préciser. Un modèle d’autoconsommation collective à la maille communale a été développé. La rentabilité de l’autoconsommation collective communale sera différenciée selon les capacités disponibles au sein des communes. L’incertitude liée à la régulation est très importante, mais elle reste du deuxième ordre par rapport à l’incertitude sur les prix des combustibles fossiles. Enfin, la thèse traite des attentes des acteurs vis-à-vis du tarif réglementé de vente, objet issu de nombreuses négociations et discussions entre les parties prenantes. L’émergence de nouveaux acteurs et le contexte de la transition énergétique pourraient conduire ce tarif à porter de nouvelles missions de politique publique. Les arguments mobilisés par les acteurs appartiennent à des champs différents : économiques, politiques, sociaux ou environnementaux. Ils mobilisent également des arguments relevant de la justice. En conclusion, les méthodes de construction tarifaire doivent être modifiées pour traiter correctement de la nouvelle forme des courbes de charge sous peine de ne pas arriver à accomplir les missions qui seront visées par le tarif. Certains principes de tarification peuvent et doivent être conservés : les évolutions des coûts et de la demande ne justifient pas la remise en question de la péréquation tarifaire et elle reste également fondamentale pour un nombre important d’enquêtés. Enfin, les missions accomplies par le tarif devraient être décidées collectivement et s’inscrire dans une réflexion globale sur la politique énergétique.",
+              "document_type": "THESE",
+              "publication_date": "2022-12-09",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "Qui est le chercheur ou la chercheuse la plus connue du CIRED"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 776,
+            "total_tokens": 776
+          }
+        }
+      },
+      "duration": 2670
+    },
+    "retrievalTime": 7120,
+    "generationTime": 2670,
+    "timestamp": "2025-07-12T12:51:37.251Z"
+  },
+  "server_context": {
+    "client_ip": "80.239.186.181",
+    "forwarded_for": "80.239.186.181",
+    "received_at": "2025-07-12T12:51:37.695477+00:00",
+    "server_version": "1.0.0"
+  }
+}

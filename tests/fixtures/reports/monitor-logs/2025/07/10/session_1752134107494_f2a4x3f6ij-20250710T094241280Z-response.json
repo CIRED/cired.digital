@@ -1,0 +1,474 @@
+{
+  "sessionId": "session_1752134107494_f2a4x3f6ij1a6v1k",
+  "timestamp": "20250710T094241280Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752140536300_nu8v68j",
+    "response": {
+      "results": {
+        "generated_answer": "Il était une fois en Tunisie, un pays riche en histoire et en culture, où les défis de l'eau et de l'agriculture ont toujours été au cœur des préoccupations. Voici une histoire inspirée des documents fournis :\n\nDans les années 1950, la Tunisie était en pleine transformation. Jean Tixeront, un ingénieur français, était à la tête de l'hydraulique dans le pays. Contrairement à d'autres qui privilégiaient les grands barrages, Tixeront croyait en des projets plus modestes et proches des gens. Il travaillait sans relâche pour améliorer l'accès à l'eau dans les villages tunisiens, en collaboration avec François Valiron, qui s'occupait également de l'urbanisation et de la desserte en eau [efc9a8f], [95fa0f5].\n\nPendant ce temps, le gouvernement tunisien lançait des initiatives innovantes pour améliorer la vie de ses citoyens. En 1995, le Programme National d'Alimentation et de Nutrition (PNAN) fut créé. Ce programme visait à encourager la consommation de produits locaux, à cibler les groupes à risques et à mettre en place des actions d'éducation et de communication pour améliorer le bien-être nutritionnel des Tunisiens [e84274f].\n\nCependant, la Tunisie faisait également face à des défis environnementaux. L'exploitation minière des eaux fossiles était une préoccupation majeure, car elle n'était pas durable. De plus, la maîtrise des eaux de surface irrégulières était cruciale pour l'agriculture. Des barrages et des lacs collinaires étaient construits pour collecter l'eau de pluie et soutenir l'agriculture locale [41aecd5].\n\nUn jour, Tixeront et Valiron rencontrèrent une jeune femme nommée Aïcha, qui vivait dans un petit village près de Tunis. Aïcha rêvait de voir son village prospérer, mais le manque d'eau et les méthodes agricoles traditionnelles limitaient leurs possibilités. Inspiré par sa détermination, Tixeront décida de mettre en place un projet pilote dans son village. Ils construisirent un petit barrage pour collecter l'eau de pluie et introduisirent des techniques agricoles plus efficaces.\n\nAvec le temps, le village d'Aïcha devint un modèle de réussite. Les récoltes s'améliorèrent, et les villageois eurent accès à une alimentation plus variée et nutritive grâce aux initiatives du PNAN. Aïcha, reconnaissante, devint une ambassadrice des projets de Tixeront et Valiron, voyageant à travers la Tunisie pour partager son histoire et inspirer d'autres villages.\n\nAinsi, grâce à la vision de Tixeront, au soutien de Valiron et à la détermination d'Aïcha, la Tunisie fit un pas de plus vers un avenir plus durable et prospère. Cette histoire montre comment des projets modestes et une approche proche des gens peuvent transformer des vies et des communautés entières.",
+        "citations": [
+          {
+            "id": "efc9a8f",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 689,
+              "end": 698
+            },
+            "payload": {
+              "id": "efc9a8fa-ca29-51fb-841c-b15fe7f8ca9e",
+              "document_id": "e0b6bda0-32e1-536c-b1ca-61e931d0542a",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: Interviews d’Ivan Chéret (1924-2020) sur la création des agences de l’eau\n\nText: dirigé lhydraulique en Tunisie. Il avait réussi [par de petit s projet s], en restant proche des gens, \nalors qu en Algéri e, le directeur général  de lHydraulique, Georges Drouhin (1903 -1977) \napparaissait comme le spécialiste des grands barrages . Et, quand il est revenu en France, il a été \nnommé  à la direction de l'électricité et des barrages  [...]  \nBB : et François Valiron2, sest -il intéressé à leau déjà en Tunisie  ? \nIC : Est -ce quil travaillait uniquement sur leau je ne sais plus, mais il était ladjoint de Tixeront, \net il faisait beaucoup de travaux durbanisation et de desserte en eau des villages.  \nBB : Mais quand on p arle de Valiron en Tunisie, on parle de quelle époque  ? En est-il parti en \n1956, au moment de larrivée au pouvoir de Bourguiba  ? \nIC : je ne sais pas, mais avant 1958. En tout cas il est plus âgé que moi, il est de la promotion \n1943 de lX. Il voulait réal iser, il était très actif. [Il] nétait pas à la commission de leau, cétait",
+              "metadata": {
+                "title": "Interviews d’Ivan Chéret (1924-2020) sur la création des agences de l’eau",
+                "hal_id": "hal-04484874",
+                "authors": [
+                  "Bernard Barraqué",
+                  "Gabrielle Bouleau"
+                ],
+                "version": "v0",
+                "citation": "Bernard Barraqué, Gabrielle Bouleau. Interviews d’Ivan Chéret (1924-2020) sur la création des agences de l’eau. Pour mémoire., 2021, 22, pp.8-22. ⟨hal-04484874⟩",
+                "source_url": "https://hal.science/hal-04484874",
+                "chunk_order": 7,
+                "document_type": "ART",
+                "publication_date": "2021-10-01",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "Raconte moi une histoire sur la tunisie"
+              }
+            }
+          },
+          {
+            "id": "95fa0f5",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 700,
+              "end": 709
+            },
+            "payload": {
+              "id": "95fa0f5e-1828-5e27-9af0-cfda3758e36d",
+              "document_id": "e0b6bda0-32e1-536c-b1ca-61e931d0542a",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01638993710691824,
+              "text": "Document Title: Interviews d’Ivan Chéret (1924-2020) sur la création des agences de l’eau\n\nText: 2 \n apparue là de manière aveuglante. Cest ce quon ne verrait peut -être pas aussi bien en France \nparce que ce nest peut -être pas les hommes qui vivent sur la nature, ce sont des villes, des \nindustries, ce sont des associations de pêche, ce nest pas aussi vital, en tout cas cest différent. \nEn tout cas je sais quà la Commission de leau les notion s de globalisation de lusage de leau, \ndunité du bassin versant ou de la nappe souterraine, étaient portées par Jean Tixeront qui avait \ndirigé lhydraulique en Tunisie. Il avait réussi [par de petit s projet s], en restant proche des gens, \nalors qu en Algéri e, le directeur général  de lHydraulique, Georges Drouhin (1903 -1977) \napparaissait comme le spécialiste des grands barrages . Et, quand il est revenu en France, il a été \nnommé  à la direction de l'électricité et des barrages  [...]  \nBB : et François Valiron2, sest -il intéressé à leau déjà en Tunisie  ?",
+              "metadata": {
+                "title": "Interviews d’Ivan Chéret (1924-2020) sur la création des agences de l’eau",
+                "hal_id": "hal-04484874",
+                "authors": [
+                  "Bernard Barraqué",
+                  "Gabrielle Bouleau"
+                ],
+                "version": "v0",
+                "citation": "Bernard Barraqué, Gabrielle Bouleau. Interviews d’Ivan Chéret (1924-2020) sur la création des agences de l’eau. Pour mémoire., 2021, 22, pp.8-22. ⟨hal-04484874⟩",
+                "source_url": "https://hal.science/hal-04484874",
+                "chunk_order": 6,
+                "document_type": "ART",
+                "publication_date": "2021-10-01",
+                "semantic_rank": 3,
+                "full_text_rank": 200,
+                "associated_query": "Raconte moi une histoire sur la tunisie"
+              }
+            }
+          },
+          {
+            "id": "e84274f",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1128,
+              "end": 1137
+            },
+            "payload": {
+              "id": "e84274fa-902e-587f-8951-3f4ce43cd311",
+              "document_id": "1e45050f-44e8-5c6c-8a77-d852ca09f33b",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016098765432098764,
+              "text": "Document Title: Agrimonde. Agricultures et alimentations du monde en 2050 : scénarios et défis pour un développement durable. Rapport\n\nText: sports.  \nLa Tunisie, dès 1995, a lancé une action originale dans le contexte de lépoque, le PNAN \n(Programme National dAlimentation et de Nutrition) , dont lobjectif était de  réaliser durablement l e \nbien-être nutritionnel des Tunisiens  en intégrant  un volet nutritionnel dans les politiques de \ndéveloppement. Parmi les mesures envisagées par le gouvernement tunisien, on note un \nencouragement à la consommation de produits locaux plutôt quimportés, le ciblage des groupes à \nrisques, la création dunités de nutrition à léche lon régional et la mise en place dactions déducat ion \net de communication. Même la Chine a commencé à pre ndre des mesures en publiant un  National \nPlan of Action for Nutrition   ainsi que des  Dietary Guidelines for Chinese Residents  [D'Arcy et \nal. , 2006]. Un système national de prévention systémati que de certaines maladies (hypertension, \ndiabète de type 2, et certains cancers) est égaleme nt en place depuis peu dans ce pays.",
+              "metadata": {
+                "title": "Agrimonde. Agricultures et alimentations du monde en 2050 : scénarios et défis pour un développement durable. Rapport",
+                "hal_id": "hal-04266413",
+                "authors": [
+                  "Jean-Marc Chaumet",
+                  "Francis Delpeuch",
+                  "Bruno Dorin",
+                  "Gérard Ghersi",
+                  "Bernard Hubert",
+                  "Tristan Le Cotty",
+                  "Sandrine Paillard",
+                  "Michel Petit",
+                  "Jean-Louis Rastoin",
+                  "Tévécia Ronzon",
+                  "Sébastien Treyer"
+                ],
+                "version": "v0",
+                "citation": "Jean-Marc Chaumet, Francis Delpeuch, Bruno Dorin, Gérard Ghersi, Bernard Hubert, et al.. Agrimonde. Agricultures et alimentations du monde en 2050 : scénarios et défis pour un développement durable. Rapport. [0] INRA; CIRAD. 2009, 195 p. ⟨hal-04266413⟩",
+                "source_url": "https://hal.science/hal-04266413",
+                "chunk_order": 1173,
+                "document_type": "REPORT",
+                "publication_date": "2009-01-01",
+                "semantic_rank": 4,
+                "full_text_rank": 200,
+                "associated_query": "Raconte moi une histoire sur la tunisie"
+              }
+            }
+          },
+          {
+            "id": "41aecd5",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1527,
+              "end": 1536
+            },
+            "payload": {
+              "id": "41aecd5f-3c46-5ff5-8693-bde54f762e08",
+              "document_id": "19ce73e4-e8d4-507b-9f39-d40ab5699c68",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01503448275862069,
+              "text": "Document Title: Les impacts du changement climatique sur les ressources en eaux en Méditerranée\n\nText: Tunisie, avec comme cons equence possible linvasion dea u sal ee. De plus,\nlexploitation mini` ere des eaux fossiles, production non durable, est loin dˆ etre\nn egligeable dans plusieurs pays m editerran eens, notam ment en Libye, en Al-\ng erie et ` a Malte.\nLe troisi` eme mode dexploitation est li e ` a la maˆ ıtrise d es eaux de sur-\nface irr eguli` eres, notamment ` a laide dinfrastructur es hydrauliques impor-\ntantes. Dans un premier temps, la collecte locale de leau pl uviale, ` a laide\nde structures ad equates, est r ealis ee. Pour cela, il est possible dutiliser des\nlacs collinaires avec un rˆ ole local, notamment en Italie, T urquie, Alg erie, et\nen Tunisie, de capacit e variable entre 10000-100000 m3, destin es ` a lagricul-\nture. Cependant, un barrage cr eant un r eservoir daccumu lation repr esente\nla technique principale de r egulation et la plus structura nte pour lam enage-\nment des eaux. Les barrages-r eservoirs peuvent avoir plus ieurs ﬁnalit es : pour",
+              "metadata": {
+                "title": "Les impacts du changement climatique sur les ressources en eaux en Méditerranée",
+                "hal_id": "pastel-00838516",
+                "authors": [
+                  "Hypatie Nassopoulos"
+                ],
+                "version": "v0",
+                "citation": "Hypatie Nassopoulos. Les impacts du changement climatique sur les ressources en eaux en Méditerranée. Economies et finances. Université Paris-Est, 2012. Français. ⟨NNT : 2012PEST1045⟩. ⟨pastel-00838516⟩",
+                "source_url": "https://hal.science/pastel-00838516",
+                "chunk_order": 147,
+                "description": "Le changement climatique pourrait avoir des conséquences importantes pour les ressources en eaux et les infrastructures hydrauliques. Le dimensionnement et le fonctionnement des réservoirs devraient ainsi être modifiés en prenant en compte des scénarios de changement climatique. Un modèle de dimensionnement coût-bénéfice d'un réservoir à l'échelle du bassin versant est appliqué en Grèce afin d'évaluer le coût de l'incertitude sur le climat futur et les dommages du changement climatique. Dans cette étude de cas, le coût de l'erreur est faible, et l'adaptation n'est pas efficace. Une méthodologie sur toute la région méditerranéenne, avec une modélisation générique à l'échelle des bassins versant est ensuite développée. Les réseaux de réservoirs et les liens réservoirs-demandes sont reconstruits et le fonctionnement coordonné des réseaux de réservoirs est déterminé, en utilisant uniquement des données disponibles à l'échelle globale. La méthodologie de reconstruction des liens est appliquée à l'irrigation et validée qualitativement sur l'Algérie. Le changement de fiabilité, avec adaptation des règles opérationnelles, sous changement climatique, semble être plus influencé par les changements de ruissellement que par les changements de demande. Les changements obtenus pour le Nil, l'Europe et le Moyen Orient ne sont pas très marqués, alors que les pays d'Afrique du Nord sous influence méditerranéenne comme la Tunisie ou l'Algérie voient une diminution importante de la fiabilité des apports d'eau pour l'irrigation",
+                "document_type": "THESE",
+                "publication_date": "2012-03-13",
+                "semantic_rank": 8,
+                "full_text_rank": 200,
+                "associated_query": "Raconte moi une histoire sur la tunisie"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "9af720e8-7f9f-585c-968a-165da7dcea4e",
+            "document_id": "e0b6bda0-32e1-536c-b1ca-61e931d0542a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Interviews d’Ivan Chéret (1924-2020) sur la création des agences de l’eau\n\nText: et il faisait beaucoup de travaux durbanisation et de desserte en eau des villages.  \nBB : Mais quand on p arle de Valiron en Tunisie, on parle de quelle époque  ? En est-il parti en \n1956, au moment de larrivée au pouvoir de Bourguiba  ? \nIC : je ne sais pas, mais avant 1958. En tout cas il est plus âgé que moi, il est de la promotion \n1943 de lX. Il voulait réal iser, il était très actif. [Il] nétait pas à la commission de leau, cétait \nTixeront qui y siégeait. Il était dans le groupe de la Caisse des Dépôts.  \nBB : [est-ce] au moment des indépendance s que vous êtes rentré en France  ? Et que s est-il \npassé  ? Y avait-il une accumulation de gens du même âge dans le corps  ? Il fallait chercher de \nnouveaux débouchés  ? \nIC : Pas vraiment en ce qui me concerne. En fait on a continué à fournir des ingénieurs des Ponts \nou du Génie Rural en Afrique au titre de la coopératio n. Beaucoup de gens sont restés  en \nAfrique et dautres y ont été affectés . Moi je suis parti parce que javais fini mon engagement de",
+            "metadata": {
+              "title": "Interviews d’Ivan Chéret (1924-2020) sur la création des agences de l’eau",
+              "hal_id": "hal-04484874",
+              "authors": [
+                "Bernard Barraqué",
+                "Gabrielle Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Bernard Barraqué, Gabrielle Bouleau. Interviews d’Ivan Chéret (1924-2020) sur la création des agences de l’eau. Pour mémoire., 2021, 22, pp.8-22. ⟨hal-04484874⟩",
+              "source_url": "https://hal.science/hal-04484874",
+              "chunk_order": 8,
+              "document_type": "ART",
+              "publication_date": "2021-10-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Raconte moi une histoire sur la tunisie"
+            }
+          },
+          {
+            "id": "efc9a8fa-ca29-51fb-841c-b15fe7f8ca9e",
+            "document_id": "e0b6bda0-32e1-536c-b1ca-61e931d0542a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Interviews d’Ivan Chéret (1924-2020) sur la création des agences de l’eau\n\nText: dirigé lhydraulique en Tunisie. Il avait réussi [par de petit s projet s], en restant proche des gens, \nalors qu en Algéri e, le directeur général  de lHydraulique, Georges Drouhin (1903 -1977) \napparaissait comme le spécialiste des grands barrages . Et, quand il est revenu en France, il a été \nnommé  à la direction de l'électricité et des barrages  [...]  \nBB : et François Valiron2, sest -il intéressé à leau déjà en Tunisie  ? \nIC : Est -ce quil travaillait uniquement sur leau je ne sais plus, mais il était ladjoint de Tixeront, \net il faisait beaucoup de travaux durbanisation et de desserte en eau des villages.  \nBB : Mais quand on p arle de Valiron en Tunisie, on parle de quelle époque  ? En est-il parti en \n1956, au moment de larrivée au pouvoir de Bourguiba  ? \nIC : je ne sais pas, mais avant 1958. En tout cas il est plus âgé que moi, il est de la promotion \n1943 de lX. Il voulait réal iser, il était très actif. [Il] nétait pas à la commission de leau, cétait",
+            "metadata": {
+              "title": "Interviews d’Ivan Chéret (1924-2020) sur la création des agences de l’eau",
+              "hal_id": "hal-04484874",
+              "authors": [
+                "Bernard Barraqué",
+                "Gabrielle Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Bernard Barraqué, Gabrielle Bouleau. Interviews d’Ivan Chéret (1924-2020) sur la création des agences de l’eau. Pour mémoire., 2021, 22, pp.8-22. ⟨hal-04484874⟩",
+              "source_url": "https://hal.science/hal-04484874",
+              "chunk_order": 7,
+              "document_type": "ART",
+              "publication_date": "2021-10-01",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Raconte moi une histoire sur la tunisie"
+            }
+          },
+          {
+            "id": "95fa0f5e-1828-5e27-9af0-cfda3758e36d",
+            "document_id": "e0b6bda0-32e1-536c-b1ca-61e931d0542a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Interviews d’Ivan Chéret (1924-2020) sur la création des agences de l’eau\n\nText: 2 \n apparue là de manière aveuglante. Cest ce quon ne verrait peut -être pas aussi bien en France \nparce que ce nest peut -être pas les hommes qui vivent sur la nature, ce sont des villes, des \nindustries, ce sont des associations de pêche, ce nest pas aussi vital, en tout cas cest différent. \nEn tout cas je sais quà la Commission de leau les notion s de globalisation de lusage de leau, \ndunité du bassin versant ou de la nappe souterraine, étaient portées par Jean Tixeront qui avait \ndirigé lhydraulique en Tunisie. Il avait réussi [par de petit s projet s], en restant proche des gens, \nalors qu en Algéri e, le directeur général  de lHydraulique, Georges Drouhin (1903 -1977) \napparaissait comme le spécialiste des grands barrages . Et, quand il est revenu en France, il a été \nnommé  à la direction de l'électricité et des barrages  [...]  \nBB : et François Valiron2, sest -il intéressé à leau déjà en Tunisie  ?",
+            "metadata": {
+              "title": "Interviews d’Ivan Chéret (1924-2020) sur la création des agences de l’eau",
+              "hal_id": "hal-04484874",
+              "authors": [
+                "Bernard Barraqué",
+                "Gabrielle Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Bernard Barraqué, Gabrielle Bouleau. Interviews d’Ivan Chéret (1924-2020) sur la création des agences de l’eau. Pour mémoire., 2021, 22, pp.8-22. ⟨hal-04484874⟩",
+              "source_url": "https://hal.science/hal-04484874",
+              "chunk_order": 6,
+              "document_type": "ART",
+              "publication_date": "2021-10-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Raconte moi une histoire sur la tunisie"
+            }
+          },
+          {
+            "id": "e84274fa-902e-587f-8951-3f4ce43cd311",
+            "document_id": "1e45050f-44e8-5c6c-8a77-d852ca09f33b",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Agrimonde. Agricultures et alimentations du monde en 2050 : scénarios et défis pour un développement durable. Rapport\n\nText: sports.  \nLa Tunisie, dès 1995, a lancé une action originale dans le contexte de lépoque, le PNAN \n(Programme National dAlimentation et de Nutrition) , dont lobjectif était de  réaliser durablement l e \nbien-être nutritionnel des Tunisiens  en intégrant  un volet nutritionnel dans les politiques de \ndéveloppement. Parmi les mesures envisagées par le gouvernement tunisien, on note un \nencouragement à la consommation de produits locaux plutôt quimportés, le ciblage des groupes à \nrisques, la création dunités de nutrition à léche lon régional et la mise en place dactions déducat ion \net de communication. Même la Chine a commencé à pre ndre des mesures en publiant un  National \nPlan of Action for Nutrition   ainsi que des  Dietary Guidelines for Chinese Residents  [D'Arcy et \nal. , 2006]. Un système national de prévention systémati que de certaines maladies (hypertension, \ndiabète de type 2, et certains cancers) est égaleme nt en place depuis peu dans ce pays.",
+            "metadata": {
+              "title": "Agrimonde. Agricultures et alimentations du monde en 2050 : scénarios et défis pour un développement durable. Rapport",
+              "hal_id": "hal-04266413",
+              "authors": [
+                "Jean-Marc Chaumet",
+                "Francis Delpeuch",
+                "Bruno Dorin",
+                "Gérard Ghersi",
+                "Bernard Hubert",
+                "Tristan Le Cotty",
+                "Sandrine Paillard",
+                "Michel Petit",
+                "Jean-Louis Rastoin",
+                "Tévécia Ronzon",
+                "Sébastien Treyer"
+              ],
+              "version": "v0",
+              "citation": "Jean-Marc Chaumet, Francis Delpeuch, Bruno Dorin, Gérard Ghersi, Bernard Hubert, et al.. Agrimonde. Agricultures et alimentations du monde en 2050 : scénarios et défis pour un développement durable. Rapport. [0] INRA; CIRAD. 2009, 195 p. ⟨hal-04266413⟩",
+              "source_url": "https://hal.science/hal-04266413",
+              "chunk_order": 1173,
+              "document_type": "REPORT",
+              "publication_date": "2009-01-01",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Raconte moi une histoire sur la tunisie"
+            }
+          },
+          {
+            "id": "e586324d-b68c-55c9-916b-c734fa97f3e5",
+            "document_id": "1e45050f-44e8-5c6c-8a77-d852ca09f33b",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Agrimonde. Agricultures et alimentations du monde en 2050 : scénarios et défis pour un développement durable. Rapport\n\nText: Tunisia Tunisie 1961-2003 MENA  Middle East and North Africa \nTurkey Turquie 1961-2003 MENA  Middle East and North Africa \nTurkmenistan Turkménistan 1992-2003 FSU  Former Soviet Union \nUganda Ouganda 1961-2003 SSA  Sub-Saharian Africa \nUkraine Ukraine 1992-2003 FSU  Former Soviet Union \nUnited Arab Emirates Émirats arabes unis 1961-2003 MENA  Middle East and North Africa \nUnited Kingdom Royaume-Uni 1961-2003 OECD  OECD 1990 \nUnited States of America États-Unis d'Amérique 1961 -2003 OECD  OECD 1990 \nUruguay Uruguay 1961-2003 LAM  Latin America \nUSSR (ex-) URSS (ex-) 1961-1991 FSU  Former Soviet Union \nUzbekistan Ouzbékistan 1992-2003 FSU  Former Soviet Union \nVenezuela, Boliv Rep of Venezuela, Rép boliv du 196 1-2003 LAM  Latin America \nViet Nam Viet Nam 1961-2003 ASIA  Asia \nYemen Yémen 1961-2003 MENA  Middle East and North Africa \nYugoslavia SFR Yougoslavie FRS 1961-1991 OECD  OECD 1990 \nZambia Zambie 1961-2003 SSA  Sub-Saharian Africa \nZimbabwe Zimbabwe 1961-2003 SSA  Sub-Saharian Africa",
+            "metadata": {
+              "title": "Agrimonde. Agricultures et alimentations du monde en 2050 : scénarios et défis pour un développement durable. Rapport",
+              "hal_id": "hal-04266413",
+              "authors": [
+                "Jean-Marc Chaumet",
+                "Francis Delpeuch",
+                "Bruno Dorin",
+                "Gérard Ghersi",
+                "Bernard Hubert",
+                "Tristan Le Cotty",
+                "Sandrine Paillard",
+                "Michel Petit",
+                "Jean-Louis Rastoin",
+                "Tévécia Ronzon",
+                "Sébastien Treyer"
+              ],
+              "version": "v0",
+              "citation": "Jean-Marc Chaumet, Francis Delpeuch, Bruno Dorin, Gérard Ghersi, Bernard Hubert, et al.. Agrimonde. Agricultures et alimentations du monde en 2050 : scénarios et défis pour un développement durable. Rapport. [0] INRA; CIRAD. 2009, 195 p. ⟨hal-04266413⟩",
+              "source_url": "https://hal.science/hal-04266413",
+              "chunk_order": 1222,
+              "document_type": "REPORT",
+              "publication_date": "2009-01-01",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Raconte moi une histoire sur la tunisie"
+            }
+          },
+          {
+            "id": "52313989-0016-5187-b42a-9323557dea26",
+            "document_id": "344737d4-b5ce-5f49-8d3e-0bcf525e8517",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: ORGANISATION GLOBALE ET ARRANGEMENTS LOCAUX DANS LA DISTRIBUTION D'EAU A BAMAKO ET A LA HAVANE\n\nText: médiocrité des compétences techniques  . On relativisera cependant cette assertion par l e \nfait que le régime a dabord opté pour le communism e (1960-68) ce qui enlevait une \nbonne part au caractère féodal du parti. La fin de la présidence de Modibo Keita inaugure \nla deuxième république et lunicité du parti est ma intenue sans pour autant que lidéologie \ncommuniste ait acquis un caractère concret et direc teur. Débute alors lautoritarisme décrit \npar Linz (2006) :  \n                                                                                                                                                         \ndepuis le démantèlement de la compagnie publique de s transports urbains (TUB). Les gains de celles-ci \nfinancent par la suite en tout ou partie de la cons truction immobilière. . Amselle in Bayart. 1989, 2006.",
+            "metadata": {
+              "title": "ORGANISATION GLOBALE ET ARRANGEMENTS LOCAUX DANS LA DISTRIBUTION D'EAU A BAMAKO ET A LA HAVANE",
+              "hal_id": "tel-01719270",
+              "authors": [
+                "Pascale Pinceau"
+              ],
+              "version": "v0",
+              "citation": "Pascale Pinceau. ORGANISATION GLOBALE ET ARRANGEMENTS LOCAUX DANS LA DISTRIBUTION D'EAU A BAMAKO ET A LA HAVANE. Sciences de l'Homme et Société. AgroParisTech, 2009. Français. ⟨NNT : 2009AGPT0041⟩. ⟨tel-01719270⟩",
+              "source_url": "https://hal.science/tel-01719270",
+              "chunk_order": 1063,
+              "description": "A La Havane et à Bamako, la distribution d'eau par réseau est partielle. Elle est limitée soit au niveau des horaires soit géographiquement. Une régulation socio-politique s'exerce et concourre à la constitution des réseaux. Dans ce contexte, l'entrée d'entreprises privées dans la gestion du service d'eau est présentée comme une solution grâce aux financements internationaux de SAUR et de AGBAR. Cependant, la participation privée à la gestion des ex entreprises publiques correspond aussi à un changement de répartition dans la prise en charge du coût des infrastructures. Cette modification dans l'identité des contributeurs peut-être politiquement destabilisante. A Bamako, c'est la classe moyenne jusque là soutien du pouvoir qui est sollicitée. A La Havane, l'entrée de l'entreprise privée soumet le territoire à des divisions dans la qualité du service. Dans les deux situations, le profit de l'entreprise est prioritaire, reléguant au second plan les effets bénéfiques de l'accroissement de la distribution d'une eau de qualité. Le rapport de force entre l'entreprise privatisée et l'Etat est toutefois différent dans les deux pays. Les intérêts cubains s'accordent bien avec ceux de l'entreprise privée (AGBAR) grâce à une participation majoritairement étatique au sein de l'entreprise gestionnaire du réseau et grâce à la capacité étatique à contrôler un marché générateur de devises. En revanche, l'Etat malien ne réussit pas l'alliance des intérêts du privé (SAUR) avec les siens, dans un contexte où les disparités liées à la mauvaise gestion de l'espace urbain ont, par ailleurs, été accentuées par la participation des capitaux privés.",
+              "document_type": "THESE",
+              "publication_date": "2009-09-11",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Raconte moi une histoire sur la tunisie"
+            }
+          },
+          {
+            "id": "e0b0f91d-d9d3-577b-95c0-e7ab6f7fdfbd",
+            "document_id": "344737d4-b5ce-5f49-8d3e-0bcf525e8517",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: ORGANISATION GLOBALE ET ARRANGEMENTS LOCAUX DANS LA DISTRIBUTION D'EAU A BAMAKO ET A LA HAVANE\n\nText: 1979, le président constitue lUDPM qui devient le parti unique. Aux élections \nprésidentielles de 1981 et de 1985 Moussa Traoré, c andidat unique, est réélu. Ces années \nde présidence ont été marquées par lappropriation privée des biens publics. Jeune Afrique \ncommente :  Moussa Traoré aura administré le pays comme son bie n propre [] et en \npeuplant avec les membres  de sa famille et de son clan les échelons essentiel s de \nlappareil dEtat  . A partir de la fin 1990, des manifestations con tre le régime \naboutissent le 26 mars 1991 au renversement militai re de Moussa Traoré. Amadou \nToumani Touré (ATT) prend alors la direction du Con seil de réconciliation nationale. \nCest le début de la période de  Transition démocr atique  qui préfigure linstauration de \nla 3 ème  République. Le degré de corruption de lEtat est t el que le pouvoir, dans cette \nTransition, sattelle à restaurer la crédibilité de s institutions et de lEtat, à redonner son",
+            "metadata": {
+              "title": "ORGANISATION GLOBALE ET ARRANGEMENTS LOCAUX DANS LA DISTRIBUTION D'EAU A BAMAKO ET A LA HAVANE",
+              "hal_id": "tel-01719270",
+              "authors": [
+                "Pascale Pinceau"
+              ],
+              "version": "v0",
+              "citation": "Pascale Pinceau. ORGANISATION GLOBALE ET ARRANGEMENTS LOCAUX DANS LA DISTRIBUTION D'EAU A BAMAKO ET A LA HAVANE. Sciences de l'Homme et Société. AgroParisTech, 2009. Français. ⟨NNT : 2009AGPT0041⟩. ⟨tel-01719270⟩",
+              "source_url": "https://hal.science/tel-01719270",
+              "chunk_order": 1075,
+              "description": "A La Havane et à Bamako, la distribution d'eau par réseau est partielle. Elle est limitée soit au niveau des horaires soit géographiquement. Une régulation socio-politique s'exerce et concourre à la constitution des réseaux. Dans ce contexte, l'entrée d'entreprises privées dans la gestion du service d'eau est présentée comme une solution grâce aux financements internationaux de SAUR et de AGBAR. Cependant, la participation privée à la gestion des ex entreprises publiques correspond aussi à un changement de répartition dans la prise en charge du coût des infrastructures. Cette modification dans l'identité des contributeurs peut-être politiquement destabilisante. A Bamako, c'est la classe moyenne jusque là soutien du pouvoir qui est sollicitée. A La Havane, l'entrée de l'entreprise privée soumet le territoire à des divisions dans la qualité du service. Dans les deux situations, le profit de l'entreprise est prioritaire, reléguant au second plan les effets bénéfiques de l'accroissement de la distribution d'une eau de qualité. Le rapport de force entre l'entreprise privatisée et l'Etat est toutefois différent dans les deux pays. Les intérêts cubains s'accordent bien avec ceux de l'entreprise privée (AGBAR) grâce à une participation majoritairement étatique au sein de l'entreprise gestionnaire du réseau et grâce à la capacité étatique à contrôler un marché générateur de devises. En revanche, l'Etat malien ne réussit pas l'alliance des intérêts du privé (SAUR) avec les siens, dans un contexte où les disparités liées à la mauvaise gestion de l'espace urbain ont, par ailleurs, été accentuées par la participation des capitaux privés.",
+              "document_type": "THESE",
+              "publication_date": "2009-09-11",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Raconte moi une histoire sur la tunisie"
+            }
+          },
+          {
+            "id": "41aecd5f-3c46-5ff5-8693-bde54f762e08",
+            "document_id": "19ce73e4-e8d4-507b-9f39-d40ab5699c68",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Les impacts du changement climatique sur les ressources en eaux en Méditerranée\n\nText: Tunisie, avec comme cons equence possible linvasion dea u sal ee. De plus,\nlexploitation mini` ere des eaux fossiles, production non durable, est loin dˆ etre\nn egligeable dans plusieurs pays m editerran eens, notam ment en Libye, en Al-\ng erie et ` a Malte.\nLe troisi` eme mode dexploitation est li e ` a la maˆ ıtrise d es eaux de sur-\nface irr eguli` eres, notamment ` a laide dinfrastructur es hydrauliques impor-\ntantes. Dans un premier temps, la collecte locale de leau pl uviale, ` a laide\nde structures ad equates, est r ealis ee. Pour cela, il est possible dutiliser des\nlacs collinaires avec un rˆ ole local, notamment en Italie, T urquie, Alg erie, et\nen Tunisie, de capacit e variable entre 10000-100000 m3, destin es ` a lagricul-\nture. Cependant, un barrage cr eant un r eservoir daccumu lation repr esente\nla technique principale de r egulation et la plus structura nte pour lam enage-\nment des eaux. Les barrages-r eservoirs peuvent avoir plus ieurs ﬁnalit es : pour",
+            "metadata": {
+              "title": "Les impacts du changement climatique sur les ressources en eaux en Méditerranée",
+              "hal_id": "pastel-00838516",
+              "authors": [
+                "Hypatie Nassopoulos"
+              ],
+              "version": "v0",
+              "citation": "Hypatie Nassopoulos. Les impacts du changement climatique sur les ressources en eaux en Méditerranée. Economies et finances. Université Paris-Est, 2012. Français. ⟨NNT : 2012PEST1045⟩. ⟨pastel-00838516⟩",
+              "source_url": "https://hal.science/pastel-00838516",
+              "chunk_order": 147,
+              "description": "Le changement climatique pourrait avoir des conséquences importantes pour les ressources en eaux et les infrastructures hydrauliques. Le dimensionnement et le fonctionnement des réservoirs devraient ainsi être modifiés en prenant en compte des scénarios de changement climatique. Un modèle de dimensionnement coût-bénéfice d'un réservoir à l'échelle du bassin versant est appliqué en Grèce afin d'évaluer le coût de l'incertitude sur le climat futur et les dommages du changement climatique. Dans cette étude de cas, le coût de l'erreur est faible, et l'adaptation n'est pas efficace. Une méthodologie sur toute la région méditerranéenne, avec une modélisation générique à l'échelle des bassins versant est ensuite développée. Les réseaux de réservoirs et les liens réservoirs-demandes sont reconstruits et le fonctionnement coordonné des réseaux de réservoirs est déterminé, en utilisant uniquement des données disponibles à l'échelle globale. La méthodologie de reconstruction des liens est appliquée à l'irrigation et validée qualitativement sur l'Algérie. Le changement de fiabilité, avec adaptation des règles opérationnelles, sous changement climatique, semble être plus influencé par les changements de ruissellement que par les changements de demande. Les changements obtenus pour le Nil, l'Europe et le Moyen Orient ne sont pas très marqués, alors que les pays d'Afrique du Nord sous influence méditerranéenne comme la Tunisie ou l'Algérie voient une diminution importante de la fiabilité des apports d'eau pour l'irrigation",
+              "document_type": "THESE",
+              "publication_date": "2012-03-13",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Raconte moi une histoire sur la tunisie"
+            }
+          },
+          {
+            "id": "5f0b90d2-4be3-5da3-b43b-d0006cd917cd",
+            "document_id": "3fe238fa-6fc5-5bbd-8935-8330fe4d544b",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Un Plan mondial pour le climat et contre l'extrême pauvreté\n\nText: Une journée dans la campagne\nburkinabée\nIl est 4h, les coqs réveillent les habitants de la petite ville de\nHoundé au Burkina Faso. Rosalie vient de se lever et elle marche\ndéjà en direction des champs de mil. Arrivée sur sa parcelle,\nelle pose son bébé sous un arbre et le couvre de son écharpe\npour le protéger de la pluie. Cest la saison des semences, une\ndure journée de labeur lattend. Rosalie alterne entre des coups\nde bêche et la pose dune graine, quelle pousse dans la terre\nen se courbant. Cette année, elle nira pas jusquau bout du\nchamp, car celui-ci est devenu trop sec pour être cultivé. Au\ndéjeuner, Rosalie mange une galette de mil que sa fille a préparée\nla veille au soir, agrémentée de beurre de karité. Pendant le\nsemis, elle ne peut sempêcher de verser quelques larmes en\nrepensant à ses deux enfants partis trop jeunes : son fils aîné,\nmort dune maladie pulmonaire après six mois à travailler dans\nla mine de manganèse de Kiéré, et sa troisième, emportée par",
+            "metadata": {
+              "title": "Un Plan mondial pour le climat et contre l'extrême pauvreté",
+              "hal_id": "hal-04866011",
+              "authors": [
+                "Adrien Fabre"
+              ],
+              "version": "v0",
+              "citation": "Adrien Fabre. Un Plan mondial pour le climat et contre l'extrême pauvreté. Le Bord de l'eau, 2024, 978-2-38519-071-2. ⟨hal-04866011⟩",
+              "source_url": "https://hal.science/hal-04866011",
+              "chunk_order": 26,
+              "document_type": "OUV",
+              "publication_date": "2024-09-13",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "Raconte moi une histoire sur la tunisie"
+            }
+          },
+          {
+            "id": "a34243c0-908b-58c9-8ef6-a353af098130",
+            "document_id": "344737d4-b5ce-5f49-8d3e-0bcf525e8517",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: ORGANISATION GLOBALE ET ARRANGEMENTS LOCAUX DANS LA DISTRIBUTION D'EAU A BAMAKO ET A LA HAVANE\n\nText: 249  De 1968 à 1991, le lieutenant Moussa Traoré instaur e la deuxième République par un \ncoup dEtat militaire, il prend la direction du Com ité Militaire de Libération Nationale \n(CMLN). Son pouvoir est instable, les tentatives de  coup dEtat se succèdent. Le président \nélimine progressivement les opposants politiques. U ne nouvelle constitution est adoptée \nen 1974, elle acte le principe dune assemblée nati onale, cependant tous les membres de \nlassemblée nationale sont sélectionnés par les mem bres du parti et au sein du parti. En \n1979, le président constitue lUDPM qui devient le parti unique. Aux élections \nprésidentielles de 1981 et de 1985 Moussa Traoré, c andidat unique, est réélu. Ces années \nde présidence ont été marquées par lappropriation privée des biens publics. Jeune Afrique \ncommente :  Moussa Traoré aura administré le pays comme son bie n propre [] et en \npeuplant avec les membres  de sa famille et de son clan les échelons essentiel s de",
+            "metadata": {
+              "title": "ORGANISATION GLOBALE ET ARRANGEMENTS LOCAUX DANS LA DISTRIBUTION D'EAU A BAMAKO ET A LA HAVANE",
+              "hal_id": "tel-01719270",
+              "authors": [
+                "Pascale Pinceau"
+              ],
+              "version": "v0",
+              "citation": "Pascale Pinceau. ORGANISATION GLOBALE ET ARRANGEMENTS LOCAUX DANS LA DISTRIBUTION D'EAU A BAMAKO ET A LA HAVANE. Sciences de l'Homme et Société. AgroParisTech, 2009. Français. ⟨NNT : 2009AGPT0041⟩. ⟨tel-01719270⟩",
+              "source_url": "https://hal.science/tel-01719270",
+              "chunk_order": 1074,
+              "description": "A La Havane et à Bamako, la distribution d'eau par réseau est partielle. Elle est limitée soit au niveau des horaires soit géographiquement. Une régulation socio-politique s'exerce et concourre à la constitution des réseaux. Dans ce contexte, l'entrée d'entreprises privées dans la gestion du service d'eau est présentée comme une solution grâce aux financements internationaux de SAUR et de AGBAR. Cependant, la participation privée à la gestion des ex entreprises publiques correspond aussi à un changement de répartition dans la prise en charge du coût des infrastructures. Cette modification dans l'identité des contributeurs peut-être politiquement destabilisante. A Bamako, c'est la classe moyenne jusque là soutien du pouvoir qui est sollicitée. A La Havane, l'entrée de l'entreprise privée soumet le territoire à des divisions dans la qualité du service. Dans les deux situations, le profit de l'entreprise est prioritaire, reléguant au second plan les effets bénéfiques de l'accroissement de la distribution d'une eau de qualité. Le rapport de force entre l'entreprise privatisée et l'Etat est toutefois différent dans les deux pays. Les intérêts cubains s'accordent bien avec ceux de l'entreprise privée (AGBAR) grâce à une participation majoritairement étatique au sein de l'entreprise gestionnaire du réseau et grâce à la capacité étatique à contrôler un marché générateur de devises. En revanche, l'Etat malien ne réussit pas l'alliance des intérêts du privé (SAUR) avec les siens, dans un contexte où les disparités liées à la mauvaise gestion de l'espace urbain ont, par ailleurs, été accentuées par la participation des capitaux privés.",
+              "document_type": "THESE",
+              "publication_date": "2009-09-11",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "Raconte moi une histoire sur la tunisie"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2698,
+            "total_tokens": 2698
+          }
+        }
+      },
+      "duration": 19404
+    },
+    "retrievalTime": 5554,
+    "generationTime": 19404,
+    "timestamp": "2025-07-10T09:42:41.280Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.112.3",
+    "forwarded_for": "193.51.112.3",
+    "received_at": "2025-07-10T09:42:41.398742+00:00",
+    "server_version": "1.0.0"
+  }
+}

@@ -1,0 +1,492 @@
+{
+  "sessionId": "session_1752324436901_531m2y2w226a312t3x",
+  "timestamp": "20250712T125012784Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752324610336_ukj7rbm",
+    "response": {
+      "results": {
+        "generated_answer": "D'après les résultats de recherche fournis, les personnes au CIRED qui ont travaillé sur la sobriété sont M. Guérineau et J. Mayer. Ils ont notamment contribué à un projet de recherche intitulé \"La sobriété énergétique : Quelle(s) trajectoire(s) ?\" et ont identifié trois formes de sobriété : la sobriété monitorée, la sobriété symbiotique et la sobriété gouvernée [87ffcef], [4ce6ffb], [f54f3db].",
+        "citations": [
+          {
+            "id": "87ffcef",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 365,
+              "end": 374
+            },
+            "payload": {
+              "id": "87ffcef1-f93e-5b88-b904-60b6ee92b62e",
+              "document_id": "8fe79666-435f-569f-8961-3855570936cf",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale\n\nText: et J. Mayer28 qui identifient trois formes de sobriété : la sobriété \nmonitorée ; la sobriété symbiotique ; la sobriété gouvernée. La \nmobilisation de ces formes de sobriété pourrait permettre une \npremière approche concernant les registres sur lesquels agir \npour exploiter les gisements de sobriété retenus dans le scénario \nainsi que des premières modalités de mise en œuvre.\nTous les détails concernant la méthodologie employée sont \ndisponibles sur le site concerte.fr  dans la catégorie dédiée au \nGroupe de travail 5  Dynamiques sociétales . \n28 Guérineau, M., & Mayer, J. (2021). Projet de recherche : La sobriété \nénergétique : Quelle(s) trajectoire(s) ?  [Rapport intermédiaire].",
+              "metadata": {
+                "title": "Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale",
+                "hal_id": "hal-03614943",
+                "authors": [
+                  "Mathieu Saujot",
+                  "Sophie Dubuisson-Quellier",
+                  "Solange Martin",
+                  "Carine Barbier",
+                  "Prabodh Pourouchottaminh",
+                  "Charriau Pascal",
+                  "Desaunay Cécile",
+                  "Joseph Hajjar",
+                  "Gwenaël Podesta",
+                  "Sarah Thiriot",
+                  "Thomas Le Gallic",
+                  "Stéphane La Branche",
+                  "David Laurent",
+                  "Chaffardon Gersende",
+                  "Dossier Julien"
+                ],
+                "version": "v0",
+                "citation": "Mathieu Saujot, Sophie Dubuisson-Quellier, Solange Martin, Carine Barbier, Prabodh Pourouchottaminh, et al.. Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale. [Rapport de recherche] 01/22, Iddri - Sciences Po. 2022, pp.76. ⟨hal-03614943⟩",
+                "source_url": "https://hal.science/hal-03614943",
+                "chunk_order": 552,
+                "description": "La transition écologique est un projet de transformation sociale, politique, technique et économique, qui vient interagir avec une société en perpétuel mouvement, mue par des forces individuelles et collectives (groupes, institutions, modes de régulation, etc.) et ayant ses dynamiques propres dans ses formes d’organisation sociale, ses valeurs, ses liens aux technologies, etc. À ce stade de la transition, il est critique de mieux penser, en amont, sa dimension sociale : les structures et mécanismes sociaux à l’œuvre qui peuvent favoriser, modifier ou s’opposer à sa mise en œuvre, ceux qu’il faut pouvoir orienter et ceux dont il faut débattre, nombreux, tant l‘exercice est nouveau. Malgré l'urgence radicale, les chemins, notamment sociaux, peuvent être divers et nous avons encore le choix, d’où la nécessité de l'anticiper par la prospective. Or la dimension sociale du changement demeure un point faible des prospectives énergie-climat qui nourrissent les stratégies de transition (Saujot et Waisman, 2020). Aujourd’hui, la montée à l’agenda politique de ces questions est une opportunité pour intégrer plus largement l’analyse du social à la fabrique des prospectives énergie-climat. Si beaucoup reste à faire, de nombreuses expériences existent et peuvent d’ores et déjà être valorisées pour imaginer et mettre en œuvre des approches concrètes de prospectives plus riches. C’est ce dont nous nous sommes fait l’écho dans un récent billet de blog et c’est dans cette perspective que cette Étude réunit une diversité de ces expériences à travers 12 contributions de praticiens qui ont été confrontés à ces questions.",
+                "document_type": "REPORT",
+                "publication_date": "2022-01-03",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "Qui au CIRED a travaillé sur la sobriété"
+              }
+            }
+          },
+          {
+            "id": "4ce6ffb",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 376,
+              "end": 385
+            },
+            "payload": {
+              "id": "4ce6ffb4-4cd4-5979-a9c9-5142770b6f5e",
+              "document_id": "8fe79666-435f-569f-8961-3855570936cf",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale\n\nText: Concernant plus particulièrement les modes de vie, le travail \neffectué dans le cadre de la définition du scénario  sobriété  \na permis didentifier un certain nombre de leviers et de dyna -\nmiques en faveur dune société plus sobre à plusieurs échelles \ndaction. Pour donner à voir comment les gisements identifiés \ndans le scénario sobriété pourraient sappuyer sur des échelles \net des modalités de sobriété différentes, une proposition dou -\nverture consiste à considérer le travail réalisé par M. Guérineau \net J. Mayer28 qui identifient trois formes de sobriété : la sobriété \nmonitorée ; la sobriété symbiotique ; la sobriété gouvernée. La \nmobilisation de ces formes de sobriété pourrait permettre une \npremière approche concernant les registres sur lesquels agir \npour exploiter les gisements de sobriété retenus dans le scénario \nainsi que des premières modalités de mise en œuvre.\nTous les détails concernant la méthodologie employée sont \ndisponibles sur le site concerte.fr  dans la catégorie dédiée au",
+              "metadata": {
+                "title": "Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale",
+                "hal_id": "hal-03614943",
+                "authors": [
+                  "Mathieu Saujot",
+                  "Sophie Dubuisson-Quellier",
+                  "Solange Martin",
+                  "Carine Barbier",
+                  "Prabodh Pourouchottaminh",
+                  "Charriau Pascal",
+                  "Desaunay Cécile",
+                  "Joseph Hajjar",
+                  "Gwenaël Podesta",
+                  "Sarah Thiriot",
+                  "Thomas Le Gallic",
+                  "Stéphane La Branche",
+                  "David Laurent",
+                  "Chaffardon Gersende",
+                  "Dossier Julien"
+                ],
+                "version": "v0",
+                "citation": "Mathieu Saujot, Sophie Dubuisson-Quellier, Solange Martin, Carine Barbier, Prabodh Pourouchottaminh, et al.. Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale. [Rapport de recherche] 01/22, Iddri - Sciences Po. 2022, pp.76. ⟨hal-03614943⟩",
+                "source_url": "https://hal.science/hal-03614943",
+                "chunk_order": 551,
+                "description": "La transition écologique est un projet de transformation sociale, politique, technique et économique, qui vient interagir avec une société en perpétuel mouvement, mue par des forces individuelles et collectives (groupes, institutions, modes de régulation, etc.) et ayant ses dynamiques propres dans ses formes d’organisation sociale, ses valeurs, ses liens aux technologies, etc. À ce stade de la transition, il est critique de mieux penser, en amont, sa dimension sociale : les structures et mécanismes sociaux à l’œuvre qui peuvent favoriser, modifier ou s’opposer à sa mise en œuvre, ceux qu’il faut pouvoir orienter et ceux dont il faut débattre, nombreux, tant l‘exercice est nouveau. Malgré l'urgence radicale, les chemins, notamment sociaux, peuvent être divers et nous avons encore le choix, d’où la nécessité de l'anticiper par la prospective. Or la dimension sociale du changement demeure un point faible des prospectives énergie-climat qui nourrissent les stratégies de transition (Saujot et Waisman, 2020). Aujourd’hui, la montée à l’agenda politique de ces questions est une opportunité pour intégrer plus largement l’analyse du social à la fabrique des prospectives énergie-climat. Si beaucoup reste à faire, de nombreuses expériences existent et peuvent d’ores et déjà être valorisées pour imaginer et mettre en œuvre des approches concrètes de prospectives plus riches. C’est ce dont nous nous sommes fait l’écho dans un récent billet de blog et c’est dans cette perspective que cette Étude réunit une diversité de ces expériences à travers 12 contributions de praticiens qui ont été confrontés à ces questions.",
+                "document_type": "REPORT",
+                "publication_date": "2022-01-03",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "Qui au CIRED a travaillé sur la sobriété"
+              }
+            }
+          },
+          {
+            "id": "f54f3db",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 387,
+              "end": 396
+            },
+            "payload": {
+              "id": "f54f3db7-00c0-5171-acae-59390d94f238",
+              "document_id": "f2458fdd-772a-5057-9fa8-ca6d749087b8",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: Changement climatique et transition énergétique en région Île-de-France\n\nText: Source  : Toulouse E., Le Dû M., Gorge H., Semal L., \"Stimulating energy sufficiency: barriers and \nopportunities\", Actes de la conférence eceee Summer Study, 2017.  \nQuelques définitions de la sobriété énergétique.  \n \n  \n \n135 Semal L., Szuba M., Villalba B., 2014  :  Sobriétés \n(2010 -2013)  : une recherche interdisciplinaire sur \nlinstitutionnalisation de politiques locales de \nsobriété énergétique.   Natures  Sciences Soci etes, \n22, 351 -358. \n136 Rockström J., Steffen W., Noone K., Persson Å., \nChapin, III F.S., Lambin E., Lenton T.M., Scheffer M., \nFolke C., Schellnhuber H., Nykvist B., De Wit C.A., \nHughes T., van der Leeuw S., Rodhe H., Sörlin S., Snyder K., Costanza R., Svedin U., Falkenmark M., \nKarlberg L., Corell R.W., Fabry V.J., Hansen J., Walker \nB., Liverman D., Richardson K., Crutzen P., Foley. J., \n2009  : Planetary boundaries:exploring the safe \noperating space for humanity . Ecology and Society , \n14, 32 . \n137 Guérineau M., Mayer J., 2021  : Rapp ort \n Organiser la sobriété  .",
+              "metadata": {
+                "title": "Changement climatique et transition énergétique en région Île-de-France",
+                "hal_id": "hal-03871752",
+                "authors": "['Philippe Drobinski', 'Jordi Badosa', 'Isabelle Bilger', 'Benjamin Brigaud', 'Patricia Crifo', 'Antoine Esnos', 'Louis-Gaëtan Giraudet', 'Marion Gosselin', 'Mathias Guerineau', 'Jean-François Guillemoles', 'Florence Habets', 'Jean-Pierre Lévy', 'Julie Mayer', 'Bertrand Quélin', 'Florian Raymond', 'Daniel Suchet', 'Qiqi Tao', 'Alexis Tantet', 'Vincent Viguie']",
+                "version": "v0",
+                "citation": "Philippe Drobinski, Jordi Badosa, Isabelle Bilger, Benjamin Brigaud, Patricia Crifo, et al.. Changement climatique et transition énergétique en région Île-de-France. Groupe régional d'expertise sur le changement climatique et la transition écologique en Île-de-France (GREC Francilien). 2022. ⟨hal-03871752⟩",
+                "source_url": "https://hal.science/hal-03871752",
+                "chunk_order": 204,
+                "document_type": "REPORT",
+                "publication_date": "2022-11-25",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "Qui au CIRED a travaillé sur la sobriété"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "87ffcef1-f93e-5b88-b904-60b6ee92b62e",
+            "document_id": "8fe79666-435f-569f-8961-3855570936cf",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale\n\nText: et J. Mayer28 qui identifient trois formes de sobriété : la sobriété \nmonitorée ; la sobriété symbiotique ; la sobriété gouvernée. La \nmobilisation de ces formes de sobriété pourrait permettre une \npremière approche concernant les registres sur lesquels agir \npour exploiter les gisements de sobriété retenus dans le scénario \nainsi que des premières modalités de mise en œuvre.\nTous les détails concernant la méthodologie employée sont \ndisponibles sur le site concerte.fr  dans la catégorie dédiée au \nGroupe de travail 5  Dynamiques sociétales . \n28 Guérineau, M., & Mayer, J. (2021). Projet de recherche : La sobriété \nénergétique : Quelle(s) trajectoire(s) ?  [Rapport intermédiaire].",
+            "metadata": {
+              "title": "Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale",
+              "hal_id": "hal-03614943",
+              "authors": [
+                "Mathieu Saujot",
+                "Sophie Dubuisson-Quellier",
+                "Solange Martin",
+                "Carine Barbier",
+                "Prabodh Pourouchottaminh",
+                "Charriau Pascal",
+                "Desaunay Cécile",
+                "Joseph Hajjar",
+                "Gwenaël Podesta",
+                "Sarah Thiriot",
+                "Thomas Le Gallic",
+                "Stéphane La Branche",
+                "David Laurent",
+                "Chaffardon Gersende",
+                "Dossier Julien"
+              ],
+              "version": "v0",
+              "citation": "Mathieu Saujot, Sophie Dubuisson-Quellier, Solange Martin, Carine Barbier, Prabodh Pourouchottaminh, et al.. Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale. [Rapport de recherche] 01/22, Iddri - Sciences Po. 2022, pp.76. ⟨hal-03614943⟩",
+              "source_url": "https://hal.science/hal-03614943",
+              "chunk_order": 552,
+              "description": "La transition écologique est un projet de transformation sociale, politique, technique et économique, qui vient interagir avec une société en perpétuel mouvement, mue par des forces individuelles et collectives (groupes, institutions, modes de régulation, etc.) et ayant ses dynamiques propres dans ses formes d’organisation sociale, ses valeurs, ses liens aux technologies, etc. À ce stade de la transition, il est critique de mieux penser, en amont, sa dimension sociale : les structures et mécanismes sociaux à l’œuvre qui peuvent favoriser, modifier ou s’opposer à sa mise en œuvre, ceux qu’il faut pouvoir orienter et ceux dont il faut débattre, nombreux, tant l‘exercice est nouveau. Malgré l'urgence radicale, les chemins, notamment sociaux, peuvent être divers et nous avons encore le choix, d’où la nécessité de l'anticiper par la prospective. Or la dimension sociale du changement demeure un point faible des prospectives énergie-climat qui nourrissent les stratégies de transition (Saujot et Waisman, 2020). Aujourd’hui, la montée à l’agenda politique de ces questions est une opportunité pour intégrer plus largement l’analyse du social à la fabrique des prospectives énergie-climat. Si beaucoup reste à faire, de nombreuses expériences existent et peuvent d’ores et déjà être valorisées pour imaginer et mettre en œuvre des approches concrètes de prospectives plus riches. C’est ce dont nous nous sommes fait l’écho dans un récent billet de blog et c’est dans cette perspective que cette Étude réunit une diversité de ces expériences à travers 12 contributions de praticiens qui ont été confrontés à ces questions.",
+              "document_type": "REPORT",
+              "publication_date": "2022-01-03",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Qui au CIRED a travaillé sur la sobriété"
+            }
+          },
+          {
+            "id": "4ce6ffb4-4cd4-5979-a9c9-5142770b6f5e",
+            "document_id": "8fe79666-435f-569f-8961-3855570936cf",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale\n\nText: Concernant plus particulièrement les modes de vie, le travail \neffectué dans le cadre de la définition du scénario  sobriété  \na permis didentifier un certain nombre de leviers et de dyna -\nmiques en faveur dune société plus sobre à plusieurs échelles \ndaction. Pour donner à voir comment les gisements identifiés \ndans le scénario sobriété pourraient sappuyer sur des échelles \net des modalités de sobriété différentes, une proposition dou -\nverture consiste à considérer le travail réalisé par M. Guérineau \net J. Mayer28 qui identifient trois formes de sobriété : la sobriété \nmonitorée ; la sobriété symbiotique ; la sobriété gouvernée. La \nmobilisation de ces formes de sobriété pourrait permettre une \npremière approche concernant les registres sur lesquels agir \npour exploiter les gisements de sobriété retenus dans le scénario \nainsi que des premières modalités de mise en œuvre.\nTous les détails concernant la méthodologie employée sont \ndisponibles sur le site concerte.fr  dans la catégorie dédiée au",
+            "metadata": {
+              "title": "Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale",
+              "hal_id": "hal-03614943",
+              "authors": [
+                "Mathieu Saujot",
+                "Sophie Dubuisson-Quellier",
+                "Solange Martin",
+                "Carine Barbier",
+                "Prabodh Pourouchottaminh",
+                "Charriau Pascal",
+                "Desaunay Cécile",
+                "Joseph Hajjar",
+                "Gwenaël Podesta",
+                "Sarah Thiriot",
+                "Thomas Le Gallic",
+                "Stéphane La Branche",
+                "David Laurent",
+                "Chaffardon Gersende",
+                "Dossier Julien"
+              ],
+              "version": "v0",
+              "citation": "Mathieu Saujot, Sophie Dubuisson-Quellier, Solange Martin, Carine Barbier, Prabodh Pourouchottaminh, et al.. Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale. [Rapport de recherche] 01/22, Iddri - Sciences Po. 2022, pp.76. ⟨hal-03614943⟩",
+              "source_url": "https://hal.science/hal-03614943",
+              "chunk_order": 551,
+              "description": "La transition écologique est un projet de transformation sociale, politique, technique et économique, qui vient interagir avec une société en perpétuel mouvement, mue par des forces individuelles et collectives (groupes, institutions, modes de régulation, etc.) et ayant ses dynamiques propres dans ses formes d’organisation sociale, ses valeurs, ses liens aux technologies, etc. À ce stade de la transition, il est critique de mieux penser, en amont, sa dimension sociale : les structures et mécanismes sociaux à l’œuvre qui peuvent favoriser, modifier ou s’opposer à sa mise en œuvre, ceux qu’il faut pouvoir orienter et ceux dont il faut débattre, nombreux, tant l‘exercice est nouveau. Malgré l'urgence radicale, les chemins, notamment sociaux, peuvent être divers et nous avons encore le choix, d’où la nécessité de l'anticiper par la prospective. Or la dimension sociale du changement demeure un point faible des prospectives énergie-climat qui nourrissent les stratégies de transition (Saujot et Waisman, 2020). Aujourd’hui, la montée à l’agenda politique de ces questions est une opportunité pour intégrer plus largement l’analyse du social à la fabrique des prospectives énergie-climat. Si beaucoup reste à faire, de nombreuses expériences existent et peuvent d’ores et déjà être valorisées pour imaginer et mettre en œuvre des approches concrètes de prospectives plus riches. C’est ce dont nous nous sommes fait l’écho dans un récent billet de blog et c’est dans cette perspective que cette Étude réunit une diversité de ces expériences à travers 12 contributions de praticiens qui ont été confrontés à ces questions.",
+              "document_type": "REPORT",
+              "publication_date": "2022-01-03",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Qui au CIRED a travaillé sur la sobriété"
+            }
+          },
+          {
+            "id": "22162c7f-33f0-550f-a36f-418ae573cbb5",
+            "document_id": "8fe79666-435f-569f-8961-3855570936cf",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale\n\nText: de sobriété \nLa revue de littérature réalisée sur le concept de sobriété à \nviser à mieux comprendre son origine et ce quil recouvre, les \ndifférentes définitions que peuvent en fournir les acteurs mais \négalement les enjeux qui lentourent. À ce titre, une attention \nparticulière a été portée au fait de ne pas considérer unique -\nment les actions individuelles mais de bien sintéresser à len -\nsemble des échelles dactions à la fois individuelles, collectives \net institutionnelles. \nÉtape 2: revue de littérature pour identifier les \nenjeux liés à la sobriété énergétique \nLa revue de bibliographique a permis une analyse qualitative des \nenjeux transversaux de la sobriété en sappuyant sur la littéra -\nture scientifique, mais également sur des exercices de scéna -\nrisation orientés vers la sobriété tels que ceux menés par les \nassociations négaWatt et Virage Energie. Pour organiser cette \nanalyse qualitative de la littérature et aider à la structuration des",
+            "metadata": {
+              "title": "Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale",
+              "hal_id": "hal-03614943",
+              "authors": [
+                "Mathieu Saujot",
+                "Sophie Dubuisson-Quellier",
+                "Solange Martin",
+                "Carine Barbier",
+                "Prabodh Pourouchottaminh",
+                "Charriau Pascal",
+                "Desaunay Cécile",
+                "Joseph Hajjar",
+                "Gwenaël Podesta",
+                "Sarah Thiriot",
+                "Thomas Le Gallic",
+                "Stéphane La Branche",
+                "David Laurent",
+                "Chaffardon Gersende",
+                "Dossier Julien"
+              ],
+              "version": "v0",
+              "citation": "Mathieu Saujot, Sophie Dubuisson-Quellier, Solange Martin, Carine Barbier, Prabodh Pourouchottaminh, et al.. Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale. [Rapport de recherche] 01/22, Iddri - Sciences Po. 2022, pp.76. ⟨hal-03614943⟩",
+              "source_url": "https://hal.science/hal-03614943",
+              "chunk_order": 528,
+              "description": "La transition écologique est un projet de transformation sociale, politique, technique et économique, qui vient interagir avec une société en perpétuel mouvement, mue par des forces individuelles et collectives (groupes, institutions, modes de régulation, etc.) et ayant ses dynamiques propres dans ses formes d’organisation sociale, ses valeurs, ses liens aux technologies, etc. À ce stade de la transition, il est critique de mieux penser, en amont, sa dimension sociale : les structures et mécanismes sociaux à l’œuvre qui peuvent favoriser, modifier ou s’opposer à sa mise en œuvre, ceux qu’il faut pouvoir orienter et ceux dont il faut débattre, nombreux, tant l‘exercice est nouveau. Malgré l'urgence radicale, les chemins, notamment sociaux, peuvent être divers et nous avons encore le choix, d’où la nécessité de l'anticiper par la prospective. Or la dimension sociale du changement demeure un point faible des prospectives énergie-climat qui nourrissent les stratégies de transition (Saujot et Waisman, 2020). Aujourd’hui, la montée à l’agenda politique de ces questions est une opportunité pour intégrer plus largement l’analyse du social à la fabrique des prospectives énergie-climat. Si beaucoup reste à faire, de nombreuses expériences existent et peuvent d’ores et déjà être valorisées pour imaginer et mettre en œuvre des approches concrètes de prospectives plus riches. C’est ce dont nous nous sommes fait l’écho dans un récent billet de blog et c’est dans cette perspective que cette Étude réunit une diversité de ces expériences à travers 12 contributions de praticiens qui ont été confrontés à ces questions.",
+              "document_type": "REPORT",
+              "publication_date": "2022-01-03",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Qui au CIRED a travaillé sur la sobriété"
+            }
+          },
+          {
+            "id": "e02bf515-5649-5ae0-8965-ec9868a1b46c",
+            "document_id": "8fe79666-435f-569f-8961-3855570936cf",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale\n\nText: Iddri\nCezard, F., Mourad, M. (2019). Panorama sur la notion de sobriété. \nExpertises. Ademe\nCheurfa, M., Chanvril, F. (2019). 2009-2019, la crise de la confiance \npolitique, Cevipof, janvier 2019, https://www.sciencespo.fr/cevipof/\nsites/sciencespo.fr.cevipof/files/CEVIPOF_confiance_10ans_CHEURFA_\nCHANVRIL_2019.pdf\nCointe, B., Cassen, C., Nadaï, A. (2019). Organising Policy-Relevant \nKnowledge for Climate Action: Integrated Assessment Modelling, the \nIPCC, and the Emergence of a Collective Expertise on Socioeconomic \nEmission Scenarios. Science & Technology Studies.\nCreutzig, F. et al.  (2018). Towards demand-side solutions for mitigating \nclimate change Nature Climate Change  8 2603\nCreutzig, F. et al.  (2021). Reviewing the scope and thematic focus of 100 \n000 publications on energy consumption, services and social aspects \nof climate change: a big data approach to demand-side mitigation. \nEnvironmental Research Letters , Volume 16, Number 1.",
+            "metadata": {
+              "title": "Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale",
+              "hal_id": "hal-03614943",
+              "authors": [
+                "Mathieu Saujot",
+                "Sophie Dubuisson-Quellier",
+                "Solange Martin",
+                "Carine Barbier",
+                "Prabodh Pourouchottaminh",
+                "Charriau Pascal",
+                "Desaunay Cécile",
+                "Joseph Hajjar",
+                "Gwenaël Podesta",
+                "Sarah Thiriot",
+                "Thomas Le Gallic",
+                "Stéphane La Branche",
+                "David Laurent",
+                "Chaffardon Gersende",
+                "Dossier Julien"
+              ],
+              "version": "v0",
+              "citation": "Mathieu Saujot, Sophie Dubuisson-Quellier, Solange Martin, Carine Barbier, Prabodh Pourouchottaminh, et al.. Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale. [Rapport de recherche] 01/22, Iddri - Sciences Po. 2022, pp.76. ⟨hal-03614943⟩",
+              "source_url": "https://hal.science/hal-03614943",
+              "chunk_order": 667,
+              "description": "La transition écologique est un projet de transformation sociale, politique, technique et économique, qui vient interagir avec une société en perpétuel mouvement, mue par des forces individuelles et collectives (groupes, institutions, modes de régulation, etc.) et ayant ses dynamiques propres dans ses formes d’organisation sociale, ses valeurs, ses liens aux technologies, etc. À ce stade de la transition, il est critique de mieux penser, en amont, sa dimension sociale : les structures et mécanismes sociaux à l’œuvre qui peuvent favoriser, modifier ou s’opposer à sa mise en œuvre, ceux qu’il faut pouvoir orienter et ceux dont il faut débattre, nombreux, tant l‘exercice est nouveau. Malgré l'urgence radicale, les chemins, notamment sociaux, peuvent être divers et nous avons encore le choix, d’où la nécessité de l'anticiper par la prospective. Or la dimension sociale du changement demeure un point faible des prospectives énergie-climat qui nourrissent les stratégies de transition (Saujot et Waisman, 2020). Aujourd’hui, la montée à l’agenda politique de ces questions est une opportunité pour intégrer plus largement l’analyse du social à la fabrique des prospectives énergie-climat. Si beaucoup reste à faire, de nombreuses expériences existent et peuvent d’ores et déjà être valorisées pour imaginer et mettre en œuvre des approches concrètes de prospectives plus riches. C’est ce dont nous nous sommes fait l’écho dans un récent billet de blog et c’est dans cette perspective que cette Étude réunit une diversité de ces expériences à travers 12 contributions de praticiens qui ont été confrontés à ces questions.",
+              "document_type": "REPORT",
+              "publication_date": "2022-01-03",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Qui au CIRED a travaillé sur la sobriété"
+            }
+          },
+          {
+            "id": "2f30b2aa-daa9-5d99-868a-0067635444b3",
+            "document_id": "f2458fdd-772a-5057-9fa8-ca6d749087b8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Changement climatique et transition énergétique en région Île-de-France\n\nText: Au-delà des actions existantes, de nom-\nbreuses recommandations pour conduire \nune transition vers la sobriété ont été ré-\ncemment formulées par diverses institu-\ntions. Les scénarios avec une forte domi-\nnante de sobriété, notamment ceux de \nNegawatt et de lAgence de la transition \nécologique (ADEME), incluent des recom-\nmandations de mesures dont certaines \npourraient sappliquer à léchell e des villes \nfranciliennes (rénovation performante des \nbâtiments, mobilité accessible à tous, anti-\nciper et préparer les mutations indus-\ntrielles et professionnelles, etc.). Les rap-\nports publiés par le Shift Project (2021) dé-\nveloppent également une série da ctions \nou dinstruments de sobriété concernant \nlhabitat et la mobilité, ainsi que des re-\ncommandations sectorielles157. \n \nDe manière générale, ces recommanda-\ntions soulignent le besoin de politiques \ntransverses et cohérente s, et daction à \nune échelle plus col lective et systé-\nmique158. Mais la construction dune vision",
+            "metadata": {
+              "title": "Changement climatique et transition énergétique en région Île-de-France",
+              "hal_id": "hal-03871752",
+              "authors": "['Philippe Drobinski', 'Jordi Badosa', 'Isabelle Bilger', 'Benjamin Brigaud', 'Patricia Crifo', 'Antoine Esnos', 'Louis-Gaëtan Giraudet', 'Marion Gosselin', 'Mathias Guerineau', 'Jean-François Guillemoles', 'Florence Habets', 'Jean-Pierre Lévy', 'Julie Mayer', 'Bertrand Quélin', 'Florian Raymond', 'Daniel Suchet', 'Qiqi Tao', 'Alexis Tantet', 'Vincent Viguie']",
+              "version": "v0",
+              "citation": "Philippe Drobinski, Jordi Badosa, Isabelle Bilger, Benjamin Brigaud, Patricia Crifo, et al.. Changement climatique et transition énergétique en région Île-de-France. Groupe régional d'expertise sur le changement climatique et la transition écologique en Île-de-France (GREC Francilien). 2022. ⟨hal-03871752⟩",
+              "source_url": "https://hal.science/hal-03871752",
+              "chunk_order": 229,
+              "document_type": "REPORT",
+              "publication_date": "2022-11-25",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Qui au CIRED a travaillé sur la sobriété"
+            }
+          },
+          {
+            "id": "5011b80d-5a24-5fde-a443-09b91c33f48c",
+            "document_id": "8fe79666-435f-569f-8961-3855570936cf",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale\n\nText: uniquement et fortement sur le citoyen et sa responsabilité indi -\nviduelle dans la mise en œuvre, comme cela est souvent le cas \n(accent mis sur les pratiques de mobilité, dalimentation, etc.). \nLe modélisateur est bien placé pour voir lensemble des secteurs, \ndes chaînes de valeur et des dimensions systémiques intermé -\ndiaires et leurs poids sur les consommations énergétiques et de \nressources. La sobriété est un concept qui concerne lensemble \ndes composantes de léconomie. Les démarches de sobriété \npeuvent ainsi également concerner les collectivités territoriales \nou les entreprises, que ce soit par des politiques nationales ou \npar des initiatives volontaires.\nAujourdhui, on ne sait pas encore bien analyser les caracté -\nristiques des différents pays et secteurs en termes de sobriété. \nLes données disponibles sont en effet limitées et peu compa -\nrables. Et au niveau prospectif, on ne sait donc pas encore bien \nmodéliser de potentielles politiques de sobriété (encore rares).",
+            "metadata": {
+              "title": "Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale",
+              "hal_id": "hal-03614943",
+              "authors": [
+                "Mathieu Saujot",
+                "Sophie Dubuisson-Quellier",
+                "Solange Martin",
+                "Carine Barbier",
+                "Prabodh Pourouchottaminh",
+                "Charriau Pascal",
+                "Desaunay Cécile",
+                "Joseph Hajjar",
+                "Gwenaël Podesta",
+                "Sarah Thiriot",
+                "Thomas Le Gallic",
+                "Stéphane La Branche",
+                "David Laurent",
+                "Chaffardon Gersende",
+                "Dossier Julien"
+              ],
+              "version": "v0",
+              "citation": "Mathieu Saujot, Sophie Dubuisson-Quellier, Solange Martin, Carine Barbier, Prabodh Pourouchottaminh, et al.. Pour une meilleure intégration des dimensions sociales et des modes de vie dans les exercices de prospective environnementale. [Rapport de recherche] 01/22, Iddri - Sciences Po. 2022, pp.76. ⟨hal-03614943⟩",
+              "source_url": "https://hal.science/hal-03614943",
+              "chunk_order": 277,
+              "description": "La transition écologique est un projet de transformation sociale, politique, technique et économique, qui vient interagir avec une société en perpétuel mouvement, mue par des forces individuelles et collectives (groupes, institutions, modes de régulation, etc.) et ayant ses dynamiques propres dans ses formes d’organisation sociale, ses valeurs, ses liens aux technologies, etc. À ce stade de la transition, il est critique de mieux penser, en amont, sa dimension sociale : les structures et mécanismes sociaux à l’œuvre qui peuvent favoriser, modifier ou s’opposer à sa mise en œuvre, ceux qu’il faut pouvoir orienter et ceux dont il faut débattre, nombreux, tant l‘exercice est nouveau. Malgré l'urgence radicale, les chemins, notamment sociaux, peuvent être divers et nous avons encore le choix, d’où la nécessité de l'anticiper par la prospective. Or la dimension sociale du changement demeure un point faible des prospectives énergie-climat qui nourrissent les stratégies de transition (Saujot et Waisman, 2020). Aujourd’hui, la montée à l’agenda politique de ces questions est une opportunité pour intégrer plus largement l’analyse du social à la fabrique des prospectives énergie-climat. Si beaucoup reste à faire, de nombreuses expériences existent et peuvent d’ores et déjà être valorisées pour imaginer et mettre en œuvre des approches concrètes de prospectives plus riches. C’est ce dont nous nous sommes fait l’écho dans un récent billet de blog et c’est dans cette perspective que cette Étude réunit une diversité de ces expériences à travers 12 contributions de praticiens qui ont été confrontés à ces questions.",
+              "document_type": "REPORT",
+              "publication_date": "2022-01-03",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Qui au CIRED a travaillé sur la sobriété"
+            }
+          },
+          {
+            "id": "f54f3db7-00c0-5171-acae-59390d94f238",
+            "document_id": "f2458fdd-772a-5057-9fa8-ca6d749087b8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Changement climatique et transition énergétique en région Île-de-France\n\nText: Source  : Toulouse E., Le Dû M., Gorge H., Semal L., \"Stimulating energy sufficiency: barriers and \nopportunities\", Actes de la conférence eceee Summer Study, 2017.  \nQuelques définitions de la sobriété énergétique.  \n \n  \n \n135 Semal L., Szuba M., Villalba B., 2014  :  Sobriétés \n(2010 -2013)  : une recherche interdisciplinaire sur \nlinstitutionnalisation de politiques locales de \nsobriété énergétique.   Natures  Sciences Soci etes, \n22, 351 -358. \n136 Rockström J., Steffen W., Noone K., Persson Å., \nChapin, III F.S., Lambin E., Lenton T.M., Scheffer M., \nFolke C., Schellnhuber H., Nykvist B., De Wit C.A., \nHughes T., van der Leeuw S., Rodhe H., Sörlin S., Snyder K., Costanza R., Svedin U., Falkenmark M., \nKarlberg L., Corell R.W., Fabry V.J., Hansen J., Walker \nB., Liverman D., Richardson K., Crutzen P., Foley. J., \n2009  : Planetary boundaries:exploring the safe \noperating space for humanity . Ecology and Society , \n14, 32 . \n137 Guérineau M., Mayer J., 2021  : Rapp ort \n Organiser la sobriété  .",
+            "metadata": {
+              "title": "Changement climatique et transition énergétique en région Île-de-France",
+              "hal_id": "hal-03871752",
+              "authors": "['Philippe Drobinski', 'Jordi Badosa', 'Isabelle Bilger', 'Benjamin Brigaud', 'Patricia Crifo', 'Antoine Esnos', 'Louis-Gaëtan Giraudet', 'Marion Gosselin', 'Mathias Guerineau', 'Jean-François Guillemoles', 'Florence Habets', 'Jean-Pierre Lévy', 'Julie Mayer', 'Bertrand Quélin', 'Florian Raymond', 'Daniel Suchet', 'Qiqi Tao', 'Alexis Tantet', 'Vincent Viguie']",
+              "version": "v0",
+              "citation": "Philippe Drobinski, Jordi Badosa, Isabelle Bilger, Benjamin Brigaud, Patricia Crifo, et al.. Changement climatique et transition énergétique en région Île-de-France. Groupe régional d'expertise sur le changement climatique et la transition écologique en Île-de-France (GREC Francilien). 2022. ⟨hal-03871752⟩",
+              "source_url": "https://hal.science/hal-03871752",
+              "chunk_order": 204,
+              "document_type": "REPORT",
+              "publication_date": "2022-11-25",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Qui au CIRED a travaillé sur la sobriété"
+            }
+          },
+          {
+            "id": "1848054e-f206-5a9b-b17e-f4f5e32892fc",
+            "document_id": "f2458fdd-772a-5057-9fa8-ca6d749087b8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Changement climatique et transition énergétique en région Île-de-France\n\nText: Source  : Haut Conseil pour le Climat.  \nLa  sobriété   renvoie à des démarches multiples, dont le dénominateur \ncommun est une recherche de  moins , de modération des biens et des \nservices produits et consommés, tout en recherchant un   mieux  . \nSource  : ADEME (20 19) Rapport   Panorama sur la notion de sobriété  , nov. 2019.  \nLensemble des stratégies collectives et individuelles pour changer la nature des \nservices énergétiques que nous consommons et cesser ou réduire le recours à \nceux qui sont intrinsèquement les plus intensifs en énergie.  \nSource  : Toulouse E., Le Dû M., Gorge H., Semal L., \"Stimulating energy sufficiency: barriers and \nopportunities\", Actes de la conférence eceee Summer Study, 2017.  \nQuelques définitions de la sobriété énergétique.  \n \n  \n \n135 Semal L., Szuba M., Villalba B., 2014  :  Sobriétés \n(2010 -2013)  : une recherche interdisciplinaire sur \nlinstitutionnalisation de politiques locales de \nsobriété énergétique.   Natures  Sciences Soci etes, \n22, 351 -358.",
+            "metadata": {
+              "title": "Changement climatique et transition énergétique en région Île-de-France",
+              "hal_id": "hal-03871752",
+              "authors": "['Philippe Drobinski', 'Jordi Badosa', 'Isabelle Bilger', 'Benjamin Brigaud', 'Patricia Crifo', 'Antoine Esnos', 'Louis-Gaëtan Giraudet', 'Marion Gosselin', 'Mathias Guerineau', 'Jean-François Guillemoles', 'Florence Habets', 'Jean-Pierre Lévy', 'Julie Mayer', 'Bertrand Quélin', 'Florian Raymond', 'Daniel Suchet', 'Qiqi Tao', 'Alexis Tantet', 'Vincent Viguie']",
+              "version": "v0",
+              "citation": "Philippe Drobinski, Jordi Badosa, Isabelle Bilger, Benjamin Brigaud, Patricia Crifo, et al.. Changement climatique et transition énergétique en région Île-de-France. Groupe régional d'expertise sur le changement climatique et la transition écologique en Île-de-France (GREC Francilien). 2022. ⟨hal-03871752⟩",
+              "source_url": "https://hal.science/hal-03871752",
+              "chunk_order": 203,
+              "document_type": "REPORT",
+              "publication_date": "2022-11-25",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Qui au CIRED a travaillé sur la sobriété"
+            }
+          },
+          {
+            "id": "daec3cd7-d5df-5ab8-b586-0fe3b28eff4f",
+            "document_id": "f2458fdd-772a-5057-9fa8-ca6d749087b8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Changement climatique et transition énergétique en région Île-de-France\n\nText: exhaustive les actions de sobriété sur un \nterritoire tel q uel lÎle -de-France est com-\nplexe, en raison, dune part, du flou autour \nde la définition et du périmètre de la so-\nbriété  rendant le spectre dactions po-\ntentiellement très large -, et dautre part, \ndu caractère implicite de la sobriété dans \nde nombreuses a ctions qui lincarnent \n(ex. : économie circulaire).  \n \nLa littérature sur le sujet na pas encore \nentrepris une telle synthèse, mais le repé-\nrage des initiatives de sobriété en vue de \nlélaboration dune cartographie est en \ncours a u sein des ateliers de la Fabrique \nfrancilienne. Sont listées ci -dessous  \nquelques exemples dactions embléma-\ntiques identifiées sur le territoire en lien \navec les domaines et dimensions de la so-\nbriété présentées précédemment. Ces ac-\ntions visent davantage à illustrer la nature \ndes instruments de transition vers la so-\nbriété quà dresser un panorama exhaus-\ntif, et proviennent essentiellement du re-\ncensement réalisé dans le cadre de la Fa-",
+            "metadata": {
+              "title": "Changement climatique et transition énergétique en région Île-de-France",
+              "hal_id": "hal-03871752",
+              "authors": "['Philippe Drobinski', 'Jordi Badosa', 'Isabelle Bilger', 'Benjamin Brigaud', 'Patricia Crifo', 'Antoine Esnos', 'Louis-Gaëtan Giraudet', 'Marion Gosselin', 'Mathias Guerineau', 'Jean-François Guillemoles', 'Florence Habets', 'Jean-Pierre Lévy', 'Julie Mayer', 'Bertrand Quélin', 'Florian Raymond', 'Daniel Suchet', 'Qiqi Tao', 'Alexis Tantet', 'Vincent Viguie']",
+              "version": "v0",
+              "citation": "Philippe Drobinski, Jordi Badosa, Isabelle Bilger, Benjamin Brigaud, Patricia Crifo, et al.. Changement climatique et transition énergétique en région Île-de-France. Groupe régional d'expertise sur le changement climatique et la transition écologique en Île-de-France (GREC Francilien). 2022. ⟨hal-03871752⟩",
+              "source_url": "https://hal.science/hal-03871752",
+              "chunk_order": 222,
+              "document_type": "REPORT",
+              "publication_date": "2022-11-25",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "Qui au CIRED a travaillé sur la sobriété"
+            }
+          },
+          {
+            "id": "b2f63820-1c1b-5c09-a772-b04db3780df2",
+            "document_id": "f2458fdd-772a-5057-9fa8-ca6d749087b8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Changement climatique et transition énergétique en région Île-de-France\n\nText: dances sociétales liées aux usa ges énergé-\ntiques et plus largement aux modes de vie, \npour favoriser son appropriation par les \nacteurs du territoire et éviter les résis-\ntances (sensibilité à lécologie, mixité so-\nciale, précarité, etc.).  \n \nAinsi, la définition dune ou de sobriété(s) \nurbaine (s) en Île -de-France dépendra des \ncaractéristiques territoriales propres à \nchaque ville, dont les contraintes et les le-\nviers de sobriété peuvent différer dun \ncontexte à lautre156. Recenser de façon \nexhaustive les actions de sobriété sur un \nterritoire tel q uel lÎle -de-France est com-\nplexe, en raison, dune part, du flou autour \nde la définition et du périmètre de la so-\nbriété  rendant le spectre dactions po-\ntentiellement très large -, et dautre part, \ndu caractère implicite de la sobriété dans \nde nombreuses a ctions qui lincarnent \n(ex. : économie circulaire).  \n \nLa littérature sur le sujet na pas encore \nentrepris une telle synthèse, mais le repé-\nrage des initiatives de sobriété en vue de",
+            "metadata": {
+              "title": "Changement climatique et transition énergétique en région Île-de-France",
+              "hal_id": "hal-03871752",
+              "authors": "['Philippe Drobinski', 'Jordi Badosa', 'Isabelle Bilger', 'Benjamin Brigaud', 'Patricia Crifo', 'Antoine Esnos', 'Louis-Gaëtan Giraudet', 'Marion Gosselin', 'Mathias Guerineau', 'Jean-François Guillemoles', 'Florence Habets', 'Jean-Pierre Lévy', 'Julie Mayer', 'Bertrand Quélin', 'Florian Raymond', 'Daniel Suchet', 'Qiqi Tao', 'Alexis Tantet', 'Vincent Viguie']",
+              "version": "v0",
+              "citation": "Philippe Drobinski, Jordi Badosa, Isabelle Bilger, Benjamin Brigaud, Patricia Crifo, et al.. Changement climatique et transition énergétique en région Île-de-France. Groupe régional d'expertise sur le changement climatique et la transition écologique en Île-de-France (GREC Francilien). 2022. ⟨hal-03871752⟩",
+              "source_url": "https://hal.science/hal-03871752",
+              "chunk_order": 221,
+              "document_type": "REPORT",
+              "publication_date": "2022-11-25",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "Qui au CIRED a travaillé sur la sobriété"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 397,
+            "total_tokens": 397
+          }
+        }
+      },
+      "duration": 777
+    },
+    "retrievalTime": 1668,
+    "generationTime": 777,
+    "timestamp": "2025-07-12T12:50:12.784Z"
+  },
+  "server_context": {
+    "client_ip": "80.239.186.179",
+    "forwarded_for": "80.239.186.179",
+    "received_at": "2025-07-12T12:50:13.075121+00:00",
+    "server_version": "1.0.0"
+  }
+}

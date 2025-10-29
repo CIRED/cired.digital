@@ -1,0 +1,558 @@
+{
+  "sessionId": "session_1752145600671_191n4o3q5l2x4a716h",
+  "timestamp": "20250710T110708332Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752145622682_q8noz0t",
+    "response": {
+      "results": {
+        "generated_answer": "L'éolien en mer, également connu sous le nom d'éolien offshore, est une technologie de production d'énergie renouvelable qui implique l'installation d'éoliennes dans les eaux marines. Voici quelques points clés et références pertinentes basées sur les résultats de recherche fournis :\n\n1. **Enjeux et Perspectives** :\n   - Un document intitulé \"Eolien en mer, enjeux et perspectives\" publié par la FEE en 2019 aborde les défis et les opportunités liés au développement de l'éolien en mer. Ce document est mentionné dans les sources [c1caef5] et [63b497b].\n\n2. **Impact sur les Paysages et les Communautés** :\n   - L'éolien en mer a un impact significatif sur les paysages et les communautés locales. Par exemple, en Mer du Nord, le développement de l'éolien offshore a entraîné des mutations importantes pour les insulaires, avec de nouvelles infrastructures, des emplois et des évolutions du paysage marin. Cela a également suscité des controverses, perçu à la fois comme un levier de développement local et une source de conflit. Ces aspects sont discutés dans les sources [1b2e896], [cca43fd], et [d23f267].\n\n3. **Processus de Planification et d'Acceptation Sociale** :\n   - La mise en œuvre de projets éoliens en mer implique des processus de planification complexes et des enjeux juridiques, écologiques, financiers et techniques. Par exemple, en Allemagne, les développeurs éoliens ont dû intégrer une procédure longue et complexe de planification pour la Mer du Nord. Ces enjeux sont abordés dans la source [d23f267].\n\n4. **Investissements et Financements** :\n   - Les investissements nécessaires pour les projets éoliens en mer sont considérables, souvent dépassant dix milliards d'euros. Les financements publics et privés jouent un rôle crucial dans la mise en place de ces projets. Les conditions commerciales et légales doivent être attractives pour les investisseurs privés. Ces aspects sont discutés dans la source [d5de8fc].\n\n5. **Dimension Géostratégique** :\n   - Le développement de l'éolien en mer prend également une dimension géostratégique, notamment dans le contexte de la compétition entre la Chine et les pays occidentaux. La Chine a massivement investi dans les énergies renouvelables, y compris l'éolien offshore. Cela est mentionné dans la source [d5de8fc].\n\nPour plus d'informations détaillées, vous pouvez consulter les documents référencés dans les sources mentionnées.",
+        "citations": [
+          {
+            "id": "c1caef5",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 532,
+              "end": 541
+            },
+            "payload": {
+              "id": "c1caef59-019b-5fb6-9118-2c1c49443e63",
+              "document_id": "05872604-bdbc-585e-a7d4-ec051c359fe8",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017156862745098037,
+              "text": "Document Title: How Sensitive are Optimal Fully Renewable Power Systems to Technology Cost Uncertainty?\n\nText: socio -technical atlas. Energy Policy, 132, 1092 -1100  \nENTSO -E (2013). Network Code on Load -Frequency Control and Reserves 6, \n168. \nEricsson, K. (2017). Biogenic carbon dioxide as feedstock for production of \nchemicals and fuels: A techno -economic assessment with a European \nperspective. Environmental and Energy  System Studies, Lund University: \nMiljö - och energisystem, LTH, Lunds universitet.  \nFCH JU (2015). Commercialisation of energy storage in Europe: Final report.  \nFEE (2019), Eolien en mer, enjeux et perspectives. https://fee.asso.fr/eolien -en-\nmer/enjeux -et-perspectives/  \nGowrisankaran, G., Reynolds, S. S., & Samano, M. (2016). Intermittency and \nthe value of renewable energy. Journal of Political E conomy , 124(4), 1187 -\n1234.  \nHirth, L. (2015): The Optimal Share of Variable Renewables. The Energy \nJournal 36(1), 127 - 162. doi:10.5547/01956574.36.1.6.  \nHirth, L., & Müller, S. (2016). System -friendly wind power: How advanced",
+              "metadata": {
+                "doi": "10.5547/01956574.43.1.bshi",
+                "title": "How Sensitive are Optimal Fully Renewable Power Systems to Technology Cost Uncertainty?",
+                "hal_id": "hal-03100326",
+                "authors": [
+                  "Behrang Shirizadeh",
+                  "Quentin Perrier",
+                  "Philippe Quirion"
+                ],
+                "version": "v0",
+                "citation": "Behrang Shirizadeh, Quentin Perrier, Philippe Quirion. How Sensitive are Optimal Fully Renewable Power Systems to Technology Cost Uncertainty?. Energy Journal, 2022, 43 (1), ⟨10.5547/01956574.43.1.bshi⟩. ⟨hal-03100326⟩",
+                "source_url": "https://doi.org/10.5547/01956574.43.1.bshi",
+                "chunk_order": 103,
+                "document_type": "ART",
+                "publication_date": "2022-01-01",
+                "semantic_rank": 10,
+                "full_text_rank": 1,
+                "associated_query": "L eolien en mer"
+              }
+            }
+          },
+          {
+            "id": "63b497b",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 545,
+              "end": 554
+            },
+            "payload": {
+              "id": "63b497b9-3b88-5c75-bdb6-5d8bee19efa2",
+              "document_id": "05872604-bdbc-585e-a7d4-ec051c359fe8",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017094017094017092,
+              "text": "Document Title: How Sensitive are Optimal Fully Renewable Power Systems to Technology Cost Uncertainty?\n\nText: FEE (2019), Eolien en mer, enjeux et perspectives. https://fee.asso.fr/eolien -en-\nmer/enjeux -et-perspectives/  \nGowrisankaran, G., Reynolds, S. S., & Samano, M. (2016). Intermittency and \nthe value of renewable energy. Journal of Political E conomy , 124(4), 1187 -\n1234.  \nHirth, L. (2015): The Optimal Share of Variable Renewables. The Energy \nJournal 36(1), 127 - 162. doi:10.5547/01956574.36.1.6.  \nHirth, L., & Müller, S. (2016). System -friendly wind power: How advanced \nwind turbine design can incre ase the economic value of electricity generated \nthrough wind power. Energy Economics, 56, 51 -63. \nHirth, L., Ueckerdt, F., & Edenhofer, O. (2016). Why wind is not coal: on the \neconomics of electricity generation. The Energy Journal , 37(3).  \nHuld T, Gottscha lg R, Beyer HG, Topič M. (2010). Mapping the performance \nof PV modules, effects of module type and data averaging. Solar Energy \n2010;84(2):324 38. \nIEA (2019). Offshore Wind Outlook 2019  World Energy Outlook Special \nReport. IEA, Paris.",
+              "metadata": {
+                "doi": "10.5547/01956574.43.1.bshi",
+                "title": "How Sensitive are Optimal Fully Renewable Power Systems to Technology Cost Uncertainty?",
+                "hal_id": "hal-03100326",
+                "authors": [
+                  "Behrang Shirizadeh",
+                  "Quentin Perrier",
+                  "Philippe Quirion"
+                ],
+                "version": "v0",
+                "citation": "Behrang Shirizadeh, Quentin Perrier, Philippe Quirion. How Sensitive are Optimal Fully Renewable Power Systems to Technology Cost Uncertainty?. Energy Journal, 2022, 43 (1), ⟨10.5547/01956574.43.1.bshi⟩. ⟨hal-03100326⟩",
+                "source_url": "https://doi.org/10.5547/01956574.43.1.bshi",
+                "chunk_order": 104,
+                "document_type": "ART",
+                "publication_date": "2022-01-01",
+                "semantic_rank": 10,
+                "full_text_rank": 2,
+                "associated_query": "L eolien en mer"
+              }
+            }
+          },
+          {
+            "id": "1b2e896",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1075,
+              "end": 1084
+            },
+            "payload": {
+              "id": "1b2e896e-3b57-5755-a510-d8ce0508fcb3",
+              "document_id": "f1dd95e5-13ae-5079-a370-f24c18a2718f",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: Politiques éoliennes et paysages\n\nText: controverses qui entourent lessor de cette technolo gie, tour à tour perçue comme un levier de \ndéveloppement local et une source de conflit.  Au-delà des perceptions individuelles et collectives, \nlarrivée de léolien en Mer du Nord active de nombreux processus politiques, techniques, juridiques et \nculturels  qui recomposent cet espace et modifient la relation des insulaires à la mer.  \nAutour du vent, comme médiateur, sélaborent de nouveaux réseaux dhumains et de non -humains. \nAinsi, la transformation de la Mer du Nord en espace de production énergétique pass e par la mise en \nplace de plateformes expérimentales, comme FINO 1, ou encore de parcs éoliens pilotes, comme \nAlpha Ventus, autour desquels se dessinent de nouveaux jeux dacteurs réunissant des chercheurs, \ndes industriels, des politiques, etc. En suivant ces nouveaux réseaux socio -techniques, il est possible \nde comprendre lémergence de paysages éoliens à la croisée de processus qui sont autant mondiaux",
+              "metadata": {
+                "title": "Politiques éoliennes et paysages",
+                "hal_id": "halshs-00674958",
+                "authors": [
+                  "Alain Nadaï",
+                  "Olivier Labussiere"
+                ],
+                "version": "v0",
+                "citation": "Alain Nadaï, Olivier Labussiere. Politiques éoliennes et paysages. 2010. ⟨halshs-00674958v2⟩",
+                "source_url": "https://hal.science/halshs-00674958",
+                "chunk_order": 402,
+                "description": "Cette recherche analyse la politique de développement de l'énergie éolienne comme exemple de processus ouvert et complexe de mise en œuvre d'une politique publique. Nous abordons la politique éolienne comme un dispositif collectif de création, de stabilisation et de jugement sur le paysage. Le travail est basé sur des études de cas choisies en Allemagne, en France et au Portugal (13 études de cas: 5 en France, 4 en Allemagne et 4 au Portugal) Notre analyse met en évidence les liens du paysage à la politique éolienne et aux institutions de planification. Nos résultats montrent que le paysage, au sens de la culture paysagère, des traditions et des institutions de gestion des paysages, constituent une ressource pour la transition énergétique et que la culture paysagère constitue la matrice par laquelle l'éolien se territorialise dans chacun des pays étudiés. Il s'agit là d'un résultat essentiel pour l'approche des politiques éoliennes, mais aussi des politiques concernant d'autres énergies renouvelables. Les études de cas décrivent les recompositions sociales et paysagères profondes qui accompagnent le développement éolien au niveau local. En France, elles mettent en évidence le rôle central de la planification paysagère dans différents (4) types de gouvernance des processus éoliens au niveau local et leur relation à la conflictualité et aux recompositions, sociales et paysagères, qui caractérisent ces processus.",
+                "document_type": "REPORT",
+                "publication_date": "2010-01-29",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "L eolien en mer"
+              }
+            }
+          },
+          {
+            "id": "cca43fd",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1086,
+              "end": 1095
+            },
+            "payload": {
+              "id": "cca43fd0-eaca-54b2-847d-4182e1ba3eb4",
+              "document_id": "f1dd95e5-13ae-5079-a370-f24c18a2718f",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015818181818181818,
+              "text": "Document Title: Politiques éoliennes et paysages\n\nText: Eolienne et Paysage  01/2010  \n \n \nEolienne et Paysage           01/2010              \n48 \n historiquement de nombreuses activités comme la navigation , la pêche  et le tourisme. En outre, elle \nest depuis plusieurs  siècles, le territoire des insulaires de la Frise ori entale.   \nLe développement de léolien offshore génère des mutations importantes pour ces insulaires \n(nouvelles infrastructures, emplois, évolutions du paysage marin). Létude des r écits locaux  montre les \ncontroverses qui entourent lessor de cette technolo gie, tour à tour perçue comme un levier de \ndéveloppement local et une source de conflit.  Au-delà des perceptions individuelles et collectives, \nlarrivée de léolien en Mer du Nord active de nombreux processus politiques, techniques, juridiques et \nculturels  qui recomposent cet espace et modifient la relation des insulaires à la mer.  \nAutour du vent, comme médiateur, sélaborent de nouveaux réseaux dhumains et de non -humains.",
+              "metadata": {
+                "title": "Politiques éoliennes et paysages",
+                "hal_id": "halshs-00674958",
+                "authors": [
+                  "Alain Nadaï",
+                  "Olivier Labussiere"
+                ],
+                "version": "v0",
+                "citation": "Alain Nadaï, Olivier Labussiere. Politiques éoliennes et paysages. 2010. ⟨halshs-00674958v2⟩",
+                "source_url": "https://hal.science/halshs-00674958",
+                "chunk_order": 401,
+                "description": "Cette recherche analyse la politique de développement de l'énergie éolienne comme exemple de processus ouvert et complexe de mise en œuvre d'une politique publique. Nous abordons la politique éolienne comme un dispositif collectif de création, de stabilisation et de jugement sur le paysage. Le travail est basé sur des études de cas choisies en Allemagne, en France et au Portugal (13 études de cas: 5 en France, 4 en Allemagne et 4 au Portugal) Notre analyse met en évidence les liens du paysage à la politique éolienne et aux institutions de planification. Nos résultats montrent que le paysage, au sens de la culture paysagère, des traditions et des institutions de gestion des paysages, constituent une ressource pour la transition énergétique et que la culture paysagère constitue la matrice par laquelle l'éolien se territorialise dans chacun des pays étudiés. Il s'agit là d'un résultat essentiel pour l'approche des politiques éoliennes, mais aussi des politiques concernant d'autres énergies renouvelables. Les études de cas décrivent les recompositions sociales et paysagères profondes qui accompagnent le développement éolien au niveau local. En France, elles mettent en évidence le rôle central de la planification paysagère dans différents (4) types de gouvernance des processus éoliens au niveau local et leur relation à la conflictualité et aux recompositions, sociales et paysagères, qui caractérisent ces processus.",
+                "document_type": "REPORT",
+                "publication_date": "2010-01-29",
+                "semantic_rank": 5,
+                "full_text_rank": 200,
+                "associated_query": "L eolien en mer"
+              }
+            }
+          },
+          {
+            "id": "d23f267",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1100,
+              "end": 1109
+            },
+            "payload": {
+              "id": "d23f2677-d973-5869-a88b-4bb959ef3ac6",
+              "document_id": "f1dd95e5-13ae-5079-a370-f24c18a2718f",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016098765432098764,
+              "text": "Document Title: Politiques éoliennes et paysages\n\nText: 4.2.3.  Léolien offshore et la recompositi on de la Mer du Nord  \nSi la zone littorale de la Basse -Saxe est  fortement colonisée par les éoliennes, la mer du Nord était \nrestée jusquà présent encore intacte.  Ces dernières années, la mer du Nord fit lobjet dintenses \nprospections par les développeurs éoliens. Pour ce faire,  les développeurs durent intégrer une \nprocédure longue et complexe de planification  et affronter de nombreux enjeux juridiques, \nécologiques, financiers et techniques.  \nA partir dune recherche ethnographique et dune analyse de discou rs aux niveau x local, régional et \nnational,  il sagit de comprendre la mise en œuvre dune politique énergétique (enjeux technologiques, \nde planification et dacceptabilité sociale) au large des côtes allemandes. Perçue par les politiques  et \nles industriel s comme un espace vide, la Mer du Nord constitue pourtant un espace où cohabitent",
+              "metadata": {
+                "title": "Politiques éoliennes et paysages",
+                "hal_id": "halshs-00674958",
+                "authors": [
+                  "Alain Nadaï",
+                  "Olivier Labussiere"
+                ],
+                "version": "v0",
+                "citation": "Alain Nadaï, Olivier Labussiere. Politiques éoliennes et paysages. 2010. ⟨halshs-00674958v2⟩",
+                "source_url": "https://hal.science/halshs-00674958",
+                "chunk_order": 400,
+                "description": "Cette recherche analyse la politique de développement de l'énergie éolienne comme exemple de processus ouvert et complexe de mise en œuvre d'une politique publique. Nous abordons la politique éolienne comme un dispositif collectif de création, de stabilisation et de jugement sur le paysage. Le travail est basé sur des études de cas choisies en Allemagne, en France et au Portugal (13 études de cas: 5 en France, 4 en Allemagne et 4 au Portugal) Notre analyse met en évidence les liens du paysage à la politique éolienne et aux institutions de planification. Nos résultats montrent que le paysage, au sens de la culture paysagère, des traditions et des institutions de gestion des paysages, constituent une ressource pour la transition énergétique et que la culture paysagère constitue la matrice par laquelle l'éolien se territorialise dans chacun des pays étudiés. Il s'agit là d'un résultat essentiel pour l'approche des politiques éoliennes, mais aussi des politiques concernant d'autres énergies renouvelables. Les études de cas décrivent les recompositions sociales et paysagères profondes qui accompagnent le développement éolien au niveau local. En France, elles mettent en évidence le rôle central de la planification paysagère dans différents (4) types de gouvernance des processus éoliens au niveau local et leur relation à la conflictualité et aux recompositions, sociales et paysagères, qui caractérisent ces processus.",
+                "document_type": "REPORT",
+                "publication_date": "2010-01-29",
+                "semantic_rank": 4,
+                "full_text_rank": 200,
+                "associated_query": "L eolien en mer"
+              }
+            }
+          },
+          {
+            "id": "d23f267",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1514,
+              "end": 1523
+            },
+            "payload": null
+          },
+          {
+            "id": "d5de8fc",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1929,
+              "end": 1938
+            },
+            "payload": {
+              "id": "d5de8fc3-beee-5889-bcd4-4eea6bd868d9",
+              "document_id": "28398a36-12a1-53c3-ac25-dbba77dfb0f3",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015547619047619046,
+              "text": "Document Title: Transition énergétique : promesses et défis des JETP\n\nText: éoliens en mer restent à proximité immédiate des côtes. Compte tenu de lintensité \ncapitalistique de léolien offshore, les investissements nécessaires dépassent largement  \ndix milliards deuros. Pour mobiliser les capitaux privés, les financements publics du \nJETP peuvent assister à la mise en place du cadre législatif, supporter des études \ntechniques et économiques, et co-investir dans les infrastructures de raccordement et \ndintégration des énergies renouvelables. Si le gouvernement réussit à proposer des \nconditions commerciales (tarif de rachat) et légales (partage du risque) attirant les \ninvestisseurs privés, le pays bénéficiera non seulement de lélectricité ainsi produite, \nmais aussi de débouchés locaux accroissant sa compétitivité industrielle dans le \nsecteur éolien offshore.\nCette dimension commerciale prend une coloration géostratégique dans le contexte de \nla compétition entre la Chine et les pays occidentaux. La Chine a massivement investi",
+              "metadata": {
+                "title": "Transition énergétique : promesses et défis des JETP",
+                "hal_id": "hal-04450041",
+                "authors": [
+                  "Minh Ha-Duong"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Transition énergétique : promesses et défis des JETP. La revue de l'énergie, A paraître, 670, pp.11-21. ⟨hal-04450041⟩",
+                "source_url": "https://hal.science/hal-04450041",
+                "chunk_order": 21,
+                "description": "Depuis la COP26, les Just Energy Transition Partnerships (JETP) portent une promesse majeure pour lutter contre le changement climatique : les pays occidentaux proposent de prêter et d'investir massivement dans les pays émergents pour accélérer leur transition énergétique. Mais les quatre projets pilotes en cours doivent réussir pour que ce dispositif se pérennise et s'étende. Or ces projets révèlent des défis et des effets secondaires potentiels, y compris le risque d'être utilisés à des fins géopolitiques, des conditions cachées, une perte de confiance et un endettement public extérieur excessif. Pour surmonter ces risques, il convient d'accroître la transparence, de promouvoir la compétition, d'adopter des normes sociales et environnementales largement reconnues et de réduire la portion de la dette souveraine dans le paquet de financement global.",
+                "document_type": "ART",
+                "publication_date": "2024-02-01",
+                "semantic_rank": 6,
+                "full_text_rank": 200,
+                "associated_query": "L eolien en mer"
+              }
+            }
+          },
+          {
+            "id": "d5de8fc",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 2274,
+              "end": 2283
+            },
+            "payload": null
+          }
+        ],
+        "search_results": [
+          {
+            "id": "c1caef59-019b-5fb6-9118-2c1c49443e63",
+            "document_id": "05872604-bdbc-585e-a7d4-ec051c359fe8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017156862745098037,
+            "text": "Document Title: How Sensitive are Optimal Fully Renewable Power Systems to Technology Cost Uncertainty?\n\nText: socio -technical atlas. Energy Policy, 132, 1092 -1100  \nENTSO -E (2013). Network Code on Load -Frequency Control and Reserves 6, \n168. \nEricsson, K. (2017). Biogenic carbon dioxide as feedstock for production of \nchemicals and fuels: A techno -economic assessment with a European \nperspective. Environmental and Energy  System Studies, Lund University: \nMiljö - och energisystem, LTH, Lunds universitet.  \nFCH JU (2015). Commercialisation of energy storage in Europe: Final report.  \nFEE (2019), Eolien en mer, enjeux et perspectives. https://fee.asso.fr/eolien -en-\nmer/enjeux -et-perspectives/  \nGowrisankaran, G., Reynolds, S. S., & Samano, M. (2016). Intermittency and \nthe value of renewable energy. Journal of Political E conomy , 124(4), 1187 -\n1234.  \nHirth, L. (2015): The Optimal Share of Variable Renewables. The Energy \nJournal 36(1), 127 - 162. doi:10.5547/01956574.36.1.6.  \nHirth, L., & Müller, S. (2016). System -friendly wind power: How advanced",
+            "metadata": {
+              "doi": "10.5547/01956574.43.1.bshi",
+              "title": "How Sensitive are Optimal Fully Renewable Power Systems to Technology Cost Uncertainty?",
+              "hal_id": "hal-03100326",
+              "authors": [
+                "Behrang Shirizadeh",
+                "Quentin Perrier",
+                "Philippe Quirion"
+              ],
+              "version": "v0",
+              "citation": "Behrang Shirizadeh, Quentin Perrier, Philippe Quirion. How Sensitive are Optimal Fully Renewable Power Systems to Technology Cost Uncertainty?. Energy Journal, 2022, 43 (1), ⟨10.5547/01956574.43.1.bshi⟩. ⟨hal-03100326⟩",
+              "source_url": "https://doi.org/10.5547/01956574.43.1.bshi",
+              "chunk_order": 103,
+              "document_type": "ART",
+              "publication_date": "2022-01-01",
+              "semantic_rank": 10,
+              "full_text_rank": 1,
+              "associated_query": "L eolien en mer"
+            }
+          },
+          {
+            "id": "63b497b9-3b88-5c75-bdb6-5d8bee19efa2",
+            "document_id": "05872604-bdbc-585e-a7d4-ec051c359fe8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017094017094017092,
+            "text": "Document Title: How Sensitive are Optimal Fully Renewable Power Systems to Technology Cost Uncertainty?\n\nText: FEE (2019), Eolien en mer, enjeux et perspectives. https://fee.asso.fr/eolien -en-\nmer/enjeux -et-perspectives/  \nGowrisankaran, G., Reynolds, S. S., & Samano, M. (2016). Intermittency and \nthe value of renewable energy. Journal of Political E conomy , 124(4), 1187 -\n1234.  \nHirth, L. (2015): The Optimal Share of Variable Renewables. The Energy \nJournal 36(1), 127 - 162. doi:10.5547/01956574.36.1.6.  \nHirth, L., & Müller, S. (2016). System -friendly wind power: How advanced \nwind turbine design can incre ase the economic value of electricity generated \nthrough wind power. Energy Economics, 56, 51 -63. \nHirth, L., Ueckerdt, F., & Edenhofer, O. (2016). Why wind is not coal: on the \neconomics of electricity generation. The Energy Journal , 37(3).  \nHuld T, Gottscha lg R, Beyer HG, Topič M. (2010). Mapping the performance \nof PV modules, effects of module type and data averaging. Solar Energy \n2010;84(2):324 38. \nIEA (2019). Offshore Wind Outlook 2019  World Energy Outlook Special \nReport. IEA, Paris.",
+            "metadata": {
+              "doi": "10.5547/01956574.43.1.bshi",
+              "title": "How Sensitive are Optimal Fully Renewable Power Systems to Technology Cost Uncertainty?",
+              "hal_id": "hal-03100326",
+              "authors": [
+                "Behrang Shirizadeh",
+                "Quentin Perrier",
+                "Philippe Quirion"
+              ],
+              "version": "v0",
+              "citation": "Behrang Shirizadeh, Quentin Perrier, Philippe Quirion. How Sensitive are Optimal Fully Renewable Power Systems to Technology Cost Uncertainty?. Energy Journal, 2022, 43 (1), ⟨10.5547/01956574.43.1.bshi⟩. ⟨hal-03100326⟩",
+              "source_url": "https://doi.org/10.5547/01956574.43.1.bshi",
+              "chunk_order": 104,
+              "document_type": "ART",
+              "publication_date": "2022-01-01",
+              "semantic_rank": 10,
+              "full_text_rank": 2,
+              "associated_query": "L eolien en mer"
+            }
+          },
+          {
+            "id": "0478a3ed-c120-53fb-8f15-9fe1983d8fc7",
+            "document_id": "f1dd95e5-13ae-5079-a370-f24c18a2718f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Politiques éoliennes et paysages\n\nText: locales.  \n3.2.6. Le paysage éolien comme recomposition de lespace maritime ( Seine -Maritime ) \nLa Seine -Maritime a retenu notre attention comme cas détude du premier parc éoli en off -shore \nfrançais, à Veulet tes-sur-Mer (Seine -Maritime). Sélectionné en 2005, ce projet de parc éolien résulte \nde lappel doffre lancé en octobre 2003 par le Ministre délég ué à lIndustrie. Seul lauréat parmi onze \npropositions, ce résultat très modeste illustre la volonté de lEtat de lancer un premier chantier, à \nvocation exploratoire en matière de processus décisionnels et techniques. Il sagit dapprendre du cas \nde Veulet tes pour en retirer une procédure reproductible.  \nLexercice est singulièrement compliqué car la mer nest pas un territoire comme les autres. Il sagit \ndun espace inaliénable et imprescriptible, tout à la fois bien commun et espace public dont lEtat doi t \ngérer la pluralité des usages. Pendant longtemps la mer a fait lobjet dune régulation sectorielle, tant",
+            "metadata": {
+              "title": "Politiques éoliennes et paysages",
+              "hal_id": "halshs-00674958",
+              "authors": [
+                "Alain Nadaï",
+                "Olivier Labussiere"
+              ],
+              "version": "v0",
+              "citation": "Alain Nadaï, Olivier Labussiere. Politiques éoliennes et paysages. 2010. ⟨halshs-00674958v2⟩",
+              "source_url": "https://hal.science/halshs-00674958",
+              "chunk_order": 275,
+              "description": "Cette recherche analyse la politique de développement de l'énergie éolienne comme exemple de processus ouvert et complexe de mise en œuvre d'une politique publique. Nous abordons la politique éolienne comme un dispositif collectif de création, de stabilisation et de jugement sur le paysage. Le travail est basé sur des études de cas choisies en Allemagne, en France et au Portugal (13 études de cas: 5 en France, 4 en Allemagne et 4 au Portugal) Notre analyse met en évidence les liens du paysage à la politique éolienne et aux institutions de planification. Nos résultats montrent que le paysage, au sens de la culture paysagère, des traditions et des institutions de gestion des paysages, constituent une ressource pour la transition énergétique et que la culture paysagère constitue la matrice par laquelle l'éolien se territorialise dans chacun des pays étudiés. Il s'agit là d'un résultat essentiel pour l'approche des politiques éoliennes, mais aussi des politiques concernant d'autres énergies renouvelables. Les études de cas décrivent les recompositions sociales et paysagères profondes qui accompagnent le développement éolien au niveau local. En France, elles mettent en évidence le rôle central de la planification paysagère dans différents (4) types de gouvernance des processus éoliens au niveau local et leur relation à la conflictualité et aux recompositions, sociales et paysagères, qui caractérisent ces processus.",
+              "document_type": "REPORT",
+              "publication_date": "2010-01-29",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "L eolien en mer"
+            }
+          },
+          {
+            "id": "1b2e896e-3b57-5755-a510-d8ce0508fcb3",
+            "document_id": "f1dd95e5-13ae-5079-a370-f24c18a2718f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Politiques éoliennes et paysages\n\nText: controverses qui entourent lessor de cette technolo gie, tour à tour perçue comme un levier de \ndéveloppement local et une source de conflit.  Au-delà des perceptions individuelles et collectives, \nlarrivée de léolien en Mer du Nord active de nombreux processus politiques, techniques, juridiques et \nculturels  qui recomposent cet espace et modifient la relation des insulaires à la mer.  \nAutour du vent, comme médiateur, sélaborent de nouveaux réseaux dhumains et de non -humains. \nAinsi, la transformation de la Mer du Nord en espace de production énergétique pass e par la mise en \nplace de plateformes expérimentales, comme FINO 1, ou encore de parcs éoliens pilotes, comme \nAlpha Ventus, autour desquels se dessinent de nouveaux jeux dacteurs réunissant des chercheurs, \ndes industriels, des politiques, etc. En suivant ces nouveaux réseaux socio -techniques, il est possible \nde comprendre lémergence de paysages éoliens à la croisée de processus qui sont autant mondiaux",
+            "metadata": {
+              "title": "Politiques éoliennes et paysages",
+              "hal_id": "halshs-00674958",
+              "authors": [
+                "Alain Nadaï",
+                "Olivier Labussiere"
+              ],
+              "version": "v0",
+              "citation": "Alain Nadaï, Olivier Labussiere. Politiques éoliennes et paysages. 2010. ⟨halshs-00674958v2⟩",
+              "source_url": "https://hal.science/halshs-00674958",
+              "chunk_order": 402,
+              "description": "Cette recherche analyse la politique de développement de l'énergie éolienne comme exemple de processus ouvert et complexe de mise en œuvre d'une politique publique. Nous abordons la politique éolienne comme un dispositif collectif de création, de stabilisation et de jugement sur le paysage. Le travail est basé sur des études de cas choisies en Allemagne, en France et au Portugal (13 études de cas: 5 en France, 4 en Allemagne et 4 au Portugal) Notre analyse met en évidence les liens du paysage à la politique éolienne et aux institutions de planification. Nos résultats montrent que le paysage, au sens de la culture paysagère, des traditions et des institutions de gestion des paysages, constituent une ressource pour la transition énergétique et que la culture paysagère constitue la matrice par laquelle l'éolien se territorialise dans chacun des pays étudiés. Il s'agit là d'un résultat essentiel pour l'approche des politiques éoliennes, mais aussi des politiques concernant d'autres énergies renouvelables. Les études de cas décrivent les recompositions sociales et paysagères profondes qui accompagnent le développement éolien au niveau local. En France, elles mettent en évidence le rôle central de la planification paysagère dans différents (4) types de gouvernance des processus éoliens au niveau local et leur relation à la conflictualité et aux recompositions, sociales et paysagères, qui caractérisent ces processus.",
+              "document_type": "REPORT",
+              "publication_date": "2010-01-29",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "L eolien en mer"
+            }
+          },
+          {
+            "id": "c688c9ab-eb76-5fb4-9598-f06ead32366e",
+            "document_id": "f1dd95e5-13ae-5079-a370-f24c18a2718f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Politiques éoliennes et paysages\n\nText: fonction du milieu marin.  \nCe cas détude montre comment léolien, plus quune technologie générique, possède des modes \ndexistence multiple s, fait de ramific ations développées au contact de normes, de modes de mise en \npartage et en circulation très différents. Faute dattention à cette nature multiple, les administrations \nnont pas recalibré léolien en rapport avec la mer et lensemble des composantes biologi ques et \ntechniques qui lui sont associées.  \nSinspirant des notions de la sociologie des sciences et techniques, notre analyse saisit le comité \néolien de Haute -Normandie, lieu de débats, discussion et décision pour avancer le projet, comme un \n laboratoire  . Nous examinons à partir de ce point de vue les procédés par lesquels des tentatives \nde recomposition du milieu marin sont mises en en œuvre pour faire exister le projet. Nous suivons \nainsi les enjeux relatifs à lancrage des éoliennes en mer, à la conn exion terrestre et sous -marine du",
+            "metadata": {
+              "title": "Politiques éoliennes et paysages",
+              "hal_id": "halshs-00674958",
+              "authors": [
+                "Alain Nadaï",
+                "Olivier Labussiere"
+              ],
+              "version": "v0",
+              "citation": "Alain Nadaï, Olivier Labussiere. Politiques éoliennes et paysages. 2010. ⟨halshs-00674958v2⟩",
+              "source_url": "https://hal.science/halshs-00674958",
+              "chunk_order": 287,
+              "description": "Cette recherche analyse la politique de développement de l'énergie éolienne comme exemple de processus ouvert et complexe de mise en œuvre d'une politique publique. Nous abordons la politique éolienne comme un dispositif collectif de création, de stabilisation et de jugement sur le paysage. Le travail est basé sur des études de cas choisies en Allemagne, en France et au Portugal (13 études de cas: 5 en France, 4 en Allemagne et 4 au Portugal) Notre analyse met en évidence les liens du paysage à la politique éolienne et aux institutions de planification. Nos résultats montrent que le paysage, au sens de la culture paysagère, des traditions et des institutions de gestion des paysages, constituent une ressource pour la transition énergétique et que la culture paysagère constitue la matrice par laquelle l'éolien se territorialise dans chacun des pays étudiés. Il s'agit là d'un résultat essentiel pour l'approche des politiques éoliennes, mais aussi des politiques concernant d'autres énergies renouvelables. Les études de cas décrivent les recompositions sociales et paysagères profondes qui accompagnent le développement éolien au niveau local. En France, elles mettent en évidence le rôle central de la planification paysagère dans différents (4) types de gouvernance des processus éoliens au niveau local et leur relation à la conflictualité et aux recompositions, sociales et paysagères, qui caractérisent ces processus.",
+              "document_type": "REPORT",
+              "publication_date": "2010-01-29",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "L eolien en mer"
+            }
+          },
+          {
+            "id": "d23f2677-d973-5869-a88b-4bb959ef3ac6",
+            "document_id": "f1dd95e5-13ae-5079-a370-f24c18a2718f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Politiques éoliennes et paysages\n\nText: 4.2.3.  Léolien offshore et la recompositi on de la Mer du Nord  \nSi la zone littorale de la Basse -Saxe est  fortement colonisée par les éoliennes, la mer du Nord était \nrestée jusquà présent encore intacte.  Ces dernières années, la mer du Nord fit lobjet dintenses \nprospections par les développeurs éoliens. Pour ce faire,  les développeurs durent intégrer une \nprocédure longue et complexe de planification  et affronter de nombreux enjeux juridiques, \nécologiques, financiers et techniques.  \nA partir dune recherche ethnographique et dune analyse de discou rs aux niveau x local, régional et \nnational,  il sagit de comprendre la mise en œuvre dune politique énergétique (enjeux technologiques, \nde planification et dacceptabilité sociale) au large des côtes allemandes. Perçue par les politiques  et \nles industriel s comme un espace vide, la Mer du Nord constitue pourtant un espace où cohabitent",
+            "metadata": {
+              "title": "Politiques éoliennes et paysages",
+              "hal_id": "halshs-00674958",
+              "authors": [
+                "Alain Nadaï",
+                "Olivier Labussiere"
+              ],
+              "version": "v0",
+              "citation": "Alain Nadaï, Olivier Labussiere. Politiques éoliennes et paysages. 2010. ⟨halshs-00674958v2⟩",
+              "source_url": "https://hal.science/halshs-00674958",
+              "chunk_order": 400,
+              "description": "Cette recherche analyse la politique de développement de l'énergie éolienne comme exemple de processus ouvert et complexe de mise en œuvre d'une politique publique. Nous abordons la politique éolienne comme un dispositif collectif de création, de stabilisation et de jugement sur le paysage. Le travail est basé sur des études de cas choisies en Allemagne, en France et au Portugal (13 études de cas: 5 en France, 4 en Allemagne et 4 au Portugal) Notre analyse met en évidence les liens du paysage à la politique éolienne et aux institutions de planification. Nos résultats montrent que le paysage, au sens de la culture paysagère, des traditions et des institutions de gestion des paysages, constituent une ressource pour la transition énergétique et que la culture paysagère constitue la matrice par laquelle l'éolien se territorialise dans chacun des pays étudiés. Il s'agit là d'un résultat essentiel pour l'approche des politiques éoliennes, mais aussi des politiques concernant d'autres énergies renouvelables. Les études de cas décrivent les recompositions sociales et paysagères profondes qui accompagnent le développement éolien au niveau local. En France, elles mettent en évidence le rôle central de la planification paysagère dans différents (4) types de gouvernance des processus éoliens au niveau local et leur relation à la conflictualité et aux recompositions, sociales et paysagères, qui caractérisent ces processus.",
+              "document_type": "REPORT",
+              "publication_date": "2010-01-29",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "L eolien en mer"
+            }
+          },
+          {
+            "id": "cca43fd0-eaca-54b2-847d-4182e1ba3eb4",
+            "document_id": "f1dd95e5-13ae-5079-a370-f24c18a2718f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Politiques éoliennes et paysages\n\nText: Eolienne et Paysage  01/2010  \n \n \nEolienne et Paysage           01/2010              \n48 \n historiquement de nombreuses activités comme la navigation , la pêche  et le tourisme. En outre, elle \nest depuis plusieurs  siècles, le territoire des insulaires de la Frise ori entale.   \nLe développement de léolien offshore génère des mutations importantes pour ces insulaires \n(nouvelles infrastructures, emplois, évolutions du paysage marin). Létude des r écits locaux  montre les \ncontroverses qui entourent lessor de cette technolo gie, tour à tour perçue comme un levier de \ndéveloppement local et une source de conflit.  Au-delà des perceptions individuelles et collectives, \nlarrivée de léolien en Mer du Nord active de nombreux processus politiques, techniques, juridiques et \nculturels  qui recomposent cet espace et modifient la relation des insulaires à la mer.  \nAutour du vent, comme médiateur, sélaborent de nouveaux réseaux dhumains et de non -humains.",
+            "metadata": {
+              "title": "Politiques éoliennes et paysages",
+              "hal_id": "halshs-00674958",
+              "authors": [
+                "Alain Nadaï",
+                "Olivier Labussiere"
+              ],
+              "version": "v0",
+              "citation": "Alain Nadaï, Olivier Labussiere. Politiques éoliennes et paysages. 2010. ⟨halshs-00674958v2⟩",
+              "source_url": "https://hal.science/halshs-00674958",
+              "chunk_order": 401,
+              "description": "Cette recherche analyse la politique de développement de l'énergie éolienne comme exemple de processus ouvert et complexe de mise en œuvre d'une politique publique. Nous abordons la politique éolienne comme un dispositif collectif de création, de stabilisation et de jugement sur le paysage. Le travail est basé sur des études de cas choisies en Allemagne, en France et au Portugal (13 études de cas: 5 en France, 4 en Allemagne et 4 au Portugal) Notre analyse met en évidence les liens du paysage à la politique éolienne et aux institutions de planification. Nos résultats montrent que le paysage, au sens de la culture paysagère, des traditions et des institutions de gestion des paysages, constituent une ressource pour la transition énergétique et que la culture paysagère constitue la matrice par laquelle l'éolien se territorialise dans chacun des pays étudiés. Il s'agit là d'un résultat essentiel pour l'approche des politiques éoliennes, mais aussi des politiques concernant d'autres énergies renouvelables. Les études de cas décrivent les recompositions sociales et paysagères profondes qui accompagnent le développement éolien au niveau local. En France, elles mettent en évidence le rôle central de la planification paysagère dans différents (4) types de gouvernance des processus éoliens au niveau local et leur relation à la conflictualité et aux recompositions, sociales et paysagères, qui caractérisent ces processus.",
+              "document_type": "REPORT",
+              "publication_date": "2010-01-29",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "L eolien en mer"
+            }
+          },
+          {
+            "id": "d5de8fc3-beee-5889-bcd4-4eea6bd868d9",
+            "document_id": "28398a36-12a1-53c3-ac25-dbba77dfb0f3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Transition énergétique : promesses et défis des JETP\n\nText: éoliens en mer restent à proximité immédiate des côtes. Compte tenu de lintensité \ncapitalistique de léolien offshore, les investissements nécessaires dépassent largement  \ndix milliards deuros. Pour mobiliser les capitaux privés, les financements publics du \nJETP peuvent assister à la mise en place du cadre législatif, supporter des études \ntechniques et économiques, et co-investir dans les infrastructures de raccordement et \ndintégration des énergies renouvelables. Si le gouvernement réussit à proposer des \nconditions commerciales (tarif de rachat) et légales (partage du risque) attirant les \ninvestisseurs privés, le pays bénéficiera non seulement de lélectricité ainsi produite, \nmais aussi de débouchés locaux accroissant sa compétitivité industrielle dans le \nsecteur éolien offshore.\nCette dimension commerciale prend une coloration géostratégique dans le contexte de \nla compétition entre la Chine et les pays occidentaux. La Chine a massivement investi",
+            "metadata": {
+              "title": "Transition énergétique : promesses et défis des JETP",
+              "hal_id": "hal-04450041",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Transition énergétique : promesses et défis des JETP. La revue de l'énergie, A paraître, 670, pp.11-21. ⟨hal-04450041⟩",
+              "source_url": "https://hal.science/hal-04450041",
+              "chunk_order": 21,
+              "description": "Depuis la COP26, les Just Energy Transition Partnerships (JETP) portent une promesse majeure pour lutter contre le changement climatique : les pays occidentaux proposent de prêter et d'investir massivement dans les pays émergents pour accélérer leur transition énergétique. Mais les quatre projets pilotes en cours doivent réussir pour que ce dispositif se pérennise et s'étende. Or ces projets révèlent des défis et des effets secondaires potentiels, y compris le risque d'être utilisés à des fins géopolitiques, des conditions cachées, une perte de confiance et un endettement public extérieur excessif. Pour surmonter ces risques, il convient d'accroître la transparence, de promouvoir la compétition, d'adopter des normes sociales et environnementales largement reconnues et de réduire la portion de la dette souveraine dans le paquet de financement global.",
+              "document_type": "ART",
+              "publication_date": "2024-02-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "L eolien en mer"
+            }
+          },
+          {
+            "id": "b3819946-dc48-5127-a59d-fd4f4637c0ab",
+            "document_id": "f1dd95e5-13ae-5079-a370-f24c18a2718f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Politiques éoliennes et paysages\n\nText: réflexion à partir de léolien et du stockage du CO2, in  Le captage et le stockage du CO2: \nenjeux techniques et sociaux en France , eds. Chaabane Naceur et Haduong Minh, Quae, Paris.  \nOuvrages de vulgarisation et autres publications  \nNadaï A., Labussière O. (2009) Paysage et éolien, au -delà des clichés, Systèmes Solaires, Le \nJournal des Energies Renouvelables  ;  Hors série (5)   Le Journal de léolien  , Paris.  \nHinkelbein O. 2008 Borkum und Offshore - Eine Fallstudie, Borkumer Zei tung (local newspaper), \n29.02/01.03.08",
+            "metadata": {
+              "title": "Politiques éoliennes et paysages",
+              "hal_id": "halshs-00674958",
+              "authors": [
+                "Alain Nadaï",
+                "Olivier Labussiere"
+              ],
+              "version": "v0",
+              "citation": "Alain Nadaï, Olivier Labussiere. Politiques éoliennes et paysages. 2010. ⟨halshs-00674958v2⟩",
+              "source_url": "https://hal.science/halshs-00674958",
+              "chunk_order": 566,
+              "description": "Cette recherche analyse la politique de développement de l'énergie éolienne comme exemple de processus ouvert et complexe de mise en œuvre d'une politique publique. Nous abordons la politique éolienne comme un dispositif collectif de création, de stabilisation et de jugement sur le paysage. Le travail est basé sur des études de cas choisies en Allemagne, en France et au Portugal (13 études de cas: 5 en France, 4 en Allemagne et 4 au Portugal) Notre analyse met en évidence les liens du paysage à la politique éolienne et aux institutions de planification. Nos résultats montrent que le paysage, au sens de la culture paysagère, des traditions et des institutions de gestion des paysages, constituent une ressource pour la transition énergétique et que la culture paysagère constitue la matrice par laquelle l'éolien se territorialise dans chacun des pays étudiés. Il s'agit là d'un résultat essentiel pour l'approche des politiques éoliennes, mais aussi des politiques concernant d'autres énergies renouvelables. Les études de cas décrivent les recompositions sociales et paysagères profondes qui accompagnent le développement éolien au niveau local. En France, elles mettent en évidence le rôle central de la planification paysagère dans différents (4) types de gouvernance des processus éoliens au niveau local et leur relation à la conflictualité et aux recompositions, sociales et paysagères, qui caractérisent ces processus.",
+              "document_type": "REPORT",
+              "publication_date": "2010-01-29",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "L eolien en mer"
+            }
+          },
+          {
+            "id": "6d80a25c-36d8-5d26-9e0a-249b5dc9ccd3",
+            "document_id": "f1dd95e5-13ae-5079-a370-f24c18a2718f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Politiques éoliennes et paysages\n\nText: Sinspirant des notions de la sociologie des sciences et techniques, notre analyse saisit le comité \néolien de Haute -Normandie, lieu de débats, discussion et décision pour avancer le projet, comme un \n laboratoire  . Nous examinons à partir de ce point de vue les procédés par lesquels des tentatives \nde recomposition du milieu marin sont mises en en œuvre pour faire exister le projet. Nous suivons \nainsi les enjeux relatifs à lancrage des éoliennes en mer, à la conn exion terrestre et sous -marine du \nparc éolien, illustrant dans chaque cas le rôle des procédés argumentatifs, du pouvoir hiérarchique ou \ndes normes paysagères dans la composition de cet éolien offshore.  \nOn voit que le paysage intervient à double titre dans  ce processus. Il constitue une continuité visuelle \nde fait entre terre et mer et impose une relation entre des administrations sectorielles étrangères lune \nà lautre. Il constitue aussi une ressource en tant quil sadosse à un jeu de normes dinstructio n",
+            "metadata": {
+              "title": "Politiques éoliennes et paysages",
+              "hal_id": "halshs-00674958",
+              "authors": [
+                "Alain Nadaï",
+                "Olivier Labussiere"
+              ],
+              "version": "v0",
+              "citation": "Alain Nadaï, Olivier Labussiere. Politiques éoliennes et paysages. 2010. ⟨halshs-00674958v2⟩",
+              "source_url": "https://hal.science/halshs-00674958",
+              "chunk_order": 288,
+              "description": "Cette recherche analyse la politique de développement de l'énergie éolienne comme exemple de processus ouvert et complexe de mise en œuvre d'une politique publique. Nous abordons la politique éolienne comme un dispositif collectif de création, de stabilisation et de jugement sur le paysage. Le travail est basé sur des études de cas choisies en Allemagne, en France et au Portugal (13 études de cas: 5 en France, 4 en Allemagne et 4 au Portugal) Notre analyse met en évidence les liens du paysage à la politique éolienne et aux institutions de planification. Nos résultats montrent que le paysage, au sens de la culture paysagère, des traditions et des institutions de gestion des paysages, constituent une ressource pour la transition énergétique et que la culture paysagère constitue la matrice par laquelle l'éolien se territorialise dans chacun des pays étudiés. Il s'agit là d'un résultat essentiel pour l'approche des politiques éoliennes, mais aussi des politiques concernant d'autres énergies renouvelables. Les études de cas décrivent les recompositions sociales et paysagères profondes qui accompagnent le développement éolien au niveau local. En France, elles mettent en évidence le rôle central de la planification paysagère dans différents (4) types de gouvernance des processus éoliens au niveau local et leur relation à la conflictualité et aux recompositions, sociales et paysagères, qui caractérisent ces processus.",
+              "document_type": "REPORT",
+              "publication_date": "2010-01-29",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "L eolien en mer"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2399,
+            "total_tokens": 2399
+          }
+        }
+      },
+      "duration": 3160
+    },
+    "retrievalTime": 2472,
+    "generationTime": 3160,
+    "timestamp": "2025-07-10T11:07:08.332Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.112.3",
+    "forwarded_for": "193.51.112.3",
+    "received_at": "2025-07-10T11:07:08.243129+00:00",
+    "server_version": "1.0.0"
+  }
+}

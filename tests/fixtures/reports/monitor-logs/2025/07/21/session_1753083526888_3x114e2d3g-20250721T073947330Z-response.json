@@ -1,0 +1,360 @@
+{
+  "sessionId": "session_1753083526888_3x114e2d3g73294w3e",
+  "timestamp": "20250721T073947330Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1753083584154_t0vqvbt",
+    "response": {
+      "results": {
+        "generated_answer": "Bonjour ! Comment puis-je vous aider aujourd'hui ? [4aedddb]",
+        "citations": [
+          {
+            "id": "4aedddb",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 51,
+              "end": 60
+            },
+            "payload": {
+              "id": "4aedddb9-8855-5fb7-b3a9-71773b56f108",
+              "document_id": "97f5ca2e-5358-505f-97e3-228dab8e86b2",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017156862745098037,
+              "text": "Document Title: Caractérisation macro-institutionnelle des verrous et leviers à la réduction d'usages des pesticides au Cameroun\n\nText: 81 \n  \nPrésentation du sujet  \n \nBonjour, je mappelle Gérard BAYIHA. Je suis postdoctorant au Centre de coopération internationale \nen recherche agronomique pour le développement au Cameroun sous la superv ision de Ludovic \nTEMPLE. Cette étude consiste à étudier les obstacles et les leviers de la réduction de lusage des \npesticides dans le système agroalimentaire. Spécifiquement, il sagit de mettre en évidence les facteurs \nqui concourent à la régulation de l utilisation des pesticides tout en maintenant le même niveau de \nperformance. Lagriculture camerounaise néchappe pas à cette question, bien que, dans leur grande \nmajorité, les exploitations familiales consomment peu dintrants chimiques. Ce qui nempêche  que \npour certaines cultures (tomate, cacao, maïs, banane plantain, café), leur usage est fréquent et pas \ntoujours maîtrisé. Pour les cultures dexportation soumises à des contrôles, les résidus de produits",
+              "metadata": {
+                "title": "Caractérisation macro-institutionnelle des verrous et leviers à la réduction d'usages des pesticides au Cameroun",
+                "hal_id": "hal-04515692",
+                "authors": [
+                  "Gérard de La Paix Bayiha",
+                  "Thierry Brunelle",
+                  "Nathalie Jas",
+                  "Precillia I Tata Ngome",
+                  "Ludovic Temple"
+                ],
+                "version": "v0",
+                "citation": "Gérard de La Paix Bayiha, Thierry Brunelle, Nathalie Jas, Precillia I Tata Ngome, Ludovic Temple. Caractérisation macro-institutionnelle des verrous et leviers à la réduction d'usages des pesticides au Cameroun. Initiative PRETAG (Pesticide Reduction for Tropical Agricultures). 2024, 100 p. ⟨hal-04515692⟩",
+                "source_url": "https://hal.science/hal-04515692",
+                "chunk_order": 412,
+                "description": "La protection phytosanitaire à travers l'usage des pesticides chimiques occupe une place importante pour les décideurs camerounais en vue de sécuriser les rendements, les revenus, la sécurité alimentaire et de réduire les pertes post-récolte des agriculteurs. Malgré l'importance de ces pesticides, ils sont sources de nombreuses externalités négatives sur l'homme et l'environnement. Face aux externalités positives et négatives des pesticides, un compromis doit être trouvé entre, d'une part, \" l'efficacité productive \", c'est-à-dire la compétitivité d'une agriculture consommatrice de pesticides, et d'autre part, le bien-être d'une population de mieux en mieux informée et de plus en plus soucieuse de : (i) la qualité de son environnement qui nécessite de réduire l'utilisation de pesticides, (ii) la souveraineté technologique de l'agriculture camerounaise. A partir d'une revue de la littérature grise et empirique, d'enquêtes qualitatives (55 entretiens), d'organisation d'un focus groupe (10 détaillants des filières pesticides et agroalimentaires), nous caractérisons le pluralisme des situations de verrouillage et des leviers en lien avec la réduction de l'usage des pesticides dans le système sociotechnique agricole au Cameroun en mobilisant le cadre d'analyse des verrouillages sociotechniques. Cette caractérisation est classée en trois échelles : (i) microéconomique, (ii) mésoéconomique, (iii) macroéconomique. Nous constatons que la dépendance aux pesticides dans le système agroalimentaire au Cameroun n'est pas seulement un problème technologique, mais aussi économique (rendements et revenus des agriculteurs ; taxes et subventions des pesticides ; organisation des filières phytosanitaires et agricoles), historique (routine des agriculteurs), agronomique (célérité de la maladie des plantes / des problèmes phytosanitaires), politique (réglementation). Pour cela, des alternatives aux pesticides sont identifiées dans le contexte du Cameroun sur le plan technique (biopesticides), économique (mécanismes de financement innovant de la transition agroécologique ; création des marchés), politique (mise en place des textes en lien avec l'agriculture biologique, l'agroécologie ; instruments de mise en oeuvre de la lutte intégrée), la recherche, la formation et la vulgarisation.",
+                "document_type": "REPORT",
+                "publication_date": "2024-01-01",
+                "semantic_rank": 10,
+                "full_text_rank": 1,
+                "associated_query": "Bonjour !"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "4aedddb9-8855-5fb7-b3a9-71773b56f108",
+            "document_id": "97f5ca2e-5358-505f-97e3-228dab8e86b2",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017156862745098037,
+            "text": "Document Title: Caractérisation macro-institutionnelle des verrous et leviers à la réduction d'usages des pesticides au Cameroun\n\nText: 81 \n  \nPrésentation du sujet  \n \nBonjour, je mappelle Gérard BAYIHA. Je suis postdoctorant au Centre de coopération internationale \nen recherche agronomique pour le développement au Cameroun sous la superv ision de Ludovic \nTEMPLE. Cette étude consiste à étudier les obstacles et les leviers de la réduction de lusage des \npesticides dans le système agroalimentaire. Spécifiquement, il sagit de mettre en évidence les facteurs \nqui concourent à la régulation de l utilisation des pesticides tout en maintenant le même niveau de \nperformance. Lagriculture camerounaise néchappe pas à cette question, bien que, dans leur grande \nmajorité, les exploitations familiales consomment peu dintrants chimiques. Ce qui nempêche  que \npour certaines cultures (tomate, cacao, maïs, banane plantain, café), leur usage est fréquent et pas \ntoujours maîtrisé. Pour les cultures dexportation soumises à des contrôles, les résidus de produits",
+            "metadata": {
+              "title": "Caractérisation macro-institutionnelle des verrous et leviers à la réduction d'usages des pesticides au Cameroun",
+              "hal_id": "hal-04515692",
+              "authors": [
+                "Gérard de La Paix Bayiha",
+                "Thierry Brunelle",
+                "Nathalie Jas",
+                "Precillia I Tata Ngome",
+                "Ludovic Temple"
+              ],
+              "version": "v0",
+              "citation": "Gérard de La Paix Bayiha, Thierry Brunelle, Nathalie Jas, Precillia I Tata Ngome, Ludovic Temple. Caractérisation macro-institutionnelle des verrous et leviers à la réduction d'usages des pesticides au Cameroun. Initiative PRETAG (Pesticide Reduction for Tropical Agricultures). 2024, 100 p. ⟨hal-04515692⟩",
+              "source_url": "https://hal.science/hal-04515692",
+              "chunk_order": 412,
+              "description": "La protection phytosanitaire à travers l'usage des pesticides chimiques occupe une place importante pour les décideurs camerounais en vue de sécuriser les rendements, les revenus, la sécurité alimentaire et de réduire les pertes post-récolte des agriculteurs. Malgré l'importance de ces pesticides, ils sont sources de nombreuses externalités négatives sur l'homme et l'environnement. Face aux externalités positives et négatives des pesticides, un compromis doit être trouvé entre, d'une part, \" l'efficacité productive \", c'est-à-dire la compétitivité d'une agriculture consommatrice de pesticides, et d'autre part, le bien-être d'une population de mieux en mieux informée et de plus en plus soucieuse de : (i) la qualité de son environnement qui nécessite de réduire l'utilisation de pesticides, (ii) la souveraineté technologique de l'agriculture camerounaise. A partir d'une revue de la littérature grise et empirique, d'enquêtes qualitatives (55 entretiens), d'organisation d'un focus groupe (10 détaillants des filières pesticides et agroalimentaires), nous caractérisons le pluralisme des situations de verrouillage et des leviers en lien avec la réduction de l'usage des pesticides dans le système sociotechnique agricole au Cameroun en mobilisant le cadre d'analyse des verrouillages sociotechniques. Cette caractérisation est classée en trois échelles : (i) microéconomique, (ii) mésoéconomique, (iii) macroéconomique. Nous constatons que la dépendance aux pesticides dans le système agroalimentaire au Cameroun n'est pas seulement un problème technologique, mais aussi économique (rendements et revenus des agriculteurs ; taxes et subventions des pesticides ; organisation des filières phytosanitaires et agricoles), historique (routine des agriculteurs), agronomique (célérité de la maladie des plantes / des problèmes phytosanitaires), politique (réglementation). Pour cela, des alternatives aux pesticides sont identifiées dans le contexte du Cameroun sur le plan technique (biopesticides), économique (mécanismes de financement innovant de la transition agroécologique ; création des marchés), politique (mise en place des textes en lien avec l'agriculture biologique, l'agroécologie ; instruments de mise en oeuvre de la lutte intégrée), la recherche, la formation et la vulgarisation.",
+              "document_type": "REPORT",
+              "publication_date": "2024-01-01",
+              "semantic_rank": 10,
+              "full_text_rank": 1,
+              "associated_query": "Bonjour !"
+            }
+          },
+          {
+            "id": "883871b5-c18c-5017-acd6-67f00549ce4a",
+            "document_id": "14ee5094-3b76-5e91-9a82-cdb588fa7fa4",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Social perception of CCS\n\nText: Merci",
+            "metadata": {
+              "title": "Social perception of CCS",
+              "hal_id": "cel-00559978",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Social perception of CCS. DEA. ISIGE, Fontainebleau, 2011, pp.118. ⟨cel-00559978⟩",
+              "source_url": "https://hal.science/cel-00559978",
+              "chunk_order": 109,
+              "document_type": "LECTURE",
+              "publication_date": "2011-01-20",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Bonjour !"
+            }
+          },
+          {
+            "id": "7ad5f278-5995-551e-b0d4-26e00e69f773",
+            "document_id": "2579b12d-664f-580f-bfb3-d66b3b61b0d8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Research Excellence à la Française Fifty How-Tos for Students and Professionals\n\nText: Merci\n25",
+            "metadata": {
+              "title": "Research Excellence à la Française Fifty How-Tos for Students and Professionals",
+              "hal_id": "hal-05023528",
+              "authors": "['Minh Ha-Duong']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Research Excellence à la Française Fifty How-Tos for Students and Professionals. 3ème cycle. La recherche en pratique(s), Paris, France. 2025. ⟨hal-05023528⟩",
+              "source_url": "https://hal.science/hal-05023528",
+              "chunk_order": 24,
+              "document_type": "LECTURE",
+              "publication_date": "2025-04-01",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Bonjour !"
+            }
+          },
+          {
+            "id": "5342f43d-ce95-592f-aeaf-9a0d1c5c7053",
+            "document_id": "5c38928f-7be8-5959-b90d-65f3ddbff083",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Incertitude et analyse du long terme: optimisation et scenarios\n\nText: Help !",
+            "metadata": {
+              "title": "Incertitude et analyse du long terme: optimisation et scenarios",
+              "hal_id": "cel-00595719",
+              "authors": "['Minh Ha-Duong']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Incertitude et analyse du long terme: optimisation et scenarios. Engineering school. Ecole des Ponts ParisTech, 2012, pp.87. ⟨cel-00595719v2⟩",
+              "source_url": "https://hal.science/cel-00595719",
+              "chunk_order": 47,
+              "description": "Cours sur la prospective d'une matinée dans le cadre du module d'économie du risque. Public d'élèves ingénieurs X-Ponts civils et fonctionnaires.",
+              "document_type": "LECTURE",
+              "publication_date": "2012-05-09",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Bonjour !"
+            }
+          },
+          {
+            "id": "f79cd9c6-d2ae-5f0f-b9ca-481d37bc513a",
+            "document_id": "703e163c-1920-54bc-a891-685ccb44c803",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: La problématique du changement climatique dans les aires marines protégées sous l’angle des sciences sociales\n\nText: MERCI DE VOTRE\nATTENTION !.\n Rodho\nhttp ://blorg.canalblog.com/archives/2014/11/07/30910574.html Michel Cambon (France)\nhttps://mrmondialisation.org/cop21 -les-dessinateurs -sexpriment /",
+            "metadata": {
+              "title": "La problématique du changement climatique dans les aires marines protégées sous l’angle des sciences sociales",
+              "hal_id": "hal-04630159",
+              "authors": [
+                "Eric Le Gentil",
+                "Gilbert David",
+                "Frédérique Alban",
+                "Harold Levrel",
+                "Delphine Loupsans",
+                "Ingrid Peuziat",
+                "Alain Ponsero",
+                "Catherine Sabinot",
+                "Pierre Scemama",
+                "Diane Vaschalde"
+              ],
+              "version": "v0",
+              "citation": "Eric Le Gentil, Gilbert David, Frédérique Alban, Harold Levrel, Delphine Loupsans, et al.. La problématique du changement climatique dans les aires marines protégées sous l’angle des sciences sociales. 38ème congrès des réserves naturelles de France - Climat et espaces protégés : chaud devant !!! S’adapter ou laissez faire ?, Réserves naturelles de France, Jun 2019, Le Monêtier-les-Bains, France. ⟨hal-04630159⟩",
+              "source_url": "https://hal.science/hal-04630159",
+              "chunk_order": 19,
+              "document_type": "COMM",
+              "publication_date": "2019-06-05",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Bonjour !"
+            }
+          },
+          {
+            "id": "c347a468-ab2d-5f0a-827e-7e02b5350f0a",
+            "document_id": "ce087c35-4ecf-5855-bff1-ca9008886601",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: La comptabilité des dettes écologiques nationales et d'entreprises, un outil de pilotage vers une économie durable\n\nText: Discussion générale  \n339",
+            "metadata": {
+              "title": "La comptabilité des dettes écologiques nationales et d'entreprises, un outil de pilotage vers une économie durable",
+              "hal_id": "tel-04135917",
+              "authors": [
+                "Clément Surun"
+              ],
+              "version": "v0",
+              "citation": "Clément Surun. La comptabilité des dettes écologiques nationales et d'entreprises, un outil de pilotage vers une économie durable. Economies et finances. Université Paris-Saclay, 2023. Français. ⟨NNT : 2023UPASB017⟩. ⟨tel-04135917⟩",
+              "source_url": "https://hal.science/tel-04135917",
+              "chunk_order": 2016,
+              "description": "Malgré de nombreuses avancées, les crises écologiques et climatiques restent des défis moins bien gérés par la puissance publique que les questions purement économiques. Bien qu'étant encore largement structurante pour soutenir la puissance publique dans le traitement de ces derniers enjeux, la comptabilité nationale a rencontré des limites (critiques du PIB considéré comme un indicateur obsolète pour mesurer la richesse, difficultés face à la mondialisation des échanges) qui ont affaibli sa portée comme outil de planification. L'absence de prise en compte de l'enjeu environnemental est une des limites souvent mentionnées. À ce jour, aucune des propositions d'intégration de l'environnement dans la comptabilité nationale ne parvient encore à s'imposer comme outil d'appui à la prise de décision. Manque de légitimité, relative déconnexion aux politiques publiques, cadrages selon les principes de la durabilité faible ou grande part de modélisation sont autant de raisons qui affaiblissent, par exemple, les nouveaux indicateurs de richesse, l'épargne véritable ou le Système de comptes économiques et environnementaux de l'ONU. L'objectif de cette thèse est d'outiller l'action publique avec une comptabilité nationale qui permette de conduire une transition écologique. Nous tenterons de montrer pourquoi et comment articuler des dettes et créances écologiques du niveau des entreprises au niveau national peut créer un outil de représentation et de discussion adéquat. Ce travail est fondé sur des incursions dans l'histoire de la comptabilité nationale économique française pour comprendre pourquoi une articulation entre niveau national et niveau organisationnel fut mise en place. Cet héritage sert de point de repère pour questionner les opportunités d'une extension comptable environnementale similaire. Deux politiques liées à la biodiversité sont discutées : la gestion des milieux aquatiques et celle de la biodiversité terrestre. Par ailleurs, parce que la quantification de l'environnement (notamment en termes monétaires) est sujette à controverse, nous analysons conjointement conventions comptables et modèle de gestion sous-jacent (implicites ou explicites). Ces travaux mettent en lumière l'intérêt d'articuler les dettes écologiques nationales et d'entreprise pour éviter un recours massif à la modélisation pour estimer des valeurs monétaires liées à l'environnement. Nous montrons aussi que cela peut considérablement renforcer la planification et la gestion des transitions vers une économie soutenable, en cohérence à ces deux niveaux. Enfin, fonder de telles comptabilités sur des politiques existantes permet de bénéficier d'une légitimité politique complémentaire à la pertinence scientifique revendiquée par notre approche.",
+              "document_type": "THESE",
+              "publication_date": "2023-03-20",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Bonjour !"
+            }
+          },
+          {
+            "id": "8ce5e7d2-1098-5937-ac9f-c01720813b2b",
+            "document_id": "ce1b1abd-64ab-54e3-9136-893b3ff1851c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie\n\nText: 2222 2222 7. Annexe7. Annexe7. Annexe7. Annexe ........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................ 2323 2323 DEUXIEME PARTIEDEUXIEME PARTIEDEUXIEME PARTIEDEUXIEME PARTIE    : Rapport du CIRED: Rapport du CIRED: Rapport du CIRED: Rapport du CIRED",
+            "metadata": {
+              "title": "Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie",
+              "hal_id": "hal-00799740",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Céline Guivarch",
+                "Philippe Quirion",
+                "L. Penot-Antoniou"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion, L. Penot-Antoniou. Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie. Études et documents - Numéro 58, 2011, pp.78. ⟨hal-00799740⟩",
+              "source_url": "https://hal.science/hal-00799740",
+              "chunk_order": 20,
+              "description": "La France s'est engagée à réduire les consommations d'énergie du parc des bâtiments existants de 38 % en 2020 par rapport à 2008, objectif \" Grenelle -38 % \", et à diviser les émissions de CO2 par quatre en 2050 par rapport à 1990, objectif \" Facteur 4 \". Pour atteindre ces objectifs, le Grenelle de l'environnement a mis en avant un certain nombre de leviers réglementaires et incitatifs. Cette étude, réalisée par le CIRED pour le compte du CGDD, a pour objectif d'analyser l'impact de ces différents instruments sur la consommation d'énergie pour le chauffage. Mesures existantes (crédit d'impôt développement durable, éco-prêt à taux zéro, réglementation thermique) et mesures supplémentaires (obligation de rénovation, contribution climat énergie) sont évaluées grâce au modèle Res-IRF du CIRED. Ce modèle prend en compte l'efficacité énergétique des logements et leur évolution dans le temps sous l'effet de rénovations ; il modélise également de façon originale les comportements de chauffage des ménages. Les premières simulations suggèrent que les politiques considérées ne suffisent pas à atteindre les objectifs ambitieux fixés par la France. Ces résultats sont sensibles aux hypothèses retenues. En introduisant des hypothèses plus optimistes (ex : prix des rénovations plus faible) et en prenant en compte des facteurs complémentaires au modèle (ex : bois), un travail de ré-estimation sur la base du modèle du CIRED a permis d'obtenir des résultats plus proches des objectifs du Grenelle.",
+              "document_type": "REPORT",
+              "publication_date": "2011-11-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Bonjour !"
+            }
+          },
+          {
+            "id": "354e3ef1-7b5a-53c0-8203-38d3a9681427",
+            "document_id": "4f7e2a71-2344-5225-8eca-e5ac848f5c0a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire)\n\nText: Éliane Daphy  et Minh Ha -Duong              Jai vu que tétais connu de Hal                          VRS382 09 -2010  2/16 \n \n \n  Modeste Zigomard et Ugène Déhaire -Déheu. À la cafétéria, après la cantine.  \n \n Tiens, jai vu que tu étais connu de Hal  !  \n Ah tiens donc  ! Très honoré  ! Et cest qui, précisément, ce Al  ? \n Hal, le serveur internet.  \n Cest  quoi, ce truc   hale  ? Cest nouveau  ? Ça a un rapport avec H. -A.-L. ? \n Oui, on prononce Hal, comme le robot de 2001, lOdyssée de lespace, le film de  Kubrick, tu \nconnais  ? Cest de lauto -archivage scientifique sur internet. Hal existe depuis 2001, c est un \nserveur darchives ouvertes où les chercheurs peuvent déposer leurs publications eux -mêmes. En \nanglais, on dit   self-archiving  . Chez nous, on dit   contribution scientifique directe   ou   C.-\nS.-D.  ou   auto-archivage  . Et toi tu as 148 notic es bibliographiques sur Hal.  \n Oh ! 148  ! Pas mal  ! Et toi, ten as combien, si je peux me permettre  ? Tu le sais  ?",
+            "metadata": {
+              "title": "Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire)",
+              "hal_id": "sic_00518786",
+              "authors": [
+                "Eliane Daphy",
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Eliane Daphy, Minh Ha-Duong. Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire). 2010. ⟨sic_00518786⟩",
+              "source_url": "https://hal.science/sic_00518786",
+              "chunk_order": 26,
+              "description": "L'auto-archivage permet le libre accès au savoir scientifique, mais repose encore trop sur l'altruisme des auteurs. Pour massifier et systématiser cette pratique, des actions plus fortes sont nécessaires. Le conte à rire narre les déboires d'un chercheur \"connu de Hal\" à l'insu de son plein gré, découvrant qu'il a 148 notices bibliographiques sur un serveur d'archives ouvertes. Co-auteurs de l'encart : \"Pour le dépôt en archives ouvertes des productions scientifiques\" : Vincent Battesti, Eliane Daphy, Christine Eisenbeis, Minh Ha-Duong.",
+              "document_type": "OTHER",
+              "publication_date": "2010-09-01",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Bonjour !"
+            }
+          },
+          {
+            "id": "f5973ed8-725b-5e1b-921d-35d7b56a51ee",
+            "document_id": "4f7e2a71-2344-5225-8eca-e5ac848f5c0a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire)\n\nText: Éliane Daphy  et Minh Ha -Duong              Jai vu que tétais connu de Hal                          VRS382 09 -2010  10/16 \n \n \n  \n \n \n \n \n \n \n \nIll. 12. L es chercheurs seniors non -contributeurs qui maîtrisent parfaitement les codes et \npratiques de leurs métiers sont perplexes lorsquils apprennent quils sont connus de Hal. \n[Ch. 41 à 50]",
+            "metadata": {
+              "title": "Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire)",
+              "hal_id": "sic_00518786",
+              "authors": [
+                "Eliane Daphy",
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Eliane Daphy, Minh Ha-Duong. Archives ouvertes. Le savoir scientifique est-il en accès libre ? J'ai vu que t'étais connu de Hal (conte à rire). 2010. ⟨sic_00518786⟩",
+              "source_url": "https://hal.science/sic_00518786",
+              "chunk_order": 52,
+              "description": "L'auto-archivage permet le libre accès au savoir scientifique, mais repose encore trop sur l'altruisme des auteurs. Pour massifier et systématiser cette pratique, des actions plus fortes sont nécessaires. Le conte à rire narre les déboires d'un chercheur \"connu de Hal\" à l'insu de son plein gré, découvrant qu'il a 148 notices bibliographiques sur un serveur d'archives ouvertes. Co-auteurs de l'encart : \"Pour le dépôt en archives ouvertes des productions scientifiques\" : Vincent Battesti, Eliane Daphy, Christine Eisenbeis, Minh Ha-Duong.",
+              "document_type": "OTHER",
+              "publication_date": "2010-09-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Bonjour !"
+            }
+          },
+          {
+            "id": "b250c9c8-e287-5c1f-bb7b-b86abc1b5070",
+            "document_id": "27031447-638a-5dc1-8a26-6bc27206ec9d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: L'homme et la lagune : de l'espace naturel à l'espace urbanisé\n\nText: üùstorùquñJñtJêrîüéoloûùquñJïQprîêîüonJñtJïuJêysJïñJquîüVJprîêîüon iJ]gfXa[aY\nvtrxpJpYVJ]hhaVJ êîüñJñtJîüêssñJñnJêysJïñJquîüJêuJ'oyñnJÂûñ VJîeTîittoralTÉasconTetTson\narrièreipays VJxxVJˆoîùétéJüùstorùquñJñtJêrîüéoloûùquñJïQprîêîüonJñtJïuJêysJïñJquîüVJprîêîüon iJahX\nbgY\nvxqwJ YVJ ]hhaVJ  êturñVJ pêysêûñVJ ñnvùronnñmñntVJ oèsîursJ oèjñtsJ ïuJ ïésùrJ ïñJ totêlùté V\n'êrùñXrlêùrñJoèùîVJ uTmilieuTàTlcenvironnement RssJïùrYSVJtîonomùîêVJêrùs iJ]]XdeYJ\n'ttJ yrYVJ ]hh[VJ  QoîîupêtùonJ préüùstorùquñJ ñnJ pêysJ ïñJ qornJ ïuJ mésolùtüùquñJ àJ lQâûñJ ïu\nèronzñ VJîeTlittoralTgasconTetTsonTarrièreTpays VJxVJˆoîùétéJüùstorùquñJñtJêrîüéoloûùquñJïQprîêîüonJñt\nïuJêysJïñJquîüVJprîêîüon iJ]g]X]haY\nXJcdXüommñJñtJlêJlêûunñJ]hhg02/03 Gami-Ribereau27/46:02/03 Gami-Ribereau27/46  22/08/09  15:09  Page45",
+            "metadata": {
+              "title": "L'homme et la lagune : de l'espace naturel à l'espace urbanisé",
+              "hal_id": "hal-01442742",
+              "authors": [
+                "Bernard Barraqué",
+                "Nicole Vernazza-Licht",
+                "Daniel Bley",
+                "Gilles Boëtsch",
+                "L. Fozzati",
+                "Emma Rabino-Massa"
+              ],
+              "version": "v0",
+              "citation": "Bernard Barraqué, Nicole Vernazza-Licht, Daniel Bley, Gilles Boëtsch, L. Fozzati, et al. (Dir.). L'homme et la lagune : de l'espace naturel à l'espace urbanisé. BARRAQUE B., VERNAZZA-LICHT N., BLEY D., BOËTSCH G., FOZZATI L., RABINO-MASSA E. (ss. dir.). Editions de Bergier, 321 p., 1998, Travaux de la SEH, Vernazza-Licht Nicole, 2-9511840-3-4. ⟨hal-01442742⟩",
+              "source_url": "https://hal.science/hal-01442742",
+              "chunk_order": 179,
+              "description": "Partout dans le monde, les zones humides reculent. Malgré des prises de conscience récentes elles continuent en Europe à reculer rapidement, alors que les 6% des terres émergées qu’elles représentent sont aussi importants pour la biodiversité qu’ils sont menacés. La moitié de la population mondiale vit à proximité de la mer, et c’est là qu’elle s’accroît le plus. D’où la pression sur les espaces littoraux humides. Ils peuvent être détruits directement, par drainage ou comblement, mais aussi indirectement en fonction de l’évolution des usages de l’eau dans l’ensemble des bassins amont. En France, leur réduction est forte : le Languedoc-Roussillon aurait perdu plus de 20% de ses zones humides côtières en deux siècles, et la Bretagne 40% en 30 ans depuis 1960. Le tourisme estival accroît encore la pression démographique sur le littoral. En Italie, la situation est également préoccupante, en particulier en ce qui concerne la lagune la plus célèbre du monde. L’ouvrage aborde pour l’essentiel des études de cas dans l’espace méditerranéen. Quelques contributions cependant ont traité de lieux où les étangs, bien que littoraux, sont d’eau douce, ou qui sont sur le rivage de l’Atlantique. Certains de nos collègues anthropologues ont élargi notre horizon à l’Afrique et à l’Amérique centrale, où c’était un lac salé qui était au coeur de l’analyse. Mais certainement, la contribution la plus exceptionnelle, la plus décalée par rapport à l’objet central du colloque, aura été celle de Jacqueline Clarac de Briceño : venue du Vénézuela, cette anthropologue et ethnopsychiatre nous a parlé de lagunes, mais au sens hispano-américain, c’est à dire de petits lacs d’eau douce de montagne ! Sa présence était cependant pleinement justifiée. Le Vénézuela, comme son nom l’indique, est une petite Venise qui est devenue grande à partir des lagunes de Maracaïbo : pour des Européens de toutes façons, il garde le secret d’un grand espace lacunaire. Enfin, et justement, la lagune française, comme la laguna espagnole, emportent cette caractéristique d’espace de l’oubli, et d’espace un temps oublié par la modernité, voire même frappé d’infamie par les aménageurs. Lorsque ceux-ci décident de gérer les lagunes à leur manière, ils découvrent la difficulté de l’entreprise, et même ils échouent souvent. Le cas apporté des montagnes andines confirme ce que disent la plupart des auteurs de ce livre, qui ont eux regardé des espaces de bord de mer : c’est qu’une lagune est en fait un espace humanisé d’une façon particulière, dans un équilibre subtil et fragile avec la nature. Supprimons les indiens, interdisons leurs pratiques, au nom de leur incompatibilité avec des formes modernes de tourisme ou d’exploitation, et les lagunes disparaîtront rapidement ! Allons plus loin : sans un entretien particulier, sans donc une volonté d’un groupe social local, les espaces littoraux, en particulier les étangs, sont le plus souvent condamnés soit au comblement, soit à se noyer dans la mer. Comme le répète Bernard Picon depuis des années, la Camargue n’est pas un espace naturel qui aurait échappé à l’homme, et qui à ce titre devrait être protégé : c’est un espace artificiel, fabriqué par des sociétés humaines qui l’exploitent intelligemment, en en respectant les dispositions propres. C’est un cas fréquent dans l’histoire ou autour de la terre. Les économistes de l’environnement constatent la difficulté à établir clairement la valeur des espaces littoraux, soumis qu’ils sont à des usages, voire à des non-usages, qui s’enchevêtrent. C’est la problématique de gestion du patrimoine commun : sa gestion économiquement rationnelle suppose d’avoir des informations dont le coût d’obtention est élevé, en particulier pour organiser les transactions entre les agents économiques, alors que les pratiques combinées de ceux-ci, stabilisées dans des coutumes traditionnelles, ont à l’inverse augmenté la valeur globale de ce patrimoine. Il est alors difficile de savoir qui est responsable de quel changement de valeur, et inversement quel est l’intérêt précis de chaque type d’usager ou d’agent économique. D’où la particularité et la sophistication des modèles et des méthodes à employer dans ces cas. Tel est l’enseignement de cet ouvrage : si les zones humides littorales les plus intéressantes sont souvent des espaces anthropisés, leur protection dépend de la compréhension des interactions entre les hommes, et entre les hommes et l’eau, voire de la capacité de maintien des sociétés concernées, dans une dynamique positive. L’opposition des écologistes à l’aménagement hydraulique intempestif est justifié, mais si leur contre-proposition consiste seulement à préserver la nature comme si elle avait toujours été ainsi, on verse dans une sorte de contre-idéologie. Le tourisme de masse est responsable d’une dégradation dramatique de certains littoraux, il en est même venu à tuer son propre objet; tout le monde en convient. Mais ni une renaturation pure, ni un tourisme vert ne suffisent à redonner un horizon durable aux espaces concernés. Le pire serait que des projets de type écologique viennent venir servir d’alibi, par des réalisations sur les marges, à la poursuite d’un modèle de développement qui détruit la relation société-nature si subtile qui explique et produit largement la lagune. Le cas de Venise est ici particulièrement illustratif, et pour tout dire, il illustre cette contradiction. Voilà trente ans qu’on dit qu’il faut sauver Venise. Venise s’enfonce dans l’eau, suite à la modification fondamentale de l’hydrogéologie due aux aménagements du delta du Pô, et surtout à l’installation de la raffinerie de Marghera au fond de la lagune. A celà s’ajoute la surexploitation des eaux souterraines, et le fait que la route d’accès à la ville entrave la circulation de l’eau, qui produirait aussi des effets secondaires d’enfoncement. Lors de tempêtes conjuguées avec la marée, des dégâts catastrophiques se sont produits, et le phénomène des Acque alte prend de l’importance. Mais ces constatations une fois faites, on ne met pas en oeuvre la solution qui vient immédiatement à l’esprit : déplacer la raffinerie ailleurs, pour ne plus avoir besoin du chenal d’accès pour les grands pétroliers. Et, plus généralement, revenir à un équilibre entre économie et nature plus traditionnel, et plus durable. Bien au contraire, on multiplie les projets technologiques les plus ambitieux, et pour tout dire les plus mythiques, comme Jean-Pierre Gaudin est venu nous le rappeler : barrages mobiles pour arrêter l’eau, digues perpendiculaires aux plages pour casser les vagues en cas de tempête, etc. Certes, la restauration environnementale, notamment des prés salés qu’on appelle Barenas, tient une bonne place dans les plaquettes descriptives du projet intégré, mais celui-ci reste de toutes façons centré sur le sauvetage du patrimoine architectural. Une opération qui prête également à controverse, puisque c’est en partie le succès touristique de Venise qui y rend la vie impossible … pour ses propres habitants. L’importance de la réunion des textes tient précisément à cette observation : la gestion durable des espaces de grande valeur environnementale passe par la mobilisation des connaissances des sciences de l’homme et de la société, au moins autant que par la projection dans la technologie, ou dans la nature naturelle. L'ouvrage est divisé en 4 parties : - L'éventail des perceptions et des représentations des milieux lagunaires ; - L'Archéologie et l'histoire du peuplement de ces espaces ; - Les fragilités réciproques des sociétés locales et des espaces littoraux ; - Vers la gestion durable des systèmes socio-écologiques des lagunes",
+              "document_type": "OUV",
+              "publication_date": "1998-01-01",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "Bonjour !"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 60,
+            "total_tokens": 60
+          }
+        }
+      },
+      "duration": 165
+    },
+    "retrievalTime": 2998,
+    "generationTime": 165,
+    "timestamp": "2025-07-21T07:39:47.330Z"
+  },
+  "server_context": {
+    "client_ip": "213.245.17.24",
+    "forwarded_for": "213.245.17.24",
+    "received_at": "2025-07-21T07:39:47.445152+00:00",
+    "server_version": "1.0.0"
+  }
+}

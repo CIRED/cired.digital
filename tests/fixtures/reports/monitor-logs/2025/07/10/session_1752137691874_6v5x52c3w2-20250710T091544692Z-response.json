@@ -1,0 +1,336 @@
+{
+  "sessionId": "session_1752137691874_6v5x52c3w29583f4u",
+  "timestamp": "20250710T091544692Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752138942760_850ulgh",
+    "response": {
+      "results": {
+        "generated_answer": "Louis-Gaëtan Giraudet travaille principalement sur les barrières à l'efficacité énergétique et sur l'évaluation des politiques de rénovation énergétique des logements. Ses recherches portent sur des sujets tels que les crédits d'impôt, les éco-prêts, la taxe carbone, la certification de professionnels et les garanties de performance [ec67520].",
+        "citations": [
+          {
+            "id": "ec67520",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 335,
+              "end": 344
+            },
+            "payload": {
+              "id": "ec67520f-e518-5d04-9f8f-09cc678213d8",
+              "document_id": "45dfecd1-b49d-5afc-8aea-5e34d1cc0ce7",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Pourquoi le recours à l’éco-prêt à taux zéro est-il si faible ?\n\nText: Louis-Gaëtan Giraudet\nChercheur au CIRED,  \nÉcole des Ponts ParisTech\nIngénieur des ponts, des eaux et des forêts, titulaire dun di -\nplôme dingénieur d AgroParisTech et dun doctorat de luni -\nversité Paris-Est, Louis-Gaëtan Giraudet est chercheur à lÉcole \ndes Ponts ParisTech et au Centre international de recherche sur \nlenvironnement et le développement (CIRED). Ses travaux de \nrecherche portent sur les barrières à lefficacité énergétique et \nsur lévaluation des politiques de rénovation énergétique des \nlogements  crédits dimpôt, éco-prêts, taxe carbone, certifica -\ntion de professionnels, garanties de performance.\nEn parallèle, il enseigne à lÉcole daffaires internationales de \nSciences Po.\nAuparavant, il a effectué un post-doctorat au Precourt Energy \nEfficiency Center à Stanford University. En 2018, il est lauréat \ndu prix  jeune chercheur  de la Banque de France pour la \nfinance verte.Léco-prêt à taux zéro (EPTZ) permet aux \npropriétaires de logements de financer \ndes travaux de rénovation énergétique",
+              "metadata": {
+                "title": "Pourquoi le recours à l’éco-prêt à taux zéro est-il si faible ?",
+                "hal_id": "hal-03278386",
+                "authors": [
+                  "Louis-Gaëtan Giraudet"
+                ],
+                "version": "v0",
+                "citation": "Louis-Gaëtan Giraudet. Pourquoi le recours à l’éco-prêt à taux zéro est-il si faible ?. Transitions. Les nouvelles Annales des Ponts et Chaussées, 2021, 1, pp.128-133. ⟨hal-03278386⟩",
+                "source_url": "https://hal.science/hal-03278386",
+                "chunk_order": 7,
+                "description": "L’éco-prêt à taux zéro (EPTZ) permet aux propriétaires de logements de financer des travaux de rénovation énergétique sans payer d’intérêts. Lancée en 2009, cette politique phare du Grenelle de l’environnement n’a pas rencontré le succès escompté. Aujourd’hui, la Convention citoyenne pour le climat (2020) propose de généraliser l’EPTZ. Pour juger de l’opportunité d’une telle mesure, nous nous interrogeons sur les causes possibles de l’écart entre le nombre d’EPTZ initialement prédit et effectivement réalisé. Nous identifions comme cause principale un manque d’attractivité du dispositif pour les banques. Celles-ci mettent en oeuvre des stratégies d’évitement qui prospèrent sur une forme de désintérêt des ménages. D’autres causes fréquemment avancées, comme les coûts administratifs ou l’environnement de taux d’intérêt faibles, semblent jouer un rôle moins important. Nous concluons que l’efficacité du dispositif pourrait être améliorée en transférant l’octroi des prêts à une banque publique.",
+                "document_type": "ART",
+                "publication_date": "2021-07-01",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "sur quoi travaille Louis-Gaëtan Giraudet"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "ec67520f-e518-5d04-9f8f-09cc678213d8",
+            "document_id": "45dfecd1-b49d-5afc-8aea-5e34d1cc0ce7",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Pourquoi le recours à l’éco-prêt à taux zéro est-il si faible ?\n\nText: Louis-Gaëtan Giraudet\nChercheur au CIRED,  \nÉcole des Ponts ParisTech\nIngénieur des ponts, des eaux et des forêts, titulaire dun di -\nplôme dingénieur d AgroParisTech et dun doctorat de luni -\nversité Paris-Est, Louis-Gaëtan Giraudet est chercheur à lÉcole \ndes Ponts ParisTech et au Centre international de recherche sur \nlenvironnement et le développement (CIRED). Ses travaux de \nrecherche portent sur les barrières à lefficacité énergétique et \nsur lévaluation des politiques de rénovation énergétique des \nlogements  crédits dimpôt, éco-prêts, taxe carbone, certifica -\ntion de professionnels, garanties de performance.\nEn parallèle, il enseigne à lÉcole daffaires internationales de \nSciences Po.\nAuparavant, il a effectué un post-doctorat au Precourt Energy \nEfficiency Center à Stanford University. En 2018, il est lauréat \ndu prix  jeune chercheur  de la Banque de France pour la \nfinance verte.Léco-prêt à taux zéro (EPTZ) permet aux \npropriétaires de logements de financer \ndes travaux de rénovation énergétique",
+            "metadata": {
+              "title": "Pourquoi le recours à l’éco-prêt à taux zéro est-il si faible ?",
+              "hal_id": "hal-03278386",
+              "authors": [
+                "Louis-Gaëtan Giraudet"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet. Pourquoi le recours à l’éco-prêt à taux zéro est-il si faible ?. Transitions. Les nouvelles Annales des Ponts et Chaussées, 2021, 1, pp.128-133. ⟨hal-03278386⟩",
+              "source_url": "https://hal.science/hal-03278386",
+              "chunk_order": 7,
+              "description": "L’éco-prêt à taux zéro (EPTZ) permet aux propriétaires de logements de financer des travaux de rénovation énergétique sans payer d’intérêts. Lancée en 2009, cette politique phare du Grenelle de l’environnement n’a pas rencontré le succès escompté. Aujourd’hui, la Convention citoyenne pour le climat (2020) propose de généraliser l’EPTZ. Pour juger de l’opportunité d’une telle mesure, nous nous interrogeons sur les causes possibles de l’écart entre le nombre d’EPTZ initialement prédit et effectivement réalisé. Nous identifions comme cause principale un manque d’attractivité du dispositif pour les banques. Celles-ci mettent en oeuvre des stratégies d’évitement qui prospèrent sur une forme de désintérêt des ménages. D’autres causes fréquemment avancées, comme les coûts administratifs ou l’environnement de taux d’intérêt faibles, semblent jouer un rôle moins important. Nous concluons que l’efficacité du dispositif pourrait être améliorée en transférant l’octroi des prêts à une banque publique.",
+              "document_type": "ART",
+              "publication_date": "2021-07-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "sur quoi travaille Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "e8870ca8-3d53-5ea4-9c94-020124bdffc1",
+            "document_id": "f94f49c0-67a3-5881-96c6-c7299ed4f032",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: The game is afoot: The French reaction to game theory in the fifties\n\nText: de la Psychologie (Mathematics of Psychology ) in 1940.  \n \nHence, it is not surprising that Guil bauds first works were conducted in collaboration with non -\nmathematicians. This is the case of his first contribution in 1945, a book coauthored with the \npsychologist Daval in which he developed a reflection about the nature of mathematical reasoning. \nFurthermore, he published an article in 1946 regarding bilateral monopoly in collaboration with \neconomist Guitton. Both of them settled in Dijon where Guitton taught in the Law faculty and Guilbaud \nin preparatory classes9. As a result, he was recruited in 194 7 as a research fellow in the Institut des \nSciences Economiques Appliquées , the center founded and directed by Perroux . He stayed in that center \nuntil 1955, and became its vice -president in 1951. Thus , Guilbaud  became a mathematician who evolved \nin the economists milieu.  \n \n He was thought of as eccentric as he differed from the standard profile of French mathematicians at the",
+            "metadata": {
+              "doi": "10.1215/00182702-8906005",
+              "title": "The game is afoot: The French reaction to game theory in the fifties",
+              "hal_id": "hal-03081226",
+              "authors": "['Rabia Nessah', 'Tarik Tazdaït', 'Mehrdad Vahabi']",
+              "version": "v0",
+              "citation": "Rabia Nessah, Tarik Tazdaït, Mehrdad Vahabi. The game is afoot: The French reaction to game theory in the fifties. History of Political Economy, 2021, 53 (2), pp.243-278. ⟨10.1215/00182702-8906005⟩. ⟨hal-03081226⟩",
+              "source_url": "https://doi.org/10.1215/00182702-8906005",
+              "chunk_order": 29,
+              "description": "In this paper, we are interested in exploring the history of game theory in France, and particularly the way it was received and was diffused in the fifties. It will be shown that France was the most fertile soil in the whole continental Europe for a multidisciplinary welcoming to game theory. Reviewing certain aspects of the intellectual trajectory of the mathematician Guilbaud, the ethnologist Lévi-Strauss and the psychanalyst Lacan, we show how each of them, in his own way, played a key role in advancing game theory: (1) Guilbaud for his constancy in disseminating game theory (and mathematics in general) (2) Lévi-Strauss for his original interpretation of game theory that had some impact on social sciences; and (3) Lacan for using the contributions of game theory. Lacan and Lévi-Strauss were particularly convincing since they were instructed on request about the principles of game theory by Guilbaud.",
+              "document_type": "ART",
+              "publication_date": "2021-01-01",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "sur quoi travaille Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "6170c3eb-ac74-5fa6-9717-8a28525178af",
+            "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: des Entreprises (Coe-Rexecode), centre de recherche privé fournissant des expertises \néconomiques auprès de c lients de natures variées.\n285. En parallèle, il enseigne au \nConservatoire National des Arts et Métiers  (CNAM), établissement denseignement \nsupérieur pour futurs ingénieurs et disp ensant une formation continue dans des \ndomaines divers. Il se situe donc entre le domaine de lex pertise-conseil et \nlacadémique. Il demeure cependant principalement dans le champ de lexpertise-\nconseil puisquil sagit de son employeur principal. Par la suite, il rejoint le Bureau \ndInformation et de Prévisions Economique s (BIPE), autre société dexpert-conseil \nspécialisée dans la prospective économique pour divers domaines286. Il y travaille \njusquen 2001287\nhttp://www.cgemp.dauphine.fr/fileadmin/mediatheque/centres/cgemp/CV/CVcompletCdP%20_Fran%\nC3%A7ais_.pdfet pénètre ensuite un peu plus le champ académique en devenant \nprofesseur associé à lUniv ersité Paris9-Dauphine. Lau gmentation du nombre de ses",
+            "metadata": {
+              "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+              "hal_id": "tel-01112427",
+              "authors": [
+                "Pauline Huet"
+              ],
+              "version": "v0",
+              "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+              "source_url": "https://hal.science/tel-01112427",
+              "chunk_order": 522,
+              "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+              "document_type": "THESE",
+              "publication_date": "2015-01-15",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "sur quoi travaille Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "cbd5882b-a483-50fa-97fb-05f085f0922e",
+            "document_id": "b1466e90-0761-59f8-84cc-f87621b83d99",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Des Bisses aux Wateringues en passant par les petits cours d’eau français\n\nText: famille de juristes, sétait intéressé dès sa jeunes se à lirrigation et au drainage, à une époque \noù lenjeu de leau pour lagriculture était fort, et multipliait les situations de rivalité avec les \nusiniers à propos des moulins à roue, et de leurs bi efs 26 . Premier directeur du service de \nlhydraulique au ministère des travaux publics, il a  aussi enseigné le génie rural dans la \ngrande école du génie civil. Il a laissé un ouvrage  en trois volumes ; le deuxième est consacré \naux travaux publics de dessèchement, du sud à lo uest et au nord de la France, en Belgique \net jusquaux Pays-Bas (lac de Harlem, où les machine s à vapeur ont remplacé les moulins à \nvent).  \n                                                \n24  Aux Pays-Bas, il y a 480 communes chargées des rés eaux dégout ; après concentration, il reste seulem ent 10 \nentreprises publiques de distribution deau apparte nant aux communes et aux provinces ; les 12 provinc es sont",
+            "metadata": {
+              "title": "Des Bisses aux Wateringues en passant par les petits cours d’eau français",
+              "hal_id": "hal-00783191",
+              "authors": [
+                "Bernard Barraqué"
+              ],
+              "version": "v0",
+              "citation": "Bernard Barraqué. Des Bisses aux Wateringues en passant par les petits cours d’eau français. Colloque international Les bisses - économie, société, patrimoine, Sep 2010, Sion, Suisse. ⟨hal-00783191⟩",
+              "source_url": "https://hal.science/hal-00783191",
+              "chunk_order": 64,
+              "document_type": "COMM",
+              "publication_date": "2010-09-02",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "sur quoi travaille Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "abd1bc4f-376f-5781-bdb4-34ec4292ab8c",
+            "document_id": "5dda2378-99f3-5e66-8987-db3d01cf658b",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Le courant marxiste de l’anthropologie française et la notion de transition\n\nText: des anthropologues marxistes français, en particulier pour Godelier et pour Rey. Après\nson agrégation de philosophie et avant de sorienter vers lanthropologie, Godelier a\nétudié  léconomie  pendant  trois  ans.  Invité  à  présenter  son  itinéraire  intellectuel\ndevant  un  public  universitaire  états-unien  en  1981,  il  souligne  limportance  de  la\npériode pendant laquelle il aurait été lassistant de Bettelheim (Godelier, 1984:36).\nEnvoyé au Mali pour étudier les effets de la planification économique dite socialiste\nsur les communautés villageoises, il consacre lessentiel de son séjour à des voyages et à\nla  lecture  de  textes  danthropologie  qui  léloignent  définitivement  de  la  discipline\néconomique. Quelques années plus tard, Godelier séloigne également de Bettelheim\naprès que celui-ci a rédigé un projet de préface particulièrement critique de Rationalité\net irrationalité en économie (Godelier, 1966), recueil dans lequel se trouvent les articles du",
+            "metadata": {
+              "doi": "10.4000/variations.2329",
+              "title": "Le courant marxiste de l’anthropologie française et la notion de transition",
+              "hal_id": "hal-04431414",
+              "authors": [
+                "Lucie Rondeau du Noyer"
+              ],
+              "version": "v0",
+              "citation": "Lucie Rondeau du Noyer. Le courant marxiste de l’anthropologie française et la notion de transition. Variations. Revue internationale de théorie critique, 2023, 26, ⟨10.4000/variations.2329⟩. ⟨hal-04431414⟩",
+              "source_url": "https://doi.org/10.4000/variations.2329",
+              "chunk_order": 35,
+              "description": "Les travaux de Claude Meillassoux sont généralement considérés comme le point de départ de l'anthropologie économique marxiste en France. Cependant, entre 1960 et le début des années 1990, il n’existe pas de consensus théorique au sein de la communauté de ces anthropologues se réclamant du marxisme. En nous concentrant sur les débats théoriques et politiques relatifs à la transition au capitalisme de sociétés non féodales, nous montrerons que les différends qui opposent Maurice Godelier et les jeunes anthropologues althussériens au tournant des années 1970 sont surtout ancrés dans des divergences d’interprétation du corpus marxien et dans l’approbation donnée ou non à la lecture althussérienne du Capital. Si elles peuvent paraître extrêmement abstraites, ces discussions marxologiques ont pour intérêt de ne jamais avoir été complètement coupées du terrain ni de la lutte des classes, au point d'avoir inspiré certains praticiens du développement comme l'économiste Charles Bettelheim et la sociologue Hélène Legotien.",
+              "document_type": "ART",
+              "publication_date": "2023-10-12",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "sur quoi travaille Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "832b8464-9050-5b83-92e2-66605aaec2e0",
+            "document_id": "c59df36b-595d-510c-87b2-aadef7c4d5e3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain\n\nText: février 2013) \nGAGNON C.  Le développement durable : un nouveau paradigme scientifique? . In : Sciences \ndu territoire: Perspectives québécoises . [s.l.] : Presses de lUniversité du Québec, 2008. p . 335 361. \nGAILLARD M. Leau de Paris . Martelle Editions.[s.l.] : [s.n.], 1995. 224 p. \nGALBRAITH J.CK. Les mensonges de léconomie : Vérité pour notre temps . [s.l.] : Grasset & Fasquelle, \n2007. 92 p.ISBN : 2246674913. \nGARIEPY M., MARIE M. Ces réseaux qui nous gouvernent? . Paris : LHarmattan, 1997. ISBN : \n2738458106 9782738458100. \nGATTY J.  Lavenir du service public. Monopole, conc urrence et efficacité . Commentaire . \ndécembre 1997. p. 909 916.  \nGAUDIN J.CP. LAction publique : Sociologie et politique . 1ère éd.[s.l.] : Presses Sciences Po et \nDalloz, 2004. 242 p.ISBN : 2247052363. \nGAY J. LAmelioration de lexistence à Paris sous le regne  de Napoleon III: ladministration des services à \nlusage du public . EHESS.[s.l.] : [s.n.], 1986.",
+            "metadata": {
+              "title": "Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain",
+              "hal_id": "tel-01150236",
+              "authors": [
+                "Julien Souriau"
+              ],
+              "version": "v0",
+              "citation": "Julien Souriau. Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain. Science politique. AgroParisTech, 2014. Français. ⟨NNT : 2014AGPT0052⟩. ⟨tel-01150236v3⟩",
+              "source_url": "https://hal.science/tel-01150236",
+              "chunk_order": 1732,
+              "description": "Le service public d’eau de Paris est indéniablement développé… mais est-il durable ? Comment évaluer et améliorer cette durabilité ? C’est à cette question que nous proposons d’apporter une réponse scientifique. Cette thèse doctorale étudie les stratégies de développement des services publics d’eau et leur durabilité, avec pour principal cas d’étude Paris. En moins de deux siècles, ce service d’eau est passé d’une situation archaïque à la configuration sociotechnique actuelle, et nous souhaitons comprendre dans quelle mesure cette action collective pourra être prolongée – ou pas – à l'avenir. La première partie de cette thèse discute le cadre méthodologique et théorique mobilisé pour étudier ce qui 'gouverne' le développement et la durabilité du service public d’eau à Paris. C’est ce cadre d’analyse général qui est appliqué dans les parties suivantes de cette thèse, pour analyser le temps long : passé, présent et futur. Premièrement, pour comprendre la durabilité du développement passé. Nous expliquons comment un service public d’eau a pu historiquement être développé et perdurer à Paris jusqu'à ce jour. Pour cela, nous étudions les dynamiques à la fois écologiques, techniques, économiques, institutionnelles et politiques de ce développement, afin d'en identifier les principaux moteurs et les limites. Deuxièmement, pour évaluer la durabilité du développement présent. Nous étudions dans quelle mesure les politiques contemporaines (ex : politiques de RSE) changent quelque chose aux configurations, dynamiques et trajectoires héritées du passé. Si les politiques de développement durable actuelles permettent plusieurs améliorations, diverses résistances les rendent marginales ou marginalisées, malgré le consensus en leur faveur. Troisièmement, pour prévoir la durabilité du développement futur. Nous analysons les principales conséquences des projets officiels prévus (ex : Grand Paris de l’eau). En complément, nous proposons une étude prospective de divers scénarios encore possibles à l’avenir, afin de discuter des cheminements qui y mènent et de leurs conséquences, notamment face à la baisse de la demande d’eau observée depuis 1990. L'objectif de cette thèse est autant d'améliorer la compréhension de la notion de durabilité, que de proposer des outils opérationnels pour définir, mener et évaluer des politiques de service public d'eau durables à l’avenir.",
+              "document_type": "THESE",
+              "publication_date": "2014-11-04",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "sur quoi travaille Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "f1dfa751-1de7-5637-9ad0-6ea2cb3f6b47",
+            "document_id": "82c08573-1415-5e7e-a391-79b21211cd1f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550\n\nText: 4 Du\tmême\tauteur\t\nPour\tvoir\tArles ,\tMaison\tdu\tlivre\tfrançais\t1932\t\nInventaire\tgénéral\tdes\tdessins\tdes\técoles\tdu\tNord\t:\tTome\t1.\tÉcole\thollandaise ,\ten\t\ncoll.\tavec\tFrits\tLugt.\tENSBA\t1950\t\n\"L'Académie\td'Architecture\tà\tla\tfin\tdu\tXVIIIe\tsiècle\",\t Gazette\tdes\tBeaux-Arts\tn68,\t\t\n355-394,\t1966. \t\nLa\tSainte\tChapelle,\thistorique\tet\tguide\tdu\tvisiteur,\téditions\tAlbert\tMorancé\t1975.\t\nCatalogues\td'exposition:\t\nLes\tlivres\td'Heures\t1936\t\nArt\titalien\tdes\tXVIIe\tet\tXVIIIe\tsiècles\t1937\t\nArt\tflamand\tdes\tXVe,\tXVIe,\tXVIIe\tsiècles.\tExposition\tde\tdessins,\tlivres\tillustrés\tet\txylographies\tconservés\tdans\tles\tcollections\tde\t\nl'École\tdes\tBeaux\tArts\tet\ttirés\ten\tmajeure\tpartie\tde\tla\tdonation\tJean\tMasson. \tENSBA\t1947 \t\nArt\tgraphique\tau\tmoyen-âge \t:\texposition\tde\tdessin\tmanuscrits\tenluminés,\tgravures\tet\tincunables\tconservés\tdans\tles\tcollections\t\nde\tl'École\tdes\tBeaux\tarts\tet\ttirés\ten\tmajeure\tpartie\tde\tla\tDonation\tJ.\tMasson, \tENSBA\t1953",
+            "metadata": {
+              "title": "A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550",
+              "hal_id": "halshs-02898229",
+              "authors": [
+                "Wanda Rabaud",
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Wanda Rabaud, Nicolas Bouleau. A la source de la Renaissance française, Le livre d'Heures parisien\r\nLivres d'Heures imprimés à Paris entre 1488 et 1550. 2020. ⟨halshs-02898229⟩",
+              "source_url": "https://hal.science/halshs-02898229",
+              "chunk_order": 3,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-07-15",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "sur quoi travaille Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "e6761f07-408c-5954-b935-135d21389244",
+            "document_id": "82c08573-1415-5e7e-a391-79b21211cd1f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550\n\nText: pas\td'un\tposte\tofficiel\tde\tconservateur,\t précédemment \tcette\tfonction\tavait\tété\tremplie\tbénévolement\tpar\tPierre\tLavallée\t\nqui\tvenait\tà\tl'Ecole\ten\tcalèche.\tBibliothécaire-conservateur\tWanda\tBouleau-Rabaud\t\tconnue\taussi\tcomme\thistorienne\tsous\t\nle\t nom\t de\t Wanda\t Rabaud\t\t était\t bibliothécaire\t par\t son\t salaire\t et\t conservateur\t par\t ses\t responsabilités,\t elle\t assumait\t la\tconservation\t et\t la\t mise\t en\t valeur\t par\t des\t expositions\t périodiques\t et\t des\t publications\t des\t près\t de\t 450000\t œuvres\t et\touvrages,\t dont\t 2000\t peintures\t et\t 20000\t dessins\t d'artistes\t aussi\t célèbres\t que\t Dürer,\t Michel-Ange,\t Véronèse,\t Rubens,\tRembrandt,\tetc.\t\t\t Ce\t patrimoine\t immense\t avait\t été\t légué\t par\t les\t Académies\t Royales,\t puis\t enrichi\t de\t travaux\t d'élèves\t \t très\trévélateurs\tdes\tmodes\tde\tl'enseignement\tdes\tarts\tplastiques\tet\tde\tl'architecture\tà\tchaque\tépoque\t\tainsi\tque\tpar\tdes\tdons",
+            "metadata": {
+              "title": "A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550",
+              "hal_id": "halshs-02898229",
+              "authors": [
+                "Wanda Rabaud",
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Wanda Rabaud, Nicolas Bouleau. A la source de la Renaissance française, Le livre d'Heures parisien\r\nLivres d'Heures imprimés à Paris entre 1488 et 1550. 2020. ⟨halshs-02898229⟩",
+              "source_url": "https://hal.science/halshs-02898229",
+              "chunk_order": 443,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-07-15",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "sur quoi travaille Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "47068b49-4976-50d1-89fb-f203c7e4016a",
+            "document_id": "27230f06-35bc-5322-be84-06851a5e9539",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)\n\nText: Pourfairevivrecetteéquipe,leCIREDabesoindetrouverconstamment denouvelles sources\n\n530 Dans les années 1970, avec la MSH dirigée par He ller, le CIRED met en place une importante unité de \ndocumentation, centre névralgique de lexpertise sur lécodéveloppement. \n531 Le GRSD occupait un bureau 4 rue de Chevreuse, siège de lAssociation des femmes diplômées de luniversité, \nquil partageait avec Daniel Thorner. \n532 Entretien avec K. Vinaver et K. Sachs, octobre 2017.  \n533 Entretien avec D. Théry, novembre 2017. \n534 Entretien avec J.-C. Hourcade, décembre 2017. \n535 Entretien avec S. Passaris, janvier 2018. Les stagiair es recrutés sont à limage de cette diversification : \narchitectes, ingénieurs, agronomes.  Rapport dactivités du CIRED, 1977, archives du CIRED, Paris.",
+            "metadata": {
+              "title": "The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)",
+              "hal_id": "hal-04891263",
+              "authors": "['C. Cassen']",
+              "version": "v0",
+              "citation": "C. Cassen. The climate/development dilemma in international climate negotiations: \r\nHistory of a climate‐centric reductionism (english traduction)\r\n(1990‐2022). 2025. ⟨hal-04891263⟩",
+              "source_url": "https://hal.science/hal-04891263",
+              "chunk_order": 2727,
+              "description": "The dissertation examines the persistent climate‐centric approach of the international climate negotiations and its related tension with development issues. It analyzes this tension through the coevolution between the main policy instruments adopted within the UNFCCC and a climate policy engineering, in which techno‐economic modeling occupies a distinctive position. Chapter 1 presents an interdisciplinary approach to analyzing these co‐evolutions and mobilises the concept of path dependency. It draws on a variety of sources, including academic and grey literature, CIRED archives and stakeholder interviews. The second part of the dissertation (chapters 2 and 3) examines two dimensions of a path‐dependent process that has led to a climate‐centric approach, including the coordination of negotiations around targets, from the Kyoto Protocol to the Paris Agreement, and persistent equity concerns about a burden‐sharing approach. The contribution to this path dependent process of energy economic experts from North countries, primarily in international fora and organisations is examined at four key moments: i) the European ecotax project (1990‐1992), ii) the negotiations on the flexibility mechanisms of the Kyoto Protocol (1995‐2001), iii) the adoption of mechanisms dedicated to South countries prior to Bali (NAMAs) (2001‐2007), and iv) the institutionalisation of the 2°C objective (2007‐2014). The third part analyzes the role of Integrated Assessment Models (IAMs) as a specific facet of the climate policy engineering in the climate‐centric approach of the negotiations. Chapter 4 shows that the reorientation of the policy agenda towards energy issues in the 80s had a significant impact on modeling efforts, particularly on the new IAMs that emerged following the institutionalization of the climate change issue. Chapter 5 shows how IAMs then became central in producing scenarios consistent with the 2°C target, based on a 'techno‐centric' approach. To that end, the IAM community relied on a repertoire of modeling practices and close collaboration with IPCC Group III (Chapter 6). The fourth part describes a fifth post‐Paris moment first characterized by a persistent gap between the long‐term transition scenarios generated by IAMs, in line with the IPCC AR5, and the short‐term challenges of accelerating the low‐carbon transition, as discussed in Chapter 7. Chapter 8 also highlights the growing role of modeling communities in the construction of national decarbonisation strategies and the organiszational and scientific challenges they face. The dissertation concludes that the incremental dynamics of change in the UNFCCC policy instruments have co‐evolved with opposite conceptions of the climate‐development nexus within a climate policy engineering, due to both strategies of alignment with the negotiating agenda and internal dynamics (techno‐centric reductionism, North‐South asymmetry, community effect). The conclusion calls for a more in‐depth examination of recent change and continuity within this technoeconomic expertise and of its interfaces within the current climate negotiations.",
+              "document_type": "TRAD",
+              "publication_date": "2025-01-16",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "sur quoi travaille Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "fd30dc04-2142-5621-b56d-a0c1a6039f42",
+            "document_id": "f94f49c0-67a3-5881-96c6-c7299ed4f032",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: The game is afoot: The French reaction to game theory in the fifties\n\nText: in the work of this period. Even economists such as Justman, Lagache and Fourastié who were highly \nlaudatory at the beginning, no lon ger mentioned this research. The only exception was Guilbaud aspired  \nto familiarize economists with mathematics, a personal aspiration that dated back to his training in ISUP.  \n \n2.2. Guilbaud, an atypical mathematician  \n \nGuilbauds  trajectory is that of a mathematician who tried to cross  the strongly separated disciplinary \nfrontiers. Indeed, while he was a student at the Ecole Normale Supérieure (from 1932 until 1935), \nGuilbaud earned  a certificate under the supervision of Georges  Darmois  in probabilit y and statistics \nfrom ISUP. Darmois had undertaken the responsibility of this certificate at the request of the \nMathematician Borel.",
+            "metadata": {
+              "doi": "10.1215/00182702-8906005",
+              "title": "The game is afoot: The French reaction to game theory in the fifties",
+              "hal_id": "hal-03081226",
+              "authors": "['Rabia Nessah', 'Tarik Tazdaït', 'Mehrdad Vahabi']",
+              "version": "v0",
+              "citation": "Rabia Nessah, Tarik Tazdaït, Mehrdad Vahabi. The game is afoot: The French reaction to game theory in the fifties. History of Political Economy, 2021, 53 (2), pp.243-278. ⟨10.1215/00182702-8906005⟩. ⟨hal-03081226⟩",
+              "source_url": "https://doi.org/10.1215/00182702-8906005",
+              "chunk_order": 27,
+              "description": "In this paper, we are interested in exploring the history of game theory in France, and particularly the way it was received and was diffused in the fifties. It will be shown that France was the most fertile soil in the whole continental Europe for a multidisciplinary welcoming to game theory. Reviewing certain aspects of the intellectual trajectory of the mathematician Guilbaud, the ethnologist Lévi-Strauss and the psychanalyst Lacan, we show how each of them, in his own way, played a key role in advancing game theory: (1) Guilbaud for his constancy in disseminating game theory (and mathematics in general) (2) Lévi-Strauss for his original interpretation of game theory that had some impact on social sciences; and (3) Lacan for using the contributions of game theory. Lacan and Lévi-Strauss were particularly convincing since they were instructed on request about the principles of game theory by Guilbaud.",
+              "document_type": "ART",
+              "publication_date": "2021-01-01",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "sur quoi travaille Louis-Gaëtan Giraudet"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 345,
+            "total_tokens": 345
+          }
+        }
+      },
+      "duration": 527
+    },
+    "retrievalTime": 1399,
+    "generationTime": 527,
+    "timestamp": "2025-07-10T09:15:44.692Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T09:15:44.726552+00:00",
+    "server_version": "1.0.0"
+  }
+}

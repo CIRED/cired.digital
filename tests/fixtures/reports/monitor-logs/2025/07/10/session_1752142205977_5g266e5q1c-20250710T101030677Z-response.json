@@ -1,0 +1,624 @@
+{
+  "sessionId": "session_1752142205977_5g266e5q1c1p5r5s2t",
+  "timestamp": "20250710T101030677Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752142225001_6fdqrf8",
+    "response": {
+      "results": {
+        "generated_answer": "Pour préparer un bon mémoire, voici quelques étapes et conseils basés sur les résultats de recherche fournis :\n\n1. **Choisir un bon sujet** :\n   - Consultez le document [220cf49] pour des conseils sur la sélection d'un sujet de mémoire pertinent et intéressant.\n\n2. **Organisation et structure** :\n   - Relisez et nettoyez la mise en page avec les styles pour une présentation cohérente [8d0860b].\n   - Réorganisez les sections et paragraphes pour une meilleure logique, par exemple, en déplaçant la conclusion avant l'introduction si nécessaire [8d0860b].\n   - Utilisez des styles pour obtenir des documents entièrement cohérents et supprimez tout formatage direct [9063d63].\n\n3. **Contenu et qualité** :\n   - Repensez à la contribution principale et aux messages clés de votre mémoire [8d0860b].\n   - Utilisez des méthodes de recherche et de rédaction de haute qualité, comme celles décrites dans [9063d63] et [07041be].\n   - Assurez-vous que votre mémoire suit les directives typographiques et de style de langue appropriées [9063d63].\n\n4. **Rédaction et révision** :\n   - Régénérez le résumé, les titres de section et le titre du mémoire en utilisant des méthodes comme la méthode du tournoi pour les titres [8d0860b].\n   - Imprimez et étalez le chemin de fer (plan détaillé) pour une vue d'ensemble et une révision facile [8d0860b].\n   - Faites relire votre mémoire par des pairs ou des professionnels pour obtenir des retours constructifs [8d0860b].\n\n5. **Archivage et documentation** :\n   - Archivez tout ce qui est nécessaire pour reproduire les résultats, y compris les fichiers de données, les codes de modèle, les feuilles de calcul, etc. [9063d63].\n   - Fournissez les fichiers d'images de haute résolution séparément [9063d63].\n\n6. **Présentation et soutenance** :\n   - Préparez-vous à présenter vos travaux de manière claire et concise, en transmettant vos motivations, votre vision et vos résultats [9ee834b] et [bbc3fd6].\n   - Préparez-vous à répondre aux questions et à discuter de votre mémoire lors de la soutenance [3aad7c2].\n\nEn suivant ces étapes et en utilisant les ressources fournies, vous serez bien préparé pour rédiger et présenter un bon mémoire.",
+        "citations": [
+          {
+            "id": "220cf49",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 169,
+              "end": 178
+            },
+            "payload": {
+              "id": "220cf49d-64dc-59e2-8f42-b65525e7a303",
+              "document_id": "8b0363fe-202e-577f-b948-2ead250d77c9",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: How to choose a good dissertation topic ? In 10 steps\n\nText: HAL Id: hal-04485573\nhttps://hal.science/hal-04485573v1\nSubmitted on 1 Mar 2024\nHAL is a multi-disciplinary open access\narchive for the deposit and dissemination of sci-\nentific research documents, whether they are pub-\nlished or not. The documents may come from\nteaching and research institutions in F rance or\nabroad, or from public or private research centers.Larchive ouverte pluridisciplinaire HAL , est\ndestinée au dépôt et à la diffusion de documents\nscientifiques de niveau recherche, publiés ou non,\némanant des établissements denseignement et de\nrecherche français ou étrangers, des laboratoires\npublics ou privés.\nHow to choose a good dissertation topic ? In 10 steps\nMinh Ha-Duong\nT o cite this version:\nMinh Ha-Duong. How to choose a good dissertation topic ? In 10 steps. Master. Online, Vietnam.\n2024. hal-04485573",
+              "metadata": {
+                "title": "How to choose a good dissertation topic ? In 10 steps",
+                "hal_id": "hal-04485573",
+                "authors": [
+                  "Minh Ha-Duong"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong. How to choose a good dissertation topic ? In 10 steps. Master. Online, Vietnam. 2024. ⟨hal-04485573⟩",
+                "source_url": "https://hal.science/hal-04485573",
+                "chunk_order": 0,
+                "description": "These slides summarize the key points from a webinar aimed at guiding Master's students through the process of choosing a dissertation topic. They outline a 10-steps approach that interlaces four critical factors: the student's capabilities and interests, the innovative edge of the research, the supervisor's academic expertise, and the availability of financial resources. They further outline a practical approach to developing the dissertation topic within the larger research article production cycle, and discusses essential timelines for both funded research projects and academic Ph.D. funding opportunities for Master's students.",
+                "document_type": "LECTURE",
+                "publication_date": "2024-03-01",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "Comment préparer un bon mémoire ?>´"
+              }
+            }
+          },
+          {
+            "id": "8d0860b",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 387,
+              "end": 396
+            },
+            "payload": {
+              "id": "8d0860b6-c875-5fa8-8d1e-dd075ec30efc",
+              "document_id": "2579b12d-664f-580f-bfb3-d66b3b61b0d8",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Research Excellence à la Française Fifty How-Tos for Students and Professionals\n\nText: En pratique : Améliorer un brouillon\n1. Relire en nettoyant la mise en page avec les styles\n2. Réorganiser sections & paragraphes (conclusion -> intro)\n3. (Re)penser la contribution principale et les messages-clés\n4. Régénérer résumé, titres de section\n5. Régénérer le titre (méthode du tournoi)\n6. Imprimer et étaler le chemin de fer\nDans le doute, corriger (la revue par les pairs le remarquerait).\nMéthode du tournoi : confronter 16 propositions de titres en éliminatoires et me\ndonner le podium\n7",
+              "metadata": {
+                "title": "Research Excellence à la Française Fifty How-Tos for Students and Professionals",
+                "hal_id": "hal-05023528",
+                "authors": "['Minh Ha-Duong']",
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Research Excellence à la Française Fifty How-Tos for Students and Professionals. 3ème cycle. La recherche en pratique(s), Paris, France. 2025. ⟨hal-05023528⟩",
+                "source_url": "https://hal.science/hal-05023528",
+                "chunk_order": 6,
+                "document_type": "LECTURE",
+                "publication_date": "2025-04-01",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "Comment préparer un bon mémoire ?>´"
+              }
+            }
+          },
+          {
+            "id": "8d0860b",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 546,
+              "end": 555
+            },
+            "payload": null
+          },
+          {
+            "id": "9063d63",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 666,
+              "end": 675
+            },
+            "payload": {
+              "id": "9063d633-80c7-54ec-93ef-6924ce035aeb",
+              "document_id": "befd3526-9ca6-5cc9-a9f4-1c3a59b8a5da",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01503448275862069,
+              "text": "Document Title: Research excellence à la Française\n\nText: Chapter 1 How to write quality manuscripts 13\n\u000b\u000b&)\"\u000b\u000b\n4988e expected level for a ﬁnalised PhD thesis, a submission to a peer-\nreview journal, a highly professional consulting report, is How-to 3 plus:\n Always use styles to get entirely consistent documents (if you \nhave never heard about word processing styles, learn it today.)\n Remove all direct formatting, white spaces trailing at the end of \nlines, empty blank lines.\n Number chapters, ﬁgures, tables, cross-references automatically.\n Internet links in the bibliography are active.\n Proofread the print-ready version on paper.\n Archive everything needed to reproduce results as supplementary \nelectronic material: data ﬁles, model code, spreadsheets, \nquestionnaires (e.g., Zenodo or HAL). Cite these supplements by \nDOI.\n Provide the high-resolution Figures ﬁles as separate ﬁles.\n Follow typographic guidelines, e.g.,  the Manuel de règles \ntypographiques en usage à lImprimerie Nationale.\n Follow language style guidelines, e.g., badéJYe Economist style guide",
+              "metadata": {
+                "title": "Research excellence à la Française",
+                "hal_id": "hal-04850819",
+                "authors": "['Minh Ha-Duong']",
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Research excellence à la Française. Self published, pp.81, 2024, 979-8303200531. ⟨hal-04850819⟩",
+                "source_url": "https://hal.science/hal-04850819",
+                "chunk_order": 26,
+                "description": "This guide provides essential insights for both international students and established researchers to succeed in the French research ecosystem. From producing high-quality academic work to mastering digital research tools, from understanding French institutional culture to delivering impactful presentations, this comprehensive manual offers systematic solutions for excelling in today's competitive research environment. Written by Dr. Minh Ha-Duong, a senior CNRS researcher and former Lead Author of the Nobel Peace Prize-winning IPCC, the book features: Proven strategies for scholarly writing and publication Expert guidance on leveraging AI and managing digital libraries Essential insights into French research institutions and culture Professional techniques for academic presentations and communication Evidence-based productivity practices for sustained excellence The print edition includes an exclusive bonus chapter on research productivity life hacks.",
+                "document_type": "OUV",
+                "publication_date": "2024-12-11",
+                "semantic_rank": 8,
+                "full_text_rank": 200,
+                "associated_query": "Comment préparer un bon mémoire ?>´"
+              }
+            }
+          },
+          {
+            "id": "8d0860b",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 787,
+              "end": 796
+            },
+            "payload": null
+          },
+          {
+            "id": "9063d63",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 899,
+              "end": 908
+            },
+            "payload": null
+          },
+          {
+            "id": "07041be",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 912,
+              "end": 921
+            },
+            "payload": {
+              "id": "07041be9-4c9a-53c2-aff8-69ad9f92cbe3",
+              "document_id": "befd3526-9ca6-5cc9-a9f4-1c3a59b8a5da",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: Research excellence à la Française\n\nText: 10 Research Excellence à la Française\n\u000b\u000b#&\u000b\n%\nAnything you produce must have:\n Title\n Author\n Date\nApply this rule universally, from paintings to books, including emails, \nnotes, memos, dra4984ts reports, ﬁnalised reports, papers, tests, audio or \nvideo recordings.\nMisidentiﬁed information cannot be archived and referred to \nconveniently later. It is not be usable in a rational, scientiﬁc debate.\nDating the document will help you manage the successive versions.\n4988e next three how-tos deﬁne successively higher document quality \nlevels. Choose the one relevant for the job at hand and stick to it.",
+              "metadata": {
+                "title": "Research excellence à la Française",
+                "hal_id": "hal-04850819",
+                "authors": "['Minh Ha-Duong']",
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Research excellence à la Française. Self published, pp.81, 2024, 979-8303200531. ⟨hal-04850819⟩",
+                "source_url": "https://hal.science/hal-04850819",
+                "chunk_order": 21,
+                "description": "This guide provides essential insights for both international students and established researchers to succeed in the French research ecosystem. From producing high-quality academic work to mastering digital research tools, from understanding French institutional culture to delivering impactful presentations, this comprehensive manual offers systematic solutions for excelling in today's competitive research environment. Written by Dr. Minh Ha-Duong, a senior CNRS researcher and former Lead Author of the Nobel Peace Prize-winning IPCC, the book features: Proven strategies for scholarly writing and publication Expert guidance on leveraging AI and managing digital libraries Essential insights into French research institutions and culture Professional techniques for academic presentations and communication Evidence-based productivity practices for sustained excellence The print edition includes an exclusive bonus chapter on research productivity life hacks.",
+                "document_type": "OUV",
+                "publication_date": "2024-12-11",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "Comment préparer un bon mémoire ?>´"
+              }
+            }
+          },
+          {
+            "id": "9063d63",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1028,
+              "end": 1037
+            },
+            "payload": null
+          },
+          {
+            "id": "8d0860b",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1212,
+              "end": 1221
+            },
+            "payload": null
+          },
+          {
+            "id": "8d0860b",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1327,
+              "end": 1336
+            },
+            "payload": null
+          },
+          {
+            "id": "8d0860b",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1445,
+              "end": 1454
+            },
+            "payload": null
+          },
+          {
+            "id": "9063d63",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1650,
+              "end": 1659
+            },
+            "payload": null
+          },
+          {
+            "id": "9063d63",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1730,
+              "end": 1739
+            },
+            "payload": null
+          },
+          {
+            "id": "9ee834b",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1914,
+              "end": 1923
+            },
+            "payload": {
+              "id": "9ee834b4-9510-5034-9e18-5098c8fa95d3",
+              "document_id": "fe258f2f-944a-5d49-aaec-9d2bfe94f00a",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016098765432098764,
+              "text": "Document Title: Dialogues autour de la création mathématique\n\nText: à rien de ce que vous connaissez. Ça va enrichir la sensibilité de l'auditeur.  N'est-ce pas les motivations surtout qu'on transmet, même dans ce cas, ce nouveau paysage, pourquoi a-t-il intéressé l'orateur... Pour l'orateur qui présente ses propres travaux, il transmet à la fois ses motivations, sa façon de voir, et si possible ses résultats.  Il y a plusieurs façons de faire des exposés de séminaire. Je dirais pour un jeune qui présente les travaux d'autrui que le meilleur point de départ pour un exposé de séminaire c'est un texte mal rédigé. Texte où il y a des résultats nouveaux suffisamment intéressants mais sans que l'auteur ait poussé loin l'élucidation, le pourquoi, le comment. L'exposé doit montrer les idées qui sont à l'œuvre, même si leur statut est vague, dégager une trame et faire apparaître une motivation. Pour ce qui est des jeunes, il faut qu'ils prennent conscience qu'arriver jusqu'à la recherche exige non seulement de plus en plus de connaissances mais de plus en plus de culture. Une",
+              "metadata": {
+                "title": "Dialogues autour de la création mathématique",
+                "hal_id": "halshs-00346564",
+                "authors": [
+                  "Nicolas Bouleau"
+                ],
+                "version": "v0",
+                "citation": "Nicolas Bouleau. Dialogues autour de la création mathématique. Nicolas Bouleau. Association Laplace-Gauss, pp.93, 1997. ⟨halshs-00346564⟩",
+                "source_url": "https://hal.science/halshs-00346564",
+                "chunk_order": 283,
+                "description": "Réflexions des mathématiciens Laurent Schwartz, Gustave Choquet, Paul Malliavin, Paul-André Meyer, David Nualart, Nicola El Karoui, Richard Gundy, Masatoshi Fukushima, Denis Feyel, Gabriel Mokobodzki, sur le thème de la création mathématique",
+                "document_type": "OUV",
+                "publication_date": "1997-01-01",
+                "semantic_rank": 4,
+                "full_text_rank": 200,
+                "associated_query": "Comment préparer un bon mémoire ?>´"
+              }
+            }
+          },
+          {
+            "id": "bbc3fd6",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1927,
+              "end": 1936
+            },
+            "payload": {
+              "id": "bbc3fd6b-4060-59f5-9674-dd02ed9c9832",
+              "document_id": "fe258f2f-944a-5d49-aaec-9d2bfe94f00a",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015547619047619046,
+              "text": "Document Title: Dialogues autour de la création mathématique\n\nText: de séminaire c'est un texte mal rédigé. Texte où il y a des résultats nouveaux suffisamment intéressants mais sans que l'auteur ait poussé loin l'élucidation, le pourquoi, le comment. L'exposé doit montrer les idées qui sont à l'œuvre, même si leur statut est vague, dégager une trame et faire apparaître une motivation. Pour ce qui est des jeunes, il faut qu'ils prennent conscience qu'arriver jusqu'à la recherche exige non seulement de plus en plus de connaissances mais de plus en plus de culture. Une recherche réalisée rapidement sur un sujet très pointu n'est pas une formation suffisante. La culture est la condition pour contourner les obstacles varier les stratégies et savoir à qui s'adresser en cas de blocage. Bien sûr publier est un encouragement, Choquet considère qu'il est bon que les jeunes se fassent les dents très tôt à partir de travaux récents.  Je crois que les jeunes ressentent très fortement la plus grande difficulté à pénétrer dans l'activité professionnelle, et le besoin d'être conforté.",
+              "metadata": {
+                "title": "Dialogues autour de la création mathématique",
+                "hal_id": "halshs-00346564",
+                "authors": [
+                  "Nicolas Bouleau"
+                ],
+                "version": "v0",
+                "citation": "Nicolas Bouleau. Dialogues autour de la création mathématique. Nicolas Bouleau. Association Laplace-Gauss, pp.93, 1997. ⟨halshs-00346564⟩",
+                "source_url": "https://hal.science/halshs-00346564",
+                "chunk_order": 284,
+                "description": "Réflexions des mathématiciens Laurent Schwartz, Gustave Choquet, Paul Malliavin, Paul-André Meyer, David Nualart, Nicola El Karoui, Richard Gundy, Masatoshi Fukushima, Denis Feyel, Gabriel Mokobodzki, sur le thème de la création mathématique",
+                "document_type": "OUV",
+                "publication_date": "1997-01-01",
+                "semantic_rank": 6,
+                "full_text_rank": 200,
+                "associated_query": "Comment préparer un bon mémoire ?>´"
+              }
+            }
+          },
+          {
+            "id": "3aad7c2",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2035,
+              "end": 2044
+            },
+            "payload": {
+              "id": "3aad7c2e-3ab8-5f81-95ab-def254e2390a",
+              "document_id": "01c17d33-2d46-5ce8-bdcf-4f2371c601a5",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.014555555555555556,
+              "text": "Document Title: Préserver le patrimoine naturel commun sur les terrains privés\n\nText: contractu el ? \nConclusion  et \nremerciement  - Demande de contact s \n- Précisions sur des points abordés ou ouverture sur des \npoints liés à la préparation du mémoire non couverts par \nlentretien  \n- Remerciements  \n \nLe guide présenté ci -dessus est indicatif  :  où il présente la trame générale des thèmes abordés \npendant les entre tiens avec les différentes organisations interrogées. En pratique ce guide a \nété sensiblement adapté en amont de chaque entretien sur la bases  : dinformations récoltées \nsur lorganisation dans la littérat ure scientifique ou grise, dans la presse ou lors d entretiens \nprécédents. Par ailleurs les entretiens ont été conduit sur un mode semi -directif. Lorsque cela \nétait utile je me suis affranchi de cette structure pour échanger plus en détail sur certains \naspects spécifiques. A titre illustratif, certains ent retiens ont permis de récolter des informations \nsur ladoption des ORE en France en général  (itw. FCEN, itw. MTE), un autre sur le",
+              "metadata": {
+                "title": "Préserver le patrimoine naturel commun sur les terrains privés",
+                "hal_id": "hal-03035486",
+                "authors": "['Charles Claron']",
+                "version": "v0",
+                "citation": "Charles Claron. Préserver le patrimoine naturel commun sur les terrains privés. Environnement et Société. 2020. ⟨hal-03035486⟩",
+                "source_url": "https://hal.science/hal-03035486",
+                "chunk_order": 714,
+                "description": "La dégradation des terres est le premier facteur d’érosion de la biodiversité dans le monde. En parallèle des politiques d’aires protégées, une attention croissante se porte sur la préservation – de la biodiversité – des terres privées (PTP). En mobilisant des instruments réglementaires, contractuels et économiques ces pratiques visent à orienter les usages des droits de propriété vers une meilleure conservation de la nature. Nous proposons un cadre théorique pour analyser la préservation des terres privées au prisme de la propriété foncière et de son évolution. Ce cadre articule deux pans de l’économie institutionnelle : le courant original, et en particulier la pensée de John Commons, et les travaux d’Elinor Ostrom sur les régimes de propriété des ressources naturelles. Nous conceptualisons ainsi le changement institutionnel induit par les instruments de PTP comme un processus d’action collective qui implique la protection de certains intérêts au détriment d’autres à travers la redéfinition et le partage de droits attachés à la propriété foncière. Partant, nous analysons le paysage des acteurs et outils qui mettent en œuvre ces pratiques en France. Une attention particulière est portée aux instruments contractuels et au plus récent d’entre eux l’Obligation Réelle Environnementale. Sur la base d’études prospective et comparatives nous présentons des pistes susceptibles d’améliorer la pénétration de ces instruments et de consolider le modèle économique de la préservation des terres privées.",
+                "document_type": "MEM",
+                "publication_date": "2020-09-28",
+                "semantic_rank": 10,
+                "full_text_rank": 200,
+                "associated_query": "Comment préparer un bon mémoire ?>´"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "8d0860b6-c875-5fa8-8d1e-dd075ec30efc",
+            "document_id": "2579b12d-664f-580f-bfb3-d66b3b61b0d8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Research Excellence à la Française Fifty How-Tos for Students and Professionals\n\nText: En pratique : Améliorer un brouillon\n1. Relire en nettoyant la mise en page avec les styles\n2. Réorganiser sections & paragraphes (conclusion -> intro)\n3. (Re)penser la contribution principale et les messages-clés\n4. Régénérer résumé, titres de section\n5. Régénérer le titre (méthode du tournoi)\n6. Imprimer et étaler le chemin de fer\nDans le doute, corriger (la revue par les pairs le remarquerait).\nMéthode du tournoi : confronter 16 propositions de titres en éliminatoires et me\ndonner le podium\n7",
+            "metadata": {
+              "title": "Research Excellence à la Française Fifty How-Tos for Students and Professionals",
+              "hal_id": "hal-05023528",
+              "authors": "['Minh Ha-Duong']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Research Excellence à la Française Fifty How-Tos for Students and Professionals. 3ème cycle. La recherche en pratique(s), Paris, France. 2025. ⟨hal-05023528⟩",
+              "source_url": "https://hal.science/hal-05023528",
+              "chunk_order": 6,
+              "document_type": "LECTURE",
+              "publication_date": "2025-04-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Comment préparer un bon mémoire ?>´"
+            }
+          },
+          {
+            "id": "220cf49d-64dc-59e2-8f42-b65525e7a303",
+            "document_id": "8b0363fe-202e-577f-b948-2ead250d77c9",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: How to choose a good dissertation topic ? In 10 steps\n\nText: HAL Id: hal-04485573\nhttps://hal.science/hal-04485573v1\nSubmitted on 1 Mar 2024\nHAL is a multi-disciplinary open access\narchive for the deposit and dissemination of sci-\nentific research documents, whether they are pub-\nlished or not. The documents may come from\nteaching and research institutions in F rance or\nabroad, or from public or private research centers.Larchive ouverte pluridisciplinaire HAL , est\ndestinée au dépôt et à la diffusion de documents\nscientifiques de niveau recherche, publiés ou non,\némanant des établissements denseignement et de\nrecherche français ou étrangers, des laboratoires\npublics ou privés.\nHow to choose a good dissertation topic ? In 10 steps\nMinh Ha-Duong\nT o cite this version:\nMinh Ha-Duong. How to choose a good dissertation topic ? In 10 steps. Master. Online, Vietnam.\n2024. hal-04485573",
+            "metadata": {
+              "title": "How to choose a good dissertation topic ? In 10 steps",
+              "hal_id": "hal-04485573",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. How to choose a good dissertation topic ? In 10 steps. Master. Online, Vietnam. 2024. ⟨hal-04485573⟩",
+              "source_url": "https://hal.science/hal-04485573",
+              "chunk_order": 0,
+              "description": "These slides summarize the key points from a webinar aimed at guiding Master's students through the process of choosing a dissertation topic. They outline a 10-steps approach that interlaces four critical factors: the student's capabilities and interests, the innovative edge of the research, the supervisor's academic expertise, and the availability of financial resources. They further outline a practical approach to developing the dissertation topic within the larger research article production cycle, and discusses essential timelines for both funded research projects and academic Ph.D. funding opportunities for Master's students.",
+              "document_type": "LECTURE",
+              "publication_date": "2024-03-01",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Comment préparer un bon mémoire ?>´"
+            }
+          },
+          {
+            "id": "8105bc3e-aafa-5b2f-b0b3-61c88977af9d",
+            "document_id": "fe258f2f-944a-5d49-aaec-9d2bfe94f00a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Dialogues autour de la création mathématique\n\nText: 86 stratégie du rat de bibliothèque. C'est une forme de travail collectif et de partage des connaissances La principale difficulté pour un jeune est d'apprécier l'intérêt d'un travail au delà de sa difficulté technique. Or le jugement d'intérêt se construit dans les relations collectives. Les séminaires, les exposés dans les groupes de travail peuvent être l'occasion d'apprendre des méthodes nouvelles concernant un sujet connu mais il y a aussi l'exposé où on vous décrit un paysage curieux qui ne ressemble à rien de ce que vous connaissez. Ça va enrichir la sensibilité de l'auditeur.  N'est-ce pas les motivations surtout qu'on transmet, même dans ce cas, ce nouveau paysage, pourquoi a-t-il intéressé l'orateur... Pour l'orateur qui présente ses propres travaux, il transmet à la fois ses motivations, sa façon de voir, et si possible ses résultats.  Il y a plusieurs façons de faire des exposés de séminaire. Je dirais pour un jeune qui présente les travaux d'autrui que le meilleur point de départ pour un exposé",
+            "metadata": {
+              "title": "Dialogues autour de la création mathématique",
+              "hal_id": "halshs-00346564",
+              "authors": [
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Nicolas Bouleau. Dialogues autour de la création mathématique. Nicolas Bouleau. Association Laplace-Gauss, pp.93, 1997. ⟨halshs-00346564⟩",
+              "source_url": "https://hal.science/halshs-00346564",
+              "chunk_order": 282,
+              "description": "Réflexions des mathématiciens Laurent Schwartz, Gustave Choquet, Paul Malliavin, Paul-André Meyer, David Nualart, Nicola El Karoui, Richard Gundy, Masatoshi Fukushima, Denis Feyel, Gabriel Mokobodzki, sur le thème de la création mathématique",
+              "document_type": "OUV",
+              "publication_date": "1997-01-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Comment préparer un bon mémoire ?>´"
+            }
+          },
+          {
+            "id": "9ee834b4-9510-5034-9e18-5098c8fa95d3",
+            "document_id": "fe258f2f-944a-5d49-aaec-9d2bfe94f00a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Dialogues autour de la création mathématique\n\nText: à rien de ce que vous connaissez. Ça va enrichir la sensibilité de l'auditeur.  N'est-ce pas les motivations surtout qu'on transmet, même dans ce cas, ce nouveau paysage, pourquoi a-t-il intéressé l'orateur... Pour l'orateur qui présente ses propres travaux, il transmet à la fois ses motivations, sa façon de voir, et si possible ses résultats.  Il y a plusieurs façons de faire des exposés de séminaire. Je dirais pour un jeune qui présente les travaux d'autrui que le meilleur point de départ pour un exposé de séminaire c'est un texte mal rédigé. Texte où il y a des résultats nouveaux suffisamment intéressants mais sans que l'auteur ait poussé loin l'élucidation, le pourquoi, le comment. L'exposé doit montrer les idées qui sont à l'œuvre, même si leur statut est vague, dégager une trame et faire apparaître une motivation. Pour ce qui est des jeunes, il faut qu'ils prennent conscience qu'arriver jusqu'à la recherche exige non seulement de plus en plus de connaissances mais de plus en plus de culture. Une",
+            "metadata": {
+              "title": "Dialogues autour de la création mathématique",
+              "hal_id": "halshs-00346564",
+              "authors": [
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Nicolas Bouleau. Dialogues autour de la création mathématique. Nicolas Bouleau. Association Laplace-Gauss, pp.93, 1997. ⟨halshs-00346564⟩",
+              "source_url": "https://hal.science/halshs-00346564",
+              "chunk_order": 283,
+              "description": "Réflexions des mathématiciens Laurent Schwartz, Gustave Choquet, Paul Malliavin, Paul-André Meyer, David Nualart, Nicola El Karoui, Richard Gundy, Masatoshi Fukushima, Denis Feyel, Gabriel Mokobodzki, sur le thème de la création mathématique",
+              "document_type": "OUV",
+              "publication_date": "1997-01-01",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Comment préparer un bon mémoire ?>´"
+            }
+          },
+          {
+            "id": "da2f6299-62a5-5192-9b34-2852481cca66",
+            "document_id": "01c17d33-2d46-5ce8-bdcf-4f2371c601a5",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Préserver le patrimoine naturel commun sur les terrains privés\n\nText: 4 \n Remercie ments  \nPour commencer je souhaite remercier léquipe pédagogique du Master EEET . La \nrédaction de ce mémoire sanctionne la fin dune année qui aura été lune des  plus \nenrichissantes et stimulantes de mes huit ans  déjà  !  détudes supérieures1. \nLaboutisse ment de ce travail doit beaucoup à mes trois encadrants, à leur soutien continu , à \nleurs encouragements et à  la complémentarité de leurs  apports. Je tiens à l eur exprimer ma \ngratitude. Antoine MISSEMER pour la profondeur de ses connaissances  historiques et  \nthéoriques . Léa TARDIEU pour lactualité de ses réflexions et de son engagement sur le terrain \ndes pratiques daménagement du territoir e. Harold LEVREL pour la confiance quil ma \ntémoignée cette année en soutenant la maturation de mes intuitions brouillo nnes au sujet du \nrégime foncier  et en acceptant dencadrer la thèse qui prolongera les réflexions de ce \nmémoire . Je remercie aussi Louis DE RED ON pour sa contribution bienveillante à mes",
+            "metadata": {
+              "title": "Préserver le patrimoine naturel commun sur les terrains privés",
+              "hal_id": "hal-03035486",
+              "authors": "['Charles Claron']",
+              "version": "v0",
+              "citation": "Charles Claron. Préserver le patrimoine naturel commun sur les terrains privés. Environnement et Société. 2020. ⟨hal-03035486⟩",
+              "source_url": "https://hal.science/hal-03035486",
+              "chunk_order": 12,
+              "description": "La dégradation des terres est le premier facteur d’érosion de la biodiversité dans le monde. En parallèle des politiques d’aires protégées, une attention croissante se porte sur la préservation – de la biodiversité – des terres privées (PTP). En mobilisant des instruments réglementaires, contractuels et économiques ces pratiques visent à orienter les usages des droits de propriété vers une meilleure conservation de la nature. Nous proposons un cadre théorique pour analyser la préservation des terres privées au prisme de la propriété foncière et de son évolution. Ce cadre articule deux pans de l’économie institutionnelle : le courant original, et en particulier la pensée de John Commons, et les travaux d’Elinor Ostrom sur les régimes de propriété des ressources naturelles. Nous conceptualisons ainsi le changement institutionnel induit par les instruments de PTP comme un processus d’action collective qui implique la protection de certains intérêts au détriment d’autres à travers la redéfinition et le partage de droits attachés à la propriété foncière. Partant, nous analysons le paysage des acteurs et outils qui mettent en œuvre ces pratiques en France. Une attention particulière est portée aux instruments contractuels et au plus récent d’entre eux l’Obligation Réelle Environnementale. Sur la base d’études prospective et comparatives nous présentons des pistes susceptibles d’améliorer la pénétration de ces instruments et de consolider le modèle économique de la préservation des terres privées.",
+              "document_type": "MEM",
+              "publication_date": "2020-09-28",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Comment préparer un bon mémoire ?>´"
+            }
+          },
+          {
+            "id": "bbc3fd6b-4060-59f5-9674-dd02ed9c9832",
+            "document_id": "fe258f2f-944a-5d49-aaec-9d2bfe94f00a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Dialogues autour de la création mathématique\n\nText: de séminaire c'est un texte mal rédigé. Texte où il y a des résultats nouveaux suffisamment intéressants mais sans que l'auteur ait poussé loin l'élucidation, le pourquoi, le comment. L'exposé doit montrer les idées qui sont à l'œuvre, même si leur statut est vague, dégager une trame et faire apparaître une motivation. Pour ce qui est des jeunes, il faut qu'ils prennent conscience qu'arriver jusqu'à la recherche exige non seulement de plus en plus de connaissances mais de plus en plus de culture. Une recherche réalisée rapidement sur un sujet très pointu n'est pas une formation suffisante. La culture est la condition pour contourner les obstacles varier les stratégies et savoir à qui s'adresser en cas de blocage. Bien sûr publier est un encouragement, Choquet considère qu'il est bon que les jeunes se fassent les dents très tôt à partir de travaux récents.  Je crois que les jeunes ressentent très fortement la plus grande difficulté à pénétrer dans l'activité professionnelle, et le besoin d'être conforté.",
+            "metadata": {
+              "title": "Dialogues autour de la création mathématique",
+              "hal_id": "halshs-00346564",
+              "authors": [
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Nicolas Bouleau. Dialogues autour de la création mathématique. Nicolas Bouleau. Association Laplace-Gauss, pp.93, 1997. ⟨halshs-00346564⟩",
+              "source_url": "https://hal.science/halshs-00346564",
+              "chunk_order": 284,
+              "description": "Réflexions des mathématiciens Laurent Schwartz, Gustave Choquet, Paul Malliavin, Paul-André Meyer, David Nualart, Nicola El Karoui, Richard Gundy, Masatoshi Fukushima, Denis Feyel, Gabriel Mokobodzki, sur le thème de la création mathématique",
+              "document_type": "OUV",
+              "publication_date": "1997-01-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Comment préparer un bon mémoire ?>´"
+            }
+          },
+          {
+            "id": "07041be9-4c9a-53c2-aff8-69ad9f92cbe3",
+            "document_id": "befd3526-9ca6-5cc9-a9f4-1c3a59b8a5da",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Research excellence à la Française\n\nText: 10 Research Excellence à la Française\n\u000b\u000b#&\u000b\n%\nAnything you produce must have:\n Title\n Author\n Date\nApply this rule universally, from paintings to books, including emails, \nnotes, memos, dra4984ts reports, ﬁnalised reports, papers, tests, audio or \nvideo recordings.\nMisidentiﬁed information cannot be archived and referred to \nconveniently later. It is not be usable in a rational, scientiﬁc debate.\nDating the document will help you manage the successive versions.\n4988e next three how-tos deﬁne successively higher document quality \nlevels. Choose the one relevant for the job at hand and stick to it.",
+            "metadata": {
+              "title": "Research excellence à la Française",
+              "hal_id": "hal-04850819",
+              "authors": "['Minh Ha-Duong']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Research excellence à la Française. Self published, pp.81, 2024, 979-8303200531. ⟨hal-04850819⟩",
+              "source_url": "https://hal.science/hal-04850819",
+              "chunk_order": 21,
+              "description": "This guide provides essential insights for both international students and established researchers to succeed in the French research ecosystem. From producing high-quality academic work to mastering digital research tools, from understanding French institutional culture to delivering impactful presentations, this comprehensive manual offers systematic solutions for excelling in today's competitive research environment. Written by Dr. Minh Ha-Duong, a senior CNRS researcher and former Lead Author of the Nobel Peace Prize-winning IPCC, the book features: Proven strategies for scholarly writing and publication Expert guidance on leveraging AI and managing digital libraries Essential insights into French research institutions and culture Professional techniques for academic presentations and communication Evidence-based productivity practices for sustained excellence The print edition includes an exclusive bonus chapter on research productivity life hacks.",
+              "document_type": "OUV",
+              "publication_date": "2024-12-11",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Comment préparer un bon mémoire ?>´"
+            }
+          },
+          {
+            "id": "9063d633-80c7-54ec-93ef-6924ce035aeb",
+            "document_id": "befd3526-9ca6-5cc9-a9f4-1c3a59b8a5da",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Research excellence à la Française\n\nText: Chapter 1 How to write quality manuscripts 13\n\u000b\u000b&)\"\u000b\u000b\n4988e expected level for a ﬁnalised PhD thesis, a submission to a peer-\nreview journal, a highly professional consulting report, is How-to 3 plus:\n Always use styles to get entirely consistent documents (if you \nhave never heard about word processing styles, learn it today.)\n Remove all direct formatting, white spaces trailing at the end of \nlines, empty blank lines.\n Number chapters, ﬁgures, tables, cross-references automatically.\n Internet links in the bibliography are active.\n Proofread the print-ready version on paper.\n Archive everything needed to reproduce results as supplementary \nelectronic material: data ﬁles, model code, spreadsheets, \nquestionnaires (e.g., Zenodo or HAL). Cite these supplements by \nDOI.\n Provide the high-resolution Figures ﬁles as separate ﬁles.\n Follow typographic guidelines, e.g.,  the Manuel de règles \ntypographiques en usage à lImprimerie Nationale.\n Follow language style guidelines, e.g., badéJYe Economist style guide",
+            "metadata": {
+              "title": "Research excellence à la Française",
+              "hal_id": "hal-04850819",
+              "authors": "['Minh Ha-Duong']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Research excellence à la Française. Self published, pp.81, 2024, 979-8303200531. ⟨hal-04850819⟩",
+              "source_url": "https://hal.science/hal-04850819",
+              "chunk_order": 26,
+              "description": "This guide provides essential insights for both international students and established researchers to succeed in the French research ecosystem. From producing high-quality academic work to mastering digital research tools, from understanding French institutional culture to delivering impactful presentations, this comprehensive manual offers systematic solutions for excelling in today's competitive research environment. Written by Dr. Minh Ha-Duong, a senior CNRS researcher and former Lead Author of the Nobel Peace Prize-winning IPCC, the book features: Proven strategies for scholarly writing and publication Expert guidance on leveraging AI and managing digital libraries Essential insights into French research institutions and culture Professional techniques for academic presentations and communication Evidence-based productivity practices for sustained excellence The print edition includes an exclusive bonus chapter on research productivity life hacks.",
+              "document_type": "OUV",
+              "publication_date": "2024-12-11",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Comment préparer un bon mémoire ?>´"
+            }
+          },
+          {
+            "id": "29165f23-2217-5a7c-8976-51511e4dbf19",
+            "document_id": "67d9ea1a-deca-5b0b-95f9-5f2722ed0acb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: The emergence of photovoltaics in France in the light of feed-in tariffs: exploring the markets and politics of a modular technology\n\nText: répétition; et tous ceux qui mont soutenue dans la préparation de la soutenance.  Je terminerai ces remerciements par un clin doeil aux compagnons thésards (ou, depuis, docteurs) grâce à qui jai pu me plaindre de ma thèse hors du Cired  Aleksandar, Alexis, Carole-Anne, Charlotte, Clément, Elisa, Mathieu, Maud B., Sarah, Viviane  et aux non-thésards qui ont, du coup, subi de nombreuses conversations-de-thésards  Amélie, Camille, Cécile, Christelle, Emma, Eudora, Henri, Jamie, Laura, Marie, Maud G., Tiffany, Thomas M., Victor... Je remercie également ma famille, qui a subi de nombreux monologues-de-thésarde et a été dune aide précieuse pour la dernière épreuve du doctorat, à savoir la preparation du pot de thèse. Je salue enfin les suggestions musicales (certes parfois douteuses) dAurélien, Sovan, Sylvain et Thibault, qui ont largement contribué à la qualité de lambiance sonore de la phase de rédaction.",
+            "metadata": {
+              "title": "The emergence of photovoltaics in France in the light of feed-in tariffs: exploring the markets and politics of a modular technology",
+              "hal_id": "tel-01096977",
+              "authors": "['Béatrice Cointe']",
+              "version": "v0",
+              "citation": "Béatrice Cointe. The emergence of photovoltaics in France in the light of feed-in tariffs: exploring the markets and politics of a modular technology. Sociology. EHESS, 2014. English. ⟨NNT : ⟩. ⟨tel-01096977⟩",
+              "source_url": "https://hal.science/tel-01096977",
+              "chunk_order": 10,
+              "description": "This thesis explores the recent evolutions of photovoltaics in France, and in particular the rise of grid-connected photovoltaics as it was triggered by support policies set up in the 2000s. The chosen actor-network theory approach leads to a material and relational descrption of French photovoltaics as modular technologies whose development was driven by political prices in the shape of feed-in tariffs for PV-generated electricity. From this perspective, the intertwinement of technological evolutions, market-making and politicisation is interrogated. After suggesting a description of photovoltaics as emergent and modular technologies and of feed-in tariffs as political market agencements, the thesis analyses the interwoven trajectories of feed-in tariffs and phootvoltaics in three sites. First, it traces back the constitution of feed-in tariffs as a dominant form of support for photovoltaics in the context of the development of a European policy for renewable energy. It then zooms on the French case, in which the overflowing of the regulated photovoltaic market triggered a political crisis and led to the reconsideration of photovoltaic support schemes. The last case study is a material account of the constitution of feed-in tariffs for PV-generated electricity into an opportunity and a resource for territorial development in the context of a project developed by a rural cooperative in the South West of France.",
+              "document_type": "THESE",
+              "publication_date": "2014-11-06",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "Comment préparer un bon mémoire ?>´"
+            }
+          },
+          {
+            "id": "3aad7c2e-3ab8-5f81-95ab-def254e2390a",
+            "document_id": "01c17d33-2d46-5ce8-bdcf-4f2371c601a5",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Préserver le patrimoine naturel commun sur les terrains privés\n\nText: contractu el ? \nConclusion  et \nremerciement  - Demande de contact s \n- Précisions sur des points abordés ou ouverture sur des \npoints liés à la préparation du mémoire non couverts par \nlentretien  \n- Remerciements  \n \nLe guide présenté ci -dessus est indicatif  :  où il présente la trame générale des thèmes abordés \npendant les entre tiens avec les différentes organisations interrogées. En pratique ce guide a \nété sensiblement adapté en amont de chaque entretien sur la bases  : dinformations récoltées \nsur lorganisation dans la littérat ure scientifique ou grise, dans la presse ou lors d entretiens \nprécédents. Par ailleurs les entretiens ont été conduit sur un mode semi -directif. Lorsque cela \nétait utile je me suis affranchi de cette structure pour échanger plus en détail sur certains \naspects spécifiques. A titre illustratif, certains ent retiens ont permis de récolter des informations \nsur ladoption des ORE en France en général  (itw. FCEN, itw. MTE), un autre sur le",
+            "metadata": {
+              "title": "Préserver le patrimoine naturel commun sur les terrains privés",
+              "hal_id": "hal-03035486",
+              "authors": "['Charles Claron']",
+              "version": "v0",
+              "citation": "Charles Claron. Préserver le patrimoine naturel commun sur les terrains privés. Environnement et Société. 2020. ⟨hal-03035486⟩",
+              "source_url": "https://hal.science/hal-03035486",
+              "chunk_order": 714,
+              "description": "La dégradation des terres est le premier facteur d’érosion de la biodiversité dans le monde. En parallèle des politiques d’aires protégées, une attention croissante se porte sur la préservation – de la biodiversité – des terres privées (PTP). En mobilisant des instruments réglementaires, contractuels et économiques ces pratiques visent à orienter les usages des droits de propriété vers une meilleure conservation de la nature. Nous proposons un cadre théorique pour analyser la préservation des terres privées au prisme de la propriété foncière et de son évolution. Ce cadre articule deux pans de l’économie institutionnelle : le courant original, et en particulier la pensée de John Commons, et les travaux d’Elinor Ostrom sur les régimes de propriété des ressources naturelles. Nous conceptualisons ainsi le changement institutionnel induit par les instruments de PTP comme un processus d’action collective qui implique la protection de certains intérêts au détriment d’autres à travers la redéfinition et le partage de droits attachés à la propriété foncière. Partant, nous analysons le paysage des acteurs et outils qui mettent en œuvre ces pratiques en France. Une attention particulière est portée aux instruments contractuels et au plus récent d’entre eux l’Obligation Réelle Environnementale. Sur la base d’études prospective et comparatives nous présentons des pistes susceptibles d’améliorer la pénétration de ces instruments et de consolider le modèle économique de la préservation des terres privées.",
+              "document_type": "MEM",
+              "publication_date": "2020-09-28",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "Comment préparer un bon mémoire ?>´"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2175,
+            "total_tokens": 2175
+          }
+        }
+      },
+      "duration": 3597
+    },
+    "retrievalTime": 2041,
+    "generationTime": 3597,
+    "timestamp": "2025-07-10T10:10:30.677Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.112.3",
+    "forwarded_for": "193.51.112.3",
+    "received_at": "2025-07-10T10:10:30.794865+00:00",
+    "server_version": "1.0.0"
+  }
+}
