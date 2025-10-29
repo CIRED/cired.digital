@@ -40,3 +40,9 @@ repos:
           - r2r
           - types-tabulate
         # MyPy config is in pyproject.toml
+
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.7.1
+    hooks:
+      # Delete output cells from the notebook
+      - id: nbstripout
