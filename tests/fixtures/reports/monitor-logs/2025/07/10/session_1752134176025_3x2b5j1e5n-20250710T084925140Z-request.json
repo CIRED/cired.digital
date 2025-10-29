@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752134176025_3x2b5j1e5n2v4l622p",
+  "timestamp": "20250710T084925140Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752137365135_vglatcg",
+    "query": "Le CIRED",
+    "settings": {
+      "r2rURL": "http://localhost:7272",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "Le CIRED",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "172.18.0.1",
+    "forwarded_for": null,
+    "received_at": "2025-07-10T08:49:25.142698+00:00",
+    "server_version": "1.0.0"
+  }
+}

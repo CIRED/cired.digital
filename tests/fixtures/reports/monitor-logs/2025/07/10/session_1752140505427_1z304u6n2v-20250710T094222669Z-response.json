@@ -1,0 +1,374 @@
+{
+  "sessionId": "session_1752140505427_1z304u6n2v3o2l3he",
+  "timestamp": "20250710T094222669Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752140536411_euiuvgy",
+    "response": {
+      "results": {
+        "generated_answer": "Le CIRED (Centre International de Recherche sur l'Environnement et le Développement) est une institution de recherche qui a été impliquée dans plusieurs études et rapports concernant le changement climatique. Voici quelques références pertinentes issues des résultats de recherche fournis :\n\n1. **Étude TNS Sofres** : Le CIRED a commandé une étude réalisée par TNS Sofres sur la perception sociale de la capture et du stockage du carbone (CCS) en 2010. Cette étude aborde le changement climatique et la réduction des émissions de CO² [2d03140].\n\n2. **Fiscalité environnementale** : Un rapport rédigé en partie par des membres du CIRED porte sur la fiscalité environnementale, incluant un chapitre sur le changement climatique. Ce rapport a été réalisé dans le cadre des travaux du Conseil d'analyse économique (CAE) [fba176a].\n\n3. **Protocole de Kyoto** : En 2003, Roger Guesnerie, sous la direction du CAE, a travaillé sur le protocole de Kyoto, un accord international visant à réduire les émissions de gaz à effet de serre. Le CIRED a été impliqué dans ces travaux [fba176a].\n\nCes références montrent l'implication du CIRED dans la recherche et les politiques liées au changement climatique.",
+        "citations": [
+          {
+            "id": "2d03140",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 534,
+              "end": 543
+            },
+            "payload": {
+              "id": "2d031400-5e8d-5173-9a21-d8aabd36986a",
+              "document_id": "14ee5094-3b76-5e91-9a82-cdb588fa7fa4",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: Social perception of CCS\n\nText: Changement climatique    et \nréduction des émissions de CO²\nPrésentation de létude TNS Sofres réalisé en exclusivité pour le CIRED - mars 2010",
+              "metadata": {
+                "title": "Social perception of CCS",
+                "hal_id": "cel-00559978",
+                "authors": [
+                  "Minh Ha-Duong"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Social perception of CCS. DEA. ISIGE, Fontainebleau, 2011, pp.118. ⟨cel-00559978⟩",
+                "source_url": "https://hal.science/cel-00559978",
+                "chunk_order": 76,
+                "document_type": "LECTURE",
+                "publication_date": "2011-01-20",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "le cired et le changement cliamtique"
+              }
+            }
+          },
+          {
+            "id": "fba176a",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 816,
+              "end": 825
+            },
+            "payload": {
+              "id": "fba176af-abe1-5af4-9fe0-aba115986190",
+              "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015818181818181818,
+              "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: peu intéressé aux enjeux climatiques et désormais désigné comme expert. \n408.\nLannée suivante, un rapport rédigé en par tie par des membres du CIRED porte sur la \nfiscalité environnemental e. Lun des trois chapitres est consacré au RCA409. Mais par \nla suite, les rapports du CAE sur les questions  climatiques ne sont plus rédigés par les \npionniers français de la recherche en ECC. En 2003, cest Roger Guesnerie qui dirige \nles travaux sur le protocole de Kyoto410\n407Christian  de Perthuis , et al. ,Trajectoires  2020 - 2050 vers une économie sobre en carbone. \nRapport du Comité présidé par Christian de Perthuis , Ministère de l'écologie, du développement \ndurable, des transports et du logement, Paris, La Documentation Française, 2011, 331p. et en 2009, à la veille de la quinzième \n408Décret n97-766 du 22 juillet 1997 portant création du Conseil d'analyse économique,\nhttp://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000201191 consulté le 19 \nmars 2014.",
+              "metadata": {
+                "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+                "hal_id": "tel-01112427",
+                "authors": [
+                  "Pauline Huet"
+                ],
+                "version": "v0",
+                "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+                "source_url": "https://hal.science/tel-01112427",
+                "chunk_order": 797,
+                "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+                "document_type": "THESE",
+                "publication_date": "2015-01-15",
+                "semantic_rank": 5,
+                "full_text_rank": 200,
+                "associated_query": "le cired et le changement cliamtique"
+              }
+            }
+          },
+          {
+            "id": "fba176a",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1068,
+              "end": 1077
+            },
+            "payload": null
+          }
+        ],
+        "search_results": [
+          {
+            "id": "12f6e162-b1c7-54a7-91c8-5b2dfdfc9e0d",
+            "document_id": "0198f54d-ce47-5088-986a-8d223b1b338c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Incertitudes et inerties au coeur de la question climatique: Explorations numériques en économie du changement climatique\n\nText: concentration of carbon dioxide in the global atmosphere, with its attendant climatic changes, as \npredicted by some ecologists . Le changement climatique  porte en effet à une échelle sans préc édent la \nconjonction des deux éléments , irréversibilité et incertitude,  et pose à nos sociétés u n défi sans \nprécédent  de décision sous incertitude4. \n \nDepuis 1974, de nombreux prolongements théoriques, et applications de c e cadre irréversibilité -\nincertitude au cas du changement climatique, ont été développés5. Ils conduisent notamment à placer \nla décision dans un cadre de décision séquentielle, dans lesquelles les décisions sont révisées avec \nlarrivée dinformations nouvel les. Dans le cas du climat, lirréversibilité se retrouve des   deux \ncôtés   de la décision datténuation (i.e. de réduction des émissions). En effet, en repoussant un \ninvestissement (datténuation) irréversible, on garde ouverte loption de ne pas investi r si lincertitude",
+            "metadata": {
+              "title": "Incertitudes et inerties au coeur de la question climatique: Explorations numériques en économie du changement climatique",
+              "hal_id": "tel-01654151",
+              "authors": "['Céline Guivarch']",
+              "version": "v0",
+              "citation": "Céline Guivarch. Incertitudes et inerties au coeur de la question climatique: Explorations numériques en économie du changement climatique. Economies et finances. Université Paris Est, 2017. ⟨tel-01654151⟩",
+              "source_url": "https://hal.science/tel-01654151",
+              "chunk_order": 78,
+              "description": "Mes travaux s’intéressent à la question du changement climatique, défi majeur posé à nos sociétés, qui porte à une échelle et une complexité sans précédent la question des politiques publiques. Le climat est un bien public global, mais il y existe une grande hétérogénéité des coûts et des bénéfices. De plus, c’est une question qui implique le très long-terme, et de nombreuses irréversibilités et incertitudes. Les causes du changement climatique, ainsi que les solutions face aux défis qu’il pose, impliquent l’ensemble des aspects de nos modes de vie, concernent tous les secteurs économiques, et nécessitent de penser les interactions entre des systèmes complexes socio-économiques, techniques et naturels. J’aborde cette question du changement climatique à travers l’économie de l’environnement et des ressources (économie du changement climatique, et économie de l’énergie puisque l’énergie représente une grande partie des émissions de gaz à effet de serre), ainsi que des travaux multidisciplinaires en lien avec modélisation du climat et du cycle du carbone, ou mobilisant les mathématiques appliquées, la recherche opérationnelle, ou les sciences de l’environnement. Mes travaux sont publiés pour une partie dans des journaux d’économie, pour une autre dans des revues interdisciplinaires telles que Climatic Change, Global Environmental Change, Climate Policy ou Nature Communications. Il me semble en effet que ce lien avec d’autres disciplines est nécessaire pour répondre à des questions à teneur économique in fine mais pour lesquelles la compréhension de mécanismes physiques est clé pour poser correctement la question et représenter de façon pertinente les mécanismes, ou pour construire et tirer parti de résultats de modèles reposant sur de nombreuses équations et paramètres car représentant des systèmes complexes. La plupart de mes travaux sont de nature appliquée, et s’appuient sur des modèles numériques. Les modèles sont pris comme une heuristique, un cadre à penser, pour tenter d’analyser les interactions dans un système complexe, de dégager une vision globale et systémique, et de faire ressortir des résultats quantifiés robustes ou les déterminants principaux des incertitudes, dans une démarche prospective. Le bilan qui suit présente mes travaux qui se rattachent à deux grandes questions transversales (et à leur intersection) : celle de l’irréversibilité et des inerties, et celle des incertitudes. Ainsi, le bilan n’est pas exhaustif et exclut un certain nombre de travaux, sur des sujets connexes, tels que la précarité énergétique par exemple.",
+              "document_type": "HDR",
+              "publication_date": "2017-04-19",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "le cired et le changement cliamtique"
+            }
+          },
+          {
+            "id": "2d031400-5e8d-5173-9a21-d8aabd36986a",
+            "document_id": "14ee5094-3b76-5e91-9a82-cdb588fa7fa4",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Social perception of CCS\n\nText: Changement climatique    et \nréduction des émissions de CO²\nPrésentation de létude TNS Sofres réalisé en exclusivité pour le CIRED - mars 2010",
+            "metadata": {
+              "title": "Social perception of CCS",
+              "hal_id": "cel-00559978",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Social perception of CCS. DEA. ISIGE, Fontainebleau, 2011, pp.118. ⟨cel-00559978⟩",
+              "source_url": "https://hal.science/cel-00559978",
+              "chunk_order": 76,
+              "document_type": "LECTURE",
+              "publication_date": "2011-01-20",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "le cired et le changement cliamtique"
+            }
+          },
+          {
+            "id": "7151cc3c-227e-5117-a834-560e19452fcb",
+            "document_id": "d2274ffc-5b76-53f1-8170-9697988ea403",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Enjeux géopolitiques du développement durable\n\nText: termes, le coût du basculement technique était devenu assez faible pour ne pas \nattendre plus de certitudes. Laccord de  Copenhague (1992) c onduira à larrêt de \ntoute production de CFC dans lOCDE et am énagera la transition pour les pays en \ndéveloppement. \n \n4. Lalerte du changement climatique \n \nCe dossier, dont lépilogue intervint en  pleine diffusion du rapport Brundlandt, \ndevint un symbole de la ré ussite de la gestion dun bien public mondial . Il va être \nimmédiatement relayé par un défi dune  toute autre ampleur, le changement \nclimatique. Ici, cest principalement le CO 2 qui est en cause et, en labsence de \nsubstitut massif, propre et bon marché aux én ergies fossiles, on touche au cœur de \nnotre système industriel et de nos modes de vie. \n \nLalerte est donnée en 1985-1986 29 et on ne comprend la ra pidité de son relais \npar les politiques sans la conjonction de  lambiance intellectuelle créée par le \nrapport Brundtland et la rela nce du débat sur la sécuri té énergétique aux USA.",
+            "metadata": {
+              "title": "Enjeux géopolitiques du développement durable",
+              "hal_id": "hal-00522113",
+              "authors": "['Jean Charles Hourcade']",
+              "version": "v0",
+              "citation": "Jean Charles Hourcade. Enjeux géopolitiques du développement durable. Etudes, 2008, tome 408 (2), pp. 175-186. ⟨hal-00522113⟩",
+              "source_url": "https://hal.science/hal-00522113",
+              "chunk_order": 36,
+              "description": "L'observateur formé au doute cartésien pourrait s'étonner de la conversion récente des élites françaises à la thématique du développement durable. Elles la considérèrent longtemps avec tant de distraction que le rapport Brundtland, qui l'installa sur l'agenda diplomatique en 1986, dut être traduit au Québec pour être disponible en version français en 19881. Que faire en effet d'une expression vague, réceptacle de préoccupations disparates qui vont de la rareté des ressources à la disparition des cultures locales en passant par les coûts environnementaux, le principe de précaution face aux risques technologiques, la pauvreté et la sécurité énergétique ? A travers un impératif de solidarité intergénérationnelle2, le développement durable3 lie une réflexion sur le principe de responsabilité4 à un questionnement sur la poursuite du type de modernisation lancé par la révolution industrielle. Mais les sceptiques sont en droit de se demander pourquoi un tel questionnement intellectuel a pu devenir un objet diplomatique.",
+              "document_type": "ART",
+              "publication_date": "2008-02-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "le cired et le changement cliamtique"
+            }
+          },
+          {
+            "id": "8902e4ff-0c00-5171-bb10-47ad0d8ae252",
+            "document_id": "a442c741-0ae6-5bc7-b6fe-d1b29016099e",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Comment tenir compte de l'irréversibilité dans l'évaluation intégrée du changement climatique ?\n\nText: Chapitre 1. Irréversibilité et évaluation du changement climatique\n28 INTRO.DOC  - 02/04/99  - 14:53Comment tenir compte de lirréversibilité dans l'évaluation du changement climatique  ?\nLa question pratique posée est politique  :\nJusqu-où vaut-il mieux investir aujourdhui dans la réduction des émissions polluantes, ou atte ndre ?\nCette question, nous l'abordons sous l'angle de l'évaluation de l'irréversibilité  :\nPuisquon va de mieux en mieux connaître le fonctionnement du climat, les mesures que lon prend aujourdhui\ndoivent être flexibles.\nLa question est non triviale car l'irréversibilité pèse des deux côtés de la balance  :\nInvestir aujourdhui est irréversible. Les dépenses consenties ne seront pas récupérables si elles savèrent\nexcessives.\nAttendre est aussi irréversible. Les gaz à effet de serre saccumulent dans latmosphère (Vie du CO 2 dans\nlatmosphère, 120 ans). A court terme (15-40 ans), les équipements et les institutions en place tendent à le rester  :",
+            "metadata": {
+              "title": "Comment tenir compte de l'irréversibilité dans l'évaluation intégrée du changement climatique ?",
+              "hal_id": "tel-00003505",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Comment tenir compte de l'irréversibilité dans l'évaluation intégrée du changement climatique ?. Economies et finances. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 1998. Français. ⟨NNT : ⟩. ⟨tel-00003505⟩",
+              "source_url": "https://hal.science/tel-00003505",
+              "chunk_order": 131,
+              "description": "Les politiques énergétiques ne peuvent plus ignorer leurs conséquences sur le climat. Mais il s'agit d'un problème à long terme et encore mal connu scientifiquement. Plusieurs raisons justifient qu'il serait plus économique de reporter de quelques décennies le contrôle des émissions de gaz à effet de serre : l'actualisation, le progrès technique, l'inertie du stock de capital en place et l'irréversibilité des investissements nécessaires à ce contrôle. Mais d'autres arguments, aussi examinés dans cette thèse, incitent à la prudence : l'inertie des systèmes socio-économiques futurs, le progrès technique induit, et l'irréversibilité possible des évolutions climatiques. Après une présentation des conditions générales du problème du changement climatique au chapitre 2, puis une exposition plus historique des débats au chapitre 3, le chapitre 4 passe en revue un nombre substantiel de modèles intégrés ayant contribué à l'analyse de la question. Le chapitre 5 expose un modèle intégré sur la réduction optimale des émissions de CO2, DIAM, pour montrer dans quelle mesure les travaux précédents surestimaient les coûts de réduction à long terme et sous estimaient les coûts d'ajustement. Il apparaît qu'étant donné une date de stabilisation de la concentration atmosphérique de CO2, une inertie plus élevée implique une trajectoire optimale de concentration plus basse. Formulant ensuite au chapitre 6 le problème en termes de décision séquentielle, on trouve que l'incertitude actuelle sur le plafond de concentration « sans danger pour le système climatique » justifie une action notable à court terme. Enfin, le chapitre 7 se replace dans le cadre de la théorie de l'effet d'irréversibilité, pour comparer empiriquement l'irréversibilité environnementale avec l'irréversibilité des investissements en calculant une valeur d'option associée un contrôle précoce des émissions de gaz à effet de serre.",
+              "document_type": "THESE",
+              "publication_date": "1998-04-03",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "le cired et le changement cliamtique"
+            }
+          },
+          {
+            "id": "fba176af-abe1-5af4-9fe0-aba115986190",
+            "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: peu intéressé aux enjeux climatiques et désormais désigné comme expert. \n408.\nLannée suivante, un rapport rédigé en par tie par des membres du CIRED porte sur la \nfiscalité environnemental e. Lun des trois chapitres est consacré au RCA409. Mais par \nla suite, les rapports du CAE sur les questions  climatiques ne sont plus rédigés par les \npionniers français de la recherche en ECC. En 2003, cest Roger Guesnerie qui dirige \nles travaux sur le protocole de Kyoto410\n407Christian  de Perthuis , et al. ,Trajectoires  2020 - 2050 vers une économie sobre en carbone. \nRapport du Comité présidé par Christian de Perthuis , Ministère de l'écologie, du développement \ndurable, des transports et du logement, Paris, La Documentation Française, 2011, 331p. et en 2009, à la veille de la quinzième \n408Décret n97-766 du 22 juillet 1997 portant création du Conseil d'analyse économique,\nhttp://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000201191 consulté le 19 \nmars 2014.",
+            "metadata": {
+              "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+              "hal_id": "tel-01112427",
+              "authors": [
+                "Pauline Huet"
+              ],
+              "version": "v0",
+              "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+              "source_url": "https://hal.science/tel-01112427",
+              "chunk_order": 797,
+              "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+              "document_type": "THESE",
+              "publication_date": "2015-01-15",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "le cired et le changement cliamtique"
+            }
+          },
+          {
+            "id": "275df317-a60f-5e6d-bb08-887d8df3b5ba",
+            "document_id": "70cd94c1-5996-53d5-b006-4a91d14eb718",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: La France prise au piège de l'effet de serre?\n\nText: partieduvoilequicouvrelesmotivationsréellesdespositionsaffichéesparlesunset\nlesautres.Jointàlagrandetechnicitédudébatéconomiqueetpolitiquecrééparle\nproblème de leffet de serre, un habillage moral approximatif des positions politiques \na été abusivement utilisé pour installer un théâtre dombres dont le moins quon \npuisse dire est quil ne sert pas la qualitédeschoixcollectifs.\nPour en savoir plus\nJames Bruce , Hoesung Lee et Erik Haites (dir.), LeChangementclimatique,Dimensionséconomiqueset\nsociales , Ed. 4D, diffusion LaDocumentationfrançaise, 546 p., 1997 .\nOlivier Godard et Claude Henry , inFiscalité de lenvironnement,CollectiondesrapportsduCAEauprès\ndu Premier ministre, p. 83 -174,LaDocumentationfrançaise,Paris,juillet1998.",
+            "metadata": {
+              "title": "La France prise au piège de l'effet de serre?",
+              "hal_id": "halshs-00619187",
+              "authors": "['Olivier Godard']",
+              "version": "v0",
+              "citation": "Olivier Godard. La France prise au piège de l'effet de serre?. La Recherche, 1998, 314, pp.0-10. ⟨halshs-00619187⟩",
+              "source_url": "https://hal.science/halshs-00619187",
+              "chunk_order": 32,
+              "description": "Après Rio et Kyoto, voici Buenos Aires. Pour l'heure, les engagements pris de réduire ou contenir la progression des émissions de gaz à effet de serre n'ont pas été honorés. Les choses vont-elles changer ? Peut-être, si la discussion, très complexe, sur les \" permis négociables \" aboutit à un résultat concret. Mais le débat est musclé. En ce qui concerne la France, il en cache un autre, encore voilé : l'avenir de notre industrie nucléaire",
+              "document_type": "ART",
+              "publication_date": "1998-11-02",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "le cired et le changement cliamtique"
+            }
+          },
+          {
+            "id": "81fe102c-5286-5c4d-960c-a827be27b652",
+            "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: climatique ?Nousrejoignons iciladiscussion plusgénéralequenousavonsinitiéeausecondchapitre\netquinousaamenéàconclurequilfautaccepterdeséloigner defaçonsignificative duparadigme \ndunmodèledéconomie parfaiteenlabsence mêmedunconsensus surunethéoriegénéraledu\nsecondrang69.Enoutre,nousavonsapportédesfaitsempiriques  lesnombreuses difficultés \npolitiques  quipeuventexpliquer linertiedessystèmes fiscauxetlapersistance deleurs\ninefficiences, surtoutsilesconditions quiprévalent aumomentdeleurconception sontenrapide\nmutation etsileseffetsdecesévolutions profondes sontinsuffisamment anticipés(cequenous\nverronsaudernierchapitre). \nPourconcluresurcettediscussion, ilressortdecequiprécèdequilexisteprobablement un\npotentieldedoubledividende quipeutcorrespondre àunespacedestratégies sansregret,\npositivessocialement etindépendamment delaffaireclimatique, maisquecetespacenestpasle\nrésultatautomatique dunetaxecarboneetquildemande unréeleffortderéformequitoucheles",
+            "metadata": {
+              "title": "Fiscalité carbone et progrès social. Application au cas français",
+              "hal_id": "tel-00813550",
+              "authors": [
+                "Emmanuel Combet"
+              ],
+              "version": "v0",
+              "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+              "source_url": "https://hal.science/tel-00813550",
+              "chunk_order": 1072,
+              "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+              "document_type": "THESE",
+              "publication_date": "2013-04-09",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "le cired et le changement cliamtique"
+            }
+          },
+          {
+            "id": "b1863e98-89a8-5f42-b168-5a263ab0df6e",
+            "document_id": "0c210469-2645-5334-a133-eac663df3aeb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Le climato-scepticisme Réflexions sur la confusion des genres\n\nText: citoyen et injurient notre aptitude au progrès co mme l'avenir, tout simplement13 . \nEnfin le changement climatique dérange car  il oblige à un examen de nos modes de \nvie, un changement de nos habitudes. Au niveau  individuel, la perspective de devoir lutter \ncontre un phénomène global et in tangible peut susciter un sen timent d/uni0000 impuissance, créateur \nd/uni0000 angoisse ; le discours patelin des climato-sceptiques peut tr ouver du crédit auprès de chacun \ncar il rassure et dissipe cette angoisse. Cassandr e perdra toujours le talent de persuader face à \nun Apollon contrarié dans son entreprise : les promesses dou cereuses d/uni0000 un avenir paisible \nsont plus racoleuses que le s prédictions de malheur. \n \nPour ces raisons, un discours infirmant l/uni0000 exigence d/uni0000 action P trouvera un appui, un \nréseau de financement, une audience. Si nous  percevons comment le climato-scepticisme \nrencontre un écho dans la société, coment il pe ut séduire au niveau individuel, nous ne savons",
+            "metadata": {
+              "title": "Le climato-scepticisme Réflexions sur la confusion des genres",
+              "hal_id": "hal-00716418",
+              "authors": [
+                "Antonin Pottier"
+              ],
+              "version": "v0",
+              "citation": "Antonin Pottier. Le climato-scepticisme Réflexions sur la confusion des genres. Futuribles, 2011, 380, pp.27-40. ⟨hal-00716418⟩",
+              "source_url": "https://hal.science/hal-00716418",
+              "chunk_order": 35,
+              "description": "L'analyse examine les ressorts sociopsychologiques du discours climato-sceptique. L'auteur distingue deux éléments dans le débat sur le changement climatique : une partie \" diagnostic \" comprenant l'observation du réchauffement de la planète, ses causes (l'émission de gaz à effet de serre) et ses conséquences possibles (scénario tendanciel de bouleversements climatiques de grande ampleur) ; et une partie \" prescription \" qui, tenant compte du diagnostic, propose des mesures politiques et relève non plus d'observations scientifiques mais d'une appréciation morale. Après un rappel de ce qui alimente le débat (la part d'incertitude qui ne peut concerner que la vision prospective découlant de l'observation des faits, et non la qualification des faits observés), Antonin Pottier montre bien que les thèses climato-sceptiques relèvent d'une confusion entre le diagnostic et la prescription : c'est parce qu'ils refusent la nécessité ou le contenu des politiques climatiques qu'ils en viennent à dénier la réalité scientifique du changement climatique, déplaçant le débat et s'enfonçant dans l'erreur. Une posture d'autant plus dommageable qu'elle trouve un écho médiatique important tendant à embrouiller un peu plus les informations à la disposition de l'opinion publique : \" La perception des enjeux contemporains par le citoyen est entravée, au profit des intérêts que fragiliserait une lutte contre les émissions de gaz à effet de serre.",
+              "document_type": "ART",
+              "publication_date": "2011-01-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "le cired et le changement cliamtique"
+            }
+          },
+          {
+            "id": "e9791e18-285a-5a37-8671-f1ad5c62633a",
+            "document_id": "8cd11f2f-4483-5b3b-9b93-63f50f4ed927",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Convention Citoyenne pour le Climat : Les citoyens de la Convention comparés à des échantillons représentatifs de la population française. Note de travail\n\nText: de la CCC `a lissue de la premi `ere journ ee de la Convention, au cours de laquelle ils ont entendu des\nexperts scientiﬁque sur le changement climatique.\nFigure 11: Pensez-vous que le changement climatique est d ˆu`a ...\nFigure 12: De ces trois opinions, laquelle se rapproche le plus de la v ˆotre ? Les d esordres du cli-\nmat et leurs cons equences (tels que les canicules, les temp ˆetes, les inondations, la fonte des glaciers,\nlelevation du niveau des mers, etc.) sont caus es par le changement climatique ; ... sont des\nphenom `enes naturels comme il y en a toujours eu ; Aujourdhui, personne ne peut dire avec certi-\ntude les vraies raisons des d esordres du climat).\nGravit e et cons equences du changement climatique\nNous nobservons pas de diﬀ erence majeure entre le citoyens et les Franc ais sur ces points (ﬁg-\nures 13 et 14).\nFigure 13: Pensez-vous que le changement climatique sera limit e`a un niveau acceptable dici la ﬁn\ndu si `ecle ?\n7",
+            "metadata": {
+              "title": "Convention Citoyenne pour le Climat : Les citoyens de la Convention comparés à des échantillons représentatifs de la population française. Note de travail",
+              "hal_id": "halshs-02919695",
+              "authors": "['Adrien Fabre', 'Bénédicte Apouey', 'Thomas Douenne', 'Louis-Gaëtan Giraudet', 'Jean-François Laslier', 'Antonin Macé']",
+              "version": "v0",
+              "citation": "Adrien Fabre, Bénédicte Apouey, Thomas Douenne, Louis-Gaëtan Giraudet, Jean-François Laslier, et al.. Convention Citoyenne pour le Climat : Les citoyens de la Convention comparés à des échantillons représentatifs de la population française. Note de travail. 2020. ⟨halshs-02919695⟩",
+              "source_url": "https://hal.science/halshs-02919695",
+              "chunk_order": 25,
+              "description": "Les citoyens membres de la Convention Citoyenne pour le Climat (CCC) sont-ils représentatifs des Français ? Ces derniers approuvent-ils les politiques climatiques proposées par la Convention ? Cette note aborde ces questions en comparant les points de vue des citoyens de la Convention avec ceux d’échantillons représentatifs de la population générale interrogés avant que les mesures proposées par la CCC soient diffusées publiquement.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-08-01",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "le cired et le changement cliamtique"
+            }
+          },
+          {
+            "id": "b8e71b27-1634-5521-b197-11824c3fc2f5",
+            "document_id": "ecc53eec-d4c7-5486-93b8-1a2b985768b2",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Les firmes transnationales et l'institution social-historique du changement climatique.\n\nText: délimiter lambition du changement à effectuer : jusquoù pousse-t-on la  mise en question ?\nSi, comme le recommandent les scientifique s du GIEC, il sagit de réduire drastiquement\nles émissions, cela laisse entendre que ce nest pas seulement de machines quil fa ut\nchanger, ni de systèmes techniques, mais auss i, et plus profondément, de façons de vivre :\nde se loger, de se chauffer, de cultiver la te rre, de se nourrir, de se déplacer, déduquer, de\ntravailler, de se reposer et de  se divertir. Changer radicalemen t de façons de vivre signifie\nchanger de société. Changer de société, cest transformer délibérément ses institutions (dont\nles individus à chaque fois socialisés) et les significations imaginaires quelles portent et\nqui les animent ; cest-à-dire, changer les façons  de sentir, de penser et dagir instituées, en\nun mot : les mœurs. Cela implique aussi, n écessairement, une transformation des relations\nde pouvoir. La naissance du problème du ch angement climatique représente donc une",
+            "metadata": {
+              "title": "Les firmes transnationales et l'institution social-historique du changement climatique.",
+              "hal_id": "tel-00169596",
+              "authors": "['Mathias Lefèvre']",
+              "version": "v0",
+              "citation": "Mathias Lefèvre. Les firmes transnationales et l'institution social-historique du changement climatique.. Economies et finances. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2007. Français. ⟨NNT : ⟩. ⟨tel-00169596⟩",
+              "source_url": "https://hal.science/tel-00169596",
+              "chunk_order": 1354,
+              "description": "Notre thèse porte sur les firmes transnationales dont les activités sont mises en cause dans le problème du changement climatique. Elle traite de leurs actions relativement au processus politique engagé par les Etats au début des années 1990 et de leur influence sur la définition des solutions à apporter au problème. Plus précisément, dans le cadre d'une réflexion plus large sur l'institution social-historique du problème - le fait qu'il est institué, moyennant l'imaginaire, dans et par des sociétés particulières, à un moment donné de leur histoire et pour un certain temps -, et considérant la période allant de 1989 à 2001, nous avons voulu élucider deux choses. D'une part, pourquoi, pour (ou contre) quoi et comment ces firmes ont agi (la cause, la fin et la teneur de leurs actions) par rapport au processus politique. D'autre part, dans quelle mesure ces actions (faisant valoir un certain \" pouvoir relationnel \"), mais aussi le seul fait qu'elles existaient (situation dont elles tirent un \" pouvoir institutionnel \"), ont eu des effets sur ce processus et, plus particulièrement, sur la définition des solutions. Le choix d'analyser ces acteurs \" non-étatiques \" majeurs a résulté de deux motivations entremêlées. Celle, principale, de démontrer la nécessité de tenir compte de ces grandes firmes (en sus des Etats, des institutions interétatiques et d'autres acteurs non-étatiques) pour pouvoir comprendre l'évolution du processus politique, et ainsi de remédier au défaut d'études sur le sujet. Par ailleurs, celle de contribuer, en filigrane, à la compréhension de la façon dont le capitalisme, en tant que régime social (type spécifique d'institution de la société) ne pouvant exister que dans et par l'entreprise, affronte ce problème qui, plus que tout autre problème écologique, le met profondément en question, c'est-à-dire le menace.",
+              "document_type": "THESE",
+              "publication_date": "2007-06-18",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "le cired et le changement cliamtique"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1194,
+            "total_tokens": 1194
+          }
+        }
+      },
+      "duration": 2672
+    },
+    "retrievalTime": 3572,
+    "generationTime": 2672,
+    "timestamp": "2025-07-10T09:42:22.669Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T09:42:22.691341+00:00",
+    "server_version": "1.0.0"
+  }
+}

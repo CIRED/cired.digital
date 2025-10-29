@@ -1,0 +1,299 @@
+{
+  "sessionId": "session_1752139056438_5iy5mfp2e4ycu",
+  "timestamp": "20250710T092015419Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752139213349_xm47e76",
+    "response": {
+      "results": {
+        "generated_answer": "La dérivée de \\(1^x\\) par rapport à \\(x\\) est \\(1^x \\ln(1)\\), ce qui est égal à \\(0\\) car \\(\\ln(1) = 0\\).\n\nAucun des résultats fournis ne contient d'informations pertinentes sur la dérivée de \\(1^x\\).",
+        "citations": [],
+        "search_results": [
+          {
+            "id": "79754807-0a6f-551a-ba2f-c37fe6b4e6cd",
+            "document_id": "4291fc51-c0bd-53f4-8a8e-623f200a6515",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Enjeux économiques et énergétiques autours des véhicules électrifiées\n\nText: Rappel: laversion au risque  \n66 U \n$ x- x+ Ex u- u+ \nEu \nXeq Prime  \nde risque  \n() ()ii ii x p U U p x",
+            "metadata": {
+              "title": "Enjeux économiques et énergétiques autours des véhicules électrifiées",
+              "hal_id": "cel-00797596",
+              "authors": [
+                "Adrien Vogt-Schilb"
+              ],
+              "version": "v0",
+              "citation": "Adrien Vogt-Schilb. Enjeux économiques et énergétiques autours des véhicules électrifiées. Master. ENPC, 2013. ⟨cel-00797596⟩",
+              "source_url": "https://hal.science/cel-00797596",
+              "chunk_order": 62,
+              "document_type": "LECTURE",
+              "publication_date": "2013-02-19",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "derivé de 1^x"
+            }
+          },
+          {
+            "id": "18d7bcdd-3571-5921-97de-940afea5ea98",
+            "document_id": "4291fc51-c0bd-53f4-8a8e-623f200a6515",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Enjeux économiques et énergétiques autours des véhicules électrifiées\n\nText: Laversion au risque croit avec la concavité de la \nfonction dutilité  \n67 U \n$ x- x+ Ex u- u+ \nEu \nXeq Prime  \nde risque",
+            "metadata": {
+              "title": "Enjeux économiques et énergétiques autours des véhicules électrifiées",
+              "hal_id": "cel-00797596",
+              "authors": [
+                "Adrien Vogt-Schilb"
+              ],
+              "version": "v0",
+              "citation": "Adrien Vogt-Schilb. Enjeux économiques et énergétiques autours des véhicules électrifiées. Master. ENPC, 2013. ⟨cel-00797596⟩",
+              "source_url": "https://hal.science/cel-00797596",
+              "chunk_order": 63,
+              "document_type": "LECTURE",
+              "publication_date": "2013-02-19",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "derivé de 1^x"
+            }
+          },
+          {
+            "id": "6780cc23-ff25-58fe-836d-7401e024cb41",
+            "document_id": "4291fc51-c0bd-53f4-8a8e-623f200a6515",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Enjeux économiques et énergétiques autours des véhicules électrifiées\n\nText: Laversion au risque croit avec la concavité de la \nfonction dutilité  \n68 U \n$ x- x+ Ex u- u+ \nEu \nXeq Prime  \nde risque  \nnulle",
+            "metadata": {
+              "title": "Enjeux économiques et énergétiques autours des véhicules électrifiées",
+              "hal_id": "cel-00797596",
+              "authors": [
+                "Adrien Vogt-Schilb"
+              ],
+              "version": "v0",
+              "citation": "Adrien Vogt-Schilb. Enjeux économiques et énergétiques autours des véhicules électrifiées. Master. ENPC, 2013. ⟨cel-00797596⟩",
+              "source_url": "https://hal.science/cel-00797596",
+              "chunk_order": 64,
+              "document_type": "LECTURE",
+              "publication_date": "2013-02-19",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "derivé de 1^x"
+            }
+          },
+          {
+            "id": "cbd0afe7-a5cc-5d0b-9f49-065ccc8e5870",
+            "document_id": "f7bd9fc7-914c-5dc7-b535-0cebc3cc7ba3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Five Conferences on Undecidability\n\nText: α=ωtel queα= 2α, cest-` a-dire le r esultat de ωexponentiations...\nTout cela peut ^ etre rendu plus explicite par le r esultat su ivant : les\ndeux principes suivants sont  equivalents dans les math em atiques  el ementaires\n(1) le fait que tout sous-ensemble de N2a une projection sur N.\n(2) le fait que si αest un bon ordre, 2αest un bon ordre.\nLint er^ et de cette  equivalence est que, dans (1), lop e ration de projection\nnest pas  el ementaire ;  etant donn e XN2, comment d eterminer les  el ements\ndepr1(X)et de son compl ementaire sans utiliser dop erations infi nies ?\n5Ne pas confondre cette exponentielle ordinale avec lexpon entiation cardinale qui elle, est reli ee\n` a la notation ABpour d esigner lensemble des applications de BdansA.\n33",
+            "metadata": {
+              "title": "Five Conferences on Undecidability",
+              "hal_id": "hal-00192557",
+              "authors": "['Nicolas Bouleau', 'Jean-Yves Girard', 'Alain Louveau']",
+              "version": "v0",
+              "citation": "Nicolas Bouleau, Jean-Yves Girard, Alain Louveau. Five Conferences on Undecidability. N. Bouleau. Presses de l'Ecole Nationale des Ponts et Chaussées, pp.57, 1983. ⟨hal-00192557⟩",
+              "source_url": "https://hal.science/hal-00192557",
+              "chunk_order": 112,
+              "description": "These five lectures on undecidability were given to students with a good level in mathematics but with no special knowledge on logic. The first conference presents the formalization of mathematics with a short historical survey, the language of first order predicates and the axioms of set theory. The second and third lectures explain the incompleteness phenomena from the Hilbert program until Gödel's theorems with a presentation of the sequent calculus of Gentzen.The fourth talk deepens model theory reasoning in the case of the continuum hypothesis, and the last conference gives examples of effective computability results.",
+              "document_type": "OUV",
+              "publication_date": "1983-01-01",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "derivé de 1^x"
+            }
+          },
+          {
+            "id": "a604d50d-b0b0-562e-8b1a-0c45974e0487",
+            "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: 01   .1. ( 1 )Xp\nz \n \nE E0\nEτ p.e.Y\nzX\nτ \nParconséquent :\n SiεX>1,lesignedelévolution desprixdeproduction estidentique àceluidulévolution \ndutauxdechômage:lorsquelesprixbaissent,lactivitéaugmente, etinversement. \n Si0<εX<1,lesévolutions desdeuxvariablessontdesignecontraire:lorsquelesprix\nbaissent,lactivitéetlemploibaissent,etinversement. \nCommenouslavonsanoncé,lévolution delaconsommation Csedéduitassezfacilement de\nlanalysedelévolution duprixp.Encombinant léquation delabalancedespaiements (équation 11,\npage165)avecléquilibre emploisressources delaproduction envolume(équation 1,page163),\npuisendifférentiant lexpression obtenues, onparvientaurésultatsuivant33:\n SiεX>1,lesignedelévolution delaconsommation estlopposédeceluidelévolution \nduprixdeproduction. \n Si0<εX<1,lesignedelévolution delaconsommation estidentique àceluidulévolution \nduprixdeproduction. \nNotonsquecerésultatsupposequunecondition soitrespectée danslasituationinitiale;soit:\n     111Es\nEpe\ngp g oùsEdésignelapartdelénergiehorstaxedanslescoûts.",
+            "metadata": {
+              "title": "Fiscalité carbone et progrès social. Application au cas français",
+              "hal_id": "tel-00813550",
+              "authors": [
+                "Emmanuel Combet"
+              ],
+              "version": "v0",
+              "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+              "source_url": "https://hal.science/tel-00813550",
+              "chunk_order": 953,
+              "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+              "document_type": "THESE",
+              "publication_date": "2013-04-09",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "derivé de 1^x"
+            }
+          },
+          {
+            "id": "81b4feec-19c3-5110-a3af-a0bb314fbdf7",
+            "document_id": "a9c8e50d-44d1-5ebe-b654-6ffee5183824",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: On the benefits of set-asides\n\nText: W e consider no w the function xlog[G(x)]\n(1F(x)). On (x,x) , its deriv ativ e is giv en b y\n[log[G(x)]\n(1F(x))]\nx=f(x)\n(1F(x))2[",
+            "metadata": {
+              "title": "On the benefits of set-asides",
+              "hal_id": "halshs-01557657",
+              "authors": [
+                "Philippe Jehiel",
+                "Laurent Lamy"
+              ],
+              "version": "v0",
+              "citation": "Philippe Jehiel, Laurent Lamy. On the benefits of set-asides. 2017. ⟨halshs-01557657⟩",
+              "source_url": "https://hal.science/halshs-01557657",
+              "chunk_order": 275,
+              "description": "Set-asides programs consist in forbidding access to specific participants, and they are commonly used in procurement auctions. We show that when the set of potential participants is composed of an incumbent (who bids for sure if allowed to) and of entrants who show up endogenously (in such a way that their expected rents are fixed by outside options), then it is always beneficial for revenues to exclude the incumbent in the second-price auction. This exclusion principle is generalized to auction formats that favor the incumbent in the sense that he would always gets the good when he values it most. By contrast, set-asides need not be desirable if the incumbent's payoff is included into the seller's objective or in environments with multiple incumbents. Various applications are discussed.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2017-07-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "derivé de 1^x"
+            }
+          },
+          {
+            "id": "59aff5f8-2c20-5ca7-af74-0b02076e41c0",
+            "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: tauxdechômagez,tandisquelesignedelavariationdesexportations estlopposédeceluiduprix.\nDemanièremoinstriviale,lesignedelévolution delaconsommation sedéduitaussidusignede\nlévolution duprix;nousyreviendrons doncjusteaprèslanalysedecedernier.\nLévolution duprixdeproduction sedéduitsimplement delévolution dutauxdechômageen\nétudiantlesigneduratiodesmembres dedroitedeséquations 15et16,page167:\n.  .     .p\nz\n   \nE\nEτ E\nE\nτ \nCequiestéquivalent à32:\n01   .1. ( 1 )Xp\nz \n \nE E0\nEτ p.e.Y\nzX\nτ \nParconséquent :\n SiεX>1,lesignedelévolution desprixdeproduction estidentique àceluidulévolution \ndutauxdechômage:lorsquelesprixbaissent,lactivitéaugmente, etinversement. \n Si0<εX<1,lesévolutions desdeuxvariablessontdesignecontraire:lorsquelesprix\nbaissent,lactivitéetlemploibaissent,etinversement. \nCommenouslavonsanoncé,lévolution delaconsommation Csedéduitassezfacilement de\nlanalysedelévolution duprixp.Encombinant léquation delabalancedespaiements (équation 11,",
+            "metadata": {
+              "title": "Fiscalité carbone et progrès social. Application au cas français",
+              "hal_id": "tel-00813550",
+              "authors": [
+                "Emmanuel Combet"
+              ],
+              "version": "v0",
+              "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+              "source_url": "https://hal.science/tel-00813550",
+              "chunk_order": 952,
+              "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+              "document_type": "THESE",
+              "publication_date": "2013-04-09",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "derivé de 1^x"
+            }
+          },
+          {
+            "id": "fc49ca6e-15a6-54bd-9c59-4795a45e75c2",
+            "document_id": "a6143c4d-4ae1-5370-9e2c-e62c8266a545",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Splendeurs et misères des lois de valeurs extêmes\n\nText: /; / / / /; Xn\n/; / / / des variables al / eatoir es r / eel les ind / ep endantes et dem /^ eme loi/. On p ose Mn\n/= maxi /=/1 /; /// /;n\n/( Xi\n/) /. Il existe des nombr es an\n/> /0 et bn\ntelsque /:an\n/( Mn\n/? bn\n/)c onver ge en loi lorsque n /\" /1 /.A lors/, soit la loi limite est d / eg / en / er / ee/, soit la loi limite est la loi de aX /+ bave c a /> /0 o / u X a l/'une des fonctions de r / ep artition suivantesI /) G /( x /) /= exp /( /? e\n/? x/) /; x /2 I R /; /(Gumb el/)I I /) G /( x /) /= exp /( /? x\n/? /\u000b/)/1x/> /0\n/; /\u000b /> /0 /; /(F r / echet/)I I I /) G /( x /) /= /1 /? /[/1 /? exp /( /? /( /? x /)\n/\u000b/)/]/1x / /0\n/; /\u000b /> /0 /; /(Weibul l/)Soit F la fonction de r / ep artition c ommune des Xi\n/.a/) Si il existe g /( t /) /> /0 tel le quel imt /\" sup f s /: F /( s /) /< /1 g\n/1 /? F /( t /+ xg /( t /)/)/1 /? F /( t /)\n/= e\n/? xon est dans le c as I/./2",
+            "metadata": {
+              "title": "Splendeurs et misères des lois de valeurs extêmes",
+              "hal_id": "halshs-00008305",
+              "authors": [
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Nicolas Bouleau. Splendeurs et misères des lois de valeurs extêmes. Revue Risques - Les cahiers de l'assurance, 1991, 4, pp.85-92. ⟨halshs-00008305⟩",
+              "source_url": "https://hal.science/halshs-00008305",
+              "chunk_order": 5,
+              "description": "Après avoir rappelé les fondements de la théorie des lois de valeurs extêmes, nous montrons que si la grandeur étudiée n'est pas additive, l'une des hypothèse est en défaut et n'importe quelle loi de probabilité peut être obtenue. Nous discutons l'abus de cette méthode qui fait apparaître de l'information à partir du néant sous une forte pression sociale pour quantifier les risques graves et rares.",
+              "document_type": "ART",
+              "publication_date": "1991-01-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "derivé de 1^x"
+            }
+          },
+          {
+            "id": "99a73e5b-43ef-5bd9-93ae-5f1edf1b16bf",
+            "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: 194\nLesignedelavariationestalorsdonnéparlacondition suivante:\n  \n          1     (numérateur et dénominateur positifs)\n0    \n         1     (numérateur et dénominateur négatifs)Eτ\n\nwx\nxwvu\nzou\nuv\n car: .1 .01E0 0\n0\n00τEzw. L .zzw  \nCettecondition estenfaitéquivalente à: \n  0    1 \nEτ  wxzvu  car w  R,1 wv \neneffet,surledomainedesréelspositifs(hypothèse dunecorrélation négativedessalairesau\ntauxdechômage), wvestunefonctionmonotone, croissante etbornéepar1:\n   \n\n \nwwwv          et1..\n   11.0\n0\n0\n0\n0\n0zw. Lz\nzw. L .z",
+            "metadata": {
+              "title": "Fiscalité carbone et progrès social. Application au cas français",
+              "hal_id": "tel-00813550",
+              "authors": [
+                "Emmanuel Combet"
+              ],
+              "version": "v0",
+              "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+              "source_url": "https://hal.science/tel-00813550",
+              "chunk_order": 1079,
+              "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+              "document_type": "THESE",
+              "publication_date": "2013-04-09",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "derivé de 1^x"
+            }
+          },
+          {
+            "id": "9da697e1-0d0b-5e23-9482-2e2310003b20",
+            "document_id": "5639973b-8d44-58e2-bf3d-46a24babf72e",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Donner une valeur monétaire à l'environnement, une aide pour la décision publique ? Le cas de la gestion des déchets et du solaire photovoltaïque à Paris.\n\nText: prendre les e i comme var iables de base et les x i comme variables hors base. Prenons donc \n[] 0 ;1 = ix m i . \nDans ce cas e 0=B ,  e m+1=0  ,  e m+2 = 0  ,  e m+3 = 0   et    []i iMe mi =  ;1 . \nCest la solution consistant à ninvestir aucun budget ce qui napporte aucun gai n environnemental. \nCest une solution de base admissible.  \n \nEtape 1 : choix du premier pivot  \nEcrivons z à laide des seuls x i qui sont les variables hors base :  xK- = zm\n1iii\n= \nSoit i 1 lindice pour lequel \n1iK est maximum. Il faut  faire entrer \n1ix dans la base à la place dun e i \nsortant. Pour déterminer le e i à sortir de la base, exprimons le fait quils sont positifs en prenant tous \nles x i nuls sauf \n1ix. Etant donné que i i i x M e i = cela induit la  condition suivante  : \n1 1i iM x qui provient de la contrainte  \n1 1 1 i i i x M e = . On a également \n 0 0\n1 0 ixB e B xi\n1. \nPour savoir s il faut faire sortir de la base e 0 ou \n1ie, il faut comparer \n1iM et B pour voir quelle est la  \ncontrainte la plus restrictive :",
+            "metadata": {
+              "title": "Donner une valeur monétaire à l'environnement, une aide pour la décision publique ? Le cas de la gestion des déchets et du solaire photovoltaïque à Paris.",
+              "hal_id": "tel-01399665",
+              "authors": [
+                "Magali Domergue"
+              ],
+              "version": "v0",
+              "citation": "Magali Domergue. Donner une valeur monétaire à l'environnement, une aide pour la décision publique ? Le cas de la gestion des déchets et du solaire photovoltaïque à Paris.\r\n. Economies et finances. Ecole des hautes études en sciences sociales, Paris, 2016. Français. ⟨NNT : ⟩. ⟨tel-01399665⟩",
+              "source_url": "https://hal.science/tel-01399665",
+              "chunk_order": 1848,
+              "description": "Cette thèse explore les potentialités de la monétarisation des valeurs non marchandes de l’environnement pour la décision publique au travers de deux exemples : la production d’énergie renouvelable (photovoltaïque) et la gestion des ordures ménagères. Pour ce faire, une base de référence de facteurs de monétarisation (FM) a été constituée pour convertir les flux quantitatifs d’impacts (tonnes de CO2, kg d’oxydes d’azote….) en valeurs monétarisées (€/tCO2, €/kgNOx…). Les résultats obtenus pour la pose de panneaux solaires photovoltaïques à Paris montrent un coût social résultant. Pour la gestion des déchets à Paris en 2007, les données monétarisées ont permis d’explorer de nombreuses questions : intérêt environnemental du recyclage, performance des incinérateurs du SYCTOM... L’analyse a été poursuivie par une projection sur 30 ans qui a servi de référence pour étudier l’efficacité d’actions d’amélioration du bilan environnemental futur, mettant ainsi en lumière un autre intérêt de la monétarisation qui est la possibilité de réaliser des analyses de scénarios notamment sous contrainte budgétaire. Les résultats basés sur des FM issus d’études et de contextes différents sont fragiles mais ils pourraient s’avérer préférables à l’absence de données qui conduit à des prises de décisions potentiellement arbitraires et de ce fait, potentiellement contraire à l’intérêt environnemental (effets secondaires non pris en compte, budget mobilisé pour des effets limités….). Ces résultats vérifiables et assortis de fourchettes d’incertitudes constituent un support de débat autour d’un indicateur agrégé unique plus aisément manipulable et appréhendable que de multiples flux physiques d’impacts. Disposer d’une batterie de FM de référence assortis de règles d’utilisation et de règles d’évolution permettrait de développer la monétarisation boudée France et de générer des éléments d’aide à la décision.",
+              "document_type": "THESE",
+              "publication_date": "2016-11-04",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "derivé de 1^x"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 200,
+            "total_tokens": 200
+          }
+        }
+      },
+      "duration": 732
+    },
+    "retrievalTime": 1332,
+    "generationTime": 732,
+    "timestamp": "2025-07-10T09:20:15.419Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T09:20:17.418063+00:00",
+    "server_version": "1.0.0"
+  }
+}

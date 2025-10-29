@@ -1,0 +1,330 @@
+{
+  "sessionId": "session_1752324436901_531m2y2w226a312t3x",
+  "timestamp": "20250712T124821585Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752324498623_74zhmf4",
+    "response": {
+      "results": {
+        "generated_answer": "D'après le contexte fourni, les papiers du CIRED publiés dans les plus grandes revues scientifiques incluent des publications dans des revues telles que Energy Policy, Energy Economics et Nature pour les années 1990 [451025d].",
+        "citations": [
+          {
+            "id": "451025d",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 216,
+              "end": 225
+            },
+            "payload": {
+              "id": "451025d3-c4a9-57a0-b022-e822c14527d3",
+              "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: entend également répondre aux critiques de la croissance économiques qui se \ndéveloppent à partir des a nnées 1970. Cest ainsi que fu t constituée la programmation \nscientifique du CIRED lors de sa création274.\nEnfin, outre que les publications du CI RED apparaissent dans des revues \ninternationales et/ou centrales pour lECC275, elles peuvent se fa ire en collaboration \n(avec signature conjointe) avec des chercheurs étrangers, ce qui atteste du \npositionnement intern ational du CIRED276\n273Au départ au sein de lEHESS.. Il contraste avec dautres acteurs français \n274http://www.centre-cired.fr/spip.php?rubrique288 Consulté le 18 octobre 2013. \n275Telles que Energy Policy ,Energy Economics et  Nature pour les années 1990.\n276De plus, nous aurons loccasion dy revenir dans le chapitre 4, mais nous précisons que ce \npositionnement international sexprime également da ns la participation de s membres du CIRED à la \nrédaction des rapports du GIEC.",
+              "metadata": {
+                "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+                "hal_id": "tel-01112427",
+                "authors": [
+                  "Pauline Huet"
+                ],
+                "version": "v0",
+                "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+                "source_url": "https://hal.science/tel-01112427",
+                "chunk_order": 511,
+                "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+                "document_type": "THESE",
+                "publication_date": "2015-01-15",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "Quels papiers du CIRED ont été publiés dans les plus grandes revues scientifiques"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "451025d3-c4a9-57a0-b022-e822c14527d3",
+            "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: entend également répondre aux critiques de la croissance économiques qui se \ndéveloppent à partir des a nnées 1970. Cest ainsi que fu t constituée la programmation \nscientifique du CIRED lors de sa création274.\nEnfin, outre que les publications du CI RED apparaissent dans des revues \ninternationales et/ou centrales pour lECC275, elles peuvent se fa ire en collaboration \n(avec signature conjointe) avec des chercheurs étrangers, ce qui atteste du \npositionnement intern ational du CIRED276\n273Au départ au sein de lEHESS.. Il contraste avec dautres acteurs français \n274http://www.centre-cired.fr/spip.php?rubrique288 Consulté le 18 octobre 2013. \n275Telles que Energy Policy ,Energy Economics et  Nature pour les années 1990.\n276De plus, nous aurons loccasion dy revenir dans le chapitre 4, mais nous précisons que ce \npositionnement international sexprime également da ns la participation de s membres du CIRED à la \nrédaction des rapports du GIEC.",
+            "metadata": {
+              "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+              "hal_id": "tel-01112427",
+              "authors": [
+                "Pauline Huet"
+              ],
+              "version": "v0",
+              "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+              "source_url": "https://hal.science/tel-01112427",
+              "chunk_order": 511,
+              "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+              "document_type": "THESE",
+              "publication_date": "2015-01-15",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été publiés dans les plus grandes revues scientifiques"
+            }
+          },
+          {
+            "id": "dd821ec1-9a80-53c1-a25d-5124986e33c4",
+            "document_id": "1edd5637-65fd-518c-bb0b-27fd40417798",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Correcting the 'self-trade' issue in the GTAPAgg software - Technical paper\n\nText: CIRED Working Papers Series",
+            "metadata": {
+              "title": "Correcting the 'self-trade' issue in the GTAPAgg software - Technical paper",
+              "hal_id": "hal-00866558",
+              "authors": "['Meriem Hamdi-Cherif', 'Frédéric Ghersi']",
+              "version": "v0",
+              "citation": "Meriem Hamdi-Cherif, Frédéric Ghersi. Correcting the 'self-trade' issue in the GTAPAgg software - Technical paper. 2012. ⟨hal-00866558⟩",
+              "source_url": "https://hal.science/hal-00866558",
+              "chunk_order": 2,
+              "description": "The successive versions of the GTAP databases are provided with GTAPAgg, a programme that computes values of the series of the database for any regional and sectoral aggregation. A 'self-trade' issue arises from the fact that GTAPAgg aggregates the several series concerned with international trade, like any other series, by simply summing them up : the resulting series include a share of exports and imports happening between the aggregated regions, which should rather be treated as economic flows internal to the region resulting from the aggregation process. This paper details a method that aims at solving this shortcoming, and discusses the importance of doing so. A first section puts the research question into context and discusses its likely importance when using GTAP as a calibration dataset for computable general equilibrium modelling. A second section details the analytics of the method proposed to correct the aggregation process, in the broader framework of a programme extending GTAPAgg to the production of national account matrixes in the standard United Nations format. An appendix provides the code of the extended aggregation programme developed.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2012-04-01",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été publiés dans les plus grandes revues scientifiques"
+            }
+          },
+          {
+            "id": "f54d8822-1e8e-5859-8dc0-384ac58ac6d9",
+            "document_id": "d8dba594-78d6-5d91-9781-dff2eeda35a2",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: White certificate schemes : the static and dynamic efficiency of an adaptive policy instrument\n\nText: CIRED Working Papers Series",
+            "metadata": {
+              "title": "White certificate schemes : the static and dynamic efficiency of an adaptive policy instrument",
+              "hal_id": "hal-00866422",
+              "authors": "['Louis-Gaëtan Giraudet', 'Dominique Finon']",
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Dominique Finon. White certificate schemes : the static and dynamic efficiency of an adaptive policy instrument. 2011. ⟨hal-00866422⟩",
+              "source_url": "https://hal.science/hal-00866422",
+              "chunk_order": 10,
+              "description": "White certificate schemes mandate energy companies to promote energy efficiency through flexibility mechanisms, including the trading of energy savings. They can be characterized as a quantity-based, baseline-and-credit system for the diffusion of energy efficient technologies. This paper offers a comprehensive comparison of experiences with white certificate schemes in Great Britain, Italy and France. Starting from the identification of the key drivers underlying each scheme, it proposes an original interpretation of this type of scheme as an adaptive instrument, in the sense that it can take different forms in response to specific institutional contexts. The analysis shows that schemes perform well in terms of static efficiency - they generate net social benefits over the period considered - though there are large discrepancies in cost-effectiveness due to various technical potentials across countries. They achieved mixed results regarding dynamic efficiency - the ability to induce and sustain technological change over the long run. Market transformation occurred in Great Britain, but was poorly incentivized in Italy and France due to inadequate compliance cost recovery rules. Substantial organisational change has occurred in every country, mainly by strengthening vertical relationships between obliged parties and upstream businesses. Overall, the obligation (rather than the market component) drives the early phases of the schemes.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2011-07-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été publiés dans les plus grandes revues scientifiques"
+            }
+          },
+          {
+            "id": "561f79b6-c18f-56cc-aa38-07c8abeaf0d9",
+            "document_id": "af55cfc7-6894-5b92-a498-f3a50531cf57",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: The European Union Emissions Trading System : should we throw the flagship out with the bathwater ?\n\nText: CIRED Working Papers Series",
+            "metadata": {
+              "title": "The European Union Emissions Trading System : should we throw the flagship out with the bathwater ?",
+              "hal_id": "hal-00866408",
+              "authors": "['Frédéric Branger', 'Oskar Lecuyer', 'Philippe Quirion']",
+              "version": "v0",
+              "citation": "Frédéric Branger, Oskar Lecuyer, Philippe Quirion. The European Union Emissions Trading System : should we throw the flagship out with the bathwater ?. 2013. ⟨hal-00866408⟩",
+              "source_url": "https://hal.science/hal-00866408",
+              "chunk_order": 2,
+              "description": "The European Union Emissions Trading System (EU-ETS), presented as the ''flagship'' of European climate policy, is subject to many criticisms from different stakeholders. Criticisms include the insufficient carbon emissions reduction, the competitiveness losses and the induced carbon leakages, the unfair distributional effects, the frauds and the existence of several other overlapping climate policy instruments. We review these criticisms and find the EU-ETS brought small but real abatements. The competitiveness losses and carbon leakages do not seem to have occurred. The distributional effects have indeed been unfair and fraud has been important. Finally, the scheme does not justify abandoning other climate policies. Some of these problems could have been avoided and can still be corrected by rethinking flexibility mechanisms and by adding some control over the carbon price.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-07-01",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été publiés dans les plus grandes revues scientifiques"
+            }
+          },
+          {
+            "id": "5b37ba54-ae33-5b70-9a34-c35df78033b1",
+            "document_id": "d9c0a2ff-40e6-584e-a028-a1d47cb856dd",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: La recomposition de l'industrie nucléaire française serait-elle nécessaire ?\n\nText: CIRED Working Papers Series",
+            "metadata": {
+              "title": "La recomposition de l'industrie nucléaire française serait-elle nécessaire ?",
+              "hal_id": "hal-00866416",
+              "authors": "['Dominique Finon']",
+              "version": "v0",
+              "citation": "Dominique Finon. La recomposition de l'industrie nucléaire française serait-elle nécessaire ?. 2011. ⟨hal-00866416⟩",
+              "source_url": "https://hal.science/hal-00866416",
+              "chunk_order": 9,
+              "description": "On analyse ici les propositions récentes de réorganisation de l'industrie française des réacteurs en vue d'accroître son efficacité à l'exportation. A partir d'une critique des choix de technologies offerts à l'export, le rapport Roussely recommandait de placer l'électricien national en chef de file libre de négocier la vente des réacteurs de son choix (dont des réacteurs Gen2) et de faire du constructeur français le sous-traitant du premier. Le gouvernement n'a pas suivi ces recommandations à juste titre. A partir d'une analyse du marché mondial des réacteurs en mutation, on relativise les critiques adressées à Areva sur ses choix ainsi que l'intérêt d'élargir le catalogue de réacteurs. Cette analyse permet de souligner l'importance des ressources technologiques et industrielles d'Areva dans la concurrence et l'avantage tout relatif des compétences d'architecte-ensemblier et d'exploitant de l'électricien national dans la conquête de marché à l'exportation. Au bout du compte, la démarche mercantile qui motivait les promoteurs de cette réforme en ambitionnant de concurrencer les entrants avec du nucléaire low cost a été désavouée par le gouvernement et ce avant même l'accident de Fukushima. Un peu plus de coordination à l'export serait juste nécessaire.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2011-04-01",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été publiés dans les plus grandes revues scientifiques"
+            }
+          },
+          {
+            "id": "de0c4356-c184-5259-a767-4e784ccffe5d",
+            "document_id": "737a9794-c764-50cc-8d93-6089daf2f272",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: L'économie du nucléaire revisitée - Leçons de l'apprentissage d'une technologie complexe par des accidents majeurs\n\nText: CIRED Working Papers Series",
+            "metadata": {
+              "title": "L'économie du nucléaire revisitée - Leçons de l'apprentissage d'une technologie complexe par des accidents majeurs",
+              "hal_id": "hal-00866419",
+              "authors": [
+                "Dominique Finon"
+              ],
+              "version": "v0",
+              "citation": "Dominique Finon. L'économie du nucléaire revisitée - Leçons de l'apprentissage d'une technologie complexe par des accidents majeurs. 2012. ⟨hal-00866419⟩",
+              "source_url": "https://hal.science/hal-00866419",
+              "chunk_order": 10,
+              "description": "L'accident de Fukushima repose la question de la viabilité sociale et économique de la technologie nucléaire. Pour y répondre on analyse ici le processus d'internalisation des coûts externes du nucléaire qui se concrétise par une complexification permanente de la technologie et qui présente la particularité d'être scandé par des accidents majeurs. Il a contribué à désorganiser le processus d'apprentissage de la technologie et à mettre en question les préférences sociales pour finir par mettre en question sa compétitivité pour les investisseurs. Des institutions indépendantes de sûreté sont devenues une condition de son déploiement au risque de ne pas faciliter la stabilisation de la technologie, condition de sa viabilité économique. Dans cette perspective, l'article montre que la nouvelle séquence d'internalisation des coûts externes du nucléaire ouverte par Fukushima aura des effets limités sur les coûts, du fait des étapes antérieures d'approfondissement de la sûreté. La complexification de la technologie atteint une asymptote : on est en train de sortir du défi d'apprendre par des accidents. En revanche il faut arriver à garantir la sûreté maximale en s'attaquant à l'autre racine du problème, celui de l'indépendance et des compétences des autorités de sûreté dans tous les pays, ce qui ne se décrète pas. C'est pourtant à ce prix que sera préservé ce bien public mondial que constitue l'acceptation du nucléaire.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2012-05-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été publiés dans les plus grandes revues scientifiques"
+            }
+          },
+          {
+            "id": "7fa5acc8-766c-54f9-87d1-e037b25c5270",
+            "document_id": "1ea817c8-976a-523a-a786-cf977ae7b78d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt\n\nText: CIRED Working Papers Series",
+            "metadata": {
+              "title": "L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt",
+              "hal_id": "hal-00866447",
+              "authors": [
+                "Philippe Quirion"
+              ],
+              "version": "v0",
+              "citation": "Philippe Quirion. L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt. 2013. ⟨hal-00866447⟩",
+              "source_url": "https://hal.science/hal-00866447",
+              "chunk_order": 12,
+              "description": "Nous étudions l'impact sur l'emploi en France de la mise en œuvre du scénario de transition énergétique construit par l'Association négaWatt (2011), qui prévoit un développement massif des économies d'énergie (par le biais de mesures de sobriété et d'efficacité énergétiques) et des énergies renouvelables entre 2012 et 2050. Par rapport à 2010, ce scénario aboutit à une division par deux des émissions de CO2 d'origine énergétique en France en 2030 et à une division par 16 en 2050, sans capture-stockage du CO2, sans mise en œuvre de nouvelle centrale nucléaire et en fermant les centrales existantes au bout de 40 ans d'exploitation au maximum. Nous calculons l'effet sur l'emploi de la mise en œuvre de ce scénario en comparaison avec un scénario tendanciel qui prolonge les évolutions récentes et prend en compte les politiques déjà décidées. La méthode retenue pour calculer l'effet sur l'emploi de chaque scénario consiste à calculer le coût des principales options techniques et organisationnelles retenues, à ventiler ces coûts entre les 118 branches de l'économie française et à multiplier ces coûts par le contenu en emploi de chaque branche. Ce dernier élément est estimé par une analyse input-output, ce qui permet de comptabiliser les emplois générés par la production de l'ensemble des consommations intermédiaires. L'un des deux scénarios étant plus coûteux que l'autre, il faut prendre en compte l'effet négatif sur l'emploi du financement de ce surcoût. Pour cela, on fait l'hypothèse que ce surcoût est supporté par les ménages et que ces derniers diminuent en conséquence leur consommation du même montant et de manière homothétique. Ainsi, on évite de biaiser les résultats en faveur du scénario le plus coûteux. La mise en œuvre du scénario négaWatt aboutit à un effet positif sur l'emploi, de l'ordre de +240 000 emplois équivalent temps-plein en 2020 et 630 000 en 2030. Nous étudions la sensibilité des résultats aux hypothèses sur les prix de l'énergie importée, l'évolution de la productivité du travail, la répartition du coût entre ménages et administrations publiques, et enfin l'arbitrage consommation-épargne. L'effet sur l'emploi reste largement positif dans tous les cas.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-04-01",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été publiés dans les plus grandes revues scientifiques"
+            }
+          },
+          {
+            "id": "1dd69d25-6771-5d99-9d62-978d63f4a9fa",
+            "document_id": "4cc15afd-774e-5ec4-a57a-5e48be4848ea",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Institutions and Electricity Systems Transition towards Decarbonisation : The hidden change of the market regime\n\nText: CIRED Working Papers Series",
+            "metadata": {
+              "title": "Institutions and Electricity Systems Transition towards Decarbonisation : The hidden change of the market regime",
+              "hal_id": "hal-00866417",
+              "authors": [
+                "Dominique Finon"
+              ],
+              "version": "v0",
+              "citation": "Dominique Finon. Institutions and Electricity Systems Transition towards Decarbonisation : The hidden change of the market regime. 2012. ⟨hal-00866417⟩",
+              "source_url": "https://hal.science/hal-00866417",
+              "chunk_order": 2,
+              "description": "Apart from the UK where it has been widely discussed in the 2011 Electricity Market Reform, energy experts communities are still unaware of the impacts that carbon policies directly focused on the development of low carbon technologies produce on the electricity market regime. Public co-ordination with long term arrangements needs to be introduced as a substitute to long term co-ordination by the market. Indeed, the current market co-ordination makes carbon prices ineffective at orienting investors towards low carbon technologies : fossil fuel generation technologies are preferred because their investment risks are much lower in the market regime. So, in order to avoid delayed investment aiming at the decarbonisation of electricity systems, a number of new market arrangements which lower the investment risk of these technologies are being selected by governments. But, as these low carbon equipments develop, long term co-ordination by the market for the other technologies (peaking units, CCGT) will fade away. That means that in the future, public co-ordination and planning will completely replace market players' decisions, not only for low carbon technologies, but for every capacity development.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2012-03-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été publiés dans les plus grandes revues scientifiques"
+            }
+          },
+          {
+            "id": "4b286897-59a1-5728-b04b-cbc96b18d099",
+            "document_id": "482cf9f0-c234-5622-878c-f846123b2f70",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Vers une gouvernance mondiale de la sûreté nucléaire contraignante: Une quête impossible?\n\nText: CIRED Working Papers Series",
+            "metadata": {
+              "title": "Vers une gouvernance mondiale de la sûreté nucléaire contraignante: Une quête impossible?",
+              "hal_id": "hal-01690181",
+              "authors": "['Dominique Finon']",
+              "version": "v0",
+              "citation": "Dominique Finon. Vers une gouvernance mondiale de la sûreté nucléaire contraignante: Une quête impossible?. 2018. ⟨hal-01690181⟩",
+              "source_url": "https://hal.science/hal-01690181",
+              "chunk_order": 2,
+              "description": "L’accident de Fukushima repose la question de la viabilité sociale et économique de la technologie nucléaire. Il faudrait arriver à garantir au plan international la sûreté maximale pour éviter tout nouvel accident afin de préserver l’acceptabilité de la technologie. Pour obtenir des infléchissements marqués en matière de standards de conception et d’exploitation et dans les pratiques institutionnelles de contrôle de la sûreté dans tous les pays à option nucléaire, l’idéal serait sans doute de parvenir à la mise en place d’une gouvernance internationale contraignante. L’article examine les incitations et les conditions pour y parvenir. Les incitations ne semblent pas assez fortes sur les États pour qu’ils délèguent une partie de leur souveraineté dans ce domaine. On est condamné à se contenter d’une gouvernance faible qui combine le rôle actuel de facilitateur de l’AIEA et la pression par les pairs pour les exploitants, les vendeurs et les autorités de sûreté, en observant que, pour chacun, les incitations à la rigueur sont en train d’être renforcées.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2018-01-23",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été publiés dans les plus grandes revues scientifiques"
+            }
+          },
+          {
+            "id": "386934b0-7eeb-55a6-b99d-08aaf4c772b0",
+            "document_id": "737a9794-c764-50cc-8d93-6089daf2f272",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: L'économie du nucléaire revisitée - Leçons de l'apprentissage d'une technologie complexe par des accidents majeurs\n\nText: CIRED Working Papers Series",
+            "metadata": {
+              "title": "L'économie du nucléaire revisitée - Leçons de l'apprentissage d'une technologie complexe par des accidents majeurs",
+              "hal_id": "hal-00866419",
+              "authors": [
+                "Dominique Finon"
+              ],
+              "version": "v0",
+              "citation": "Dominique Finon. L'économie du nucléaire revisitée - Leçons de l'apprentissage d'une technologie complexe par des accidents majeurs. 2012. ⟨hal-00866419⟩",
+              "source_url": "https://hal.science/hal-00866419",
+              "chunk_order": 2,
+              "description": "L'accident de Fukushima repose la question de la viabilité sociale et économique de la technologie nucléaire. Pour y répondre on analyse ici le processus d'internalisation des coûts externes du nucléaire qui se concrétise par une complexification permanente de la technologie et qui présente la particularité d'être scandé par des accidents majeurs. Il a contribué à désorganiser le processus d'apprentissage de la technologie et à mettre en question les préférences sociales pour finir par mettre en question sa compétitivité pour les investisseurs. Des institutions indépendantes de sûreté sont devenues une condition de son déploiement au risque de ne pas faciliter la stabilisation de la technologie, condition de sa viabilité économique. Dans cette perspective, l'article montre que la nouvelle séquence d'internalisation des coûts externes du nucléaire ouverte par Fukushima aura des effets limités sur les coûts, du fait des étapes antérieures d'approfondissement de la sûreté. La complexification de la technologie atteint une asymptote : on est en train de sortir du défi d'apprendre par des accidents. En revanche il faut arriver à garantir la sûreté maximale en s'attaquant à l'autre racine du problème, celui de l'indépendance et des compétences des autorités de sûreté dans tous les pays, ce qui ne se décrète pas. C'est pourtant à ce prix que sera préservé ce bien public mondial que constitue l'acceptation du nucléaire.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2012-05-01",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été publiés dans les plus grandes revues scientifiques"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 226,
+            "total_tokens": 226
+          }
+        }
+      },
+      "duration": 623
+    },
+    "retrievalTime": 2272,
+    "generationTime": 623,
+    "timestamp": "2025-07-12T12:48:21.585Z"
+  },
+  "server_context": {
+    "client_ip": "80.239.186.179",
+    "forwarded_for": "80.239.186.179",
+    "received_at": "2025-07-12T12:48:21.993891+00:00",
+    "server_version": "1.0.0"
+  }
+}

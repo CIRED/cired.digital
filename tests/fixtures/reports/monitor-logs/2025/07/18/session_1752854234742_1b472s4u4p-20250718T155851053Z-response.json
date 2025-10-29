@@ -1,0 +1,628 @@
+{
+  "sessionId": "session_1752854234742_1b472s4u4p5b1k282x",
+  "timestamp": "20250718T155851053Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752854326188_pvyyrtg",
+    "response": {
+      "results": {
+        "generated_answer": "Les scénarios de transition énergie-climat abordent les transports de différentes manières, en intégrant des transformations technologiques, économiques et comportementales. Voici quelques éléments clés issus des documents fournis :\n\n1. **Transformations technologiques** :\n   - **Motorisation des véhicules** : Dans le scénario Coopérations territoriales, une mutation importante de la motorisation des poids lourds est opérée, avec le soutien des pouvoirs publics. Les motorisations électriques et à l'hydrogène représentent chacune un tiers du parc roulant en 2050 [8057e50].\n   - **Développement des véhicules électriques** : Dans le scénario 4, il y a un développement important des véhicules électriques, représentant 40% du parc [444f892].\n\n2. **Infrastructures et politiques** :\n   - **Investissements dans les infrastructures** : Les scénarios 5 et 6 supposent des investissements massifs dans les infrastructures de transport, facilités par des incitations des pouvoirs publics [85fa432].\n   - **Politiques globales** : Les scénarios 5 et 6 supposent également un contexte international favorable à la mise en place de politiques globales de lutte contre le réchauffement climatique, avec des objectifs de réduction des émissions de CO2 [85fa432].\n\n3. **Réduction de la consommation énergétique** :\n   - **Baisse de la consommation unitaire** : Dans le scénario Coopérations territoriales, une baisse de 38% de la consommation unitaire globale des transports en kWh/t.km est obtenue [8057e50].\n   - **Réduction des importations** : La baisse de la consommation énergétique du transport de marchandises est également le résultat d'une réduction importante du niveau des importations [8057e50].\n\n4. **Transformations spécifiques aux scénarios** :\n   - **Scénario 1** : Poursuite des tendances actuelles avec une dépendance à la transformation du secteur routier et des besoins en agrocarburants [34f6188].\n   - **Scénario 2** : Décroissance des tonnes transportées et réduction des distances moyennes de transport, caractérisant un découplage de la demande de transport par rapport au PIB [e3e1e95].\n\n5. **Transports de marchandises** :\n   - **Structure modale** : Les scénarios abordent la structure modale du trafic de marchandises, avec des indicateurs logistiques et des consommations d'énergie et d'émissions spécifiques [746a748].\n   - **Transformations du système de transport** : Les transformations du système de production, de consommation et d'échanges contribuent à transformer la demande de transport de marchandises [e3e1e95].\n\nCes éléments montrent que les scénarios de transition énergie-climat envisagent des changements significatifs dans les transports, allant de l'innovation technologique à la mise en place de politiques globales, en passant par des modifications des comportements et des infrastructures.",
+        "citations": [
+          {
+            "id": "8057e50",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 568,
+              "end": 577
+            },
+            "payload": {
+              "id": "8057e505-e9ea-5942-af8a-a30a667b0363",
+              "document_id": "3eb539a5-02cd-5dbe-bac1-15a1999bc5da",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01638993710691824,
+              "text": "Document Title: Prospective du système alimentaire et de son empreinte énergétique et carbone\n\nText: Scénario Coopérations territoriales \nimportations intercontinentales. La consommation \ndénergie tous trafics confondus est de plus de deux \nfois inférieure à celle du scénario Tendanciel  (14,5 TWh). \nLa filière des fruits et légumes est la plus importante \navec près de 5 TWh dénergie consommée pour les \ntransports, puis les préparations alimentaires diverses \navec 2,8 TWh. A noter que les viandes et poissons mo -\nbilisent toujours du trafic aérien dans ce scénario. Cette \nbaisse conséquente de la consommation énergétique \ndu transport de marchandises est dabord le résultat de \nla réduction importante du niveau des importations, \nmais aussi dune baisse de 38% de la consommation \nunitaire globale des transports en kWh/t.km. En ef -\nfet, une mutation importante de la motorisation des \npoids lourds a été opérée avec le soutien des pouvoirs \npublics, les motorisations électriques et à lhydrogène \nreprésentent chacune un tiers du parc roulant en 2050. \nDes gains defficacité ont également été obtenus sur",
+              "metadata": {
+                "title": "Prospective du système alimentaire et de son empreinte énergétique et carbone",
+                "hal_id": "hal-04455411",
+                "authors": [
+                  "Carine Barbier",
+                  "Christian Couturier",
+                  "Patrice Dumas",
+                  "Emmanuelle Kesse-Guyot",
+                  "Julia Baudry",
+                  "Ivan Pharabod",
+                  "Prabodh Pourouchottaminh",
+                  "Florence Toilier"
+                ],
+                "version": "v0",
+                "citation": "Carine Barbier, Christian Couturier, Patrice Dumas, Emmanuelle Kesse-Guyot, Julia Baudry, et al.. Prospective du système alimentaire et de son empreinte énergétique et carbone. Centre international de recherche sur l’environnement et le développement (CIRED)-CNRS. 2022. ⟨hal-04455411⟩",
+                "source_url": "https://hal.science/hal-04455411",
+                "chunk_order": 195,
+                "description": "Aller vers la neutralité carbone du système alimentaire du champ à l’assiette à l’horizon 2050 impose une évolution sensible des régimes alimentaires et des arbitrages à différentes étapes : les systèmes de production agricoles et le partage d’usage des sols, le niveau d’importations et d’exportations de produits agricoles et alimentaires et le transport associé, les systèmes de transformation ou encore les modes d’approvisionnement des ménages. Six visions du système alimentaire en 2050 sont décrites dans ce rapport. Cinq scénarios sont communs à l’exer¬cice Transitions 2050 de l’Ademe et un scénario reprend le scénario SNBC-AMS 2019. Les résultats montrent tout d’abord l’importance des synergies possibles entre les préoccupations de santé publique, une plus grande autonomie alimentaire et la protection de l’environnement. La production agricole reste une source majeure d’émissions de gaz à effet de serre en 2050 non seulement pour l’ensemble du système alimentaire mais également dans l’empreinte carbone globale tous secteurs confondus. L’objectif de neutralité carbone impose de réduire drastiquement les émissions de méthane et d’oxyde d’azote. La réduction des pertes et des gaspillages, ainsi qu’une alimentation beaucoup plus végétale et nutritionnellement équilibrée sans surconsommation de calories ou de protéines, sont incontournables. L’évolution des pratiques agricoles doit permettre une meilleure gestion de l’azote en privilégiant la fixation symbiotique, celle-ci pourrait assurer la majorité des apports azotés. Rediriger la production agricole domestique vers le marché intérieur, relocaliser des filières déficitaires sur le terri¬toire, sont également des leviers importants pour réduire les importations de produits agricoles et agroalimentaires. Des millions d’hectares de terres agricoles dans les pays fournisseurs de la France seraient ainsi libérés. Une plus grande autonomie alimentaire peut permettre une division par trois du transport de marchandises, qui pèse de manière non négligeable dans l’empreinte carbone du système alimentaire. Les émissions de CO2 issues de la combustion des énergies fossiles représentent la moitié de l’empreinte carbone du système alimentaire actuel. La sobriété dans les usages, du champ à l’assiette, est la première étape. Elle permettra de limiter les besoins conséquents d’investissement dans des équipements, des motorisations, des organisations logistiques, des bâtiments plus efficaces énergétiquement et la généralisation de l’usage d’énergies décarbonées.",
+                "document_type": "REPORT",
+                "publication_date": "2022-06-01",
+                "semantic_rank": 3,
+                "full_text_rank": 200,
+                "associated_query": "les transports dans les scénarios de transition énergie-climat"
+              }
+            }
+          },
+          {
+            "id": "444f892",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 736,
+              "end": 745
+            },
+            "payload": {
+              "id": "444f8924-6147-5d34-9a96-49a1fa336fb6",
+              "document_id": "44c13335-7d44-5f9a-a1ce-0105947c271d",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016098765432098764,
+              "text": "Document Title: Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone\n\nText: 53 \n mais résultent dune volonté politique affichée . Les scénario s 3 et 4 se différencient \nnéanmoins par le niveau de décision, dans un cas les décisions sont prises au niveau national, \nalors que dans lautre cas les décisions sont prises au niveau local. Le scénario 3 privilégie les \ninvestissements dans les infrastructures très lourdes, le béton devenant la première arme \ncontre le réchauffement climatique, tandis que le scénario 4 fait le choix dun retour à la \nnature, délaissant les villes et les productions dénergies centralisées. Ces différences sont \nprises en compte dans lélaboration des hypothèses dévolution technologique . \n \n Scénario 3  Scénario 4  \nTransport  - Développement faible  des véhicules \nélectriques (5% du parc)  \n- Réduction de lutilisation des véhicules \nprivés  en centre dense/augmentation en \nzones peu denses  \n- Développement de carburants non issus du \npétrole (20% de CTL et 10% de \nbiocarburants)  - Développement important des véhic ules \nélectriques (40% du parc)",
+              "metadata": {
+                "title": "Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone",
+                "hal_id": "hal-00799918",
+                "authors": [
+                  "P. C. Allio",
+                  "H. Waisman"
+                ],
+                "version": "v0",
+                "citation": "P. C. Allio, H. Waisman. Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone \". 2012, pp.89. ⟨hal-00799918⟩",
+                "source_url": "https://hal.science/hal-00799918",
+                "chunk_order": 181,
+                "description": "This study presents the technological, organizational and macroeconomic contexts of the six transition scenarios to post carbon cities as defined in the program \"Repenser des villes dans une société post-carbone\" (CGDD-ADEME) . The results illustrate the need to act quickly to deal with the inertia of urban systems to allow a greater emissions reduction by 2050, and higher average growth over the next 50 years. For example, the introduction of a faster carbon tax allows a higher emission reduction of nearly 20 points and higher growth rate around 0.05 points. However, the pace of government action is not the only important variable. Acting on price signals only cannot achieve the goal of reducing emissions by a factor four by 2050. Actions on the price of carbon should be accompanied by measures of infrastructure (housing, transportation, energy production) , but also norms that affect urban form (urban tolls, densification). Finally, rethinking development patterns seems necessary to establish a post-carbon society. Economic tools as used in this report can highlight the objectives, but can hardly trace the path to achieve them. The transition to a post-carbon society must be guided by the entire scientific community, whether in the field of innovation technology or social sciences.",
+                "document_type": "REPORT",
+                "publication_date": "2012-04-05",
+                "semantic_rank": 4,
+                "full_text_rank": 200,
+                "associated_query": "les transports dans les scénarios de transition énergie-climat"
+              }
+            }
+          },
+          {
+            "id": "85fa432",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 988,
+              "end": 997
+            },
+            "payload": {
+              "id": "85fa432b-8d15-5766-ae20-c7d68c485787",
+              "document_id": "44c13335-7d44-5f9a-a1ce-0105947c271d",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015818181818181818,
+              "text": "Document Title: Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone\n\nText: comportement des agents peut être accompagnée dincitations par les pou voirs publics, et \nfacilitée par des investissements massifs dans les infrastructures de transport, de logement et \ndénergie. Ces deux scénario s reprennent donc des éléments des quatre scénario s précédents.  \n \n \na. Hypothèses des scénarios 5 et 6  \n \nPrix des énergi es et du carbone  \n \nLes scénario s 5 et 6 supposent lexistence dun contexte international favorable à la \nmise en place de politiques globales de lutte contre le réchauffement climatique.  Ainsi, dans \nle scénario 5, des objectifs de maîtrise et de réduction des CO2 sont définis par les différentes \nrégions du monde entre 2010 et 2020. Ces objectifs sont fixés à la suite dune forte hausse du \npétrole, qui passe de 50 dollars le prix du baril e n 2004 à 300 dollars en 2020. LUnion \nEuropéenne projette de réduire ses émissions de 80% en 2050. Ces objectifs, pris au niveau \ninternational, vont permettre, dans un contexte de rareté de la ressource pétrolière, de",
+              "metadata": {
+                "title": "Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone",
+                "hal_id": "hal-00799918",
+                "authors": [
+                  "P. C. Allio",
+                  "H. Waisman"
+                ],
+                "version": "v0",
+                "citation": "P. C. Allio, H. Waisman. Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone \". 2012, pp.89. ⟨hal-00799918⟩",
+                "source_url": "https://hal.science/hal-00799918",
+                "chunk_order": 214,
+                "description": "This study presents the technological, organizational and macroeconomic contexts of the six transition scenarios to post carbon cities as defined in the program \"Repenser des villes dans une société post-carbone\" (CGDD-ADEME) . The results illustrate the need to act quickly to deal with the inertia of urban systems to allow a greater emissions reduction by 2050, and higher average growth over the next 50 years. For example, the introduction of a faster carbon tax allows a higher emission reduction of nearly 20 points and higher growth rate around 0.05 points. However, the pace of government action is not the only important variable. Acting on price signals only cannot achieve the goal of reducing emissions by a factor four by 2050. Actions on the price of carbon should be accompanied by measures of infrastructure (housing, transportation, energy production) , but also norms that affect urban form (urban tolls, densification). Finally, rethinking development patterns seems necessary to establish a post-carbon society. Economic tools as used in this report can highlight the objectives, but can hardly trace the path to achieve them. The transition to a post-carbon society must be guided by the entire scientific community, whether in the field of innovation technology or social sciences.",
+                "document_type": "REPORT",
+                "publication_date": "2012-04-05",
+                "semantic_rank": 5,
+                "full_text_rank": 200,
+                "associated_query": "les transports dans les scénarios de transition énergie-climat"
+              }
+            }
+          },
+          {
+            "id": "85fa432",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1247,
+              "end": 1256
+            },
+            "payload": null
+          },
+          {
+            "id": "8057e50",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1493,
+              "end": 1502
+            },
+            "payload": null
+          },
+          {
+            "id": "8057e50",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1692,
+              "end": 1701
+            },
+            "payload": null
+          },
+          {
+            "id": "34f6188",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1903,
+              "end": 1912
+            },
+            "payload": {
+              "id": "34f6188e-e20d-5b36-878d-db77ad446809",
+              "document_id": "44c13335-7d44-5f9a-a1ce-0105947c271d",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone\n\nText: 69 \n 7. Résumé et Conclusions   \n \nCette étude présente les éléments de cadrage technologique, organisationnel et \nmacroéconomique des 6 scénario s de transition vers des villes post -carbone tels  que définis \npar la Mission prospective du Ministère  du Développement Durable.  \n \nFigure 47: Six se ntiers de transition  \n \nLes scénario s 1 et 2  privilégient la piste de linnovation technique, en réponse à des \nsignaux -prix. Le scénario montre une modification des comportements des agents suite à une \naugmentation brutale du prix du pétrole. Mais cette modi fication des comportements ne \npermet pas une réponse de grande ampleur, et les émissions ne diminuent que de 35% entre \n2004 et 2050, loin du facteur 4 que la France sest fixé en 2003. Le scénario 2 est un peu plus \noptimiste. Suite à des mesures prises par  la France, notamment par linstauration dune taxe \ncarbone, des technologies plus sobres en énergies fossiles et moins émettrices voient le jour et",
+              "metadata": {
+                "title": "Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone",
+                "hal_id": "hal-00799918",
+                "authors": [
+                  "P. C. Allio",
+                  "H. Waisman"
+                ],
+                "version": "v0",
+                "citation": "P. C. Allio, H. Waisman. Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone \". 2012, pp.89. ⟨hal-00799918⟩",
+                "source_url": "https://hal.science/hal-00799918",
+                "chunk_order": 235,
+                "description": "This study presents the technological, organizational and macroeconomic contexts of the six transition scenarios to post carbon cities as defined in the program \"Repenser des villes dans une société post-carbone\" (CGDD-ADEME) . The results illustrate the need to act quickly to deal with the inertia of urban systems to allow a greater emissions reduction by 2050, and higher average growth over the next 50 years. For example, the introduction of a faster carbon tax allows a higher emission reduction of nearly 20 points and higher growth rate around 0.05 points. However, the pace of government action is not the only important variable. Acting on price signals only cannot achieve the goal of reducing emissions by a factor four by 2050. Actions on the price of carbon should be accompanied by measures of infrastructure (housing, transportation, energy production) , but also norms that affect urban form (urban tolls, densification). Finally, rethinking development patterns seems necessary to establish a post-carbon society. Economic tools as used in this report can highlight the objectives, but can hardly trace the path to achieve them. The transition to a post-carbon society must be guided by the entire scientific community, whether in the field of innovation technology or social sciences.",
+                "document_type": "REPORT",
+                "publication_date": "2012-04-05",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "les transports dans les scénarios de transition énergie-climat"
+              }
+            }
+          },
+          {
+            "id": "e3e1e95",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2097,
+              "end": 2106
+            },
+            "payload": {
+              "id": "e3e1e95c-a9c6-5d48-b4bc-5456c1a5b8d8",
+              "document_id": "48669e50-2daa-5e96-9fdc-88f103f4500a",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.014555555555555556,
+              "text": "Document Title: Trajectoires de décarbonation profonde du transport de marchandises en France\n\nText: 12  Trajectoires de décarbonation profonde du transport de marchandises en FranceSystème de transport et système \nénergétique dans les deux scénarios\nCes transformations du système de production, de \nconsommation et déchanges contribuent à transformer \nla demande de transport de marchandises à la fois en \ntermes de quantités transportées mais également de \ndistances de transport (Cf. section   Marchandises et \nmobilité  du tableau de bord). Le scénario 1 connaît ain -\nsi une croissance importante des tonnes transportées et \nune quasi-stabilité des distances moyennes de transport \ntelles quelles existent aujourdhui, conservant dès lors \nun couplage entre la demande de transport et la crois -\nsance du PIB. Alors que le scénario 2 connaît une légère \ndécroissance des tonnes transportées et une réduction \ndes distances moyennes de transport par rapport à au -\njourdhui, caractérisant un découplage de la demande \nde transport par rapport au PIB. Derrière la structure de",
+              "metadata": {
+                "title": "Trajectoires de décarbonation profonde du transport de marchandises en France",
+                "hal_id": "hal-02865268",
+                "authors": [
+                  "Yann Briand",
+                  "Johannes Svensson",
+                  "Martin Koning",
+                  "François Combes",
+                  "Gwenaelle Lamy",
+                  "Prabodh Pourouchottamin",
+                  "Jean-Michel Cayla",
+                  "Julien Lefevre"
+                ],
+                "version": "v0",
+                "citation": "Yann Briand, Johannes Svensson, Martin Koning, François Combes, Gwenaelle Lamy, et al.. Trajectoires de décarbonation profonde du transport de marchandises en France. [Rapport de recherche] IFSTTAR - Institut Français des Sciences et Technologies des Transports, de l'Aménagement et des Réseaux. 2019, 48 p. ⟨hal-02865268⟩",
+                "source_url": "https://hal.science/hal-02865268",
+                "chunk_order": 100,
+                "description": "Ce document constitue le « rapport descriptif » des scénarios de décarbonation profonde du transport de marchandises en France à l&apos;horizon 2050. Il s&apos;adresse aux différents acteurs de la société qui souhaiteraient découvrir deux histoires cohérentes des principales transformations (sociétales, organisationnelles, technologiques et politiques) menant à la décarbonation de ce secteur ainsi que leurs effets sur un ensemble de dimensions comme le nombre de tonnes transportées, la part du rail, les circulations des véhicules routiers, la demande d&apos;énergie finale ou la place des différents vecteurs énergétiques. Il sera prochainement complété par un « rapport technique » détaillant les hypothèses sous-jacentes prises en compte.",
+                "document_type": "REPORT",
+                "publication_date": "2019-01-01",
+                "semantic_rank": 10,
+                "full_text_rank": 200,
+                "associated_query": "les transports dans les scénarios de transition énergie-climat"
+              }
+            }
+          },
+          {
+            "id": "746a748",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2334,
+              "end": 2343
+            },
+            "payload": {
+              "id": "746a7484-49cb-5acf-a209-37edd712487c",
+              "document_id": "48669e50-2daa-5e96-9fdc-88f103f4500a",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Trajectoires de décarbonation profonde du transport de marchandises en France\n\nText: Système de transport et système énergétique dans les deux scénarios  12\nLes infrastructures de transport et logistiques 12\nLes opérations logistiques et les offres de services 14\nLes véhicules de transport de marchandises 15\nLa production et distribution de carburants bas carbone 17\nTableau de bord  - Les indicateurs des transformations à 2050  19\nSynthèse graphique des scénarios  20\nScenario 1 - Présentation du tableau de bord  24\nMarchandises et mobilité 24\nStructure modale du trafic de marchandises 25\nIndicateurs logistiques 27\nTransport routier de marchandises 28\nConsommation dénergie et émissions 29\nScenario 2  Présentation du tableau de bord  32\nMarchandises et mobilité 32\nStructure modale du trafic de marchandises 33\nIndicateurs logistiques 35\nTransport routier de marchandises 36\nConsommation dénergie et émissions 37\nAnnexes  40EN FRANCE\nRAPPORT DESCRIPTIF, DÉCEMBRE 2019",
+              "metadata": {
+                "title": "Trajectoires de décarbonation profonde du transport de marchandises en France",
+                "hal_id": "hal-02865268",
+                "authors": [
+                  "Yann Briand",
+                  "Johannes Svensson",
+                  "Martin Koning",
+                  "François Combes",
+                  "Gwenaelle Lamy",
+                  "Prabodh Pourouchottamin",
+                  "Jean-Michel Cayla",
+                  "Julien Lefevre"
+                ],
+                "version": "v0",
+                "citation": "Yann Briand, Johannes Svensson, Martin Koning, François Combes, Gwenaelle Lamy, et al.. Trajectoires de décarbonation profonde du transport de marchandises en France. [Rapport de recherche] IFSTTAR - Institut Français des Sciences et Technologies des Transports, de l'Aménagement et des Réseaux. 2019, 48 p. ⟨hal-02865268⟩",
+                "source_url": "https://hal.science/hal-02865268",
+                "chunk_order": 12,
+                "description": "Ce document constitue le « rapport descriptif » des scénarios de décarbonation profonde du transport de marchandises en France à l&apos;horizon 2050. Il s&apos;adresse aux différents acteurs de la société qui souhaiteraient découvrir deux histoires cohérentes des principales transformations (sociétales, organisationnelles, technologiques et politiques) menant à la décarbonation de ce secteur ainsi que leurs effets sur un ensemble de dimensions comme le nombre de tonnes transportées, la part du rail, les circulations des véhicules routiers, la demande d&apos;énergie finale ou la place des différents vecteurs énergétiques. Il sera prochainement complété par un « rapport technique » détaillant les hypothèses sous-jacentes prises en compte.",
+                "document_type": "REPORT",
+                "publication_date": "2019-01-01",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "les transports dans les scénarios de transition énergie-climat"
+              }
+            }
+          },
+          {
+            "id": "e3e1e95",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 2538,
+              "end": 2547
+            },
+            "payload": null
+          }
+        ],
+        "search_results": [
+          {
+            "id": "746a7484-49cb-5acf-a209-37edd712487c",
+            "document_id": "48669e50-2daa-5e96-9fdc-88f103f4500a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Trajectoires de décarbonation profonde du transport de marchandises en France\n\nText: Système de transport et système énergétique dans les deux scénarios  12\nLes infrastructures de transport et logistiques 12\nLes opérations logistiques et les offres de services 14\nLes véhicules de transport de marchandises 15\nLa production et distribution de carburants bas carbone 17\nTableau de bord  - Les indicateurs des transformations à 2050  19\nSynthèse graphique des scénarios  20\nScenario 1 - Présentation du tableau de bord  24\nMarchandises et mobilité 24\nStructure modale du trafic de marchandises 25\nIndicateurs logistiques 27\nTransport routier de marchandises 28\nConsommation dénergie et émissions 29\nScenario 2  Présentation du tableau de bord  32\nMarchandises et mobilité 32\nStructure modale du trafic de marchandises 33\nIndicateurs logistiques 35\nTransport routier de marchandises 36\nConsommation dénergie et émissions 37\nAnnexes  40EN FRANCE\nRAPPORT DESCRIPTIF, DÉCEMBRE 2019",
+            "metadata": {
+              "title": "Trajectoires de décarbonation profonde du transport de marchandises en France",
+              "hal_id": "hal-02865268",
+              "authors": [
+                "Yann Briand",
+                "Johannes Svensson",
+                "Martin Koning",
+                "François Combes",
+                "Gwenaelle Lamy",
+                "Prabodh Pourouchottamin",
+                "Jean-Michel Cayla",
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Yann Briand, Johannes Svensson, Martin Koning, François Combes, Gwenaelle Lamy, et al.. Trajectoires de décarbonation profonde du transport de marchandises en France. [Rapport de recherche] IFSTTAR - Institut Français des Sciences et Technologies des Transports, de l'Aménagement et des Réseaux. 2019, 48 p. ⟨hal-02865268⟩",
+              "source_url": "https://hal.science/hal-02865268",
+              "chunk_order": 12,
+              "description": "Ce document constitue le « rapport descriptif » des scénarios de décarbonation profonde du transport de marchandises en France à l&apos;horizon 2050. Il s&apos;adresse aux différents acteurs de la société qui souhaiteraient découvrir deux histoires cohérentes des principales transformations (sociétales, organisationnelles, technologiques et politiques) menant à la décarbonation de ce secteur ainsi que leurs effets sur un ensemble de dimensions comme le nombre de tonnes transportées, la part du rail, les circulations des véhicules routiers, la demande d&apos;énergie finale ou la place des différents vecteurs énergétiques. Il sera prochainement complété par un « rapport technique » détaillant les hypothèses sous-jacentes prises en compte.",
+              "document_type": "REPORT",
+              "publication_date": "2019-01-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "les transports dans les scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "cd1468f1-9a83-5dd1-a5a3-dbdfb5a529e6",
+            "document_id": "48669e50-2daa-5e96-9fdc-88f103f4500a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Trajectoires de décarbonation profonde du transport de marchandises en France\n\nText: TRAJECTOIRES DE DÉCARBONATION PROFONDE   \ndu transport de marchandises\nLa méthode et le choix des scénarios  3\nNarratifs  - Le récit des transformations à 2050  7\nRésumé des deux scénarios  7\nLes principales hypothèses de cadrage sur la macrostructure économique et sociale et les transformations \ndu système de production, de consommation et déchanges de marchandises  8\nHypothèses communes aux deux scénarios 8\nTransformations spécifiques au scénario 1 8\nTransformations spécifiques au scénario 2 9\nSystème de transport et système énergétique dans les deux scénarios  12\nLes infrastructures de transport et logistiques 12\nLes opérations logistiques et les offres de services 14\nLes véhicules de transport de marchandises 15\nLa production et distribution de carburants bas carbone 17\nTableau de bord  - Les indicateurs des transformations à 2050  19\nSynthèse graphique des scénarios  20\nScenario 1 - Présentation du tableau de bord  24\nMarchandises et mobilité 24\nStructure modale du trafic de marchandises 25",
+            "metadata": {
+              "title": "Trajectoires de décarbonation profonde du transport de marchandises en France",
+              "hal_id": "hal-02865268",
+              "authors": [
+                "Yann Briand",
+                "Johannes Svensson",
+                "Martin Koning",
+                "François Combes",
+                "Gwenaelle Lamy",
+                "Prabodh Pourouchottamin",
+                "Jean-Michel Cayla",
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Yann Briand, Johannes Svensson, Martin Koning, François Combes, Gwenaelle Lamy, et al.. Trajectoires de décarbonation profonde du transport de marchandises en France. [Rapport de recherche] IFSTTAR - Institut Français des Sciences et Technologies des Transports, de l'Aménagement et des Réseaux. 2019, 48 p. ⟨hal-02865268⟩",
+              "source_url": "https://hal.science/hal-02865268",
+              "chunk_order": 11,
+              "description": "Ce document constitue le « rapport descriptif » des scénarios de décarbonation profonde du transport de marchandises en France à l&apos;horizon 2050. Il s&apos;adresse aux différents acteurs de la société qui souhaiteraient découvrir deux histoires cohérentes des principales transformations (sociétales, organisationnelles, technologiques et politiques) menant à la décarbonation de ce secteur ainsi que leurs effets sur un ensemble de dimensions comme le nombre de tonnes transportées, la part du rail, les circulations des véhicules routiers, la demande d&apos;énergie finale ou la place des différents vecteurs énergétiques. Il sera prochainement complété par un « rapport technique » détaillant les hypothèses sous-jacentes prises en compte.",
+              "document_type": "REPORT",
+              "publication_date": "2019-01-01",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "les transports dans les scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "8057e505-e9ea-5942-af8a-a30a667b0363",
+            "document_id": "3eb539a5-02cd-5dbe-bac1-15a1999bc5da",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Prospective du système alimentaire et de son empreinte énergétique et carbone\n\nText: Scénario Coopérations territoriales \nimportations intercontinentales. La consommation \ndénergie tous trafics confondus est de plus de deux \nfois inférieure à celle du scénario Tendanciel  (14,5 TWh). \nLa filière des fruits et légumes est la plus importante \navec près de 5 TWh dénergie consommée pour les \ntransports, puis les préparations alimentaires diverses \navec 2,8 TWh. A noter que les viandes et poissons mo -\nbilisent toujours du trafic aérien dans ce scénario. Cette \nbaisse conséquente de la consommation énergétique \ndu transport de marchandises est dabord le résultat de \nla réduction importante du niveau des importations, \nmais aussi dune baisse de 38% de la consommation \nunitaire globale des transports en kWh/t.km. En ef -\nfet, une mutation importante de la motorisation des \npoids lourds a été opérée avec le soutien des pouvoirs \npublics, les motorisations électriques et à lhydrogène \nreprésentent chacune un tiers du parc roulant en 2050. \nDes gains defficacité ont également été obtenus sur",
+            "metadata": {
+              "title": "Prospective du système alimentaire et de son empreinte énergétique et carbone",
+              "hal_id": "hal-04455411",
+              "authors": [
+                "Carine Barbier",
+                "Christian Couturier",
+                "Patrice Dumas",
+                "Emmanuelle Kesse-Guyot",
+                "Julia Baudry",
+                "Ivan Pharabod",
+                "Prabodh Pourouchottaminh",
+                "Florence Toilier"
+              ],
+              "version": "v0",
+              "citation": "Carine Barbier, Christian Couturier, Patrice Dumas, Emmanuelle Kesse-Guyot, Julia Baudry, et al.. Prospective du système alimentaire et de son empreinte énergétique et carbone. Centre international de recherche sur l’environnement et le développement (CIRED)-CNRS. 2022. ⟨hal-04455411⟩",
+              "source_url": "https://hal.science/hal-04455411",
+              "chunk_order": 195,
+              "description": "Aller vers la neutralité carbone du système alimentaire du champ à l’assiette à l’horizon 2050 impose une évolution sensible des régimes alimentaires et des arbitrages à différentes étapes : les systèmes de production agricoles et le partage d’usage des sols, le niveau d’importations et d’exportations de produits agricoles et alimentaires et le transport associé, les systèmes de transformation ou encore les modes d’approvisionnement des ménages. Six visions du système alimentaire en 2050 sont décrites dans ce rapport. Cinq scénarios sont communs à l’exer¬cice Transitions 2050 de l’Ademe et un scénario reprend le scénario SNBC-AMS 2019. Les résultats montrent tout d’abord l’importance des synergies possibles entre les préoccupations de santé publique, une plus grande autonomie alimentaire et la protection de l’environnement. La production agricole reste une source majeure d’émissions de gaz à effet de serre en 2050 non seulement pour l’ensemble du système alimentaire mais également dans l’empreinte carbone globale tous secteurs confondus. L’objectif de neutralité carbone impose de réduire drastiquement les émissions de méthane et d’oxyde d’azote. La réduction des pertes et des gaspillages, ainsi qu’une alimentation beaucoup plus végétale et nutritionnellement équilibrée sans surconsommation de calories ou de protéines, sont incontournables. L’évolution des pratiques agricoles doit permettre une meilleure gestion de l’azote en privilégiant la fixation symbiotique, celle-ci pourrait assurer la majorité des apports azotés. Rediriger la production agricole domestique vers le marché intérieur, relocaliser des filières déficitaires sur le terri¬toire, sont également des leviers importants pour réduire les importations de produits agricoles et agroalimentaires. Des millions d’hectares de terres agricoles dans les pays fournisseurs de la France seraient ainsi libérés. Une plus grande autonomie alimentaire peut permettre une division par trois du transport de marchandises, qui pèse de manière non négligeable dans l’empreinte carbone du système alimentaire. Les émissions de CO2 issues de la combustion des énergies fossiles représentent la moitié de l’empreinte carbone du système alimentaire actuel. La sobriété dans les usages, du champ à l’assiette, est la première étape. Elle permettra de limiter les besoins conséquents d’investissement dans des équipements, des motorisations, des organisations logistiques, des bâtiments plus efficaces énergétiquement et la généralisation de l’usage d’énergies décarbonées.",
+              "document_type": "REPORT",
+              "publication_date": "2022-06-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "les transports dans les scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "444f8924-6147-5d34-9a96-49a1fa336fb6",
+            "document_id": "44c13335-7d44-5f9a-a1ce-0105947c271d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone\n\nText: 53 \n mais résultent dune volonté politique affichée . Les scénario s 3 et 4 se différencient \nnéanmoins par le niveau de décision, dans un cas les décisions sont prises au niveau national, \nalors que dans lautre cas les décisions sont prises au niveau local. Le scénario 3 privilégie les \ninvestissements dans les infrastructures très lourdes, le béton devenant la première arme \ncontre le réchauffement climatique, tandis que le scénario 4 fait le choix dun retour à la \nnature, délaissant les villes et les productions dénergies centralisées. Ces différences sont \nprises en compte dans lélaboration des hypothèses dévolution technologique . \n \n Scénario 3  Scénario 4  \nTransport  - Développement faible  des véhicules \nélectriques (5% du parc)  \n- Réduction de lutilisation des véhicules \nprivés  en centre dense/augmentation en \nzones peu denses  \n- Développement de carburants non issus du \npétrole (20% de CTL et 10% de \nbiocarburants)  - Développement important des véhic ules \nélectriques (40% du parc)",
+            "metadata": {
+              "title": "Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone",
+              "hal_id": "hal-00799918",
+              "authors": [
+                "P. C. Allio",
+                "H. Waisman"
+              ],
+              "version": "v0",
+              "citation": "P. C. Allio, H. Waisman. Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone \". 2012, pp.89. ⟨hal-00799918⟩",
+              "source_url": "https://hal.science/hal-00799918",
+              "chunk_order": 181,
+              "description": "This study presents the technological, organizational and macroeconomic contexts of the six transition scenarios to post carbon cities as defined in the program \"Repenser des villes dans une société post-carbone\" (CGDD-ADEME) . The results illustrate the need to act quickly to deal with the inertia of urban systems to allow a greater emissions reduction by 2050, and higher average growth over the next 50 years. For example, the introduction of a faster carbon tax allows a higher emission reduction of nearly 20 points and higher growth rate around 0.05 points. However, the pace of government action is not the only important variable. Acting on price signals only cannot achieve the goal of reducing emissions by a factor four by 2050. Actions on the price of carbon should be accompanied by measures of infrastructure (housing, transportation, energy production) , but also norms that affect urban form (urban tolls, densification). Finally, rethinking development patterns seems necessary to establish a post-carbon society. Economic tools as used in this report can highlight the objectives, but can hardly trace the path to achieve them. The transition to a post-carbon society must be guided by the entire scientific community, whether in the field of innovation technology or social sciences.",
+              "document_type": "REPORT",
+              "publication_date": "2012-04-05",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "les transports dans les scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "85fa432b-8d15-5766-ae20-c7d68c485787",
+            "document_id": "44c13335-7d44-5f9a-a1ce-0105947c271d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone\n\nText: comportement des agents peut être accompagnée dincitations par les pou voirs publics, et \nfacilitée par des investissements massifs dans les infrastructures de transport, de logement et \ndénergie. Ces deux scénario s reprennent donc des éléments des quatre scénario s précédents.  \n \n \na. Hypothèses des scénarios 5 et 6  \n \nPrix des énergi es et du carbone  \n \nLes scénario s 5 et 6 supposent lexistence dun contexte international favorable à la \nmise en place de politiques globales de lutte contre le réchauffement climatique.  Ainsi, dans \nle scénario 5, des objectifs de maîtrise et de réduction des CO2 sont définis par les différentes \nrégions du monde entre 2010 et 2020. Ces objectifs sont fixés à la suite dune forte hausse du \npétrole, qui passe de 50 dollars le prix du baril e n 2004 à 300 dollars en 2020. LUnion \nEuropéenne projette de réduire ses émissions de 80% en 2050. Ces objectifs, pris au niveau \ninternational, vont permettre, dans un contexte de rareté de la ressource pétrolière, de",
+            "metadata": {
+              "title": "Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone",
+              "hal_id": "hal-00799918",
+              "authors": [
+                "P. C. Allio",
+                "H. Waisman"
+              ],
+              "version": "v0",
+              "citation": "P. C. Allio, H. Waisman. Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone \". 2012, pp.89. ⟨hal-00799918⟩",
+              "source_url": "https://hal.science/hal-00799918",
+              "chunk_order": 214,
+              "description": "This study presents the technological, organizational and macroeconomic contexts of the six transition scenarios to post carbon cities as defined in the program \"Repenser des villes dans une société post-carbone\" (CGDD-ADEME) . The results illustrate the need to act quickly to deal with the inertia of urban systems to allow a greater emissions reduction by 2050, and higher average growth over the next 50 years. For example, the introduction of a faster carbon tax allows a higher emission reduction of nearly 20 points and higher growth rate around 0.05 points. However, the pace of government action is not the only important variable. Acting on price signals only cannot achieve the goal of reducing emissions by a factor four by 2050. Actions on the price of carbon should be accompanied by measures of infrastructure (housing, transportation, energy production) , but also norms that affect urban form (urban tolls, densification). Finally, rethinking development patterns seems necessary to establish a post-carbon society. Economic tools as used in this report can highlight the objectives, but can hardly trace the path to achieve them. The transition to a post-carbon society must be guided by the entire scientific community, whether in the field of innovation technology or social sciences.",
+              "document_type": "REPORT",
+              "publication_date": "2012-04-05",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "les transports dans les scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "0bc4e08c-bb67-506c-91b8-65c294103114",
+            "document_id": "48669e50-2daa-5e96-9fdc-88f103f4500a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Trajectoires de décarbonation profonde du transport de marchandises en France\n\nText: Trajectoires de décarbonation profonde du transport de marchandises en France  72Narratifs  \nLe récit des transformations à 2050\nCette partie présente lensemble des évolutions des différents déterminants des transformations du secteur. Après \nun court résumé des deux scénarios, le récit des principales hypothèses de cadrage sur les transformations de la \nmacrostructure économique et sociale et des systèmes de production, de consommation et déchanges de marchan -\ndises qui définissent ces deux mondes sont présentées ainsi que leurs interactions avec lévolution du système de \ntransport et du système énergétique.\nRésumé des deux scénarios\nScénario 1 :  Une poursuite des tendances structurelles \nrendant la décarbonation du secteur dépendante de la \ntransformation du secteur routier et de forts besoins en \nagrocarburants.\nLa société poursuit les tendances actuelles pour lévo -\nlution des systèmes de production, de consommation \net déchange sans intégrer les contraintes que ce mo -",
+            "metadata": {
+              "title": "Trajectoires de décarbonation profonde du transport de marchandises en France",
+              "hal_id": "hal-02865268",
+              "authors": [
+                "Yann Briand",
+                "Johannes Svensson",
+                "Martin Koning",
+                "François Combes",
+                "Gwenaelle Lamy",
+                "Prabodh Pourouchottamin",
+                "Jean-Michel Cayla",
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Yann Briand, Johannes Svensson, Martin Koning, François Combes, Gwenaelle Lamy, et al.. Trajectoires de décarbonation profonde du transport de marchandises en France. [Rapport de recherche] IFSTTAR - Institut Français des Sciences et Technologies des Transports, de l'Aménagement et des Réseaux. 2019, 48 p. ⟨hal-02865268⟩",
+              "source_url": "https://hal.science/hal-02865268",
+              "chunk_order": 54,
+              "description": "Ce document constitue le « rapport descriptif » des scénarios de décarbonation profonde du transport de marchandises en France à l&apos;horizon 2050. Il s&apos;adresse aux différents acteurs de la société qui souhaiteraient découvrir deux histoires cohérentes des principales transformations (sociétales, organisationnelles, technologiques et politiques) menant à la décarbonation de ce secteur ainsi que leurs effets sur un ensemble de dimensions comme le nombre de tonnes transportées, la part du rail, les circulations des véhicules routiers, la demande d&apos;énergie finale ou la place des différents vecteurs énergétiques. Il sera prochainement complété par un « rapport technique » détaillant les hypothèses sous-jacentes prises en compte.",
+              "document_type": "REPORT",
+              "publication_date": "2019-01-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "les transports dans les scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "34f6188e-e20d-5b36-878d-db77ad446809",
+            "document_id": "44c13335-7d44-5f9a-a1ce-0105947c271d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone\n\nText: 69 \n 7. Résumé et Conclusions   \n \nCette étude présente les éléments de cadrage technologique, organisationnel et \nmacroéconomique des 6 scénario s de transition vers des villes post -carbone tels  que définis \npar la Mission prospective du Ministère  du Développement Durable.  \n \nFigure 47: Six se ntiers de transition  \n \nLes scénario s 1 et 2  privilégient la piste de linnovation technique, en réponse à des \nsignaux -prix. Le scénario montre une modification des comportements des agents suite à une \naugmentation brutale du prix du pétrole. Mais cette modi fication des comportements ne \npermet pas une réponse de grande ampleur, et les émissions ne diminuent que de 35% entre \n2004 et 2050, loin du facteur 4 que la France sest fixé en 2003. Le scénario 2 est un peu plus \noptimiste. Suite à des mesures prises par  la France, notamment par linstauration dune taxe \ncarbone, des technologies plus sobres en énergies fossiles et moins émettrices voient le jour et",
+            "metadata": {
+              "title": "Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone",
+              "hal_id": "hal-00799918",
+              "authors": [
+                "P. C. Allio",
+                "H. Waisman"
+              ],
+              "version": "v0",
+              "citation": "P. C. Allio, H. Waisman. Prospective quantitative des dynamiques urbaines: Enjeux, obstacles et leviers de la ville \" post-carbone \". 2012, pp.89. ⟨hal-00799918⟩",
+              "source_url": "https://hal.science/hal-00799918",
+              "chunk_order": 235,
+              "description": "This study presents the technological, organizational and macroeconomic contexts of the six transition scenarios to post carbon cities as defined in the program \"Repenser des villes dans une société post-carbone\" (CGDD-ADEME) . The results illustrate the need to act quickly to deal with the inertia of urban systems to allow a greater emissions reduction by 2050, and higher average growth over the next 50 years. For example, the introduction of a faster carbon tax allows a higher emission reduction of nearly 20 points and higher growth rate around 0.05 points. However, the pace of government action is not the only important variable. Acting on price signals only cannot achieve the goal of reducing emissions by a factor four by 2050. Actions on the price of carbon should be accompanied by measures of infrastructure (housing, transportation, energy production) , but also norms that affect urban form (urban tolls, densification). Finally, rethinking development patterns seems necessary to establish a post-carbon society. Economic tools as used in this report can highlight the objectives, but can hardly trace the path to achieve them. The transition to a post-carbon society must be guided by the entire scientific community, whether in the field of innovation technology or social sciences.",
+              "document_type": "REPORT",
+              "publication_date": "2012-04-05",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "les transports dans les scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "2805cc71-a321-5fe0-be84-bf5cade2c520",
+            "document_id": "b4b4cd5f-36df-53df-b062-0cc15c2498c3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Quel rôle pour les scénarios Facteur 4 dans la construction de la décision publique ?\n\nText: notables de la demande d'énergie et de c hangemen t de comp ortemen t.\nAu nal, la plupart des scénarios décriv en t une réduction de la demande d'énergie nale par\nhabitan t. Les mo y ens mis en o euvre p our y parv enir son t div ersiés : v éhicules plus économes et\nmoins émetteurs, transferts mo daux (Enerdata m ultiplie le rail par 5,1, le uvial par 3,5), rupture\ntec hnologique concernan t l'énergie utilisée (h ydrogène dans MIES-H2, v éhicules au gaz dans Syrota-\nMark al) ou baisse des km parcourus obten us par une limitation des b esoins de mobilité dép endan t\nd'un v éhicule individuel. Le scénario négaW att prév oit quan t à lui une légère augmen tation des km\nparcourus par p ersonne, couplée à une augmen tation de l'utilisation des transp orts en comm un, un\nrecours aux agro carburan ts et un taux de remplissage sup érieur. Il est toutefois dicile d'év aluer\nla part de c hacune de ces orien tations dans les réductions d'émissions.\n3.2.2 Le secteur des bâtimen ts",
+            "metadata": {
+              "doi": "10.4000/developpementdurable.8802",
+              "title": "Quel rôle pour les scénarios Facteur 4 dans la construction de la décision publique ?",
+              "hal_id": "halshs-00797419",
+              "authors": "['Sandrine Mathy', 'Meike Fink', 'Ruben Bibas']",
+              "version": "v0",
+              "citation": "Sandrine Mathy, Meike Fink, Ruben Bibas. Quel rôle pour les scénarios Facteur 4 dans la construction de la décision publique ?. Développement durable et territoires, 2011, 2 (1), pp.1-22. ⟨10.4000/developpementdurable.8802⟩. ⟨halshs-00797419⟩",
+              "source_url": "https://doi.org/10.4000/developpementdurable.8802",
+              "chunk_order": 63,
+              "description": "Plusieurs exercices de prospective de long terme ont été élaborés pour définir les trajectoires énergétiques permettant de respecter le Facteur 4 en France. Sept ont été identifiés et sont analysés à la fois du point de vue méthodologique et des résultats. Une réflexion est alors menée sur le rôle de la scénarisation. Paradoxalement, les résultats de ces analyses montrent qu'un seul des scénarios permet d'atteindre le Facteur 4, démontrant ainsi les limites de ces études. D'un point de vue méthodologique, les modèles d'ingénieur utilisés apparaissent comme des boites noires, avec leurs propres hypothèses technologiques et qui rendent les résultats peu appropriables par le non-spécialiste. L'enjeu est donc d'accompagner les travaux de modélisation par des échanges au sein d'une plate-forme entre modélisateurs, économistes, technologues, sociologues et représentants de la société civile. Pour renforcer leur légitimité, ces scénarios doivent ainsi participer à l'appropriation sociale et politique des résultats scientifiques.",
+              "document_type": "ART",
+              "publication_date": "2011-01-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "les transports dans les scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "598579a3-2e66-5ab2-a1e1-dfbbb15856d8",
+            "document_id": "48669e50-2daa-5e96-9fdc-88f103f4500a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Trajectoires de décarbonation profonde du transport de marchandises en France\n\nText: transport et du système énergétique.\nRésumé des deux scénarios\nScénario 1 :  Une poursuite des tendances structurelles \nrendant la décarbonation du secteur dépendante de la \ntransformation du secteur routier et de forts besoins en \nagrocarburants.\nLa société poursuit les tendances actuelles pour lévo -\nlution des systèmes de production, de consommation \net déchange sans intégrer les contraintes que ce mo -\ndèle impose sur les choix dévolution du système de \ntransport et dénergie. Les flux déchanges continuent \nà être intenses et se font toujours de plus en plus \nrapidement. La structure des activités et donc des \ndistances moyennes de transport se stabilise, après les \naugmentations importantes de ces dernières décennies, \net la demande de transport continue daugmenter \nprincipalement en quantité de tonnes transportées. \nLe transport routier continue à se développer sur tous \nles segments de transport (national, import, export et \ntransit) soutenu par des investissements vers le routier",
+            "metadata": {
+              "title": "Trajectoires de décarbonation profonde du transport de marchandises en France",
+              "hal_id": "hal-02865268",
+              "authors": [
+                "Yann Briand",
+                "Johannes Svensson",
+                "Martin Koning",
+                "François Combes",
+                "Gwenaelle Lamy",
+                "Prabodh Pourouchottamin",
+                "Jean-Michel Cayla",
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Yann Briand, Johannes Svensson, Martin Koning, François Combes, Gwenaelle Lamy, et al.. Trajectoires de décarbonation profonde du transport de marchandises en France. [Rapport de recherche] IFSTTAR - Institut Français des Sciences et Technologies des Transports, de l'Aménagement et des Réseaux. 2019, 48 p. ⟨hal-02865268⟩",
+              "source_url": "https://hal.science/hal-02865268",
+              "chunk_order": 55,
+              "description": "Ce document constitue le « rapport descriptif » des scénarios de décarbonation profonde du transport de marchandises en France à l&apos;horizon 2050. Il s&apos;adresse aux différents acteurs de la société qui souhaiteraient découvrir deux histoires cohérentes des principales transformations (sociétales, organisationnelles, technologiques et politiques) menant à la décarbonation de ce secteur ainsi que leurs effets sur un ensemble de dimensions comme le nombre de tonnes transportées, la part du rail, les circulations des véhicules routiers, la demande d&apos;énergie finale ou la place des différents vecteurs énergétiques. Il sera prochainement complété par un « rapport technique » détaillant les hypothèses sous-jacentes prises en compte.",
+              "document_type": "REPORT",
+              "publication_date": "2019-01-01",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "les transports dans les scénarios de transition énergie-climat"
+            }
+          },
+          {
+            "id": "e3e1e95c-a9c6-5d48-b4bc-5456c1a5b8d8",
+            "document_id": "48669e50-2daa-5e96-9fdc-88f103f4500a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Trajectoires de décarbonation profonde du transport de marchandises en France\n\nText: 12  Trajectoires de décarbonation profonde du transport de marchandises en FranceSystème de transport et système \nénergétique dans les deux scénarios\nCes transformations du système de production, de \nconsommation et déchanges contribuent à transformer \nla demande de transport de marchandises à la fois en \ntermes de quantités transportées mais également de \ndistances de transport (Cf. section   Marchandises et \nmobilité  du tableau de bord). Le scénario 1 connaît ain -\nsi une croissance importante des tonnes transportées et \nune quasi-stabilité des distances moyennes de transport \ntelles quelles existent aujourdhui, conservant dès lors \nun couplage entre la demande de transport et la crois -\nsance du PIB. Alors que le scénario 2 connaît une légère \ndécroissance des tonnes transportées et une réduction \ndes distances moyennes de transport par rapport à au -\njourdhui, caractérisant un découplage de la demande \nde transport par rapport au PIB. Derrière la structure de",
+            "metadata": {
+              "title": "Trajectoires de décarbonation profonde du transport de marchandises en France",
+              "hal_id": "hal-02865268",
+              "authors": [
+                "Yann Briand",
+                "Johannes Svensson",
+                "Martin Koning",
+                "François Combes",
+                "Gwenaelle Lamy",
+                "Prabodh Pourouchottamin",
+                "Jean-Michel Cayla",
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Yann Briand, Johannes Svensson, Martin Koning, François Combes, Gwenaelle Lamy, et al.. Trajectoires de décarbonation profonde du transport de marchandises en France. [Rapport de recherche] IFSTTAR - Institut Français des Sciences et Technologies des Transports, de l'Aménagement et des Réseaux. 2019, 48 p. ⟨hal-02865268⟩",
+              "source_url": "https://hal.science/hal-02865268",
+              "chunk_order": 100,
+              "description": "Ce document constitue le « rapport descriptif » des scénarios de décarbonation profonde du transport de marchandises en France à l&apos;horizon 2050. Il s&apos;adresse aux différents acteurs de la société qui souhaiteraient découvrir deux histoires cohérentes des principales transformations (sociétales, organisationnelles, technologiques et politiques) menant à la décarbonation de ce secteur ainsi que leurs effets sur un ensemble de dimensions comme le nombre de tonnes transportées, la part du rail, les circulations des véhicules routiers, la demande d&apos;énergie finale ou la place des différents vecteurs énergétiques. Il sera prochainement complété par un « rapport technique » détaillant les hypothèses sous-jacentes prises en compte.",
+              "document_type": "REPORT",
+              "publication_date": "2019-01-01",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "les transports dans les scénarios de transition énergie-climat"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2835,
+            "total_tokens": 2835
+          }
+        }
+      },
+      "duration": 3450
+    },
+    "retrievalTime": 1406,
+    "generationTime": 3450,
+    "timestamp": "2025-07-18T15:58:51.053Z"
+  },
+  "server_context": {
+    "client_ip": "92.170.78.106",
+    "forwarded_for": "92.170.78.106",
+    "received_at": "2025-07-18T15:58:51.184377+00:00",
+    "server_version": "1.0.0"
+  }
+}

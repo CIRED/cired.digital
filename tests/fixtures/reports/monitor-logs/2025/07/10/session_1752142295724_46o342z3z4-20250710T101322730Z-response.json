@@ -1,0 +1,588 @@
+{
+  "sessionId": "session_1752142295724_46o342z3z4w321m4u",
+  "timestamp": "20250710T101322730Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752142398023_i895s1u",
+    "response": {
+      "results": {
+        "generated_answer": "Vietnam faces several significant challenges in its transition towards sustainable development and a green energy future. Here are some key challenges highlighted in the provided context:\n\n1. **Balancing Growth with Inclusive Development**: Vietnam has made remarkable progress in reducing poverty but now must address rising inequality, environmental degradation, and climate vulnerability while sustaining economic growth. This requires a balanced approach that combines dynamic growth with inclusive development, traditional values with modern innovation, and national sovereignty with global citizenship [3631a0b].\n\n2. **Energy Transition and Just Energy Transition Partnership (JETP)**: Vietnam's participation in the JETP with the G7 is a crucial step towards clean energy, but it faces implementation challenges. These include international cooperation, governance structures, considerations of justice and equity, technology solutions, and innovative financing methods [a34dd30].\n\n3. **Technological Challenges**: As Vietnam aims to compete at the technological frontier in renewable energy, it encounters complex challenges. For instance, while Vietnam has been able to leverage second-mover advantages in renewable energy technologies, it now needs to focus on frontier innovation, such as developing advanced wind turbine technologies [9f46743].\n\n4. **Funding and Financial Challenges**: The energy transition requires substantial investment. Vietnam needs around $2 billion per year for grid upgrades and $10 billion for generation facilities. Attracting private capital is crucial, and mechanisms like build-operate-transfer (BOT) are being considered. However, domestic public funding is limited, and the recent fossil fuel crisis has depleted savings [143638e], [1cf092d].\n\n5. **Environmental Impact and Planning**: Balancing the need for clean energy with the preservation of natural habitats is a significant challenge. Careful planning and environmental impact assessments are necessary to ensure that renewable energy projects do not harm sensitive ecosystems [1cf092d].\n\n6. **International Collaboration and Governance**: Effective international cooperation and governance structures are essential for Vietnam's energy transition. This includes participating in multilateral agreements and platforms, such as the G20's Country Platforms and ASEAN cooperation, to promote shared strategic visions and priorities [85df7c1].\n\n7. **Implementation of Power Development Plan 8 (PDP8)**: The PDP8 sets ambitious targets for renewable energy growth and carbon neutrality by 2050. However, implementing this plan poses challenges, including securing significant annual funding, expanding the power grid, and managing the risk of dependence on imported liquefied natural gas (LNG) [06e2fa3].\n\n8. **Legal and Regulatory Frameworks**: Developing innovative financing models and legal frameworks to attract private capital for renewable energy projects is another challenge. This includes exploring options like green bonds and ensuring that electricity prices remain competitive while ensuring a reliable supply [c59c988].\n\nThese challenges highlight the multifaceted nature of Vietnam's transition, requiring a comprehensive and coordinated approach to achieve sustainable and inclusive development.",
+        "citations": [
+          {
+            "id": "3631a0b",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 608,
+              "end": 617
+            },
+            "payload": {
+              "id": "3631a0b9-4050-59df-a617-4aef0f6e6360",
+              "document_id": "fc3acd85-e465-5328-9338-402fdc0218f1",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01755469301340861,
+              "text": "Document Title: Compassion and global issues: a scientist's perspective\n\nText: deeply embedded in Vietnamese culture.\nToday, Vietnam stands at a crossroads. Having achieved remarkable progress in\nreducing poverty, it now must sustain this momentum while addressing rising \ninequality, environmental degradation, and climate vulnerability. This \nchallenge offers a unique opportunity: to chart a new course - one that balances\ndynamic growth with inclusive development, traditional values with modern \ninnovation, national sovereignty with global citizenship. What if Vietnam were\nto place compassion at the center of this journey? To use its experience of \novercoming division and hardship to model a new kind of development - one \ngrounded in empathy, shared prosperity, and harmony with nature?\nVietnam would become a global leader in the just energy transition - not only \nby replacing fossil fuels by renewable energy, but by ensuring that nobody is \nleft behind in the process. By investing in re-skilling programs, social",
+              "metadata": {
+                "title": "Compassion and global issues: a scientist's perspective",
+                "hal_id": "hal-04878179",
+                "authors": "['Minh Ha-Duong']",
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Compassion and global issues: a scientist's perspective. 2024. ⟨hal-04878179⟩",
+                "source_url": "https://hal.science/hal-04878179",
+                "chunk_order": 15,
+                "description": "This keynote addresses three points: 1. The IPCC's contribution to humanity that led to its Nobel Peace Prize. 2. Beyond climate change, a concerned scientist's view on global issues, with challenges and reasons for hope. 3. The importance of compassion in addressing global issues, with examples.",
+                "document_type": "OTHER",
+                "publication_date": "2024-04-18",
+                "semantic_rank": 2,
+                "full_text_rank": 59,
+                "associated_query": "Transition challenge in Vietnam"
+              }
+            }
+          },
+          {
+            "id": "a34dd30",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 977,
+              "end": 986
+            },
+            "payload": {
+              "id": "a34dd30a-1d82-5590-bea6-dab0da792b2d",
+              "document_id": "e2cd7279-d0a5-5cf7-99bc-0e6af3fe71f4",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017156862745098037,
+              "text": "Document Title: International collaboration on the energy transition in Vietnam\n\nText: Keynote address to the Colloque ICISE \"Questions environnementales: des réponses\nscientifiques et juridiques\" . Quy Nhon, Vietnam, 8 juillet 2023  \nInternational collaboration on the energy transition in Vietnam\nMinh Ha-Duong, CIRED/CNRS\n2022-07-07\n7313 words\nAbstract\nMany developing countries, including Vietnam, are striving to transform their energy \nsystems into more sustainable ones. They are leveraging initiatives like the Just Energy \nTransition Partnership (JETP) with the G7 . Although Vietnam's participation in the JETP is a \nvital step in its journey towards clean energy, it also faces certain implementation \nchallenges.\nThis address will delve into Vietnam's energy transition journey, considering five key \nperspectives: international cooperation, governance structures, considerations of justice \nand equity, technology solutions, and innovative financing methods. International \npartnerships are crucial to share knowledge, bear costs, and reap benefits. However, larger",
+              "metadata": {
+                "title": "International collaboration on the energy transition in Vietnam",
+                "hal_id": "hal-04155272",
+                "authors": "['Minh Ha-Duong']",
+                "version": "v0",
+                "citation": "Minh Ha-Duong. International collaboration on the energy transition in Vietnam. Colloque ICISE \"Questions environnementales: des réponses scientifiques et juridiques\", XIXe Rencontres du Vietnam, Jul 2023, Quy Nhon, Vietnam. ⟨hal-04155272⟩",
+                "source_url": "https://hal.science/hal-04155272",
+                "chunk_order": 2,
+                "description": "Many developing countries, including Vietnam, are striving to transform their energy systems into more sustainable ones. They are leveraging initiatives like the Just Energy Transition Partnership (JETP) with the G7. Although Vietnam's participation in the JETP is a vital step in its journey towards clean energy, it also faces certain implementation challenges. This address will delve into Vietnam's energy transition journey, considering five key perspectives: international cooperation, governance structures, considerations of justice and equity, technology solutions, and innovative financing methods. International partnerships are crucial to share knowledge, bear costs, and reap benefits. However, larger agreements sometimes face limitations, and more focused coalitions can assist in overcoming these. Vietnam's Power Development Plan 8 (PDP8) provides a roadmap for the future but will require adjustments and input from different stakeholders to ensure its effectiveness. A just transition demands consideration of several facets of justice, including solutions that are specific to Vietnam and take into account vulnerable communities and workers affected by the transition. Adopting a comprehensive approach that combines foundational research, new technologies, and deployable solutions can spur innovation. Likewise, legal frameworks encouraging private investment can accelerate the transition. In conclusion, while Vietnam's energy transition is progressing, there is still a long way to go. Recommendations include boosting stakeholder engagement, refining the mix of planning and market mechanisms, conducting assessments to ensure equity, investing in applicable technologies, and creating supportive legal and financial structures. Strengthened collaborations, both at multilateral and bilateral levels, can aid Vietnam in its journey towards a sustainable and prosperous energy future.",
+                "document_type": "COMM",
+                "publication_date": "2023-07-07",
+                "semantic_rank": 10,
+                "full_text_rank": 1,
+                "associated_query": "Transition challenge in Vietnam"
+              }
+            }
+          },
+          {
+            "id": "9f46743",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1346,
+              "end": 1355
+            },
+            "payload": {
+              "id": "9f467431-7bcc-592f-9496-e2ce8431f839",
+              "document_id": "dfb80363-5193-5e6c-905f-d14c0cb06cd1",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017094017094017092,
+              "text": "Document Title: Vietnam a model of green development?\n\nText: Published in Vietnamese by Tia Sáng, issue 2024-04-20 vol. 8 pp 24-26 and online\nVietnam a model of green development?\nDr. Minh Ha-Duong1\n2024-04-16\nAs Vietnam pursues its ambitious goal of transitioning from a middle-income to a higher-\nincome country while simultaneously moving towards a zero-carbon society, it faces a \ncomplex set of challenges. This article delves into these challenges, focusing on the \ntechnological, infrastructural, financial and collaborative needs of this transition.\n1.Technological Challenges: From Catch-Up to Frontier Innovation\nVietnam has enjoyed a second mover advantage in renewable energy technologies. While \ncountries like Germany and other European nations developed the renewable energy \ntechnology markets, Vietnam was able to put a feed-in tariff  in place and import the \ntechnology. However, as the country aims to compete at the technological frontier, it faces \nmore complex challenges.\nWind turbines provide a clear example. Vietnam has the capability to build the low-tech",
+              "metadata": {
+                "title": "Vietnam a model of green development?",
+                "hal_id": "hal-04567669",
+                "authors": [
+                  "Minh Ha-Duong"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Vietnam a model of green development?. 2024, pp.24-26. ⟨hal-04567669⟩",
+                "source_url": "https://hal.science/hal-04567669",
+                "chunk_order": 1,
+                "description": "As Vietnam pursues its ambitious goal of transitioning from a middle-income to a higher-income country while simultaneously moving towards a zero-carbon society, it faces a complex set of challenges. This article delves into these challenges, focusing on the technological, infrastructural, financial and collaborative needs of this transition.",
+                "document_type": "OTHER",
+                "publication_date": "2024-04-20",
+                "semantic_rank": 10,
+                "full_text_rank": 2,
+                "associated_query": "Transition challenge in Vietnam"
+              }
+            }
+          },
+          {
+            "id": "143638e",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1766,
+              "end": 1775
+            },
+            "payload": {
+              "id": "143638ec-442f-5fd9-95cd-d5fc112da3ac",
+              "document_id": "dfb80363-5193-5e6c-905f-d14c0cb06cd1",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017033542976939202,
+              "text": "Document Title: Vietnam a model of green development?\n\nText: necessary to balance the need for clean energy with the preservation of natural habitats.\n3.Funding: Attracting Capital for the Transition\nFunding the energy transition is a major challenge for Vietnam. The country needs around \n$2 billion per year for the grid and $10 billion for generation facilities. Domestic public \nfunding, such as EVN investing in the grid and energy storage, can only go so far. The recent \nfossil fuel crisis has depleted EVN's savings, as it had to bear the brunt of increased fuel \nprices while the government lowered electricity prices for consumers.\nAttracting private capital is therefore crucial. One mechanism is build-operate-transfer \n(BOT), where assets are owned by foreign companies for a period (usually 25 years) before \n3",
+              "metadata": {
+                "title": "Vietnam a model of green development?",
+                "hal_id": "hal-04567669",
+                "authors": [
+                  "Minh Ha-Duong"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Vietnam a model of green development?. 2024, pp.24-26. ⟨hal-04567669⟩",
+                "source_url": "https://hal.science/hal-04567669",
+                "chunk_order": 11,
+                "description": "As Vietnam pursues its ambitious goal of transitioning from a middle-income to a higher-income country while simultaneously moving towards a zero-carbon society, it faces a complex set of challenges. This article delves into these challenges, focusing on the technological, infrastructural, financial and collaborative needs of this transition.",
+                "document_type": "OTHER",
+                "publication_date": "2024-04-20",
+                "semantic_rank": 10,
+                "full_text_rank": 3,
+                "associated_query": "Transition challenge in Vietnam"
+              }
+            }
+          },
+          {
+            "id": "1cf092d",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1777,
+              "end": 1786
+            },
+            "payload": {
+              "id": "1cf092d3-8b37-5834-afb9-77b35bd73d75",
+              "document_id": "dfb80363-5193-5e6c-905f-d14c0cb06cd1",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016975308641975308,
+              "text": "Document Title: Vietnam a model of green development?\n\nText: where it required a high share of national content in its offshore wind farms, leading to a 5-\nyear lag compared to other countries as the industry had to first build factories.\nThe environmental impact of these infrastructure projects is also a concern. While offshore \nwind is less problematic, near-shore wind power can potentially affect sensitive coastal \nareas with high biodiversity. Careful planning and environmental impact assessments are \nnecessary to balance the need for clean energy with the preservation of natural habitats.\n3.Funding: Attracting Capital for the Transition\nFunding the energy transition is a major challenge for Vietnam. The country needs around \n$2 billion per year for the grid and $10 billion for generation facilities. Domestic public \nfunding, such as EVN investing in the grid and energy storage, can only go so far. The recent \nfossil fuel crisis has depleted EVN's savings, as it had to bear the brunt of increased fuel",
+              "metadata": {
+                "title": "Vietnam a model of green development?",
+                "hal_id": "hal-04567669",
+                "authors": [
+                  "Minh Ha-Duong"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Vietnam a model of green development?. 2024, pp.24-26. ⟨hal-04567669⟩",
+                "source_url": "https://hal.science/hal-04567669",
+                "chunk_order": 10,
+                "description": "As Vietnam pursues its ambitious goal of transitioning from a middle-income to a higher-income country while simultaneously moving towards a zero-carbon society, it faces a complex set of challenges. This article delves into these challenges, focusing on the technological, infrastructural, financial and collaborative needs of this transition.",
+                "document_type": "OTHER",
+                "publication_date": "2024-04-20",
+                "semantic_rank": 10,
+                "full_text_rank": 4,
+                "associated_query": "Transition challenge in Vietnam"
+              }
+            }
+          },
+          {
+            "id": "1cf092d",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 2079,
+              "end": 2088
+            },
+            "payload": null
+          },
+          {
+            "id": "85df7c1",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2431,
+              "end": 2440
+            },
+            "payload": {
+              "id": "85df7c10-07c8-5b2f-ae5f-a5e9138a7962",
+              "document_id": "35657540-59be-5c5c-8f2d-fa16491b99d2",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016865079365079364,
+              "text": "Document Title: Implementing a Just Energy Transition\n\nText: with low-quality ones, undermining the system's trustworthiness and effectiveness.\nIn response to these challenges, there has been renewed interest in small coalition \napproaches, a model where a handful of countries take the lead in addressing \nenvironmental issues. The G20 has outlined the concept of 'Country Platforms. ' These are \nvoluntary initiatives at the national level that promote cooperation among development \npartners. They are based on shared strategic visions and priorities for implementing the \nSustainable Development Goals by 2030.\nASEAN cooperation is especially significant as the potential creation of a regional electricity\nsuper grid could substantially reduce electricity costs and enhance network stability. These \ninitiatives highlight the immense value and potential benefits of active participation in \nmultilateral agreements for Vietnam's energy transition.\nRegarding the energy transition, Vietnam actively participates in two platforms: the",
+              "metadata": {
+                "title": "Implementing a Just Energy Transition",
+                "hal_id": "hal-04162361",
+                "authors": [
+                  "Minh Ha-Duong"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Implementing a Just Energy Transition. Fourteenth Vietnam Economist Annual Meeting (VEAM 2023), University of Economics, Danang, Jul 2023, Danang, Vietnam. ⟨hal-04162361⟩",
+                "source_url": "https://hal.science/hal-04162361",
+                "chunk_order": 22,
+                "description": "Vietnam is at a critical juncture in its energy transition. While robust economic growth drives electricity demand, sustainability concerns necessitate a shift to renewable sources. International cooperation can provide vital support through knowledge, technology and finance. However, funding proposals like the Just Energy Transition Partnership (JETP) require balanced evaluation. Transition policies must also incorporate multifaceted notions of justice and adaptively blend planning with market forces. Seizing opportunities while overcoming hurdles demands policy innovation, stakeholder inclusion and evidence-based analysis. With creativity, pragmatism and social responsibility, Vietnam can pioneer an equitable transition that meets development needs cost-effectively. I present an integrated perspective across technical, financial, political and social dimensions, and welcome expert input on charting an optimal pathway during this pivotal moment.",
+                "document_type": "COMM",
+                "publication_date": "2023-07-26",
+                "semantic_rank": 10,
+                "full_text_rank": 6,
+                "associated_query": "Transition challenge in Vietnam"
+              }
+            }
+          },
+          {
+            "id": "06e2fa3",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2791,
+              "end": 2800
+            },
+            "payload": {
+              "id": "06e2fa39-98b2-5314-a5b2-f95d5be9d166",
+              "document_id": "28c3092c-53fe-51e7-8e79-afc5fbf12844",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016812865497076022,
+              "text": "Document Title: Vietnam at the dawn of its energy transition\n\nText: Published in Mondes en Développement n 205 (vol. 52-2024-01) pp. 115-136, doi: 10.3917/med.205.0115\nVietnam at the dawn of its energy transition\nMinh Ha-Duong 1, 2023-09-22\nAbstract\nVietnam's Power Development Plan 8 (PDP8) sets a course for the country's energy transition to carbon neutrality\nby 2050. The plan targets significant growth in renewable energy, diversification of energy sources, and reduced\nreliance on imported coal. However, implementing PDP8 poses considerable challenges, including securing an\nestimated  $13  billion  annually  for  new  power  capacities  and  grid  upgrades,  expanding  the  power  grid  to\naccommodate more renewables, and managing the risk of dependence on imported liquefied natural gas (LNG).\nThe success of this plan could provide a model for other middle-income countries undergoing similar energy\ntransitions.\nKeywords\nVietnam,  Sustainable  development,  Energy  transition,  Carbon  neutrality,  Power  Development  Plan,  Energy",
+              "metadata": {
+                "doi": "10.3917/med.205.0115",
+                "title": "Vietnam at the dawn of its energy transition",
+                "hal_id": "hal-04571483",
+                "authors": [
+                  "Minh Ha-Duong"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Vietnam at the dawn of its energy transition. Mondes en Développement, 2024, n° 205 (1), pp.115-136. ⟨10.3917/med.205.0115⟩. ⟨hal-04571483⟩",
+                "source_url": "https://doi.org/10.3917/med.205.0115",
+                "chunk_order": 1,
+                "description": "Vietnam's Power Development Plan 8 (PDP8) sets a course for the country's energy transition to carbon neutrality by 2050. The plan targets significant growth in renewable energy, diversification of energy sources, and reduced reliance on imported coal. However, implementing PDP8 poses considerable challenges, including securing an estimated $13 billion annually for new power capacities and grid upgrades, expanding the power grid to accommodate more renewables, and managing the risk of dependence on imported liquefied natural gas (LNG). The success of this plan could provide a model for other middle-income countries undergoing similar energy transitions.",
+                "document_type": "ART",
+                "publication_date": "2024-04-12",
+                "semantic_rank": 10,
+                "full_text_rank": 7,
+                "associated_query": "Transition challenge in Vietnam"
+              }
+            }
+          },
+          {
+            "id": "c59c988",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 3120,
+              "end": 3129
+            },
+            "payload": {
+              "id": "c59c988a-0b4e-5dc3-a7df-5601017a464a",
+              "document_id": "dfb8dd94-1f9d-5bdf-a9b6-a26b224e89f1",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016762452107279693,
+              "text": "Document Title: Ai sẽ trả tiền cho chuyển đổi điện năng của Việt Nam?\n\nText: development assistance and climate finance from developed countries, chances are that \ngreen bonds will be part of the solution.\nEven if the electricity price increased by 1 cent/kWh in Vietnam next year, they would remain low \ncompared to the competing countries [14], as Figure 6 shows. Moreover, prices will increase in \nother countries too. Thus a moderate increase in Vietnam s energy prices to ensure a reliable \nsupply will not necessarily be a setback for Vietnams macroeconomic competitivity. The energy \ntransition challenge is for everybody, those companies solving it decisively will come out on top.\n15Figure 6: Prices of electricity in Vietnam compared to other countries. Vietnam has room to \nincrease the tariff and remain competitive.",
+              "metadata": {
+                "title": "Ai sẽ trả tiền cho chuyển đổi điện năng của Việt Nam?",
+                "hal_id": "hal-04485748",
+                "authors": "['Minh Ha-Duong']",
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Ai sẽ trả tiền cho chuyển đổi điện năng của Việt Nam?. 2022. ⟨hal-04485748⟩",
+                "source_url": "https://hal.science/hal-04485748",
+                "chunk_order": 65,
+                "description": "Làm thế nào để chi trả cho sự phát triển của hệ thống điện Việt Nam trong những năm tới? Đối với những dự án điện mặt trời và gió, các công cụ thị trường như đấu giá, thỏa thuận mua bán điện trực tiếp và tự tiêu thụ sẽ thu hút các nhà đầu tư tư nhân. Nhưng những phương án tài chính cho các dự án nhiệt điện lại không rõ ràng như vậy, vì hiện giá năng lượng hóa thạch đang đặt ra câu hỏi về khả năng sinh lợi của các dự án này. Liệu các doanh nghiệp quốc doanh có thể tự chủ tài chính mà không cần tăng giá điện?",
+                "document_type": "OTHER",
+                "publication_date": "2022-07-05",
+                "semantic_rank": 10,
+                "full_text_rank": 8,
+                "associated_query": "Transition challenge in Vietnam"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "3631a0b9-4050-59df-a617-4aef0f6e6360",
+            "document_id": "fc3acd85-e465-5328-9338-402fdc0218f1",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01755469301340861,
+            "text": "Document Title: Compassion and global issues: a scientist's perspective\n\nText: deeply embedded in Vietnamese culture.\nToday, Vietnam stands at a crossroads. Having achieved remarkable progress in\nreducing poverty, it now must sustain this momentum while addressing rising \ninequality, environmental degradation, and climate vulnerability. This \nchallenge offers a unique opportunity: to chart a new course - one that balances\ndynamic growth with inclusive development, traditional values with modern \ninnovation, national sovereignty with global citizenship. What if Vietnam were\nto place compassion at the center of this journey? To use its experience of \novercoming division and hardship to model a new kind of development - one \ngrounded in empathy, shared prosperity, and harmony with nature?\nVietnam would become a global leader in the just energy transition - not only \nby replacing fossil fuels by renewable energy, but by ensuring that nobody is \nleft behind in the process. By investing in re-skilling programs, social",
+            "metadata": {
+              "title": "Compassion and global issues: a scientist's perspective",
+              "hal_id": "hal-04878179",
+              "authors": "['Minh Ha-Duong']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Compassion and global issues: a scientist's perspective. 2024. ⟨hal-04878179⟩",
+              "source_url": "https://hal.science/hal-04878179",
+              "chunk_order": 15,
+              "description": "This keynote addresses three points: 1. The IPCC's contribution to humanity that led to its Nobel Peace Prize. 2. Beyond climate change, a concerned scientist's view on global issues, with challenges and reasons for hope. 3. The importance of compassion in addressing global issues, with examples.",
+              "document_type": "OTHER",
+              "publication_date": "2024-04-18",
+              "semantic_rank": 2,
+              "full_text_rank": 59,
+              "associated_query": "Transition challenge in Vietnam"
+            }
+          },
+          {
+            "id": "a34dd30a-1d82-5590-bea6-dab0da792b2d",
+            "document_id": "e2cd7279-d0a5-5cf7-99bc-0e6af3fe71f4",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017156862745098037,
+            "text": "Document Title: International collaboration on the energy transition in Vietnam\n\nText: Keynote address to the Colloque ICISE \"Questions environnementales: des réponses\nscientifiques et juridiques\" . Quy Nhon, Vietnam, 8 juillet 2023  \nInternational collaboration on the energy transition in Vietnam\nMinh Ha-Duong, CIRED/CNRS\n2022-07-07\n7313 words\nAbstract\nMany developing countries, including Vietnam, are striving to transform their energy \nsystems into more sustainable ones. They are leveraging initiatives like the Just Energy \nTransition Partnership (JETP) with the G7 . Although Vietnam's participation in the JETP is a \nvital step in its journey towards clean energy, it also faces certain implementation \nchallenges.\nThis address will delve into Vietnam's energy transition journey, considering five key \nperspectives: international cooperation, governance structures, considerations of justice \nand equity, technology solutions, and innovative financing methods. International \npartnerships are crucial to share knowledge, bear costs, and reap benefits. However, larger",
+            "metadata": {
+              "title": "International collaboration on the energy transition in Vietnam",
+              "hal_id": "hal-04155272",
+              "authors": "['Minh Ha-Duong']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong. International collaboration on the energy transition in Vietnam. Colloque ICISE \"Questions environnementales: des réponses scientifiques et juridiques\", XIXe Rencontres du Vietnam, Jul 2023, Quy Nhon, Vietnam. ⟨hal-04155272⟩",
+              "source_url": "https://hal.science/hal-04155272",
+              "chunk_order": 2,
+              "description": "Many developing countries, including Vietnam, are striving to transform their energy systems into more sustainable ones. They are leveraging initiatives like the Just Energy Transition Partnership (JETP) with the G7. Although Vietnam's participation in the JETP is a vital step in its journey towards clean energy, it also faces certain implementation challenges. This address will delve into Vietnam's energy transition journey, considering five key perspectives: international cooperation, governance structures, considerations of justice and equity, technology solutions, and innovative financing methods. International partnerships are crucial to share knowledge, bear costs, and reap benefits. However, larger agreements sometimes face limitations, and more focused coalitions can assist in overcoming these. Vietnam's Power Development Plan 8 (PDP8) provides a roadmap for the future but will require adjustments and input from different stakeholders to ensure its effectiveness. A just transition demands consideration of several facets of justice, including solutions that are specific to Vietnam and take into account vulnerable communities and workers affected by the transition. Adopting a comprehensive approach that combines foundational research, new technologies, and deployable solutions can spur innovation. Likewise, legal frameworks encouraging private investment can accelerate the transition. In conclusion, while Vietnam's energy transition is progressing, there is still a long way to go. Recommendations include boosting stakeholder engagement, refining the mix of planning and market mechanisms, conducting assessments to ensure equity, investing in applicable technologies, and creating supportive legal and financial structures. Strengthened collaborations, both at multilateral and bilateral levels, can aid Vietnam in its journey towards a sustainable and prosperous energy future.",
+              "document_type": "COMM",
+              "publication_date": "2023-07-07",
+              "semantic_rank": 10,
+              "full_text_rank": 1,
+              "associated_query": "Transition challenge in Vietnam"
+            }
+          },
+          {
+            "id": "9f467431-7bcc-592f-9496-e2ce8431f839",
+            "document_id": "dfb80363-5193-5e6c-905f-d14c0cb06cd1",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017094017094017092,
+            "text": "Document Title: Vietnam a model of green development?\n\nText: Published in Vietnamese by Tia Sáng, issue 2024-04-20 vol. 8 pp 24-26 and online\nVietnam a model of green development?\nDr. Minh Ha-Duong1\n2024-04-16\nAs Vietnam pursues its ambitious goal of transitioning from a middle-income to a higher-\nincome country while simultaneously moving towards a zero-carbon society, it faces a \ncomplex set of challenges. This article delves into these challenges, focusing on the \ntechnological, infrastructural, financial and collaborative needs of this transition.\n1.Technological Challenges: From Catch-Up to Frontier Innovation\nVietnam has enjoyed a second mover advantage in renewable energy technologies. While \ncountries like Germany and other European nations developed the renewable energy \ntechnology markets, Vietnam was able to put a feed-in tariff  in place and import the \ntechnology. However, as the country aims to compete at the technological frontier, it faces \nmore complex challenges.\nWind turbines provide a clear example. Vietnam has the capability to build the low-tech",
+            "metadata": {
+              "title": "Vietnam a model of green development?",
+              "hal_id": "hal-04567669",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Vietnam a model of green development?. 2024, pp.24-26. ⟨hal-04567669⟩",
+              "source_url": "https://hal.science/hal-04567669",
+              "chunk_order": 1,
+              "description": "As Vietnam pursues its ambitious goal of transitioning from a middle-income to a higher-income country while simultaneously moving towards a zero-carbon society, it faces a complex set of challenges. This article delves into these challenges, focusing on the technological, infrastructural, financial and collaborative needs of this transition.",
+              "document_type": "OTHER",
+              "publication_date": "2024-04-20",
+              "semantic_rank": 10,
+              "full_text_rank": 2,
+              "associated_query": "Transition challenge in Vietnam"
+            }
+          },
+          {
+            "id": "143638ec-442f-5fd9-95cd-d5fc112da3ac",
+            "document_id": "dfb80363-5193-5e6c-905f-d14c0cb06cd1",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017033542976939202,
+            "text": "Document Title: Vietnam a model of green development?\n\nText: necessary to balance the need for clean energy with the preservation of natural habitats.\n3.Funding: Attracting Capital for the Transition\nFunding the energy transition is a major challenge for Vietnam. The country needs around \n$2 billion per year for the grid and $10 billion for generation facilities. Domestic public \nfunding, such as EVN investing in the grid and energy storage, can only go so far. The recent \nfossil fuel crisis has depleted EVN's savings, as it had to bear the brunt of increased fuel \nprices while the government lowered electricity prices for consumers.\nAttracting private capital is therefore crucial. One mechanism is build-operate-transfer \n(BOT), where assets are owned by foreign companies for a period (usually 25 years) before \n3",
+            "metadata": {
+              "title": "Vietnam a model of green development?",
+              "hal_id": "hal-04567669",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Vietnam a model of green development?. 2024, pp.24-26. ⟨hal-04567669⟩",
+              "source_url": "https://hal.science/hal-04567669",
+              "chunk_order": 11,
+              "description": "As Vietnam pursues its ambitious goal of transitioning from a middle-income to a higher-income country while simultaneously moving towards a zero-carbon society, it faces a complex set of challenges. This article delves into these challenges, focusing on the technological, infrastructural, financial and collaborative needs of this transition.",
+              "document_type": "OTHER",
+              "publication_date": "2024-04-20",
+              "semantic_rank": 10,
+              "full_text_rank": 3,
+              "associated_query": "Transition challenge in Vietnam"
+            }
+          },
+          {
+            "id": "90392d2d-5297-56fa-8ab7-19820a772dea",
+            "document_id": "e2cd7279-d0a5-5cf7-99bc-0e6af3fe71f4",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: International collaboration on the energy transition in Vietnam\n\nText: Transition in Hanoi.\nI will share perspectives on Vietnam's energy transition through five lenses. These five \nquestions, born from the idea of ecodevelopment, will organize our analysis today:\n1.International cooperation on environment and development. How can the North and \nthe South cooperate to solve environmental issues?\n2.The tension between strategic planning and market mechanisms. How can we balance\nthem to achieve our goal?\n3",
+            "metadata": {
+              "title": "International collaboration on the energy transition in Vietnam",
+              "hal_id": "hal-04155272",
+              "authors": "['Minh Ha-Duong']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong. International collaboration on the energy transition in Vietnam. Colloque ICISE \"Questions environnementales: des réponses scientifiques et juridiques\", XIXe Rencontres du Vietnam, Jul 2023, Quy Nhon, Vietnam. ⟨hal-04155272⟩",
+              "source_url": "https://hal.science/hal-04155272",
+              "chunk_order": 17,
+              "description": "Many developing countries, including Vietnam, are striving to transform their energy systems into more sustainable ones. They are leveraging initiatives like the Just Energy Transition Partnership (JETP) with the G7. Although Vietnam's participation in the JETP is a vital step in its journey towards clean energy, it also faces certain implementation challenges. This address will delve into Vietnam's energy transition journey, considering five key perspectives: international cooperation, governance structures, considerations of justice and equity, technology solutions, and innovative financing methods. International partnerships are crucial to share knowledge, bear costs, and reap benefits. However, larger agreements sometimes face limitations, and more focused coalitions can assist in overcoming these. Vietnam's Power Development Plan 8 (PDP8) provides a roadmap for the future but will require adjustments and input from different stakeholders to ensure its effectiveness. A just transition demands consideration of several facets of justice, including solutions that are specific to Vietnam and take into account vulnerable communities and workers affected by the transition. Adopting a comprehensive approach that combines foundational research, new technologies, and deployable solutions can spur innovation. Likewise, legal frameworks encouraging private investment can accelerate the transition. In conclusion, while Vietnam's energy transition is progressing, there is still a long way to go. Recommendations include boosting stakeholder engagement, refining the mix of planning and market mechanisms, conducting assessments to ensure equity, investing in applicable technologies, and creating supportive legal and financial structures. Strengthened collaborations, both at multilateral and bilateral levels, can aid Vietnam in its journey towards a sustainable and prosperous energy future.",
+              "document_type": "COMM",
+              "publication_date": "2023-07-07",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Transition challenge in Vietnam"
+            }
+          },
+          {
+            "id": "1cf092d3-8b37-5834-afb9-77b35bd73d75",
+            "document_id": "dfb80363-5193-5e6c-905f-d14c0cb06cd1",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016975308641975308,
+            "text": "Document Title: Vietnam a model of green development?\n\nText: where it required a high share of national content in its offshore wind farms, leading to a 5-\nyear lag compared to other countries as the industry had to first build factories.\nThe environmental impact of these infrastructure projects is also a concern. While offshore \nwind is less problematic, near-shore wind power can potentially affect sensitive coastal \nareas with high biodiversity. Careful planning and environmental impact assessments are \nnecessary to balance the need for clean energy with the preservation of natural habitats.\n3.Funding: Attracting Capital for the Transition\nFunding the energy transition is a major challenge for Vietnam. The country needs around \n$2 billion per year for the grid and $10 billion for generation facilities. Domestic public \nfunding, such as EVN investing in the grid and energy storage, can only go so far. The recent \nfossil fuel crisis has depleted EVN's savings, as it had to bear the brunt of increased fuel",
+            "metadata": {
+              "title": "Vietnam a model of green development?",
+              "hal_id": "hal-04567669",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Vietnam a model of green development?. 2024, pp.24-26. ⟨hal-04567669⟩",
+              "source_url": "https://hal.science/hal-04567669",
+              "chunk_order": 10,
+              "description": "As Vietnam pursues its ambitious goal of transitioning from a middle-income to a higher-income country while simultaneously moving towards a zero-carbon society, it faces a complex set of challenges. This article delves into these challenges, focusing on the technological, infrastructural, financial and collaborative needs of this transition.",
+              "document_type": "OTHER",
+              "publication_date": "2024-04-20",
+              "semantic_rank": 10,
+              "full_text_rank": 4,
+              "associated_query": "Transition challenge in Vietnam"
+            }
+          },
+          {
+            "id": "ebd10393-df4c-5448-9440-f4908c613497",
+            "document_id": "e2cd7279-d0a5-5cf7-99bc-0e6af3fe71f4",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016919191919191917,
+            "text": "Document Title: International collaboration on the energy transition in Vietnam\n\nText: groundwork for a greener future.\nThat said, many open questions remain.  What unique opportunities and challenges does \nVietnam face in its energy transition that we have not yet considered? What ideas or \nperspectives could enrich our discussion? What technologies show the most promise for \nVietnam in the near future, and how can we build research capabilities to advance these \nsolutions? What innovative financing models could help crowd in private capital for \nVietnam's renewable energy sector, and what legal and regulatory frameworks would \nfacilitate these models?\nI thank you for your attention and look forward to our discussion.\nReferences\nHa-Duong, Minh. 2023-05-29. Vietnams Power Development Plan 8: A bold step towards a \nnet-zero future. Short read published in The Mekong Eye online magazine.\nHa-Duong, Minh. 2023-05. Vietnams Energy Transition Partnership: a background report . \nCIRED Working Paper 2023-90. Centre international de recherche sur lenvironnement et le \ndéveloppement. (online). 97 pages.",
+            "metadata": {
+              "title": "International collaboration on the energy transition in Vietnam",
+              "hal_id": "hal-04155272",
+              "authors": "['Minh Ha-Duong']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong. International collaboration on the energy transition in Vietnam. Colloque ICISE \"Questions environnementales: des réponses scientifiques et juridiques\", XIXe Rencontres du Vietnam, Jul 2023, Quy Nhon, Vietnam. ⟨hal-04155272⟩",
+              "source_url": "https://hal.science/hal-04155272",
+              "chunk_order": 95,
+              "description": "Many developing countries, including Vietnam, are striving to transform their energy systems into more sustainable ones. They are leveraging initiatives like the Just Energy Transition Partnership (JETP) with the G7. Although Vietnam's participation in the JETP is a vital step in its journey towards clean energy, it also faces certain implementation challenges. This address will delve into Vietnam's energy transition journey, considering five key perspectives: international cooperation, governance structures, considerations of justice and equity, technology solutions, and innovative financing methods. International partnerships are crucial to share knowledge, bear costs, and reap benefits. However, larger agreements sometimes face limitations, and more focused coalitions can assist in overcoming these. Vietnam's Power Development Plan 8 (PDP8) provides a roadmap for the future but will require adjustments and input from different stakeholders to ensure its effectiveness. A just transition demands consideration of several facets of justice, including solutions that are specific to Vietnam and take into account vulnerable communities and workers affected by the transition. Adopting a comprehensive approach that combines foundational research, new technologies, and deployable solutions can spur innovation. Likewise, legal frameworks encouraging private investment can accelerate the transition. In conclusion, while Vietnam's energy transition is progressing, there is still a long way to go. Recommendations include boosting stakeholder engagement, refining the mix of planning and market mechanisms, conducting assessments to ensure equity, investing in applicable technologies, and creating supportive legal and financial structures. Strengthened collaborations, both at multilateral and bilateral levels, can aid Vietnam in its journey towards a sustainable and prosperous energy future.",
+              "document_type": "COMM",
+              "publication_date": "2023-07-07",
+              "semantic_rank": 10,
+              "full_text_rank": 5,
+              "associated_query": "Transition challenge in Vietnam"
+            }
+          },
+          {
+            "id": "85df7c10-07c8-5b2f-ae5f-a5e9138a7962",
+            "document_id": "35657540-59be-5c5c-8f2d-fa16491b99d2",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016865079365079364,
+            "text": "Document Title: Implementing a Just Energy Transition\n\nText: with low-quality ones, undermining the system's trustworthiness and effectiveness.\nIn response to these challenges, there has been renewed interest in small coalition \napproaches, a model where a handful of countries take the lead in addressing \nenvironmental issues. The G20 has outlined the concept of 'Country Platforms. ' These are \nvoluntary initiatives at the national level that promote cooperation among development \npartners. They are based on shared strategic visions and priorities for implementing the \nSustainable Development Goals by 2030.\nASEAN cooperation is especially significant as the potential creation of a regional electricity\nsuper grid could substantially reduce electricity costs and enhance network stability. These \ninitiatives highlight the immense value and potential benefits of active participation in \nmultilateral agreements for Vietnam's energy transition.\nRegarding the energy transition, Vietnam actively participates in two platforms: the",
+            "metadata": {
+              "title": "Implementing a Just Energy Transition",
+              "hal_id": "hal-04162361",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Implementing a Just Energy Transition. Fourteenth Vietnam Economist Annual Meeting (VEAM 2023), University of Economics, Danang, Jul 2023, Danang, Vietnam. ⟨hal-04162361⟩",
+              "source_url": "https://hal.science/hal-04162361",
+              "chunk_order": 22,
+              "description": "Vietnam is at a critical juncture in its energy transition. While robust economic growth drives electricity demand, sustainability concerns necessitate a shift to renewable sources. International cooperation can provide vital support through knowledge, technology and finance. However, funding proposals like the Just Energy Transition Partnership (JETP) require balanced evaluation. Transition policies must also incorporate multifaceted notions of justice and adaptively blend planning with market forces. Seizing opportunities while overcoming hurdles demands policy innovation, stakeholder inclusion and evidence-based analysis. With creativity, pragmatism and social responsibility, Vietnam can pioneer an equitable transition that meets development needs cost-effectively. I present an integrated perspective across technical, financial, political and social dimensions, and welcome expert input on charting an optimal pathway during this pivotal moment.",
+              "document_type": "COMM",
+              "publication_date": "2023-07-26",
+              "semantic_rank": 10,
+              "full_text_rank": 6,
+              "associated_query": "Transition challenge in Vietnam"
+            }
+          },
+          {
+            "id": "06e2fa39-98b2-5314-a5b2-f95d5be9d166",
+            "document_id": "28c3092c-53fe-51e7-8e79-afc5fbf12844",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016812865497076022,
+            "text": "Document Title: Vietnam at the dawn of its energy transition\n\nText: Published in Mondes en Développement n 205 (vol. 52-2024-01) pp. 115-136, doi: 10.3917/med.205.0115\nVietnam at the dawn of its energy transition\nMinh Ha-Duong 1, 2023-09-22\nAbstract\nVietnam's Power Development Plan 8 (PDP8) sets a course for the country's energy transition to carbon neutrality\nby 2050. The plan targets significant growth in renewable energy, diversification of energy sources, and reduced\nreliance on imported coal. However, implementing PDP8 poses considerable challenges, including securing an\nestimated  $13  billion  annually  for  new  power  capacities  and  grid  upgrades,  expanding  the  power  grid  to\naccommodate more renewables, and managing the risk of dependence on imported liquefied natural gas (LNG).\nThe success of this plan could provide a model for other middle-income countries undergoing similar energy\ntransitions.\nKeywords\nVietnam,  Sustainable  development,  Energy  transition,  Carbon  neutrality,  Power  Development  Plan,  Energy",
+            "metadata": {
+              "doi": "10.3917/med.205.0115",
+              "title": "Vietnam at the dawn of its energy transition",
+              "hal_id": "hal-04571483",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Vietnam at the dawn of its energy transition. Mondes en Développement, 2024, n° 205 (1), pp.115-136. ⟨10.3917/med.205.0115⟩. ⟨hal-04571483⟩",
+              "source_url": "https://doi.org/10.3917/med.205.0115",
+              "chunk_order": 1,
+              "description": "Vietnam's Power Development Plan 8 (PDP8) sets a course for the country's energy transition to carbon neutrality by 2050. The plan targets significant growth in renewable energy, diversification of energy sources, and reduced reliance on imported coal. However, implementing PDP8 poses considerable challenges, including securing an estimated $13 billion annually for new power capacities and grid upgrades, expanding the power grid to accommodate more renewables, and managing the risk of dependence on imported liquefied natural gas (LNG). The success of this plan could provide a model for other middle-income countries undergoing similar energy transitions.",
+              "document_type": "ART",
+              "publication_date": "2024-04-12",
+              "semantic_rank": 10,
+              "full_text_rank": 7,
+              "associated_query": "Transition challenge in Vietnam"
+            }
+          },
+          {
+            "id": "c59c988a-0b4e-5dc3-a7df-5601017a464a",
+            "document_id": "dfb8dd94-1f9d-5bdf-a9b6-a26b224e89f1",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016762452107279693,
+            "text": "Document Title: Ai sẽ trả tiền cho chuyển đổi điện năng của Việt Nam?\n\nText: development assistance and climate finance from developed countries, chances are that \ngreen bonds will be part of the solution.\nEven if the electricity price increased by 1 cent/kWh in Vietnam next year, they would remain low \ncompared to the competing countries [14], as Figure 6 shows. Moreover, prices will increase in \nother countries too. Thus a moderate increase in Vietnam s energy prices to ensure a reliable \nsupply will not necessarily be a setback for Vietnams macroeconomic competitivity. The energy \ntransition challenge is for everybody, those companies solving it decisively will come out on top.\n15Figure 6: Prices of electricity in Vietnam compared to other countries. Vietnam has room to \nincrease the tariff and remain competitive.",
+            "metadata": {
+              "title": "Ai sẽ trả tiền cho chuyển đổi điện năng của Việt Nam?",
+              "hal_id": "hal-04485748",
+              "authors": "['Minh Ha-Duong']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Ai sẽ trả tiền cho chuyển đổi điện năng của Việt Nam?. 2022. ⟨hal-04485748⟩",
+              "source_url": "https://hal.science/hal-04485748",
+              "chunk_order": 65,
+              "description": "Làm thế nào để chi trả cho sự phát triển của hệ thống điện Việt Nam trong những năm tới? Đối với những dự án điện mặt trời và gió, các công cụ thị trường như đấu giá, thỏa thuận mua bán điện trực tiếp và tự tiêu thụ sẽ thu hút các nhà đầu tư tư nhân. Nhưng những phương án tài chính cho các dự án nhiệt điện lại không rõ ràng như vậy, vì hiện giá năng lượng hóa thạch đang đặt ra câu hỏi về khả năng sinh lợi của các dự án này. Liệu các doanh nghiệp quốc doanh có thể tự chủ tài chính mà không cần tăng giá điện?",
+              "document_type": "OTHER",
+              "publication_date": "2022-07-05",
+              "semantic_rank": 10,
+              "full_text_rank": 8,
+              "associated_query": "Transition challenge in Vietnam"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 3308,
+            "total_tokens": 3308
+          }
+        }
+      },
+      "duration": 3373
+    },
+    "retrievalTime": 1317,
+    "generationTime": 3373,
+    "timestamp": "2025-07-10T10:13:22.729Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T10:13:24.573072+00:00",
+    "server_version": "1.0.0"
+  }
+}

@@ -1,0 +1,566 @@
+{
+  "sessionId": "session_1752834153230_1e6r3f5x6x6j40q6n",
+  "timestamp": "20250718T103222394Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752834736728_s91qn7d",
+    "response": {
+      "results": {
+        "generated_answer": "L'impact des investissements sur la balance commerciale peut être analysé à travers plusieurs perspectives selon les documents fournis :\n\n1. **Effet de Déviation et Équilibre Commercial** :\n   - Les investissements peuvent entraîner un effet de déviation, où ils réduisent d'autres types d'investissements, le total étant défini par l'épargne nationale et importée. Cependant, les réductions d'importations d'énergies peuvent induire un désendettement extérieur, appréciant le taux de change effectif réel (TCER). Cela peut causer une hausse des importations et une baisse des exportations de biens et services non-énergétiques, maintenant l'équilibre de la balance commerciale [e47c4dc], [90a006f].\n\n2. **Clôture sur la Balance Commerciale** :\n   - Dans certains modèles, la balance commerciale est supposée constante en proportion du PIB. Les investissements sont alors financés par une hausse de l'épargne importée nette, ce qui peut influencer la balance commerciale de manière indirecte [e47c4dc], [436490c].\n\n3. **Impact sur les Exportations et Importations** :\n   - Les investissements peuvent entraîner des achats de biens d'équipement, principalement fournis par les secteurs de la construction et de l'industrie. La balance des capitaux et la balance commerciale se compensent réciproquement à l'équilibre, avec des ajustements des prix relatifs affectant les exportations et les importations [2cb129a], [2c62f90].\n\n4. **Effet Relance et Conséquences Macroéconomiques** :\n   - Un choc d'investissement peut ne pas pleinement entraîner la croissance attendue, augmentant le poids des investissements dans le PIB. Cela peut conduire à une hausse du taux d'épargne domestique au détriment de la consommation des ménages, affectant ainsi la balance commerciale [5edd3a3].\n\n5. **Financement et Équilibre des Paiements** :\n   - Le financement des investissements peut influencer la balance des paiements, avec des ajustements des taux d'intérêt pour équilibrer l'offre et la demande de capitaux pour l'investissement productif [b9f2d07].\n\nEn résumé, les investissements ont un impact complexe sur la balance commerciale, influencée par des facteurs tels que l'effet de déviation, les ajustements des taux de change, les achats de biens d'équipement, et les conséquences macroéconomiques sur l'épargne et la consommation.",
+        "citations": [
+          {
+            "id": "e47c4dc",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 678,
+              "end": 687
+            },
+            "payload": {
+              "id": "e47c4dcd-d521-5b73-8cbf-6eb61b554422",
+              "document_id": "73bd29bb-f792-5850-bd47-87e7e7573013",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit\n\nText: étant supposée mobiliser une part constante du PIB16) ; une clôture sur la balance commerciale, enfin,  \nqui suppose un financement de lincrément dinvestissement par une hausse de lépargne importée \nnette.  \n4.1 Conséquences macroéconomiques  \nSous clôture  néoclassique , comme précédemment introduit, linvestissement nécess aire à la transition  \ntend à réduire tous a utres types dinvestissement, le total dinvestissement disponible étant défini par \nles épargnes nationale  et importée  indépendamment fixées soit en valeur, soit en proportion de \nlactivité. Leffet déviction joue à plein. Cependant, l es réductions dim portations dénergies  \ninduisent une tendance au désendettement extérieur qui se traduit immédiatement, sous hypothèse \ndun marché des changes parfait, par une appréciation du taux de change effectif réel ( TCER ). Cette \nhausse cause  à la fois des hausses di mportations et des baisses dexportations de biens et services",
+              "metadata": {
+                "title": "Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit",
+                "hal_id": "hal-04384918",
+                "authors": [
+                  "Frédéric Ghersi",
+                  "Adam Poupard",
+                  "Julien Lefevre"
+                ],
+                "version": "v0",
+                "citation": "Frédéric Ghersi, Adam Poupard, Julien Lefevre. Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit. CIRED/SMASH. 2024. ⟨hal-04384918⟩",
+                "source_url": "https://hal.science/hal-04384918",
+                "chunk_order": 78,
+                "document_type": "REPORT",
+                "publication_date": "2024-01-01",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "l'impact des investissements sur la balance commerciale"
+              }
+            }
+          },
+          {
+            "id": "90a006f",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 689,
+              "end": 698
+            },
+            "payload": {
+              "id": "90a006f9-da3a-5ca7-8c1c-1548396e1357",
+              "document_id": "73bd29bb-f792-5850-bd47-87e7e7573013",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015818181818181818,
+              "text": "Document Title: Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit\n\nText: les épargnes nationale  et importée  indépendamment fixées soit en valeur, soit en proportion de \nlactivité. Leffet déviction joue à plein. Cependant, l es réductions dim portations dénergies  \ninduisent une tendance au désendettement extérieur qui se traduit immédiatement, sous hypothèse \ndun marché des changes parfait, par une appréciation du taux de change effectif réel ( TCER ). Cette \nhausse cause  à la fois des hausses di mportations et des baisses dexportations de biens et services \nnon-énergétiques , qui conduisent au maintien de léquilibre de l a balance commerciale. Mais elle \naméliore aussi le pouvoir dachat des ménages en réduisant le coût réel de leurs importations.  \nLa résultante de ces deux forces contra ires dépend  des valeur s relatives des élasticit és de substitution \ngouvernant, dune part, le surcroît de valeur ajoutée nécessaire à la réduction des consommations \ndénergie dans la production non -énergétique  ; dautre part, les échanges commerciaux. Une analyse",
+              "metadata": {
+                "title": "Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit",
+                "hal_id": "hal-04384918",
+                "authors": [
+                  "Frédéric Ghersi",
+                  "Adam Poupard",
+                  "Julien Lefevre"
+                ],
+                "version": "v0",
+                "citation": "Frédéric Ghersi, Adam Poupard, Julien Lefevre. Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit. CIRED/SMASH. 2024. ⟨hal-04384918⟩",
+                "source_url": "https://hal.science/hal-04384918",
+                "chunk_order": 79,
+                "document_type": "REPORT",
+                "publication_date": "2024-01-01",
+                "semantic_rank": 5,
+                "full_text_rank": 200,
+                "associated_query": "l'impact des investissements sur la balance commerciale"
+              }
+            }
+          },
+          {
+            "id": "e47c4dc",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 992,
+              "end": 1001
+            },
+            "payload": null
+          },
+          {
+            "id": "436490c",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1003,
+              "end": 1012
+            },
+            "payload": {
+              "id": "436490c0-3749-565e-a8e5-1e25aa876815",
+              "document_id": "73bd29bb-f792-5850-bd47-87e7e7573013",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016098765432098764,
+              "text": "Document Title: Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit\n\nText: La balance des biens et services est définie comme la différence entre exportations et importations à \nprix courants  :  \n 𝐵= 𝑝𝑋𝑖𝑋𝑖\n𝑖=𝐸,𝑄 𝑝𝑀𝑖𝑀𝑖\n𝑖=𝐸,𝑄 (12) \nB.4 Clôture investissement -éparg ne \nLa clôture néoclassique repose sur une hypothèse de ratio au PIB 𝑠𝐵 de la balance des biens et services \nsupposé  constant  de 2022 à 2050 au niveau de 2021 ( -1,9%)  :  \n 𝐵=𝑠𝐵 𝑃𝐼𝐵 (13) \nElle exogénéise aussi le comportement  dépargne  nationale , défini comme un taux 𝑠𝐷 du PIB  lui-aussi \nmaintenu constant à sa valeur de 2021 (23,0%)  : \n 𝑝𝐼𝑄𝐼𝑄+𝐵=𝑠𝐷 𝑃𝐼𝐵 (14) \nLa clôture de Johansen substitue à ce comportement dépargne nationale une contrainte sur les \ndépenses dinvestissement 𝑝𝐼𝑄 𝐼𝑄, qui mobilisent  une fraction exogène 𝑠𝐼  du 𝑃𝐼𝐵 (l'investissement en \nbiens énergétiques est nul , voir Annexe A ) : \n 𝑝𝐼𝑄𝐼𝑄= 𝑠𝐼 𝑃𝐼𝐵 (14b) \nLa clôture sur la balance commerciale retient quant à elle les contraintes (14) et (14b)  on repose ici \n(14) comme une alternative de (13) afin de faciliter la description des variant es :",
+              "metadata": {
+                "title": "Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit",
+                "hal_id": "hal-04384918",
+                "authors": [
+                  "Frédéric Ghersi",
+                  "Adam Poupard",
+                  "Julien Lefevre"
+                ],
+                "version": "v0",
+                "citation": "Frédéric Ghersi, Adam Poupard, Julien Lefevre. Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit. CIRED/SMASH. 2024. ⟨hal-04384918⟩",
+                "source_url": "https://hal.science/hal-04384918",
+                "chunk_order": 181,
+                "document_type": "REPORT",
+                "publication_date": "2024-01-01",
+                "semantic_rank": 4,
+                "full_text_rank": 200,
+                "associated_query": "l'impact des investissements sur la balance commerciale"
+              }
+            }
+          },
+          {
+            "id": "2cb129a",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1403,
+              "end": 1412
+            },
+            "payload": {
+              "id": "2cb129a6-5dc5-58bb-8111-2fd7aaa5e908",
+              "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01638993710691824,
+              "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: Linvestissement est utilisé dans chaque sect eur pour construire de nouvelles capacités de \nproduction avec un nouvel ensemble de technologies, ce qui implique lachat de différents biens  la plupart étant fournis par les secteurs  de la construction et de lindustrie (voir \n3.5.2). \n \nLa balance des capitaux est donnée par la diffé rence entre capitaux exportés et capitaux \nimportés. La balance des capitaux et la balan ce commerciale se compensent réciproquement à \nléquilibre, du fait de la conservation des flux de valeurs dans chaque région\n14. Tout déplacement \ndes flux de capitaux ou commerciaux devra être cont rebalancé par un déplacement des prix relatifs \ndans chaque région, entraînant instantanément d es modifications au niveau des exportations et des \nimportations.  \n3.5.2 Achat de biens déquipement \nLe montant total dinvestissement InvFin k,i alloué au secteur i dans la région k permet de \nconstruire de nouvelles capacités ΔCap k,i à un coût unitaire pCap k,i (équation (2.14)). Le coût",
+              "metadata": {
+                "title": "L'impact du changement technique endogène sur les politiques climatiques",
+                "hal_id": "tel-00489258",
+                "authors": "['Olivier Sassi']",
+                "version": "v0",
+                "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+                "source_url": "https://hal.science/tel-00489258",
+                "chunk_order": 389,
+                "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+                "document_type": "THESE",
+                "publication_date": "2008-11-21",
+                "semantic_rank": 3,
+                "full_text_rank": 200,
+                "associated_query": "l'impact des investissements sur la balance commerciale"
+              }
+            }
+          },
+          {
+            "id": "2c62f90",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1414,
+              "end": 1423
+            },
+            "payload": {
+              "id": "2c62f901-966c-5329-af22-207fe564a4a9",
+              "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015547619047619046,
+              "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: excédent à lensemble des régions en prenant en compte les demandes dinvestissement non satisfaites dans celles qui sont en déficit de  financement, la profitabilité moyenne des \ninvestissements, ainsi que des risques-pays (exogènes) susceptibles de faire obstacle aux \ninvestissements directs étrangers. \n \n Les ressources financières nettes disponibles qui  résultent de ce schéma dans chaque région \nsont allouées entre les secteurs en proporti on de leurs besoins en investissement. \nLinvestissement est utilisé dans chaque sect eur pour construire de nouvelles capacités de \nproduction avec un nouvel ensemble de technologies, ce qui implique lachat de différents biens  la plupart étant fournis par les secteurs  de la construction et de lindustrie (voir \n3.5.2). \n \nLa balance des capitaux est donnée par la diffé rence entre capitaux exportés et capitaux \nimportés. La balance des capitaux et la balan ce commerciale se compensent réciproquement à",
+              "metadata": {
+                "title": "L'impact du changement technique endogène sur les politiques climatiques",
+                "hal_id": "tel-00489258",
+                "authors": "['Olivier Sassi']",
+                "version": "v0",
+                "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+                "source_url": "https://hal.science/tel-00489258",
+                "chunk_order": 388,
+                "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+                "document_type": "THESE",
+                "publication_date": "2008-11-21",
+                "semantic_rank": 6,
+                "full_text_rank": 200,
+                "associated_query": "l'impact des investissements sur la balance commerciale"
+              }
+            }
+          },
+          {
+            "id": "5edd3a3",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1767,
+              "end": 1776
+            },
+            "payload": {
+              "id": "5edd3a3d-e917-5748-8864-8cb8f136348f",
+              "document_id": "73bd29bb-f792-5850-bd47-87e7e7573013",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01503448275862069,
+              "text": "Document Title: Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit\n\nText: Cependant   leffet relance   nest pas pleinement observé  : le choc dinvestissement, pourtant défini \nen volume et non en part du PIB, ne parvient pas à entraîne r la croissance au point de stabiliser son \npoids dans le PIB, donc dobtenir un  gain dactivité sans déformation notable de la structure de \nléconomie. Au contraire, c e poids est contraint daugmenter tout au long de la trajectoire et finit par \napprocher l e taux considérable de 40%. La conséquence immédiate de cette hausse de leffort \ndinvestissement, dans le cadre de clôture sur B retenu pour cette exploration, est une hausse du taux \ndépargne domestique  dun nombre de points de PIB strictement identiqu e à la hausse de leffort \ndinvestissement par la contrainte de clôture puisque le déficit commercial est fixé constant . Le surcroît \ndépargne domestique est obtenu au détriment de la consommation des ménages, qui croît très en -\ndeçà du potentiel de lécono mie et connaît même une période de légère récession entre 2031 et 2035",
+              "metadata": {
+                "title": "Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit",
+                "hal_id": "hal-04384918",
+                "authors": [
+                  "Frédéric Ghersi",
+                  "Adam Poupard",
+                  "Julien Lefevre"
+                ],
+                "version": "v0",
+                "citation": "Frédéric Ghersi, Adam Poupard, Julien Lefevre. Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit. CIRED/SMASH. 2024. ⟨hal-04384918⟩",
+                "source_url": "https://hal.science/hal-04384918",
+                "chunk_order": 133,
+                "document_type": "REPORT",
+                "publication_date": "2024-01-01",
+                "semantic_rank": 8,
+                "full_text_rank": 200,
+                "associated_query": "l'impact des investissements sur la balance commerciale"
+              }
+            }
+          },
+          {
+            "id": "b9f2d07",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2031,
+              "end": 2040
+            },
+            "payload": {
+              "id": "b9f2d077-f844-5d0d-8420-0e2511fcc7c5",
+              "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: 96\nparlétranger36.Lavaleurdéquilibre decetauxdintérêtpermetdajusterlabalancedes\npaiements37,oualternativement commenousallonslevoirlesintérêtsquidoiventêtreversésau\nrestedumondepourqueségalisent loffreetlademande decapitauxpourlinvestissement \nproductif38.\nBalancedespaiements (marchédesfondsprêtables) \n        . . . 1             . . . .     EE C p Y i D c g p X pM pM i D \nProportion des revenus disponibles des Solde de la balance Solde de la balance =  + agents nationaux consommée ou investie commerciale des revenus     \n        \nEgalitéentreloffreetlademande dinvestissement \n      . . .             .              . . .   dist C Cgfp Y i D p I pk Y \nDépenses d'investissement desBudget investi parcatégories d'agents nationaux Investissement  =   = les sy= offre de capitaux (fonction total en valeur\nde la distribution des revenus)\nstèmes productifs\n= demande de capitaux\n \nEnautorisant unécartentreloffredecapitauxetlarémunération effectivedelapropriété",
+              "metadata": {
+                "title": "Fiscalité carbone et progrès social. Application au cas français",
+                "hal_id": "tel-00813550",
+                "authors": [
+                  "Emmanuel Combet"
+                ],
+                "version": "v0",
+                "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+                "source_url": "https://hal.science/tel-00813550",
+                "chunk_order": 581,
+                "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+                "document_type": "THESE",
+                "publication_date": "2013-04-09",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "l'impact des investissements sur la balance commerciale"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "b43d0837-b64c-5683-9fe1-f6ef2cbeba86",
+            "document_id": "b4c26c50-e102-598e-8e0b-99d556cec3eb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Transition énergétique, projets de société et tensions du présent\n\nText: À droite, vous avez leffet sur le commerce extérieur avec une légère  dégradation \nen début de période, puis la balance commerciale se rattrape. \nDans  notre  modèle,  les  investissements  ne  sont  pas  seulement  financ és  par \nlépargne existante mais aussi par la monnaie, le crédit, ce qui permet effectivement à ce \nmoment-là de limiter léviction entre les investissements (a u seul montant des annuités de \nla dette, et non au coût global des nouveaux investissements)  et de  ne pas avoir leffet \ndépressif en début de période qui était identifié dans le présentation IMACLIM précédente.\nÇa  va  dépendre  de  la  rentabilité  attendue  du  capital  et  donc  de  la  demande \nanticipée. La production et lemploi dépendent de cet investissement.\n46",
+            "metadata": {
+              "title": "Transition énergétique, projets de société et tensions du présent",
+              "hal_id": "hal-01020566",
+              "authors": "['Minh Ha-Duong', 'Dominique Finon']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Dominique Finon. Transition énergétique, projets de société et tensions du présent. Première journée de Dialogue CNRS sur la transition énergétique en France, une cartographie des enjeux et des controverses., Jun 2013, Paris, France. ⟨hal-01020566⟩",
+              "source_url": "https://hal.science/hal-01020566",
+              "chunk_order": 109,
+              "document_type": "COMM",
+              "publication_date": "2013-06-21",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur la balance commerciale"
+            }
+          },
+          {
+            "id": "e47c4dcd-d521-5b73-8cbf-6eb61b554422",
+            "document_id": "73bd29bb-f792-5850-bd47-87e7e7573013",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit\n\nText: étant supposée mobiliser une part constante du PIB16) ; une clôture sur la balance commerciale, enfin,  \nqui suppose un financement de lincrément dinvestissement par une hausse de lépargne importée \nnette.  \n4.1 Conséquences macroéconomiques  \nSous clôture  néoclassique , comme précédemment introduit, linvestissement nécess aire à la transition  \ntend à réduire tous a utres types dinvestissement, le total dinvestissement disponible étant défini par \nles épargnes nationale  et importée  indépendamment fixées soit en valeur, soit en proportion de \nlactivité. Leffet déviction joue à plein. Cependant, l es réductions dim portations dénergies  \ninduisent une tendance au désendettement extérieur qui se traduit immédiatement, sous hypothèse \ndun marché des changes parfait, par une appréciation du taux de change effectif réel ( TCER ). Cette \nhausse cause  à la fois des hausses di mportations et des baisses dexportations de biens et services",
+            "metadata": {
+              "title": "Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit",
+              "hal_id": "hal-04384918",
+              "authors": [
+                "Frédéric Ghersi",
+                "Adam Poupard",
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Ghersi, Adam Poupard, Julien Lefevre. Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit. CIRED/SMASH. 2024. ⟨hal-04384918⟩",
+              "source_url": "https://hal.science/hal-04384918",
+              "chunk_order": 78,
+              "document_type": "REPORT",
+              "publication_date": "2024-01-01",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur la balance commerciale"
+            }
+          },
+          {
+            "id": "2cb129a6-5dc5-58bb-8111-2fd7aaa5e908",
+            "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: Linvestissement est utilisé dans chaque sect eur pour construire de nouvelles capacités de \nproduction avec un nouvel ensemble de technologies, ce qui implique lachat de différents biens  la plupart étant fournis par les secteurs  de la construction et de lindustrie (voir \n3.5.2). \n \nLa balance des capitaux est donnée par la diffé rence entre capitaux exportés et capitaux \nimportés. La balance des capitaux et la balan ce commerciale se compensent réciproquement à \nléquilibre, du fait de la conservation des flux de valeurs dans chaque région\n14. Tout déplacement \ndes flux de capitaux ou commerciaux devra être cont rebalancé par un déplacement des prix relatifs \ndans chaque région, entraînant instantanément d es modifications au niveau des exportations et des \nimportations.  \n3.5.2 Achat de biens déquipement \nLe montant total dinvestissement InvFin k,i alloué au secteur i dans la région k permet de \nconstruire de nouvelles capacités ΔCap k,i à un coût unitaire pCap k,i (équation (2.14)). Le coût",
+            "metadata": {
+              "title": "L'impact du changement technique endogène sur les politiques climatiques",
+              "hal_id": "tel-00489258",
+              "authors": "['Olivier Sassi']",
+              "version": "v0",
+              "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+              "source_url": "https://hal.science/tel-00489258",
+              "chunk_order": 389,
+              "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+              "document_type": "THESE",
+              "publication_date": "2008-11-21",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur la balance commerciale"
+            }
+          },
+          {
+            "id": "436490c0-3749-565e-a8e5-1e25aa876815",
+            "document_id": "73bd29bb-f792-5850-bd47-87e7e7573013",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit\n\nText: La balance des biens et services est définie comme la différence entre exportations et importations à \nprix courants  :  \n 𝐵= 𝑝𝑋𝑖𝑋𝑖\n𝑖=𝐸,𝑄 𝑝𝑀𝑖𝑀𝑖\n𝑖=𝐸,𝑄 (12) \nB.4 Clôture investissement -éparg ne \nLa clôture néoclassique repose sur une hypothèse de ratio au PIB 𝑠𝐵 de la balance des biens et services \nsupposé  constant  de 2022 à 2050 au niveau de 2021 ( -1,9%)  :  \n 𝐵=𝑠𝐵 𝑃𝐼𝐵 (13) \nElle exogénéise aussi le comportement  dépargne  nationale , défini comme un taux 𝑠𝐷 du PIB  lui-aussi \nmaintenu constant à sa valeur de 2021 (23,0%)  : \n 𝑝𝐼𝑄𝐼𝑄+𝐵=𝑠𝐷 𝑃𝐼𝐵 (14) \nLa clôture de Johansen substitue à ce comportement dépargne nationale une contrainte sur les \ndépenses dinvestissement 𝑝𝐼𝑄 𝐼𝑄, qui mobilisent  une fraction exogène 𝑠𝐼  du 𝑃𝐼𝐵 (l'investissement en \nbiens énergétiques est nul , voir Annexe A ) : \n 𝑝𝐼𝑄𝐼𝑄= 𝑠𝐼 𝑃𝐼𝐵 (14b) \nLa clôture sur la balance commerciale retient quant à elle les contraintes (14) et (14b)  on repose ici \n(14) comme une alternative de (13) afin de faciliter la description des variant es :",
+            "metadata": {
+              "title": "Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit",
+              "hal_id": "hal-04384918",
+              "authors": [
+                "Frédéric Ghersi",
+                "Adam Poupard",
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Ghersi, Adam Poupard, Julien Lefevre. Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit. CIRED/SMASH. 2024. ⟨hal-04384918⟩",
+              "source_url": "https://hal.science/hal-04384918",
+              "chunk_order": 181,
+              "document_type": "REPORT",
+              "publication_date": "2024-01-01",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur la balance commerciale"
+            }
+          },
+          {
+            "id": "90a006f9-da3a-5ca7-8c1c-1548396e1357",
+            "document_id": "73bd29bb-f792-5850-bd47-87e7e7573013",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit\n\nText: les épargnes nationale  et importée  indépendamment fixées soit en valeur, soit en proportion de \nlactivité. Leffet déviction joue à plein. Cependant, l es réductions dim portations dénergies  \ninduisent une tendance au désendettement extérieur qui se traduit immédiatement, sous hypothèse \ndun marché des changes parfait, par une appréciation du taux de change effectif réel ( TCER ). Cette \nhausse cause  à la fois des hausses di mportations et des baisses dexportations de biens et services \nnon-énergétiques , qui conduisent au maintien de léquilibre de l a balance commerciale. Mais elle \naméliore aussi le pouvoir dachat des ménages en réduisant le coût réel de leurs importations.  \nLa résultante de ces deux forces contra ires dépend  des valeur s relatives des élasticit és de substitution \ngouvernant, dune part, le surcroît de valeur ajoutée nécessaire à la réduction des consommations \ndénergie dans la production non -énergétique  ; dautre part, les échanges commerciaux. Une analyse",
+            "metadata": {
+              "title": "Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit",
+              "hal_id": "hal-04384918",
+              "authors": [
+                "Frédéric Ghersi",
+                "Adam Poupard",
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Ghersi, Adam Poupard, Julien Lefevre. Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit. CIRED/SMASH. 2024. ⟨hal-04384918⟩",
+              "source_url": "https://hal.science/hal-04384918",
+              "chunk_order": 79,
+              "document_type": "REPORT",
+              "publication_date": "2024-01-01",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur la balance commerciale"
+            }
+          },
+          {
+            "id": "2c62f901-966c-5329-af22-207fe564a4a9",
+            "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: excédent à lensemble des régions en prenant en compte les demandes dinvestissement non satisfaites dans celles qui sont en déficit de  financement, la profitabilité moyenne des \ninvestissements, ainsi que des risques-pays (exogènes) susceptibles de faire obstacle aux \ninvestissements directs étrangers. \n \n Les ressources financières nettes disponibles qui  résultent de ce schéma dans chaque région \nsont allouées entre les secteurs en proporti on de leurs besoins en investissement. \nLinvestissement est utilisé dans chaque sect eur pour construire de nouvelles capacités de \nproduction avec un nouvel ensemble de technologies, ce qui implique lachat de différents biens  la plupart étant fournis par les secteurs  de la construction et de lindustrie (voir \n3.5.2). \n \nLa balance des capitaux est donnée par la diffé rence entre capitaux exportés et capitaux \nimportés. La balance des capitaux et la balan ce commerciale se compensent réciproquement à",
+            "metadata": {
+              "title": "L'impact du changement technique endogène sur les politiques climatiques",
+              "hal_id": "tel-00489258",
+              "authors": "['Olivier Sassi']",
+              "version": "v0",
+              "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+              "source_url": "https://hal.science/tel-00489258",
+              "chunk_order": 388,
+              "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+              "document_type": "THESE",
+              "publication_date": "2008-11-21",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur la balance commerciale"
+            }
+          },
+          {
+            "id": "b9f2d077-f844-5d0d-8420-0e2511fcc7c5",
+            "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: 96\nparlétranger36.Lavaleurdéquilibre decetauxdintérêtpermetdajusterlabalancedes\npaiements37,oualternativement commenousallonslevoirlesintérêtsquidoiventêtreversésau\nrestedumondepourqueségalisent loffreetlademande decapitauxpourlinvestissement \nproductif38.\nBalancedespaiements (marchédesfondsprêtables) \n        . . . 1             . . . .     EE C p Y i D c g p X pM pM i D \nProportion des revenus disponibles des Solde de la balance Solde de la balance =  + agents nationaux consommée ou investie commerciale des revenus     \n        \nEgalitéentreloffreetlademande dinvestissement \n      . . .             .              . . .   dist C Cgfp Y i D p I pk Y \nDépenses d'investissement desBudget investi parcatégories d'agents nationaux Investissement  =   = les sy= offre de capitaux (fonction total en valeur\nde la distribution des revenus)\nstèmes productifs\n= demande de capitaux\n \nEnautorisant unécartentreloffredecapitauxetlarémunération effectivedelapropriété",
+            "metadata": {
+              "title": "Fiscalité carbone et progrès social. Application au cas français",
+              "hal_id": "tel-00813550",
+              "authors": [
+                "Emmanuel Combet"
+              ],
+              "version": "v0",
+              "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+              "source_url": "https://hal.science/tel-00813550",
+              "chunk_order": 581,
+              "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+              "document_type": "THESE",
+              "publication_date": "2013-04-09",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur la balance commerciale"
+            }
+          },
+          {
+            "id": "5edd3a3d-e917-5748-8864-8cb8f136348f",
+            "document_id": "73bd29bb-f792-5850-bd47-87e7e7573013",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit\n\nText: Cependant   leffet relance   nest pas pleinement observé  : le choc dinvestissement, pourtant défini \nen volume et non en part du PIB, ne parvient pas à entraîne r la croissance au point de stabiliser son \npoids dans le PIB, donc dobtenir un  gain dactivité sans déformation notable de la structure de \nléconomie. Au contraire, c e poids est contraint daugmenter tout au long de la trajectoire et finit par \napprocher l e taux considérable de 40%. La conséquence immédiate de cette hausse de leffort \ndinvestissement, dans le cadre de clôture sur B retenu pour cette exploration, est une hausse du taux \ndépargne domestique  dun nombre de points de PIB strictement identiqu e à la hausse de leffort \ndinvestissement par la contrainte de clôture puisque le déficit commercial est fixé constant . Le surcroît \ndépargne domestique est obtenu au détriment de la consommation des ménages, qui croît très en -\ndeçà du potentiel de lécono mie et connaît même une période de légère récession entre 2031 et 2035",
+            "metadata": {
+              "title": "Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit",
+              "hal_id": "hal-04384918",
+              "authors": [
+                "Frédéric Ghersi",
+                "Adam Poupard",
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Ghersi, Adam Poupard, Julien Lefevre. Macroéconomie des transitions énergétiques Explorations dans le cas français par la mise en oeuvre d'un modèle réduit. CIRED/SMASH. 2024. ⟨hal-04384918⟩",
+              "source_url": "https://hal.science/hal-04384918",
+              "chunk_order": 133,
+              "document_type": "REPORT",
+              "publication_date": "2024-01-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur la balance commerciale"
+            }
+          },
+          {
+            "id": "41bb74e0-8e33-5371-8a77-ebfd51ac6522",
+            "document_id": "344737d4-b5ce-5f49-8d3e-0bcf525e8517",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: ORGANISATION GLOBALE ET ARRANGEMENTS LOCAUX DANS LA DISTRIBUTION D'EAU A BAMAKO ET A LA HAVANE\n\nText: pas augmenté, comme attendu, sous leffet dune dem ande intérieure qui sest contractée. \nLépargne nationale sest sensiblement améliorée. L es recettes publiques ont progressé \nmais moins que prévu à cause dexonérations accordé es par lEtat et du report de la \nconsommation et des importations vers les biens les  moins taxés (Clément, 1995). Les \nexonérations continuent à handicaper le rendement d u système fiscal, par conséquent le \nfinancement de laction publique sen trouve restre int. Labus des exonérations révèle une \nabsence dautonomie des décisions de lEtat par rap port à lélite du pays, que les experts \nde lenquête de la DGTPE ont relevé (Meisel et Ould  Aoudia, 2007). Nous présentons ces \nrésultats au chapitre 3. \n \nLa balance commerciale na été excédentaire quen 1 997 et 2002. Dans la \npremière moitié des années 1990, la balance commerc iale est déficitaire autour de 35",
+            "metadata": {
+              "title": "ORGANISATION GLOBALE ET ARRANGEMENTS LOCAUX DANS LA DISTRIBUTION D'EAU A BAMAKO ET A LA HAVANE",
+              "hal_id": "tel-01719270",
+              "authors": [
+                "Pascale Pinceau"
+              ],
+              "version": "v0",
+              "citation": "Pascale Pinceau. ORGANISATION GLOBALE ET ARRANGEMENTS LOCAUX DANS LA DISTRIBUTION D'EAU A BAMAKO ET A LA HAVANE. Sciences de l'Homme et Société. AgroParisTech, 2009. Français. ⟨NNT : 2009AGPT0041⟩. ⟨tel-01719270⟩",
+              "source_url": "https://hal.science/tel-01719270",
+              "chunk_order": 506,
+              "description": "A La Havane et à Bamako, la distribution d'eau par réseau est partielle. Elle est limitée soit au niveau des horaires soit géographiquement. Une régulation socio-politique s'exerce et concourre à la constitution des réseaux. Dans ce contexte, l'entrée d'entreprises privées dans la gestion du service d'eau est présentée comme une solution grâce aux financements internationaux de SAUR et de AGBAR. Cependant, la participation privée à la gestion des ex entreprises publiques correspond aussi à un changement de répartition dans la prise en charge du coût des infrastructures. Cette modification dans l'identité des contributeurs peut-être politiquement destabilisante. A Bamako, c'est la classe moyenne jusque là soutien du pouvoir qui est sollicitée. A La Havane, l'entrée de l'entreprise privée soumet le territoire à des divisions dans la qualité du service. Dans les deux situations, le profit de l'entreprise est prioritaire, reléguant au second plan les effets bénéfiques de l'accroissement de la distribution d'une eau de qualité. Le rapport de force entre l'entreprise privatisée et l'Etat est toutefois différent dans les deux pays. Les intérêts cubains s'accordent bien avec ceux de l'entreprise privée (AGBAR) grâce à une participation majoritairement étatique au sein de l'entreprise gestionnaire du réseau et grâce à la capacité étatique à contrôler un marché générateur de devises. En revanche, l'Etat malien ne réussit pas l'alliance des intérêts du privé (SAUR) avec les siens, dans un contexte où les disparités liées à la mauvaise gestion de l'espace urbain ont, par ailleurs, été accentuées par la participation des capitaux privés.",
+              "document_type": "THESE",
+              "publication_date": "2009-09-11",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur la balance commerciale"
+            }
+          },
+          {
+            "id": "5783a0aa-4a50-51d1-ac78-5e75338946d9",
+            "document_id": "8a0349b0-3a72-5657-834a-3748506ed952",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES\n\nText: élastique aux termes de léchange70. Ceci signifie que les importations de bien composite  ont \ntendance à évoluer proportionnellement  à la production, donc à progresser lorsque lactivité augmente. \nEn conséquence limpact dune baisse du prix du bien composite sur le solde commercial nest pas \nunivoque. \n                                                                 \n69 Dans notre modélisation la  consomma tion  de ces équipements est agrégée pour part à la consommation de bien \ncomposite (biens durables), et po ur part à la FBCF des ménages (évolution du parc résidentiel). \n70 À lexception notable du pétrole brut, dont la production domes tique, très faible, est supposée invariable , le solde de la \nconsommation étant automatiquement  importé au prix du marché international (constant dans les simulations sauf indication \ncontraire).",
+            "metadata": {
+              "title": "Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES",
+              "hal_id": "halshs-00458205",
+              "authors": [
+                "Frédéric Ghersi",
+                "Emmanuel Combet",
+                "Jean Charles Hourcade",
+                "Camille Thubin"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Ghersi, Emmanuel Combet, Jean Charles Hourcade, Camille Thubin. Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES. 2010. ⟨halshs-00458205⟩",
+              "source_url": "https://hal.science/halshs-00458205",
+              "chunk_order": 515,
+              "description": "Cette étude offre une vision d'ensemble des enjeux de mise en oeuvre et d'évolution d'une fiscalité carbone en France. Elle s'applique à ne pas dissocier son évaluation des grands défis économiques et sociaux à venir et montre qu'un recours à la taxation du carbone offre sur le long terme plus de marges de manoeuvre qu'elle n'en supprime. Sans aller jusqu'aux détails précis de sa mise en ouvre, elle vise à clarifier les mécanismes mis en jeu et à apprécier, pour un même ensemble de critères, les impacts chiffrés de plusieurs dispositifs. Il apparaît que les dispositifs qui offrent le plus de marge de manoeuvre pour concilier les objectifs de climat, croissance, emploi, distribution des revenus et compétitivité des entreprises, combinent deux modes de redistribution du produit de la taxe carbone : d'un côté, en finançant des mesures compensatoires pour les populations et les activités les plus impactées, de l'autre, comme ressource alternative au financement des retraites pour contenir la hausse future des cotisations sociales. La conclusion majeure est que, sans une telle réforme, qui engage la négociation sociale au-delà des seuls enjeux climatiques, il sera difficile, au cours du prochain demi-siècle, de réaliser un découplage drastique entre émissions de gaz à effet de serre et croissance.",
+              "document_type": "OTHER",
+              "publication_date": "2010-01-04",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur la balance commerciale"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2324,
+            "total_tokens": 2324
+          }
+        }
+      },
+      "duration": 28
+    },
+    "retrievalTime": 5632,
+    "generationTime": 28,
+    "timestamp": "2025-07-18T10:32:22.394Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-18T10:32:22.571269+00:00",
+    "server_version": "1.0.0"
+  }
+}

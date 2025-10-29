@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752846574354_4a5q332c1l3o3r1b3",
+  "timestamp": "20250718T135037152Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752846637143_jcpwb60",
+    "query": "Donne moi list de publication de recent de vired",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "Donne moi list de publication de recent de vired",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "37.171.99.233",
+    "forwarded_for": "37.171.99.233",
+    "received_at": "2025-07-18T13:50:37.468399+00:00",
+    "server_version": "1.0.0"
+  }
+}

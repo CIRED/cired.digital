@@ -1,0 +1,15 @@
+{
+  "sessionId": "session_1753114240935_1p5k13q3b1n456c1k",
+  "timestamp": "20250721T161748136Z",
+  "eventType": "feedback",
+  "payload": {
+    "type": "up",
+    "comment": ""
+  },
+  "server_context": {
+    "client_ip": "86.238.242.220",
+    "forwarded_for": "86.238.242.220",
+    "received_at": "2025-07-21T16:17:48.169810+00:00",
+    "server_version": "1.0.0"
+  }
+}

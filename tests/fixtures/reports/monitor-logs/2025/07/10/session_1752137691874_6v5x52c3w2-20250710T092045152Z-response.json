@@ -1,0 +1,621 @@
+{
+  "sessionId": "session_1752137691874_6v5x52c3w29583f4u",
+  "timestamp": "20250710T092045152Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752139239516_pvu3fvh",
+    "response": {
+      "results": {
+        "generated_answer": "Il était une fois, dans une petite ville de France, une vieille maison nommée \"La Belle Endormie\". Construite en 1960, elle était belle mais consommait beaucoup d'énergie, comme beaucoup de bâtiments de cette époque [8040a77]. Ses murs en béton, sa toiture terrasse non isolée et ses fenêtres à simple vitrage laissaient échapper la chaleur en hiver et la fraîcheur en été [0f5716d].\n\nUn jour, son propriétaire, Monsieur Dupont, décida de la réveiller et de la rendre plus économe en énergie. Il avait entendu parler de l'éco-prêt à taux zéro et des aides disponibles pour la rénovation énergétique [cff619d]. Il se rendit à l'Espace Info Énergie de sa région pour obtenir des conseils gratuits et personnalisés [4aafec8].\n\nAvec l'aide des conseillers, Monsieur Dupont élabora un plan de rénovation. Il choisit un \"bouquet de travaux\" incluant l'isolation des combles, le remplacement du système de chauffage et l'installation d'un chauffe-eau solaire [4aafec8]. Il décida également d'installer des stores extérieurs pour améliorer le confort thermique [4aafec8].\n\nLes travaux commencèrent. Les artisans, formés et compétents, travaillèrent avec soin pour isoler les combles avec 20 cm d'isolant, installer un nouveau système de chauffage performant et poser le chauffe-eau solaire [6dd0e92]. Ils firent également attention à préserver l'intérêt patrimonial de la maison, en évitant d'intervenir sur les murs et les fenêtres de la façade principale [6dd0e92].\n\nAprès quelques mois, \"La Belle Endormie\" était transformée. Ses nouvelles performances énergétiques étaient impressionnantes. Monsieur Dupont constata une réduction significative de sa facture énergétique et un confort thermique amélioré [cff619d]. Il était fier d'avoir contribué à la transition énergétique et de posséder désormais une maison plus respectueuse de l'environnement [8040a77].\n\nGrâce à cette rénovation, \"La Belle Endormie\" devint un exemple dans la ville, montrant que même les vieux bâtiments peuvent être rendus performants énergétiquement. Monsieur Dupont partagea son expérience avec ses voisins, les encourageant à suivre son exemple pour un avenir plus sobre et durable [f604a22].\n\nEt ainsi, la petite ville devint un modèle de rénovation énergétique, prouvant que chaque geste compte dans la lutte contre le changement climatique.",
+        "citations": [
+          {
+            "id": "8040a77",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 216,
+              "end": 225
+            },
+            "payload": {
+              "id": "8040a77e-0036-5ac2-9ade-895a9432f3cd",
+              "document_id": "4b196628-9e38-51a2-a458-36bf4f1612b1",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015547619047619046,
+              "text": "Document Title: Agir sur les causes des changements globaux\n\nText: les technologies disolation ont fortement progressé ces vingt dernières années \net on sait désormais construire des bâtiments qui, à confort égal, consomment \nbeaucoup moins d énergie . Ceci a été décrit précédemment par Franck Richecœur \n(section  11.3). Des normes ont été instaurées qui visent à interdire de construire des \n passoires thermiques . L enjeu se porte désormais sur les bâtiments anciens qui \ndevraient être également isolés, ce qui pose à la fois des problèmes de financement \net de recours à des professionnels compétents.\n115.  C. Florian. De la sobriété énergétique à la sobriété matière : un concept clé pour la transition mais \naux contours encore mal définis . https:/ /apc-climat.fr/de-la-sobriete-energetique-a-la-sobriete-\nmatiere-un-concept-cle-pour-la-transition-mais-aux-contours-encore-mal-definis/ .\n116.  La vision du gouvernement français sur la définition de lefficacité énergétique. https:/ /www.\necologie.gouv.fr/action-france-lefficacite-energetique .",
+              "metadata": {
+                "doi": "10.1051/978-2-7598-2662-9.c013",
+                "title": "Agir sur les causes des changements globaux",
+                "hal_id": "hal-03483664",
+                "authors": [
+                  "Jane Lecomte",
+                  "Nathalie Frascaria",
+                  "Jean-Christophe Bureau",
+                  "Thierry Brunelle",
+                  "Franck Richecoeur",
+                  "Jean-Michel Lourtioz",
+                  "Laurent Audouin",
+                  "Francois-Marie Breon",
+                  "Catherine Even"
+                ],
+                "version": "v0",
+                "citation": "Jane Lecomte, Nathalie Frascaria, Jean-Christophe Bureau, Thierry Brunelle, Franck Richecoeur, et al.. Agir sur les causes des changements globaux. Enjeux de la transition écologique, EDP Sciences, pp.303 - 352, 2021, 978-2-7598-2662-9. ⟨10.1051/978-2-7598-2662-9.c013⟩. ⟨hal-03483664⟩",
+                "source_url": "https://doi.org/10.1051/978-2-7598-2662-9.c013",
+                "chunk_order": 155,
+                "document_type": "COUV",
+                "publication_date": "2021-11-01",
+                "semantic_rank": 6,
+                "full_text_rank": 200,
+                "associated_query": "raconte une histoire sur la rénovation énergétique"
+              }
+            }
+          },
+          {
+            "id": "0f5716d",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 373,
+              "end": 382
+            },
+            "payload": {
+              "id": "0f5716de-2757-59aa-83a9-994ad75c596d",
+              "document_id": "f90f7ea8-c6c1-52af-a0cb-9b730bb0be00",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01503448275862069,
+              "text": "Document Title: Analyse préliminaire de la valeur verte pour les logements\n\nText: éco-prêt à taux zéro - performance énergétique globale minimale  11\nH1\nH2\nH3Rénovation thermique  \ndun immeuble\nde 1960, chauffé au gaz\nCette fiche a pour objectif de présenter un exemple de rénovation thermique dimmeuble pouvant bénéficier \ndun éco-prêt à taux zéro. Les descriptions et résultats qui y figurent sont propres au bâtiment décrit. Tous \nles chiffres de consommations et les factures énergétiques sont établis sur la base dhypothèses conven-\ntionnelles et ne peuvent donc pas être directement transposés à un autre cas.\nLétat actuel\nLe bâtiment et sa localisation\nCet immeuble, construit en 1960, est situé en Haute-Vienne, en zone \nurbaine. Il est orienté est / ouest.\nSa surface totale (SHON) est de 4 560 m 2, sur 10 niveaux.\nLe bâti\nLes murs sont en béton sans isolation. \nLa toiture terrasse nest pas isolée.\nLes fenêtres sont à simple vitrage avec menuiseries PVC, avec volets.\nLe plancher bas au-dessus des caves nest pas isolé.\nLes équipements",
+              "metadata": {
+                "title": "Analyse préliminaire de la valeur verte pour les logements",
+                "hal_id": "hal-00799764",
+                "authors": [
+                  "D. Chotard",
+                  "M. Midori",
+                  "C. Berthon",
+                  "S. Laurenceau",
+                  "Louis-Gaëtan Giraudet"
+                ],
+                "version": "v0",
+                "citation": "D. Chotard, M. Midori, C. Berthon, S. Laurenceau, Louis-Gaëtan Giraudet. Analyse préliminaire de la valeur verte pour les logements. 2011, pp.261. ⟨hal-00799764⟩",
+                "source_url": "https://hal.science/hal-00799764",
+                "chunk_order": 780,
+                "description": "Analyse préliminaire de la valeur verte pour les logements",
+                "document_type": "REPORT",
+                "publication_date": "2011-09-01",
+                "semantic_rank": 8,
+                "full_text_rank": 200,
+                "associated_query": "raconte une histoire sur la rénovation énergétique"
+              }
+            }
+          },
+          {
+            "id": "cff619d",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 599,
+              "end": 608
+            },
+            "payload": {
+              "id": "cff619d4-c61b-577f-9c59-73331dba2db6",
+              "document_id": "f90f7ea8-c6c1-52af-a0cb-9b730bb0be00",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01638993710691824,
+              "text": "Document Title: Analyse préliminaire de la valeur verte pour les logements\n\nText: Évolution des consommations \nconventionnelles\nen kWh ep par m2 et par an\nÉvolution des dépenses annuelles (facture énergétique + rembourse-\nment de léco-prêt)\nConception et réalisation : H. Bareau   Illustration F. Macard      Imprimé par IME avec des encres végétales sur papier certifié Écolabel Nordique6712      Mars 2010Consultez les 12 fiches consacrées à des exemples de rénovation financée grâce à léco-prêt à taux zéro sur : \necocitoyens.ademe.fr/financer-mon-projet/renovation/eco-pret-a-taux-zero  \nou www.developpement-durable.gouv.fr/Chapitre-I-L-eco-pret-a-taux-zero.html#fiche",
+              "metadata": {
+                "title": "Analyse préliminaire de la valeur verte pour les logements",
+                "hal_id": "hal-00799764",
+                "authors": [
+                  "D. Chotard",
+                  "M. Midori",
+                  "C. Berthon",
+                  "S. Laurenceau",
+                  "Louis-Gaëtan Giraudet"
+                ],
+                "version": "v0",
+                "citation": "D. Chotard, M. Midori, C. Berthon, S. Laurenceau, Louis-Gaëtan Giraudet. Analyse préliminaire de la valeur verte pour les logements. 2011, pp.261. ⟨hal-00799764⟩",
+                "source_url": "https://hal.science/hal-00799764",
+                "chunk_order": 686,
+                "description": "Analyse préliminaire de la valeur verte pour les logements",
+                "document_type": "REPORT",
+                "publication_date": "2011-09-01",
+                "semantic_rank": 3,
+                "full_text_rank": 200,
+                "associated_query": "raconte une histoire sur la rénovation énergétique"
+              }
+            }
+          },
+          {
+            "id": "4aafec8",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 712,
+              "end": 721
+            },
+            "payload": {
+              "id": "4aafec8f-b4f2-5101-a502-3098a3d5c240",
+              "document_id": "f90f7ea8-c6c1-52af-a0cb-9b730bb0be00",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: Analyse préliminaire de la valeur verte pour les logements\n\nText: au double vitrage et aux volets des fenêtres.\nLe propriétaire a pu bénéficier de conseils personnalisés et gratuits \nauprès dun Espace\n ou de professionnels. Il a vérifié quil \nremplissait les conditions déligibilité à léco-prêt à taux zéro et a choisi \nden bénéficier. \nIl sest alors orienté vers un  bouquet de travaux  de trois actions perti-\nnentes en matière déconomies dénergie et damélioration du confort : \nisolation des combles aménagés, remplacement du système de chauf-\nfage et de production dECS, installation dun chauffe eau solaire in-dividuel. Les travaux saccompagnent également du remplacement des \nradiateurs et de la pose de stores extérieurs sur les fenêtres de toit.\n La rénovation thermique des murs na pas été retenue : ils sont déjà par -\ntiellement isolés et une isolation supplémentaire serait trop coûteuse.\nPour plus de détails, voir, sur le site de lADEME,  léco-prêt à taux zéro  .050100150200250300350\n050100150200250300350\nchauffage ECS\nauxiliaires éclairage320\nMurs \n24%\nPlancher bas",
+              "metadata": {
+                "title": "Analyse préliminaire de la valeur verte pour les logements",
+                "hal_id": "hal-00799764",
+                "authors": [
+                  "D. Chotard",
+                  "M. Midori",
+                  "C. Berthon",
+                  "S. Laurenceau",
+                  "Louis-Gaëtan Giraudet"
+                ],
+                "version": "v0",
+                "citation": "D. Chotard, M. Midori, C. Berthon, S. Laurenceau, Louis-Gaëtan Giraudet. Analyse préliminaire de la valeur verte pour les logements. 2011, pp.261. ⟨hal-00799764⟩",
+                "source_url": "https://hal.science/hal-00799764",
+                "chunk_order": 677,
+                "description": "Analyse préliminaire de la valeur verte pour les logements",
+                "document_type": "REPORT",
+                "publication_date": "2011-09-01",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "raconte une histoire sur la rénovation énergétique"
+              }
+            }
+          },
+          {
+            "id": "4aafec8",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 952,
+              "end": 961
+            },
+            "payload": null
+          },
+          {
+            "id": "4aafec8",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1053,
+              "end": 1062
+            },
+            "payload": null
+          },
+          {
+            "id": "6dd0e92",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1282,
+              "end": 1291
+            },
+            "payload": {
+              "id": "6dd0e928-48d9-5366-a304-da7131aaae5b",
+              "document_id": "f90f7ea8-c6c1-52af-a0cb-9b730bb0be00",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.014555555555555556,
+              "text": "Document Title: Analyse préliminaire de la valeur verte pour les logements\n\nText: Scénario 2 \nen milliers d'euros.Prix de l'énergie en augmentation de 5 % par an, tenant compte de l'inflation\naprès travaux10 15 200\n5 1 an123\n0365 1 an 10 15 20036\n \nLa solution de rénovation retenue\nChaque équipement ou matériau doit répondre à des exigences minimales pour que les travaux, \nréalisés par des professionnels, soient éligibles à léco-prêt.\nLintérêt patrimonial du bâtiment (style de la façade sur rue, enduits et \nmoulures intérieurs) limite les interventions possibles : le choix a été fait \nde ne pas isoler les murs et de ne pas remplacer les fenêtres sur rue.\nDans un bâtiment dun intérêt architectural moindre, il serait judicieux \ndinstaller des isolants et des enduits intérieurs adaptés, qui ne remet-tent pas en cause léquilibre hygrométrique des murs anciens. Dans le cas présent, les isolants, enduits et revêtements étanches sont à proscrire.\nPour améliorer lisolation et le confort dhiver\n\t \t isoler\tle\tplafond\t de\tlappartement\t par\tun\tplafond\t suspendu\t avec\t\n20 cm disolant (R  = 5) ;",
+              "metadata": {
+                "title": "Analyse préliminaire de la valeur verte pour les logements",
+                "hal_id": "hal-00799764",
+                "authors": [
+                  "D. Chotard",
+                  "M. Midori",
+                  "C. Berthon",
+                  "S. Laurenceau",
+                  "Louis-Gaëtan Giraudet"
+                ],
+                "version": "v0",
+                "citation": "D. Chotard, M. Midori, C. Berthon, S. Laurenceau, Louis-Gaëtan Giraudet. Analyse préliminaire de la valeur verte pour les logements. 2011, pp.261. ⟨hal-00799764⟩",
+                "source_url": "https://hal.science/hal-00799764",
+                "chunk_order": 735,
+                "description": "Analyse préliminaire de la valeur verte pour les logements",
+                "document_type": "REPORT",
+                "publication_date": "2011-09-01",
+                "semantic_rank": 10,
+                "full_text_rank": 200,
+                "associated_query": "raconte une histoire sur la rénovation énergétique"
+              }
+            }
+          },
+          {
+            "id": "6dd0e92",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1449,
+              "end": 1458
+            },
+            "payload": null
+          },
+          {
+            "id": "cff619d",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1699,
+              "end": 1708
+            },
+            "payload": null
+          },
+          {
+            "id": "8040a77",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1843,
+              "end": 1852
+            },
+            "payload": null
+          },
+          {
+            "id": "f604a22",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2154,
+              "end": 2163
+            },
+            "payload": {
+              "id": "f604a221-b6cc-571d-b980-5a4d19213a63",
+              "document_id": "e48d9f97-1ea3-563b-9463-11260399b342",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015818181818181818,
+              "text": "Document Title: Maîtriser la demande d'énergie, une option consensuelle face à ses obstacles\n\nText: montant de travaux subventionnés, et de sassurer de leur bonne mise en œuvre.\nJai  aussi contribué  depuis  une vingtaine dannées  à lanimation du Club  de\nlamélioration de lhabitat, association créée afin daider la fil ière de la rénovation\nà mieux comprendre ce marché et à le dynamiser. V oilà donc le poi nt de vue\nduquel je parle. Et jobserve bien quil y a une espèce de consensus, mêm e\nimparfait, sur les finalités  de la rénovation énergétique. Et surtou t quil reste\nbeaucoup de questions à résoudre sur les manières de faire.\n40",
+              "metadata": {
+                "title": "Maîtriser la demande d'énergie, une option consensuelle face à ses obstacles",
+                "hal_id": "hal-01020522",
+                "authors": [
+                  "Minh Ha-Duong",
+                  "Dominique Finon"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong, Dominique Finon. Maîtriser la demande d'énergie, une option consensuelle face à ses obstacles. Troisième journée de dialogue du cycle \"La Transition Énergétique en France, une cartographie des enjeux et des controverses\"., Mar 2014, Paris, France. ⟨hal-01020522⟩",
+                "source_url": "https://hal.science/hal-01020522",
+                "chunk_order": 90,
+                "description": "Le CIRED a organisé un colloque le jeudi 20 mars 2014 à l'auditorium du CNRS. Cet événement a été produit dans le cadre du projet de recherche européen R&Dialogue, en association avec le laboratoire PACTE (U. Grenoble-CNRS) et avec le soutien de l'INSHS et de l'INSIS du CNRS. Ce document constitue les actes de cette journée. Son sommaire reprend le déroulé des exposés. Il est organisé en cinq parties correspondant aux sessions : * A. \" L'efficacité des consommations dans le bâtiment : entre innovations financières, inerties des systèmes et organisation des filières. \" Session présidée par Isabelle Vincent (Ademe). * B. \" Transports entre mobilité subie et mobilité choisie : des prix de l'immobilier et de l'énergie aux politiques d'infrastructure. \" Session présidée par Jean Laterrasse (LMVT, ENPC). * C. \" Le territoire, nouvel acteur de la maîtrise de l'énergie et de la transition. \" Session présidée par Dominique Finon (Cired). * D. \" La vulnérabilité énergétique face au coût de la transition énergétique. \" Session présidée par Stéphane Mialot (Médiateur national de l'Énergie). *E. \" Transition énergétique, quels nouveaux atouts économiques pour sortir de la crise du régime de croissance. \" Table ronde présidée par Géraud Guibert (La Fabrique écologique). Cette journée achève un cycle de trois journées de dialogue CNRS sur la transition énergétique.",
+                "document_type": "COMM",
+                "publication_date": "2014-03-20",
+                "semantic_rank": 5,
+                "full_text_rank": 200,
+                "associated_query": "raconte une histoire sur la rénovation énergétique"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "cd1028d8-1643-5f64-888c-82c604e6aae6",
+            "document_id": "ce1b1abd-64ab-54e3-9136-893b3ff1851c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie\n\nText: M.-H. Laurent, R. Rezakhanlou, Y. Bamberger, 2008,  Le bâtiment sans énergies fossiles ? , Futuribles, n343, pp.79-100 Maresca, B., A. Dujin, R. Picard, 2009,  La consommation dénergie dans lhabitat entre recherche de confort et impératif écologique , Centre de recherche pour létude et lobservation des conditions de vie (CREDOC), Cahier de recherche n264 Martin, Y., Y. Carsalade, J.-P. Leteurtrois, F. Moisan, 1998,  La maîtrise de lénergie : rapport dévaluation , La Documentation française, Paris MEEDDM [Ministère de lécologie, de lénergie, du développement durable et de la mer], 2010,  La fiscalité environnementale prend son essor  Négawatt, 2005, Scénario négaWatt 2006 pour un avenir sobre, efficace et renouvelable, Document de synthèse OPEN [Observatoire permanent de lamélioration énergétique du logement], 2009, Rapport final Pelletier, P., 2008, Rapport au Ministre dEtat, ministre de lEcologie, du Développement et de lAménagement durables, Comité opérationnel  rénovation des bâtiments existant  PUCA",
+            "metadata": {
+              "title": "Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie",
+              "hal_id": "hal-00799740",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Céline Guivarch",
+                "Philippe Quirion",
+                "L. Penot-Antoniou"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion, L. Penot-Antoniou. Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie. Études et documents - Numéro 58, 2011, pp.78. ⟨hal-00799740⟩",
+              "source_url": "https://hal.science/hal-00799740",
+              "chunk_order": 448,
+              "description": "La France s'est engagée à réduire les consommations d'énergie du parc des bâtiments existants de 38 % en 2020 par rapport à 2008, objectif \" Grenelle -38 % \", et à diviser les émissions de CO2 par quatre en 2050 par rapport à 1990, objectif \" Facteur 4 \". Pour atteindre ces objectifs, le Grenelle de l'environnement a mis en avant un certain nombre de leviers réglementaires et incitatifs. Cette étude, réalisée par le CIRED pour le compte du CGDD, a pour objectif d'analyser l'impact de ces différents instruments sur la consommation d'énergie pour le chauffage. Mesures existantes (crédit d'impôt développement durable, éco-prêt à taux zéro, réglementation thermique) et mesures supplémentaires (obligation de rénovation, contribution climat énergie) sont évaluées grâce au modèle Res-IRF du CIRED. Ce modèle prend en compte l'efficacité énergétique des logements et leur évolution dans le temps sous l'effet de rénovations ; il modélise également de façon originale les comportements de chauffage des ménages. Les premières simulations suggèrent que les politiques considérées ne suffisent pas à atteindre les objectifs ambitieux fixés par la France. Ces résultats sont sensibles aux hypothèses retenues. En introduisant des hypothèses plus optimistes (ex : prix des rénovations plus faible) et en prenant en compte des facteurs complémentaires au modèle (ex : bois), un travail de ré-estimation sur la base du modèle du CIRED a permis d'obtenir des résultats plus proches des objectifs du Grenelle.",
+              "document_type": "REPORT",
+              "publication_date": "2011-11-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique"
+            }
+          },
+          {
+            "id": "47d73d0a-73fd-5b06-bd77-e1a8611ad3a2",
+            "document_id": "05cff8a4-8d4a-521a-ac4b-27f9d7c6b7f0",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES\n\nText: par an entre 2012 et 2014. Daprès lObservatoire P ermanent de lamélioration ENnergétique du \nlogement, le nombre de rénovations thermiques globales  troi s étoiles 17  réalisées en une \nseule fois est de 135 000 en 2011 et de 90 000 en 2 013 (OPEN 2015) . Ces statistiques ne \npermettent pas de quantification précise de la réno vation sur lensemble du parc, notamment \nen raison du cumul possible entre les aides ou du m anque de données sur le logement social. \nElles montrent néanmoins que lon est loin des obje ctifs fixés, dautant plus que lactuel projet \nde loi vise des rénovations permettant datteindre des niveaux de performance BBC, ce qui est \nloin dêtre le cas pour la très grande majorité des  travaux réalisés. \nLe double constat dun volontarisme politique dans la mise en œuvre de programmes \nvisant à promouvoir linvestissement dans lefficac ité énergétique des logements et de la \nfaiblesse des résultats au vu des objectifs fixés a mène à sinterroger sur la pertinence et",
+            "metadata": {
+              "title": "ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES",
+              "hal_id": "tel-01618117",
+              "authors": "['Marie-Laure Nauleau']",
+              "version": "v0",
+              "citation": "Marie-Laure Nauleau. ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES. Economics and Finance. EHESS-Paris, 2015. English. ⟨NNT : ⟩. ⟨tel-01618117⟩",
+              "source_url": "https://hal.science/tel-01618117",
+              "chunk_order": 86,
+              "description": "Given the share of the residential sector in households’ energy consumption, residential energy retrofitting is a burning issue in the climate change policy strategy. All the investment barriers faced by households invite us to explore the investment factors and to assess the efficiency of public policies. In a first part, the thesis studies the investment factors by estimating a discrete choice model on data from the French annual “Energy Management” survey conducted by Ademe, particularly focusing on factors heterogeneity among retrofitting types. A second part of the thesis deals with the assessment of public policy promoting energy efficiency, both from the demand and the supply sides of the energy efficiency markets. Regarding the demand side, the thesis uses two complementary methods: an ex-post econometric study focuses on the French tax credit called Crédit d’Impôt Développement Durable implemented in 2005 while an ex-ante study uses a hybrid energy-economy model to compare different policies. Regarding the supply side, given the high degree of concentration on the energy efficiency markets, we use a theoretical model to assess public policy efficiency in the presence of three markets imperfections: the negative externality linked to CO2 and the imperfections of market competition and information inducing price-quality discrimination.",
+              "document_type": "THESE",
+              "publication_date": "2015-06-18",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique"
+            }
+          },
+          {
+            "id": "cff619d4-c61b-577f-9c59-73331dba2db6",
+            "document_id": "f90f7ea8-c6c1-52af-a0cb-9b730bb0be00",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Analyse préliminaire de la valeur verte pour les logements\n\nText: Évolution des consommations \nconventionnelles\nen kWh ep par m2 et par an\nÉvolution des dépenses annuelles (facture énergétique + rembourse-\nment de léco-prêt)\nConception et réalisation : H. Bareau   Illustration F. Macard      Imprimé par IME avec des encres végétales sur papier certifié Écolabel Nordique6712      Mars 2010Consultez les 12 fiches consacrées à des exemples de rénovation financée grâce à léco-prêt à taux zéro sur : \necocitoyens.ademe.fr/financer-mon-projet/renovation/eco-pret-a-taux-zero  \nou www.developpement-durable.gouv.fr/Chapitre-I-L-eco-pret-a-taux-zero.html#fiche",
+            "metadata": {
+              "title": "Analyse préliminaire de la valeur verte pour les logements",
+              "hal_id": "hal-00799764",
+              "authors": [
+                "D. Chotard",
+                "M. Midori",
+                "C. Berthon",
+                "S. Laurenceau",
+                "Louis-Gaëtan Giraudet"
+              ],
+              "version": "v0",
+              "citation": "D. Chotard, M. Midori, C. Berthon, S. Laurenceau, Louis-Gaëtan Giraudet. Analyse préliminaire de la valeur verte pour les logements. 2011, pp.261. ⟨hal-00799764⟩",
+              "source_url": "https://hal.science/hal-00799764",
+              "chunk_order": 686,
+              "description": "Analyse préliminaire de la valeur verte pour les logements",
+              "document_type": "REPORT",
+              "publication_date": "2011-09-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique"
+            }
+          },
+          {
+            "id": "860fbf98-c1d2-5404-af13-201c893abd5c",
+            "document_id": "ff96cb05-8dab-5c25-9bda-53cf508d2490",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle\n\nText: faveur du développement durable : Une résidence principale su r sept rénovée entre 2005 et 2008 , INSEE \nPREMIERE , n1316 \nJaccard, M., M. Dennis, 2006, Estimating home energy decision parameters for a hybrid energy -economy \npolicy model, Environmental Modeling and Assessment , 11(2):91-100 \nJacquot, A., 2007,  La demande potentielle de logements: un chiffrage à lhorizon 2020  , Notes de synthèse \ndu SESP , n165, 41-48 \nJaffe, A.B., R.N. Stavins, 1994, Energy -efficiency investments and public policy, The Energy Journal , 15(2):43-\n65 \nLagandré, E., 2006,  Lamélioration énergétique des logements existants. Le rôle des artis ans dans \nlinformation de leurs clients  , Les Annales de la recherche urbaine , n103, pp. 95-99 \nLagandré, E., D. Marchio, P. Rivière, M. Jorio, 2010,  Quels niveaux de per formance pour la rénovation \nénergétique ? Un détour conceptuel pour éclairer les débats , Revue de lénergie , 598:392-397",
+            "metadata": {
+              "title": "Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle",
+              "hal_id": "tel-00599374",
+              "authors": [
+                "Louis-Gaëtan Giraudet"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet. Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle. Economies et finances. Université Paris-Est, 2011. Français. ⟨NNT : 2011PEST1139⟩. ⟨tel-00599374v2⟩",
+              "source_url": "https://hal.science/tel-00599374",
+              "chunk_order": 559,
+              "description": "Cette thèse évalue l'efficacité de différentes formes de taxes, subventions et réglementations mises en place pour corriger les défaillances de marché qui s'opposent aux économies d'énergie. Elle mobilise plusieurs approches, selon un degré de complexité croissant. Dans un premier temps, un modèle microéconomique standard est développé pour comparer les performances statiques des différents instruments. Dans un deuxième temps, la représentation des comportements des consommateurs est approfondie dans un modèle de prospective de la consommation d'énergie pour le chauffage des ménages français, qui permet d'identifier les mécanismes dynamiques par lesquels les instruments peuvent corriger les principales défaillances de marché. Dans un troisième temps, une évaluation empirique des dispositifs de « certificats blancs » – obligations échangeables d'économies d'énergie imposées aux opérateurs énergétiques – est menée à partir d'une comparaison des expériences britannique, italienne et française, en intégrant les institutions dans l'analyse. Le croisement de ces différentes approches montre que : (i) les taxes sur l'énergie, qui encouragent à la fois l'investissement dans l'efficacité énergétique et la sobriété des comportements, sont particulièrement efficaces ; (ii) les réglementations sur l'efficacité énergétique ont un impact significatif sur la diffusion des technologies efficaces ; (iii) les subventions à l'efficacité énergétique génèrent un effet rebond important ; (iv) en fonction de l'environnement institutionnel dans lequel ils s'insèrent, les « certificats blancs » combinent les propriétés de ces instruments. Appliquée en France au secteur du bâtiment résidentiel, la combinaison la plus efficace de ces instruments ne permet pas d'atteindre les objectifs d'économies d'énergie définis dans le cadre du Grenelle de l'environnement",
+              "document_type": "THESE",
+              "publication_date": "2011-03-28",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique"
+            }
+          },
+          {
+            "id": "f604a221-b6cc-571d-b980-5a4d19213a63",
+            "document_id": "e48d9f97-1ea3-563b-9463-11260399b342",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Maîtriser la demande d'énergie, une option consensuelle face à ses obstacles\n\nText: montant de travaux subventionnés, et de sassurer de leur bonne mise en œuvre.\nJai  aussi contribué  depuis  une vingtaine dannées  à lanimation du Club  de\nlamélioration de lhabitat, association créée afin daider la fil ière de la rénovation\nà mieux comprendre ce marché et à le dynamiser. V oilà donc le poi nt de vue\nduquel je parle. Et jobserve bien quil y a une espèce de consensus, mêm e\nimparfait, sur les finalités  de la rénovation énergétique. Et surtou t quil reste\nbeaucoup de questions à résoudre sur les manières de faire.\n40",
+            "metadata": {
+              "title": "Maîtriser la demande d'énergie, une option consensuelle face à ses obstacles",
+              "hal_id": "hal-01020522",
+              "authors": [
+                "Minh Ha-Duong",
+                "Dominique Finon"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Dominique Finon. Maîtriser la demande d'énergie, une option consensuelle face à ses obstacles. Troisième journée de dialogue du cycle \"La Transition Énergétique en France, une cartographie des enjeux et des controverses\"., Mar 2014, Paris, France. ⟨hal-01020522⟩",
+              "source_url": "https://hal.science/hal-01020522",
+              "chunk_order": 90,
+              "description": "Le CIRED a organisé un colloque le jeudi 20 mars 2014 à l'auditorium du CNRS. Cet événement a été produit dans le cadre du projet de recherche européen R&Dialogue, en association avec le laboratoire PACTE (U. Grenoble-CNRS) et avec le soutien de l'INSHS et de l'INSIS du CNRS. Ce document constitue les actes de cette journée. Son sommaire reprend le déroulé des exposés. Il est organisé en cinq parties correspondant aux sessions : * A. \" L'efficacité des consommations dans le bâtiment : entre innovations financières, inerties des systèmes et organisation des filières. \" Session présidée par Isabelle Vincent (Ademe). * B. \" Transports entre mobilité subie et mobilité choisie : des prix de l'immobilier et de l'énergie aux politiques d'infrastructure. \" Session présidée par Jean Laterrasse (LMVT, ENPC). * C. \" Le territoire, nouvel acteur de la maîtrise de l'énergie et de la transition. \" Session présidée par Dominique Finon (Cired). * D. \" La vulnérabilité énergétique face au coût de la transition énergétique. \" Session présidée par Stéphane Mialot (Médiateur national de l'Énergie). *E. \" Transition énergétique, quels nouveaux atouts économiques pour sortir de la crise du régime de croissance. \" Table ronde présidée par Géraud Guibert (La Fabrique écologique). Cette journée achève un cycle de trois journées de dialogue CNRS sur la transition énergétique.",
+              "document_type": "COMM",
+              "publication_date": "2014-03-20",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique"
+            }
+          },
+          {
+            "id": "8040a77e-0036-5ac2-9ade-895a9432f3cd",
+            "document_id": "4b196628-9e38-51a2-a458-36bf4f1612b1",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Agir sur les causes des changements globaux\n\nText: les technologies disolation ont fortement progressé ces vingt dernières années \net on sait désormais construire des bâtiments qui, à confort égal, consomment \nbeaucoup moins d énergie . Ceci a été décrit précédemment par Franck Richecœur \n(section  11.3). Des normes ont été instaurées qui visent à interdire de construire des \n passoires thermiques . L enjeu se porte désormais sur les bâtiments anciens qui \ndevraient être également isolés, ce qui pose à la fois des problèmes de financement \net de recours à des professionnels compétents.\n115.  C. Florian. De la sobriété énergétique à la sobriété matière : un concept clé pour la transition mais \naux contours encore mal définis . https:/ /apc-climat.fr/de-la-sobriete-energetique-a-la-sobriete-\nmatiere-un-concept-cle-pour-la-transition-mais-aux-contours-encore-mal-definis/ .\n116.  La vision du gouvernement français sur la définition de lefficacité énergétique. https:/ /www.\necologie.gouv.fr/action-france-lefficacite-energetique .",
+            "metadata": {
+              "doi": "10.1051/978-2-7598-2662-9.c013",
+              "title": "Agir sur les causes des changements globaux",
+              "hal_id": "hal-03483664",
+              "authors": [
+                "Jane Lecomte",
+                "Nathalie Frascaria",
+                "Jean-Christophe Bureau",
+                "Thierry Brunelle",
+                "Franck Richecoeur",
+                "Jean-Michel Lourtioz",
+                "Laurent Audouin",
+                "Francois-Marie Breon",
+                "Catherine Even"
+              ],
+              "version": "v0",
+              "citation": "Jane Lecomte, Nathalie Frascaria, Jean-Christophe Bureau, Thierry Brunelle, Franck Richecoeur, et al.. Agir sur les causes des changements globaux. Enjeux de la transition écologique, EDP Sciences, pp.303 - 352, 2021, 978-2-7598-2662-9. ⟨10.1051/978-2-7598-2662-9.c013⟩. ⟨hal-03483664⟩",
+              "source_url": "https://doi.org/10.1051/978-2-7598-2662-9.c013",
+              "chunk_order": 155,
+              "document_type": "COUV",
+              "publication_date": "2021-11-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique"
+            }
+          },
+          {
+            "id": "4aafec8f-b4f2-5101-a502-3098a3d5c240",
+            "document_id": "f90f7ea8-c6c1-52af-a0cb-9b730bb0be00",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Analyse préliminaire de la valeur verte pour les logements\n\nText: au double vitrage et aux volets des fenêtres.\nLe propriétaire a pu bénéficier de conseils personnalisés et gratuits \nauprès dun Espace\n ou de professionnels. Il a vérifié quil \nremplissait les conditions déligibilité à léco-prêt à taux zéro et a choisi \nden bénéficier. \nIl sest alors orienté vers un  bouquet de travaux  de trois actions perti-\nnentes en matière déconomies dénergie et damélioration du confort : \nisolation des combles aménagés, remplacement du système de chauf-\nfage et de production dECS, installation dun chauffe eau solaire in-dividuel. Les travaux saccompagnent également du remplacement des \nradiateurs et de la pose de stores extérieurs sur les fenêtres de toit.\n La rénovation thermique des murs na pas été retenue : ils sont déjà par -\ntiellement isolés et une isolation supplémentaire serait trop coûteuse.\nPour plus de détails, voir, sur le site de lADEME,  léco-prêt à taux zéro  .050100150200250300350\n050100150200250300350\nchauffage ECS\nauxiliaires éclairage320\nMurs \n24%\nPlancher bas",
+            "metadata": {
+              "title": "Analyse préliminaire de la valeur verte pour les logements",
+              "hal_id": "hal-00799764",
+              "authors": [
+                "D. Chotard",
+                "M. Midori",
+                "C. Berthon",
+                "S. Laurenceau",
+                "Louis-Gaëtan Giraudet"
+              ],
+              "version": "v0",
+              "citation": "D. Chotard, M. Midori, C. Berthon, S. Laurenceau, Louis-Gaëtan Giraudet. Analyse préliminaire de la valeur verte pour les logements. 2011, pp.261. ⟨hal-00799764⟩",
+              "source_url": "https://hal.science/hal-00799764",
+              "chunk_order": 677,
+              "description": "Analyse préliminaire de la valeur verte pour les logements",
+              "document_type": "REPORT",
+              "publication_date": "2011-09-01",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique"
+            }
+          },
+          {
+            "id": "0f5716de-2757-59aa-83a9-994ad75c596d",
+            "document_id": "f90f7ea8-c6c1-52af-a0cb-9b730bb0be00",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Analyse préliminaire de la valeur verte pour les logements\n\nText: éco-prêt à taux zéro - performance énergétique globale minimale  11\nH1\nH2\nH3Rénovation thermique  \ndun immeuble\nde 1960, chauffé au gaz\nCette fiche a pour objectif de présenter un exemple de rénovation thermique dimmeuble pouvant bénéficier \ndun éco-prêt à taux zéro. Les descriptions et résultats qui y figurent sont propres au bâtiment décrit. Tous \nles chiffres de consommations et les factures énergétiques sont établis sur la base dhypothèses conven-\ntionnelles et ne peuvent donc pas être directement transposés à un autre cas.\nLétat actuel\nLe bâtiment et sa localisation\nCet immeuble, construit en 1960, est situé en Haute-Vienne, en zone \nurbaine. Il est orienté est / ouest.\nSa surface totale (SHON) est de 4 560 m 2, sur 10 niveaux.\nLe bâti\nLes murs sont en béton sans isolation. \nLa toiture terrasse nest pas isolée.\nLes fenêtres sont à simple vitrage avec menuiseries PVC, avec volets.\nLe plancher bas au-dessus des caves nest pas isolé.\nLes équipements",
+            "metadata": {
+              "title": "Analyse préliminaire de la valeur verte pour les logements",
+              "hal_id": "hal-00799764",
+              "authors": [
+                "D. Chotard",
+                "M. Midori",
+                "C. Berthon",
+                "S. Laurenceau",
+                "Louis-Gaëtan Giraudet"
+              ],
+              "version": "v0",
+              "citation": "D. Chotard, M. Midori, C. Berthon, S. Laurenceau, Louis-Gaëtan Giraudet. Analyse préliminaire de la valeur verte pour les logements. 2011, pp.261. ⟨hal-00799764⟩",
+              "source_url": "https://hal.science/hal-00799764",
+              "chunk_order": 780,
+              "description": "Analyse préliminaire de la valeur verte pour les logements",
+              "document_type": "REPORT",
+              "publication_date": "2011-09-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique"
+            }
+          },
+          {
+            "id": "fdde3b70-680e-5131-aa49-6f9dc4d84c7f",
+            "document_id": "ff96cb05-8dab-5c25-9bda-53cf508d2490",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle\n\nText: technologique  dutilisation plus rationnelle de lénergie . Ce processus repose théoriquement sur \nune transition du système dune phase de  formation  à u ne phase d   expansion , conditionnée \naux aménagements institutionnels nécessaires (Jacobsson et Bergek, 2004). \nDans le domaine prépondérant de la rénovation énergétique des logements, une multitud e de \ntechnologies, comme le double vitrage, lisolat ion, les appareils de chauffage ou les équipements \nélectriques et électroniques, composent le système.  Durant la phase de formation, ces technologies \nsont commercialement disponibles, mais encore peu ou mal diffusées.  Lexpansion du système vers \nune forme dutilisation rationnelle de lénergie appelle une offre de rénovation glob ale 77 , qui génère \ndes synergies techniques en coordonnant lamélioration de lenveloppe du bâtiment e t le \nremplacement du système de chauffage. Le développement dune telle offre suppose  de rapprocher",
+            "metadata": {
+              "title": "Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle",
+              "hal_id": "tel-00599374",
+              "authors": [
+                "Louis-Gaëtan Giraudet"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet. Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle. Economies et finances. Université Paris-Est, 2011. Français. ⟨NNT : 2011PEST1139⟩. ⟨tel-00599374v2⟩",
+              "source_url": "https://hal.science/tel-00599374",
+              "chunk_order": 695,
+              "description": "Cette thèse évalue l'efficacité de différentes formes de taxes, subventions et réglementations mises en place pour corriger les défaillances de marché qui s'opposent aux économies d'énergie. Elle mobilise plusieurs approches, selon un degré de complexité croissant. Dans un premier temps, un modèle microéconomique standard est développé pour comparer les performances statiques des différents instruments. Dans un deuxième temps, la représentation des comportements des consommateurs est approfondie dans un modèle de prospective de la consommation d'énergie pour le chauffage des ménages français, qui permet d'identifier les mécanismes dynamiques par lesquels les instruments peuvent corriger les principales défaillances de marché. Dans un troisième temps, une évaluation empirique des dispositifs de « certificats blancs » – obligations échangeables d'économies d'énergie imposées aux opérateurs énergétiques – est menée à partir d'une comparaison des expériences britannique, italienne et française, en intégrant les institutions dans l'analyse. Le croisement de ces différentes approches montre que : (i) les taxes sur l'énergie, qui encouragent à la fois l'investissement dans l'efficacité énergétique et la sobriété des comportements, sont particulièrement efficaces ; (ii) les réglementations sur l'efficacité énergétique ont un impact significatif sur la diffusion des technologies efficaces ; (iii) les subventions à l'efficacité énergétique génèrent un effet rebond important ; (iv) en fonction de l'environnement institutionnel dans lequel ils s'insèrent, les « certificats blancs » combinent les propriétés de ces instruments. Appliquée en France au secteur du bâtiment résidentiel, la combinaison la plus efficace de ces instruments ne permet pas d'atteindre les objectifs d'économies d'énergie définis dans le cadre du Grenelle de l'environnement",
+              "document_type": "THESE",
+              "publication_date": "2011-03-28",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique"
+            }
+          },
+          {
+            "id": "6dd0e928-48d9-5366-a304-da7131aaae5b",
+            "document_id": "f90f7ea8-c6c1-52af-a0cb-9b730bb0be00",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Analyse préliminaire de la valeur verte pour les logements\n\nText: Scénario 2 \nen milliers d'euros.Prix de l'énergie en augmentation de 5 % par an, tenant compte de l'inflation\naprès travaux10 15 200\n5 1 an123\n0365 1 an 10 15 20036\n \nLa solution de rénovation retenue\nChaque équipement ou matériau doit répondre à des exigences minimales pour que les travaux, \nréalisés par des professionnels, soient éligibles à léco-prêt.\nLintérêt patrimonial du bâtiment (style de la façade sur rue, enduits et \nmoulures intérieurs) limite les interventions possibles : le choix a été fait \nde ne pas isoler les murs et de ne pas remplacer les fenêtres sur rue.\nDans un bâtiment dun intérêt architectural moindre, il serait judicieux \ndinstaller des isolants et des enduits intérieurs adaptés, qui ne remet-tent pas en cause léquilibre hygrométrique des murs anciens. Dans le cas présent, les isolants, enduits et revêtements étanches sont à proscrire.\nPour améliorer lisolation et le confort dhiver\n\t \t isoler\tle\tplafond\t de\tlappartement\t par\tun\tplafond\t suspendu\t avec\t\n20 cm disolant (R  = 5) ;",
+            "metadata": {
+              "title": "Analyse préliminaire de la valeur verte pour les logements",
+              "hal_id": "hal-00799764",
+              "authors": [
+                "D. Chotard",
+                "M. Midori",
+                "C. Berthon",
+                "S. Laurenceau",
+                "Louis-Gaëtan Giraudet"
+              ],
+              "version": "v0",
+              "citation": "D. Chotard, M. Midori, C. Berthon, S. Laurenceau, Louis-Gaëtan Giraudet. Analyse préliminaire de la valeur verte pour les logements. 2011, pp.261. ⟨hal-00799764⟩",
+              "source_url": "https://hal.science/hal-00799764",
+              "chunk_order": 735,
+              "description": "Analyse préliminaire de la valeur verte pour les logements",
+              "document_type": "REPORT",
+              "publication_date": "2011-09-01",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "raconte une histoire sur la rénovation énergétique"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2315,
+            "total_tokens": 2315
+          }
+        }
+      },
+      "duration": 4416
+    },
+    "retrievalTime": 1211,
+    "generationTime": 4416,
+    "timestamp": "2025-07-10T09:20:45.152Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T09:20:45.189386+00:00",
+    "server_version": "1.0.0"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1753083526888_3x114e2d3g73294w3e",
+  "timestamp": "20250721T073944156Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1753083584154_t0vqvbt",
+    "query": "Bonjour !",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "Bonjour !",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "213.245.17.24",
+    "forwarded_for": "213.245.17.24",
+    "received_at": "2025-07-21T07:39:44.215085+00:00",
+    "server_version": "1.0.0"
+  }
+}

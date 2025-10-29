@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752325366541_4v18r214e31j1573",
+  "timestamp": "20250712T130807894Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752325687865_g3okwme",
+    "query": "Est ce qu’informer c’est résister",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "Est ce qu’informer c’est résister",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "104.28.42.21",
+    "forwarded_for": "104.28.42.21",
+    "received_at": "2025-07-12T13:08:08.050046+00:00",
+    "server_version": "1.0.0"
+  }
+}

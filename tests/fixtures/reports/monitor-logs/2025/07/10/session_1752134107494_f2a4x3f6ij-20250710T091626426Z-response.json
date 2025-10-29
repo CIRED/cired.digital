@@ -1,0 +1,302 @@
+{
+  "sessionId": "session_1752134107494_f2a4x3f6ij1a6v1k",
+  "timestamp": "20250710T091626426Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752138984558_gazqd2s",
+    "response": {
+      "results": {
+        "generated_answer": "The answer to the query \"2 + 2\" is 4. This is a basic arithmetic operation and does not require references to the provided context.",
+        "citations": [],
+        "search_results": [
+          {
+            "id": "2f364652-282b-5c15-991f-87aa40a4525c",
+            "document_id": "403c2598-d487-5596-a194-4176af09239c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017156862745098037,
+            "text": "Document Title: When should green technology support policies supplement the carbon price? The case of the electricity sector\n\nText: tions, we obtain the socially optimal level of all market variables for the\nhigh-demand state (subscript +) and low demand (subscript ).\nThe optimal solution is:\nΩ= (δ\nσa) +τ+ιdτιfσdτιfσrτ+ιrσrτδσd(τ)2δσr(τ)2\nρ= ((δσa(σr+λ(σd+σr))(τ)3)\n(1+σa(σd+λσr)(τ)2)) (δτ((1/2) σaσd(τ)2))\n(1+σa(σd+λσr)(τ)2)\nf\n= +ιd(2(ιrσr+ιf(σd+σr)))\n(2+σa(2σd+σr)(τ)2)+((ιfιr)σa(σr)2(τ)2)\n(2+σa(2σd+σr)(τ)2)\n+(2σaσd(ιfσdιrσr)(τ)2)\n(2+σa(2σd+σr)(τ)2)+(δσaσr(σd+σr)(τ)3)\n(2+σa(2σd+σr)(τ)2)\n+(σrτ(δ+3ιfσaσdτ))\n(2+σa(2σd+σr)(τ)2)\nr\n=(2(ιfιr)σaσdσr(τ)2)\n(2+σa(2σd+σr)(τ)2)+((ιfιr)σa(σr)2(τ)2)\n(2+σa(2σd+σr)(τ)2)\n+(δσaσr(σd+σr)(τ)3)\n(2+σa(2σd+σr)(τ)2)+(σr(2ιf2ιr+δτ))\n(2+σa(2σd+σr)(τ)2)\np\n=ιf\na\n=0\nφ\n=0\nf\n+=+ιd+ιrσrιf(σd+σr) δ(σd+σr)τ(δσrτ)\n(2(1+σa(σd+λσr)(τ)2))\nr\n+=(2(ιfιr)σaσdσr(τ)2)\n(2+σa(2σd+σr)(τ)2)+((ιfιr)σa(σr)2(τ)2)\n(2+σa(2σd+σr)(τ)2)\n+(δσaσr(3σd+σr)(τ)3)\n(2+σa(2σd+σr)(τ)2)+(σr(2ιf2ιr+3δτ))\n(2+σa(2σd+σr)(τ)2)\np\n+=(σa(τ)2(ιfλσr+δσdτ))\n(1+σa(σd+λσr)(τ)2)+(ιf+δτ+ιfσaσd(τ)2)\n(1+σa(σd+λσr)(τ)2)\na\n+=(δ+δσaσd(τ)2)\n(σa+ (σa)2(σd+λσr)(τ)2)\nφ",
+            "metadata": {
+              "title": "When should green technology support policies supplement the carbon price? The case of the electricity sector",
+              "hal_id": "tel-00914477",
+              "authors": "['Oskar Lecuyer']",
+              "version": "v0",
+              "citation": "Oskar Lecuyer. When should green technology support policies supplement the carbon price? The case of the electricity sector. Economics and Finance. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2013. English. ⟨NNT : ⟩. ⟨tel-00914477⟩",
+              "source_url": "https://hal.science/tel-00914477",
+              "chunk_order": 783,
+              "description": "This thesis contributes to the literature on optimal policy choice. It studies the use of policy combinations to mitigate greenhouse gases emissions from electricity production. One finding applies to cases where uncertainty is such that the risk of a nil carbon price cannot be excluded. A cap on emissions alone may then not trigger enough abatements, justifying the addition of e.g. a renewable subsidy. When considering a transition toward a carbon-free electricity sector, capital accumulation causes complex dynamic effects to happen. We find that decisions taken by comparing the levelized costs of abatement technologies, even including carbon costs, would favor intermediate technologies (e.g. gas plants) to the detriment of more-expensive but lower-carbon technologies (renewable power), leading to a suboptimal investment schedule. This thesis also studies the effects of marginal policy changes in a mix comprising the main French instruments. We find that surprisingly, adding a tariff for renewables financed by a tax on electricity consumption to a cap on emissions and a subsidy for energy efficiency will reduce the consumer electricity price when the non-renewable production is fixed and does not depend on the carbon price. The assessment of the French climate policies in the electricity sector shows that overlapping policies for mitigation may be justified by multiple carbon price failures, even if the ideal long-term policy mix depends on the carbon price trajectory.",
+              "document_type": "THESE",
+              "publication_date": "2013-11-29",
+              "semantic_rank": 10,
+              "full_text_rank": 1,
+              "associated_query": "2 + 2"
+            }
+          },
+          {
+            "id": "0a278108-2365-5bbd-af6a-c1596316cd0e",
+            "document_id": "6c521fc3-633b-56a8-81fc-357e7a5e05d5",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017094017094017092,
+            "text": "Document Title: Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?\n\nText: #,21\"'8$.%0&'?,1%0%+\"(+'0,'5%&\"'\"('2/&\",$'-\"'0\"$2&' 2\"&&4$21\"&'\"+'145#/+\"(1\"&9'<('\"??\"+@'042&'-\"'0, \n14(1\"#+%4('-.%(-%1,+\"$2&@'0\"&',1+\"$2&')4(+'17\"217\"2 '-\"&'2\"&&4$21\"&'17\"a'-.,$+2\"&',1+\"$2& \n-.\"()%24((\"5\"(+@'\"+'#,2+,*\"(+'0\"$2&'2\"&&4$21\"&'-\"'5 ,(%E2\"'6'2\"(?421\"2'-\"&',1+\"$2&'8$%'17\"217\"(+',$&&%\n6',5/0%42\"2'0,'#2%&\"'\"('17,2*\"'-\"'0,'3%4-%)\"2&%+/9' G,2'\"C\"5#0\"'-,(&'0\"'1,&'-\"'0.%(-%1\"'-\"'3%4-%)\"2&%+/\n#4+\"(+%\"00\"'\"('?42F+@'0\"&',1+\"$2&'\"C+\"2(\"&',$'&\"1+\" $2'?42\"&+%\"2'4(+'#\"$'-\"'5,2*\"&'-\"'5,($)2\"'#4$2 \n?,%2\"'/)40$\"2'0,'*\"&+%4('?42\"&+%E2\"9'<('2\"14((,%&&, (+'0,'),0\"$2'-\"'0.PUG@'%0&'174%&%&&\"(+'-\"'&4$+\"(%2' 0\"& \n,1+\"$2&'-.\"()%24((\"5\"(+'%(+\"2(\"&',$'&\"1+\"$2'?42\"&+% \"29'O\"0,'0\"$2'#\"25\"+'6'0,'?4%&'-\"'2\"(?421\"2'0\" \n#4$)4%2'-\"'1\"$CV1%',$'&\"%('-\"'1\"'&\"1+\"$2'\"+'0,'144# /2,+%4('\"(+2\"',1+\"$2&'-.\"()%24((\"5\"(+'%(+\"2(\"&'\"+ \n\"C+\"2(\"&'#4$2',*%2'#0$&'\"??%1,1\"5\"(+9'!\"'5,(%E2\"'*/ (/2,0\"'-,(&'(4&'1,&'-./+$-\"@'0\"&',1+\"$2& \n,-5%(%&+2,+%?&'8$%'&4$7,%+\"(+'#2454$)4%2'0,'#2/&\"2) ,+%4('-\"'0,'3%4-%)\"2&%+/'I,$&&%'3%\"('-\"&'1400\"1+%)% +/&",
+            "metadata": {
+              "title": "Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?",
+              "hal_id": "tel-03001097",
+              "authors": [
+                "Suzanne Rabaud"
+              ],
+              "version": "v0",
+              "citation": "Suzanne Rabaud. Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?. Etudes de l'environnement. AgroParisTech, 2016. Français. ⟨NNT : 2016AGPT0005⟩. ⟨tel-03001097⟩",
+              "source_url": "https://hal.science/tel-03001097",
+              "chunk_order": 1961,
+              "description": "Depuis une vingtaine d'années, une multitude d’indicateurs de biodiversité sont utilisés à toutes les échelles de l'action publique. Dans cette thèse, qui s’appuie sur une analyse stratégique des indicateurs et sur quatre études de cas, nous essayons de comprendre le rôle stratégique joué par les indicateurs à l'interface entre connaissances et actions, et d’accompagner les acteurs qui les conçoivent dans leur réflexion pour une action plus efficace en faveur de l'environnement.Les indicateurs de biodiversité que nous avons étudiés peuvent contribuer, pour les acteurs qui portent des enjeux de biodiversité, aussi bien à des stratégies d'intervention sur le système d'action, de manière à ce que la prise en charge de la biodiversité soit améliorée, qu'à des stratégies de positionnement pour modifier les relations de pouvoir et les rendre plus favorables à ces acteurs. Dans un contexte qui tend à favoriser l'expertise scientifique plus que l'action militante, les indicateurs de biodiversité s'insèrent souvent dans des stratégies efficaces pour jouer sur une forme de déconnexion temporaire entre connaissances et actions et améliorer le positionnement des acteurs d'environnement. L'intérêt spécifique des indicateurs repose ainsi en partie sur leur potentiel à simultanément connecter et déconnecter connaissances et actions en fonction des besoins stratégiques des acteurs. Par ailleurs, les concepteurs d'indicateurs sont confrontés à un double enjeu : proposer des indicateurs qui s'insèrent dans le système d'action existant, mais aussi qui aient le potentiel de modifier ce système d'action, par exemple en apportant de nouvelles conceptions de la biodiversité, de nouvelles règles, de nouvelles relations de pouvoir, etc. Les acteurs cherchent donc à anticiper les développements futurs du système d'action. Dans ce travail, la mobilisation des travaux sur la négociation permet non seulement de clarifier les perspectives possibles pour les acteurs mais aussi de comprendre le fonctionnement du système d'action. Plus généralement, l'analyse stratégique des indicateurs développée dans cette thèse, conduite dans une perspective inspirée des sciences de gestion, est complémentaire des travaux de sociologie et sciences politiques sur les instruments, et les indicateurs en particulier. Elle éclaire de nouvelles facettes de la contribution des indicateurs à l'action en faveur de la biodiversité.",
+              "document_type": "THESE",
+              "publication_date": "2016-02-15",
+              "semantic_rank": 10,
+              "full_text_rank": 2,
+              "associated_query": "2 + 2"
+            }
+          },
+          {
+            "id": "03aaec8e-a18c-514b-8218-7398b3e69518",
+            "document_id": "6c521fc3-633b-56a8-81fc-357e7a5e05d5",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017033542976939202,
+            "text": "Document Title: Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?\n\nText: 3%4-%)\"2&%+/'(.\"&+'8$.$('\"(>\"$'#,25%'-.,$+2\"&9'D\"&' ,1+\"$2&'#42+\"$2&'-\"'0.\"(>\"$'3%4-%)\"2&%+/'IN<J'#\"$)\" (+ \n,042&'\"(+2\"2'\"('14(?0%+',)\"1'0\"&'#42+\"$2&'-.,$+2\"&' \"(>\"$C9'D\"&'0%&+\"&'24$*\"&'&4(+'$+%0%&/\"&'#4$2 \n,2*$5\"(+\"2'?,1\"'6'-\"&',1+\"$2&'8$%')4$-2,%\"(+',)4%2' 0.,$+42%&,+%4('-\"'-/+2$%2\"'1\"2+,%(&'&#\"1%5\"(& \n-.\"&#E1\"&'#24+/*/\"&@'#,2'\"C\"5#0\"'#4$2'2/,0%&\"2'-\"&' #24>\"+&'-.,5/(,*\"5\"(+'4$'#4$2'0\"&'17,&&\"29'D.PUG \n\"&+'$+%0%&/'#,2'0\"&'N<'#4$2'%(1%+\"2'0\"&'?42\"&+%\"2&' 6'17,(*\"2'0\"$2&'#2,+%8$\"&'-\"'*\"&+%4('#4$2'5%\"$C \n#2/&\"2)\"2'0,'3%4-%)\"2&%+/'?42\"&+%E2\"9'P0&'&\"'2\"+24$ )\"(+'14(?24(+/&'6'1\"2+,%(&',1+\"$2&'&\"1+42%\"0&'8$%'( \" \n)\"$0\"(+'#,&'-.$('4$+%0'8$%'%(-%2\"1+\"5\"(+'#4$22,%+', 34$+%2'6'54%(&'-\"'34%&'#24-$%+9'N%(&%@'0\"&',1+\"$2& \n-.\"()%24((\"5\"(+'(.,*%&&\"(+'#,&'$(%8$\"5\"(+'-,(&'-\"&' &%+$,+%4(&'4'%0'0\"$2'&$??%+'-.,0\"2+\"2'&$2'0, \n-/*2,-,+%4('-\"'0,'3%4-%)\"2&%+/'4$'-\"'144#/2\"2',)\"1' -\"&',1+\"$2&')404(+,%2\"&'#4$2',*%2'\"??%1,1\"5\"(+'\"( \n?,)\"$2'-\"'0,'3%4-%)\"2&%+/'5,%&',$&&%'-,(&'-\"&'&%+$, +%4(&'4'%0&'4(+'-\"&'4##4&,(+&'IM\"25\"+'\"+',09@' J9",
+            "metadata": {
+              "title": "Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?",
+              "hal_id": "tel-03001097",
+              "authors": [
+                "Suzanne Rabaud"
+              ],
+              "version": "v0",
+              "citation": "Suzanne Rabaud. Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?. Etudes de l'environnement. AgroParisTech, 2016. Français. ⟨NNT : 2016AGPT0005⟩. ⟨tel-03001097⟩",
+              "source_url": "https://hal.science/tel-03001097",
+              "chunk_order": 1262,
+              "description": "Depuis une vingtaine d'années, une multitude d’indicateurs de biodiversité sont utilisés à toutes les échelles de l'action publique. Dans cette thèse, qui s’appuie sur une analyse stratégique des indicateurs et sur quatre études de cas, nous essayons de comprendre le rôle stratégique joué par les indicateurs à l'interface entre connaissances et actions, et d’accompagner les acteurs qui les conçoivent dans leur réflexion pour une action plus efficace en faveur de l'environnement.Les indicateurs de biodiversité que nous avons étudiés peuvent contribuer, pour les acteurs qui portent des enjeux de biodiversité, aussi bien à des stratégies d'intervention sur le système d'action, de manière à ce que la prise en charge de la biodiversité soit améliorée, qu'à des stratégies de positionnement pour modifier les relations de pouvoir et les rendre plus favorables à ces acteurs. Dans un contexte qui tend à favoriser l'expertise scientifique plus que l'action militante, les indicateurs de biodiversité s'insèrent souvent dans des stratégies efficaces pour jouer sur une forme de déconnexion temporaire entre connaissances et actions et améliorer le positionnement des acteurs d'environnement. L'intérêt spécifique des indicateurs repose ainsi en partie sur leur potentiel à simultanément connecter et déconnecter connaissances et actions en fonction des besoins stratégiques des acteurs. Par ailleurs, les concepteurs d'indicateurs sont confrontés à un double enjeu : proposer des indicateurs qui s'insèrent dans le système d'action existant, mais aussi qui aient le potentiel de modifier ce système d'action, par exemple en apportant de nouvelles conceptions de la biodiversité, de nouvelles règles, de nouvelles relations de pouvoir, etc. Les acteurs cherchent donc à anticiper les développements futurs du système d'action. Dans ce travail, la mobilisation des travaux sur la négociation permet non seulement de clarifier les perspectives possibles pour les acteurs mais aussi de comprendre le fonctionnement du système d'action. Plus généralement, l'analyse stratégique des indicateurs développée dans cette thèse, conduite dans une perspective inspirée des sciences de gestion, est complémentaire des travaux de sociologie et sciences politiques sur les instruments, et les indicateurs en particulier. Elle éclaire de nouvelles facettes de la contribution des indicateurs à l'action en faveur de la biodiversité.",
+              "document_type": "THESE",
+              "publication_date": "2016-02-15",
+              "semantic_rank": 10,
+              "full_text_rank": 3,
+              "associated_query": "2 + 2"
+            }
+          },
+          {
+            "id": "a5f3fb2f-2b85-5884-add6-b32bc3e947a5",
+            "document_id": "ea7fb2f4-b82c-596f-a2d1-128313348d55",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: The Commodification of Nature, a Review in Social Sciences\n\nText: 2 \n2",
+            "metadata": {
+              "doi": "10.1016/j.ecolecon.2020.106624",
+              "title": "The Commodification of Nature, a Review in Social Sciences",
+              "hal_id": "hal-03250086",
+              "authors": [
+                "Jacob Smessaert",
+                "Antoine Missemer",
+                "Harold Levrel"
+              ],
+              "version": "v0",
+              "citation": "Jacob Smessaert, Antoine Missemer, Harold Levrel. The Commodification of Nature, a Review in Social Sciences. Ecological Economics, 2020, 172, pp.106624. ⟨10.1016/j.ecolecon.2020.106624⟩. ⟨hal-03250086⟩",
+              "source_url": "https://doi.org/10.1016/j.ecolecon.2020.106624",
+              "chunk_order": 26,
+              "description": "The commodification of nature, through privatization, marketization, monetary valuation and other associated processes, has become a central topic in social sciences to examine the conditions and effects of the economic approaches for supporting conservation policies all around the world. The aim of this contribution is to delineate the current state of knowledge, within and beyond ecological economics, and to see, with some historical perspective, how commodification has been systematized in the literature. The results are as follows: (i) studies of commodification processes remain essentially critical, with a central role played by economists, political ecologists and geographers; (ii) over the past 15 years, we have seen more fragmentation than consolidation of the field; (iii) researchers avoid analytical shortcuts, but do not always well define what they mean by commodification. The construction of visual representations -- we propose a 'commodification chain' -- and the identification of decommodification opportunities are future lines of research that would be promising, particularly for the community of ecological economists.",
+              "document_type": "ART",
+              "publication_date": "2020-06-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "2 + 2"
+            }
+          },
+          {
+            "id": "9c27096a-f957-53fe-8e8d-3f161dc2fad6",
+            "document_id": "3d4600ca-7f1e-56eb-b2ae-7430fe7b5a5e",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016975308641975308,
+            "text": "Document Title: Rareté de l’eau et relations interbassins en Méditerranée sous changements globaux. Développement et application d’un modèle hydroéconomique à large échelle\n\nText: 31 1 . 7 4 8 . 8 4 1 . 3 5 6 . 1 1 , 3 6 0 . 6 2 , 1 0 5 . 3 1 , 8 0 7 . 9 2 , 4 1 5 . 4 8 7 . 7 9 7 . 7 2 . 1 9 . 8 6 9 . 0\n49 0 . 3 3 1 6 . 9 2 7 9 . 8 4 1 4 . 8 1 2 , 3 3 0 . 7 2 0 , 5 5 5 . 2 1 7 , 8 2 6 . 3 2 4 , 1 3 7 . 8 1 7 3 . 5 1 9 7 . 6 1 8 . 4 4 2 . 6 2 2 7 . 1\n55 7 . 4 1 7 5 . 5 1 6 1 . 0 2 5 5 . 7 8 , 6 2 0 . 2 1 4 , 9 1 0 . 6 1 2 , 9 9 0 . 6 1 7 , 6 9 8 . 2 2 0 2 . 6 2 3 9 . 8 1 6 . 0 4 4 . 9 2 5 8 . 7\n61 1 2 . 0 3 4 2 . 5 3 1 4 . 2 4 9 8 . 9 1 6 , 8 2 1 . 9 2 9 , 0 9 7 . 1 2 5 , 3 5 0 . 4 3 4 , 5 3 7 . 0 1 1 7 . 1 1 3 0 . 1 1 3 . 9 3 1 . 4 1 6 1 . 5\n71 2 . 9 3 9 . 6 3 6 . 3 5 7 . 7 1 , 9 4 4 . 8 3 , 3 6 4 . 0 2 , 9 3 0 . 8 3 , 9 9 2 . 9 1 8 . 7 2 0 . 2 3 . 1 6 . 0 2 6 . 8\n81 5 . 5 4 7 . 3 4 3 . 4 6 8 . 9 2 , 3 2 3 . 3 4 , 0 1 8 . 7 3 , 5 0 1 . 2 4 , 7 7 0 . 0 3 2 . 5 3 5 . 7 1 . 7 6 . 2 3 3 . 1\n97 . 3 2 2 . 4 2 0 . 6 3 2 . 7 1 , 1 0 2 . 1 1 , 9 0 6 . 4 1 , 6 6 0 . 9 2 , 2 6 2 . 8 2 . 1 2 . 2 0 . 1 0 . 3 1 . 6\n10 21.8 66.6 61.1 97.0 3,271.1 5,658.0 4,929.4 6,715.8 10.2 12.2 0.5 2.4 14.5",
+            "metadata": {
+              "title": "Rareté de l’eau et relations interbassins en Méditerranée sous changements globaux. Développement et application d’un modèle hydroéconomique à large échelle",
+              "hal_id": "tel-02925151",
+              "authors": "['Noémie Neverre']",
+              "version": "v0",
+              "citation": "Noémie Neverre. Rareté de l’eau et relations interbassins en Méditerranée sous changements globaux. Développement et application d’un modèle hydroéconomique à large échelle. Economies et finances. Université Paris Saclay (COmUE), 2015. Français. ⟨NNT : 2015SACLA002⟩. ⟨tel-02925151⟩",
+              "source_url": "https://hal.science/tel-02925151",
+              "chunk_order": 247,
+              "description": "Les changements globaux, socio-économiques et climatiques, vont très probablement accroître les tensions sur les ressources en eau dans la région méditerranéenne dans les prochaines décennies. Dans un contexte de contraintes en eau inégalement distribuées géographiquement, des interactions entre bassins pourraient se développer. Par exemple, les activités dépendantes de l’eau pourraient quitter les zones où l’eau est rare pour rejoindre des endroits où elle est plus abondante. Pour étudier cette question, il est intéressant d’évaluer les contraintes en eau localisées, en termes de quantité d’eau et de valeur économique, en combinant une modélisation à l’échelle du bassin à une couverture géographique étendue. Cette thèse mobilise comme cadre méthodologique celui de la modélisation hydroéconomique générique.La première partie de la thèse est consacrée à la projection et à la valorisation des demandes en eau. Pour le secteur domestique, des fonctions de demande inverse en trois parties sont construites, en tenant compte des changements structurels, et sont calibrées à l’échelle des pays. Pour le secteur agricole, le calcul de la valeur économique de l’eau d’irrigation repose sur une méthode de comparaison de rendements entre les cultures pluviales et irriguées.La deuxième partie se concentre sur l’aspect approvisionnement en eau du modèle hydroéconomique. Pour modéliser la gestion des réservoirs, une approche économique est utilisée, fondée sur la maximisation inter-usages et inter-temporelle des bénéfices liés à l’eau. Afin de déterminer les règles d’allocation, une approche “paramétrage-simulation-optimisation” est utilisée, avec des paramètres prudentiels et des paramètres de répartition entre les branches. Le modèle est appliqué à l’Algérie, à l’horizon 2050.La dernière partie de la thèse suggère de s’intéresser aux impacts du manque d’eau sur la localisation des activités économiques et les migrations de population qui s’ensuivent, en se plaçant dans le cadre théorique de l’économie géographique et en utilisant le modèle hydroéconomique développé dans la thèse.",
+              "document_type": "THESE",
+              "publication_date": "2015-09-17",
+              "semantic_rank": 10,
+              "full_text_rank": 4,
+              "associated_query": "2 + 2"
+            }
+          },
+          {
+            "id": "6a2625fc-d8df-5f54-82cb-f1c94425087a",
+            "document_id": "6c521fc3-633b-56a8-81fc-357e7a5e05d5",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016919191919191917,
+            "text": "Document Title: Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?\n\nText: ,1+\"$2&'#,2+%1%#,(+&@'5,%&',$&&%'0\"$2'#24#4&\"2'$(\"' -/5,217\"'-\"'0\"1+$2\"'-\"'0\"$2'1,&'#,2+%1$0%\"2@'+\"&+\"2 '&%\n\"00\"'0\"$2'#,2,K+'#\"2+%(\"(+\"'\"+'0\"$2',##42+\"'-\"&'/10 ,%2,*\"&'145#0/5\"(+,%2\"&'4$'&%'\"00\"'14(?%25\"'-\"& \n%(+$%+%4(&@'&$&1%+,(+'/)\"(+$\"00\"5\"(+'17\"a'\"$C'$(\"'2 /?0\"C%4('\"('-\"&'+\"25\"&'(4$)\",$C9'D\"&',1+\"$2& \n14(1\"2(/&'4(+'/+/'174%&%&'6'0,'?4%&'#4$2'-\"&'2,%&4( &'#2,+%8$\"&'I#24C%5%+/',$'1,&@'#24C%5%+/ \n*/4*2,#7%8$\"'\"+'-%&#4(%3%0%+/J'5,%&',$&&%'#4$2'0.%( +/2F+'#4$2'0\"'+;#\"'-\"'2/?0\"C%4('8$\"'(4$&'5\"(4(&@\n#4$2'0\"$2',##/+\"(1\"'#4$2'-\"&'2/?0\"C%4(&'-.42-2\"'&+2 ,+/*%8$\"'#4$2',*%2'\"('?,)\"$2'-\"'0,'3%4-%)\"2&%+/9\n:4$&',)4(&',$&&%'+\"($'6'1\"'8$\"'1\"&'%(+\"2041$+\"$2&'( \"'&4%\"(+'#,&'+24#'(4532\"$C',?%('-\"'?,1%0%+\"2'0,'#2% &\" \n-\"'#,240\"'I'4$'',1+\"$2&'6'17,8$\"'2\"&+%+$+%4(J9'!\" $C'2\"&+%+$+%4(&V-%&1$&&%4(&'I&$2'0\"&'D'\"+'&$2 \nO,2:<\\VUJ'4(+'/+/'2/,0%&/\"&'\"('?%('-\"'+7E&\"@',#2E&' ,)4%2'%-\"(+%?%/'0\"&'2/&$0+,+&'+2,(&)\"2&,$C'8$\"'(4$&\n)4$0%4(&',5\"(\"2'0\"&',1+\"$2&'6'-%&1$+\"29",
+            "metadata": {
+              "title": "Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?",
+              "hal_id": "tel-03001097",
+              "authors": [
+                "Suzanne Rabaud"
+              ],
+              "version": "v0",
+              "citation": "Suzanne Rabaud. Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?. Etudes de l'environnement. AgroParisTech, 2016. Français. ⟨NNT : 2016AGPT0005⟩. ⟨tel-03001097⟩",
+              "source_url": "https://hal.science/tel-03001097",
+              "chunk_order": 357,
+              "description": "Depuis une vingtaine d'années, une multitude d’indicateurs de biodiversité sont utilisés à toutes les échelles de l'action publique. Dans cette thèse, qui s’appuie sur une analyse stratégique des indicateurs et sur quatre études de cas, nous essayons de comprendre le rôle stratégique joué par les indicateurs à l'interface entre connaissances et actions, et d’accompagner les acteurs qui les conçoivent dans leur réflexion pour une action plus efficace en faveur de l'environnement.Les indicateurs de biodiversité que nous avons étudiés peuvent contribuer, pour les acteurs qui portent des enjeux de biodiversité, aussi bien à des stratégies d'intervention sur le système d'action, de manière à ce que la prise en charge de la biodiversité soit améliorée, qu'à des stratégies de positionnement pour modifier les relations de pouvoir et les rendre plus favorables à ces acteurs. Dans un contexte qui tend à favoriser l'expertise scientifique plus que l'action militante, les indicateurs de biodiversité s'insèrent souvent dans des stratégies efficaces pour jouer sur une forme de déconnexion temporaire entre connaissances et actions et améliorer le positionnement des acteurs d'environnement. L'intérêt spécifique des indicateurs repose ainsi en partie sur leur potentiel à simultanément connecter et déconnecter connaissances et actions en fonction des besoins stratégiques des acteurs. Par ailleurs, les concepteurs d'indicateurs sont confrontés à un double enjeu : proposer des indicateurs qui s'insèrent dans le système d'action existant, mais aussi qui aient le potentiel de modifier ce système d'action, par exemple en apportant de nouvelles conceptions de la biodiversité, de nouvelles règles, de nouvelles relations de pouvoir, etc. Les acteurs cherchent donc à anticiper les développements futurs du système d'action. Dans ce travail, la mobilisation des travaux sur la négociation permet non seulement de clarifier les perspectives possibles pour les acteurs mais aussi de comprendre le fonctionnement du système d'action. Plus généralement, l'analyse stratégique des indicateurs développée dans cette thèse, conduite dans une perspective inspirée des sciences de gestion, est complémentaire des travaux de sociologie et sciences politiques sur les instruments, et les indicateurs en particulier. Elle éclaire de nouvelles facettes de la contribution des indicateurs à l'action en faveur de la biodiversité.",
+              "document_type": "THESE",
+              "publication_date": "2016-02-15",
+              "semantic_rank": 10,
+              "full_text_rank": 5,
+              "associated_query": "2 + 2"
+            }
+          },
+          {
+            "id": "c3bd69d8-1d08-52e6-8c48-e9496098dd09",
+            "document_id": "6c521fc3-633b-56a8-81fc-357e7a5e05d5",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016865079365079364,
+            "text": "Document Title: Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?\n\nText: &,%&%&&\"(+V%0&'&+2,+/*%8$\"5\"(+'1\"&'2\"&&4$21\"&'\"+'14 5#/+\"(1\"&',18$%&\"&'-,(&'0\"'1,-2\"'-\"'O,2:<\\VU'#4$2 \n#42+\"2'0.,1+%4('\"('?,)\"$2'-\"'0,'3%4-%)\"2&%+/''D\"'# 24*2,55\"'(.,'#,&'$('%5#,1+'-%2\"1+'I)%,'0\"'#,1[,*\"J \n&$2'0,'#2%&\"'\"('145#+\"'-\"'0,'3%4-%)\"2&%+/'-,(&'0\"&' #24>\"+&'-.%(?2,&+2$1+$2\"&@'5,0*2/'&4('43>\"1+%?'%(%+ %,09\nG4$2'0.%(&+,(+'0\"'#24*2,55\"','#\"25%&'-.,18$/2%2'#0$ &'-\"'14((,%&&,(1\"&@'\"00\"&'5F5\"&'$+%0%&/\"&'#4$2 \n5\"++2\"'\"('$)2\"'#0$&'-\"'#24*2,55\"&'-\"'14((,%&&,(1\"& '\"+'-.,1+%4('I(4+,55\"(+')%,'0\"'#42+\"2'6 \n14((,%&&,(1\"J'\"+'-4(1'%(-%2\"1+\"5\"(+'14(+2%3$\"2'6'0, '-%5%($+%4('-\"&'%5#,1+&'-\"&'#24>\"+& \n-.%(?2,&+2$1+$2\"&9'O\"2+,%(&',1+\"$2&'4(+',$&&%'-\"&'& +2,+/*%\"&'%(-%)%-$\"00\"&'#4$2'14(+2%3$\"2'6'0, \n14(&\"2),+%4('-\"'0,'3%4-%)\"2&%+/'*2^1\"',$'#24>\"+'O,2 :<\\VU9'G,2'\"C\"5#0\"'1\"2+,%(&',1+\"$2&',;,(+'#,2+%1%#/\n,$C'%()\"(+,%2\"&'&%E*\"(+',$&&%',$'O4(&\"%0&'&1%\"(+%?% 8$\"&'2/*%4(,$C'-$'#,+2%54%(\"'(,+$2\"0'IOWG:J9'D\"$2&\n14((,%&&,(1\"&',18$%&\"&'*2^1\"',$'#24>\"+'O,2:<\\VU'#\"$ )\"(+'-4(1'&\"2)%2'6'-4((\"2'$(',)%&'#0$&'/10,%2/',$",
+            "metadata": {
+              "title": "Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?",
+              "hal_id": "tel-03001097",
+              "authors": [
+                "Suzanne Rabaud"
+              ],
+              "version": "v0",
+              "citation": "Suzanne Rabaud. Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?. Etudes de l'environnement. AgroParisTech, 2016. Français. ⟨NNT : 2016AGPT0005⟩. ⟨tel-03001097⟩",
+              "source_url": "https://hal.science/tel-03001097",
+              "chunk_order": 823,
+              "description": "Depuis une vingtaine d'années, une multitude d’indicateurs de biodiversité sont utilisés à toutes les échelles de l'action publique. Dans cette thèse, qui s’appuie sur une analyse stratégique des indicateurs et sur quatre études de cas, nous essayons de comprendre le rôle stratégique joué par les indicateurs à l'interface entre connaissances et actions, et d’accompagner les acteurs qui les conçoivent dans leur réflexion pour une action plus efficace en faveur de l'environnement.Les indicateurs de biodiversité que nous avons étudiés peuvent contribuer, pour les acteurs qui portent des enjeux de biodiversité, aussi bien à des stratégies d'intervention sur le système d'action, de manière à ce que la prise en charge de la biodiversité soit améliorée, qu'à des stratégies de positionnement pour modifier les relations de pouvoir et les rendre plus favorables à ces acteurs. Dans un contexte qui tend à favoriser l'expertise scientifique plus que l'action militante, les indicateurs de biodiversité s'insèrent souvent dans des stratégies efficaces pour jouer sur une forme de déconnexion temporaire entre connaissances et actions et améliorer le positionnement des acteurs d'environnement. L'intérêt spécifique des indicateurs repose ainsi en partie sur leur potentiel à simultanément connecter et déconnecter connaissances et actions en fonction des besoins stratégiques des acteurs. Par ailleurs, les concepteurs d'indicateurs sont confrontés à un double enjeu : proposer des indicateurs qui s'insèrent dans le système d'action existant, mais aussi qui aient le potentiel de modifier ce système d'action, par exemple en apportant de nouvelles conceptions de la biodiversité, de nouvelles règles, de nouvelles relations de pouvoir, etc. Les acteurs cherchent donc à anticiper les développements futurs du système d'action. Dans ce travail, la mobilisation des travaux sur la négociation permet non seulement de clarifier les perspectives possibles pour les acteurs mais aussi de comprendre le fonctionnement du système d'action. Plus généralement, l'analyse stratégique des indicateurs développée dans cette thèse, conduite dans une perspective inspirée des sciences de gestion, est complémentaire des travaux de sociologie et sciences politiques sur les instruments, et les indicateurs en particulier. Elle éclaire de nouvelles facettes de la contribution des indicateurs à l'action en faveur de la biodiversité.",
+              "document_type": "THESE",
+              "publication_date": "2016-02-15",
+              "semantic_rank": 10,
+              "full_text_rank": 6,
+              "associated_query": "2 + 2"
+            }
+          },
+          {
+            "id": "29ab47b7-aeeb-5cf4-baac-1eefe2b6da94",
+            "document_id": "6c521fc3-633b-56a8-81fc-357e7a5e05d5",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016812865497076022,
+            "text": "Document Title: Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?\n\nText: eC$?%.&'11M1e$&YFDOk \nO,2:<\\VU'#4$22,%+'&\"2)%2',$C'17,2*/&'-\"'5%&&%4(&'\"( '!<ND'6',)4%2'$(\"'5\"%00\"$2\"'14((,%&&,(1\" \n*/(/2,0\"'-\"&'\"(>\"$C'-\"'3%4-%)\"2&%+/'&$2'0,'a4(\"'-./ +$-\"'\"+',%(&%'5%\"$C'2/-%*\"2'0.,##\"0'-.4??2\"'#4$2 \n0./+$-\"'-.4##42+$(%+/@'&$%)2\"'0\"&'2/&$0+,+&'-\"&'/+$ -\"&'-.4##42+$(%+/&'\"+'0\"&'#2/&\"(+\"2',$'-/3,+'#$30%1 9\nD\"&'14(1\"#+\"$2&'-$'#24*2,55\"'#,2+,%\"(+'-$'#2%(1%#\"' 8$\"'0\"'#,1[,*\"'#4$22,%+',%-\"2'0\"&'&\"2)%1\"'-\"& \n!<ND'6'-/?%(%2'0\"&'*2,(-&'\"(>\"$C@'-4(1'#0$+=+'-\"&' 8$\"&+%4(&'-\"'14(+\"C+\"@'\"+'/)\"(+$\"00\"5\"(+'6'174%&%2 \n#,25%'-\"'*2,(-\"&'\"()\"04##\"&'-\"'+2,1/9'<+'0\"&',1+\"$2 &'2\"(14(+2/&'&4(+',&&\"a'-.,1142-'&$2'1\"'#2%(1%#\"9'< + \n\"('\"??\"+@'0\"&'&\"2)%1\"&'-\"&'%(?2,&+2$1+$2\"&'&4(+'%(+ /2\"&&/&'#,2'0.%(+\"2#2/+,+%4('8$\"'#\"$)\"(+',)4%2'0\"& \n&\"2)%1\"&'3%4-%)\"2&%+/'-\"'0,'a4(\"'-./+$-\"@'(4+,55\"(+ '#4$2',)4%2'-\"&'%(?425,+%4(&'3%30%4*2,#7%8$\"& \n,),(+'-.,00\"2'&$2'0\"'+\"22,%('\"+'5%\"$C'1,-2\"2'0\"'+2, ),%0'-$'3$2\",$'-./+$-\"9'D\"&'&\"2)%1\"&'-\"&'!<ND'&4(+",
+            "metadata": {
+              "title": "Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?",
+              "hal_id": "tel-03001097",
+              "authors": [
+                "Suzanne Rabaud"
+              ],
+              "version": "v0",
+              "citation": "Suzanne Rabaud. Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?. Etudes de l'environnement. AgroParisTech, 2016. Français. ⟨NNT : 2016AGPT0005⟩. ⟨tel-03001097⟩",
+              "source_url": "https://hal.science/tel-03001097",
+              "chunk_order": 849,
+              "description": "Depuis une vingtaine d'années, une multitude d’indicateurs de biodiversité sont utilisés à toutes les échelles de l'action publique. Dans cette thèse, qui s’appuie sur une analyse stratégique des indicateurs et sur quatre études de cas, nous essayons de comprendre le rôle stratégique joué par les indicateurs à l'interface entre connaissances et actions, et d’accompagner les acteurs qui les conçoivent dans leur réflexion pour une action plus efficace en faveur de l'environnement.Les indicateurs de biodiversité que nous avons étudiés peuvent contribuer, pour les acteurs qui portent des enjeux de biodiversité, aussi bien à des stratégies d'intervention sur le système d'action, de manière à ce que la prise en charge de la biodiversité soit améliorée, qu'à des stratégies de positionnement pour modifier les relations de pouvoir et les rendre plus favorables à ces acteurs. Dans un contexte qui tend à favoriser l'expertise scientifique plus que l'action militante, les indicateurs de biodiversité s'insèrent souvent dans des stratégies efficaces pour jouer sur une forme de déconnexion temporaire entre connaissances et actions et améliorer le positionnement des acteurs d'environnement. L'intérêt spécifique des indicateurs repose ainsi en partie sur leur potentiel à simultanément connecter et déconnecter connaissances et actions en fonction des besoins stratégiques des acteurs. Par ailleurs, les concepteurs d'indicateurs sont confrontés à un double enjeu : proposer des indicateurs qui s'insèrent dans le système d'action existant, mais aussi qui aient le potentiel de modifier ce système d'action, par exemple en apportant de nouvelles conceptions de la biodiversité, de nouvelles règles, de nouvelles relations de pouvoir, etc. Les acteurs cherchent donc à anticiper les développements futurs du système d'action. Dans ce travail, la mobilisation des travaux sur la négociation permet non seulement de clarifier les perspectives possibles pour les acteurs mais aussi de comprendre le fonctionnement du système d'action. Plus généralement, l'analyse stratégique des indicateurs développée dans cette thèse, conduite dans une perspective inspirée des sciences de gestion, est complémentaire des travaux de sociologie et sciences politiques sur les instruments, et les indicateurs en particulier. Elle éclaire de nouvelles facettes de la contribution des indicateurs à l'action en faveur de la biodiversité.",
+              "document_type": "THESE",
+              "publication_date": "2016-02-15",
+              "semantic_rank": 10,
+              "full_text_rank": 7,
+              "associated_query": "2 + 2"
+            }
+          },
+          {
+            "id": "53d70de9-a066-597a-a2ac-66c7304041e2",
+            "document_id": "6c521fc3-633b-56a8-81fc-357e7a5e05d5",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016762452107279693,
+            "text": "Document Title: Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?\n\nText: 145#0/5\"(+,2%+/'I&\"1+%4('9J@'145#0/5\"(+,2%+/'(/1\" &&,%2\"'#4$2'#4$)4%2'-/-$%2\"'-\"'(4+2\"',(,0;&\"'-\"& \n1,&'-\"&'2/&$0+,+&'+2,(&)\"2&,$C9\n!4;4! 5.(!(./'*(!1%.+!3(!8&C!1,!+,<(/!6%'!1(+!(./'(/ &(.+!(D63#'%/#&'(+ \nG4$2'2\"17\"217\"2'-\"&'/+$-\"&'-\"'1,&'#\"2+%(\"(+\"&'\"+'+\" &+\"2'(4&'#2\"5%E2\"&'7;#4+7E&\"&'-\"'+2,),%0@\n(4$&',)4(&'2/,0%&/'$(\"'&/2%\"'-.$(\"'-%a,%(\"'-.\"(+2\"+ %\"(&'\"C#042,+4%2\"&'\"('-/3$+'-$'+2,),%0'-\"'2\"17\"217\" @\n\"(+2\"'5,2&'\"+',)2%0'9'O\"$CV1%',),%\"(+'$(\"'-4$30 \"')41,+%4('H'IJ'1455\"(1\"2'6'\"(+2\"2'-,(&'0\"')%?'-$ \n&$>\"+'\"('/14$+,(+'0\"&',1+\"$2&'#,20\"2'-\"'0\"$2&'#2,+% 8$\"&@'-\"'0\"$2&'-%??%1$0+/&'1455\"'-\"'0\"$2&'&$11E&'\"+ 'IJ \n%-\"(+%?%\"2'0\"&'#24>\"+&'&$2'0\"&8$\"0&'%0&'+2,),%00\"(+ @'0\"$2'#\"2+%(\"(1\"'#4$2'(4+2\"'#2430/5,+%8$\"@'0, \n#4&&%3%0%+/'-.;',11/-\"2'\"+'-\"'-%&#4&\"2'-\"&'-4((/\"&' (/1\"&&,%2\"'#4$2'2/,0%&\"2'$(\"',(,0;&\"'145#0E+\"'\"+ \n#\"2+%(\"(+\"9'O\"&'\"(+2\"+%\"(&'4(+'/+/&'2/,0%&/&',$#2E& '-\"'14(1\"#+\"$2&'-.%(-%1,+\"$2&@'1455\"'0\"'W\"2)%1\"'-$ \nG,+2%54%(\"':,+$2\"0'IWG:J',$'M$&/$5'(,+%4(,0'-.%&+4 %2\"'(,+$2\"00\"@'5,%&',$&&%'-./)\"(+$\"0&'$+%0%&,+\"$2&",
+            "metadata": {
+              "title": "Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?",
+              "hal_id": "tel-03001097",
+              "authors": [
+                "Suzanne Rabaud"
+              ],
+              "version": "v0",
+              "citation": "Suzanne Rabaud. Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?. Etudes de l'environnement. AgroParisTech, 2016. Français. ⟨NNT : 2016AGPT0005⟩. ⟨tel-03001097⟩",
+              "source_url": "https://hal.science/tel-03001097",
+              "chunk_order": 305,
+              "description": "Depuis une vingtaine d'années, une multitude d’indicateurs de biodiversité sont utilisés à toutes les échelles de l'action publique. Dans cette thèse, qui s’appuie sur une analyse stratégique des indicateurs et sur quatre études de cas, nous essayons de comprendre le rôle stratégique joué par les indicateurs à l'interface entre connaissances et actions, et d’accompagner les acteurs qui les conçoivent dans leur réflexion pour une action plus efficace en faveur de l'environnement.Les indicateurs de biodiversité que nous avons étudiés peuvent contribuer, pour les acteurs qui portent des enjeux de biodiversité, aussi bien à des stratégies d'intervention sur le système d'action, de manière à ce que la prise en charge de la biodiversité soit améliorée, qu'à des stratégies de positionnement pour modifier les relations de pouvoir et les rendre plus favorables à ces acteurs. Dans un contexte qui tend à favoriser l'expertise scientifique plus que l'action militante, les indicateurs de biodiversité s'insèrent souvent dans des stratégies efficaces pour jouer sur une forme de déconnexion temporaire entre connaissances et actions et améliorer le positionnement des acteurs d'environnement. L'intérêt spécifique des indicateurs repose ainsi en partie sur leur potentiel à simultanément connecter et déconnecter connaissances et actions en fonction des besoins stratégiques des acteurs. Par ailleurs, les concepteurs d'indicateurs sont confrontés à un double enjeu : proposer des indicateurs qui s'insèrent dans le système d'action existant, mais aussi qui aient le potentiel de modifier ce système d'action, par exemple en apportant de nouvelles conceptions de la biodiversité, de nouvelles règles, de nouvelles relations de pouvoir, etc. Les acteurs cherchent donc à anticiper les développements futurs du système d'action. Dans ce travail, la mobilisation des travaux sur la négociation permet non seulement de clarifier les perspectives possibles pour les acteurs mais aussi de comprendre le fonctionnement du système d'action. Plus généralement, l'analyse stratégique des indicateurs développée dans cette thèse, conduite dans une perspective inspirée des sciences de gestion, est complémentaire des travaux de sociologie et sciences politiques sur les instruments, et les indicateurs en particulier. Elle éclaire de nouvelles facettes de la contribution des indicateurs à l'action en faveur de la biodiversité.",
+              "document_type": "THESE",
+              "publication_date": "2016-02-15",
+              "semantic_rank": 10,
+              "full_text_rank": 8,
+              "associated_query": "2 + 2"
+            }
+          },
+          {
+            "id": "4d1f667c-837f-5774-aceb-2fce0d40c94d",
+            "document_id": "6c521fc3-633b-56a8-81fc-357e7a5e05d5",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016713747645951033,
+            "text": "Document Title: Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?\n\nText: %()\"&+%&&\"(+'-,(&'0\"&'%(-%1,+\"$2&'1,2'%0&'#\"25\"++\"( +'-\"'14(+2%3$\"2'6'0.,1+%4('+4$+'\"('&\"'14(?425,(+',$ C \n%5#/2,+%?&'-\"'&/#,2,+%4('\"(+2\"'&1%\"(1\"'\"+'#40%+%8$\" 9'D4%('-\"'14(&+%+$\"2'$(\"'#\"2+\"'-\"'+\"5#&@'1\"++\" \n&+2,+/*%\"'\"&+'#,2+%1$0%E2\"5\"(+'\"??%1,1\"'#4$2'6'0,'? 4%&'2\"(?421\"2'0\"$2'2\"14((,%&&,(1\"'#,2'0\"&',$+2\"& \n,1+\"$2&'\"+',*%2'-\"'5,(%E2\"'%(-%2\"1+\"'&$2'0,'&%+$,+% 4('-\"'*\"&+%4('I#,2'\"C\"5#0\"'54-%?%\"2'0\"'2\"*,2-'-\"& \n?42\"&+%\"2&'&$2'0,'3%4-%)\"2&%+/@'#24#4&\"2'$(\"'#2\"5%E 2\"'/+,#\"')\"2&'0,'2/)%&%4('-\"&'0%&+\"&'-.\"&#E1\"& \n#24+/*/\"&@'\"+19J9'<('#,2,00E0\"@'1\"&'+2,),$C'&$2'0\"& '%(-%1,+\"$2&'14(+2%3$\"(+'6',0%5\"(+\"2'0\"$2&'2\"&&4$21 \"& \n&+2,+/*%8$\"&'\"('5,+%E2\"'-\"'14((,%&&,(1\"&'I0\"&'%(?42 5,+%4(&'-4(+'%0&'-%&#4&\"(+'&$2'0./+,+'-\"&'\"&#E1\"&@\n0\"$2'?,1$0+/'6'%((4)\"2'&$2'0\"'#0,('5/+74-404*%8$\"'\" +'0\"'2\"(4$)\"00\"5\"(+'-\"&'8$\"&+%4(&'-\"'2\"17\"217\"@\n\"+19J'\"+'-4(1'6'2\"(?421\"2'%(-%2\"1+\"5\"(+'0\"$2'#4&%+% 4((\"5\"(+9'G4$2'14(10$2\"@'-,(&'0\"'14(+\"C+\"',1+$\"0@",
+            "metadata": {
+              "title": "Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?",
+              "hal_id": "tel-03001097",
+              "authors": [
+                "Suzanne Rabaud"
+              ],
+              "version": "v0",
+              "citation": "Suzanne Rabaud. Les indicateurs de biodiversité entre connaissances et actions : impasses, détours ou raccourcis pour les stratégies environnementales ?. Etudes de l'environnement. AgroParisTech, 2016. Français. ⟨NNT : 2016AGPT0005⟩. ⟨tel-03001097⟩",
+              "source_url": "https://hal.science/tel-03001097",
+              "chunk_order": 1957,
+              "description": "Depuis une vingtaine d'années, une multitude d’indicateurs de biodiversité sont utilisés à toutes les échelles de l'action publique. Dans cette thèse, qui s’appuie sur une analyse stratégique des indicateurs et sur quatre études de cas, nous essayons de comprendre le rôle stratégique joué par les indicateurs à l'interface entre connaissances et actions, et d’accompagner les acteurs qui les conçoivent dans leur réflexion pour une action plus efficace en faveur de l'environnement.Les indicateurs de biodiversité que nous avons étudiés peuvent contribuer, pour les acteurs qui portent des enjeux de biodiversité, aussi bien à des stratégies d'intervention sur le système d'action, de manière à ce que la prise en charge de la biodiversité soit améliorée, qu'à des stratégies de positionnement pour modifier les relations de pouvoir et les rendre plus favorables à ces acteurs. Dans un contexte qui tend à favoriser l'expertise scientifique plus que l'action militante, les indicateurs de biodiversité s'insèrent souvent dans des stratégies efficaces pour jouer sur une forme de déconnexion temporaire entre connaissances et actions et améliorer le positionnement des acteurs d'environnement. L'intérêt spécifique des indicateurs repose ainsi en partie sur leur potentiel à simultanément connecter et déconnecter connaissances et actions en fonction des besoins stratégiques des acteurs. Par ailleurs, les concepteurs d'indicateurs sont confrontés à un double enjeu : proposer des indicateurs qui s'insèrent dans le système d'action existant, mais aussi qui aient le potentiel de modifier ce système d'action, par exemple en apportant de nouvelles conceptions de la biodiversité, de nouvelles règles, de nouvelles relations de pouvoir, etc. Les acteurs cherchent donc à anticiper les développements futurs du système d'action. Dans ce travail, la mobilisation des travaux sur la négociation permet non seulement de clarifier les perspectives possibles pour les acteurs mais aussi de comprendre le fonctionnement du système d'action. Plus généralement, l'analyse stratégique des indicateurs développée dans cette thèse, conduite dans une perspective inspirée des sciences de gestion, est complémentaire des travaux de sociologie et sciences politiques sur les instruments, et les indicateurs en particulier. Elle éclaire de nouvelles facettes de la contribution des indicateurs à l'action en faveur de la biodiversité.",
+              "document_type": "THESE",
+              "publication_date": "2016-02-15",
+              "semantic_rank": 10,
+              "full_text_rank": 9,
+              "associated_query": "2 + 2"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 131,
+            "total_tokens": 131
+          }
+        }
+      },
+      "duration": 385
+    },
+    "retrievalTime": 1459,
+    "generationTime": 385,
+    "timestamp": "2025-07-10T09:16:26.426Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.112.3",
+    "forwarded_for": "193.51.112.3",
+    "received_at": "2025-07-10T09:16:27.219072+00:00",
+    "server_version": "1.0.0"
+  }
+}

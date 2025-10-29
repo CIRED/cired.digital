@@ -1,0 +1,370 @@
+{
+  "sessionId": "session_1752137691874_6v5x52c3w29583f4u",
+  "timestamp": "20250710T091632569Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752138989847_xi2v1vg",
+    "response": {
+      "results": {
+        "generated_answer": "Based on the provided context, Louis-Gaëtan Giraudet has co-authored an article with Philippe Quirion. The article is mentioned in the document titled \"ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR: ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES\" [26d3725]. The chapter is derived from an article submitted for publication in a special issue of Energy Economics. Unfortunately, the specific title of the article is not provided in the given context.\n\nAdditionally, Louis-Gaëtan Giraudet is acknowledged for helpful comments and discussions in the article titled \"Air pollution and CO2 from daily mobility: Who emits and Why? Evidence from Paris\" [649afae], published in Energy Economics. However, he is not listed as an author in this article.",
+        "citations": [
+          {
+            "id": "26d3725",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 249,
+              "end": 258
+            },
+            "payload": {
+              "id": "26d3725f-60d2-5217-b05d-4c28de6b18c4",
+              "document_id": "05cff8a4-8d4a-521a-ac4b-27f9d7c6b7f0",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017156862745098037,
+              "text": "Document Title: ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES\n\nText: 207 \n Chapter 4 Energy efficiency policy with price-\nquality discrimination \nPreliminary remark: \nThis chapter is derived from an article written wit h Louis-Gaëtan Giraudet 194  and Philippe \nQuirion 195  submitted for publication in a special issue of Energy Economics . \n  \n                                                      \n194  CIRED, Ecole des Ponts ParisTech \n195  CIRED, CNRS. Corresponding author : Philippe Quiri on, CIRED, 45 bis avenue de la belle Gabrielle, F-\n94736 Nogent-sur-Marne cedex, 33 (0)1 43 94 73 95, quirion@centre-cired.fr",
+              "metadata": {
+                "title": "ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES",
+                "hal_id": "tel-01618117",
+                "authors": "['Marie-Laure Nauleau']",
+                "version": "v0",
+                "citation": "Marie-Laure Nauleau. ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES. Economics and Finance. EHESS-Paris, 2015. English. ⟨NNT : ⟩. ⟨tel-01618117⟩",
+                "source_url": "https://hal.science/tel-01618117",
+                "chunk_order": 816,
+                "description": "Given the share of the residential sector in households’ energy consumption, residential energy retrofitting is a burning issue in the climate change policy strategy. All the investment barriers faced by households invite us to explore the investment factors and to assess the efficiency of public policies. In a first part, the thesis studies the investment factors by estimating a discrete choice model on data from the French annual “Energy Management” survey conducted by Ademe, particularly focusing on factors heterogeneity among retrofitting types. A second part of the thesis deals with the assessment of public policy promoting energy efficiency, both from the demand and the supply sides of the energy efficiency markets. Regarding the demand side, the thesis uses two complementary methods: an ex-post econometric study focuses on the French tax credit called Crédit d’Impôt Développement Durable implemented in 2005 while an ex-ante study uses a hybrid energy-economy model to compare different policies. Regarding the supply side, given the high degree of concentration on the energy efficiency markets, we use a theoretical model to assess public policy efficiency in the presence of three markets imperfections: the negative externality linked to CO2 and the imperfections of market competition and information inducing price-quality discrimination.",
+                "document_type": "THESE",
+                "publication_date": "2015-06-18",
+                "semantic_rank": 10,
+                "full_text_rank": 1,
+                "associated_query": "articles de Louis-Gaëtan Giraudet"
+              }
+            }
+          },
+          {
+            "id": "649afae",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 648,
+              "end": 657
+            },
+            "payload": {
+              "id": "649afae4-e0b6-52e6-9522-03440c9a12cd",
+              "document_id": "c334052e-3895-5aa5-9ac1-fe671f3a6952",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017094017094017092,
+              "text": "Document Title: Air pollution and CO2 from daily mobility: Who emits and Why? Evidence from Paris\n\nText: Energy Economics 109 (2022) 105941\n13M. Leroutier and P. Quirion\nAcknowledgements\nWe thank Louis-Gaëtan Giraudet, Francois Bareille, Francois Libois,\nUlrich Wagner, Laure de Preux, Olivier Chanel, Mouez Fodha, Nicolas\nTaconet, an anonymous referee from FAERE, two anonymous referees,\nseminar participants at CIRED and AgroParisTech, and participants\nto the AFSE, Mannheim Energy, EAERE and LAGV conferences, for\nhelpful comments and discussion; we thank Olivier Perrussel from\nAirparif for his advice on emissions estimation, and Olivier Mahieu\nfrom Ile de France Mobilités for providing estimated distance data.\nMarion Leroutier thanks ANR, France for the support of the EUR grant\nANR-17-EURE-0001, and the Mistra Foundation for financial support.\nAppendix A. Supplementary data\nSupplementary material related to this article can be found online\nat https://doi.org/10.1016/j.eneco.2022.105941.\nReferences\nAirparif, 2021. Inventaire 2018 des émissions atmosphériques en ˆlle-de-France | airparif.",
+              "metadata": {
+                "doi": "10.1016/j.eneco.2022.105941",
+                "title": "Air pollution and CO2 from daily mobility: Who emits and Why? Evidence from Paris",
+                "hal_id": "hal-03921086",
+                "authors": "['Marion Leroutier', 'Philippe Quirion']",
+                "version": "v0",
+                "citation": "Marion Leroutier, Philippe Quirion. Air pollution and CO2 from daily mobility: Who emits and Why? Evidence from Paris. Energy Economics, 2022, 109, pp.105941. ⟨10.1016/j.eneco.2022.105941⟩. ⟨hal-03921086⟩",
+                "source_url": "https://doi.org/10.1016/j.eneco.2022.105941",
+                "chunk_order": 138,
+                "description": "Objectives: Energy transition scenarios are prospective outlooks describing combinations of changes in socio-economic systems that are compatible with climate targets. These changes could have important health co-benefits. We aimed to quantify the health benefits of physical activity caused by active transportation on all-cause mortality in the French negaWatt scenario over the 2021–2050 period. Methods; Relying on a health impact assessment framework, we quantified the health benefits of increased walking, cycling and E-biking projected in the negaWatt scenario. The negaWatt scenario assumes increases of walking and cycling volumes of +11% and +612%, respectively, over the study period. Results: As compared to a scenario with no increase in volume of active travel, we quantified that the negaWatt scenario would prevent 9,797 annual premature deaths in 2045 and translate into a 3-month increase in life expectancy in the general population. These health gains would generate €34 billion of economic benefits from 2045 onwards. Conclusion: Increased physical activity implied in the negaWatt transition scenario would generate substantial public health benefits, which are comparable to the gain expected by large scale health prevention interventions.",
+                "document_type": "ART",
+                "publication_date": "2022-05-01",
+                "semantic_rank": 10,
+                "full_text_rank": 2,
+                "associated_query": "articles de Louis-Gaëtan Giraudet"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "26d3725f-60d2-5217-b05d-4c28de6b18c4",
+            "document_id": "05cff8a4-8d4a-521a-ac4b-27f9d7c6b7f0",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017156862745098037,
+            "text": "Document Title: ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES\n\nText: 207 \n Chapter 4 Energy efficiency policy with price-\nquality discrimination \nPreliminary remark: \nThis chapter is derived from an article written wit h Louis-Gaëtan Giraudet 194  and Philippe \nQuirion 195  submitted for publication in a special issue of Energy Economics . \n  \n                                                      \n194  CIRED, Ecole des Ponts ParisTech \n195  CIRED, CNRS. Corresponding author : Philippe Quiri on, CIRED, 45 bis avenue de la belle Gabrielle, F-\n94736 Nogent-sur-Marne cedex, 33 (0)1 43 94 73 95, quirion@centre-cired.fr",
+            "metadata": {
+              "title": "ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES",
+              "hal_id": "tel-01618117",
+              "authors": "['Marie-Laure Nauleau']",
+              "version": "v0",
+              "citation": "Marie-Laure Nauleau. ENERGY EFFICIENCY IN THE RESIDENTIAL SECTOR : ANALYSIS ON INVESTMENT DRIVERS AND PUBLIC POLICIES. Economics and Finance. EHESS-Paris, 2015. English. ⟨NNT : ⟩. ⟨tel-01618117⟩",
+              "source_url": "https://hal.science/tel-01618117",
+              "chunk_order": 816,
+              "description": "Given the share of the residential sector in households’ energy consumption, residential energy retrofitting is a burning issue in the climate change policy strategy. All the investment barriers faced by households invite us to explore the investment factors and to assess the efficiency of public policies. In a first part, the thesis studies the investment factors by estimating a discrete choice model on data from the French annual “Energy Management” survey conducted by Ademe, particularly focusing on factors heterogeneity among retrofitting types. A second part of the thesis deals with the assessment of public policy promoting energy efficiency, both from the demand and the supply sides of the energy efficiency markets. Regarding the demand side, the thesis uses two complementary methods: an ex-post econometric study focuses on the French tax credit called Crédit d’Impôt Développement Durable implemented in 2005 while an ex-ante study uses a hybrid energy-economy model to compare different policies. Regarding the supply side, given the high degree of concentration on the energy efficiency markets, we use a theoretical model to assess public policy efficiency in the presence of three markets imperfections: the negative externality linked to CO2 and the imperfections of market competition and information inducing price-quality discrimination.",
+              "document_type": "THESE",
+              "publication_date": "2015-06-18",
+              "semantic_rank": 10,
+              "full_text_rank": 1,
+              "associated_query": "articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "649afae4-e0b6-52e6-9522-03440c9a12cd",
+            "document_id": "c334052e-3895-5aa5-9ac1-fe671f3a6952",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017094017094017092,
+            "text": "Document Title: Air pollution and CO2 from daily mobility: Who emits and Why? Evidence from Paris\n\nText: Energy Economics 109 (2022) 105941\n13M. Leroutier and P. Quirion\nAcknowledgements\nWe thank Louis-Gaëtan Giraudet, Francois Bareille, Francois Libois,\nUlrich Wagner, Laure de Preux, Olivier Chanel, Mouez Fodha, Nicolas\nTaconet, an anonymous referee from FAERE, two anonymous referees,\nseminar participants at CIRED and AgroParisTech, and participants\nto the AFSE, Mannheim Energy, EAERE and LAGV conferences, for\nhelpful comments and discussion; we thank Olivier Perrussel from\nAirparif for his advice on emissions estimation, and Olivier Mahieu\nfrom Ile de France Mobilités for providing estimated distance data.\nMarion Leroutier thanks ANR, France for the support of the EUR grant\nANR-17-EURE-0001, and the Mistra Foundation for financial support.\nAppendix A. Supplementary data\nSupplementary material related to this article can be found online\nat https://doi.org/10.1016/j.eneco.2022.105941.\nReferences\nAirparif, 2021. Inventaire 2018 des émissions atmosphériques en ˆlle-de-France | airparif.",
+            "metadata": {
+              "doi": "10.1016/j.eneco.2022.105941",
+              "title": "Air pollution and CO2 from daily mobility: Who emits and Why? Evidence from Paris",
+              "hal_id": "hal-03921086",
+              "authors": "['Marion Leroutier', 'Philippe Quirion']",
+              "version": "v0",
+              "citation": "Marion Leroutier, Philippe Quirion. Air pollution and CO2 from daily mobility: Who emits and Why? Evidence from Paris. Energy Economics, 2022, 109, pp.105941. ⟨10.1016/j.eneco.2022.105941⟩. ⟨hal-03921086⟩",
+              "source_url": "https://doi.org/10.1016/j.eneco.2022.105941",
+              "chunk_order": 138,
+              "description": "Objectives: Energy transition scenarios are prospective outlooks describing combinations of changes in socio-economic systems that are compatible with climate targets. These changes could have important health co-benefits. We aimed to quantify the health benefits of physical activity caused by active transportation on all-cause mortality in the French negaWatt scenario over the 2021–2050 period. Methods; Relying on a health impact assessment framework, we quantified the health benefits of increased walking, cycling and E-biking projected in the negaWatt scenario. The negaWatt scenario assumes increases of walking and cycling volumes of +11% and +612%, respectively, over the study period. Results: As compared to a scenario with no increase in volume of active travel, we quantified that the negaWatt scenario would prevent 9,797 annual premature deaths in 2045 and translate into a 3-month increase in life expectancy in the general population. These health gains would generate €34 billion of economic benefits from 2045 onwards. Conclusion: Increased physical activity implied in the negaWatt transition scenario would generate substantial public health benefits, which are comparable to the gain expected by large scale health prevention interventions.",
+              "document_type": "ART",
+              "publication_date": "2022-05-01",
+              "semantic_rank": 10,
+              "full_text_rank": 2,
+              "associated_query": "articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "832b8464-9050-5b83-92e2-66605aaec2e0",
+            "document_id": "c59df36b-595d-510c-87b2-aadef7c4d5e3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain\n\nText: février 2013) \nGAGNON C.  Le développement durable : un nouveau paradigme scientifique? . In : Sciences \ndu territoire: Perspectives québécoises . [s.l.] : Presses de lUniversité du Québec, 2008. p . 335 361. \nGAILLARD M. Leau de Paris . Martelle Editions.[s.l.] : [s.n.], 1995. 224 p. \nGALBRAITH J.CK. Les mensonges de léconomie : Vérité pour notre temps . [s.l.] : Grasset & Fasquelle, \n2007. 92 p.ISBN : 2246674913. \nGARIEPY M., MARIE M. Ces réseaux qui nous gouvernent? . Paris : LHarmattan, 1997. ISBN : \n2738458106 9782738458100. \nGATTY J.  Lavenir du service public. Monopole, conc urrence et efficacité . Commentaire . \ndécembre 1997. p. 909 916.  \nGAUDIN J.CP. LAction publique : Sociologie et politique . 1ère éd.[s.l.] : Presses Sciences Po et \nDalloz, 2004. 242 p.ISBN : 2247052363. \nGAY J. LAmelioration de lexistence à Paris sous le regne  de Napoleon III: ladministration des services à \nlusage du public . EHESS.[s.l.] : [s.n.], 1986.",
+            "metadata": {
+              "title": "Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain",
+              "hal_id": "tel-01150236",
+              "authors": [
+                "Julien Souriau"
+              ],
+              "version": "v0",
+              "citation": "Julien Souriau. Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain. Science politique. AgroParisTech, 2014. Français. ⟨NNT : 2014AGPT0052⟩. ⟨tel-01150236v3⟩",
+              "source_url": "https://hal.science/tel-01150236",
+              "chunk_order": 1732,
+              "description": "Le service public d’eau de Paris est indéniablement développé… mais est-il durable ? Comment évaluer et améliorer cette durabilité ? C’est à cette question que nous proposons d’apporter une réponse scientifique. Cette thèse doctorale étudie les stratégies de développement des services publics d’eau et leur durabilité, avec pour principal cas d’étude Paris. En moins de deux siècles, ce service d’eau est passé d’une situation archaïque à la configuration sociotechnique actuelle, et nous souhaitons comprendre dans quelle mesure cette action collective pourra être prolongée – ou pas – à l'avenir. La première partie de cette thèse discute le cadre méthodologique et théorique mobilisé pour étudier ce qui 'gouverne' le développement et la durabilité du service public d’eau à Paris. C’est ce cadre d’analyse général qui est appliqué dans les parties suivantes de cette thèse, pour analyser le temps long : passé, présent et futur. Premièrement, pour comprendre la durabilité du développement passé. Nous expliquons comment un service public d’eau a pu historiquement être développé et perdurer à Paris jusqu'à ce jour. Pour cela, nous étudions les dynamiques à la fois écologiques, techniques, économiques, institutionnelles et politiques de ce développement, afin d'en identifier les principaux moteurs et les limites. Deuxièmement, pour évaluer la durabilité du développement présent. Nous étudions dans quelle mesure les politiques contemporaines (ex : politiques de RSE) changent quelque chose aux configurations, dynamiques et trajectoires héritées du passé. Si les politiques de développement durable actuelles permettent plusieurs améliorations, diverses résistances les rendent marginales ou marginalisées, malgré le consensus en leur faveur. Troisièmement, pour prévoir la durabilité du développement futur. Nous analysons les principales conséquences des projets officiels prévus (ex : Grand Paris de l’eau). En complément, nous proposons une étude prospective de divers scénarios encore possibles à l’avenir, afin de discuter des cheminements qui y mènent et de leurs conséquences, notamment face à la baisse de la demande d’eau observée depuis 1990. L'objectif de cette thèse est autant d'améliorer la compréhension de la notion de durabilité, que de proposer des outils opérationnels pour définir, mener et évaluer des politiques de service public d'eau durables à l’avenir.",
+              "document_type": "THESE",
+              "publication_date": "2014-11-04",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "49fbcba6-cf68-5bf7-8db6-25e30dd96ab4",
+            "document_id": "714095ac-820a-5504-a609-86a3044ea4db",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)\n\nText: <BOUCLE_articlesautres(SYNDIC_ARTICLES){id_syndic}{par\ndate}{inverse}{tags==ARTREVUE|COMMUNICATION}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_articlesautres>\n</ul>\n</B_articlesautres>\n<B_theses>\n<h2>Th&egrave;ses,m&eacute;moiresdeDEAetd'habilitation(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_theses(SYNDIC_ARTICLES){id_syndic}{par\ndate}{inverse}{tags==THESE}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_theses>\n</ul>\n</B_theses>\n<B_autres>\n<h2>Autrespublications(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_autres(SYNDIC_ARTICLES){id_syndic}{pardate}{inverse}{doublons}>",
+            "metadata": {
+              "title": "SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)",
+              "hal_id": "halshs-00008414",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL). 2006. ⟨halshs-00008414⟩",
+              "source_url": "https://hal.science/halshs-00008414",
+              "chunk_order": 36,
+              "description": "Les listes de publications scientifiques sont un élément clé des sites de laboratoires de recherche. Elles sont aussi essentielles aux pages personnelles des chercheurs. Gérer ces listes de façon systématique implique de connecter d'une façon ou d'une autre un serveur web avec une base de donnée des productions scientifiques. Cette note expose comment connecter l'archive ouverte HAL et le système de gestion de contenu SPIP par le protocole RSS.",
+              "document_type": "OTHER",
+              "publication_date": "2006-01-28",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "f1dfa751-1de7-5637-9ad0-6ea2cb3f6b47",
+            "document_id": "82c08573-1415-5e7e-a391-79b21211cd1f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550\n\nText: 4 Du\tmême\tauteur\t\nPour\tvoir\tArles ,\tMaison\tdu\tlivre\tfrançais\t1932\t\nInventaire\tgénéral\tdes\tdessins\tdes\técoles\tdu\tNord\t:\tTome\t1.\tÉcole\thollandaise ,\ten\t\ncoll.\tavec\tFrits\tLugt.\tENSBA\t1950\t\n\"L'Académie\td'Architecture\tà\tla\tfin\tdu\tXVIIIe\tsiècle\",\t Gazette\tdes\tBeaux-Arts\tn68,\t\t\n355-394,\t1966. \t\nLa\tSainte\tChapelle,\thistorique\tet\tguide\tdu\tvisiteur,\téditions\tAlbert\tMorancé\t1975.\t\nCatalogues\td'exposition:\t\nLes\tlivres\td'Heures\t1936\t\nArt\titalien\tdes\tXVIIe\tet\tXVIIIe\tsiècles\t1937\t\nArt\tflamand\tdes\tXVe,\tXVIe,\tXVIIe\tsiècles.\tExposition\tde\tdessins,\tlivres\tillustrés\tet\txylographies\tconservés\tdans\tles\tcollections\tde\t\nl'École\tdes\tBeaux\tArts\tet\ttirés\ten\tmajeure\tpartie\tde\tla\tdonation\tJean\tMasson. \tENSBA\t1947 \t\nArt\tgraphique\tau\tmoyen-âge \t:\texposition\tde\tdessin\tmanuscrits\tenluminés,\tgravures\tet\tincunables\tconservés\tdans\tles\tcollections\t\nde\tl'École\tdes\tBeaux\tarts\tet\ttirés\ten\tmajeure\tpartie\tde\tla\tDonation\tJ.\tMasson, \tENSBA\t1953",
+            "metadata": {
+              "title": "A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550",
+              "hal_id": "halshs-02898229",
+              "authors": [
+                "Wanda Rabaud",
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Wanda Rabaud, Nicolas Bouleau. A la source de la Renaissance française, Le livre d'Heures parisien\r\nLivres d'Heures imprimés à Paris entre 1488 et 1550. 2020. ⟨halshs-02898229⟩",
+              "source_url": "https://hal.science/halshs-02898229",
+              "chunk_order": 3,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-07-15",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "32aa73f0-6c74-5abf-a402-5eabc46d02bb",
+            "document_id": "c59df36b-595d-510c-87b2-aadef7c4d5e3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain\n\nText: 2738458106 9782738458100. \nGATTY J.  Lavenir du service public. Monopole, conc urrence et efficacité . Commentaire . \ndécembre 1997. p. 909 916.  \nGAUDIN J.CP. LAction publique : Sociologie et politique . 1ère éd.[s.l.] : Presses Sciences Po et \nDalloz, 2004. 242 p.ISBN : 2247052363. \nGAY J. LAmelioration de lexistence à Paris sous le regne  de Napoleon III: ladministration des services à \nlusage du public . EHESS.[s.l.] : [s.n.], 1986.  \nGEORGESCUCROEGEN N. La Décroissance : Entropie, écologie, économie . [s.l.] : PierreCMarcel \nFavre, 1979. 157 p.ISBN : 2869850778. \nGHIOTTI S.  Les Territoires de leau et la décentra lisation. La gouvernance de bassin versant ou \nles limites dune évidence . Développement durable et territoires. Économie, géo graphie, politique, droit, \nsociologie  [En ligne]. 10 février 2006. nDossier 6,. Disponi ble sur : < \nhttp://dx.doi.org/10.4000/developpementdurable.1742 > (consulté le 29 avril 2014)",
+            "metadata": {
+              "title": "Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain",
+              "hal_id": "tel-01150236",
+              "authors": [
+                "Julien Souriau"
+              ],
+              "version": "v0",
+              "citation": "Julien Souriau. Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain. Science politique. AgroParisTech, 2014. Français. ⟨NNT : 2014AGPT0052⟩. ⟨tel-01150236v3⟩",
+              "source_url": "https://hal.science/tel-01150236",
+              "chunk_order": 1733,
+              "description": "Le service public d’eau de Paris est indéniablement développé… mais est-il durable ? Comment évaluer et améliorer cette durabilité ? C’est à cette question que nous proposons d’apporter une réponse scientifique. Cette thèse doctorale étudie les stratégies de développement des services publics d’eau et leur durabilité, avec pour principal cas d’étude Paris. En moins de deux siècles, ce service d’eau est passé d’une situation archaïque à la configuration sociotechnique actuelle, et nous souhaitons comprendre dans quelle mesure cette action collective pourra être prolongée – ou pas – à l'avenir. La première partie de cette thèse discute le cadre méthodologique et théorique mobilisé pour étudier ce qui 'gouverne' le développement et la durabilité du service public d’eau à Paris. C’est ce cadre d’analyse général qui est appliqué dans les parties suivantes de cette thèse, pour analyser le temps long : passé, présent et futur. Premièrement, pour comprendre la durabilité du développement passé. Nous expliquons comment un service public d’eau a pu historiquement être développé et perdurer à Paris jusqu'à ce jour. Pour cela, nous étudions les dynamiques à la fois écologiques, techniques, économiques, institutionnelles et politiques de ce développement, afin d'en identifier les principaux moteurs et les limites. Deuxièmement, pour évaluer la durabilité du développement présent. Nous étudions dans quelle mesure les politiques contemporaines (ex : politiques de RSE) changent quelque chose aux configurations, dynamiques et trajectoires héritées du passé. Si les politiques de développement durable actuelles permettent plusieurs améliorations, diverses résistances les rendent marginales ou marginalisées, malgré le consensus en leur faveur. Troisièmement, pour prévoir la durabilité du développement futur. Nous analysons les principales conséquences des projets officiels prévus (ex : Grand Paris de l’eau). En complément, nous proposons une étude prospective de divers scénarios encore possibles à l’avenir, afin de discuter des cheminements qui y mènent et de leurs conséquences, notamment face à la baisse de la demande d’eau observée depuis 1990. L'objectif de cette thèse est autant d'améliorer la compréhension de la notion de durabilité, que de proposer des outils opérationnels pour définir, mener et évaluer des politiques de service public d'eau durables à l’avenir.",
+              "document_type": "THESE",
+              "publication_date": "2014-11-04",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "83a7552b-6d49-5dd6-9eab-b6f1e2536e5e",
+            "document_id": "a442c741-0ae6-5bc7-b6fe-d1b29016099e",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Comment tenir compte de l'irréversibilité dans l'évaluation intégrée du changement climatique ?\n\nText: de c ette c ause sur le b onheur du genr e humain/, suivi de quelquesr e cher ches r elatives /#12 a l/'esp /#13 er anc ed e g u /#13 erir ou d/'adoucir les maux qu/'el le entr a /^ /#10ne/. /,v olume /1/. GF/-Flammarion/, P aris/, jean/-paul mar /#13 ec hal edition/, /1/9/9/2/. T raduction P /. et G/. Prev ost/./#5B/2/6/9/#5D Thomas Rob ert Malth us/. Essai sur le Princip e de Population /#28 /#13 ed/. /1/8/0/3/#29 II/, ou exp os /#13 e des e/#0Betsp ass /#13 es et pr /#13 esents de l/'action de c ette c ause sur le b onheur du genr e humain/, suivi de quelquesr e cher ches r elatives /#12 a l/'esp /#13 er anc ed e g u /#13 erir ou d/'adoucir les maux qu/'el le entr a /^ /#10ne/. /,v olume /2/. GF/-Flammarion/, P aris/, jean/-paul mar /#13 ec hal edition/, /1/9/9/2/. T raduction P /. et G/. Prev ost/.",
+            "metadata": {
+              "title": "Comment tenir compte de l'irréversibilité dans l'évaluation intégrée du changement climatique ?",
+              "hal_id": "tel-00003505",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Comment tenir compte de l'irréversibilité dans l'évaluation intégrée du changement climatique ?. Economies et finances. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 1998. Français. ⟨NNT : ⟩. ⟨tel-00003505⟩",
+              "source_url": "https://hal.science/tel-00003505",
+              "chunk_order": 1280,
+              "description": "Les politiques énergétiques ne peuvent plus ignorer leurs conséquences sur le climat. Mais il s'agit d'un problème à long terme et encore mal connu scientifiquement. Plusieurs raisons justifient qu'il serait plus économique de reporter de quelques décennies le contrôle des émissions de gaz à effet de serre : l'actualisation, le progrès technique, l'inertie du stock de capital en place et l'irréversibilité des investissements nécessaires à ce contrôle. Mais d'autres arguments, aussi examinés dans cette thèse, incitent à la prudence : l'inertie des systèmes socio-économiques futurs, le progrès technique induit, et l'irréversibilité possible des évolutions climatiques. Après une présentation des conditions générales du problème du changement climatique au chapitre 2, puis une exposition plus historique des débats au chapitre 3, le chapitre 4 passe en revue un nombre substantiel de modèles intégrés ayant contribué à l'analyse de la question. Le chapitre 5 expose un modèle intégré sur la réduction optimale des émissions de CO2, DIAM, pour montrer dans quelle mesure les travaux précédents surestimaient les coûts de réduction à long terme et sous estimaient les coûts d'ajustement. Il apparaît qu'étant donné une date de stabilisation de la concentration atmosphérique de CO2, une inertie plus élevée implique une trajectoire optimale de concentration plus basse. Formulant ensuite au chapitre 6 le problème en termes de décision séquentielle, on trouve que l'incertitude actuelle sur le plafond de concentration « sans danger pour le système climatique » justifie une action notable à court terme. Enfin, le chapitre 7 se replace dans le cadre de la théorie de l'effet d'irréversibilité, pour comparer empiriquement l'irréversibilité environnementale avec l'irréversibilité des investissements en calculant une valeur d'option associée un contrôle précoce des émissions de gaz à effet de serre.",
+              "document_type": "THESE",
+              "publication_date": "1998-04-03",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "08f4dcbf-2ea0-5f38-bb5f-9170ca27f76c",
+            "document_id": "714095ac-820a-5504-a609-86a3044ea4db",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)\n\nText: <ul>\n<BOUCLE_theses(SYNDIC_ARTICLES){id_syndic}{par\ndate}{inverse}{tags==THESE}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_theses>\n</ul>\n</B_theses>\n<B_autres>\n<h2>Autrespublications(#TOTAL_BOUCLE)</h1>\n<ul>\n<BOUCLE_autres(SYNDIC_ARTICLES){id_syndic}{pardate}{inverse}{doublons}>\n<li><ahref=\"#SOURCE\"title=\"Download!\">[(#TITRE*)]</a>\n<spanclass=\"detail\">\n([(#DATE|annee)])\n#LESAUTEURS.\n<ahref=\"#URL_ARTICLE\"class=\"linktoHAL\">Fullreference...\n<span>Abstract:[(#DESCRIPTIF|textebrut|entites_html)]</span></a>\n</span>\n</li>\n</BOUCLE_autres>\n</ul>\n</B_autres>\n</div><!listepublis>\n13",
+            "metadata": {
+              "title": "SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL)",
+              "hal_id": "halshs-00008414",
+              "authors": [
+                "Minh Ha-Duong"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong. SPIP dans la recherche : la gestion avec RSS des listes de publications déposées au Centre pour la Communication Scientifique Directe (CCSD/HAL). 2006. ⟨halshs-00008414⟩",
+              "source_url": "https://hal.science/halshs-00008414",
+              "chunk_order": 37,
+              "description": "Les listes de publications scientifiques sont un élément clé des sites de laboratoires de recherche. Elles sont aussi essentielles aux pages personnelles des chercheurs. Gérer ces listes de façon systématique implique de connecter d'une façon ou d'une autre un serveur web avec une base de donnée des productions scientifiques. Cette note expose comment connecter l'archive ouverte HAL et le système de gestion de contenu SPIP par le protocole RSS.",
+              "document_type": "OTHER",
+              "publication_date": "2006-01-28",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "381fa880-54dd-5d5b-834f-6f731c956f70",
+            "document_id": "3dbe9f9d-42bb-5de8-a42d-20cb92e2e30c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: La norme et le mouvant. Eléments pour une relecture de l'oeuvre de Jean Gottmann\n\nText: labyrinthe des formes , Paris, Editions du CTHS, 298 p. \nSANGUIN, André-Louis, 2007, \"Organiser et réorganiser lespace entre centre et périphérie : modernité dune \ngéographie politique\", dans \"Lorbite de la géographie de Jean Gottmann\", Revue La Géographie , numéro \nhors-série 1523 bis, p. 81-90. \nSANGUIN, André-Louis, 1996, \"Jean Gottmann (19151994) et la géographie politique\", dans Paul Claval et \nAndré-Louis Sanguin, La Géographie française à lépoque classique (1918  1968) , Paris, LHarmattan, p. \n229-240. \nSCHLANGER, Judith, 1971, Les métaphores de lorganisme,  Paris, Vrin, 269 p. \nTURNER, Frederick Jackson, 1920, The frontier in American History , New York, Henry Holt and Company, 388 p. \nVALLAUX, Camille, 1929 (édition originale 1925), Les sciences géographiques , Paris, Félix Alcan, 413 p. \nVIDAL DE LA BLACHE, Paul, 1903, Tableau de la Géographie de la France , Paris, Hachette, 395 p. \nVIDAL DE LA BLACHE, Paul, 1917, La France de lEst , Paris, Armand Colin, 280 p.",
+            "metadata": {
+              "title": "La norme et le mouvant. Eléments pour une relecture de l'oeuvre de Jean Gottmann",
+              "hal_id": "halshs-00567018",
+              "authors": [
+                "Olivier Labussiere"
+              ],
+              "version": "v0",
+              "citation": "Olivier Labussiere. La norme et le mouvant. Eléments pour une relecture de l'oeuvre de Jean Gottmann. Géographie et cultures, 2011, 72, pp.7-23. ⟨halshs-00567018⟩",
+              "source_url": "https://hal.science/halshs-00567018",
+              "chunk_order": 99,
+              "description": "Depuis sa redécouverte dans les années 1990, la pensée de Jean Gottmann a largement été reçue sous les traits d'une dialectique : le couple iconographie/circulation. Cette lecture étonne car elle confère aux normes sociales et politiques un rôle conservateur qui éclipse la réflexion de l'auteur sur les dynamiques adaptatives des sociétés élaborée en référence au monde vivant. Cet article souligne l'usage des métaphores organiques dans l'œuvre de Gottmann et montre que les références à Henri Bergson et Claude Bernard qui les sous-tendent sont des influences structurantes pour des notions clés de sa pensée : le carrefour et le milieu relationnel. Cette relecture de l'œuvre de Gottmann invite à comprendre la différenciation de l'espace non comme un dépassement dialectique des contraires mais comme une aptitude des sociétés à la recréation territoriale. En particulier, la notion de \"faculté d'accès\" montre l'importance pour les sociétés de savoir entretenir un dialogue avec leurs systèmes normatifs – leur milieu relationnel – pour assurer leur adaptation à leur environnement international et aux évolutions de leur organisation régionale.",
+              "document_type": "ART",
+              "publication_date": "2011-02-01",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "articles de Louis-Gaëtan Giraudet"
+            }
+          },
+          {
+            "id": "20acf2d7-b391-597b-b13f-24091759e671",
+            "document_id": "2450ab02-5d21-512d-810e-78510a43bbc9",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Le principe de précaution : renégocier les conditions de l'agir en univers controversé\n\nText: HAL Id: halshs-00619172\nhttps://shs.hal.science/halshs-00619172v1\nSubmitted on 5 Sep 2011\nHAL is a multi-disciplinary open access\narchive for the deposit and dissemination of sci-\nentific research documents, whether they are pub-\nlished or not. The documents may come from\nteaching and research institutions in F rance or\nabroad, or from public or private research centers.Larchive ouverte pluridisciplinaire HAL , est\ndestinée au dépôt et à la diffusion de documents\nscientifiques de niveau recherche, publiés ou non,\némanant des établissements denseignement et de\nrecherche français ou étrangers, des laboratoires\npublics ou privés.\nLe principe de précaution : renégocier les conditions de\nlagir en univers controversé\nOlivier Godard\nT o cite this version:\nOlivier Godard. Le principe de précaution : renégocier les conditions de lagir en univers controversé.\nNatures Sciences Sociétés, 1998, 6 (1), pp.41-45. halshs-00619172",
+            "metadata": {
+              "title": "Le principe de précaution : renégocier les conditions de l'agir en univers controversé",
+              "hal_id": "halshs-00619172",
+              "authors": [
+                "Olivier Godard"
+              ],
+              "version": "v0",
+              "citation": "Olivier Godard. Le principe de précaution : renégocier les conditions de l'agir en univers controversé. Natures Sciences Sociétés, 1998, 6 (1), pp.41-45. ⟨halshs-00619172⟩",
+              "source_url": "https://hal.science/halshs-00619172",
+              "chunk_order": 0,
+              "description": "Parmi les orientations qu'on peut dessiner pour frayer la voie d'une pratique raisonnable de la précaution, la nécessité peut-être la plus impérieuse pour les entrepreneurs qui créent des risques pour autrui est de mettre la gestion de ces risques en partage et en délibération dans la société globale, contre les stratégies du secret. De nouveaux partenariats sont à inventer pour parvenir à sortir la gestion du risque du seul monde des décideurs et des experts. Lorsqu'elle est profondément ébranlée, la confiance ne se rétablit pas par des coups de communication ou de publicité. Aux comités d'experts doivent être adjoints de nouveaux types de forums, que certains appellent hybrides, où il serait possible de voir représenter, au plus près des groupes concernés, le point de vue des gens ordinaires. La restauration de la crédibilité de l'information passe par l'association des groupes concernés à son élaboration et à sa vérification. La deuxième orientation est celle d'une prise en charge précoce, graduelle, mais réversible des risques au-delà des exigences réglementaires du moment : l'organisation d'une veille sur les menaces, la constitution de réseaux d'experts prêts à être mobilisés, le recours à une expertise pluraliste, la définition de sortes d'échelles de Richter des étapes de l'élaboration scientifique afin de définir différents degrés de mesure de sauvegarde et de précaution, l'adoption de mesures provisoires de sauvegarde qui pourront être réexaminées en fonction des informations nouvelles, telles sont quelques unes des composantes d'une stratégie de précaution dont les modalités restent largement à inventer. Finalement, les responsables publics et privés doivent se pénétrer d'une idée simple : définir ce qu'est le risque acceptable est l'affaire de tous, et pas seulement celle des experts. C'est en le reconnaissant qu'on pourra passer du \" risque acceptable \" au \" risque accepté \" car géré dans une culture de précaution.",
+              "document_type": "ART",
+              "publication_date": "1998-09-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "articles de Louis-Gaëtan Giraudet"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 745,
+            "total_tokens": 745
+          }
+        }
+      },
+      "duration": 1608
+    },
+    "retrievalTime": 1108,
+    "generationTime": 1608,
+    "timestamp": "2025-07-10T09:16:32.569Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T09:16:32.561713+00:00",
+    "server_version": "1.0.0"
+  }
+}

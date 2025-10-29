@@ -1,0 +1,287 @@
+{
+  "sessionId": "session_1752134107494_f2a4x3f6ij1a6v1k",
+  "timestamp": "20250710T091503931Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752138901655_6k6s6ao",
+    "response": {
+      "results": {
+        "generated_answer": "Les résultats de recherche fournis ne contiennent pas d'informations spécifiques sur les centrales électriques en Tunisie. Les documents mentionnés traitent principalement des transitions énergétiques en France, des politiques de soutien aux technologies vertes, et des coûts des systèmes électriques sans émissions de CO2 en France. Ils ne fournissent pas de données sur les centrales électriques en Tunisie.\n\nPour obtenir des informations sur les centrales électriques en Tunisie, il serait nécessaire de consulter des sources spécifiques à la Tunisie ou des bases de données spécialisées dans l'énergie en Tunisie.",
+        "citations": [],
+        "search_results": [
+          {
+            "id": "a1cb01ae-2557-5961-8248-9aeba9655b1b",
+            "document_id": "0173471c-755c-589f-b9b6-9684b59653aa",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Transitions énergétiques en France: Enseignements d'exercices de prospective\n\nText: Référence  70 59 51 68 71 \nPM 71 62 55 52 46 \nPM.T  72 65 58 51 46 \nPM.TN  72 65 58 52 47 \nPM.T.F  69 59 54 54 51 \nPM.T.F.R  70 61 55 53 48 \nPM.T.F.R.A.  70 61 55 53 48 \nPM.TN .F 69 59 54 54 51 \nPM.TN .F.R 70 61 55 53 49 \nPM.TN .F.R.A.  70 61 55 53 49 \nTableau de synthèse 4 : Part du nucléaire dans le mix électrique  (%) \n9.2.3  Puissance installée nucléaire  \n 2015  2020  2030  2040  2050  \nRéférence  54 41 39 69 69 \nPM 54 41 42 59 33 \nPM.T  54 41 45 71 45 \nPM.TN  54 41 45 72 46 \nPM.T.F  54 41 42 71 54 \nPM.T.F.R  54 41 44 72 46 \nPM.T.F.R.A.  54 41 44 72 46 \nPM.TN .F 54 41 42 71 54 \nPM.TN .F.R 54 41 44 72 49 \nPM.TN .F.R.A.  54 41 44 72 46 \nTableau de synthèse 5 : Part du nucléaire dans le mix électrique",
+            "metadata": {
+              "title": "Transitions énergétiques en France: Enseignements d'exercices de prospective",
+              "hal_id": "halshs-00849948",
+              "authors": "['Ruben Bibas', 'Jean Charles Hourcade']",
+              "version": "v0",
+              "citation": "Ruben Bibas, Jean Charles Hourcade. Transitions énergétiques en France: Enseignements d'exercices de prospective. 2013. ⟨halshs-00849948⟩",
+              "source_url": "https://hal.science/halshs-00849948",
+              "chunk_order": 176,
+              "description": "Le modèle d'équilibre général Imaclim-R France est utilisé pour examiner différentes stratégies de transition énergétique menant à une trajectoire 'Facteur 4'. Le bilan macroéconomique d'un jeu d'hypothèses sur les conditions techniques de l'offre et la demande d'énergie varie fortement selon qu'il est inséré ou non dans un ensemble de mesures qui ne ressortissent pas du seul domaine des politiques énergétiques : politiques fiscales pour éviter la propagation des surcoûts de l'énergie dans l'appareil de production, négociation sociale et salariale pour gérer le recyclage du produit d'une taxe carbone, réforme des structures de financement, politiques industrielles et de formation aux nouveaux métiers, politiques d'infrastructures et changement comportementaux. Nous montrons ensuite comment une politique de financement baissant le coefficient risque des investissements 'bas carbone' permettrait, en améliorant la crédibilité des politiques publiques, de réduire les craintes qui expliquent la frilosité des acteurs économiques et de déclencher une réorientation des investissements plus rapide vers des équipements sobres en énergie. Le bilan macroéconomique change selon les modalités de la transition mais est positif à moyen et long terme en matière de croissance et d'emploi, ceci en raison de la synergie entre trois mécanismes : baisse des importations d'énergie, économies d'énergie libérant le pouvoir d'achat des ménages en biens et services non énergétiques, baisse du coût du travail permis par une taxe carbone. L'accompagnement économique de la transition est décisif pour passer d'un bilan légèrement négatif à court terme à un bilan positif, ce afin de donner le 'grain à moudre' nécessaire pour réduire ces tensions. L'enjeu est un 'effet crédibilité' venant de la conduite cohérente de politiques de prix et de financement guidant les anticipations des acteurs dans un contexte défavorable. Quant au dossier nucléaire, nous faisons apparaître une grande différence entre un nucléaire contraint par des exigences accrues 'de précaution' et une sortie volontariste à l'horizon 2050 avec interdiction de construction de nouvelles centrales. Cette dernière hypothèse suppose, pour respecter le F4, un développement important et précoce du CCS et conduit à un retard de croissance de 4,5 ans sur 40 ans compte non tenu des coûts de reconversion, et, en sens inverse, de changements profonds des comportements et des structures économiques. Des scénarios 'nucléaire de précaution' limitent sa place autour de 40% du mix énergétique à 2050 et permettent de reculer une décision de sortie ou de nouveau déploiement qui pourra être prise plus tard \" en meilleure connaissance de cause \". L'enjeu, aujourd'hui est de se mettre en position de la prendre avec un fort consensus national autour non seulement du choix technologique ultime, quel qu'il soit, mais aussi des politiques économiques et sociales cohérentes avec ce choix.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-07-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Table des centrales électriques en tunisie ?"
+            }
+          },
+          {
+            "id": "fde0eb21-36a3-5df5-966b-b32da82034e4",
+            "document_id": "403c2598-d487-5596-a194-4176af09239c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: When should green technology support policies supplement the carbon price? The case of the electricity sector\n\nText: 0.0/l.sc/e.sc /b.sc/e.sc/s.sc/o.sc/i.sc/n.sc /d.sc/u.sc/n.sc/e.sc /t.sc/r.sc/a.sc/n.sc/s.sc/i.sc/t.sc/i.sc/o.sc/n.sc /eacute.sc/n.sc/e.sc/r.sc/g.sc/eacute.sc/t.sc/i.sc/q.sc/u.sc/e.sc 3\n    Chiffres clés de lénergie    décembre 2012\n22\nProduction brute d'électricité\n0 200 400 600 \n 1970  1975  1980  1985  1990  1995  2000  2005  2010 En TWh1\nThermique nucléaire \nThermique classique2 \nHydraulique, éolien et photovoltaïque \nProduction thermique classique brute par type de combustible\nEn TWh1\n0 25 50 75 \n0 50 100 150 \n1973 1979 1985 1990 1995 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011En % \nDivers (échelle de gauche)3 \nGaz naturel (échelle de gauche) \nFiouls (échelle de gauche)4 \nCharbon et lignite (échelle de gauche) \n% de la production totale (échelle de droite) \nEn TWh1  1973  1979  1985  1990  2000  2005  2009  2010  2011\nPr\noduction brute\n 182\n 242\n 344\n 420\n \n540\n \n576\n \n539\n \n570\n 563\nHydraulique, éolien et photovoltaïque  48 68  64  58  72  58  70  78  65\nThermique \nnucléaire\n 15\n 40\n 224",
+            "metadata": {
+              "title": "When should green technology support policies supplement the carbon price? The case of the electricity sector",
+              "hal_id": "tel-00914477",
+              "authors": "['Oskar Lecuyer']",
+              "version": "v0",
+              "citation": "Oskar Lecuyer. When should green technology support policies supplement the carbon price? The case of the electricity sector. Economics and Finance. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2013. English. ⟨NNT : ⟩. ⟨tel-00914477⟩",
+              "source_url": "https://hal.science/tel-00914477",
+              "chunk_order": 50,
+              "description": "This thesis contributes to the literature on optimal policy choice. It studies the use of policy combinations to mitigate greenhouse gases emissions from electricity production. One finding applies to cases where uncertainty is such that the risk of a nil carbon price cannot be excluded. A cap on emissions alone may then not trigger enough abatements, justifying the addition of e.g. a renewable subsidy. When considering a transition toward a carbon-free electricity sector, capital accumulation causes complex dynamic effects to happen. We find that decisions taken by comparing the levelized costs of abatement technologies, even including carbon costs, would favor intermediate technologies (e.g. gas plants) to the detriment of more-expensive but lower-carbon technologies (renewable power), leading to a suboptimal investment schedule. This thesis also studies the effects of marginal policy changes in a mix comprising the main French instruments. We find that surprisingly, adding a tariff for renewables financed by a tax on electricity consumption to a cap on emissions and a subsidy for energy efficiency will reduce the consumer electricity price when the non-renewable production is fixed and does not depend on the carbon price. The assessment of the French climate policies in the electricity sector shows that overlapping policies for mitigation may be justified by multiple carbon price failures, even if the ideal long-term policy mix depends on the carbon price trajectory.",
+              "document_type": "THESE",
+              "publication_date": "2013-11-29",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Table des centrales électriques en tunisie ?"
+            }
+          },
+          {
+            "id": "3ecca006-97b7-53b5-b163-a1a62b5ba17f",
+            "document_id": "0173471c-755c-589f-b9b6-9684b59653aa",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Transitions énergétiques en France: Enseignements d'exercices de prospective\n\nText: 38 \n \n9.2.4  Diagramme performance énergétique et environnementale  \n \n9.2.5  Tableau récapitulatif énergie -environnement  \n Emissions  \n/ 1990  Consommation  \ndénergie  \nfinale / 2010  Part du nucléaire  \ndans le mix électrique  \nRéférence  67% +2% 71% \nPM 39% -20,1%  45% \nPM.T  32% -25,4%  46% \nPM.TN  32% -24,6%  47% \nPM.T.F  15% -36,2%  51% \nPM.T.F.R  24% -29,7%  48% \nPM.T.F.R.A.  23% -31,2%  48% \nPM.TN .F 15% -35,5%  51% \nPM.TN .F.R 25% -29,0% 49% \nPM.TN .F.R.A.  23% -30,5%  48% \nTableau de synthèse 6 : Récapitulatif des indicateurs énergie et environnement  pour lannée 2050  \n \n  404550556065707580\n10 20 30 40 50 60 70 80 90Référence\nPM\nPM.T\nPM.T.F\nPM.T.F.R\nPM.T.F.R.A.\nPM.TN\nPM.TN.F\nPM.TN.F.R\nPM.TN.F.R.A.\nF4 \nF4",
+            "metadata": {
+              "title": "Transitions énergétiques en France: Enseignements d'exercices de prospective",
+              "hal_id": "halshs-00849948",
+              "authors": "['Ruben Bibas', 'Jean Charles Hourcade']",
+              "version": "v0",
+              "citation": "Ruben Bibas, Jean Charles Hourcade. Transitions énergétiques en France: Enseignements d'exercices de prospective. 2013. ⟨halshs-00849948⟩",
+              "source_url": "https://hal.science/halshs-00849948",
+              "chunk_order": 177,
+              "description": "Le modèle d'équilibre général Imaclim-R France est utilisé pour examiner différentes stratégies de transition énergétique menant à une trajectoire 'Facteur 4'. Le bilan macroéconomique d'un jeu d'hypothèses sur les conditions techniques de l'offre et la demande d'énergie varie fortement selon qu'il est inséré ou non dans un ensemble de mesures qui ne ressortissent pas du seul domaine des politiques énergétiques : politiques fiscales pour éviter la propagation des surcoûts de l'énergie dans l'appareil de production, négociation sociale et salariale pour gérer le recyclage du produit d'une taxe carbone, réforme des structures de financement, politiques industrielles et de formation aux nouveaux métiers, politiques d'infrastructures et changement comportementaux. Nous montrons ensuite comment une politique de financement baissant le coefficient risque des investissements 'bas carbone' permettrait, en améliorant la crédibilité des politiques publiques, de réduire les craintes qui expliquent la frilosité des acteurs économiques et de déclencher une réorientation des investissements plus rapide vers des équipements sobres en énergie. Le bilan macroéconomique change selon les modalités de la transition mais est positif à moyen et long terme en matière de croissance et d'emploi, ceci en raison de la synergie entre trois mécanismes : baisse des importations d'énergie, économies d'énergie libérant le pouvoir d'achat des ménages en biens et services non énergétiques, baisse du coût du travail permis par une taxe carbone. L'accompagnement économique de la transition est décisif pour passer d'un bilan légèrement négatif à court terme à un bilan positif, ce afin de donner le 'grain à moudre' nécessaire pour réduire ces tensions. L'enjeu est un 'effet crédibilité' venant de la conduite cohérente de politiques de prix et de financement guidant les anticipations des acteurs dans un contexte défavorable. Quant au dossier nucléaire, nous faisons apparaître une grande différence entre un nucléaire contraint par des exigences accrues 'de précaution' et une sortie volontariste à l'horizon 2050 avec interdiction de construction de nouvelles centrales. Cette dernière hypothèse suppose, pour respecter le F4, un développement important et précoce du CCS et conduit à un retard de croissance de 4,5 ans sur 40 ans compte non tenu des coûts de reconversion, et, en sens inverse, de changements profonds des comportements et des structures économiques. Des scénarios 'nucléaire de précaution' limitent sa place autour de 40% du mix énergétique à 2050 et permettent de reculer une décision de sortie ou de nouveau déploiement qui pourra être prise plus tard \" en meilleure connaissance de cause \". L'enjeu, aujourd'hui est de se mettre en position de la prendre avec un fort consensus national autour non seulement du choix technologique ultime, quel qu'il soit, mais aussi des politiques économiques et sociales cohérentes avec ce choix.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-07-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Table des centrales électriques en tunisie ?"
+            }
+          },
+          {
+            "id": "a172cc82-691e-537f-aa3a-72a9c3044323",
+            "document_id": "403c2598-d487-5596-a194-4176af09239c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: When should green technology support policies supplement the carbon price? The case of the electricity sector\n\nText: 1973 1979 1985 1990 1995 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011En % \nDivers (échelle de gauche)3 \nGaz naturel (échelle de gauche) \nFiouls (échelle de gauche)4 \nCharbon et lignite (échelle de gauche) \n% de la production totale (échelle de droite) \nEn TWh1  1973  1979  1985  1990  2000  2005  2009  2010  2011\nPr\noduction brute\n 182\n 242\n 344\n 420\n \n540\n \n576\n \n539\n \n570\n 563\nHydraulique, éolien et photovoltaïque  48 68  64  58  72  58  70  78  65\nThermique \nnucléaire\n 15\n 40\n 224\n 314\n \n415\n \n452\n \n410\n \n429\n 442\nThermique clas\nsique2 119  134  56  48  53  67  59  63  55\nSolde de\ns échanges\n -\n3\n 6\n -\n23\n -46\n -\n69\n -\n60\n -\n26\n -\n31\n -56\nImporta\ntions\n 5\n 16\n 6\n 7\n 4\n 8\n \n19\n \n19\n 10\nE\nxportations\n -\n8\n -\n11\n -\n29\n -52\n -\n73\n -\n68\n \n-45\n \n-50\n -\n66\nPompages\n -\n -\n1\n -\n2\n -5\n \n-7\n \n-7\n \n-7\n \n-7\n -\n7\nConsommation des auxiliaires\n -\n8\n -\n10\n -\n16\n -\n20\n \n-24\n \n-26\n \n-24\n \n-26\n -\n27\nConsommation5 171  236  303  350  441  482  496  507  472Bilan simplifié de lélectricité",
+            "metadata": {
+              "title": "When should green technology support policies supplement the carbon price? The case of the electricity sector",
+              "hal_id": "tel-00914477",
+              "authors": "['Oskar Lecuyer']",
+              "version": "v0",
+              "citation": "Oskar Lecuyer. When should green technology support policies supplement the carbon price? The case of the electricity sector. Economics and Finance. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2013. English. ⟨NNT : ⟩. ⟨tel-00914477⟩",
+              "source_url": "https://hal.science/tel-00914477",
+              "chunk_order": 51,
+              "description": "This thesis contributes to the literature on optimal policy choice. It studies the use of policy combinations to mitigate greenhouse gases emissions from electricity production. One finding applies to cases where uncertainty is such that the risk of a nil carbon price cannot be excluded. A cap on emissions alone may then not trigger enough abatements, justifying the addition of e.g. a renewable subsidy. When considering a transition toward a carbon-free electricity sector, capital accumulation causes complex dynamic effects to happen. We find that decisions taken by comparing the levelized costs of abatement technologies, even including carbon costs, would favor intermediate technologies (e.g. gas plants) to the detriment of more-expensive but lower-carbon technologies (renewable power), leading to a suboptimal investment schedule. This thesis also studies the effects of marginal policy changes in a mix comprising the main French instruments. We find that surprisingly, adding a tariff for renewables financed by a tax on electricity consumption to a cap on emissions and a subsidy for energy efficiency will reduce the consumer electricity price when the non-renewable production is fixed and does not depend on the carbon price. The assessment of the French climate policies in the electricity sector shows that overlapping policies for mitigation may be justified by multiple carbon price failures, even if the ideal long-term policy mix depends on the carbon price trajectory.",
+              "document_type": "THESE",
+              "publication_date": "2013-11-29",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Table des centrales électriques en tunisie ?"
+            }
+          },
+          {
+            "id": "8d9dcbe9-4f1a-57a6-b97c-619580140bc6",
+            "document_id": "da1e2e0c-b801-564b-99ad-643befbeb43d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Économie de l’adaptation au changement climatique\n\nText: raison de lélévation des températures moyennes,  \n \nles journées de fortes chaleurs vont se traduire pa r des périodes de pointe dans la demande \ndélectricité. La Figure C2 met en relation la temp érature quotidienne maximale sur les mois \ndété (juin à septembre) et, cette fois, les pics d e puissance appelée. A partir de cette \nobservation, il apparaît que pour un degré de tempé rature supplémentaire, une capacité \nadditionnelle de 1 100 MW en pointe est nécessaire pour répondre à la demande accrue, soit \nléquivalent dune centrale nucléaire moyenne. En F rance, le gestionnaire du réseau de transport",
+            "metadata": {
+              "title": "Économie de l’adaptation au changement climatique",
+              "hal_id": "hal-01189449",
+              "authors": [
+                "Stéphane Hallegatte",
+                "Franck Lecocq",
+                "Christian Perthuis De"
+              ],
+              "version": "v0",
+              "citation": "Stéphane Hallegatte, Franck Lecocq, Christian Perthuis De. Économie de l’adaptation au changement climatique. [0] Ministère de l'Ecologie, de l'Energie, du Développement Durable et de la Mer. 2010, 89 p. ⟨hal-01189449⟩",
+              "source_url": "https://hal.science/hal-01189449",
+              "chunk_order": 347,
+              "description": "L’adaptation est restée pendant longtemps le parent pauvre du débat et des politiques sur le changement climatique. Mais la diffusion de l’information sur le changement climatique amène de nombreux acteurs à s’interroger sur la meilleure manière d’en limiter les conséquences, et on voit éclore une multitude d’initiatives sur l’adaptation, notamment au niveau local. L’adaptation prend aussi une importance croissante dans la négociation internationale. L’adaptation peut être définie comme « l’ensemble des évolutions d’organisation, de localisation et de techniques que les sociétés devront opérer pour limiter les impacts négatifs du changement climatique et en maximiser les effets bénéfiques ». Elle recouvre des formes d’actions très variées qui s’appliquent à de nombreux secteurs. Ses problématiques diffèrent suivant les zones et les échelles géographiques et sa mise en oeuvre implique de combiner des instruments très divers. Le présent rapport propose un cadrage économique général du problème de l’adaptation afin d’aider les acteurs publics et privés à construire des stratégies d’adaptation efficaces. Pour ce faire, il dresse les enjeux généraux de l’adaptation, identifie les leviers pertinents de l’action publique puis en décrit les implications pour la conception des stratégies d’adaptation. Quatre enjeux majeurs pour les stratégies d’adaptation En premier lieu, il faut tenir compte de trois type d’incertitudes qui s’additionnent : celles sur l’évolution future du climat – les impacts attendus du changement climatique étant incomparables selon qu’on se situe dans un scénario de hausse moyenne de +2°C ou de +4°C ; celles sur les conséquences possibles d’un scénario climatique donné au plan local ; et celles sur l’évolution des capacités d’adaptation de nos sociétés dans le futur. L’incertitude impose notamment d’évaluer les mesures d’adaptation en tenant compte du degré de flexibilité qu’elles préservent pour l’action future, à mesure que viendra s’ajouter de l’information supplémentaire. Toutefois, compte tenu des inerties techniques, économiques, politiques, institutionnelles et culturelles, il n’est pas toujours possible de prendre des mesures d’adaptation parfaitement flexibles. Par exemple, la durée de vie du capital dans des secteurs comme les infrastructures, le bâtiment ou la forêt est du même ordre de grandeur que l’échelle de temps du changement climatique. Dans ces cas de figure, il est nécessaire de faire des choix relatifs à l’adaptation en l’absence d’information complète, malgré le risque de « maladaptation » ex post. En troisième lieu, le changement climatique est un processus continu. Par conséquent, la question n’est pas de savoir comment s’adapter à un « nouveau » climat, mais de savoir comment et à quel coût nous pouvons adapter nos sociétés à un climat « sans cesse changeant ». L’adaptation doit donc être comprise comme une politique de transition permanente sur le très long terme. Un plan d’adaptation sur quelques années n’est qu’une étape dans ce processus. Enfin, il est dans certains cas trop coûteux ou techniquement impossible de s’adapter « à la marge » en maintenant à l’identique et au même endroit les activités ou les services existants. S’adapter au changement climatique requiert souvent des bifurcations vers d’autres activités et/ou d’autres localisations. La présence de bifurcations requiert en particulier que les politiques d’adaptation soient élaborées et conduites dans un cadre intersectoriel. Elle implique également que les impacts à venir du changement climatique soient intégrés dès aujourd’hui dans les choix d’aménagement du territoire et les plans d’urbanisation. La question des transitions entre activités et/ou entre régions devient dès lors un enjeu central. Le rôle de l’action publique en matière d’adaptation La légitimité de l’action publique en matière d’adaptation n’est pas automatique car les bénéfices des mesures d’adaptation sont le plus souvent privés, ce qui incite les ménages, les entreprises et les collectivités à s’engager spontanément dans l’adaptation. Il existe cependant 3/89 des circonstances dans lesquelles cette adaptation spontanée risque d’être insuffisante, voire contreproductive. Une réflexion est nécessaire au cas par cas pour déterminer les champs dans lesquels l’intervention de l’autorité publique est requise. Le rapport en identifie quatre. En premier lieu, les pouvoirs publics ont un rôle clé à jouer dans la production et la diffusion de l’information sur le changement climatique, ses impacts et les moyens de s’y adapter afin de permettre aux acteurs privés de prendre leurs décisions en connaissance de cause. Transmettre l’information sur l’incertitude et sur les outils à même de la prendre en compte est ici essentiel. Un second type d’action publique vise à adapter les normes, les règlements et la fiscalité qui encadrent l’action des acteurs publics et privés. Le rapport prend l’exemple des normes qui affectent la demande en eau et celles qui concernent le capital fixe à longue durée de vie. A côté des normes techniques stricto sensu, il peut s’avérer nécessaire d’adapter les normes procédurales, ainsi que d’autres normes non directement liées au climat, mais qui impactent la capacité à s’adapter, par exemple les normes architecturales dans le domaine du bâtiment. Un troisième type d’action publique concerne les institutions. En modifiant de manière rapide et imprévisible les circonstances, le changement climatique va exercer une tension croissante sur les institutions et contrats existants. Il convient de s’assurer que les institutions sont capables d’identifier les signaux précurseurs des tensions et des crises, d’équilibrer les intérêts des différentes parties prenantes, et de mettre en oeuvre, de manière crédible, les solutions qu’elles proposent. L’histoire suggère que les institutions jouent un rôle essentiel dans l’adaptation. Par exemple, le succès de la Hollande face aux inondations tient autant à la mise en place des institutions nécessaires à la gestion du risque qu’à la capacité technique à ériger des digues. Le quatrième type de mesures publiques face au changement climatique recouvre l’action directe d’adaptation de l’Etat et des collectivités locales sur les infrastructures publiques, les bâtiments publics et les espaces et écosystèmes dont les collectivités publiques ont la charge : parcs naturels, forêts domaniales et communales par exemple. Plus largement, il s’agit d’intégrer les impacts à venir du changement climatique dans les politiques d’aménagement de l’espace et les grands investissements qui impactent le maillage du territoire. Les méthodes à utiliser pour construire une stratégie d’adaptation Un processus en sept étapes pour construire une stratégie d’adaptation est décrit dans le rapport. Il commence par une identification large des mesures d’adaptation possibles ; ensemble qui est ensuite réduit grâce à l’identification des mesures les plus urgentes : en particulier celles prévenant des impacts imminents ou concernant des choix à faire aujourd’hui mais ayant des conséquences à très longs termes. La plus ou moins grande pertinence économique permet de restreindre un peu plus l’éventail initial des possibles. Sur cette base, une stratégie d’adaptation peut être construite, notamment en recherchant des mesures robustes et flexibles qui permettent de prendre en compte l’incertitude sur les climats futurs, et en maximisant les co-bénéfices engendrés par l’adaptation. Les mesures dont les cobénéfices sont supérieurs aux coûts, souvent qualifiées de « sans regret », sont ici particulièrement intéressantes. Se doter d’indicateurs permettant d’évaluer l’efficacité des mesures retenues à mesure qu’elles sont mises en oeuvre est aussi essentiel à la construction d’une stratégie d’adaptation. A condition d’intégrer correctement l’incertitude, le calcul économique constitue un outil efficace pour évaluer l’opportunité économique des mesures d’adaptation envisagées. Mais d’autres approches, notamment multicritères, sont aussi nécessaires pour informer au mieux les choix individuels et collectifs en matière d’adaptation en tenant compte de la complexité des conséquences du changement climatique et des actions d’adaptation.",
+              "document_type": "REPORT",
+              "publication_date": "2010-01-01",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Table des centrales électriques en tunisie ?"
+            }
+          },
+          {
+            "id": "fc27ccb0-e7bf-5d2e-bce7-5e1159a8182b",
+            "document_id": "403c2598-d487-5596-a194-4176af09239c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: When should green technology support policies supplement the carbon price? The case of the electricity sector\n\nText: tées par leurs opérateurs en fonction des conditions prévalant sur les marchés de lélectricité (production dite \n dispatchable  par opposition à fatale), et dont la solli-\ncitation ou le maintien à larrêt répond aux besoins de léquilibre offre-demande du système électrique euro-\npéen. Font partie de cette catégorie tous les groupes de près de 100MW ou plus fonctionnant au charbon ou au fioul, les cycles combinés gaz, et les turbines à combus -\ntion\n28 (utilisées en pointe). \nSelon cette définition, la puissance thermique classique centralisée installée, disponible pour lexploitation en \nFrance continentale, sétablissait à 18,6GW au 1\nerjanvier \n2012, en légère évolution par rapport à lannée précé-dente (18,0 GW). Cette augmentation de puissance est \nGroupes thermiques classiques exploités dates de premier couplage\nMW\n05001 0001 5002 0002 5003 0003 5004 000\navant 1965 1965-69 1970-74 1975-79 1980-84 1985-89 1990-94 1995-99 2000-04 2005-09 2010 2011\nn TAC\nn Fioul\nn CCG\nn Charbon\n(a)Fossil technologies.\n62",
+            "metadata": {
+              "title": "When should green technology support policies supplement the carbon price? The case of the electricity sector",
+              "hal_id": "tel-00914477",
+              "authors": "['Oskar Lecuyer']",
+              "version": "v0",
+              "citation": "Oskar Lecuyer. When should green technology support policies supplement the carbon price? The case of the electricity sector. Economics and Finance. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2013. English. ⟨NNT : ⟩. ⟨tel-00914477⟩",
+              "source_url": "https://hal.science/tel-00914477",
+              "chunk_order": 471,
+              "description": "This thesis contributes to the literature on optimal policy choice. It studies the use of policy combinations to mitigate greenhouse gases emissions from electricity production. One finding applies to cases where uncertainty is such that the risk of a nil carbon price cannot be excluded. A cap on emissions alone may then not trigger enough abatements, justifying the addition of e.g. a renewable subsidy. When considering a transition toward a carbon-free electricity sector, capital accumulation causes complex dynamic effects to happen. We find that decisions taken by comparing the levelized costs of abatement technologies, even including carbon costs, would favor intermediate technologies (e.g. gas plants) to the detriment of more-expensive but lower-carbon technologies (renewable power), leading to a suboptimal investment schedule. This thesis also studies the effects of marginal policy changes in a mix comprising the main French instruments. We find that surprisingly, adding a tariff for renewables financed by a tax on electricity consumption to a cap on emissions and a subsidy for energy efficiency will reduce the consumer electricity price when the non-renewable production is fixed and does not depend on the carbon price. The assessment of the French climate policies in the electricity sector shows that overlapping policies for mitigation may be justified by multiple carbon price failures, even if the ideal long-term policy mix depends on the carbon price trajectory.",
+              "document_type": "THESE",
+              "publication_date": "2013-11-29",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Table des centrales électriques en tunisie ?"
+            }
+          },
+          {
+            "id": "077cad9a-d6d5-5425-9044-6a61f03b45ce",
+            "document_id": "403c2598-d487-5596-a194-4176af09239c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: When should green technology support policies supplement the carbon price? The case of the electricity sector\n\nText: 2009 2010 2011 2012 2013\n1er trimestre 2e trimestre 3e trimestre 4e trimestre4 5005 0005 5006 0006 5007 0007 5008 000\ndéc.-09\nmars-10\njuin-10\nsept.-10\ndéc.-10\nmars-11\njuin-11\nsept.-11\ndéc.-11\nmars-12\njuin-12\nsept.-12\ndéc.-12\nmars-13\njuin-13\n1ère estimation révision trimestre suivant chiffre au 30/06/2013\n0123456\nT1 T2 T3 T42010 2011 2012 2013\nNombre Puissance Nombre Puissance Nombre Puissance Nombre Puissance \nd'installations (en MW) d'installations (en MW) d'installations (en MW) d'installations (en MW)\n519         8 781         515         8 757         136         1 570         133         1 558         Dont installations pour lesquelles\nMétropole et DOM dont métropole Métropole et DOM dont métropole une convention de raccordement est signée **Installations entrées en file d 'attente *\n(a)Wind\nCommissariat général au développement durable - Service de lobservation et des statistiques 3Chiffres & statistiques n 444             Août 2013",
+            "metadata": {
+              "title": "When should green technology support policies supplement the carbon price? The case of the electricity sector",
+              "hal_id": "tel-00914477",
+              "authors": "['Oskar Lecuyer']",
+              "version": "v0",
+              "citation": "Oskar Lecuyer. When should green technology support policies supplement the carbon price? The case of the electricity sector. Economics and Finance. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2013. English. ⟨NNT : ⟩. ⟨tel-00914477⟩",
+              "source_url": "https://hal.science/tel-00914477",
+              "chunk_order": 516,
+              "description": "This thesis contributes to the literature on optimal policy choice. It studies the use of policy combinations to mitigate greenhouse gases emissions from electricity production. One finding applies to cases where uncertainty is such that the risk of a nil carbon price cannot be excluded. A cap on emissions alone may then not trigger enough abatements, justifying the addition of e.g. a renewable subsidy. When considering a transition toward a carbon-free electricity sector, capital accumulation causes complex dynamic effects to happen. We find that decisions taken by comparing the levelized costs of abatement technologies, even including carbon costs, would favor intermediate technologies (e.g. gas plants) to the detriment of more-expensive but lower-carbon technologies (renewable power), leading to a suboptimal investment schedule. This thesis also studies the effects of marginal policy changes in a mix comprising the main French instruments. We find that surprisingly, adding a tariff for renewables financed by a tax on electricity consumption to a cap on emissions and a subsidy for energy efficiency will reduce the consumer electricity price when the non-renewable production is fixed and does not depend on the carbon price. The assessment of the French climate policies in the electricity sector shows that overlapping policies for mitigation may be justified by multiple carbon price failures, even if the ideal long-term policy mix depends on the carbon price trajectory.",
+              "document_type": "THESE",
+              "publication_date": "2013-11-29",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Table des centrales électriques en tunisie ?"
+            }
+          },
+          {
+            "id": "eb843b84-fe35-552a-9318-0b4cb88fefc6",
+            "document_id": "55b6ee6e-baf2-52bb-9bbc-8420ab5e49ac",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Coût d'un système électrique optimal sans émissions de CO2 pour la France, avec et sans nucléaire Centre international de recherche sur l'environnement et le développement\n\nText: 7 \n Tableau 4. Résultats pour un taux d'actualisation de 8%   \navec nucléaire  sans nucléaire  \ncoût annualisé (Mds)  35.30   \n35.75   \ncoût par MWh consommé ()  72.75   \n73.67        \nElectricité produite  TWh/an  % TWh/an % \néolien maritime  0 0% 49 8% \néolien terrestre  330 60% 341 57% \nsolaire PV  98 18% 141 23% \nhydraulique au fil de l'eau  40 7% 40 7% \nhydraulique de lac  15 3% 15 3% \nbiogaz  15 3% 15 2% \nnucléaire  52 9% 0 0% \ntotal  550 100%  601 100%  \nElectricité issue du stockage  TWh/an  \nTWh/an  \nbatteries  1.5  \n14.4  \nSTEP 11.7  \n15.9  \nméthanation  3.5  \n6.5  \n     \ncapacité de production  GW  \nGW  \néolien maritime  0.0  \n10.6  \néolien terrestre  116.1   \n120.0   \nsolaire PV  68.7  \n99.1  \nhydraulique  au fil de l'eau  10.5  \n10.5  \nhydraulique de lac  12.9  \n12.9  \nturbines à gaz  22.1  \n27.8  \nnucléaire  10.4  \n0.0  \nvolume de stockage  GWh     \nbatteries  22.8  \n81.4  \nSTEP 180.0   \n180.0   \nméthane  8 667.6   \n10 925.8   \npuissance de stockage  GW    \nbatteries  13.5  \n19.1  \nSTEP 9.3",
+            "metadata": {
+              "title": "Coût d'un système électrique optimal sans émissions de CO2 pour la France, avec et sans nucléaire Centre international de recherche sur l'environnement et le développement",
+              "hal_id": "hal-02434990",
+              "authors": "['Philippe Quirion', 'Behrang Shirizadeh']",
+              "version": "v0",
+              "citation": "Philippe Quirion, Behrang Shirizadeh. Coût d'un système électrique optimal sans émissions de CO2 pour la France, avec et sans nucléaire Centre international de recherche sur l'environnement et le développement. 2020. ⟨hal-02434990⟩",
+              "source_url": "https://hal.science/hal-02434990",
+              "chunk_order": 27,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-01-10",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Table des centrales électriques en tunisie ?"
+            }
+          },
+          {
+            "id": "fbb0d29a-a3d6-5cd6-96f0-89ff8a1552b8",
+            "document_id": "55b6ee6e-baf2-52bb-9bbc-8420ab5e49ac",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Coût d'un système électrique optimal sans émissions de CO2 pour la France, avec et sans nucléaire Centre international de recherche sur l'environnement et le développement\n\nText: 6 \n Tableau 3. Résultats pour un taux d'actualisation de 4,5%   \navec nucléaire  sans nucléaire  \ncoût annualisé (Mds)  26.8  \n28.2  \ncoût par MWh consommé ()  55.3  \n58.09        \nElectricité produite  TWh/an % TWh/an % \néolien maritime  18 3% 60 10% \néolien terrestre  244 48% 340 56% \nsolaire PV  68 13% 141 23% \nhydraulique au fil de l'eau  40 8% 40 7% \nhydraulique de lac  15 3% 15 2% \nbiogaz  15 3% 15 2% \nnucléaire  110 22% 0 0% \ntotal  509 100%  611 100%  \nElectricité issue du stockage  TWh/an  \nTWh/an  \nbatteries  1.5  \n14.4  \nSTEP 11.7  \n15.9  \nméthanation  3.5  \n6.5  \n     \ncapacité de production  GW  \nGW  \néolien maritime  3.8  \n13.1  \néolien terrestre  85.7  \n119.6   \nsolaire PV  47.5  \n99.0  \nhydraulique au fil de l'eau  10.5  \n10.5  \nhydraulique de lac  12.9  \n12.9  \nturbines à gaz  18.2  \n27.4  \nnucléaire  19.7  \n0.0  \nvolume de stockage  GWh   \nGWh   \nbatteries  6.9  \n85.7  \nSTEP 180.0   \n180.0   \nméthane  6 163.2   \n8 102.1   \npuissance  de stockage  GW  \nGW  \nbatteries  8.7  \n19.5  \nSTEP 9.3",
+            "metadata": {
+              "title": "Coût d'un système électrique optimal sans émissions de CO2 pour la France, avec et sans nucléaire Centre international de recherche sur l'environnement et le développement",
+              "hal_id": "hal-02434990",
+              "authors": "['Philippe Quirion', 'Behrang Shirizadeh']",
+              "version": "v0",
+              "citation": "Philippe Quirion, Behrang Shirizadeh. Coût d'un système électrique optimal sans émissions de CO2 pour la France, avec et sans nucléaire Centre international de recherche sur l'environnement et le développement. 2020. ⟨hal-02434990⟩",
+              "source_url": "https://hal.science/hal-02434990",
+              "chunk_order": 25,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-01-10",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "Table des centrales électriques en tunisie ?"
+            }
+          },
+          {
+            "id": "27e429d4-43f8-5c16-b6b9-ccafb0212cdc",
+            "document_id": "50679998-f047-5db5-aec7-6f4d7c7128c1",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Hétérogénéité spatiale d'un service de réseau, équité et efficacité collective : la distribution rurale d'électricité et la maîtrise de la demande\n\nText: 365  environ. Le tableau suivant permet de restituer les  éléments peu lisibles sur la figure \nprécédente. \nEvolutions de la consommation délectricité en long ue période \nDates Consommation \nHaute tension  \n(GWh) Consommation \nBasse tension  \n(GWh) Consommation \nintérieure totale  \n(GWh) Taux de \ncroissance de la \nconsommation \ntotale Taux de \ncroissance de la \nconsommation \nHaute Tension  Taux de \ncroissance de la \nconsommation \nBasse Tension \n1900   310    \n1900-1910   1 020 12.6%   \n1910-1920   3 500 13.1%   \n1920-1930 12 600 2 450 17 200 17.3%   \n1930-1940 13 550 2 550 19 100 1.1% 0.7% 0.4% \n1940-1950 23 187 5 750 33 390 5.7% 5.5% 8.5% \n1950-1960 52 542 12 629 72 020 8.0% 8.5% 8.2% \n1960-1970 97 225 32 894 140 023 6.9% 6.3% 10.0% \n1970-1980 147 846 83 659 248 732 5.9% 4.3% 9.8% \n1980-1990 195 068 127 869 349 551 3.5% 2.8% 4.3% \n1990-1998 237 900 154 300 423 211 2.4% 2.5% 2.4% \nSource : statistiques EDF, 1998. \nLa consommation intérieure totale comprend les pert es et les exportations : elle est",
+            "metadata": {
+              "title": "Hétérogénéité spatiale d'un service de réseau, équité et efficacité collective : la distribution rurale d'électricité et la maîtrise de la demande",
+              "hal_id": "tel-00334731",
+              "authors": [
+                "Franck Nadaud"
+              ],
+              "version": "v0",
+              "citation": "Franck Nadaud. Hétérogénéité spatiale d'un service de réseau, équité et efficacité collective : la distribution rurale d'électricité et la maîtrise de la demande. Economies et finances. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2005. Français. ⟨NNT : ⟩. ⟨tel-00334731⟩",
+              "source_url": "https://hal.science/tel-00334731",
+              "chunk_order": 1493,
+              "description": "Cette thèse a pour objet l'évolution de l'optimum économique sous contrainte d'équité territoriale de l'industrie électrique, industrie de réseau fixe présentant une hétérogénéité spatiale forte de ses conditions d'offre. Cette problématique porte sur l'analyse de l'évolution du régime de l'électrification rurale en France en termes d'efficacité économique et sociale. Il s'agit de prolonger une longue tradition de recherche du CIRED initiée au début des années 1980 par Louis Puiseux, dont les principaux développements ont été la thèse de Colombier (1992) puis l'évaluation des écarts entre coûts de développement des réseaux ruraux et tarifs par De Gouvello (1996). Ce programme de recherche met en lumière les contradictions entre équité redistributive et équité territoriale, c'est-à-dire entre les visions aspatiales de l'économie théorique (Ponsard, 1988) et les dynamiques territoriales de développement, notamment en mettant l'accent sur les médiations institutionnelles. Notre question de départ porte donc sur la rationalité de l'élargissement de la démarche de l'optimisation sectorielle sous contrainte d'équité à la rationalisation des usages de l'électricité dans l'espace hétérogène de la fourniture d'électricité en zones rurales. La dérive des besoins de renforcement de réseaux ruraux a conduit ainsi à partir de 1995 le régulateur à encourager les collectivités qui sont les propriétaires et investisseurs en réseaux ruraux à rechercher des alternatives moins coûteuses du côté de la demande pour deux raisons économiques. D'abord les réseaux basse tension ruraux sont généralement très longs et comptent peu de clients desservis, par conséquent, l'optimisation des usages chez les clients peut s'avérer beaucoup moins coûteuse que le simple renforcement du réseau. Ensuite cette optimisation permet de rétablir l'équité de la qualité de fourniture entre les clients par le biais de la baisse des besoins d'investissement mais aussi par la réduction du temps d'attente pour les plus défavorisés, autrement dit, les clients situés sur les réseaux les plus coûteux à renforcer. Cette question conduit à analyser d'abord historiquement les institutions de l'électrification rurale dans le contexte évolutif de consolidation de l'industrie électrique en régime de monopole public pour repérer les structures d'intérêts inhérentes à cette organisation qui conduisent à une inefficience sociale à la fois en termes d'efficacité économique et en termes d'équité. Ce qui mène à un double questionnement : - comment compléter les institutions de l'électrification rurale pour modifier les incitations des propriétaires de réseaux ruraux à investir au-delà du compteur chez l'usager ? - comment, dans une situation de forte hétérogénéité spatiale des fonctions locales d'offre et de demande d'électricité dans l'espace rural, repérer les points de réseaux en sous-optimalité économique ? Dans un chapitre liminaire nous définirons précisément l'objet de la thèse à partir du repérage des difficultés d'application de l'innovation réglementaire que constitue la MDE dans la distribution d'électricité en zones rurales. Ce repérage s'effectue par l'analyse de l'organisation de la distribution rurale et de la place du régime d'électrification dont on peut déduire les intérêts des agents économique et des acteurs politiques qui constituent les barrières à cette innovation réglementaire. Dans la première partie on caractérise dans le premier chapitre la trajectoire institutionnelle de l'électrification rurale à partir du projet initial de solidarité nationale sous l'effet de la dynamique des consommations rurales puis de la diffusion des usages thermiques de l'électricité sur les réseaux ruraux induit par des stratégies de développement commercial totalement extérieures au dispositif de solidarité nationale. L'introduction de la MDE s'inscrit dans une mouvement de correction et d'adaptation de ce régime. Dans la seconde partie d'analyse économique normative, le constat précédent conduit à identifier les défauts d'incitation à la MDE qui sont sous-jacents aux institutions de l'électrification rurale et à la structuration de ses acteurs pour repérer comment contourner cet obstacle. Ce constat conduit aussi à imaginer une méthode de calcul économique permettant de prendre en compte les paramètres d'hétérogénéité spatiale de la demande et des coûts de réseau en développement pour répondre à l'évolution de la fonction de demande spatialisée. Au premier niveau d'analyse, on procède dans le quatrième chapitre à une analyse microéconomique du comportement des différents types d'acteurs de l'électrification rurale en partant de leur fonction : régulateur, propriétaire-investisseur ou exploitant, du type de choix qui relève de leurs fonctions et de leurs contraintes pour analyser la structure d'incitations à l'investissement en réseau et à la MDE. On insiste plus particulièrement sur la nature d'acteur politique de l'agent investisseur que sont les collectivités locales, nature qui éloigne du comportement de l'agent économique rationnel. On examine en particulier la relation d'asymétrie d'information entre propriétaires-investisseurs et le régulateur qui répartit les aides à l'investissement. Cette asymétrie porte sur les coûts ex-ante et ex-post des projets. Dans la relation principal-agent, la structure informationnelle est compliquée dans le cas réel par l'imperfection même de l'information que détiennent les agents sur leurs projets. Ces défauts de la structure informationnelle expliquent la dérive du régime d'électrification rurale et les défauts d'allocation des ressources. A ce même niveau d'analyse, on propose dans le cinquième chapitre des correctifs afin d'améliorer l'allocation des ressources du régime d'électrification rurale. On identifie des règles visant à inciter à la MDE les propriétaires investisseurs en recherche récurrente de subventions. Nous utilisons une méthode de calcul du surplus social des actions de MDE et d'identification de sa répartition en termes d'avantages-coûts entre les différents agents parties prenantes : les consommateurs, les propriétaires investisseurs et l'exploitant vendeur d'électricité (ici EDF). L'idée est de sortir du seul mode d'évaluation en cours qui ne regarde que l'avantage net pour les collectivités qui investissent alors que les autres agents bénéficient des actions de MDE. Ceci conduit à définir un mode de réallocation d'une partie des externalités positives des actions de MDE sur l'agent investisseur. On teste ainsi le principe de versements incitatifs à la MDE sous la forme de dotations supplémentaires sous réserve de certification des gains en investissement dégagés par les collectivités. Au second niveau d'analyse normative, dans le sixième chapitre, on se confronte à l'obstacle de l'hétérogénéité des actions de MDE dans le but d'éviter le coût administratif très élevé d'une multitude d'actions dispersées spatialement pour définir une méthode d'évaluation des potentiels de MDE par repérage des configurations les plus intéressantes. Le fondement de cette approche propose de dépasser le caractère aspatial de l'analyse économique (Ponsard, 1986, 1988) par le biais d'une articulation entre deux catégories d'hétérogénéités spatiales : d'une part celle du réseau électrique (Juricic, 1975) et d'autre part celle des déterminants de la demande. Nous supposons que les lieux sont porteurs de sens sur le plan économique, au travers des caractéristiques du réseau et de la demande, ce qui nous conduit à construire un zonage géographique comme moyen de faire apparaître simultanément les attributs économiques pertinents associés aux lieux (Beguin et Thisse, 1979). L'objectif de cette méthode est de permettre de concevoir des projets de MDE d'ampleur significative à l'échelle d'un département. Il s'agit donc d'une méthodologie de recherche des potentiels économiques de MDE qui repose sur une approche d'analyse statistique spatialisée dont le but est de produire un zonage de l'espace pertinent sur le plan des projets de MDE. Le zonage est ensuite mobilisé pour proposer des paniers d'actions et sélectionner des zones d'intervention de MDE dont le montant des économies d'investissement en renforcement de réseaux est calculé.",
+              "document_type": "THESE",
+              "publication_date": "2005-11-18",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "Table des centrales électriques en tunisie ?"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 617,
+            "total_tokens": 617
+          }
+        }
+      },
+      "duration": 938
+    },
+    "retrievalTime": 1311,
+    "generationTime": 938,
+    "timestamp": "2025-07-10T09:15:03.931Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.112.3",
+    "forwarded_for": "193.51.112.3",
+    "received_at": "2025-07-10T09:15:04.726955+00:00",
+    "server_version": "1.0.0"
+  }
+}

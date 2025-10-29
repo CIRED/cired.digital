@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752140478887_5q2n4i1f5d5e334j71",
+  "timestamp": "20250710T094157790Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752140517786_mbcrc3q",
+    "query": "Parle moi de l'empreinte en eau en France l'idée à l'agriculture",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "Parle moi de l'empreinte en eau en France l'idée à l'agriculture",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "92.92.126.154",
+    "forwarded_for": "92.92.126.154",
+    "received_at": "2025-07-10T09:41:58.574811+00:00",
+    "server_version": "1.0.0"
+  }
+}

@@ -1,0 +1,597 @@
+{
+  "sessionId": "session_1752137691874_6v5x52c3w29583f4u",
+  "timestamp": "20250710T142106656Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752157251250_84gc74g",
+    "response": {
+      "results": {
+        "generated_answer": "La modélisation des coûts de la rénovation dans Res-IRF est abordée à travers plusieurs aspects et mécanismes. Voici les principaux points à retenir :\n\n1. **Matrice de coûts de travaux** :\n   - Res-IRF utilise une matrice de coûts de travaux pour évaluer la rentabilité des investissements de rénovation. Cette matrice permet de passer d'une classe énergétique du Diagnostic de Performance Énergétique (DPE) à une autre [b821e33], [1353ca9].\n   - Les coûts enregistrés dans cette matrice sont relativement élevés par rapport à ceux proposés par l'ADEME, avec des différences allant de 40 à 70 % en moyenne [b821e33], [1353ca9].\n\n2. **Coûts intangibles et effets d'apprentissage** :\n   - Les coûts intangibles, qui reflètent des barrières telles que l'information imparfaite et les coûts cachés, sont également pris en compte dans le modèle. Ces coûts diminuent selon une courbe logistique avec la production cumulée de rénovations, simulant ainsi des effets de mimétisme et d'amélioration de l'information [10a3a11], [bf56a12].\n   - Les coûts d'investissement diminuent de façon exponentielle avec la quantité cumulée d'opérations, simulant un processus d'apprentissage par la pratique. Le taux de diminution des coûts pour un doublement de la production est fixé à 15 % dans la construction neuve et à 10 % dans la rénovation [10a3a11].\n\n3. **Incertitudes et retour d'expérience** :\n   - Il subsiste de grandes incertitudes sur les coûts de rénovation, et seul un retour d'expérience sur un grand nombre d'opérations permettrait de fixer cette matrice de façon précise [b821e33], [1353ca9].\n\n4. **Instruments incitatifs** :\n   - Le modèle prend en compte des instruments incitatifs tels que l'éco-PTZ (éco-prêt à taux zéro) et le CIDD (Crédit d'Impôt pour la Transition Énergétique). Par exemple, le CIDD est représenté sous forme de subvention dans le modèle, avec une réduction de 30 % des coûts de rénovation vers une classe supérieure, plafonnée à 8 000 euros [0dee486].\n\n5. **Barrières à la rénovation énergétique** :\n   - Diverses barrières à l'efficacité énergétique sont modulées par des paramètres dans le modèle, telles que les contraintes de financement, les attributs non-énergétiques des rénovations, les incitations contradictoires entre propriétaire et locataire, et les freins à la décision collective en copropriété [6acfcf8].\n\nEn résumé, la modélisation des coûts de la rénovation dans Res-IRF est complexe et prend en compte à la fois les coûts tangibles et intangibles, les effets d'apprentissage, les incertitudes, et les instruments incitatifs pour évaluer la rentabilité et la dynamique de rénovation énergétique.",
+        "citations": [
+          {
+            "id": "b821e33",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 420,
+              "end": 429
+            },
+            "payload": {
+              "id": "b821e338-abc6-5463-b4d0-7360989f2662",
+              "document_id": "ce1b1abd-64ab-54e3-9136-893b3ff1851c",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie\n\nText: Pour évaluer la rentabilité des investissements de rénovation, le modèle Res-IRF utilise une matrice de coûts de travaux permettant de passer d'une classe énergétique du DPE à une autre (cf annexe). Cette matrice, construite  à dire d'experts , enregistre des coûts relativement élevés par rapport à la matrice proposée par lADEME, dans laquelle les coûts sont moins élevés de 40 à 70 % en moyenne. Il subsiste de grandes incertitudes sur ce point et seul un retour d'expérience sur un grand nombre d'opérations permettrait de fixer cette matrice de façon précise. La faible mobilisation d'un instrument comme l'éco-PTZ depuis sa mise en place semble toutefois montrer que les opérations de rénovation sont peu rentables pour les ménages (le coût d'investissement est élevé par rapport à l'économie d'énergie accessible) ou, en tous cas, ont des temps de retour longs qui dissuadent de les réaliser dans un contexte d'incertitude sur le prix des énergies. On souhaite néanmoins évaluer l'impact d'une forte baisse des coûts",
+              "metadata": {
+                "title": "Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie",
+                "hal_id": "hal-00799740",
+                "authors": [
+                  "Louis-Gaëtan Giraudet",
+                  "Céline Guivarch",
+                  "Philippe Quirion",
+                  "L. Penot-Antoniou"
+                ],
+                "version": "v0",
+                "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion, L. Penot-Antoniou. Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie. Études et documents - Numéro 58, 2011, pp.78. ⟨hal-00799740⟩",
+                "source_url": "https://hal.science/hal-00799740",
+                "chunk_order": 151,
+                "description": "La France s'est engagée à réduire les consommations d'énergie du parc des bâtiments existants de 38 % en 2020 par rapport à 2008, objectif \" Grenelle -38 % \", et à diviser les émissions de CO2 par quatre en 2050 par rapport à 1990, objectif \" Facteur 4 \". Pour atteindre ces objectifs, le Grenelle de l'environnement a mis en avant un certain nombre de leviers réglementaires et incitatifs. Cette étude, réalisée par le CIRED pour le compte du CGDD, a pour objectif d'analyser l'impact de ces différents instruments sur la consommation d'énergie pour le chauffage. Mesures existantes (crédit d'impôt développement durable, éco-prêt à taux zéro, réglementation thermique) et mesures supplémentaires (obligation de rénovation, contribution climat énergie) sont évaluées grâce au modèle Res-IRF du CIRED. Ce modèle prend en compte l'efficacité énergétique des logements et leur évolution dans le temps sous l'effet de rénovations ; il modélise également de façon originale les comportements de chauffage des ménages. Les premières simulations suggèrent que les politiques considérées ne suffisent pas à atteindre les objectifs ambitieux fixés par la France. Ces résultats sont sensibles aux hypothèses retenues. En introduisant des hypothèses plus optimistes (ex : prix des rénovations plus faible) et en prenant en compte des facteurs complémentaires au modèle (ex : bois), un travail de ré-estimation sur la base du modèle du CIRED a permis d'obtenir des résultats plus proches des objectifs du Grenelle.",
+                "document_type": "REPORT",
+                "publication_date": "2011-11-01",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "Modélisation des coûts de la rénovation dans Res-IRF"
+              }
+            }
+          },
+          {
+            "id": "1353ca9",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 431,
+              "end": 440
+            },
+            "payload": {
+              "id": "1353ca91-3b2f-53ce-9962-1a22f6bcabfa",
+              "document_id": "ce1b1abd-64ab-54e3-9136-893b3ff1851c",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015818181818181818,
+              "text": "Document Title: Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie\n\nText: que de 30 % environ. Cet écart ne reflète toutefois pas seulement la prise en compte des  petites  rénovations, il dépend également du rythme de construction du parc neuf, de sa qualité thermique et de la pénétration des différents vecteurs énergétiques. Par ailleurs, le taux de baisse de -1,6 % / an mesuré dans le passé devrait avoir tendance à diminuer puisque le potentiel pour réaliser de petites rénovations, les plus faciles à entreprendre, devrait décroître.   4.4 Des coûts de rénovation élevés  Pour évaluer la rentabilité des investissements de rénovation, le modèle Res-IRF utilise une matrice de coûts de travaux permettant de passer d'une classe énergétique du DPE à une autre (cf annexe). Cette matrice, construite  à dire d'experts , enregistre des coûts relativement élevés par rapport à la matrice proposée par lADEME, dans laquelle les coûts sont moins élevés de 40 à 70 % en moyenne. Il subsiste de grandes incertitudes sur ce point et seul un retour d'expérience sur un grand nombre d'opérations",
+              "metadata": {
+                "title": "Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie",
+                "hal_id": "hal-00799740",
+                "authors": [
+                  "Louis-Gaëtan Giraudet",
+                  "Céline Guivarch",
+                  "Philippe Quirion",
+                  "L. Penot-Antoniou"
+                ],
+                "version": "v0",
+                "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion, L. Penot-Antoniou. Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie. Études et documents - Numéro 58, 2011, pp.78. ⟨hal-00799740⟩",
+                "source_url": "https://hal.science/hal-00799740",
+                "chunk_order": 150,
+                "description": "La France s'est engagée à réduire les consommations d'énergie du parc des bâtiments existants de 38 % en 2020 par rapport à 2008, objectif \" Grenelle -38 % \", et à diviser les émissions de CO2 par quatre en 2050 par rapport à 1990, objectif \" Facteur 4 \". Pour atteindre ces objectifs, le Grenelle de l'environnement a mis en avant un certain nombre de leviers réglementaires et incitatifs. Cette étude, réalisée par le CIRED pour le compte du CGDD, a pour objectif d'analyser l'impact de ces différents instruments sur la consommation d'énergie pour le chauffage. Mesures existantes (crédit d'impôt développement durable, éco-prêt à taux zéro, réglementation thermique) et mesures supplémentaires (obligation de rénovation, contribution climat énergie) sont évaluées grâce au modèle Res-IRF du CIRED. Ce modèle prend en compte l'efficacité énergétique des logements et leur évolution dans le temps sous l'effet de rénovations ; il modélise également de façon originale les comportements de chauffage des ménages. Les premières simulations suggèrent que les politiques considérées ne suffisent pas à atteindre les objectifs ambitieux fixés par la France. Ces résultats sont sensibles aux hypothèses retenues. En introduisant des hypothèses plus optimistes (ex : prix des rénovations plus faible) et en prenant en compte des facteurs complémentaires au modèle (ex : bois), un travail de ré-estimation sur la base du modèle du CIRED a permis d'obtenir des résultats plus proches des objectifs du Grenelle.",
+                "document_type": "REPORT",
+                "publication_date": "2011-11-01",
+                "semantic_rank": 5,
+                "full_text_rank": 200,
+                "associated_query": "Modélisation des coûts de la rénovation dans Res-IRF"
+              }
+            }
+          },
+          {
+            "id": "b821e33",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 606,
+              "end": 615
+            },
+            "payload": null
+          },
+          {
+            "id": "1353ca9",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 617,
+              "end": 626
+            },
+            "payload": null
+          },
+          {
+            "id": "10a3a11",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1006,
+              "end": 1015
+            },
+            "payload": {
+              "id": "10a3a111-b0fe-5155-8e6b-30c91617d4ff",
+              "document_id": "f8244ee2-795c-5600-b1d3-92b65d1b1cd2",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016098765432098764,
+              "text": "Document Title: Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel\n\nText: 33 \n  Les coûts dinvestissements diminuent de façon exponentielle avec la quantité cumulée \ndopérations afin de simuler un processus classique   dapprentissage p ar la pratique  . Le taux \nde diminution des coûts pour un doublement de la production est fixé à 15% dans la \nconstruction neuve et 10% dans la rénovation, qui sappuie sur des technologies plus matures.  \n Les coûts intangibles de rénovation diminuent selon u ne courbe logistique avec la même \nproduction cumulée afin de simuler des effets de mimétisme et damélioration de linformation. \nLe taux de diminution pour un doublement de la production cumulée est fixé à 25%.  \nDans les deux cas, la diminution des coûts sur le cycle de vie ainsi générée accroît la part de marché de \nloption considérée par rapport à celle des options alternatives.  \n3 Comportement élémentaire de Res -IRF 3.0  \n3.1 Paramétrage de référence  \nOutre les  politiques publiques, les résultats du modèle sont d éterminés par trois variables exogènes  : la",
+              "metadata": {
+                "title": "Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel",
+                "hal_id": "hal-01955954",
+                "authors": [
+                  "Louis-Gaëtan Giraudet",
+                  "Cyril Bourgeois",
+                  "Philippe Quirion",
+                  "David Glotin"
+                ],
+                "version": "v0",
+                "citation": "Louis-Gaëtan Giraudet, Cyril Bourgeois, Philippe Quirion, David Glotin. Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel. [Rapport de recherche] CIRED CNRS; ecole des ponts paristech. 2018. ⟨hal-01955954v2⟩",
+                "source_url": "https://hal.science/hal-01955954",
+                "chunk_order": 132,
+                "document_type": "REPORT",
+                "publication_date": "2018-12-21",
+                "semantic_rank": 4,
+                "full_text_rank": 200,
+                "associated_query": "Modélisation des coûts de la rénovation dans Res-IRF"
+              }
+            }
+          },
+          {
+            "id": "bf56a12",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1017,
+              "end": 1026
+            },
+            "payload": {
+              "id": "bf56a124-6524-5efb-9ab0-11ef7f80da2a",
+              "document_id": "ff96cb05-8dab-5c25-9bda-53cf508d2490",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01503448275862069,
+              "text": "Document Title: Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle\n\nText: dits  intangibles   sont utilisés dans Res-IRF pour refléter les barrières qui sous-tendent ces \nobservations , en particulier linformation imparfaite et les coûts cachés . Calibrés à lannée de base \npour permettre au modèle de reproduire les transitions effectivement observées lors dop érations \nprogrammées damélioration de lhabitat (PUCA, 2008), ils sont par la suite ajoutés \nsystématiquement au coût financier dans les calculs de rentabilité des options dinvestissement . \nLes coûts intangibles comportent une part variable, qui décroit selon une fonctio n logistique avec la \nquantité cumulée de rénovation, à la manière du modèle CIMS (Mau et al. , 2008 ; Axsen et al. , 2009). \nCe processus mime les effets dimitation ou plus généralement les externalités positives dadoption \ndes technologies defficacité énergétique ( learning-by-using ) : à mesure que les coûts intangibles \ndiminuent, linformation saccroît et le calcul économique r éalisé par le propriétaire sapproche dun",
+              "metadata": {
+                "title": "Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle",
+                "hal_id": "tel-00599374",
+                "authors": [
+                  "Louis-Gaëtan Giraudet"
+                ],
+                "version": "v0",
+                "citation": "Louis-Gaëtan Giraudet. Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle. Economies et finances. Université Paris-Est, 2011. Français. ⟨NNT : 2011PEST1139⟩. ⟨tel-00599374v2⟩",
+                "source_url": "https://hal.science/tel-00599374",
+                "chunk_order": 442,
+                "description": "Cette thèse évalue l'efficacité de différentes formes de taxes, subventions et réglementations mises en place pour corriger les défaillances de marché qui s'opposent aux économies d'énergie. Elle mobilise plusieurs approches, selon un degré de complexité croissant. Dans un premier temps, un modèle microéconomique standard est développé pour comparer les performances statiques des différents instruments. Dans un deuxième temps, la représentation des comportements des consommateurs est approfondie dans un modèle de prospective de la consommation d'énergie pour le chauffage des ménages français, qui permet d'identifier les mécanismes dynamiques par lesquels les instruments peuvent corriger les principales défaillances de marché. Dans un troisième temps, une évaluation empirique des dispositifs de « certificats blancs » – obligations échangeables d'économies d'énergie imposées aux opérateurs énergétiques – est menée à partir d'une comparaison des expériences britannique, italienne et française, en intégrant les institutions dans l'analyse. Le croisement de ces différentes approches montre que : (i) les taxes sur l'énergie, qui encouragent à la fois l'investissement dans l'efficacité énergétique et la sobriété des comportements, sont particulièrement efficaces ; (ii) les réglementations sur l'efficacité énergétique ont un impact significatif sur la diffusion des technologies efficaces ; (iii) les subventions à l'efficacité énergétique génèrent un effet rebond important ; (iv) en fonction de l'environnement institutionnel dans lequel ils s'insèrent, les « certificats blancs » combinent les propriétés de ces instruments. Appliquée en France au secteur du bâtiment résidentiel, la combinaison la plus efficace de ces instruments ne permet pas d'atteindre les objectifs d'économies d'énergie définis dans le cadre du Grenelle de l'environnement",
+                "document_type": "THESE",
+                "publication_date": "2011-03-28",
+                "semantic_rank": 8,
+                "full_text_rank": 200,
+                "associated_query": "Modélisation des coûts de la rénovation dans Res-IRF"
+              }
+            }
+          },
+          {
+            "id": "10a3a11",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1327,
+              "end": 1336
+            },
+            "payload": null
+          },
+          {
+            "id": "b821e33",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1570,
+              "end": 1579
+            },
+            "payload": null
+          },
+          {
+            "id": "1353ca9",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1581,
+              "end": 1590
+            },
+            "payload": null
+          },
+          {
+            "id": "0dee486",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1965,
+              "end": 1974
+            },
+            "payload": {
+              "id": "0dee4862-b241-5615-9e7a-c6beed087077",
+              "document_id": "ce1b1abd-64ab-54e3-9136-893b3ff1851c",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017094017094017092,
+              "text": "Document Title: Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie\n\nText: 18 || || Commissariat général au développement durable  Ser vice de léconomie, de lévaluation et de lintégra tion du développement durable  4.6 La modélisation des instruments incitatifs  L'analyse montre que la modélisation des outils incitatifs tels que l'éco-PTZ, le CIDD et la taxe carbone utilisée dans Res-IRF semble relativement pertinente. Le CIDD, existant depuis 2005, est représenté sous forme de subvention dans le modèle (réduction de 30 %17 des coûts de rénovation vers une classe supérieure, plafonnée à 8 000 ). Son paramétrage correspond à l'année 2008 et ne peut prendre en compte les évolutions constantes du CIDD (évolutions quant aux équipements éligibles au CIDD et aux taux de crédit par équipement). Aussi, le modèle ne permet pas de réaliser une analyse détaillée du dispositif, ni par équipement, ni dans le temps. L'exemple du nombre de rénovations illustre ce fait. D'après le modèle, le CIDD entraînerait près de 95 000 rénovations supplémentaires par an (pour un total de l'ordre de 350",
+              "metadata": {
+                "title": "Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie",
+                "hal_id": "hal-00799740",
+                "authors": [
+                  "Louis-Gaëtan Giraudet",
+                  "Céline Guivarch",
+                  "Philippe Quirion",
+                  "L. Penot-Antoniou"
+                ],
+                "version": "v0",
+                "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion, L. Penot-Antoniou. Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie. Études et documents - Numéro 58, 2011, pp.78. ⟨hal-00799740⟩",
+                "source_url": "https://hal.science/hal-00799740",
+                "chunk_order": 162,
+                "description": "La France s'est engagée à réduire les consommations d'énergie du parc des bâtiments existants de 38 % en 2020 par rapport à 2008, objectif \" Grenelle -38 % \", et à diviser les émissions de CO2 par quatre en 2050 par rapport à 1990, objectif \" Facteur 4 \". Pour atteindre ces objectifs, le Grenelle de l'environnement a mis en avant un certain nombre de leviers réglementaires et incitatifs. Cette étude, réalisée par le CIRED pour le compte du CGDD, a pour objectif d'analyser l'impact de ces différents instruments sur la consommation d'énergie pour le chauffage. Mesures existantes (crédit d'impôt développement durable, éco-prêt à taux zéro, réglementation thermique) et mesures supplémentaires (obligation de rénovation, contribution climat énergie) sont évaluées grâce au modèle Res-IRF du CIRED. Ce modèle prend en compte l'efficacité énergétique des logements et leur évolution dans le temps sous l'effet de rénovations ; il modélise également de façon originale les comportements de chauffage des ménages. Les premières simulations suggèrent que les politiques considérées ne suffisent pas à atteindre les objectifs ambitieux fixés par la France. Ces résultats sont sensibles aux hypothèses retenues. En introduisant des hypothèses plus optimistes (ex : prix des rénovations plus faible) et en prenant en compte des facteurs complémentaires au modèle (ex : bois), un travail de ré-estimation sur la base du modèle du CIRED a permis d'obtenir des résultats plus proches des objectifs du Grenelle.",
+                "document_type": "REPORT",
+                "publication_date": "2011-11-01",
+                "semantic_rank": 10,
+                "full_text_rank": 2,
+                "associated_query": "Modélisation des coûts de la rénovation dans Res-IRF"
+              }
+            }
+          },
+          {
+            "id": "6acfcf8",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2334,
+              "end": 2343
+            },
+            "payload": {
+              "id": "6acfcf85-5db9-559c-a9b1-440626fb019f",
+              "document_id": "f8244ee2-795c-5600-b1d3-92b65d1b1cd2",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01638993710691824,
+              "text": "Document Title: Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel\n\nText: Res-IRF détermine de façon endogène la dynamique de  construction neuve , la dynamique de rénovation \nthermique des logements existants et les écarts entre consommation dénergie réelle et \nconventionnelle , notamment dus à  leffet rebond  . Ces mécanismes sont modulés par des paramètres \nreflétant différentes barrières à lefficacité énergétique, telles les contraintes de financement, les \nattributs non -énergétiques des rénovations , les incitations contradictoires entre prop riétaire et le \nlocataire dun même logement  et les freins à la décision collective en copropriété . \nLa version 3.0 du modèle, développée spécialement pour lexercice, est paramétrée sur les données de \nlenquête Performance de lHabitat, Équipements, Besoins  et USages de lénergie (Phébus) . Le \ncomportement de Res -IRF 3.0 peut se résumer par des élasticités -prix de la demande dénergie de -0,2 à \ncourt terme et -0,4 à long terme.  Le modèle reproduit lévolution des consommations  dénergie  (hors",
+              "metadata": {
+                "title": "Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel",
+                "hal_id": "hal-01955954",
+                "authors": [
+                  "Louis-Gaëtan Giraudet",
+                  "Cyril Bourgeois",
+                  "Philippe Quirion",
+                  "David Glotin"
+                ],
+                "version": "v0",
+                "citation": "Louis-Gaëtan Giraudet, Cyril Bourgeois, Philippe Quirion, David Glotin. Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel. [Rapport de recherche] CIRED CNRS; ecole des ponts paristech. 2018. ⟨hal-01955954v2⟩",
+                "source_url": "https://hal.science/hal-01955954",
+                "chunk_order": 13,
+                "document_type": "REPORT",
+                "publication_date": "2018-12-21",
+                "semantic_rank": 3,
+                "full_text_rank": 200,
+                "associated_query": "Modélisation des coûts de la rénovation dans Res-IRF"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "de0a80c1-65a9-5345-8b05-91fb0d961ed0",
+            "document_id": "50fbff88-d757-5a4e-ba84-e2b597916f44",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017156862745098037,
+            "text": "Document Title: La difficile quantification de la place du bâtiment dans la décarbonation\n\nText: dans le modèle Res-IRF, en particulier, les effets déchelle du coût \ndes rénovations énergétiques, les mécanismes de concurrence \nimparfaite dans lindustrie de la rénovation énergétique et loffre \nde crédit aux ménages.Le secteur du bâtiment est fréquemment \nprésenté comme lun des gisements \nde décarbonation les plus vastes et \ncoût-efficace. Le manque de vigueur \nde la dynamique de rénovation énergétique \nest néanmoins tout aussi fréquemment déploré. \nDès lors, vaut-il mieux faire porter leffort collec -\ntif sur lamélioration de lefficacité énergétique \ndes bâtiments ou sur la décarbonation des vec -\nteurs dénergie? Il reste aujourdhui difficile \nde répondre à cette question, en raison, no -\ntamment, dimprécisions dans les données de \nstock de bâtiments et de flux de rénovation éner -\ngétique. Nous dressons ici un état des lieux des \ndonnées disponibles, en mettant en exergue \nles possibilités de modélisation ouvertes par \nles progrès récents et les points damélioration",
+            "metadata": {
+              "title": "La difficile quantification de la place du bâtiment dans la décarbonation",
+              "hal_id": "hal-03946309",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Lucas Vivier"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Lucas Vivier. La difficile quantification de la place du bâtiment dans la décarbonation. Transitions. Les nouvelles Annales des Ponts et Chaussées, 2022, Bâtiments et construction en transition, 2, pp.12-19. ⟨hal-03946309⟩",
+              "source_url": "https://hal.science/hal-03946309",
+              "chunk_order": 7,
+              "description": "Les progrès d’amélioration énergétique des bâtiments semblent relativement lents, en dépit d’opportunités de réduction des émissions de gaz à effet supposées abondantes et peu coûteuses. Dès lors, vaut-il mieux insister sur l’amélioration de l’efficacité énergétique ou sur la décarbonation des vecteurs d’énergie ? Cet article présente l’état des connaissances pour le secteur résidentiel, qui représente environ 25 % de la consommation d’énergie totale en France. Les données disponibles sur le parc de logements et la dynamique de rénovation énergétique se sont grandement améliorées ces dernières années, mais se heurtent encore à des imprécisions concernant le nombre de « passoires thermiques », les flux annuels de rénovation et l’ampleur des économies d’énergie réalisées. Si ces lacunes ne permettent pas de répondre précisément à la question posée, elles ne remettent pas pour autant en cause le bien-fondé des politiques de rénovation énergétique.",
+              "document_type": "ART",
+              "publication_date": "2022-12-01",
+              "semantic_rank": 10,
+              "full_text_rank": 1,
+              "associated_query": "Modélisation des coûts de la rénovation dans Res-IRF"
+            }
+          },
+          {
+            "id": "0dee4862-b241-5615-9e7a-c6beed087077",
+            "document_id": "ce1b1abd-64ab-54e3-9136-893b3ff1851c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017094017094017092,
+            "text": "Document Title: Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie\n\nText: 18 || || Commissariat général au développement durable  Ser vice de léconomie, de lévaluation et de lintégra tion du développement durable  4.6 La modélisation des instruments incitatifs  L'analyse montre que la modélisation des outils incitatifs tels que l'éco-PTZ, le CIDD et la taxe carbone utilisée dans Res-IRF semble relativement pertinente. Le CIDD, existant depuis 2005, est représenté sous forme de subvention dans le modèle (réduction de 30 %17 des coûts de rénovation vers une classe supérieure, plafonnée à 8 000 ). Son paramétrage correspond à l'année 2008 et ne peut prendre en compte les évolutions constantes du CIDD (évolutions quant aux équipements éligibles au CIDD et aux taux de crédit par équipement). Aussi, le modèle ne permet pas de réaliser une analyse détaillée du dispositif, ni par équipement, ni dans le temps. L'exemple du nombre de rénovations illustre ce fait. D'après le modèle, le CIDD entraînerait près de 95 000 rénovations supplémentaires par an (pour un total de l'ordre de 350",
+            "metadata": {
+              "title": "Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie",
+              "hal_id": "hal-00799740",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Céline Guivarch",
+                "Philippe Quirion",
+                "L. Penot-Antoniou"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion, L. Penot-Antoniou. Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie. Études et documents - Numéro 58, 2011, pp.78. ⟨hal-00799740⟩",
+              "source_url": "https://hal.science/hal-00799740",
+              "chunk_order": 162,
+              "description": "La France s'est engagée à réduire les consommations d'énergie du parc des bâtiments existants de 38 % en 2020 par rapport à 2008, objectif \" Grenelle -38 % \", et à diviser les émissions de CO2 par quatre en 2050 par rapport à 1990, objectif \" Facteur 4 \". Pour atteindre ces objectifs, le Grenelle de l'environnement a mis en avant un certain nombre de leviers réglementaires et incitatifs. Cette étude, réalisée par le CIRED pour le compte du CGDD, a pour objectif d'analyser l'impact de ces différents instruments sur la consommation d'énergie pour le chauffage. Mesures existantes (crédit d'impôt développement durable, éco-prêt à taux zéro, réglementation thermique) et mesures supplémentaires (obligation de rénovation, contribution climat énergie) sont évaluées grâce au modèle Res-IRF du CIRED. Ce modèle prend en compte l'efficacité énergétique des logements et leur évolution dans le temps sous l'effet de rénovations ; il modélise également de façon originale les comportements de chauffage des ménages. Les premières simulations suggèrent que les politiques considérées ne suffisent pas à atteindre les objectifs ambitieux fixés par la France. Ces résultats sont sensibles aux hypothèses retenues. En introduisant des hypothèses plus optimistes (ex : prix des rénovations plus faible) et en prenant en compte des facteurs complémentaires au modèle (ex : bois), un travail de ré-estimation sur la base du modèle du CIRED a permis d'obtenir des résultats plus proches des objectifs du Grenelle.",
+              "document_type": "REPORT",
+              "publication_date": "2011-11-01",
+              "semantic_rank": 10,
+              "full_text_rank": 2,
+              "associated_query": "Modélisation des coûts de la rénovation dans Res-IRF"
+            }
+          },
+          {
+            "id": "b821e338-abc6-5463-b4d0-7360989f2662",
+            "document_id": "ce1b1abd-64ab-54e3-9136-893b3ff1851c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie\n\nText: Pour évaluer la rentabilité des investissements de rénovation, le modèle Res-IRF utilise une matrice de coûts de travaux permettant de passer d'une classe énergétique du DPE à une autre (cf annexe). Cette matrice, construite  à dire d'experts , enregistre des coûts relativement élevés par rapport à la matrice proposée par lADEME, dans laquelle les coûts sont moins élevés de 40 à 70 % en moyenne. Il subsiste de grandes incertitudes sur ce point et seul un retour d'expérience sur un grand nombre d'opérations permettrait de fixer cette matrice de façon précise. La faible mobilisation d'un instrument comme l'éco-PTZ depuis sa mise en place semble toutefois montrer que les opérations de rénovation sont peu rentables pour les ménages (le coût d'investissement est élevé par rapport à l'économie d'énergie accessible) ou, en tous cas, ont des temps de retour longs qui dissuadent de les réaliser dans un contexte d'incertitude sur le prix des énergies. On souhaite néanmoins évaluer l'impact d'une forte baisse des coûts",
+            "metadata": {
+              "title": "Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie",
+              "hal_id": "hal-00799740",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Céline Guivarch",
+                "Philippe Quirion",
+                "L. Penot-Antoniou"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion, L. Penot-Antoniou. Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie. Études et documents - Numéro 58, 2011, pp.78. ⟨hal-00799740⟩",
+              "source_url": "https://hal.science/hal-00799740",
+              "chunk_order": 151,
+              "description": "La France s'est engagée à réduire les consommations d'énergie du parc des bâtiments existants de 38 % en 2020 par rapport à 2008, objectif \" Grenelle -38 % \", et à diviser les émissions de CO2 par quatre en 2050 par rapport à 1990, objectif \" Facteur 4 \". Pour atteindre ces objectifs, le Grenelle de l'environnement a mis en avant un certain nombre de leviers réglementaires et incitatifs. Cette étude, réalisée par le CIRED pour le compte du CGDD, a pour objectif d'analyser l'impact de ces différents instruments sur la consommation d'énergie pour le chauffage. Mesures existantes (crédit d'impôt développement durable, éco-prêt à taux zéro, réglementation thermique) et mesures supplémentaires (obligation de rénovation, contribution climat énergie) sont évaluées grâce au modèle Res-IRF du CIRED. Ce modèle prend en compte l'efficacité énergétique des logements et leur évolution dans le temps sous l'effet de rénovations ; il modélise également de façon originale les comportements de chauffage des ménages. Les premières simulations suggèrent que les politiques considérées ne suffisent pas à atteindre les objectifs ambitieux fixés par la France. Ces résultats sont sensibles aux hypothèses retenues. En introduisant des hypothèses plus optimistes (ex : prix des rénovations plus faible) et en prenant en compte des facteurs complémentaires au modèle (ex : bois), un travail de ré-estimation sur la base du modèle du CIRED a permis d'obtenir des résultats plus proches des objectifs du Grenelle.",
+              "document_type": "REPORT",
+              "publication_date": "2011-11-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Modélisation des coûts de la rénovation dans Res-IRF"
+            }
+          },
+          {
+            "id": "7cd6021c-2107-53e2-8fa1-dc8637967781",
+            "document_id": "4a0eb05b-3d16-5fc1-85a8-598b5dd999c8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Exploring the potential for energy conservation in French households through hybrid modelling\n\nText: l'efficacité énergétique sous la  forme de coûts intangibles, de processus d'apprentissage et de \nparamètres d'hétérogénéité des ménages  ; (iii) une détermination endogène du processus de \nrénovation, qui représe nte un arbitrage entre le nombre et la qualité des rénovations . Res-IRF est \ncouplé au modèle d'équilib re général calculable IMACLIM -R, adapté à léconomie française . Les \nsimulations  prospectives montre nt que, comparé e à une réduction de 37 % de la demande d'énergie \nfinale en business as usual , une réduction additionnelle de 14 % peut être atteinte si les barrières qui \nsopposent à l 'efficacité et la sobriété sont surmontées.  \n \nMots -clés: modélisati on hybride, chauffage ré sidentiel, barriè res à lefficacité énergétiqu e, effet \nrebond, dynamique  de rénovation endogène , coûts intangibles.",
+            "metadata": {
+              "title": "Exploring the potential for energy conservation in French households through hybrid modelling",
+              "hal_id": "hal-00866425",
+              "authors": "['Louis-Gaëtan Giraudet', 'Céline Guivarch', 'Philippe Quirion']",
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion. Exploring the potential for energy conservation in French households through hybrid modelling. 2011. ⟨hal-00866425⟩",
+              "source_url": "https://hal.science/hal-00866425",
+              "chunk_order": 7,
+              "description": "Although the building sector is recognized as having major potential for energy conservation and carbon dioxide emissions mitigation, conventional bottom-up and top-down models are limited in their ability to capture the complex economic and technological dynamics of the sector. This paper introduces a hybrid framework developed to assess future household energy demand in France. Res-IRF, a bottom-up module of energy consumption for space heating, has several distinctive features : (i) a clear separation between energy efficiency, i.e. investment in energy efficient technologies, and sufficiency, i.e. changes in the utilization of energy consuming durables which allows the rebound effect to be assessed ; (ii) the inclusion of barriers to energy efficiency in the form of intangible costs, consumer heterogeneity parameters and the learning-by-doing process ; (iii) an endogenous determination of retrofitting which represents trade-offs between retrofit quantity and quality. Subsequently, Res-IRF is linked to the IMACLIM-R computable general equilibrium model. This exercise shows that, compared to a 37% reduction in final energy demand achievable in business as usual in existing dwellings, an additional reduction of 14% could be achieved if relevant barriers to efficiency and sufficiency were overcome.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2011-01-01",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Modélisation des coûts de la rénovation dans Res-IRF"
+            }
+          },
+          {
+            "id": "6acfcf85-5db9-559c-a9b1-440626fb019f",
+            "document_id": "f8244ee2-795c-5600-b1d3-92b65d1b1cd2",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel\n\nText: Res-IRF détermine de façon endogène la dynamique de  construction neuve , la dynamique de rénovation \nthermique des logements existants et les écarts entre consommation dénergie réelle et \nconventionnelle , notamment dus à  leffet rebond  . Ces mécanismes sont modulés par des paramètres \nreflétant différentes barrières à lefficacité énergétique, telles les contraintes de financement, les \nattributs non -énergétiques des rénovations , les incitations contradictoires entre prop riétaire et le \nlocataire dun même logement  et les freins à la décision collective en copropriété . \nLa version 3.0 du modèle, développée spécialement pour lexercice, est paramétrée sur les données de \nlenquête Performance de lHabitat, Équipements, Besoins  et USages de lénergie (Phébus) . Le \ncomportement de Res -IRF 3.0 peut se résumer par des élasticités -prix de la demande dénergie de -0,2 à \ncourt terme et -0,4 à long terme.  Le modèle reproduit lévolution des consommations  dénergie  (hors",
+            "metadata": {
+              "title": "Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel",
+              "hal_id": "hal-01955954",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Cyril Bourgeois",
+                "Philippe Quirion",
+                "David Glotin"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Cyril Bourgeois, Philippe Quirion, David Glotin. Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel. [Rapport de recherche] CIRED CNRS; ecole des ponts paristech. 2018. ⟨hal-01955954v2⟩",
+              "source_url": "https://hal.science/hal-01955954",
+              "chunk_order": 13,
+              "document_type": "REPORT",
+              "publication_date": "2018-12-21",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Modélisation des coûts de la rénovation dans Res-IRF"
+            }
+          },
+          {
+            "id": "10a3a111-b0fe-5155-8e6b-30c91617d4ff",
+            "document_id": "f8244ee2-795c-5600-b1d3-92b65d1b1cd2",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel\n\nText: 33 \n  Les coûts dinvestissements diminuent de façon exponentielle avec la quantité cumulée \ndopérations afin de simuler un processus classique   dapprentissage p ar la pratique  . Le taux \nde diminution des coûts pour un doublement de la production est fixé à 15% dans la \nconstruction neuve et 10% dans la rénovation, qui sappuie sur des technologies plus matures.  \n Les coûts intangibles de rénovation diminuent selon u ne courbe logistique avec la même \nproduction cumulée afin de simuler des effets de mimétisme et damélioration de linformation. \nLe taux de diminution pour un doublement de la production cumulée est fixé à 25%.  \nDans les deux cas, la diminution des coûts sur le cycle de vie ainsi générée accroît la part de marché de \nloption considérée par rapport à celle des options alternatives.  \n3 Comportement élémentaire de Res -IRF 3.0  \n3.1 Paramétrage de référence  \nOutre les  politiques publiques, les résultats du modèle sont d éterminés par trois variables exogènes  : la",
+            "metadata": {
+              "title": "Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel",
+              "hal_id": "hal-01955954",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Cyril Bourgeois",
+                "Philippe Quirion",
+                "David Glotin"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Cyril Bourgeois, Philippe Quirion, David Glotin. Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel. [Rapport de recherche] CIRED CNRS; ecole des ponts paristech. 2018. ⟨hal-01955954v2⟩",
+              "source_url": "https://hal.science/hal-01955954",
+              "chunk_order": 132,
+              "document_type": "REPORT",
+              "publication_date": "2018-12-21",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Modélisation des coûts de la rénovation dans Res-IRF"
+            }
+          },
+          {
+            "id": "1353ca91-3b2f-53ce-9962-1a22f6bcabfa",
+            "document_id": "ce1b1abd-64ab-54e3-9136-893b3ff1851c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie\n\nText: que de 30 % environ. Cet écart ne reflète toutefois pas seulement la prise en compte des  petites  rénovations, il dépend également du rythme de construction du parc neuf, de sa qualité thermique et de la pénétration des différents vecteurs énergétiques. Par ailleurs, le taux de baisse de -1,6 % / an mesuré dans le passé devrait avoir tendance à diminuer puisque le potentiel pour réaliser de petites rénovations, les plus faciles à entreprendre, devrait décroître.   4.4 Des coûts de rénovation élevés  Pour évaluer la rentabilité des investissements de rénovation, le modèle Res-IRF utilise une matrice de coûts de travaux permettant de passer d'une classe énergétique du DPE à une autre (cf annexe). Cette matrice, construite  à dire d'experts , enregistre des coûts relativement élevés par rapport à la matrice proposée par lADEME, dans laquelle les coûts sont moins élevés de 40 à 70 % en moyenne. Il subsiste de grandes incertitudes sur ce point et seul un retour d'expérience sur un grand nombre d'opérations",
+            "metadata": {
+              "title": "Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie",
+              "hal_id": "hal-00799740",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Céline Guivarch",
+                "Philippe Quirion",
+                "L. Penot-Antoniou"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion, L. Penot-Antoniou. Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie. Études et documents - Numéro 58, 2011, pp.78. ⟨hal-00799740⟩",
+              "source_url": "https://hal.science/hal-00799740",
+              "chunk_order": 150,
+              "description": "La France s'est engagée à réduire les consommations d'énergie du parc des bâtiments existants de 38 % en 2020 par rapport à 2008, objectif \" Grenelle -38 % \", et à diviser les émissions de CO2 par quatre en 2050 par rapport à 1990, objectif \" Facteur 4 \". Pour atteindre ces objectifs, le Grenelle de l'environnement a mis en avant un certain nombre de leviers réglementaires et incitatifs. Cette étude, réalisée par le CIRED pour le compte du CGDD, a pour objectif d'analyser l'impact de ces différents instruments sur la consommation d'énergie pour le chauffage. Mesures existantes (crédit d'impôt développement durable, éco-prêt à taux zéro, réglementation thermique) et mesures supplémentaires (obligation de rénovation, contribution climat énergie) sont évaluées grâce au modèle Res-IRF du CIRED. Ce modèle prend en compte l'efficacité énergétique des logements et leur évolution dans le temps sous l'effet de rénovations ; il modélise également de façon originale les comportements de chauffage des ménages. Les premières simulations suggèrent que les politiques considérées ne suffisent pas à atteindre les objectifs ambitieux fixés par la France. Ces résultats sont sensibles aux hypothèses retenues. En introduisant des hypothèses plus optimistes (ex : prix des rénovations plus faible) et en prenant en compte des facteurs complémentaires au modèle (ex : bois), un travail de ré-estimation sur la base du modèle du CIRED a permis d'obtenir des résultats plus proches des objectifs du Grenelle.",
+              "document_type": "REPORT",
+              "publication_date": "2011-11-01",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Modélisation des coûts de la rénovation dans Res-IRF"
+            }
+          },
+          {
+            "id": "66ed98a1-45b5-5f1c-8508-b3221b711fd2",
+            "document_id": "f8244ee2-795c-5600-b1d3-92b65d1b1cd2",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel\n\nText: 28 \n 𝛾(𝑟,𝑙)=(1+𝑟)𝑡𝑙\n𝑡=0=1(1+𝑟)𝑙\n𝑟 \nCes deux paramètres traduisent dans Res -IRF diverses barrières à la rénovation énergétique  : \n Le taux dactualisation prend à la fois en compte (i) les contraint es hétérogènes daccès au crédit \nqui pèsent sur les différentes classes de revenu et (ii) les contraintes de décision qui pèsent sur \nles logements collectifs en copropriété.  \n Lhorizon dinvestissement traduit lintensité de la   valeur verte   vénale ou lo cative des \nlogements, cest -à-dire létendue de la prime à la location ou à la revente pour un bien qui vient \nde subir des travaux damélioration  énergétique . \nLa part de marché 𝑃𝑀 𝑖,𝑓 dune transition , résultant de lagrégation des choix individuels, es t déduite de \nson coût sur le cycle de vie par léquation suivante  : \n𝑃𝑀 𝑖,𝑓=𝐶𝐶𝑉 𝑖,𝑓𝑣\n 𝐶𝐶𝑉 𝑖,𝑘𝑣 𝑛\n𝑘=𝑖+1 \nLe paramètre 𝑣 caractérise  lhétérogénéité des préférences  et est  fixé à 8 dans le modèle19. Les coûts",
+            "metadata": {
+              "title": "Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel",
+              "hal_id": "hal-01955954",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Cyril Bourgeois",
+                "Philippe Quirion",
+                "David Glotin"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Cyril Bourgeois, Philippe Quirion, David Glotin. Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel. [Rapport de recherche] CIRED CNRS; ecole des ponts paristech. 2018. ⟨hal-01955954v2⟩",
+              "source_url": "https://hal.science/hal-01955954",
+              "chunk_order": 112,
+              "document_type": "REPORT",
+              "publication_date": "2018-12-21",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Modélisation des coûts de la rénovation dans Res-IRF"
+            }
+          },
+          {
+            "id": "9fd30706-6645-5a40-a902-11054c7392c2",
+            "document_id": "1421f49f-0b9c-5350-96a7-8a182bed7ddb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Modélisation de la consommation d'énergie dans le secteur résidentiel français\n\nText: que Res-IRF, mo dèle h ybride de sim ulation de la consommation de c hauage en F rance\nmétrop olitaine dév elopp é au CIRED ( Gira udet et al . 2011 [26]), essaie de dépasser, en\nutilisan t diéren ts leviers (coûts in tangibles, taux d'actualisations diéren tiés, fonction\nd'eet reb ond etc).\nUne nouv elle v ersion de ce mo dèle a été dév elopp ée par l'auteur4grâce à (i) l'inclusion\ndu b ois énergie et des logemen ts so ciaux (ii) une mise à jour des données p our les coûts\nde réno v ation, le parc de logemen t et le taux de réno v ation initial (iii) un ranemen t des\nparamètres (taux d'actualisation, fonction de réno v ation, fonction de comp ortemen t de\nl'utilisateur).\nDans ce mémoire, nous détaillons dans un premier temps le fonctionnemen t de la der-\nnière v ersion de Res-IRF, en expliquan t quelques résultats du scenario au l de l'e au . Un\nasp ect primordial p our con trôler le fonctionnemen t d'un mo dèle est de tester sa sensibi-",
+            "metadata": {
+              "title": "Modélisation de la consommation d'énergie dans le secteur résidentiel français",
+              "hal_id": "hal-01139233",
+              "authors": [
+                "Frédéric Branger"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Branger. Modélisation de la consommation d'énergie dans le secteur résidentiel français. Etudes de l'environnement. 2011. ⟨hal-01139233⟩",
+              "source_url": "https://hal.science/hal-01139233",
+              "chunk_order": 42,
+              "description": "Ce mémoire présente le fonctionnement, l'évaluation et certains résultats issus de la dernière version de Res-IRF, modèle hybride de simulation de la consommation de chauffage en France développé au CIRED. Le secteur du bâtiment est considéré comme le plus gros gisement d'économies d'énergie et de réduction des émissions de gaz à effets de serre. Modéliser la dynamique de rénovation du parc de logements et des consommations d'énergie est donc un enjeu majeur. Les modèles d'ingénieurs bottom-up et les modèles d'économistes top-down présentent certaines limites pour représenter les mécanismes technologiques et économiques de cette dynamique. Res-IRF est un modèle hybride innovant prenant en compte des phénomènes caractéristiques liées à l'efficacité énergétique: efficacité et sobriété distingués mais liés par le phénomène comportemental de l'effet rebond, dilemme propriétaire-locataire, anticipation myope des prix par les acteurs (rationalité limitée), décroissance des coûts par apprentissage technologique... Un grand nombre d'incertitudes jalonnent la conception de ce type de modèles, qu'elles soient externes (données peu fiables, controverses théoriques) ou internes (choix nécessaires du modélisateur pour représenter des phénomènes complexes: paramètres, formes fonctionnelles, algorithmes). Difficile à traiter, les incertitudes sont souvent mal explicitées. Dans ce mémoire, nous développons une méthode originale d'analyse de sensibilité des paramètres basée sur une méthode de Monte Carlo. Cette dernière permet de déterminer les paramètres saillants du modèle (prix de l'énergie, courbe d'utilisation, taux de rénovation initial). En révélant certaines difficultés propre à ce type de modélisation (calibrage pour reproduire des données réelles rendant le modèle trop rigide), elle suggère certaines pistes d'améliorations (lien entre la qualité et la quantité des rénovations, coûts intangibles). Ces nouveaux développements confirment les résultats précédemment établis: les politiques promouvant l'efficacité énergétique permettent des réductions significatives de consommations d'énergie par rapport au scenario au fil de l'eau, mais ne permettent pas d'atteindre les objectifs du Grenelle (-38% de consommation d'énergie en 2020 et -75% en 2050), même lorsqu'elles sont ambitieuses.",
+              "document_type": "MEM",
+              "publication_date": "2011-09-01",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Modélisation des coûts de la rénovation dans Res-IRF"
+            }
+          },
+          {
+            "id": "bf56a124-6524-5efb-9ab0-11ef7f80da2a",
+            "document_id": "ff96cb05-8dab-5c25-9bda-53cf508d2490",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle\n\nText: dits  intangibles   sont utilisés dans Res-IRF pour refléter les barrières qui sous-tendent ces \nobservations , en particulier linformation imparfaite et les coûts cachés . Calibrés à lannée de base \npour permettre au modèle de reproduire les transitions effectivement observées lors dop érations \nprogrammées damélioration de lhabitat (PUCA, 2008), ils sont par la suite ajoutés \nsystématiquement au coût financier dans les calculs de rentabilité des options dinvestissement . \nLes coûts intangibles comportent une part variable, qui décroit selon une fonctio n logistique avec la \nquantité cumulée de rénovation, à la manière du modèle CIMS (Mau et al. , 2008 ; Axsen et al. , 2009). \nCe processus mime les effets dimitation ou plus généralement les externalités positives dadoption \ndes technologies defficacité énergétique ( learning-by-using ) : à mesure que les coûts intangibles \ndiminuent, linformation saccroît et le calcul économique r éalisé par le propriétaire sapproche dun",
+            "metadata": {
+              "title": "Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle",
+              "hal_id": "tel-00599374",
+              "authors": [
+                "Louis-Gaëtan Giraudet"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet. Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle. Economies et finances. Université Paris-Est, 2011. Français. ⟨NNT : 2011PEST1139⟩. ⟨tel-00599374v2⟩",
+              "source_url": "https://hal.science/tel-00599374",
+              "chunk_order": 442,
+              "description": "Cette thèse évalue l'efficacité de différentes formes de taxes, subventions et réglementations mises en place pour corriger les défaillances de marché qui s'opposent aux économies d'énergie. Elle mobilise plusieurs approches, selon un degré de complexité croissant. Dans un premier temps, un modèle microéconomique standard est développé pour comparer les performances statiques des différents instruments. Dans un deuxième temps, la représentation des comportements des consommateurs est approfondie dans un modèle de prospective de la consommation d'énergie pour le chauffage des ménages français, qui permet d'identifier les mécanismes dynamiques par lesquels les instruments peuvent corriger les principales défaillances de marché. Dans un troisième temps, une évaluation empirique des dispositifs de « certificats blancs » – obligations échangeables d'économies d'énergie imposées aux opérateurs énergétiques – est menée à partir d'une comparaison des expériences britannique, italienne et française, en intégrant les institutions dans l'analyse. Le croisement de ces différentes approches montre que : (i) les taxes sur l'énergie, qui encouragent à la fois l'investissement dans l'efficacité énergétique et la sobriété des comportements, sont particulièrement efficaces ; (ii) les réglementations sur l'efficacité énergétique ont un impact significatif sur la diffusion des technologies efficaces ; (iii) les subventions à l'efficacité énergétique génèrent un effet rebond important ; (iv) en fonction de l'environnement institutionnel dans lequel ils s'insèrent, les « certificats blancs » combinent les propriétés de ces instruments. Appliquée en France au secteur du bâtiment résidentiel, la combinaison la plus efficace de ces instruments ne permet pas d'atteindre les objectifs d'économies d'énergie définis dans le cadre du Grenelle de l'environnement",
+              "document_type": "THESE",
+              "publication_date": "2011-03-28",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Modélisation des coûts de la rénovation dans Res-IRF"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2637,
+            "total_tokens": 2637
+          }
+        }
+      },
+      "duration": 13775
+    },
+    "retrievalTime": 1628,
+    "generationTime": 13775,
+    "timestamp": "2025-07-10T14:21:06.656Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T14:21:07.663626+00:00",
+    "server_version": "1.0.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "sessionId": "session_1753127220857_671871i6n1e523z3i",
+  "timestamp": "20250721T195019628Z",
+  "eventType": "feedback",
+  "payload": {
+    "type": "down",
+    "comment": "je pense qu'il y a plus de publications que ça sur le prix du carbone au CIRED"
+  },
+  "server_context": {
+    "client_ip": "88.174.231.29",
+    "forwarded_for": "88.174.231.29",
+    "received_at": "2025-07-21T19:50:19.384085+00:00",
+    "server_version": "1.0.0"
+  }
+}

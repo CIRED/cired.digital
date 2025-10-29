@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752242018876_4k42466s2k5u3p405a",
+  "timestamp": "20250711T135353917Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752242033909_zpnmp1p",
+    "query": "les impacts macroéconomiques de la consommation des ménages",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "les impacts macroéconomiques de la consommation des ménages",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "93.5.218.62",
+    "forwarded_for": "93.5.218.62",
+    "received_at": "2025-07-11T13:53:53.982637+00:00",
+    "server_version": "1.0.0"
+  }
+}

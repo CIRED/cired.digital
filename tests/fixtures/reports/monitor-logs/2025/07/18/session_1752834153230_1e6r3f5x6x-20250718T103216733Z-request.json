@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752834153230_1e6r3f5x6x6j40q6n",
+  "timestamp": "20250718T103216733Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752834736728_s91qn7d",
+    "query": "l'impact des investissements sur la balance commerciale",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "l'impact des investissements sur la balance commerciale",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-18T10:32:16.881186+00:00",
+    "server_version": "1.0.0"
+  }
+}

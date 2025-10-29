@@ -1,0 +1,555 @@
+{
+  "sessionId": "session_1752834153230_1e6r3f5x6x6j40q6n",
+  "timestamp": "20250718T102254875Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752834166465_edqygdd",
+    "response": {
+      "results": {
+        "generated_answer": "L'impact des investissements sur l'emploi peut être analysé à travers plusieurs perspectives et études. Voici quelques points clés tirés des documents fournis :\n\n1. **Réallocation des investissements** :\n   - Une réallocation des investissements peut avoir un impact positif sur l'emploi, notamment si elle est orientée vers des secteurs avec une forte intensité de main-d'œuvre et des salaires relativement bas. Par exemple, investir dans l'isolation des bâtiments et les panneaux solaires photovoltaïques (PV) privés a montré des impacts positifs sur l'emploi grâce à la forte part de travail dans la valeur ajoutée et le faible niveau des salaires [e3ecec4].\n\n2. **Effets à court et long terme** :\n   - Les investissements peuvent initialement entraîner une légère diminution des emplois en raison des coûts immédiats, mais à moyen et long terme, ils peuvent générer une croissance économique et des effets d'entraînement positifs sur l'emploi. Cela est souvent appelé l'effet accélérateur [36e951e].\n\n3. **Modèles économiques** :\n   - Les modèles d'équilibre général calculable (CGE) et les modèles Input-Output sont utilisés pour évaluer l'impact des investissements sur l'emploi. Ces modèles montrent que des technologies avec une plus grande part de rémunérations salariales dans la valeur ajoutée ou des salaires plus faibles génèrent davantage d'emplois [0964c4e], [915c6e1].\n\n4. **Impact des subventions et taxes** :\n   - Les subventions et les taxes peuvent avoir des effets variés sur l'emploi. Par exemple, les subventions pour l'apport volontaire du verre en conteneur ont une faible intensité en travail, contrairement au tri centralisé. Les subventions pour les équipements de tri peuvent avoir un effet plus positif sur l'emploi que celles pour les usines d'incinération [2a57afb].\n\n5. **Transition énergétique** :\n   - La transition énergétique, si elle est bien gérée, peut être favorable aux branches à fort contenu en emploi. Les investissements dans les renouvelables et l'efficacité énergétique peuvent créer davantage d'emplois, surtout si les gains de productivité sont faibles [0964c4e], [b50c5b4].\n\n6. **Financement des investissements** :\n   - Le financement des investissements par la monnaie et le crédit peut limiter les effets dépressifs à court terme et soutenir la production et l'emploi. La rentabilité attendue du capital et la demande anticipée jouent également un rôle important [b43d083].\n\nEn résumé, les investissements peuvent avoir un impact significatif sur l'emploi, surtout s'ils sont orientés vers des secteurs à forte intensité de main-d'œuvre et si les politiques publiques sont bien conçues pour maximiser les effets positifs à long terme.",
+        "citations": [
+          {
+            "id": "e3ecec4",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 651,
+              "end": 660
+            },
+            "payload": {
+              "id": "e3ecec49-e043-5d18-88cd-f93ea5ef820d",
+              "document_id": "bfb05d91-0d91-581d-8655-95d1b66b69df",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi\n\nText: Je poursuis cette réflexion sur les causes et les mécanismes économiques prési-\ndant à la création demploi dans le chapitre 4. Jétudie spécifiquement le cas dune\nréallocationdelinvestissement,enmobilisantdesmodèlesdetypeCGEetInput-\nOutput. Je montre que trois facteurs sont à la source dune évolution de lemploi :\nle taux dimportations, la part du travail dans la valeur ajoutée et le niveau des sa-\nlaires.Cettemiseenévidencedansleséquationsdesmodèlesfaitdonclelienavec\nladécompositiondescriptiveduchapitreprécédent.Maiscettepartiemetaussien\névidence un effet plus ambigu des importations : encourager les secteurs faible-\nment importateurs a des effets très positifs en Input-Output, et beaucoup moins\ndanslesmodèlesCGE.Enfin,jeréaliselévaluationquantitativededeuxpolitiques\npubliques : investir dans lisolation des bâtiments et les panneaux solaires PV pri-\nvés.Jemontrequedanscesdeuxcas,limpactsurlemploiestpositifgrâceàlaforte\npartdetravaildanslavaleurajoutéeetlefaibleniveaudessalaires,etquecerésultat",
+              "metadata": {
+                "title": "Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi",
+                "hal_id": "tel-01663759",
+                "authors": [
+                  "Quentin Perrier"
+                ],
+                "version": "v0",
+                "citation": "Quentin Perrier. Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi. Économie et finance quantitative [q-fin]. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2017. Français. ⟨NNT : ⟩. ⟨tel-01663759⟩",
+                "source_url": "https://hal.science/tel-01663759",
+                "chunk_order": 173,
+                "description": "Dans cette thèse, je discute deux questions autour de la transition énergétique : comment définir une stratégie face aux nombreuses incertitudes et aux inerties des systèmes, et quels sont impacts sur l’emploi de cette transition ? Pour étudier le choix d’une stratégie, je m’intéresse au cas du secteur électrique français. Les réacteurs nucléaires arrivent au terme de leur durée de vie initiale, mais ils peuvent être rénovés moyennant un investissement estimé à 100 milliards d'euros pour l'ensemble du parc. Combien de centrales faut-il rénover ? En mobilisant un modèle d'optimisation et la méthode de \"Robust Decision Making\", je montre qu’au vu des estimations actuelles, les stratégies les plus intéressantes consistent à fermer 7 à 14 réacteurs et à les remplacer par des énergies renouvelables. Sur le volet de l’emploi, je m’intéresse tout d’abord à la notion de contenu en emploi. Je propose une méthodologie nouvelle permettant de décomposer ce contenu, afin de mettre en évidence, pour chaque branche économique, l’importance relative de ses constituants : les taux d’importations, les taxes et subventions, la part du travail dans la valeur ajoutée et le niveau de salaire. J'étudie ensuite l’impact d’une réallocation des investissements vers des secteurs bas-carbone à l'aide de modèles d'équilibre général, dont j'explicite les mécanismes économiques sous-jacents. Mes résultats indiquent qu'encourager les secteurs avec une forte part du travail dans la valeur ajoutée ou de faibles salaires permet de créer de l'emploi, mais ils nuancent les bénéfices à encourager des secteurs peu importateurs.",
+                "document_type": "THESE",
+                "publication_date": "2017-11-20",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "l'impact des investissements sur l'emploi"
+              }
+            }
+          },
+          {
+            "id": "36e951e",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 993,
+              "end": 1002
+            },
+            "payload": {
+              "id": "36e951eb-7f53-5583-b490-789d50a79595",
+              "document_id": "b4c26c50-e102-598e-8e0b-99d556cec3eb",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: Transition énergétique, projets de société et tensions du présent\n\nText: concomitant avec une légère diminution des emplois qui traduit le coût i nitial de ces \npolitiques à court terme et qui pointe un problème de décalage entre les dépenses qui sont \nimmédiates et les gains, les bénéfices qui sont retirés de ces pol itiques, plus étalés dans le \ntemps. Cependant, dès 2020, nous récupérons déjà une croissance plus élevée et nous \nassistons à un effet dentraînement des investissements : cest c e que les économistes \nappellent  un effet accélérateur . Le décalage entre ces coûts dinve stissement à court \nterme  et  ces  bénéfices  à moyen  et long terme  est un point  que nou s  reverrons  dans \nlensemble de lexposé et sur tous les scénarios. \n19",
+              "metadata": {
+                "title": "Transition énergétique, projets de société et tensions du présent",
+                "hal_id": "hal-01020566",
+                "authors": "['Minh Ha-Duong', 'Dominique Finon']",
+                "version": "v0",
+                "citation": "Minh Ha-Duong, Dominique Finon. Transition énergétique, projets de société et tensions du présent. Première journée de Dialogue CNRS sur la transition énergétique en France, une cartographie des enjeux et des controverses., Jun 2013, Paris, France. ⟨hal-01020566⟩",
+                "source_url": "https://hal.science/hal-01020566",
+                "chunk_order": 64,
+                "document_type": "COMM",
+                "publication_date": "2013-06-21",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "l'impact des investissements sur l'emploi"
+              }
+            }
+          },
+          {
+            "id": "0964c4e",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1363,
+              "end": 1372
+            },
+            "payload": {
+              "id": "0964c4ec-21f5-5e54-8b57-1384dc509c2c",
+              "document_id": "1ea817c8-976a-523a-a786-cf977ae7b78d",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016098765432098764,
+              "text": "Document Title: L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt\n\nText: Lorsque leffet induit est réparti sur lensemble de la demande finale et non sur la seule \nconsommation des ménages, là encore, leffet induit et do nc leffet net sur lemploi sont \nsupérieurs , du fait du contenu en emploi plus élevé de cet agrégat  (cf. partie  4.1.3). \nSi les gains de productivité sont plus faibles, davantage demplois sont créés pour un montant \ndonné dactivité (en termes physiques) da ns les renouvelables ou lefficacité énergétique . \nAussi,  leffet net sur lemploi est supérieur. Très faible en 2020, cet effet devient significatif \nen 2030.  \nAu contraire, supposer un taux dépargne constant plutôt quun montant dépargne constant \n(cf. par tie 4.1. 4) réduit leffet induit et donc leffet net sur lemploi , car une partie des \nsommes économisées est  neutralisé e  sous forme dépargne . Notons que dans notre \napproche, cette hausse de lépargne naccroît pas linvestissement, ce qui pourrait êtr e le cas \ndans la réalité , réduisant lécart par rapport à la variante centrale .",
+              "metadata": {
+                "title": "L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt",
+                "hal_id": "hal-00866447",
+                "authors": [
+                  "Philippe Quirion"
+                ],
+                "version": "v0",
+                "citation": "Philippe Quirion. L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt. 2013. ⟨hal-00866447⟩",
+                "source_url": "https://hal.science/hal-00866447",
+                "chunk_order": 135,
+                "description": "Nous étudions l'impact sur l'emploi en France de la mise en œuvre du scénario de transition énergétique construit par l'Association négaWatt (2011), qui prévoit un développement massif des économies d'énergie (par le biais de mesures de sobriété et d'efficacité énergétiques) et des énergies renouvelables entre 2012 et 2050. Par rapport à 2010, ce scénario aboutit à une division par deux des émissions de CO2 d'origine énergétique en France en 2030 et à une division par 16 en 2050, sans capture-stockage du CO2, sans mise en œuvre de nouvelle centrale nucléaire et en fermant les centrales existantes au bout de 40 ans d'exploitation au maximum. Nous calculons l'effet sur l'emploi de la mise en œuvre de ce scénario en comparaison avec un scénario tendanciel qui prolonge les évolutions récentes et prend en compte les politiques déjà décidées. La méthode retenue pour calculer l'effet sur l'emploi de chaque scénario consiste à calculer le coût des principales options techniques et organisationnelles retenues, à ventiler ces coûts entre les 118 branches de l'économie française et à multiplier ces coûts par le contenu en emploi de chaque branche. Ce dernier élément est estimé par une analyse input-output, ce qui permet de comptabiliser les emplois générés par la production de l'ensemble des consommations intermédiaires. L'un des deux scénarios étant plus coûteux que l'autre, il faut prendre en compte l'effet négatif sur l'emploi du financement de ce surcoût. Pour cela, on fait l'hypothèse que ce surcoût est supporté par les ménages et que ces derniers diminuent en conséquence leur consommation du même montant et de manière homothétique. Ainsi, on évite de biaiser les résultats en faveur du scénario le plus coûteux. La mise en œuvre du scénario négaWatt aboutit à un effet positif sur l'emploi, de l'ordre de +240 000 emplois équivalent temps-plein en 2020 et 630 000 en 2030. Nous étudions la sensibilité des résultats aux hypothèses sur les prix de l'énergie importée, l'évolution de la productivité du travail, la répartition du coût entre ménages et administrations publiques, et enfin l'arbitrage consommation-épargne. L'effet sur l'emploi reste largement positif dans tous les cas.",
+                "document_type": "UNDEFINED",
+                "publication_date": "2013-04-01",
+                "semantic_rank": 4,
+                "full_text_rank": 200,
+                "associated_query": "l'impact des investissements sur l'emploi"
+              }
+            }
+          },
+          {
+            "id": "915c6e1",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1374,
+              "end": 1383
+            },
+            "payload": {
+              "id": "915c6e1a-d4c9-555a-892a-329d09646b79",
+              "document_id": "bfb05d91-0d91-581d-8655-95d1b66b69df",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015818181818181818,
+              "text": "Document Title: Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi\n\nText: cron,faitdesonplandinvestissementpubliclebrasarmédelatransitionéner-\ngétique et écologique (Zaouati et Perrissin Fabert, 2017).\nJaidoncchoisidétudierlimpactdesinvestissementssurlemploi.Plusprécisé-\nment,jaidécidédemeconcentrersuruntypeparticulierdescénario:uneréallo-\ncation des investissements. Lidée est de travailler à budget constant. Cette option\npeut être intéressante pour un décideur soumis à des contraintes de budget. Elle\nprésente également lavantage de ne pas entrer dans les discussions délicates sur\nle financement de ces investissements. Un résultat positif obtenu avec cette mé-\nthode sera donc dautant plus fort : sil est possible créer plus demploi à niveau\nde dépense égale tout en réduisant les émissions, cette politique parait une bonne\nmarche à suivre.\nMéthodologie : les modèles déquilibre général calculable\nDanscetteanalyse,jemeconcentresurdeuxtypesdemodèles:lesmodèlesdéqui-\nlibre général calculables (CGE) et les modèles Input-Output. Ces deux familles",
+              "metadata": {
+                "title": "Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi",
+                "hal_id": "tel-01663759",
+                "authors": [
+                  "Quentin Perrier"
+                ],
+                "version": "v0",
+                "citation": "Quentin Perrier. Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi. Économie et finance quantitative [q-fin]. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2017. Français. ⟨NNT : ⟩. ⟨tel-01663759⟩",
+                "source_url": "https://hal.science/tel-01663759",
+                "chunk_order": 164,
+                "description": "Dans cette thèse, je discute deux questions autour de la transition énergétique : comment définir une stratégie face aux nombreuses incertitudes et aux inerties des systèmes, et quels sont impacts sur l’emploi de cette transition ? Pour étudier le choix d’une stratégie, je m’intéresse au cas du secteur électrique français. Les réacteurs nucléaires arrivent au terme de leur durée de vie initiale, mais ils peuvent être rénovés moyennant un investissement estimé à 100 milliards d'euros pour l'ensemble du parc. Combien de centrales faut-il rénover ? En mobilisant un modèle d'optimisation et la méthode de \"Robust Decision Making\", je montre qu’au vu des estimations actuelles, les stratégies les plus intéressantes consistent à fermer 7 à 14 réacteurs et à les remplacer par des énergies renouvelables. Sur le volet de l’emploi, je m’intéresse tout d’abord à la notion de contenu en emploi. Je propose une méthodologie nouvelle permettant de décomposer ce contenu, afin de mettre en évidence, pour chaque branche économique, l’importance relative de ses constituants : les taux d’importations, les taxes et subventions, la part du travail dans la valeur ajoutée et le niveau de salaire. J'étudie ensuite l’impact d’une réallocation des investissements vers des secteurs bas-carbone à l'aide de modèles d'équilibre général, dont j'explicite les mécanismes économiques sous-jacents. Mes résultats indiquent qu'encourager les secteurs avec une forte part du travail dans la valeur ajoutée ou de faibles salaires permet de créer de l'emploi, mais ils nuancent les bénéfices à encourager des secteurs peu importateurs.",
+                "document_type": "THESE",
+                "publication_date": "2017-11-20",
+                "semantic_rank": 5,
+                "full_text_rank": 200,
+                "associated_query": "l'impact des investissements sur l'emploi"
+              }
+            }
+          },
+          {
+            "id": "2a57afb",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1788,
+              "end": 1797
+            },
+            "payload": {
+              "id": "2a57afbc-2cc1-50f1-b1c0-e5097495022b",
+              "document_id": "a7229b9c-89c2-5996-8bb7-eec77274fb99",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017156862745098037,
+              "text": "Document Title: L'intensité en travail dans la gestion des déchets municipaux : un tour d'horizon de l'effet des mesures publiques\n\nText: Adelphe subventionne essentiellement l'apport volon taire du verre en conteneur et non le tri \ncentralisé. Ce choix joue en défaveur de l'emploi, puisque l'apport volontaire présente une très faible \nintensité en travail, contrairement au tri centralisé.  \nAu contraire des précédentes, les subventions du FMGD et les aides des conseils régionaux et \ngénéraux s'appliquent à plusieurs types de filières. L'effet sur l'emploi est incertain  : d'un côté, \npuisqu'il s'agit d'aides à l'investissement, les projets à fort contenu en capital, comme les \nincinérateurs, sont fav orisés. De l'autre, le taux de l'aide est généralement plus fort pour les \néquipements de tri que pour les usines d'incinération.  \n \n3.5. La taxe sur la mise en décharge  \nPuisque cette taxe s'applique à tous les types de décharges, elle n'a aucun effet intra -filière. Du point \nde vue de l'impact inter -filière, elle accélère le déclin de la mise en décharge, mais de façon sans",
+              "metadata": {
+                "title": "L'intensité en travail dans la gestion des déchets municipaux : un tour d'horizon de l'effet des mesures publiques",
+                "hal_id": "hal-00640057",
+                "authors": [
+                  "Philippe Quirion"
+                ],
+                "version": "v0",
+                "citation": "Philippe Quirion. L'intensité en travail dans la gestion des déchets municipaux : un tour d'horizon de l'effet des mesures publiques. Journées de l'AFSE 1998, \"Économie de l'Environnement et des Ressources Naturelles\", Toulouse - 11 et 12 mai, May 1998, Toulouse, France. ⟨hal-00640057⟩",
+                "source_url": "https://hal.science/hal-00640057",
+                "chunk_order": 66,
+                "description": "Dans le domaine de la protection de l'environnement, les politiques publiques combinent de nombreuses mesures (réglementations, subventions, taxes...) qui ont été adoptées en fonction d'une anticipation de leur coût et de leur capacité à protéger l'environnement (du moins en principe), mais souvent sans réflexion quant à leur impact sur l'emploi. Pourtant, puisque ces mesures visent à modifier les choix techniques et organisationnels, elles influencent également cette variable. Cette étude vise donc à estimer de façon qualitative l'effet des mesures publiques sur l'intensité en travail dans la gestion des déchets municipaux, les termes \"mesure publique\" et \"intensité en travail\" étant définis ci-dessous.",
+                "document_type": "COMM",
+                "publication_date": "1998-05-11",
+                "semantic_rank": 10,
+                "full_text_rank": 1,
+                "associated_query": "l'impact des investissements sur l'emploi"
+              }
+            }
+          },
+          {
+            "id": "0964c4e",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 2103,
+              "end": 2112
+            },
+            "payload": null
+          },
+          {
+            "id": "b50c5b4",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2114,
+              "end": 2123
+            },
+            "payload": {
+              "id": "b50c5b4d-675f-5fb2-960f-ea6e8ec4dd35",
+              "document_id": "1da130c5-817c-5766-a8af-887541a4d091",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01503448275862069,
+              "text": "Document Title: La transition énergétique est-elle favorable aux branches à fort contenu en emploi ? Une analyse input-output pour la France\n\nText: Certes, les chercheurs en économie nont pas complètement négligé\nlimpact sur lemploi de ces politiques. En particulier, une partie (minoritaire)du débat théorique sur le double dividende, initié par Pearce [1991] et Goul-der [1994] porte sur lemploi. Bosquet [2000], Chiroleu-Assouline [2001] etPatuelli et al. [2005] proposent des revues de littérature. On peut noter\nlabsence de consensus dans ces travaux, avec des résultats très diversselon les hypothèses retenues.\nAvec lessor des préoccupations liées aux changements climatiques, une",
+              "metadata": {
+                "doi": "10.3917/redp.275.0851",
+                "title": "La transition énergétique est-elle favorable aux branches à fort contenu en emploi ? Une analyse input-output pour la France",
+                "hal_id": "hal-01679766",
+                "authors": "['Quentin Perrier', 'Philippe Quirion']",
+                "version": "v0",
+                "citation": "Quentin Perrier, Philippe Quirion. La transition énergétique est-elle favorable aux branches à fort contenu en emploi ? Une analyse input-output pour la France. Revue d'économie politique, 2017, 127 (5), pp.851 - 887. ⟨10.3917/redp.275.0851⟩. ⟨hal-01679766⟩",
+                "source_url": "https://doi.org/10.3917/redp.275.0851",
+                "chunk_order": 15,
+                "description": "Dans le débat public sur la transition énergétique en France, l’emploi occupe une place prépondérante. Nous développons une méthode basée sur l’analyse entrées-sorties pour décomposer le contenu en emploi d’une branche et le comparer à la moyenne nationale selon cinq critères : le taux d’importations finales, le taux d’importations intermédiaires, les taxes et subventions, la part du travail dans la valeur ajoutée et le niveau de salaire. Nous évaluons ensuite le contenu en emploi et en émissions de gaz à effet de serre de toutes les branches économiques françaises en 2010, pour étudier les substitutions interbranches d’une transition énergétique. Nos résultats indiquent que les variations de contenu en emploi entre branches s’expliquent, dans l’ordre, par le niveau de salaire, la part du travail dans la valeur ajoutée, le taux d’importations finales, le taux d’importations intermédiaires, et en dernier par les taxes et subventions. Par ailleurs, nous montrons que l’EU ETS couvre les branches intensives en émissions et peu intensives en emploi, mais pas les branches intensives en émissions et en emploi. L’emploi pourrait donc expliquer en partie le choix des branches soumises à l’EU ETS. Enfin, nous identifions des substitutions qui favoriseraient des branches moins intensives en émissions et plus intensives en emploi.",
+                "document_type": "ART",
+                "publication_date": "2017-05-01",
+                "semantic_rank": 8,
+                "full_text_rank": 200,
+                "associated_query": "l'impact des investissements sur l'emploi"
+              }
+            }
+          },
+          {
+            "id": "b43d083",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2417,
+              "end": 2426
+            },
+            "payload": {
+              "id": "b43d0837-b64c-5683-9fe1-f6ef2cbeba86",
+              "document_id": "b4c26c50-e102-598e-8e0b-99d556cec3eb",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015547619047619046,
+              "text": "Document Title: Transition énergétique, projets de société et tensions du présent\n\nText: À droite, vous avez leffet sur le commerce extérieur avec une légère  dégradation \nen début de période, puis la balance commerciale se rattrape. \nDans  notre  modèle,  les  investissements  ne  sont  pas  seulement  financ és  par \nlépargne existante mais aussi par la monnaie, le crédit, ce qui permet effectivement à ce \nmoment-là de limiter léviction entre les investissements (a u seul montant des annuités de \nla dette, et non au coût global des nouveaux investissements)  et de  ne pas avoir leffet \ndépressif en début de période qui était identifié dans le présentation IMACLIM précédente.\nÇa  va  dépendre  de  la  rentabilité  attendue  du  capital  et  donc  de  la  demande \nanticipée. La production et lemploi dépendent de cet investissement.\n46",
+              "metadata": {
+                "title": "Transition énergétique, projets de société et tensions du présent",
+                "hal_id": "hal-01020566",
+                "authors": "['Minh Ha-Duong', 'Dominique Finon']",
+                "version": "v0",
+                "citation": "Minh Ha-Duong, Dominique Finon. Transition énergétique, projets de société et tensions du présent. Première journée de Dialogue CNRS sur la transition énergétique en France, une cartographie des enjeux et des controverses., Jun 2013, Paris, France. ⟨hal-01020566⟩",
+                "source_url": "https://hal.science/hal-01020566",
+                "chunk_order": 109,
+                "document_type": "COMM",
+                "publication_date": "2013-06-21",
+                "semantic_rank": 6,
+                "full_text_rank": 200,
+                "associated_query": "l'impact des investissements sur l'emploi"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "2a57afbc-2cc1-50f1-b1c0-e5097495022b",
+            "document_id": "a7229b9c-89c2-5996-8bb7-eec77274fb99",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017156862745098037,
+            "text": "Document Title: L'intensité en travail dans la gestion des déchets municipaux : un tour d'horizon de l'effet des mesures publiques\n\nText: Adelphe subventionne essentiellement l'apport volon taire du verre en conteneur et non le tri \ncentralisé. Ce choix joue en défaveur de l'emploi, puisque l'apport volontaire présente une très faible \nintensité en travail, contrairement au tri centralisé.  \nAu contraire des précédentes, les subventions du FMGD et les aides des conseils régionaux et \ngénéraux s'appliquent à plusieurs types de filières. L'effet sur l'emploi est incertain  : d'un côté, \npuisqu'il s'agit d'aides à l'investissement, les projets à fort contenu en capital, comme les \nincinérateurs, sont fav orisés. De l'autre, le taux de l'aide est généralement plus fort pour les \néquipements de tri que pour les usines d'incinération.  \n \n3.5. La taxe sur la mise en décharge  \nPuisque cette taxe s'applique à tous les types de décharges, elle n'a aucun effet intra -filière. Du point \nde vue de l'impact inter -filière, elle accélère le déclin de la mise en décharge, mais de façon sans",
+            "metadata": {
+              "title": "L'intensité en travail dans la gestion des déchets municipaux : un tour d'horizon de l'effet des mesures publiques",
+              "hal_id": "hal-00640057",
+              "authors": [
+                "Philippe Quirion"
+              ],
+              "version": "v0",
+              "citation": "Philippe Quirion. L'intensité en travail dans la gestion des déchets municipaux : un tour d'horizon de l'effet des mesures publiques. Journées de l'AFSE 1998, \"Économie de l'Environnement et des Ressources Naturelles\", Toulouse - 11 et 12 mai, May 1998, Toulouse, France. ⟨hal-00640057⟩",
+              "source_url": "https://hal.science/hal-00640057",
+              "chunk_order": 66,
+              "description": "Dans le domaine de la protection de l'environnement, les politiques publiques combinent de nombreuses mesures (réglementations, subventions, taxes...) qui ont été adoptées en fonction d'une anticipation de leur coût et de leur capacité à protéger l'environnement (du moins en principe), mais souvent sans réflexion quant à leur impact sur l'emploi. Pourtant, puisque ces mesures visent à modifier les choix techniques et organisationnels, elles influencent également cette variable. Cette étude vise donc à estimer de façon qualitative l'effet des mesures publiques sur l'intensité en travail dans la gestion des déchets municipaux, les termes \"mesure publique\" et \"intensité en travail\" étant définis ci-dessous.",
+              "document_type": "COMM",
+              "publication_date": "1998-05-11",
+              "semantic_rank": 10,
+              "full_text_rank": 1,
+              "associated_query": "l'impact des investissements sur l'emploi"
+            }
+          },
+          {
+            "id": "e3ecec49-e043-5d18-88cd-f93ea5ef820d",
+            "document_id": "bfb05d91-0d91-581d-8655-95d1b66b69df",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi\n\nText: Je poursuis cette réflexion sur les causes et les mécanismes économiques prési-\ndant à la création demploi dans le chapitre 4. Jétudie spécifiquement le cas dune\nréallocationdelinvestissement,enmobilisantdesmodèlesdetypeCGEetInput-\nOutput. Je montre que trois facteurs sont à la source dune évolution de lemploi :\nle taux dimportations, la part du travail dans la valeur ajoutée et le niveau des sa-\nlaires.Cettemiseenévidencedansleséquationsdesmodèlesfaitdonclelienavec\nladécompositiondescriptiveduchapitreprécédent.Maiscettepartiemetaussien\névidence un effet plus ambigu des importations : encourager les secteurs faible-\nment importateurs a des effets très positifs en Input-Output, et beaucoup moins\ndanslesmodèlesCGE.Enfin,jeréaliselévaluationquantitativededeuxpolitiques\npubliques : investir dans lisolation des bâtiments et les panneaux solaires PV pri-\nvés.Jemontrequedanscesdeuxcas,limpactsurlemploiestpositifgrâceàlaforte\npartdetravaildanslavaleurajoutéeetlefaibleniveaudessalaires,etquecerésultat",
+            "metadata": {
+              "title": "Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi",
+              "hal_id": "tel-01663759",
+              "authors": [
+                "Quentin Perrier"
+              ],
+              "version": "v0",
+              "citation": "Quentin Perrier. Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi. Économie et finance quantitative [q-fin]. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2017. Français. ⟨NNT : ⟩. ⟨tel-01663759⟩",
+              "source_url": "https://hal.science/tel-01663759",
+              "chunk_order": 173,
+              "description": "Dans cette thèse, je discute deux questions autour de la transition énergétique : comment définir une stratégie face aux nombreuses incertitudes et aux inerties des systèmes, et quels sont impacts sur l’emploi de cette transition ? Pour étudier le choix d’une stratégie, je m’intéresse au cas du secteur électrique français. Les réacteurs nucléaires arrivent au terme de leur durée de vie initiale, mais ils peuvent être rénovés moyennant un investissement estimé à 100 milliards d'euros pour l'ensemble du parc. Combien de centrales faut-il rénover ? En mobilisant un modèle d'optimisation et la méthode de \"Robust Decision Making\", je montre qu’au vu des estimations actuelles, les stratégies les plus intéressantes consistent à fermer 7 à 14 réacteurs et à les remplacer par des énergies renouvelables. Sur le volet de l’emploi, je m’intéresse tout d’abord à la notion de contenu en emploi. Je propose une méthodologie nouvelle permettant de décomposer ce contenu, afin de mettre en évidence, pour chaque branche économique, l’importance relative de ses constituants : les taux d’importations, les taxes et subventions, la part du travail dans la valeur ajoutée et le niveau de salaire. J'étudie ensuite l’impact d’une réallocation des investissements vers des secteurs bas-carbone à l'aide de modèles d'équilibre général, dont j'explicite les mécanismes économiques sous-jacents. Mes résultats indiquent qu'encourager les secteurs avec une forte part du travail dans la valeur ajoutée ou de faibles salaires permet de créer de l'emploi, mais ils nuancent les bénéfices à encourager des secteurs peu importateurs.",
+              "document_type": "THESE",
+              "publication_date": "2017-11-20",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur l'emploi"
+            }
+          },
+          {
+            "id": "067339f4-e749-5fed-a399-80e0509d52be",
+            "document_id": "bfb05d91-0d91-581d-8655-95d1b66b69df",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi\n\nText: lemploi. Mais ces deux mesures sont juxtaposées, sans lien direct. La façon dont\nlemploi pèse dans la décision nest alors pas claire.\nCoût économique et impact sur lemploi ne vont pas de pair : ils peuvent dif-\nférer quant à lampleur relative de leurs résultats, mais aussi sur leur signe, posi-\ntif ou négatif (Patuelli, Nijkamp et Pels, 2005). En particuler, je montre dans les\nchapitres 3et4que, à coût égal, des technologies avec une plus grande part de ré-\nmunérations salariales dans la valeur ajoutée ou des salaires plus faibles génèrent\ndavantage demplois.\nComment faire du calcul économique intégrant ces deux aspects, coût direct\net emplois? Comment articuler les analyses coût-bénéfice sectorielles avec les re-\ntombées macro-économiques? Ces questions, Malinvaud lui-même se les posait\ndans un rapport sur la résorption des déséquilibres économiques (Commissariat\ngénéral du Plan et al., 1984). Plus récemment, Masur et Posner ( 2011) et Masur",
+            "metadata": {
+              "title": "Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi",
+              "hal_id": "tel-01663759",
+              "authors": [
+                "Quentin Perrier"
+              ],
+              "version": "v0",
+              "citation": "Quentin Perrier. Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi. Économie et finance quantitative [q-fin]. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2017. Français. ⟨NNT : ⟩. ⟨tel-01663759⟩",
+              "source_url": "https://hal.science/tel-01663759",
+              "chunk_order": 705,
+              "description": "Dans cette thèse, je discute deux questions autour de la transition énergétique : comment définir une stratégie face aux nombreuses incertitudes et aux inerties des systèmes, et quels sont impacts sur l’emploi de cette transition ? Pour étudier le choix d’une stratégie, je m’intéresse au cas du secteur électrique français. Les réacteurs nucléaires arrivent au terme de leur durée de vie initiale, mais ils peuvent être rénovés moyennant un investissement estimé à 100 milliards d'euros pour l'ensemble du parc. Combien de centrales faut-il rénover ? En mobilisant un modèle d'optimisation et la méthode de \"Robust Decision Making\", je montre qu’au vu des estimations actuelles, les stratégies les plus intéressantes consistent à fermer 7 à 14 réacteurs et à les remplacer par des énergies renouvelables. Sur le volet de l’emploi, je m’intéresse tout d’abord à la notion de contenu en emploi. Je propose une méthodologie nouvelle permettant de décomposer ce contenu, afin de mettre en évidence, pour chaque branche économique, l’importance relative de ses constituants : les taux d’importations, les taxes et subventions, la part du travail dans la valeur ajoutée et le niveau de salaire. J'étudie ensuite l’impact d’une réallocation des investissements vers des secteurs bas-carbone à l'aide de modèles d'équilibre général, dont j'explicite les mécanismes économiques sous-jacents. Mes résultats indiquent qu'encourager les secteurs avec une forte part du travail dans la valeur ajoutée ou de faibles salaires permet de créer de l'emploi, mais ils nuancent les bénéfices à encourager des secteurs peu importateurs.",
+              "document_type": "THESE",
+              "publication_date": "2017-11-20",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur l'emploi"
+            }
+          },
+          {
+            "id": "f870c8ae-7e8a-5303-a7ac-179d4d07911e",
+            "document_id": "67831292-ecf2-5f8b-8f7e-d326aeb52e4a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Interactions d'échelles en économie : Application à l'évaluation intégré des dommages du changement climatique et des événements extrêmes\n\nText: impacts sur la long evite du capital. Ces quatre impacts ont des eﬀets sur le\nratio capital-travail, et donc sur la croissance.\nLes auteurs insistent surtout sur les eﬀets sur l epargne et linvestisse-\nment6. Ils notent que les impacts hors-march en  o n tp a sd ec o n s  equences sur\nlepargne, mais que les trois autres types dimpacts m` enent ` a une diminution\nde lepargne, et donc ` a une r eduction de la croissance qui multiplie par deux\nles pertes de PIB par rapport aux seuls impacts directs.\nSuivant une approche compl ementaire, Haurie et Moresino [2004] sin-\nteressent aux catastrophes climatiques (cf section 1.1.7), en introduisant\nexplicitement un  evenement de faible probabilit e mais dont les coˆ uts se-\nraient importants. Le calcul des d epenses de r eductions d emissions quon\nest prˆet `a consentir ` a cause de lexistence dun tel  evenement pose alors des\n6Lepargne et linvestissement sont toujours  egaux dans les mod` eles utilis es.",
+            "metadata": {
+              "title": "Interactions d'échelles en économie : Application à l'évaluation intégré des dommages du changement climatique et des événements extrêmes",
+              "hal_id": "halshs-00008712",
+              "authors": [
+                "Stéphane Hallegatte"
+              ],
+              "version": "v0",
+              "citation": "Stéphane Hallegatte. Interactions d'échelles en économie : Application à l'évaluation intégré des dommages du changement climatique et des événements extrêmes. 2005. ⟨halshs-00008712⟩",
+              "source_url": "https://hal.science/halshs-00008712",
+              "chunk_order": 271,
+              "description": "Alors que les évaluations des dommages du changement climatique utilisent en général des modèles de croissance qui négligent les déséquilibres économiques, supposés transitoires, cette thèse met en lumière, à partir d'une série d'exercices de modélisation, l'importance des déséquilibres et de la variabilité endogène de l'économie dans l'évaluation des dommages des événements extrêmes et du changement climatique. Elle affirme de plus l'impossibilité de séparer l'évaluation des dommages et la représentation de la croissance et de la dynamique économique : les pertes en bien-être dépendront tout autant de la nature et de l'intensité des impacts que de la dynamique et de la situation de l'économie sur laquelle ils s'appliqueront. Ainsi, les incertitudes sur les dommages futurs du changement climatique proviennent à la fois d'incertitudes scientifiques et de l'incertitude sur l'organisation future de nos économies.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2005-01-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur l'emploi"
+            }
+          },
+          {
+            "id": "0964c4ec-21f5-5e54-8b57-1384dc509c2c",
+            "document_id": "1ea817c8-976a-523a-a786-cf977ae7b78d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt\n\nText: Lorsque leffet induit est réparti sur lensemble de la demande finale et non sur la seule \nconsommation des ménages, là encore, leffet induit et do nc leffet net sur lemploi sont \nsupérieurs , du fait du contenu en emploi plus élevé de cet agrégat  (cf. partie  4.1.3). \nSi les gains de productivité sont plus faibles, davantage demplois sont créés pour un montant \ndonné dactivité (en termes physiques) da ns les renouvelables ou lefficacité énergétique . \nAussi,  leffet net sur lemploi est supérieur. Très faible en 2020, cet effet devient significatif \nen 2030.  \nAu contraire, supposer un taux dépargne constant plutôt quun montant dépargne constant \n(cf. par tie 4.1. 4) réduit leffet induit et donc leffet net sur lemploi , car une partie des \nsommes économisées est  neutralisé e  sous forme dépargne . Notons que dans notre \napproche, cette hausse de lépargne naccroît pas linvestissement, ce qui pourrait êtr e le cas \ndans la réalité , réduisant lécart par rapport à la variante centrale .",
+            "metadata": {
+              "title": "L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt",
+              "hal_id": "hal-00866447",
+              "authors": [
+                "Philippe Quirion"
+              ],
+              "version": "v0",
+              "citation": "Philippe Quirion. L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt. 2013. ⟨hal-00866447⟩",
+              "source_url": "https://hal.science/hal-00866447",
+              "chunk_order": 135,
+              "description": "Nous étudions l'impact sur l'emploi en France de la mise en œuvre du scénario de transition énergétique construit par l'Association négaWatt (2011), qui prévoit un développement massif des économies d'énergie (par le biais de mesures de sobriété et d'efficacité énergétiques) et des énergies renouvelables entre 2012 et 2050. Par rapport à 2010, ce scénario aboutit à une division par deux des émissions de CO2 d'origine énergétique en France en 2030 et à une division par 16 en 2050, sans capture-stockage du CO2, sans mise en œuvre de nouvelle centrale nucléaire et en fermant les centrales existantes au bout de 40 ans d'exploitation au maximum. Nous calculons l'effet sur l'emploi de la mise en œuvre de ce scénario en comparaison avec un scénario tendanciel qui prolonge les évolutions récentes et prend en compte les politiques déjà décidées. La méthode retenue pour calculer l'effet sur l'emploi de chaque scénario consiste à calculer le coût des principales options techniques et organisationnelles retenues, à ventiler ces coûts entre les 118 branches de l'économie française et à multiplier ces coûts par le contenu en emploi de chaque branche. Ce dernier élément est estimé par une analyse input-output, ce qui permet de comptabiliser les emplois générés par la production de l'ensemble des consommations intermédiaires. L'un des deux scénarios étant plus coûteux que l'autre, il faut prendre en compte l'effet négatif sur l'emploi du financement de ce surcoût. Pour cela, on fait l'hypothèse que ce surcoût est supporté par les ménages et que ces derniers diminuent en conséquence leur consommation du même montant et de manière homothétique. Ainsi, on évite de biaiser les résultats en faveur du scénario le plus coûteux. La mise en œuvre du scénario négaWatt aboutit à un effet positif sur l'emploi, de l'ordre de +240 000 emplois équivalent temps-plein en 2020 et 630 000 en 2030. Nous étudions la sensibilité des résultats aux hypothèses sur les prix de l'énergie importée, l'évolution de la productivité du travail, la répartition du coût entre ménages et administrations publiques, et enfin l'arbitrage consommation-épargne. L'effet sur l'emploi reste largement positif dans tous les cas.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-04-01",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur l'emploi"
+            }
+          },
+          {
+            "id": "915c6e1a-d4c9-555a-892a-329d09646b79",
+            "document_id": "bfb05d91-0d91-581d-8655-95d1b66b69df",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi\n\nText: cron,faitdesonplandinvestissementpubliclebrasarmédelatransitionéner-\ngétique et écologique (Zaouati et Perrissin Fabert, 2017).\nJaidoncchoisidétudierlimpactdesinvestissementssurlemploi.Plusprécisé-\nment,jaidécidédemeconcentrersuruntypeparticulierdescénario:uneréallo-\ncation des investissements. Lidée est de travailler à budget constant. Cette option\npeut être intéressante pour un décideur soumis à des contraintes de budget. Elle\nprésente également lavantage de ne pas entrer dans les discussions délicates sur\nle financement de ces investissements. Un résultat positif obtenu avec cette mé-\nthode sera donc dautant plus fort : sil est possible créer plus demploi à niveau\nde dépense égale tout en réduisant les émissions, cette politique parait une bonne\nmarche à suivre.\nMéthodologie : les modèles déquilibre général calculable\nDanscetteanalyse,jemeconcentresurdeuxtypesdemodèles:lesmodèlesdéqui-\nlibre général calculables (CGE) et les modèles Input-Output. Ces deux familles",
+            "metadata": {
+              "title": "Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi",
+              "hal_id": "tel-01663759",
+              "authors": [
+                "Quentin Perrier"
+              ],
+              "version": "v0",
+              "citation": "Quentin Perrier. Penser la transition énergétique : stratégies robustes aux incertitudes et impacts sur l'emploi. Économie et finance quantitative [q-fin]. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2017. Français. ⟨NNT : ⟩. ⟨tel-01663759⟩",
+              "source_url": "https://hal.science/tel-01663759",
+              "chunk_order": 164,
+              "description": "Dans cette thèse, je discute deux questions autour de la transition énergétique : comment définir une stratégie face aux nombreuses incertitudes et aux inerties des systèmes, et quels sont impacts sur l’emploi de cette transition ? Pour étudier le choix d’une stratégie, je m’intéresse au cas du secteur électrique français. Les réacteurs nucléaires arrivent au terme de leur durée de vie initiale, mais ils peuvent être rénovés moyennant un investissement estimé à 100 milliards d'euros pour l'ensemble du parc. Combien de centrales faut-il rénover ? En mobilisant un modèle d'optimisation et la méthode de \"Robust Decision Making\", je montre qu’au vu des estimations actuelles, les stratégies les plus intéressantes consistent à fermer 7 à 14 réacteurs et à les remplacer par des énergies renouvelables. Sur le volet de l’emploi, je m’intéresse tout d’abord à la notion de contenu en emploi. Je propose une méthodologie nouvelle permettant de décomposer ce contenu, afin de mettre en évidence, pour chaque branche économique, l’importance relative de ses constituants : les taux d’importations, les taxes et subventions, la part du travail dans la valeur ajoutée et le niveau de salaire. J'étudie ensuite l’impact d’une réallocation des investissements vers des secteurs bas-carbone à l'aide de modèles d'équilibre général, dont j'explicite les mécanismes économiques sous-jacents. Mes résultats indiquent qu'encourager les secteurs avec une forte part du travail dans la valeur ajoutée ou de faibles salaires permet de créer de l'emploi, mais ils nuancent les bénéfices à encourager des secteurs peu importateurs.",
+              "document_type": "THESE",
+              "publication_date": "2017-11-20",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur l'emploi"
+            }
+          },
+          {
+            "id": "b43d0837-b64c-5683-9fe1-f6ef2cbeba86",
+            "document_id": "b4c26c50-e102-598e-8e0b-99d556cec3eb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Transition énergétique, projets de société et tensions du présent\n\nText: À droite, vous avez leffet sur le commerce extérieur avec une légère  dégradation \nen début de période, puis la balance commerciale se rattrape. \nDans  notre  modèle,  les  investissements  ne  sont  pas  seulement  financ és  par \nlépargne existante mais aussi par la monnaie, le crédit, ce qui permet effectivement à ce \nmoment-là de limiter léviction entre les investissements (a u seul montant des annuités de \nla dette, et non au coût global des nouveaux investissements)  et de  ne pas avoir leffet \ndépressif en début de période qui était identifié dans le présentation IMACLIM précédente.\nÇa  va  dépendre  de  la  rentabilité  attendue  du  capital  et  donc  de  la  demande \nanticipée. La production et lemploi dépendent de cet investissement.\n46",
+            "metadata": {
+              "title": "Transition énergétique, projets de société et tensions du présent",
+              "hal_id": "hal-01020566",
+              "authors": "['Minh Ha-Duong', 'Dominique Finon']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Dominique Finon. Transition énergétique, projets de société et tensions du présent. Première journée de Dialogue CNRS sur la transition énergétique en France, une cartographie des enjeux et des controverses., Jun 2013, Paris, France. ⟨hal-01020566⟩",
+              "source_url": "https://hal.science/hal-01020566",
+              "chunk_order": 109,
+              "document_type": "COMM",
+              "publication_date": "2013-06-21",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur l'emploi"
+            }
+          },
+          {
+            "id": "36e951eb-7f53-5583-b490-789d50a79595",
+            "document_id": "b4c26c50-e102-598e-8e0b-99d556cec3eb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Transition énergétique, projets de société et tensions du présent\n\nText: concomitant avec une légère diminution des emplois qui traduit le coût i nitial de ces \npolitiques à court terme et qui pointe un problème de décalage entre les dépenses qui sont \nimmédiates et les gains, les bénéfices qui sont retirés de ces pol itiques, plus étalés dans le \ntemps. Cependant, dès 2020, nous récupérons déjà une croissance plus élevée et nous \nassistons à un effet dentraînement des investissements : cest c e que les économistes \nappellent  un effet accélérateur . Le décalage entre ces coûts dinve stissement à court \nterme  et  ces  bénéfices  à moyen  et long terme  est un point  que nou s  reverrons  dans \nlensemble de lexposé et sur tous les scénarios. \n19",
+            "metadata": {
+              "title": "Transition énergétique, projets de société et tensions du présent",
+              "hal_id": "hal-01020566",
+              "authors": "['Minh Ha-Duong', 'Dominique Finon']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Dominique Finon. Transition énergétique, projets de société et tensions du présent. Première journée de Dialogue CNRS sur la transition énergétique en France, une cartographie des enjeux et des controverses., Jun 2013, Paris, France. ⟨hal-01020566⟩",
+              "source_url": "https://hal.science/hal-01020566",
+              "chunk_order": 64,
+              "document_type": "COMM",
+              "publication_date": "2013-06-21",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur l'emploi"
+            }
+          },
+          {
+            "id": "b50c5b4d-675f-5fb2-960f-ea6e8ec4dd35",
+            "document_id": "1da130c5-817c-5766-a8af-887541a4d091",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: La transition énergétique est-elle favorable aux branches à fort contenu en emploi ? Une analyse input-output pour la France\n\nText: Certes, les chercheurs en économie nont pas complètement négligé\nlimpact sur lemploi de ces politiques. En particulier, une partie (minoritaire)du débat théorique sur le double dividende, initié par Pearce [1991] et Goul-der [1994] porte sur lemploi. Bosquet [2000], Chiroleu-Assouline [2001] etPatuelli et al. [2005] proposent des revues de littérature. On peut noter\nlabsence de consensus dans ces travaux, avec des résultats très diversselon les hypothèses retenues.\nAvec lessor des préoccupations liées aux changements climatiques, une",
+            "metadata": {
+              "doi": "10.3917/redp.275.0851",
+              "title": "La transition énergétique est-elle favorable aux branches à fort contenu en emploi ? Une analyse input-output pour la France",
+              "hal_id": "hal-01679766",
+              "authors": "['Quentin Perrier', 'Philippe Quirion']",
+              "version": "v0",
+              "citation": "Quentin Perrier, Philippe Quirion. La transition énergétique est-elle favorable aux branches à fort contenu en emploi ? Une analyse input-output pour la France. Revue d'économie politique, 2017, 127 (5), pp.851 - 887. ⟨10.3917/redp.275.0851⟩. ⟨hal-01679766⟩",
+              "source_url": "https://doi.org/10.3917/redp.275.0851",
+              "chunk_order": 15,
+              "description": "Dans le débat public sur la transition énergétique en France, l’emploi occupe une place prépondérante. Nous développons une méthode basée sur l’analyse entrées-sorties pour décomposer le contenu en emploi d’une branche et le comparer à la moyenne nationale selon cinq critères : le taux d’importations finales, le taux d’importations intermédiaires, les taxes et subventions, la part du travail dans la valeur ajoutée et le niveau de salaire. Nous évaluons ensuite le contenu en emploi et en émissions de gaz à effet de serre de toutes les branches économiques françaises en 2010, pour étudier les substitutions interbranches d’une transition énergétique. Nos résultats indiquent que les variations de contenu en emploi entre branches s’expliquent, dans l’ordre, par le niveau de salaire, la part du travail dans la valeur ajoutée, le taux d’importations finales, le taux d’importations intermédiaires, et en dernier par les taxes et subventions. Par ailleurs, nous montrons que l’EU ETS couvre les branches intensives en émissions et peu intensives en emploi, mais pas les branches intensives en émissions et en emploi. L’emploi pourrait donc expliquer en partie le choix des branches soumises à l’EU ETS. Enfin, nous identifions des substitutions qui favoriseraient des branches moins intensives en émissions et plus intensives en emploi.",
+              "document_type": "ART",
+              "publication_date": "2017-05-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur l'emploi"
+            }
+          },
+          {
+            "id": "b9370051-a988-5215-8e27-2ea8888e1cda",
+            "document_id": "8a0349b0-3a72-5657-834a-3748506ed952",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES\n\nText: Simulé à laide du modèle IMACLIM-S, ce choc indui t au bout de vingt ans une hausse du PIB de 0,30% et  \n80 000 créations demplois. \nLa différence de leffet sur lemploi nest pas surprenant e : le modèle IMACLIM représente des substitutions \ntechnologiques de moyen-long terme plus importantes entre le travail et les autres facteurs de production et une \névolution structurelle de léconomie en direction des activités à plus basse intensité énergétique. \nEncart 3 Comparaison des simulations IMACLIM et MESANGE \nLe premier test effectué en conservant consta nts les autres paramètres du modèle, montre que la \nconjonction de cette quasi indexati on et dune taxe carbone (Tableau  10) conduit à un recul significatif \ndu PIB réel (-3,1%), qui entraîne dans sa chute l emploi total (-2,5%) et la consommation des ménages \n(-1,0%). \n \nRecyclage Baisse des cotisations \nOption budgétaire RDPC \nBoucle salaire-chômage Sur le sala ire nominal Sur le salaire réel \nProduit intérieur brut réel +2,1% -3,1%",
+            "metadata": {
+              "title": "Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES",
+              "hal_id": "halshs-00458205",
+              "authors": [
+                "Frédéric Ghersi",
+                "Emmanuel Combet",
+                "Jean Charles Hourcade",
+                "Camille Thubin"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Ghersi, Emmanuel Combet, Jean Charles Hourcade, Camille Thubin. Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES. 2010. ⟨halshs-00458205⟩",
+              "source_url": "https://hal.science/halshs-00458205",
+              "chunk_order": 273,
+              "description": "Cette étude offre une vision d'ensemble des enjeux de mise en oeuvre et d'évolution d'une fiscalité carbone en France. Elle s'applique à ne pas dissocier son évaluation des grands défis économiques et sociaux à venir et montre qu'un recours à la taxation du carbone offre sur le long terme plus de marges de manoeuvre qu'elle n'en supprime. Sans aller jusqu'aux détails précis de sa mise en ouvre, elle vise à clarifier les mécanismes mis en jeu et à apprécier, pour un même ensemble de critères, les impacts chiffrés de plusieurs dispositifs. Il apparaît que les dispositifs qui offrent le plus de marge de manoeuvre pour concilier les objectifs de climat, croissance, emploi, distribution des revenus et compétitivité des entreprises, combinent deux modes de redistribution du produit de la taxe carbone : d'un côté, en finançant des mesures compensatoires pour les populations et les activités les plus impactées, de l'autre, comme ressource alternative au financement des retraites pour contenir la hausse future des cotisations sociales. La conclusion majeure est que, sans une telle réforme, qui engage la négociation sociale au-delà des seuls enjeux climatiques, il sera difficile, au cours du prochain demi-siècle, de réaliser un découplage drastique entre émissions de gaz à effet de serre et croissance.",
+              "document_type": "OTHER",
+              "publication_date": "2010-01-04",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "l'impact des investissements sur l'emploi"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2688,
+            "total_tokens": 2688
+          }
+        }
+      },
+      "duration": 5277
+    },
+    "retrievalTime": 3126,
+    "generationTime": 5277,
+    "timestamp": "2025-07-18T10:22:54.875Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-18T10:22:55.100706+00:00",
+    "server_version": "1.0.0"
+  }
+}

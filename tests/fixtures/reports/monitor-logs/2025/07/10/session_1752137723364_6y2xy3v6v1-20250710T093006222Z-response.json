@@ -1,0 +1,593 @@
+{
+  "sessionId": "session_1752137723364_6y2xy3v6v1n72261j",
+  "timestamp": "20250710T093006222Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752139794757_z784z4d",
+    "response": {
+      "results": {
+        "generated_answer": "Le CIRED, ou Centre International de Recherche sur l’Environnement et le Développement, est une unité mixte de recherche française rassemblant plusieurs institutions : le CNRS, l’EHESS, l’École des Ponts ParisTech, AgroParisTech et le CIRAD [831ef41]. Il est basé à Nogent-sur-Marne, près de Paris [882deff].\n\nLe CIRED se distingue par son approche interdisciplinaire, bien que sa dominante soit économique. Ses axes de recherche principaux portent sur :\n\n- L’articulation entre environnement et développement, notamment dans les domaines de l’énergie, des infrastructures et de l’usage des sols ;\n- Les enjeux environnement/développement à l’échelle globale ;\n- La prise de décision dans des contextes controversés liés au développement durable [831ef41].\n\nLe laboratoire est reconnu pour ses travaux sur l’économie du changement climatique et la modélisation prospective, notamment avec le modèle d’équilibre général IMACLIM [7157a8b]. Il joue un rôle important dans les réseaux de recherche nationaux et internationaux, collaborant avec des institutions telles que le GIEC (Groupe d’experts intergouvernemental sur l’évolution du climat) et des universités étrangères [6f40a9f][8fd98c6].\n\nLe CIRED regroupe des chercheurs aux profils variés et s’affirme souvent comme un pôle d’économie « hétérodoxe », en marge des institutions académiques économiques dominantes en France [44d60ad]. Il est également impliqué dans de nombreux partenariats, tant avec des acteurs académiques qu’industriels [c8ec06e].\n\nPour plus d’informations, leur site officiel est : http://www.centre-cired.fr/ [831ef41].",
+        "citations": [
+          {
+            "id": "831ef41",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 241,
+              "end": 250
+            },
+            "payload": {
+              "id": "831ef411-7562-52c4-bf75-d27b7526ff4d",
+              "document_id": "d7e1153b-e999-5e6e-8e00-da0e6e006fd1",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016975308641975308,
+              "text": "Document Title: Essais sur la précarité énergétique : mesures multidimensionnelles et impacts de la fiscalité carbone.\n\nText: Un résumé de la thèse est disponible sur: http://www.theses.fr/s132750 et \ndans son intégralité sur demande auprès de lauteur.\nEt après la thèse?\n Audrey Berry souhaite poursuivre ses travaux de recherche sur les \nimpacts sociaux de la transition écologique, et la question des inégalités et de la vulnéra-bilité des ménages dans le domaine de lénergie.Laboratoire daccueil:\n Centre international de recherche \nsur lenvironnement et le développement (CIRED)\nLe CIRED est une unité mixte de recherche CNRS-EHESS-\nÉcole des Ponts ParisTech-AgroParisTech, CIRAD. Au-delà dune dominante économique, le laboratoire adopte une ap-proche interdisciplinaire pour travailler sur trois axes de re-cherche : larticulation environnement/développement dans les domaines de lénergie, des infrastructures et de lusage des sols ; les enjeux environ-nement/développement à léchelle globale ; la prise de décision en univers controversé sur les questions de développement durable.\nPlus dinformations sur: http://www.centre-cired.fr/",
+              "metadata": {
+                "title": "Essais sur la précarité énergétique : mesures multidimensionnelles et impacts de la fiscalité carbone.",
+                "hal_id": "hal-01916338",
+                "authors": [
+                  "Audrey Berry"
+                ],
+                "version": "v0",
+                "citation": "Audrey Berry. Essais sur la précarité énergétique : mesures multidimensionnelles et impacts de la fiscalité carbone.. Revue de l'Energie, 2018. ⟨hal-01916338⟩",
+                "source_url": "https://hal.science/hal-01916338",
+                "chunk_order": 10,
+                "description": "Cette thèse s'intéresse à la question de la précarité énergétique en France. De nature empirique, elle a pour principale motivation de confronter les idées aux données afin d'apporter des éléments d'aide à la décision pour les acteurs publics. Elle a été conduite au CIRED, sous la co-direction de Céline Guivarch (CIRED) et de Philippe Quirion (CIRED).",
+                "document_type": "ART",
+                "publication_date": "2018-11-08",
+                "semantic_rank": 10,
+                "full_text_rank": 4,
+                "associated_query": "Le CIRED"
+              }
+            }
+          },
+          {
+            "id": "882deff",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 298,
+              "end": 307
+            },
+            "payload": {
+              "id": "882deff8-4df4-5218-82b9-4c05ee24fade",
+              "document_id": "a4b1b1a6-b9f0-5d9d-8405-c20f70df1d5b",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016812865497076022,
+              "text": "Document Title: A mixed effect model approach for assessing land‐based mitigation in Integrated Assessment Models: a regional perspective\n\nText: 1 \n A mixedeffect model approach for assessing land -based mitigation in integrated \nassessment models: A regional perspective  \n \nThais Diniz Oliveira1 \nCentre International de Recherche sur I'Environnement et le Développement (CIRED), Nogent -sur-Marne, France  \nAgroParisTech, Paris, France  \n \nThierry Brunelle  \nCentre International de Recherche sur I'Environnement et le Développement (CIRED), Nogent -sur-Marne, France  \nCentre de coopération internationale en recherche agronomique pour le développement (CIRAD), Nogent -sur Marne, France  \n \nBertrand Guenet  \nLaboratoire de Géologie de IENS, CNRS UMR 8538 -École normale supérieure, PSL University - IPSL, Paris, France  \n \nPhilippe Ciais  \nLaboratoire des Sciences du Climat et de IEnvironnement, LSCE/IPSL, CEACNRS -UVSQ, Université Paris -Saclay, Gif -sur- \nYvette, France  \n \nFlorian Leblanc  \nCentre International de Recherche sur I'Environnement et le Développement (CIRED), Nogent -sur-Marne, France  \nÉcole des Ponts, Nogent -surMarne, France",
+              "metadata": {
+                "doi": "10.1111/gcb.15738",
+                "title": "A mixed effect model approach for assessing land‐based mitigation in Integrated Assessment Models: a regional perspective",
+                "hal_id": "hal-03251005",
+                "authors": [
+                  "Thais Diniz Oliveira",
+                  "Thierry Brunelle",
+                  "Bertrand Guenet",
+                  "Philippe Ciais",
+                  "Florian Leblanc",
+                  "Céline Guivarch"
+                ],
+                "version": "v0",
+                "citation": "Thais Diniz Oliveira, Thierry Brunelle, Bertrand Guenet, Philippe Ciais, Florian Leblanc, et al.. A mixed effect model approach for assessing land‐based mitigation in Integrated Assessment Models: a regional perspective. Global Change Biology, 2021, 27, pp.4671-4685. ⟨10.1111/gcb.15738⟩. ⟨hal-03251005⟩",
+                "source_url": "https://doi.org/10.1111/gcb.15738",
+                "chunk_order": 2,
+                "description": "Given the prospects of low short- term emissions reduction, carbon removals (CDRs) are expected to play an important role in achieving ambitious mitigation targets in future scenarios of integrated assessment models (IAMs), particularly Bioenergy with Carbon Capture and Storage (BECCS). In this paper, we explore the IAMC 1.5 data-base to depict the characteristics of the two main CDR options present in mitigation scenarios: BECCS and afforestation/reforestation. We apply a linear mixed- effect model to capture the specific regional and cross- IAM effects. Results reveal that the distribution of BECCS and afforestation deployment differs across IAMs and regions and, to a second extent, time. BECCS is preferred in the scenarios not for its ability to expand energy use but actually because it appears as an alternative to afforestation, which is associated with a decrease in energy use. However, the regional distribution of CDR deployment does not show a common pattern across scenarios and IAMs. Therefore, a more comprehensive investigation is needed before it can support policy proposals.",
+                "document_type": "ART",
+                "publication_date": "2021-06-05",
+                "semantic_rank": 10,
+                "full_text_rank": 7,
+                "associated_query": "Le CIRED"
+              }
+            }
+          },
+          {
+            "id": "831ef41",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 746,
+              "end": 755
+            },
+            "payload": null
+          },
+          {
+            "id": "7157a8b",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 927,
+              "end": 936
+            },
+            "payload": {
+              "id": "7157a8b6-ea92-5f6d-b9b4-a172135cc55b",
+              "document_id": "ce1b1abd-64ab-54e3-9136-893b3ff1851c",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017156862745098037,
+              "text": "Document Title: Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie\n\nText: Commissariat général au développement durable  Ser vice de léconomie, de lévaluation et de lintégra tion du développement durable  | |  | | 5                 PREMIERE PARTIEPREMIERE PARTIEPREMIERE PARTIEPREMIERE PARTIE    : Not: Not: Not: Note du CGDDe du CGDDe du CGDDe du CGDD        Synthèse et discussion de létude réalisée par le CIREDSynthèse et discussion de létude réalisée par le CIREDSynthèse et discussion de létude réalisée par le CIREDSynthèse et discussion de létude réalisée par le CIRED                 Avertissement : les résultats de cette note peuvent présenter quelques différences mineures avec ceux retenus dans le rapport du CIRED. Ces variations s'expliquent du fait que ce ne sont pas exactement les mêmes hypothèses qui ont été utilisées entre la note et le rapport1. Les ordres de grandeurs et les conclusions restent cependant identiques.                                                          1 Dans le rapport du CIRED, le modèle utilisé est rattaché au modèle d'équilibre général IMACLIM.",
+              "metadata": {
+                "title": "Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie",
+                "hal_id": "hal-00799740",
+                "authors": [
+                  "Louis-Gaëtan Giraudet",
+                  "Céline Guivarch",
+                  "Philippe Quirion",
+                  "L. Penot-Antoniou"
+                ],
+                "version": "v0",
+                "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion, L. Penot-Antoniou. Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie. Études et documents - Numéro 58, 2011, pp.78. ⟨hal-00799740⟩",
+                "source_url": "https://hal.science/hal-00799740",
+                "chunk_order": 66,
+                "description": "La France s'est engagée à réduire les consommations d'énergie du parc des bâtiments existants de 38 % en 2020 par rapport à 2008, objectif \" Grenelle -38 % \", et à diviser les émissions de CO2 par quatre en 2050 par rapport à 1990, objectif \" Facteur 4 \". Pour atteindre ces objectifs, le Grenelle de l'environnement a mis en avant un certain nombre de leviers réglementaires et incitatifs. Cette étude, réalisée par le CIRED pour le compte du CGDD, a pour objectif d'analyser l'impact de ces différents instruments sur la consommation d'énergie pour le chauffage. Mesures existantes (crédit d'impôt développement durable, éco-prêt à taux zéro, réglementation thermique) et mesures supplémentaires (obligation de rénovation, contribution climat énergie) sont évaluées grâce au modèle Res-IRF du CIRED. Ce modèle prend en compte l'efficacité énergétique des logements et leur évolution dans le temps sous l'effet de rénovations ; il modélise également de façon originale les comportements de chauffage des ménages. Les premières simulations suggèrent que les politiques considérées ne suffisent pas à atteindre les objectifs ambitieux fixés par la France. Ces résultats sont sensibles aux hypothèses retenues. En introduisant des hypothèses plus optimistes (ex : prix des rénovations plus faible) et en prenant en compte des facteurs complémentaires au modèle (ex : bois), un travail de ré-estimation sur la base du modèle du CIRED a permis d'obtenir des résultats plus proches des objectifs du Grenelle.",
+                "document_type": "REPORT",
+                "publication_date": "2011-11-01",
+                "semantic_rank": 10,
+                "full_text_rank": 1,
+                "associated_query": "Le CIRED"
+              }
+            }
+          },
+          {
+            "id": "6f40a9f",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1171,
+              "end": 1180
+            },
+            "payload": {
+              "id": "6f40a9ff-359e-51f9-a845-343116938ca9",
+              "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017941349837901563,
+              "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: lÉnergie, section française de lIAEE. . Par léquipe du CIRED, elle collabore à un \nréseau francilien de recherche sur le développement soutenable qui regroupe des \nlaboratoires et centres de recherche de disciplines variées. Elle travaille également \navec léquipe liée à Patrick Criqui à Grenobl e. Enfin, au niveau international, son \nréseau est lié avec celui du GIEC. En effet, le CIRED fut, dès les débuts de \nlorganisation, le lieu de re crutement privilégié des économistes et experts français \nchoisis pour rédiger les rapports. Le centre a ainsi développé des collaborations avec \nles chercheurs de luniversité de Camb ridge (et notamment Michael Grubb et le \n297Voir partenaires et réseau : http://www.modelisation-prospective.org/equipe.html consulté le 25 \nfévrier 2014.",
+              "metadata": {
+                "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+                "hal_id": "tel-01112427",
+                "authors": [
+                  "Pauline Huet"
+                ],
+                "version": "v0",
+                "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+                "source_url": "https://hal.science/tel-01112427",
+                "chunk_order": 541,
+                "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+                "document_type": "THESE",
+                "publication_date": "2015-01-15",
+                "semantic_rank": 2,
+                "full_text_rank": 37,
+                "associated_query": "Le CIRED"
+              }
+            }
+          },
+          {
+            "id": "8fd98c6",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1180,
+              "end": 1189
+            },
+            "payload": {
+              "id": "8fd98c62-540e-545c-8eb1-47b4b60fcbf7",
+              "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017094017094017092,
+              "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: collaboration entre le CIRED et le Centre  de Mathématiques A ppliquée de lÉcole \ndes Mines, elle fut créée en 2008 avec le s outien et limplication dacteurs industriels \ntels que Total, Renault ou EDF, mais aussi de lAgence de lEnvironnement et de la \nMaîtrise de lEnergie. La Chaire sinsère dans un réseau de recherche \ninterdisciplinaire et international297\n296Bien que des échanges se tiennent, notamment par le biais de lAssociation des Économistes de \nlÉnergie, section française de lIAEE. . Par léquipe du CIRED, elle collabore à un \nréseau francilien de recherche sur le développement soutenable qui regroupe des \nlaboratoires et centres de recherche de disciplines variées. Elle travaille également \navec léquipe liée à Patrick Criqui à Grenobl e. Enfin, au niveau international, son \nréseau est lié avec celui du GIEC. En effet, le CIRED fut, dès les débuts de \nlorganisation, le lieu de re crutement privilégié des économistes et experts français",
+              "metadata": {
+                "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+                "hal_id": "tel-01112427",
+                "authors": [
+                  "Pauline Huet"
+                ],
+                "version": "v0",
+                "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+                "source_url": "https://hal.science/tel-01112427",
+                "chunk_order": 540,
+                "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+                "document_type": "THESE",
+                "publication_date": "2015-01-15",
+                "semantic_rank": 10,
+                "full_text_rank": 2,
+                "associated_query": "Le CIRED"
+              }
+            }
+          },
+          {
+            "id": "44d60ad",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1377,
+              "end": 1386
+            },
+            "payload": {
+              "id": "44d60ad6-7669-55ba-b041-ddffb43cd6b0",
+              "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016762452107279693,
+              "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: des positions dominées en vertu dune similit ude entre la hiérarchie des objets \néconomiques et la hiér archie des économistes279\n277Avant de devenir EDDEN en 2011, le laboratoire sappelait le Laboratoire dEconomie de la \nProduction et de lIntegration Internationale (LEP II-EPE), résultat de la fusion de lInstitut \ndEconomie et de Politique de lEnergie (IEPE) et de lInstitut de Recherche en Economie de la \nProduction et du Développement (IREPD) en 2003.  . En outre, le CIRED se positionne \ndans les approches cr itiques du modèle dominant en économie et ses chercheurs se \nprésentent eux-mêmes volontiers comme  hétérodoxes . Cest donc en périphérie \ndes institutions académiques française s dominantes dans la production des \nconnaissances économiques que  lECC apparaît. Il faut  attendre 2007, la publication \nhttp://webu2.upmf-\ngrenoble.fr/LEPII/spip/spip.php?article2 Consulté le 19 octobre 2013. \n278Nous attirons également lattention sur lexiste nce de collaborations entre le CIRED et le",
+              "metadata": {
+                "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+                "hal_id": "tel-01112427",
+                "authors": [
+                  "Pauline Huet"
+                ],
+                "version": "v0",
+                "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+                "source_url": "https://hal.science/tel-01112427",
+                "chunk_order": 514,
+                "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+                "document_type": "THESE",
+                "publication_date": "2015-01-15",
+                "semantic_rank": 10,
+                "full_text_rank": 8,
+                "associated_query": "Le CIRED"
+              }
+            }
+          },
+          {
+            "id": "c8ec06e",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1494,
+              "end": 1503
+            },
+            "payload": {
+              "id": "c8ec06ed-d183-563e-8040-c118a95b2ad6",
+              "document_id": "b4c26c50-e102-598e-8e0b-99d556cec3eb",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017033542976939202,
+              "text": "Document Title: Transition énergétique, projets de société et tensions du présent\n\nText: en  jeu  ne  sont  pas  aussi  importantes  que  nous  le  souhaiterions,  cest-à-di re  que  les \nchercheurs ne sont pas très nombreux, ni vraiment bien répartis sur le terri toire. Il est vrai \nque nous nous sommes appuyés sur les unités qui se sont singularisées e n SHS par le \ncaractère dynamique et précurseur de leurs recherches dans ce domaine. C est donc à ce \ntitre que nous nous sommes adressés à deux laboratoires, le Cired et le Pacte. \nJ'en profiterai, avant de lui donner la parole, pour remercier le direc teur du Cired et \ntoute cette unité de recherche qui est importante pour nous. Je parlerai des différents \npartenariats quelle engage puisque cette unité n'est pas seulement C NRS, elle connaît \naussi une forte implantation dans plusieurs institutions. \nLe Cired a porté lorganisation de cette journée. Je souhaite remercier Minh et toute \nléquipe. Je soulignerai que plusieurs chercheurs du Cired nous ont beaucoup aidé s à",
+              "metadata": {
+                "title": "Transition énergétique, projets de société et tensions du présent",
+                "hal_id": "hal-01020566",
+                "authors": "['Minh Ha-Duong', 'Dominique Finon']",
+                "version": "v0",
+                "citation": "Minh Ha-Duong, Dominique Finon. Transition énergétique, projets de société et tensions du présent. Première journée de Dialogue CNRS sur la transition énergétique en France, une cartographie des enjeux et des controverses., Jun 2013, Paris, France. ⟨hal-01020566⟩",
+                "source_url": "https://hal.science/hal-01020566",
+                "chunk_order": 23,
+                "document_type": "COMM",
+                "publication_date": "2013-06-21",
+                "semantic_rank": 10,
+                "full_text_rank": 3,
+                "associated_query": "Le CIRED"
+              }
+            }
+          },
+          {
+            "id": "831ef41",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1585,
+              "end": 1594
+            },
+            "payload": null
+          }
+        ],
+        "search_results": [
+          {
+            "id": "6f40a9ff-359e-51f9-a845-343116938ca9",
+            "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017941349837901563,
+            "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: lÉnergie, section française de lIAEE. . Par léquipe du CIRED, elle collabore à un \nréseau francilien de recherche sur le développement soutenable qui regroupe des \nlaboratoires et centres de recherche de disciplines variées. Elle travaille également \navec léquipe liée à Patrick Criqui à Grenobl e. Enfin, au niveau international, son \nréseau est lié avec celui du GIEC. En effet, le CIRED fut, dès les débuts de \nlorganisation, le lieu de re crutement privilégié des économistes et experts français \nchoisis pour rédiger les rapports. Le centre a ainsi développé des collaborations avec \nles chercheurs de luniversité de Camb ridge (et notamment Michael Grubb et le \n297Voir partenaires et réseau : http://www.modelisation-prospective.org/equipe.html consulté le 25 \nfévrier 2014.",
+            "metadata": {
+              "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+              "hal_id": "tel-01112427",
+              "authors": [
+                "Pauline Huet"
+              ],
+              "version": "v0",
+              "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+              "source_url": "https://hal.science/tel-01112427",
+              "chunk_order": 541,
+              "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+              "document_type": "THESE",
+              "publication_date": "2015-01-15",
+              "semantic_rank": 2,
+              "full_text_rank": 37,
+              "associated_query": "Le CIRED"
+            }
+          },
+          {
+            "id": "7157a8b6-ea92-5f6d-b9b4-a172135cc55b",
+            "document_id": "ce1b1abd-64ab-54e3-9136-893b3ff1851c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017156862745098037,
+            "text": "Document Title: Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie\n\nText: Commissariat général au développement durable  Ser vice de léconomie, de lévaluation et de lintégra tion du développement durable  | |  | | 5                 PREMIERE PARTIEPREMIERE PARTIEPREMIERE PARTIEPREMIERE PARTIE    : Not: Not: Not: Note du CGDDe du CGDDe du CGDDe du CGDD        Synthèse et discussion de létude réalisée par le CIREDSynthèse et discussion de létude réalisée par le CIREDSynthèse et discussion de létude réalisée par le CIREDSynthèse et discussion de létude réalisée par le CIRED                 Avertissement : les résultats de cette note peuvent présenter quelques différences mineures avec ceux retenus dans le rapport du CIRED. Ces variations s'expliquent du fait que ce ne sont pas exactement les mêmes hypothèses qui ont été utilisées entre la note et le rapport1. Les ordres de grandeurs et les conclusions restent cependant identiques.                                                          1 Dans le rapport du CIRED, le modèle utilisé est rattaché au modèle d'équilibre général IMACLIM.",
+            "metadata": {
+              "title": "Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie",
+              "hal_id": "hal-00799740",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Céline Guivarch",
+                "Philippe Quirion",
+                "L. Penot-Antoniou"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion, L. Penot-Antoniou. Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie. Études et documents - Numéro 58, 2011, pp.78. ⟨hal-00799740⟩",
+              "source_url": "https://hal.science/hal-00799740",
+              "chunk_order": 66,
+              "description": "La France s'est engagée à réduire les consommations d'énergie du parc des bâtiments existants de 38 % en 2020 par rapport à 2008, objectif \" Grenelle -38 % \", et à diviser les émissions de CO2 par quatre en 2050 par rapport à 1990, objectif \" Facteur 4 \". Pour atteindre ces objectifs, le Grenelle de l'environnement a mis en avant un certain nombre de leviers réglementaires et incitatifs. Cette étude, réalisée par le CIRED pour le compte du CGDD, a pour objectif d'analyser l'impact de ces différents instruments sur la consommation d'énergie pour le chauffage. Mesures existantes (crédit d'impôt développement durable, éco-prêt à taux zéro, réglementation thermique) et mesures supplémentaires (obligation de rénovation, contribution climat énergie) sont évaluées grâce au modèle Res-IRF du CIRED. Ce modèle prend en compte l'efficacité énergétique des logements et leur évolution dans le temps sous l'effet de rénovations ; il modélise également de façon originale les comportements de chauffage des ménages. Les premières simulations suggèrent que les politiques considérées ne suffisent pas à atteindre les objectifs ambitieux fixés par la France. Ces résultats sont sensibles aux hypothèses retenues. En introduisant des hypothèses plus optimistes (ex : prix des rénovations plus faible) et en prenant en compte des facteurs complémentaires au modèle (ex : bois), un travail de ré-estimation sur la base du modèle du CIRED a permis d'obtenir des résultats plus proches des objectifs du Grenelle.",
+              "document_type": "REPORT",
+              "publication_date": "2011-11-01",
+              "semantic_rank": 10,
+              "full_text_rank": 1,
+              "associated_query": "Le CIRED"
+            }
+          },
+          {
+            "id": "8fd98c62-540e-545c-8eb1-47b4b60fcbf7",
+            "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017094017094017092,
+            "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: collaboration entre le CIRED et le Centre  de Mathématiques A ppliquée de lÉcole \ndes Mines, elle fut créée en 2008 avec le s outien et limplication dacteurs industriels \ntels que Total, Renault ou EDF, mais aussi de lAgence de lEnvironnement et de la \nMaîtrise de lEnergie. La Chaire sinsère dans un réseau de recherche \ninterdisciplinaire et international297\n296Bien que des échanges se tiennent, notamment par le biais de lAssociation des Économistes de \nlÉnergie, section française de lIAEE. . Par léquipe du CIRED, elle collabore à un \nréseau francilien de recherche sur le développement soutenable qui regroupe des \nlaboratoires et centres de recherche de disciplines variées. Elle travaille également \navec léquipe liée à Patrick Criqui à Grenobl e. Enfin, au niveau international, son \nréseau est lié avec celui du GIEC. En effet, le CIRED fut, dès les débuts de \nlorganisation, le lieu de re crutement privilégié des économistes et experts français",
+            "metadata": {
+              "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+              "hal_id": "tel-01112427",
+              "authors": [
+                "Pauline Huet"
+              ],
+              "version": "v0",
+              "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+              "source_url": "https://hal.science/tel-01112427",
+              "chunk_order": 540,
+              "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+              "document_type": "THESE",
+              "publication_date": "2015-01-15",
+              "semantic_rank": 10,
+              "full_text_rank": 2,
+              "associated_query": "Le CIRED"
+            }
+          },
+          {
+            "id": "c8ec06ed-d183-563e-8040-c118a95b2ad6",
+            "document_id": "b4c26c50-e102-598e-8e0b-99d556cec3eb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017033542976939202,
+            "text": "Document Title: Transition énergétique, projets de société et tensions du présent\n\nText: en  jeu  ne  sont  pas  aussi  importantes  que  nous  le  souhaiterions,  cest-à-di re  que  les \nchercheurs ne sont pas très nombreux, ni vraiment bien répartis sur le terri toire. Il est vrai \nque nous nous sommes appuyés sur les unités qui se sont singularisées e n SHS par le \ncaractère dynamique et précurseur de leurs recherches dans ce domaine. C est donc à ce \ntitre que nous nous sommes adressés à deux laboratoires, le Cired et le Pacte. \nJ'en profiterai, avant de lui donner la parole, pour remercier le direc teur du Cired et \ntoute cette unité de recherche qui est importante pour nous. Je parlerai des différents \npartenariats quelle engage puisque cette unité n'est pas seulement C NRS, elle connaît \naussi une forte implantation dans plusieurs institutions. \nLe Cired a porté lorganisation de cette journée. Je souhaite remercier Minh et toute \nléquipe. Je soulignerai que plusieurs chercheurs du Cired nous ont beaucoup aidé s à",
+            "metadata": {
+              "title": "Transition énergétique, projets de société et tensions du présent",
+              "hal_id": "hal-01020566",
+              "authors": "['Minh Ha-Duong', 'Dominique Finon']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Dominique Finon. Transition énergétique, projets de société et tensions du présent. Première journée de Dialogue CNRS sur la transition énergétique en France, une cartographie des enjeux et des controverses., Jun 2013, Paris, France. ⟨hal-01020566⟩",
+              "source_url": "https://hal.science/hal-01020566",
+              "chunk_order": 23,
+              "document_type": "COMM",
+              "publication_date": "2013-06-21",
+              "semantic_rank": 10,
+              "full_text_rank": 3,
+              "associated_query": "Le CIRED"
+            }
+          },
+          {
+            "id": "fdf6a5d5-bbac-50ab-8f0a-94779c867e0a",
+            "document_id": "a836078a-d787-571f-896d-22d981d81d41",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: General equilibrium impact of an energy-saving policy in the public sector\n\nText: 1                                                                                                                                                                        \n2 CIRED.",
+            "metadata": {
+              "doi": "10.1007/s10640-006-9075-2",
+              "title": "General equilibrium impact of an energy-saving policy in the public sector",
+              "hal_id": "halshs-00639321",
+              "authors": [
+                "Meriem Hamdi-Cherif",
+                "Philippe Quirion"
+              ],
+              "version": "v0",
+              "citation": "Meriem Hamdi-Cherif, Philippe Quirion. General equilibrium impact of an energy-saving policy in the public sector. Environmental and Resource Economics, 2007, 38 (2), pp.245-258. ⟨10.1007/s10640-006-9075-2⟩. ⟨halshs-00639321⟩",
+              "source_url": "https://doi.org/10.1007/s10640-006-9075-2",
+              "chunk_order": 4,
+              "description": "We analyse a disregarded environmental policy instrument: a switch in government expenditure away from energy (or other natural resources) and toward a composite good which includes energy-saving expenditure. We first develop two variants of an analytical general equilibrium model. A composite good is produced with constant returns to scale, and energy is imported or produced domestically with diminishing returns, yielding a differential rent to its owners. The government purchases energy and composite goods from private firms. Such a policy unambiguously increases employment. It also raises private consumption and welfare under two conditions: (i) it is not too costly and (ii) the initial share of the resource is smaller in public spending than in private consumption, or the difference is small enough. We then run numerically a model featuring both importation and domestic production of energy (oil, gas and electricity), for the OECD as a whole. Simulations show that employment, welfare and private consumption rise. We provide magnitudes for different parameter values.",
+              "document_type": "ART",
+              "publication_date": "2007-01-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Le CIRED"
+            }
+          },
+          {
+            "id": "831ef411-7562-52c4-bf75-d27b7526ff4d",
+            "document_id": "d7e1153b-e999-5e6e-8e00-da0e6e006fd1",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016975308641975308,
+            "text": "Document Title: Essais sur la précarité énergétique : mesures multidimensionnelles et impacts de la fiscalité carbone.\n\nText: Un résumé de la thèse est disponible sur: http://www.theses.fr/s132750 et \ndans son intégralité sur demande auprès de lauteur.\nEt après la thèse?\n Audrey Berry souhaite poursuivre ses travaux de recherche sur les \nimpacts sociaux de la transition écologique, et la question des inégalités et de la vulnéra-bilité des ménages dans le domaine de lénergie.Laboratoire daccueil:\n Centre international de recherche \nsur lenvironnement et le développement (CIRED)\nLe CIRED est une unité mixte de recherche CNRS-EHESS-\nÉcole des Ponts ParisTech-AgroParisTech, CIRAD. Au-delà dune dominante économique, le laboratoire adopte une ap-proche interdisciplinaire pour travailler sur trois axes de re-cherche : larticulation environnement/développement dans les domaines de lénergie, des infrastructures et de lusage des sols ; les enjeux environ-nement/développement à léchelle globale ; la prise de décision en univers controversé sur les questions de développement durable.\nPlus dinformations sur: http://www.centre-cired.fr/",
+            "metadata": {
+              "title": "Essais sur la précarité énergétique : mesures multidimensionnelles et impacts de la fiscalité carbone.",
+              "hal_id": "hal-01916338",
+              "authors": [
+                "Audrey Berry"
+              ],
+              "version": "v0",
+              "citation": "Audrey Berry. Essais sur la précarité énergétique : mesures multidimensionnelles et impacts de la fiscalité carbone.. Revue de l'Energie, 2018. ⟨hal-01916338⟩",
+              "source_url": "https://hal.science/hal-01916338",
+              "chunk_order": 10,
+              "description": "Cette thèse s'intéresse à la question de la précarité énergétique en France. De nature empirique, elle a pour principale motivation de confronter les idées aux données afin d'apporter des éléments d'aide à la décision pour les acteurs publics. Elle a été conduite au CIRED, sous la co-direction de Céline Guivarch (CIRED) et de Philippe Quirion (CIRED).",
+              "document_type": "ART",
+              "publication_date": "2018-11-08",
+              "semantic_rank": 10,
+              "full_text_rank": 4,
+              "associated_query": "Le CIRED"
+            }
+          },
+          {
+            "id": "1cc2b315-c054-5791-9c72-3da75dce9c6a",
+            "document_id": "37ee63a4-6301-52c3-a116-b50f7527532e",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016919191919191917,
+            "text": "Document Title: Modeling the Socioeconomic Impacts of the Adoption of a Carbon Pricing Instrument – Literature review\n\nText: 2 Preparação de Modelagem para Estimar os Impactos Socioeconômicos da Adoção de um \nInstrumento de Precificação de Carbono como parte do Pacote de Implementação da NDC \nBrasileira - Componente 2a (Modelagem) \n \nDOCUMENTO: \nProduto 1  Revisão de Literatura \n \nCOORDENAÇÃO GERAL:  \nEmilio Lèbre La Rovere, D.Sc. (CentroClima/COPPE/UFRJ) \n \nCOORDENAÇÃO EXECUTIVA: \nWilliam Wills, D.Sc. (EOS Consultoria) \n \nEQUIPE DE ESPECIALISTAS: \nMarcelo Moreira, D.Sc. (Agroícone) \nLeila Harfuch, D.Sc. (Agroícone) \nSérgio Cunha, D.Sc.  (CentroClima/COPPE/UFRJ) \nCarolina Dubeux, D.Sc. (CentroClima/COPPE/UFRJ) \nMaurício Henriques (INT e CentroClima/COPPE/UFRJ) \nGabriel Castro (CentroClima/COPPE/UFRJ) \nCarolina Grottera, D.Sc. (CentroClima/COPPE/UFRJ) \nOtto Hebeda (CentroClima/COPPE/UFRJ) \nJean-Charles Hourcade, D.Sc. (CIRED) \nJulien Lefevre, D.Sc. (CIRED) \nGaelle Le Treut, D.Sc. (CIRED) \nMathilde Laurent (CIRED) \nJohn Reilly, D.Sc. (MIT) \n \n \n \n \n \n  \nCONSÓRCIO:",
+            "metadata": {
+              "title": "Modeling the Socioeconomic Impacts of the Adoption of a Carbon Pricing Instrument – Literature review",
+              "hal_id": "hal-03128619",
+              "authors": [
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Julien Lefevre. Modeling the Socioeconomic Impacts of the Adoption of a Carbon Pricing Instrument – Literature review. [Research Report] PMR-Brazil. 2018, 61 p. ⟨hal-03128619⟩",
+              "source_url": "https://hal.science/hal-03128619",
+              "chunk_order": 2,
+              "document_type": "REPORT",
+              "publication_date": "2018-09-01",
+              "semantic_rank": 10,
+              "full_text_rank": 5,
+              "associated_query": "Le CIRED"
+            }
+          },
+          {
+            "id": "b1e064a3-4e3f-5736-a7b5-b827f03bd5fb",
+            "document_id": "cc0d4e1d-36a9-5050-aed7-ecc1d4cacd86",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016865079365079364,
+            "text": "Document Title: The comparative impact of Integrated Assessment Models' structures on optimal mitigation policies\n\nText: and abatement trajectories. This allows us to exhibit three key ﬁndings:\n(i) IAMs with a quadratic damage function are insensitive to changes of\nother features of the modeling structure, (ii) IAMs involving a non-convex\ndamage function entail contrasting climate strategies, (iii) Precautionary\nbehaviours can only come up in IAMs with non-convexities in damages.\nCentre International de Recherche sur lEnvironnement et le D eveloppement (CIRED)\nE-mail : perrissin@centre-cired.fr\n(CIRED)\n(CIRED)\nCentre International de Recherche Agronomique pour le D eveloppement\n1",
+            "metadata": {
+              "doi": "10.1007/s10666-015-9443-9",
+              "title": "The comparative impact of Integrated Assessment Models' structures on optimal mitigation policies",
+              "hal_id": "hal-01298343",
+              "authors": [
+                "Baptiste Perrissin Fabert",
+                "Etienne Espagne",
+                "Antonin Pottier",
+                "Patrice Dumas"
+              ],
+              "version": "v0",
+              "citation": "Baptiste Perrissin Fabert, Etienne Espagne, Antonin Pottier, Patrice Dumas. The comparative impact of Integrated Assessment Models' structures on optimal mitigation policies. Environmental Modelling and Assessment, 2015, 20 (5), pp.453-473. ⟨10.1007/s10666-015-9443-9⟩. ⟨hal-01298343⟩",
+              "source_url": "https://doi.org/10.1007/s10666-015-9443-9",
+              "chunk_order": 5,
+              "description": "This paper aims at providing a consistent framework to appraise alternative modeling choices that have driven the so-called “when flexibility” controversy since the early 1990s, dealing with the optimal timing of mitigation efforts and the social cost of carbon (SCC). The literature has emphasized the critical impact of modeling structures on the optimal climate policy. We estimate within a unified framework the comparative impact of modeling structures and investigate the structural modeling drivers of differences in climate policy recommendations. We use the integrated assessment model (IAM) RESPONSE to capture a wide array of modeling choices. Specifically, we analyse four emblematic modeling choices, namely the forms of the damage function (quadratic vs. sigmoid) and the abatement cost (with or without inertia), the treatment of uncertainty, and the decision framework, deterministic or sequential, with different dates of information arrival. We define an original methodology based on an equivalence criterion to compare modeling structures, and we estimate their comparative impact on two outputs: the optimal SCC and abatement trajectories. We exhibit three key findings: (1) IAMs with a quadratic damage function are insensitive to changes of other features of the modeling structure, (2) IAMs involving a non-convex damage function entail contrasting climate strategies, (3) Precautionary behaviors can only come up in IAMs with non-convexities in damage.",
+              "document_type": "ART",
+              "publication_date": "2015-01-01",
+              "semantic_rank": 10,
+              "full_text_rank": 6,
+              "associated_query": "Le CIRED"
+            }
+          },
+          {
+            "id": "882deff8-4df4-5218-82b9-4c05ee24fade",
+            "document_id": "a4b1b1a6-b9f0-5d9d-8405-c20f70df1d5b",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016812865497076022,
+            "text": "Document Title: A mixed effect model approach for assessing land‐based mitigation in Integrated Assessment Models: a regional perspective\n\nText: 1 \n A mixedeffect model approach for assessing land -based mitigation in integrated \nassessment models: A regional perspective  \n \nThais Diniz Oliveira1 \nCentre International de Recherche sur I'Environnement et le Développement (CIRED), Nogent -sur-Marne, France  \nAgroParisTech, Paris, France  \n \nThierry Brunelle  \nCentre International de Recherche sur I'Environnement et le Développement (CIRED), Nogent -sur-Marne, France  \nCentre de coopération internationale en recherche agronomique pour le développement (CIRAD), Nogent -sur Marne, France  \n \nBertrand Guenet  \nLaboratoire de Géologie de IENS, CNRS UMR 8538 -École normale supérieure, PSL University - IPSL, Paris, France  \n \nPhilippe Ciais  \nLaboratoire des Sciences du Climat et de IEnvironnement, LSCE/IPSL, CEACNRS -UVSQ, Université Paris -Saclay, Gif -sur- \nYvette, France  \n \nFlorian Leblanc  \nCentre International de Recherche sur I'Environnement et le Développement (CIRED), Nogent -sur-Marne, France  \nÉcole des Ponts, Nogent -surMarne, France",
+            "metadata": {
+              "doi": "10.1111/gcb.15738",
+              "title": "A mixed effect model approach for assessing land‐based mitigation in Integrated Assessment Models: a regional perspective",
+              "hal_id": "hal-03251005",
+              "authors": [
+                "Thais Diniz Oliveira",
+                "Thierry Brunelle",
+                "Bertrand Guenet",
+                "Philippe Ciais",
+                "Florian Leblanc",
+                "Céline Guivarch"
+              ],
+              "version": "v0",
+              "citation": "Thais Diniz Oliveira, Thierry Brunelle, Bertrand Guenet, Philippe Ciais, Florian Leblanc, et al.. A mixed effect model approach for assessing land‐based mitigation in Integrated Assessment Models: a regional perspective. Global Change Biology, 2021, 27, pp.4671-4685. ⟨10.1111/gcb.15738⟩. ⟨hal-03251005⟩",
+              "source_url": "https://doi.org/10.1111/gcb.15738",
+              "chunk_order": 2,
+              "description": "Given the prospects of low short- term emissions reduction, carbon removals (CDRs) are expected to play an important role in achieving ambitious mitigation targets in future scenarios of integrated assessment models (IAMs), particularly Bioenergy with Carbon Capture and Storage (BECCS). In this paper, we explore the IAMC 1.5 data-base to depict the characteristics of the two main CDR options present in mitigation scenarios: BECCS and afforestation/reforestation. We apply a linear mixed- effect model to capture the specific regional and cross- IAM effects. Results reveal that the distribution of BECCS and afforestation deployment differs across IAMs and regions and, to a second extent, time. BECCS is preferred in the scenarios not for its ability to expand energy use but actually because it appears as an alternative to afforestation, which is associated with a decrease in energy use. However, the regional distribution of CDR deployment does not show a common pattern across scenarios and IAMs. Therefore, a more comprehensive investigation is needed before it can support policy proposals.",
+              "document_type": "ART",
+              "publication_date": "2021-06-05",
+              "semantic_rank": 10,
+              "full_text_rank": 7,
+              "associated_query": "Le CIRED"
+            }
+          },
+          {
+            "id": "44d60ad6-7669-55ba-b041-ddffb43cd6b0",
+            "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016762452107279693,
+            "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: des positions dominées en vertu dune similit ude entre la hiérarchie des objets \néconomiques et la hiér archie des économistes279\n277Avant de devenir EDDEN en 2011, le laboratoire sappelait le Laboratoire dEconomie de la \nProduction et de lIntegration Internationale (LEP II-EPE), résultat de la fusion de lInstitut \ndEconomie et de Politique de lEnergie (IEPE) et de lInstitut de Recherche en Economie de la \nProduction et du Développement (IREPD) en 2003.  . En outre, le CIRED se positionne \ndans les approches cr itiques du modèle dominant en économie et ses chercheurs se \nprésentent eux-mêmes volontiers comme  hétérodoxes . Cest donc en périphérie \ndes institutions académiques française s dominantes dans la production des \nconnaissances économiques que  lECC apparaît. Il faut  attendre 2007, la publication \nhttp://webu2.upmf-\ngrenoble.fr/LEPII/spip/spip.php?article2 Consulté le 19 octobre 2013. \n278Nous attirons également lattention sur lexiste nce de collaborations entre le CIRED et le",
+            "metadata": {
+              "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+              "hal_id": "tel-01112427",
+              "authors": [
+                "Pauline Huet"
+              ],
+              "version": "v0",
+              "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+              "source_url": "https://hal.science/tel-01112427",
+              "chunk_order": 514,
+              "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+              "document_type": "THESE",
+              "publication_date": "2015-01-15",
+              "semantic_rank": 10,
+              "full_text_rank": 8,
+              "associated_query": "Le CIRED"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1595,
+            "total_tokens": 1595
+          }
+        }
+      },
+      "duration": 8810
+    },
+    "retrievalTime": 2624,
+    "generationTime": 8810,
+    "timestamp": "2025-07-10T09:30:06.222Z"
+  },
+  "server_context": {
+    "client_ip": "172.18.0.1",
+    "forwarded_for": null,
+    "received_at": "2025-07-10T09:30:06.235040+00:00",
+    "server_version": "1.0.0"
+  }
+}

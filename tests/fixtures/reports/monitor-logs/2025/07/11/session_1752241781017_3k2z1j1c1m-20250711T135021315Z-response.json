@@ -1,0 +1,592 @@
+{
+  "sessionId": "session_1752241781017_3k2z1j1c1m17336p1w",
+  "timestamp": "20250711T135021315Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752241813078_tmdu1uf",
+    "response": {
+      "results": {
+        "generated_answer": "Le changement structurel de la consommation des ménages est un sujet abordé dans plusieurs des documents fournis. Voici une synthèse des informations pertinentes :\n\n1. **Évolution des postes de consommation** :\n   - Au cours des 40 dernières années, il y a eu un bouleversement dans la hiérarchie des postes de consommation des ménages. En 1960, les principaux postes étaient l'alimentation, le logement, l'habillement et le transport. En 2000, le logement est devenu le premier poste, suivi par l'alimentation, le transport et les loisirs. Cette évolution est due à la baisse du coût de l'alimentation et de l'habillement, tandis que les dépenses liées au logement et à la santé ont augmenté [554b6f8], [eee0826].\n\n2. **Impact des politiques climatiques** :\n   - Les politiques climatiques peuvent induire un changement structurel dans les préférences de consommation des ménages. Cela inclut des impacts sur les évolutions technologiques, les politiques d'infrastructures, et l'aménagement du territoire [b785cd2], [1bc6e9e].\n   - Une taxe carbone, par exemple, peut induire des changements structurels et technologiques en faveur des activités faiblement intensives en énergie et des sources énergétiques peu intensives en carbone [1bc6e9e].\n\n3. **Effets des changements techniques** :\n   - Les changements techniques spécifiques de l'offre et de la demande d'énergie, tels que l'efficacité énergétique, les substitutions entre énergies, et les ruptures technologiques, influencent également la structure de la consommation finale des ménages [e4a482b].\n   - La co-induction entre changement structurel et changement des techniques nécessite une modélisation en équilibre général pour décrire les mécanismes déterminants à long terme, tels que la localisation des activités, la dématérialisation, et les technologies disponibles [e9f8d16].\n\n4. **Redistribution et consommation d'énergie** :\n   - La redistribution des recettes en faveur du revenu des ménages, plutôt qu'en baisse du coût du travail, peut induire un effet rebond sur leur consommation d'énergie et limiter les changements techniques et structurels nécessaires pour des productions moins intensives en énergie [fadbd74].\n\nEn résumé, le changement structurel de la consommation des ménages est influencé par divers facteurs, notamment les évolutions technologiques, les politiques climatiques, et les changements dans les préférences et les comportements des consommateurs.",
+        "citations": [
+          {
+            "id": "554b6f8",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 693,
+              "end": 702
+            },
+            "payload": {
+              "id": "554b6f84-1a82-5c62-a61b-a0ebb345b0c8",
+              "document_id": "d7153b99-0550-5feb-8d53-1fc0002750e6",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Modes de vie et empreinte carbone\n\nText: ménages, et par la généralisation de nombreux équipements électroménagers. Les classes moyennes inférieures et les catégories plus modestes éprouvent un sentiment de perte de \npouvoir dachat. Seules les catégories aisées \nressentent une amélioration de leurs condi-tions de vie.  \n F2 \nLes 40 dernières années sont marquées par un bouleversement de la hiérarchie des postes de consommation chez les ménages. En 1960, \nles principaux postes de consommation sont \nhiérarchisés de la manière suivante : lalimen-\ntation, le logement, lhabillement et le trans-port, alors quen 2000, le logement représente \nle premier poste, viennent ensuite lalimenta-\ntion, le transport et les loisirs. Cette permuta-tion des postes de lalimentation et du loge-ment est provoquée par la baisse importante du coût de lalimentation et de lhabillement \n(Facteur 2) alors que les postes relevant du lo-\ngement et de santé sont multipliés par 2. Cette même période se caractérise par des distor -\nsions dans les volumes de dépenses selon les",
+              "metadata": {
+                "title": "Modes de vie et empreinte carbone",
+                "hal_id": "halshs-01822547",
+                "authors": [
+                  "Carine Barbier",
+                  "Cyria Emelianoff",
+                  "Elsa Mor",
+                  "Michelle Dobré",
+                  "Nathalie Blanc",
+                  "Agnes Sander",
+                  "Christine Castelain-Meunier",
+                  "Damien Joliton",
+                  "Prabodh Pourouchottamin",
+                  "Pierre Radanne",
+                  "Maxime Cordellier",
+                  "Nicolas Leroy"
+                ],
+                "version": "v0",
+                "citation": "Carine Barbier, Cyria Emelianoff, Elsa Mor, Michelle Dobré, Nathalie Blanc, et al.. Modes de vie et empreinte carbone \r\n. IDDRI, 21, 131 p., 2012, Les Cahiers du CLIP. ⟨halshs-01822547⟩",
+                "source_url": "https://hal.science/halshs-01822547",
+                "chunk_order": 76,
+                "description": "<b>Regards sur les modes de vie d’hier, d’aujourd’hui et de demain</b> Rétrospective des modes de vie de 1960 à nos jours La mobilité : entre constantes et ruptures Signaux faibles écologiques ou émergence de nouveaux mouvements sociaux silencieux ? L’essor des info-nano-bio-technologies : convergence vers l’avènement d’une posthumanité ? Science-fiction et modes de vie au futur <b>Description de cinq visions de modes de vie à l’horizon 2050</b> Méthodologie de construction des visions 2050 Société consumérisme vert Société individu augmenté Société duale et sobriété plurielle Société écocitoyenneté Société âge de la connaissance <b>Première évaluation des émissions de GES selon les cinq visions des modes de vie en 2050</b> Segmentation de la population française et méthode d’évaluation de l’empreinte carbone des ménages Émissions de GES à l’année de référence Bilan carbone d’une sélection de ménages en 2050 selon leurs usages Impact sur les résultats d’une modification des sources d’énergie mobilisées Conclusion <b>Pour un débat citoyen sur les modes de vie</b>",
+                "document_type": "OUV",
+                "publication_date": "2012-12-01",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "le changement structurel de la consommation des ménages"
+              }
+            }
+          },
+          {
+            "id": "eee0826",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 704,
+              "end": 713
+            },
+            "payload": {
+              "id": "eee0826e-440a-55bb-b543-a82186415872",
+              "document_id": "f0898d84-4329-55c5-ad75-76b7ee70a732",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: Modes de vie et empreinte carbone. Prospective des modes de vie en France à l'horizon 2050 et empreinte carbone\n\nText: ménages, et par la généralisation de nombreux équipements électroménagers. Les classes moyennes inférieures et les catégories plus modestes éprouvent un sentiment de perte de \npouvoir dachat. Seules les catégories aisées \nressentent une amélioration de leurs condi-tions de vie.  \n F2 \nLes 40 dernières années sont marquées par un bouleversement de la hiérarchie des postes de consommation chez les ménages. En 1960, \nles principaux postes de consommation sont \nhiérarchisés de la manière suivante : lalimen-\ntation, le logement, lhabillement et le trans-port, alors quen 2000, le logement représente \nle premier poste, viennent ensuite lalimenta-\ntion, le transport et les loisirs. Cette permuta-tion des postes de lalimentation et du loge-ment est provoquée par la baisse importante du coût de lalimentation et de lhabillement \n(Facteur 2) alors que les postes relevant du lo-\ngement et de santé sont multipliés par 2. Cette même période se caractérise par des distor -\nsions dans les volumes de dépenses selon les",
+              "metadata": {
+                "title": "Modes de vie et empreinte carbone. Prospective des modes de vie en France à l'horizon 2050 et empreinte carbone",
+                "hal_id": "hal-00865021",
+                "authors": [
+                  "Cyria Emelianoff",
+                  "Elsa Mor",
+                  "Michelle Dobré",
+                  "Maxime Cordellier",
+                  "Carine Barbier",
+                  "Nathalie Blanc",
+                  "Agnès Sander",
+                  "Christine Castelain-Meunier",
+                  "Damien Joliton",
+                  "Nicolas Leroy",
+                  "Prabodh Pourouchottamin",
+                  "Pierre Radanne"
+                ],
+                "version": "v0",
+                "citation": "Cyria Emelianoff, Elsa Mor, Michelle Dobré, Maxime Cordellier, Carine Barbier, et al.. Modes de vie et empreinte carbone. Prospective des modes de vie en France à l'horizon 2050 et empreinte carbone. [Rapport de recherche] Cahiers du CLIP n° 21, Ministère de l’Écologie et du Développement durable; IDDRI. 2012, 127 p. ⟨hal-00865021⟩",
+                "source_url": "https://hal.science/hal-00865021",
+                "chunk_order": 76,
+                "description": "Réalisé dans le cadre du projet de recherches PROMOV (Prospective des modes de vie urbains et Facteur 4), ce document propose une rétrospective des modes de vie énergétiques de 1960 à nos jours et explore les modes de vie du futur, en déclinant cinq visions de sociétés à l'horizon 2050. Il s'attache par exemple à décrire et scénariser les préférences des consommateurs en termes de mobilité. Il propose ainsi une première évaluation de l'empreinte carbone liée aux modes de vie des ménages, selon chacune de ces visions. Numéro de : Les cahiers du club d'ingénierie prospective énergie et environnement, no. 21 (décembre 2012). Organisme éditeur : le Club d'ingénierie prospective énergie et environnement / IDDRI. Le projet de recherche « Prospective des modes de vie à l’horizon 2050 » fait partie du programme « Repenser les villes dans la société postcarbone ». Lancé en 2008 par la Mission prospective du ministère de l’Écologie et du Développement durable, ce programme a été, à partir de 2009, copiloté par celle-ci et par le service Économie et prospective de l’Ademe (Agence de l’environnement et de la maîtrise de l’énergie). Présentation [extrait de l'introduction de Michel Colombier, directeur de publication des Cahiers du CLIP] : « [...] À l’heure où s’engage dans notre pays un grand débat sur la transition énergétique, la publication de prospectives extrêmes allant de \"l’individu augmenté\" à la \"société de la connaissance\" pourrait paraître déconnectée des enjeux réels de notre société. il me semble au contraire que ce détour est essentiel pour rappeler que le succès de ce débat, en ce qu’il réussira à mobiliser nos concitoyens et à fournir une ambition et une vision politique à la transition énergétique, reposera sur sa capacité à cerner les aspirations et les demandes parfois contradictoires des citoyens consommateurs concernant leur vie quotidienne et celle de leurs enfants, leur rapport au monde et à leurs voisins, leur revendication d’initiative et leur demande de politique publique. [...] » Le rapport est disponible sur : https://www.iddri.org/sites/default/files/import/publications/clip21_modes-de-vie-prospective-2050.pdf",
+                "document_type": "REPORT",
+                "publication_date": "2012-01-01",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "le changement structurel de la consommation des ménages"
+              }
+            }
+          },
+          {
+            "id": "b785cd2",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1006,
+              "end": 1015
+            },
+            "payload": {
+              "id": "b785cd20-f204-57ce-93f3-52cadad9ddd5",
+              "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016975308641975308,
+              "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: transports et si le débat mené autour de l induction du changement t echnique par les politiques \nclimatiques ne se doit pas dêtre élargi à la notion de changement structurel induit qui englobe aussi \nbien un impact des politiques climatiques sur l es évolutions technologiques que sur les politiques \ndinfrastructures, daménagement du territoire ou encore sur les préférences de consommation des \nménages.  Nous nous sommes limités dans cet te section à ne considérer qu une modification des politiques de \nconstruction des infrastructures de transport qui serait induite par les politiques climatiques. Lexploration des conséquences liées à cette nouvelle spécification doit nous permettre aussi \ndaborder la question des instruments requis pour atteindre un objectif ambitieux de limitation du \nchangement climatique. Nous p assons en effet dun cadre de modélisation où le signal de \ndécarbonisation nest contenu que dans la valeur donnée au carbone, à un cadre où nous ajoutons à",
+              "metadata": {
+                "title": "L'impact du changement technique endogène sur les politiques climatiques",
+                "hal_id": "tel-00489258",
+                "authors": "['Olivier Sassi']",
+                "version": "v0",
+                "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+                "source_url": "https://hal.science/tel-00489258",
+                "chunk_order": 1207,
+                "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+                "document_type": "THESE",
+                "publication_date": "2008-11-21",
+                "semantic_rank": 10,
+                "full_text_rank": 4,
+                "associated_query": "le changement structurel de la consommation des ménages"
+              }
+            }
+          },
+          {
+            "id": "1bc6e9e",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1017,
+              "end": 1026
+            },
+            "payload": {
+              "id": "1bc6e9e8-cb91-58e4-86db-e0d28b871359",
+              "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016919191919191917,
+              "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: - 225 - ces parts de budget : la part moyenne, à léchelle mondiale, du budget des ménages allouée à ces \ndépenses passe en effet dune valeur de 8. 4% en 2001 à une valeur de 11.1% en 2100. \nEnfin, il faut reconnaître dans ces résultats la réalisation du mécanisme décrit par Ghersi et \nHourcade (2006) qui soulignent, quen présence das ymptotes techniques, leffet réel dune taxe \ncarbone se réduit asymptotiquement. En effet, lorsque  les asymptotes sont atteintes, laugmentation \nde la taxe na plus quun effet nominal et, du fait du son recyclage macroéconomique, joue de \nmoins en moins sur les niveaux de loffre et de la demande. \n   \n2.2 Développement énergétique sous contrainte carbone \n \nLa taxe carbone induit dans léconomie des changements structurels et technologiques en \nfaveur (i) des activités faiblement intensives en  énergie et (ii) des sources énergétiques peu \nintensives en carbone.   \nUne réduction substantielle de la consommation finale dénergie  \n \nDans le scénario",
+              "metadata": {
+                "title": "L'impact du changement technique endogène sur les politiques climatiques",
+                "hal_id": "tel-00489258",
+                "authors": "['Olivier Sassi']",
+                "version": "v0",
+                "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+                "source_url": "https://hal.science/tel-00489258",
+                "chunk_order": 1063,
+                "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+                "document_type": "THESE",
+                "publication_date": "2008-11-21",
+                "semantic_rank": 10,
+                "full_text_rank": 5,
+                "associated_query": "le changement structurel de la consommation des ménages"
+              }
+            }
+          },
+          {
+            "id": "1bc6e9e",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1234,
+              "end": 1243
+            },
+            "payload": null
+          },
+          {
+            "id": "e4a482b",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1546,
+              "end": 1555
+            },
+            "payload": {
+              "id": "e4a482b2-4102-5461-8a55-4052873e8dae",
+              "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017156862745098037,
+              "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: composition de la demande des ménages et lé volution de lappareil productif (productivité \net capacité) ;  \n les changements techniques spécifiques  de loffre et de la demande dénergie : efficacité \nénergétique, substitutions entre énergies, rupt ures technologiques, effets dapprentissage sur \nles nouvelles technologies, évolution des ressources fossiles, etc \n Le point important est que la croissance économique  générée par le modèle  dans chaque région \ndépend à la fois de son moteur de  croissance, de ses évolutions te chnologiques, de lévolution de la \nstructure de sa consommation finale, ainsi que d es mécanismes dinterdépen dance avec les autres \nrégions. Cette section est limitée à la description du moteur de la croissance et du changement \nstructurel, tandis que nous consacrons le chap itre suivant aux modules dédiés au changement \ntechnique dans le secteur énergétique car ils constituen t la partie la plus co mplexe de la dynamique \ndu modèle.",
+              "metadata": {
+                "title": "L'impact du changement technique endogène sur les politiques climatiques",
+                "hal_id": "tel-00489258",
+                "authors": "['Olivier Sassi']",
+                "version": "v0",
+                "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+                "source_url": "https://hal.science/tel-00489258",
+                "chunk_order": 414,
+                "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+                "document_type": "THESE",
+                "publication_date": "2008-11-21",
+                "semantic_rank": 10,
+                "full_text_rank": 1,
+                "associated_query": "le changement structurel de la consommation des ménages"
+              }
+            }
+          },
+          {
+            "id": "e9f8d16",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1832,
+              "end": 1841
+            },
+            "payload": {
+              "id": "e9f8d168-2655-5a70-805e-92220a94d731",
+              "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017094017094017092,
+              "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: des résidences de type pavillonna ire à faible consommation dénergie, couplée à des progrès rapides \nsur lefficacité des véhicules automobiles seront des facteurs déterminants de la croissance de la \ndemande de mobilité.  \nEn dautres termes, il y a donc bien co-induction entre changement structurel et changement \ndes techniques, mais, pour la décrire, il faut adopter un cadre de modélisation en équilibre général  \nqui permette en plus de descendre, dans la description de la croissance  et de son contenu \nmatériel , aux mécanismes déterminants sur le l ong terme - localisation des activités, \ndématérialisation, technologies disponibles, etc..  et, logiquement, aux leviers daction collective \nqui pourront permettre de les infléchir dans la di rection souhaitée. Explorer  de telles implications \nsuppose de décrire les économies non seulement en termes de flux économiques mais en termes de \ncontenu  physique  : surface du parc bâti, m obilité, équipement des ménages, structure des",
+              "metadata": {
+                "title": "L'impact du changement technique endogène sur les politiques climatiques",
+                "hal_id": "tel-00489258",
+                "authors": "['Olivier Sassi']",
+                "version": "v0",
+                "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+                "source_url": "https://hal.science/tel-00489258",
+                "chunk_order": 242,
+                "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+                "document_type": "THESE",
+                "publication_date": "2008-11-21",
+                "semantic_rank": 10,
+                "full_text_rank": 2,
+                "associated_query": "le changement structurel de la consommation des ménages"
+              }
+            }
+          },
+          {
+            "id": "fadbd74",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2178,
+              "end": 2187
+            },
+            "payload": {
+              "id": "fadbd741-5565-54fb-b640-193c99bf816f",
+              "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016812865497076022,
+              "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: 11 Cest le montant par unité de consommation qui est égalitaire ; ce qui revient à donner à chaque ménage 0,5 fois plus à partir  \ndu second adulte et pour chaque adulte supplém entaire de plus de 14 ans, et 0,3 fois pl us pour chaque enfant supplémentaire de \nmoins de 14 ans. \n12 La redistribution des recettes en faveur du revenu des ménages, plutôt quen baisse  du coût du travail, induit un effet rebond  \nsur leur consommation dénergie et limite les changements techniques et structurels n écessaires à lessor de productions moins \nintensives en énergie.",
+              "metadata": {
+                "title": "Fiscalité carbone et progrès social. Application au cas français",
+                "hal_id": "tel-00813550",
+                "authors": [
+                  "Emmanuel Combet"
+                ],
+                "version": "v0",
+                "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+                "source_url": "https://hal.science/tel-00813550",
+                "chunk_order": 1273,
+                "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+                "document_type": "THESE",
+                "publication_date": "2013-04-09",
+                "semantic_rank": 10,
+                "full_text_rank": 7,
+                "associated_query": "le changement structurel de la consommation des ménages"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "e4a482b2-4102-5461-8a55-4052873e8dae",
+            "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017156862745098037,
+            "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: composition de la demande des ménages et lé volution de lappareil productif (productivité \net capacité) ;  \n les changements techniques spécifiques  de loffre et de la demande dénergie : efficacité \nénergétique, substitutions entre énergies, rupt ures technologiques, effets dapprentissage sur \nles nouvelles technologies, évolution des ressources fossiles, etc \n Le point important est que la croissance économique  générée par le modèle  dans chaque région \ndépend à la fois de son moteur de  croissance, de ses évolutions te chnologiques, de lévolution de la \nstructure de sa consommation finale, ainsi que d es mécanismes dinterdépen dance avec les autres \nrégions. Cette section est limitée à la description du moteur de la croissance et du changement \nstructurel, tandis que nous consacrons le chap itre suivant aux modules dédiés au changement \ntechnique dans le secteur énergétique car ils constituen t la partie la plus co mplexe de la dynamique \ndu modèle.",
+            "metadata": {
+              "title": "L'impact du changement technique endogène sur les politiques climatiques",
+              "hal_id": "tel-00489258",
+              "authors": "['Olivier Sassi']",
+              "version": "v0",
+              "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+              "source_url": "https://hal.science/tel-00489258",
+              "chunk_order": 414,
+              "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+              "document_type": "THESE",
+              "publication_date": "2008-11-21",
+              "semantic_rank": 10,
+              "full_text_rank": 1,
+              "associated_query": "le changement structurel de la consommation des ménages"
+            }
+          },
+          {
+            "id": "e9f8d168-2655-5a70-805e-92220a94d731",
+            "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017094017094017092,
+            "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: des résidences de type pavillonna ire à faible consommation dénergie, couplée à des progrès rapides \nsur lefficacité des véhicules automobiles seront des facteurs déterminants de la croissance de la \ndemande de mobilité.  \nEn dautres termes, il y a donc bien co-induction entre changement structurel et changement \ndes techniques, mais, pour la décrire, il faut adopter un cadre de modélisation en équilibre général  \nqui permette en plus de descendre, dans la description de la croissance  et de son contenu \nmatériel , aux mécanismes déterminants sur le l ong terme - localisation des activités, \ndématérialisation, technologies disponibles, etc..  et, logiquement, aux leviers daction collective \nqui pourront permettre de les infléchir dans la di rection souhaitée. Explorer  de telles implications \nsuppose de décrire les économies non seulement en termes de flux économiques mais en termes de \ncontenu  physique  : surface du parc bâti, m obilité, équipement des ménages, structure des",
+            "metadata": {
+              "title": "L'impact du changement technique endogène sur les politiques climatiques",
+              "hal_id": "tel-00489258",
+              "authors": "['Olivier Sassi']",
+              "version": "v0",
+              "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+              "source_url": "https://hal.science/tel-00489258",
+              "chunk_order": 242,
+              "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+              "document_type": "THESE",
+              "publication_date": "2008-11-21",
+              "semantic_rank": 10,
+              "full_text_rank": 2,
+              "associated_query": "le changement structurel de la consommation des ménages"
+            }
+          },
+          {
+            "id": "06934abb-a51b-50f7-b24c-f3d6658e22a3",
+            "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017033542976939202,
+            "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: climatiques permet une réduction significative des c oûts de la stabilisation mais ne conduit pas à un \nchangement radical quant à leur ordre de grandeur  : stabiliser la concentration atmosphérique de \nCO 2 à un niveau de 450 ppmv continue de coûter très cher. Il est dès lors légitime de vouloir vérifier \nsi ces coûts élevés ne procèdent pas des dynami ques spécifiques observées dans le secteur des \ntransports et si le débat mené autour de l induction du changement t echnique par les politiques \nclimatiques ne se doit pas dêtre élargi à la notion de changement structurel induit qui englobe aussi \nbien un impact des politiques climatiques sur l es évolutions technologiques que sur les politiques \ndinfrastructures, daménagement du territoire ou encore sur les préférences de consommation des \nménages.  Nous nous sommes limités dans cet te section à ne considérer qu une modification des politiques de",
+            "metadata": {
+              "title": "L'impact du changement technique endogène sur les politiques climatiques",
+              "hal_id": "tel-00489258",
+              "authors": "['Olivier Sassi']",
+              "version": "v0",
+              "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+              "source_url": "https://hal.science/tel-00489258",
+              "chunk_order": 1206,
+              "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+              "document_type": "THESE",
+              "publication_date": "2008-11-21",
+              "semantic_rank": 10,
+              "full_text_rank": 3,
+              "associated_query": "le changement structurel de la consommation des ménages"
+            }
+          },
+          {
+            "id": "554b6f84-1a82-5c62-a61b-a0ebb345b0c8",
+            "document_id": "d7153b99-0550-5feb-8d53-1fc0002750e6",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Modes de vie et empreinte carbone\n\nText: ménages, et par la généralisation de nombreux équipements électroménagers. Les classes moyennes inférieures et les catégories plus modestes éprouvent un sentiment de perte de \npouvoir dachat. Seules les catégories aisées \nressentent une amélioration de leurs condi-tions de vie.  \n F2 \nLes 40 dernières années sont marquées par un bouleversement de la hiérarchie des postes de consommation chez les ménages. En 1960, \nles principaux postes de consommation sont \nhiérarchisés de la manière suivante : lalimen-\ntation, le logement, lhabillement et le trans-port, alors quen 2000, le logement représente \nle premier poste, viennent ensuite lalimenta-\ntion, le transport et les loisirs. Cette permuta-tion des postes de lalimentation et du loge-ment est provoquée par la baisse importante du coût de lalimentation et de lhabillement \n(Facteur 2) alors que les postes relevant du lo-\ngement et de santé sont multipliés par 2. Cette même période se caractérise par des distor -\nsions dans les volumes de dépenses selon les",
+            "metadata": {
+              "title": "Modes de vie et empreinte carbone",
+              "hal_id": "halshs-01822547",
+              "authors": [
+                "Carine Barbier",
+                "Cyria Emelianoff",
+                "Elsa Mor",
+                "Michelle Dobré",
+                "Nathalie Blanc",
+                "Agnes Sander",
+                "Christine Castelain-Meunier",
+                "Damien Joliton",
+                "Prabodh Pourouchottamin",
+                "Pierre Radanne",
+                "Maxime Cordellier",
+                "Nicolas Leroy"
+              ],
+              "version": "v0",
+              "citation": "Carine Barbier, Cyria Emelianoff, Elsa Mor, Michelle Dobré, Nathalie Blanc, et al.. Modes de vie et empreinte carbone \r\n. IDDRI, 21, 131 p., 2012, Les Cahiers du CLIP. ⟨halshs-01822547⟩",
+              "source_url": "https://hal.science/halshs-01822547",
+              "chunk_order": 76,
+              "description": "<b>Regards sur les modes de vie d’hier, d’aujourd’hui et de demain</b> Rétrospective des modes de vie de 1960 à nos jours La mobilité : entre constantes et ruptures Signaux faibles écologiques ou émergence de nouveaux mouvements sociaux silencieux ? L’essor des info-nano-bio-technologies : convergence vers l’avènement d’une posthumanité ? Science-fiction et modes de vie au futur <b>Description de cinq visions de modes de vie à l’horizon 2050</b> Méthodologie de construction des visions 2050 Société consumérisme vert Société individu augmenté Société duale et sobriété plurielle Société écocitoyenneté Société âge de la connaissance <b>Première évaluation des émissions de GES selon les cinq visions des modes de vie en 2050</b> Segmentation de la population française et méthode d’évaluation de l’empreinte carbone des ménages Émissions de GES à l’année de référence Bilan carbone d’une sélection de ménages en 2050 selon leurs usages Impact sur les résultats d’une modification des sources d’énergie mobilisées Conclusion <b>Pour un débat citoyen sur les modes de vie</b>",
+              "document_type": "OUV",
+              "publication_date": "2012-12-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "le changement structurel de la consommation des ménages"
+            }
+          },
+          {
+            "id": "b785cd20-f204-57ce-93f3-52cadad9ddd5",
+            "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016975308641975308,
+            "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: transports et si le débat mené autour de l induction du changement t echnique par les politiques \nclimatiques ne se doit pas dêtre élargi à la notion de changement structurel induit qui englobe aussi \nbien un impact des politiques climatiques sur l es évolutions technologiques que sur les politiques \ndinfrastructures, daménagement du territoire ou encore sur les préférences de consommation des \nménages.  Nous nous sommes limités dans cet te section à ne considérer qu une modification des politiques de \nconstruction des infrastructures de transport qui serait induite par les politiques climatiques. Lexploration des conséquences liées à cette nouvelle spécification doit nous permettre aussi \ndaborder la question des instruments requis pour atteindre un objectif ambitieux de limitation du \nchangement climatique. Nous p assons en effet dun cadre de modélisation où le signal de \ndécarbonisation nest contenu que dans la valeur donnée au carbone, à un cadre où nous ajoutons à",
+            "metadata": {
+              "title": "L'impact du changement technique endogène sur les politiques climatiques",
+              "hal_id": "tel-00489258",
+              "authors": "['Olivier Sassi']",
+              "version": "v0",
+              "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+              "source_url": "https://hal.science/tel-00489258",
+              "chunk_order": 1207,
+              "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+              "document_type": "THESE",
+              "publication_date": "2008-11-21",
+              "semantic_rank": 10,
+              "full_text_rank": 4,
+              "associated_query": "le changement structurel de la consommation des ménages"
+            }
+          },
+          {
+            "id": "1bc6e9e8-cb91-58e4-86db-e0d28b871359",
+            "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016919191919191917,
+            "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: - 225 - ces parts de budget : la part moyenne, à léchelle mondiale, du budget des ménages allouée à ces \ndépenses passe en effet dune valeur de 8. 4% en 2001 à une valeur de 11.1% en 2100. \nEnfin, il faut reconnaître dans ces résultats la réalisation du mécanisme décrit par Ghersi et \nHourcade (2006) qui soulignent, quen présence das ymptotes techniques, leffet réel dune taxe \ncarbone se réduit asymptotiquement. En effet, lorsque  les asymptotes sont atteintes, laugmentation \nde la taxe na plus quun effet nominal et, du fait du son recyclage macroéconomique, joue de \nmoins en moins sur les niveaux de loffre et de la demande. \n   \n2.2 Développement énergétique sous contrainte carbone \n \nLa taxe carbone induit dans léconomie des changements structurels et technologiques en \nfaveur (i) des activités faiblement intensives en  énergie et (ii) des sources énergétiques peu \nintensives en carbone.   \nUne réduction substantielle de la consommation finale dénergie  \n \nDans le scénario",
+            "metadata": {
+              "title": "L'impact du changement technique endogène sur les politiques climatiques",
+              "hal_id": "tel-00489258",
+              "authors": "['Olivier Sassi']",
+              "version": "v0",
+              "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+              "source_url": "https://hal.science/tel-00489258",
+              "chunk_order": 1063,
+              "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+              "document_type": "THESE",
+              "publication_date": "2008-11-21",
+              "semantic_rank": 10,
+              "full_text_rank": 5,
+              "associated_query": "le changement structurel de la consommation des ménages"
+            }
+          },
+          {
+            "id": "6bd15904-61c5-55df-aaac-889be265eab2",
+            "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016865079365079364,
+            "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: cumulédesrégimesderetraites.\nLechocestsupposéseproduiredansundélaisuffisamment bref,quiestcompatible avecunerigiditétotaledes\nconsommations dénergie desménagesetdescoefficients techniques dessystèmes productifs18.Sousceshypothèses, le\nchangement structurel induitparlacomposante carboneréduitlécartentrelesperformances desdeuxdispositifs. La\ncomposante tempèreeffectivement lechocdeshaussesdeprixinduitessurlePIB,lemploietlaconsommation des\nménages(Tableau61).\nRecyclage Baisse des cotisations \nObjectif budgétaire Financement du déficit des retraites de 2011 à 2020 \nDispositif de réforme  BCS &TVA  TC200/BCS &TVA \nChoc sur le prix du pétrole 120/bl 180/bl 240/bl  120/bl 180/bl 240/bl \nAjustement du taux de TVA nécessaire +2,8 pts +3,5 pts +4,5 pts  +4,0 pts +5,0 pts +6,3 pts \nAllègements de CS -7,1 pts -7,3 pts -7,5 pts  -7,1 pts -7,3 pts -7,5 pts \nEmissions de CO 2 -0,2% +0,6% +1,6%  -27,6% -26,8% -25,8% \nProduit intérieur brut réel +3,6% +5,6% +8,3%  +2,6% +5,2% +8,7%",
+            "metadata": {
+              "title": "Fiscalité carbone et progrès social. Application au cas français",
+              "hal_id": "tel-00813550",
+              "authors": [
+                "Emmanuel Combet"
+              ],
+              "version": "v0",
+              "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+              "source_url": "https://hal.science/tel-00813550",
+              "chunk_order": 1444,
+              "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+              "document_type": "THESE",
+              "publication_date": "2013-04-09",
+              "semantic_rank": 10,
+              "full_text_rank": 6,
+              "associated_query": "le changement structurel de la consommation des ménages"
+            }
+          },
+          {
+            "id": "fadbd741-5565-54fb-b640-193c99bf816f",
+            "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016812865497076022,
+            "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: 11 Cest le montant par unité de consommation qui est égalitaire ; ce qui revient à donner à chaque ménage 0,5 fois plus à partir  \ndu second adulte et pour chaque adulte supplém entaire de plus de 14 ans, et 0,3 fois pl us pour chaque enfant supplémentaire de \nmoins de 14 ans. \n12 La redistribution des recettes en faveur du revenu des ménages, plutôt quen baisse  du coût du travail, induit un effet rebond  \nsur leur consommation dénergie et limite les changements techniques et structurels n écessaires à lessor de productions moins \nintensives en énergie.",
+            "metadata": {
+              "title": "Fiscalité carbone et progrès social. Application au cas français",
+              "hal_id": "tel-00813550",
+              "authors": [
+                "Emmanuel Combet"
+              ],
+              "version": "v0",
+              "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+              "source_url": "https://hal.science/tel-00813550",
+              "chunk_order": 1273,
+              "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+              "document_type": "THESE",
+              "publication_date": "2013-04-09",
+              "semantic_rank": 10,
+              "full_text_rank": 7,
+              "associated_query": "le changement structurel de la consommation des ménages"
+            }
+          },
+          {
+            "id": "a15854fa-8574-5bb9-a31d-c55e460f106b",
+            "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016762452107279693,
+            "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: pétroliersurleséconomies françaises de2020quirésultentdesajustements demoyentermeauxdeuxdispositifs de\nréformeprécédents :uneéconomie oùaucunecomposante carbonenauraitétéappliquée etuneautreoùcette\ncomposante seraitprésenteetatteindrait 200/tCO2. Commeprécédemment, nouscomparons lesperformances deces\ndispositifs àceuxdunsimplereportdelâgelégaldedépartenretraiteetdanschacunedesconjonctures deprixdubaril\ndebrut.Enfin,lensemble decesdispositifs deréformerespectetoujourslamêmeexigencedefinancement dudéficit\ncumulédesrégimesderetraites.\nLechocestsupposéseproduiredansundélaisuffisamment bref,quiestcompatible avecunerigiditétotaledes\nconsommations dénergie desménagesetdescoefficients techniques dessystèmes productifs18.Sousceshypothèses, le\nchangement structurel induitparlacomposante carboneréduitlécartentrelesperformances desdeuxdispositifs. La\ncomposante tempèreeffectivement lechocdeshaussesdeprixinduitessurlePIB,lemploietlaconsommation des\nménages(Tableau61).\nRecyclage Baisse des cotisations",
+            "metadata": {
+              "title": "Fiscalité carbone et progrès social. Application au cas français",
+              "hal_id": "tel-00813550",
+              "authors": [
+                "Emmanuel Combet"
+              ],
+              "version": "v0",
+              "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+              "source_url": "https://hal.science/tel-00813550",
+              "chunk_order": 1443,
+              "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+              "document_type": "THESE",
+              "publication_date": "2013-04-09",
+              "semantic_rank": 10,
+              "full_text_rank": 8,
+              "associated_query": "le changement structurel de la consommation des ménages"
+            }
+          },
+          {
+            "id": "eee0826e-440a-55bb-b543-a82186415872",
+            "document_id": "f0898d84-4329-55c5-ad75-76b7ee70a732",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Modes de vie et empreinte carbone. Prospective des modes de vie en France à l'horizon 2050 et empreinte carbone\n\nText: ménages, et par la généralisation de nombreux équipements électroménagers. Les classes moyennes inférieures et les catégories plus modestes éprouvent un sentiment de perte de \npouvoir dachat. Seules les catégories aisées \nressentent une amélioration de leurs condi-tions de vie.  \n F2 \nLes 40 dernières années sont marquées par un bouleversement de la hiérarchie des postes de consommation chez les ménages. En 1960, \nles principaux postes de consommation sont \nhiérarchisés de la manière suivante : lalimen-\ntation, le logement, lhabillement et le trans-port, alors quen 2000, le logement représente \nle premier poste, viennent ensuite lalimenta-\ntion, le transport et les loisirs. Cette permuta-tion des postes de lalimentation et du loge-ment est provoquée par la baisse importante du coût de lalimentation et de lhabillement \n(Facteur 2) alors que les postes relevant du lo-\ngement et de santé sont multipliés par 2. Cette même période se caractérise par des distor -\nsions dans les volumes de dépenses selon les",
+            "metadata": {
+              "title": "Modes de vie et empreinte carbone. Prospective des modes de vie en France à l'horizon 2050 et empreinte carbone",
+              "hal_id": "hal-00865021",
+              "authors": [
+                "Cyria Emelianoff",
+                "Elsa Mor",
+                "Michelle Dobré",
+                "Maxime Cordellier",
+                "Carine Barbier",
+                "Nathalie Blanc",
+                "Agnès Sander",
+                "Christine Castelain-Meunier",
+                "Damien Joliton",
+                "Nicolas Leroy",
+                "Prabodh Pourouchottamin",
+                "Pierre Radanne"
+              ],
+              "version": "v0",
+              "citation": "Cyria Emelianoff, Elsa Mor, Michelle Dobré, Maxime Cordellier, Carine Barbier, et al.. Modes de vie et empreinte carbone. Prospective des modes de vie en France à l'horizon 2050 et empreinte carbone. [Rapport de recherche] Cahiers du CLIP n° 21, Ministère de l’Écologie et du Développement durable; IDDRI. 2012, 127 p. ⟨hal-00865021⟩",
+              "source_url": "https://hal.science/hal-00865021",
+              "chunk_order": 76,
+              "description": "Réalisé dans le cadre du projet de recherches PROMOV (Prospective des modes de vie urbains et Facteur 4), ce document propose une rétrospective des modes de vie énergétiques de 1960 à nos jours et explore les modes de vie du futur, en déclinant cinq visions de sociétés à l'horizon 2050. Il s'attache par exemple à décrire et scénariser les préférences des consommateurs en termes de mobilité. Il propose ainsi une première évaluation de l'empreinte carbone liée aux modes de vie des ménages, selon chacune de ces visions. Numéro de : Les cahiers du club d'ingénierie prospective énergie et environnement, no. 21 (décembre 2012). Organisme éditeur : le Club d'ingénierie prospective énergie et environnement / IDDRI. Le projet de recherche « Prospective des modes de vie à l’horizon 2050 » fait partie du programme « Repenser les villes dans la société postcarbone ». Lancé en 2008 par la Mission prospective du ministère de l’Écologie et du Développement durable, ce programme a été, à partir de 2009, copiloté par celle-ci et par le service Économie et prospective de l’Ademe (Agence de l’environnement et de la maîtrise de l’énergie). Présentation [extrait de l'introduction de Michel Colombier, directeur de publication des Cahiers du CLIP] : « [...] À l’heure où s’engage dans notre pays un grand débat sur la transition énergétique, la publication de prospectives extrêmes allant de \"l’individu augmenté\" à la \"société de la connaissance\" pourrait paraître déconnectée des enjeux réels de notre société. il me semble au contraire que ce détour est essentiel pour rappeler que le succès de ce débat, en ce qu’il réussira à mobiliser nos concitoyens et à fournir une ambition et une vision politique à la transition énergétique, reposera sur sa capacité à cerner les aspirations et les demandes parfois contradictoires des citoyens consommateurs concernant leur vie quotidienne et celle de leurs enfants, leur rapport au monde et à leurs voisins, leur revendication d’initiative et leur demande de politique publique. [...] » Le rapport est disponible sur : https://www.iddri.org/sites/default/files/import/publications/clip21_modes-de-vie-prospective-2050.pdf",
+              "document_type": "REPORT",
+              "publication_date": "2012-01-01",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "le changement structurel de la consommation des ménages"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2440,
+            "total_tokens": 2440
+          }
+        }
+      },
+      "duration": 4964
+    },
+    "retrievalTime": 3261,
+    "generationTime": 4964,
+    "timestamp": "2025-07-11T13:50:21.315Z"
+  },
+  "server_context": {
+    "client_ip": "93.5.218.62",
+    "forwarded_for": "93.5.218.62",
+    "received_at": "2025-07-11T13:50:21.460847+00:00",
+    "server_version": "1.0.0"
+  }
+}

@@ -1,0 +1,487 @@
+{
+  "sessionId": "session_1752170012739_64e6b366d3s5dh2w",
+  "timestamp": "20250710T175832768Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752170309393_qrqcauf",
+    "response": {
+      "results": {
+        "generated_answer": "To address WP6, which focuses on developing a theoretical AI-Powered Energy Management Model, several relevant points from the provided context can be integrated:\n\n1. **Implementation of Machine Learning Techniques**:\n   - The context mentions the development of models for simulation and control of micro-grids, which includes the deployment of monitoring tools and the collection of measurement data [492e5a4], [ce7e684]. This aligns with the goal of implementing machine learning techniques such as Markov models and neural networks to optimize grid efficiency.\n   - The development of identification methods to correct and increase the quantitative capacity of prediction models [492e5a4], [ce7e684] supports the use of advanced machine learning techniques for grid optimization.\n\n2. **Creating Predictive Models**:\n   - The context discusses the development of predictive models for simulation and control of micro-grids, including the use of weather and occupant behavior forecasts to develop anticipative and real-time control algorithms [6679bf9]. This directly supports the creation of predictive models for demand forecasting, outage prevention, and real-time grid monitoring.\n   - The development of models and optimization strategies for optimal anticipative and reactive management of micro-grids [492e5a4], [ce7e684] further supports the goal of creating predictive models for grid management.\n\n3. **Deliverables**:\n   - The context mentions the development of technical reports and academic manuscripts as part of the research projects [492e5a4], [ce7e684], [6679bf9]. This aligns with the deliverables specified for WP6.\n\nIn summary, the context provides strong support for the implementation of machine learning techniques and the creation of predictive models for smart grid management. The deliverables of technical reports and academic manuscripts are also well-aligned with the proposed activities.",
+        "citations": [
+          {
+            "id": "492e5a4",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 402,
+              "end": 411
+            },
+            "payload": {
+              "id": "492e5a4a-d90e-5ac5-a629-e8ce0d50c8be",
+              "document_id": "67c93534-1484-5842-939c-fac4cb18d699",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31\n\nText: building\nDeployment of monitoring tools and collect of \nmeasurement data in the USTH micro-grid\nDevelopment of models for simulation of all the \ncomponents (PV , batteries, load)\nConfrontation of measurement data and simulation \nresults\nDevelopment of identification method in order to \ncorrect and increase the quantitative capacity of \nprediction of models\nThesis 5 (proposed):\nDevelopment and implementation of models and optimisation  \nstrategies for optimal anticipative management for the USTH \nmicro-grid for building. Development of models and \noptimisation strategies for optimal reactive management. The \ngoals of the anticipative and reactive optimal management \nstrategies can be minimising the economical cost. But one \nmore interesting scientific and technological goal should be to  \nincrease the auto-consumption, what means maximizing the \ncapability of the building, by using its own energy production,  \nand its storage capacity, to produce its own energy.\nThesis 6 (proposed)",
+              "metadata": {
+                "title": "Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31",
+                "hal_id": "hal-01264985",
+                "authors": [
+                  "Minh Ha-Duong",
+                  "Hoang Anh Tran"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong, Hoang Anh Tran. Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31. [Research Report] USTH. 2016. ⟨hal-01264985⟩",
+                "source_url": "https://hal.science/hal-01264985",
+                "chunk_order": 72,
+                "description": "The Clean Energy and Sustainable Development laboratory – CleanED – was established in December 2014 with support from USTH and French Embassy in Hanoi. In September 2015, CleanED lab counted five researchers from France and Vietnam, five doctoral fellows and two internationally qualified staff. This international and interdisciplinary research team gets the mission to contribute to the green growth of the energy sector in Vietnam. Its expertise ranges from engineering to public policy on: Natural resources characterization and management Biomass and waste to energy conversion process technologies Energy systems optimization from smart grid to national plans",
+                "document_type": "REPORT",
+                "publication_date": "2016-01-27",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "**WP6. Developing a theoretical AI-Powered Energy Management Model**\n\nWP6 will demonstrate how IA can improve the smart grid stability and\nefficiency.\n\n-   Implementing machine learning techniques (Markov models, neural\n    networks) to optimize grid efficiency.\n\n-   Creating predictive models for demand forecasting, outage\n    prevention, and real-time grid monitoring.\n\nDeliverable: Technical report, academic manuscript."
+              }
+            }
+          },
+          {
+            "id": "ce7e684",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 413,
+              "end": 422
+            },
+            "payload": {
+              "id": "ce7e6840-4a02-5c87-a66a-bd75dd3ac34b",
+              "document_id": "67c93534-1484-5842-939c-fac4cb18d699",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016098765432098764,
+              "text": "Document Title: Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31\n\nText: The first context will be co-firing of waste from rice \nproduction into coal power plants.The target groups for use of sustainability indicators include \npolicy makers, business people, and other stakeholders in all \nstages of the supply chain from land managers or waste \nsuppliers to those involved in logistics, conversion facilities \nand end users.  \nThesis 4 (proposed): Modelisation and identification of \nmodels for simulation and control of the USTH micro-grid for  \nbuilding\nDeployment of monitoring tools and collect of \nmeasurement data in the USTH micro-grid\nDevelopment of models for simulation of all the \ncomponents (PV , batteries, load)\nConfrontation of measurement data and simulation \nresults\nDevelopment of identification method in order to \ncorrect and increase the quantitative capacity of \nprediction of models\nThesis 5 (proposed):\nDevelopment and implementation of models and optimisation  \nstrategies for optimal anticipative management for the USTH",
+              "metadata": {
+                "title": "Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31",
+                "hal_id": "hal-01264985",
+                "authors": [
+                  "Minh Ha-Duong",
+                  "Hoang Anh Tran"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong, Hoang Anh Tran. Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31. [Research Report] USTH. 2016. ⟨hal-01264985⟩",
+                "source_url": "https://hal.science/hal-01264985",
+                "chunk_order": 71,
+                "description": "The Clean Energy and Sustainable Development laboratory – CleanED – was established in December 2014 with support from USTH and French Embassy in Hanoi. In September 2015, CleanED lab counted five researchers from France and Vietnam, five doctoral fellows and two internationally qualified staff. This international and interdisciplinary research team gets the mission to contribute to the green growth of the energy sector in Vietnam. Its expertise ranges from engineering to public policy on: Natural resources characterization and management Biomass and waste to energy conversion process technologies Energy systems optimization from smart grid to national plans",
+                "document_type": "REPORT",
+                "publication_date": "2016-01-27",
+                "semantic_rank": 4,
+                "full_text_rank": 200,
+                "associated_query": "**WP6. Developing a theoretical AI-Powered Energy Management Model**\n\nWP6 will demonstrate how IA can improve the smart grid stability and\nefficiency.\n\n-   Implementing machine learning techniques (Markov models, neural\n    networks) to optimize grid efficiency.\n\n-   Creating predictive models for demand forecasting, outage\n    prevention, and real-time grid monitoring.\n\nDeliverable: Technical report, academic manuscript."
+              }
+            }
+          },
+          {
+            "id": "492e5a4",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 683,
+              "end": 692
+            },
+            "payload": null
+          },
+          {
+            "id": "ce7e684",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 694,
+              "end": 703
+            },
+            "payload": null
+          },
+          {
+            "id": "6679bf9",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1045,
+              "end": 1054
+            },
+            "payload": {
+              "id": "6679bf9a-b4ac-5f7c-9685-93031bb52a3e",
+              "document_id": "67c93534-1484-5842-939c-fac4cb18d699",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31\n\nText: predictors based on weather and occupant behavior forecast, \nand then developing and testing anticipative and real-time \ncontrol algorithms considering three different goals: 1) auto-\nconsumption, 2) cost reduction 3) load peak shaving. The \noptional third year will allow to implement the algorithms in \nthe platform for empirical validation and performance \nassessement.\n7.4. RESEARCH PROJECTS PROPOSED\nThe following projects have been proposed but not funded in \n2015. We look forward to improve according to the \nevaluation results and resubmit in 2016.\nProject 1: Projet International de Coopération Scientifique - \nPICS titled Measuring the sustainability of renewable energy  \ndevelopment in Vietnam between CleanED lab - USTH and \nCIRED - CNRS. See section 4.3 page 7.\nProject 2: Integrated Renewable Energy Database IRED \nproject of Ministry of Industry and Trade MOIT. This project  \nwill support MOIT and relevant governmental agencies/local \nauthorities in policy development, planning, monitoring and",
+              "metadata": {
+                "title": "Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31",
+                "hal_id": "hal-01264985",
+                "authors": [
+                  "Minh Ha-Duong",
+                  "Hoang Anh Tran"
+                ],
+                "version": "v0",
+                "citation": "Minh Ha-Duong, Hoang Anh Tran. Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31. [Research Report] USTH. 2016. ⟨hal-01264985⟩",
+                "source_url": "https://hal.science/hal-01264985",
+                "chunk_order": 85,
+                "description": "The Clean Energy and Sustainable Development laboratory – CleanED – was established in December 2014 with support from USTH and French Embassy in Hanoi. In September 2015, CleanED lab counted five researchers from France and Vietnam, five doctoral fellows and two internationally qualified staff. This international and interdisciplinary research team gets the mission to contribute to the green growth of the energy sector in Vietnam. Its expertise ranges from engineering to public policy on: Natural resources characterization and management Biomass and waste to energy conversion process technologies Energy systems optimization from smart grid to national plans",
+                "document_type": "REPORT",
+                "publication_date": "2016-01-27",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "**WP6. Developing a theoretical AI-Powered Energy Management Model**\n\nWP6 will demonstrate how IA can improve the smart grid stability and\nefficiency.\n\n-   Implementing machine learning techniques (Markov models, neural\n    networks) to optimize grid efficiency.\n\n-   Creating predictive models for demand forecasting, outage\n    prevention, and real-time grid monitoring.\n\nDeliverable: Technical report, academic manuscript."
+              }
+            }
+          },
+          {
+            "id": "492e5a4",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1310,
+              "end": 1319
+            },
+            "payload": null
+          },
+          {
+            "id": "ce7e684",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1321,
+              "end": 1330
+            },
+            "payload": null
+          },
+          {
+            "id": "492e5a4",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1551,
+              "end": 1560
+            },
+            "payload": null
+          },
+          {
+            "id": "ce7e684",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1562,
+              "end": 1571
+            },
+            "payload": null
+          },
+          {
+            "id": "6679bf9",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1573,
+              "end": 1582
+            },
+            "payload": null
+          }
+        ],
+        "search_results": [
+          {
+            "id": "492e5a4a-d90e-5ac5-a629-e8ce0d50c8be",
+            "document_id": "67c93534-1484-5842-939c-fac4cb18d699",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31\n\nText: building\nDeployment of monitoring tools and collect of \nmeasurement data in the USTH micro-grid\nDevelopment of models for simulation of all the \ncomponents (PV , batteries, load)\nConfrontation of measurement data and simulation \nresults\nDevelopment of identification method in order to \ncorrect and increase the quantitative capacity of \nprediction of models\nThesis 5 (proposed):\nDevelopment and implementation of models and optimisation  \nstrategies for optimal anticipative management for the USTH \nmicro-grid for building. Development of models and \noptimisation strategies for optimal reactive management. The \ngoals of the anticipative and reactive optimal management \nstrategies can be minimising the economical cost. But one \nmore interesting scientific and technological goal should be to  \nincrease the auto-consumption, what means maximizing the \ncapability of the building, by using its own energy production,  \nand its storage capacity, to produce its own energy.\nThesis 6 (proposed)",
+            "metadata": {
+              "title": "Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31",
+              "hal_id": "hal-01264985",
+              "authors": [
+                "Minh Ha-Duong",
+                "Hoang Anh Tran"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Hoang Anh Tran. Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31. [Research Report] USTH. 2016. ⟨hal-01264985⟩",
+              "source_url": "https://hal.science/hal-01264985",
+              "chunk_order": 72,
+              "description": "The Clean Energy and Sustainable Development laboratory – CleanED – was established in December 2014 with support from USTH and French Embassy in Hanoi. In September 2015, CleanED lab counted five researchers from France and Vietnam, five doctoral fellows and two internationally qualified staff. This international and interdisciplinary research team gets the mission to contribute to the green growth of the energy sector in Vietnam. Its expertise ranges from engineering to public policy on: Natural resources characterization and management Biomass and waste to energy conversion process technologies Energy systems optimization from smart grid to national plans",
+              "document_type": "REPORT",
+              "publication_date": "2016-01-27",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "**WP6. Developing a theoretical AI-Powered Energy Management Model**\n\nWP6 will demonstrate how IA can improve the smart grid stability and\nefficiency.\n\n-   Implementing machine learning techniques (Markov models, neural\n    networks) to optimize grid efficiency.\n\n-   Creating predictive models for demand forecasting, outage\n    prevention, and real-time grid monitoring.\n\nDeliverable: Technical report, academic manuscript."
+            }
+          },
+          {
+            "id": "47e3be3b-b9d7-5ca3-863d-b6097de04069",
+            "document_id": "67c93534-1484-5842-939c-fac4cb18d699",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31\n\nText: micro-grid for building. Development of models and \noptimisation strategies for optimal reactive management. The \ngoals of the anticipative and reactive optimal management \nstrategies can be minimising the economical cost. But one \nmore interesting scientific and technological goal should be to  \nincrease the auto-consumption, what means maximizing the \ncapability of the building, by using its own energy production,  \nand its storage capacity, to produce its own energy.\nThesis 6 (proposed)\nWe are also investigating the fundability of a research thesis \non solar electricity solutions toward urban sustainable \ndevelopment in Vietnam. The variable nature of solar PV \nposes challenges to traditional electricity generation, \ntransmission and distribution that can act as a barrier for \nscale-up and increase system costs. Even with incentive \nschemes in place, such as the feed-in tariff currently under \npreparation, additional investments in power system planning",
+            "metadata": {
+              "title": "Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31",
+              "hal_id": "hal-01264985",
+              "authors": [
+                "Minh Ha-Duong",
+                "Hoang Anh Tran"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Hoang Anh Tran. Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31. [Research Report] USTH. 2016. ⟨hal-01264985⟩",
+              "source_url": "https://hal.science/hal-01264985",
+              "chunk_order": 73,
+              "description": "The Clean Energy and Sustainable Development laboratory – CleanED – was established in December 2014 with support from USTH and French Embassy in Hanoi. In September 2015, CleanED lab counted five researchers from France and Vietnam, five doctoral fellows and two internationally qualified staff. This international and interdisciplinary research team gets the mission to contribute to the green growth of the energy sector in Vietnam. Its expertise ranges from engineering to public policy on: Natural resources characterization and management Biomass and waste to energy conversion process technologies Energy systems optimization from smart grid to national plans",
+              "document_type": "REPORT",
+              "publication_date": "2016-01-27",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "**WP6. Developing a theoretical AI-Powered Energy Management Model**\n\nWP6 will demonstrate how IA can improve the smart grid stability and\nefficiency.\n\n-   Implementing machine learning techniques (Markov models, neural\n    networks) to optimize grid efficiency.\n\n-   Creating predictive models for demand forecasting, outage\n    prevention, and real-time grid monitoring.\n\nDeliverable: Technical report, academic manuscript."
+            }
+          },
+          {
+            "id": "1683c1a9-3b73-5169-93a4-23bdecf0a8f3",
+            "document_id": "d48d013b-758a-500e-829f-8900d632c4c3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Low carbon strategies need to tackle the carbon footprint of materials production\n\nText: 6 1. Methods  \nOur study involved a n hybrid Input -Output (IO) model called MatMat we developed20 based on extending \nexisting works7,8,21 23 and following key modeling principles of the IE community24,25 allowing flexibility, \nreproduction, and transposition to other case studies. It aims to fill existing gaps between Integrated \nAssessment Modelling (IAM) and Industrial Ecology (IE) communities10,17 about global supply chains and the \nlife-cycle perspective  of future energy and materials systems at a national scale. In particular, it has been \ndesigned (i) to perform static analysis of the current economy but also prospective studies through the \nintegration of exogenous scenarios from various sets of expertis e about low -carbon scenarios, (ii) to \ndisentangling the link between GHG emissions, investments demand and materials production along the \nsupply chains from abroad and domestic producers to final domestic energy services. In particular, the",
+            "metadata": {
+              "title": "Low carbon strategies need to tackle the carbon footprint of materials production",
+              "hal_id": "hal-04709787",
+              "authors": [
+                "Antoine Teixeira",
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Antoine Teixeira, Julien Lefevre. Low carbon strategies need to tackle the carbon footprint of materials production. AFD Research Paper Series, 2023, 274, pp.1-21. ⟨hal-04709787⟩",
+              "source_url": "https://hal.science/hal-04709787",
+              "chunk_order": 24,
+              "description": "Like Net-Zero GHG emissions (NZE) country goals which have recently multiplied, national low carbon strategies currently focus on reducing direct territorial emissions across sectors, such as domestic energy, transport, buildings and industry sectors. Doing so they do not tackle emissions embodied in imports and insufficiently emissions related to base carbon-intensive materials production which are used across sectors including for capital formation. However the carbon footprint of materials production (CFM) represents a high share of global emissions and is mostly embodied in imports in many rich countries. Here we develop a novel framework to assess and map the carbon footprint of materials at the country level in the present situation and in future scenarios. Replicable for other countries, our framework is applied to the case of France. We find that although territorial emissions from materials supply only stand for 53 MtCO2eq in 2015, the CFM amounts to 228 MtCO2eq, i.e. 3.4 tCO2e/cap with a high share of imported emissions. Furthermore, we show that current NZE strategy only reduces the carbon footprint by 46% by 2050 compared to 2015 as it barely abates the CFM. All final goods and services contribute meaningfully to the current and future CFM, in particular final services. Mapping the French CFM across supply chains and trade flows allows to identify key policy interventions towards more sustainable NZE strategies",
+              "document_type": "ART",
+              "publication_date": "2023-01-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "**WP6. Developing a theoretical AI-Powered Energy Management Model**\n\nWP6 will demonstrate how IA can improve the smart grid stability and\nefficiency.\n\n-   Implementing machine learning techniques (Markov models, neural\n    networks) to optimize grid efficiency.\n\n-   Creating predictive models for demand forecasting, outage\n    prevention, and real-time grid monitoring.\n\nDeliverable: Technical report, academic manuscript."
+            }
+          },
+          {
+            "id": "ce7e6840-4a02-5c87-a66a-bd75dd3ac34b",
+            "document_id": "67c93534-1484-5842-939c-fac4cb18d699",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31\n\nText: The first context will be co-firing of waste from rice \nproduction into coal power plants.The target groups for use of sustainability indicators include \npolicy makers, business people, and other stakeholders in all \nstages of the supply chain from land managers or waste \nsuppliers to those involved in logistics, conversion facilities \nand end users.  \nThesis 4 (proposed): Modelisation and identification of \nmodels for simulation and control of the USTH micro-grid for  \nbuilding\nDeployment of monitoring tools and collect of \nmeasurement data in the USTH micro-grid\nDevelopment of models for simulation of all the \ncomponents (PV , batteries, load)\nConfrontation of measurement data and simulation \nresults\nDevelopment of identification method in order to \ncorrect and increase the quantitative capacity of \nprediction of models\nThesis 5 (proposed):\nDevelopment and implementation of models and optimisation  \nstrategies for optimal anticipative management for the USTH",
+            "metadata": {
+              "title": "Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31",
+              "hal_id": "hal-01264985",
+              "authors": [
+                "Minh Ha-Duong",
+                "Hoang Anh Tran"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Hoang Anh Tran. Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31. [Research Report] USTH. 2016. ⟨hal-01264985⟩",
+              "source_url": "https://hal.science/hal-01264985",
+              "chunk_order": 71,
+              "description": "The Clean Energy and Sustainable Development laboratory – CleanED – was established in December 2014 with support from USTH and French Embassy in Hanoi. In September 2015, CleanED lab counted five researchers from France and Vietnam, five doctoral fellows and two internationally qualified staff. This international and interdisciplinary research team gets the mission to contribute to the green growth of the energy sector in Vietnam. Its expertise ranges from engineering to public policy on: Natural resources characterization and management Biomass and waste to energy conversion process technologies Energy systems optimization from smart grid to national plans",
+              "document_type": "REPORT",
+              "publication_date": "2016-01-27",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "**WP6. Developing a theoretical AI-Powered Energy Management Model**\n\nWP6 will demonstrate how IA can improve the smart grid stability and\nefficiency.\n\n-   Implementing machine learning techniques (Markov models, neural\n    networks) to optimize grid efficiency.\n\n-   Creating predictive models for demand forecasting, outage\n    prevention, and real-time grid monitoring.\n\nDeliverable: Technical report, academic manuscript."
+            }
+          },
+          {
+            "id": "19666acd-5872-55e7-8c65-655407119297",
+            "document_id": "2613e77a-7e58-51c5-844f-e43ec4a12d7d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Reconciling top-down and bottom-up energy/economy models: a case of TIAM-FR and IMACLIM-R\n\nText: www.modelisation-prospective.orgWWorking Paper \nN2017-02-26\n             \n               \n             \n          \n               \n                \n          \n             \n           \n          \n           \n          \n             \n             \n               \n               \n                    \n        \n                \n               \n             \n          \n               \n                \n          \n             \n           \n          \n           \n          \n             \n             \n               \n               \n                    \n        \n   trprogramming, optimisation model \ndetailed description of existing and\nays of all energy carriers from thheir\ngies. TIAM-FR computes a partial\niod, energy demand and supply are \nt present at every level of thhee n e r g y\nvices.\nlmobilises four types of entities\nquantities to be determined by the\nsed or maximised; (iii) constraints:\nt f must be satis fiied by thhe optimal\nesses, technologies, etc. All TIAM-",
+            "metadata": {
+              "title": "Reconciling top-down and bottom-up energy/economy models: a case of TIAM-FR and IMACLIM-R",
+              "hal_id": "hal-01734872",
+              "authors": "['Edi Assoumou', 'Frédéric Ghersi', 'Jean Charles Hourcade', 'Li Jun', 'Nadia Maïzi', 'Sandrine Selosse']",
+              "version": "v0",
+              "citation": "Edi Assoumou, Frédéric Ghersi, Jean Charles Hourcade, Li Jun, Nadia Maïzi, et al.. Reconciling top-down and bottom-up energy/economy models: a case of TIAM-FR and IMACLIM-R. 2018. ⟨hal-01734872⟩",
+              "source_url": "https://hal.science/hal-01734872",
+              "chunk_order": 25,
+              "description": "Recent global economic and environmental forecasts consistently show a trend of continuous decline in natural resources, degradation of environmental quality, increasing vulnerability of economic growth as a result of environmental stress, competition for land and natural resources, soaring energy prices and climate change. These forecasts partly rest on significant efforts by the scientific community over the past three decades to improve knowledge of the interactions between economic growth and the environment; particularly modelling methods have developed to become increasingly applied to the assessment of the environmental and economic consequences of various energy demand and greenhouse gas policies. However, the significantly diverging viewpoints of models developed by energy engineers, or ‘bottom-up’ (BU) models, and those developed by economists, or ‘top-down’ (TD) models, hinder effective dialogue and mutual understanding between researchers from different academic backgrounds. The purpose of this paper is to promote a constructive dialogue between modellers from each side of the modelling paradigms, based on a comparative critique of the BU TIAM-FR model and the TD IMACLIM-R model. The comparison terms extend from the theoretical foundations of each model to their structure and specifications, and applicability to policy assessment. Preliminary numerical simulations are developed to demonstrate the relevance of linking the two models, while the technical challenges and methodological limitations of coupled simulations are addressed.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2018-03-15",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "**WP6. Developing a theoretical AI-Powered Energy Management Model**\n\nWP6 will demonstrate how IA can improve the smart grid stability and\nefficiency.\n\n-   Implementing machine learning techniques (Markov models, neural\n    networks) to optimize grid efficiency.\n\n-   Creating predictive models for demand forecasting, outage\n    prevention, and real-time grid monitoring.\n\nDeliverable: Technical report, academic manuscript."
+            }
+          },
+          {
+            "id": "e6208015-17ac-5f99-b027-2332711e989b",
+            "document_id": "11106f45-4f62-54b9-b5f9-89999a1f3639",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Demand-side strategies enable rapid and deep cuts in buildings and transport emissions to 2050\n\nText: and technological development. However, in recent years, IAMs have \nimproved their representation of energy-demand sectors, particularly \nin the buildings and transport sectors. These advancements are driven \nby rapid technological advancements, such as electric mobility and \nheat pumps, necessitating ongoing model updates. The improvements \nencompass various aspects, including alternative electrification path-\nways in transport26,27, more diverse building types and expanded options \nfor renovations in buildings28 30 and improvements in the representa -\ntion of international transport31 34. Moreover, gradual advancements  \nhave been made in modelling behavioural transitions within IAMs35,36.\nOur study leverages the modelling improvements of multiple \nIAMs (COFFEE, IMACLIM-R, IMAGE, MESSAGEix-Buildings, PRO -\nMETHEUS, REMIND and WITCH) to analyse the relative importance \nof key demand-side mitigation strategies, examining specifically the \nareas of buildings and transport, including personal mobility and",
+            "metadata": {
+              "doi": "10.1038/s41560-025-01703-1",
+              "title": "Demand-side strategies enable rapid and deep cuts in buildings and transport emissions to 2050",
+              "hal_id": "hal-04985303",
+              "authors": "['Rik van Heerden', 'Oreane Y Edelenbosch', 'Vassilis Daioglou', 'Thomas Le Gallic', 'Luiz Bernardo Baptista', 'Alice Di Bella', 'Francesco Pietro Colelli', 'Johannes Emmerling', 'Panagiotis Fragkos', 'Robin Hasse', 'Johanna Hoppe', 'Paul Kishimoto', 'Florian Leblanc', 'Julien Lefèvre', 'Gunnar Luderer', 'Giacomo Marangoni', 'Alessio Mastrucci', 'Hazel Pettifor', 'Robert Pietzcker', 'Pedro Rochedo', 'Bas van Ruijven', 'Roberto Schaeffer', 'Charlie Wilson', 'Sonia Yeh', 'Eleftheria Zisarou', 'Detlef van Vuuren']",
+              "version": "v0",
+              "citation": "Rik van Heerden, Oreane Y Edelenbosch, Vassilis Daioglou, Thomas Le Gallic, Luiz Bernardo Baptista, et al.. Demand-side strategies enable rapid and deep cuts in buildings and transport emissions to 2050. Nature Energy, In press, pp.380-394. ⟨10.1038/s41560-025-01703-1⟩. ⟨hal-04985303⟩",
+              "source_url": "https://doi.org/10.1038/s41560-025-01703-1",
+              "chunk_order": 22,
+              "description": "Decarbonization of energy-using sectors is essential for tackling climate change. We use an ensemble of global integrated assessment models to assess CO2 emissions reduction potentials in buildings and transport, accounting for system interactions. We focus on three intervention strategies with distinct emphases: reducing or changing activity, improving technological efficiency and electrifying energy end use. We find that these strategies can reduce emissions by 51–85% in buildings and 37–91% in transport by 2050 relative to a current policies scenario (ranges indicate model variability). Electrification has the largest potential for direct emissions reductions in both sectors. Interactions between the policies and measures that comprise the three strategies have a modest overall effect on mitigation potentials. However, combining different strategies is strongly beneficial from an energy system perspective as lower electricity demand reduces the need for costly supply-side investments and infrastructure.",
+              "document_type": "ART",
+              "publication_date": "2025-01-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "**WP6. Developing a theoretical AI-Powered Energy Management Model**\n\nWP6 will demonstrate how IA can improve the smart grid stability and\nefficiency.\n\n-   Implementing machine learning techniques (Markov models, neural\n    networks) to optimize grid efficiency.\n\n-   Creating predictive models for demand forecasting, outage\n    prevention, and real-time grid monitoring.\n\nDeliverable: Technical report, academic manuscript."
+            }
+          },
+          {
+            "id": "6679bf9a-b4ac-5f7c-9685-93031bb52a3e",
+            "document_id": "67c93534-1484-5842-939c-fac4cb18d699",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31\n\nText: predictors based on weather and occupant behavior forecast, \nand then developing and testing anticipative and real-time \ncontrol algorithms considering three different goals: 1) auto-\nconsumption, 2) cost reduction 3) load peak shaving. The \noptional third year will allow to implement the algorithms in \nthe platform for empirical validation and performance \nassessement.\n7.4. RESEARCH PROJECTS PROPOSED\nThe following projects have been proposed but not funded in \n2015. We look forward to improve according to the \nevaluation results and resubmit in 2016.\nProject 1: Projet International de Coopération Scientifique - \nPICS titled Measuring the sustainability of renewable energy  \ndevelopment in Vietnam between CleanED lab - USTH and \nCIRED - CNRS. See section 4.3 page 7.\nProject 2: Integrated Renewable Energy Database IRED \nproject of Ministry of Industry and Trade MOIT. This project  \nwill support MOIT and relevant governmental agencies/local \nauthorities in policy development, planning, monitoring and",
+            "metadata": {
+              "title": "Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31",
+              "hal_id": "hal-01264985",
+              "authors": [
+                "Minh Ha-Duong",
+                "Hoang Anh Tran"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Hoang Anh Tran. Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31. [Research Report] USTH. 2016. ⟨hal-01264985⟩",
+              "source_url": "https://hal.science/hal-01264985",
+              "chunk_order": 85,
+              "description": "The Clean Energy and Sustainable Development laboratory – CleanED – was established in December 2014 with support from USTH and French Embassy in Hanoi. In September 2015, CleanED lab counted five researchers from France and Vietnam, five doctoral fellows and two internationally qualified staff. This international and interdisciplinary research team gets the mission to contribute to the green growth of the energy sector in Vietnam. Its expertise ranges from engineering to public policy on: Natural resources characterization and management Biomass and waste to energy conversion process technologies Energy systems optimization from smart grid to national plans",
+              "document_type": "REPORT",
+              "publication_date": "2016-01-27",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "**WP6. Developing a theoretical AI-Powered Energy Management Model**\n\nWP6 will demonstrate how IA can improve the smart grid stability and\nefficiency.\n\n-   Implementing machine learning techniques (Markov models, neural\n    networks) to optimize grid efficiency.\n\n-   Creating predictive models for demand forecasting, outage\n    prevention, and real-time grid monitoring.\n\nDeliverable: Technical report, academic manuscript."
+            }
+          },
+          {
+            "id": "b8b9b6f5-69c9-530b-a377-3528844f2515",
+            "document_id": "9193be88-2308-56e7-b3b4-5e7a7c674d68",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Quelles sont les conséquences des évolutions des fondamentaux et de l'organisation du système électrique sur la construction tarifaire et les missions portées par le tarif ?\n\nText: ACER. (2019a). Practice report on transmission tariff methodologies in Europe.\nACER. (2019b). Report on Distribution Tariff Methodologies.\nADEME. (2016). A 100% renewable electricity mix? Analysis and optimisation\n(rapp. tech.). ADEME.\nAlam, M. R., St-Hilaire, M., & Kunz, T. (2019). Peer-to-peer energy trading among\nsmart homes. Applied Energy ,238, 1434-1443. https://doi.org/10.1016/j.\napenergy.2019.01.091\nAllcott, H. (2011). Rethinking real-time electricity pricing. Resource and Energy\nEconomics ,33(4), 820-842. https://doi.org/10.1016/j.reseneeco.2011.06.003\nAndersen, F., Larsen, H., & Boomsma, T. (2013). Long-term forecasting of hourly\nelectricity load : Identification of consumption profiles and segmentation of\ncustomers. Energy Conversion and Management ,68, 244-252. https://doi.\norg/10.1016/j.enconman.2013.01.018\nAndersen, F., Larsen, H., Juul, N., & Gaardestrup, R. (2014). Differentiated long\nterm projections of the hourly electricity consumption in local areas. The",
+            "metadata": {
+              "title": "Quelles sont les conséquences des évolutions des fondamentaux et de l'organisation du système électrique sur la construction tarifaire et les missions portées par le tarif ?",
+              "hal_id": "tel-04024031",
+              "authors": [
+                "Thomas Verderi"
+              ],
+              "version": "v0",
+              "citation": "Thomas Verderi. Quelles sont les conséquences des évolutions des fondamentaux et de l'organisation du système électrique sur la construction tarifaire et les missions portées par le tarif ?. Economies et finances. École des Ponts ParisTech, 2022. Français. ⟨NNT : 2022ENPC0035⟩. ⟨tel-04024031⟩",
+              "source_url": "https://hal.science/tel-04024031",
+              "chunk_order": 968,
+              "description": "La thèse porte sur les évolutions possibles du modèle tarifaire français dans un contexte de transition énergétique : développement de la mobilité électrique, décentralisation de la production électrique. Elle analyse ces enjeux d’un point de vue économique et sociologique. Elle traite des conséquences du développement des énergies renouvelables sur les courbes de charge résiduelles des postes sources de réseau de transport (différence entre la consommation et la production locale décentralisée). Un modèle qui prend en entrée des scénarios nationaux de prospective et qui effectue une descente d’échelle à la maille des postes sources a été développé, afin d’explorer les enjeux de calibrage du réseau dans un contexte de production plus ou moins décentralisée. Les résultats montrent que le développement des énergies renouvelables va fortement modifier les formes des courbes de charge résiduelles et les relations entre les variables utilisées pour construire le tarif du réseau de transport. Ces effets seront particulièrement importants sur les postes desservant des zones rurales : ce sont des postes caractérisés par de faibles consommations électriques mais qui sont destinés à accueillir des capacités de production électrique décentralisée. Ensuite, les travaux portent sur les hétérogénéités des coûts réseaux. Le principe de solidarité territoriale et la péréquation tarifaire font que les fortes disparités géographiques de coûts réseaux ne sont actuellement pas retranscrites dans les tarifs électriques. Un travail important de constitution d’une base de données géographique des coûts réseaux à l’horizon 2030, a été effectué. L’analyse de ces données met en évidence de très fortes disparités de coûts par habitant entre les communes urbaines et rurales. A horizon 2030, les investissements ont tendance à augmenter cet écart entre coût moyen urbain et rural : ils sont plus importants en volume par habitant dans les zones rurales. Cependant, les mouvements de population semblent contrarier cet effet si bien que la répartition semble plus égalitaire en 2030 qu’en 2020. Enfin, il semble que la répartition géographique des investissements ne remette pas en cause l’existence de la péréquation tarifaire. Puis l’analyse des différentiations géographiques en s’intéressant à l’autoproduction collective, objet assez récent dans le système électrique et dont la définition est encore en train de se préciser. Un modèle d’autoconsommation collective à la maille communale a été développé. La rentabilité de l’autoconsommation collective communale sera différenciée selon les capacités disponibles au sein des communes. L’incertitude liée à la régulation est très importante, mais elle reste du deuxième ordre par rapport à l’incertitude sur les prix des combustibles fossiles. Enfin, la thèse traite des attentes des acteurs vis-à-vis du tarif réglementé de vente, objet issu de nombreuses négociations et discussions entre les parties prenantes. L’émergence de nouveaux acteurs et le contexte de la transition énergétique pourraient conduire ce tarif à porter de nouvelles missions de politique publique. Les arguments mobilisés par les acteurs appartiennent à des champs différents : économiques, politiques, sociaux ou environnementaux. Ils mobilisent également des arguments relevant de la justice. En conclusion, les méthodes de construction tarifaire doivent être modifiées pour traiter correctement de la nouvelle forme des courbes de charge sous peine de ne pas arriver à accomplir les missions qui seront visées par le tarif. Certains principes de tarification peuvent et doivent être conservés : les évolutions des coûts et de la demande ne justifient pas la remise en question de la péréquation tarifaire et elle reste également fondamentale pour un nombre important d’enquêtés. Enfin, les missions accomplies par le tarif devraient être décidées collectivement et s’inscrire dans une réflexion globale sur la politique énergétique.",
+              "document_type": "THESE",
+              "publication_date": "2022-12-09",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "**WP6. Developing a theoretical AI-Powered Energy Management Model**\n\nWP6 will demonstrate how IA can improve the smart grid stability and\nefficiency.\n\n-   Implementing machine learning techniques (Markov models, neural\n    networks) to optimize grid efficiency.\n\n-   Creating predictive models for demand forecasting, outage\n    prevention, and real-time grid monitoring.\n\nDeliverable: Technical report, academic manuscript."
+            }
+          },
+          {
+            "id": "7892e084-708e-5f51-8b88-ef3798411140",
+            "document_id": "67c93534-1484-5842-939c-fac4cb18d699",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31\n\nText: Application for Building Energy Management\nThis two years USTH funded research project is led by Benoît  \nDelinchant and Xuan Truong Nguyen. The main objectives of  \nthis project are to benefit from photovoltaic power supply, to \nimprove energy efficiency and to reduce cost of electrical \nconsumption in different scenarios. To reach these objectives, \nthe theoretical research of the project shall include two \nphases. Phase 1 will be about research object modeling and \nsimulation. It will include a literature review, the design of a \nmicro smart grid for the USTH building, its modeling and \nparametrization according to equipment providers \nspecifications, measurements and validation. Phase 2 will be \nabout intelligent control algorithm, the smart part. It will \ninclude specifying electrical production and consumption \n12",
+            "metadata": {
+              "title": "Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31",
+              "hal_id": "hal-01264985",
+              "authors": [
+                "Minh Ha-Duong",
+                "Hoang Anh Tran"
+              ],
+              "version": "v0",
+              "citation": "Minh Ha-Duong, Hoang Anh Tran. Clean Energy and Sustainable Development lab activity report, 2014-09-31 to 2015-12-31. [Research Report] USTH. 2016. ⟨hal-01264985⟩",
+              "source_url": "https://hal.science/hal-01264985",
+              "chunk_order": 84,
+              "description": "The Clean Energy and Sustainable Development laboratory – CleanED – was established in December 2014 with support from USTH and French Embassy in Hanoi. In September 2015, CleanED lab counted five researchers from France and Vietnam, five doctoral fellows and two internationally qualified staff. This international and interdisciplinary research team gets the mission to contribute to the green growth of the energy sector in Vietnam. Its expertise ranges from engineering to public policy on: Natural resources characterization and management Biomass and waste to energy conversion process technologies Energy systems optimization from smart grid to national plans",
+              "document_type": "REPORT",
+              "publication_date": "2016-01-27",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "**WP6. Developing a theoretical AI-Powered Energy Management Model**\n\nWP6 will demonstrate how IA can improve the smart grid stability and\nefficiency.\n\n-   Implementing machine learning techniques (Markov models, neural\n    networks) to optimize grid efficiency.\n\n-   Creating predictive models for demand forecasting, outage\n    prevention, and real-time grid monitoring.\n\nDeliverable: Technical report, academic manuscript."
+            }
+          },
+          {
+            "id": "b226e1c7-1c0a-5bac-81fe-8b34ef27189c",
+            "document_id": "e237de4b-7b16-5dae-949c-eea4250107fa",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Variable time-step: A method for improving computational tractability for energy system models with long-term storage\n\nText: 2017, p.2) .  \nRecent progress in energy system modeling include s, inter alia, sector coupling (e.g. Victoria et al., \n2019), optimiz ing the location of renewable facilities over  a large number of regions  (e.g. Murray et al . \n2020; Bramstoft et al . 2020) , and analyzing the impact of climate change  (e.g. S eljom et al. 2011; Ding et \nal. 2019) , which requires optimization over many weather -years. While these developments are useful, \nthey further increase calculation time and required memory. The issue is then to improve computational \ntractability in order to accommodate these improvements in model comprehensiveness without too \ngreat a loss of accuracy.   \nSome of the methods used to achieve this objective focus on aggregating time series , as in this paper . \nHoffman n et al. (2020) provide an up -to-date,  comprehensive review of these methods applied to \nenergy system models.  They classify the methods in to two broad categories: (1) definition of typical",
+            "metadata": {
+              "doi": "10.1016/j.energy.2020.119024",
+              "title": "Variable time-step: A method for improving computational tractability for energy system models with long-term storage",
+              "hal_id": "hal-03100309",
+              "authors": "['Paul de Guibert', 'Behrang Shirizadeh', 'Philippe Quirion']",
+              "version": "v0",
+              "citation": "Paul de Guibert, Behrang Shirizadeh, Philippe Quirion. Variable time-step: A method for improving computational tractability for energy system models with long-term storage. Energy, 2020, 213, pp.119024. ⟨10.1016/j.energy.2020.119024⟩. ⟨hal-03100309⟩",
+              "source_url": "https://doi.org/10.1016/j.energy.2020.119024",
+              "chunk_order": 8,
+              "description": "Optimizing an energy system model featuring a large proportion of variable (non-dispatchable) renewable energy requires a fine temporal resolution and a long period of weather data to provide robust results. Many models are optimized over a limited set of 'representative' periods (e.g. weeks) but this precludes a realistic representation of long-term energy storage. To tackle this issue, we introduce a new method based on a variable time-step. Critical periods that may be important for dimensioning part of the electricity system are defined, during which we use an hourly temporal resolution. For the other periods, the temporal resolution is coarser. This method brings very accurate results in terms of system cost, curtailment, storage losses and installed capacity, even though the optimization time is reduced by a factor of around 60. Results are less accurate for battery volume. We conclude that further research into this 'variable time-step' method would be worthwhile.",
+              "document_type": "ART",
+              "publication_date": "2020-12-01",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "**WP6. Developing a theoretical AI-Powered Energy Management Model**\n\nWP6 will demonstrate how IA can improve the smart grid stability and\nefficiency.\n\n-   Implementing machine learning techniques (Markov models, neural\n    networks) to optimize grid efficiency.\n\n-   Creating predictive models for demand forecasting, outage\n    prevention, and real-time grid monitoring.\n\nDeliverable: Technical report, academic manuscript."
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1919,
+            "total_tokens": 1919
+          }
+        }
+      },
+      "duration": 2216
+    },
+    "retrievalTime": 1137,
+    "generationTime": 2216,
+    "timestamp": "2025-07-10T17:58:32.768Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.110",
+    "forwarded_for": "193.51.120.110",
+    "received_at": "2025-07-10T17:58:32.881087+00:00",
+    "server_version": "1.0.0"
+  }
+}

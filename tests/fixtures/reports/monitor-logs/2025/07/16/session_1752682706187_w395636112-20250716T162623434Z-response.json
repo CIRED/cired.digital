@@ -1,0 +1,553 @@
+{
+  "sessionId": "session_1752682706187_w39563611203036r",
+  "timestamp": "20250716T162623434Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752683178077_cplaz5w",
+    "response": {
+      "results": {
+        "generated_answer": "Les enjeux économiques liés au secteur des transports sont multiples et complexes. Voici quelques points clés basés sur les documents fournis :\n\n1. **Impact de la taxe carbone** : Le secteur des transports a une trajectoire d'émission qui réagit faiblement au signal transmis par la taxe carbone, ce qui conduit à une augmentation importante du prix du carbone et des pertes de PIB [04e47d5].\n\n2. **Efficacité énergétique** : Les gains d'efficacité énergétique dans le secteur des transports sont limités à 25% par rapport à 2010 au maximum. La consommation d'énergie dans ce secteur est influencée par les progrès technologiques, les reports modaux (comme le fret terrestre sur le rail) et les modifications structurelles [f2d74b3].\n\n3. **Demande de transport de marchandises** : La demande de transport de marchandises est directement liée aux modes de consommation et à la structure de l'économie. Elle est peu sensible aux prix de l'énergie, les choix modaux étant davantage dictés par les possibilités logistiques et l'organisation de la chaîne d'approvisionnement [f2d74b3].\n\n4. **Organisation spatiale de l'activité économique** : L'organisation de l'économie en pôles urbains est un déterminant essentiel de la demande de transport, à la fois entre les villes et à l'intérieur des villes. Cette concentration de la population, de la production et des investissements dans les grandes métropoles influence fortement la demande de transport [1b5696e].\n\n5. **Investissements et politiques publiques** : Les investissements dans les infrastructures de transport se font à périmètre financier constant, mais leur répartition modale est affectée jusqu'en 2030. Les politiques publiques jouent un rôle crucial dans les innovations de système, comme l'intermodalité et le développement des transports en commun [b79a57f].\n\n6. **Objectifs climatiques et économiques** : La législation française assigne plusieurs objectifs au secteur des transports, notamment la réduction des émissions de gaz à effet de serre, l'augmentation de la part modale des transports non routiers et aériens, et la construction de voies ferrées à grande vitesse [5b8359c].\n\n7. **Interdépendances sectorielles** : Les transports sont soumis aux dynamiques de mobilité et d'occupation du territoire, déterminées par les prix du foncier et de l'immobilier, ainsi que par les choix publics d'infrastructures urbaines et d'aménagement du territoire [7244ed7].\n\nCes enjeux montrent que le secteur des transports est à la fois un acteur clé de l'économie et un domaine où les politiques publiques et les innovations technologiques peuvent avoir un impact significatif sur la réduction des émissions de gaz à effet de serre et l'efficacité énergétique.",
+        "citations": [
+          {
+            "id": "04e47d5",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 382,
+              "end": 391
+            },
+            "payload": {
+              "id": "04e47d5a-d929-5b75-9500-b40b688496e2",
+              "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: tout de même attractifs du fait (i ) de laugmentation de la rich esse des ménages qui conduit à une \nélévation de la valeur quils donnent à leur temps et  (ii) de la présence dun réseau dinfrastructures \ntrès développé. Comme pour la consommation de tr ansport de fret, nous re trouvons un effet de \nvolume significatif qui compense partiellement les gain s defficacité effectués sur les véhicules et la \nréduction du contenu carbone des carburants liée à une utilisation importante de la biomasse. \n \nPar conséquent, ces dynamiques spécifiques associ ées au secteur des transports conduisent, \ncontrairement aux autres secteurs de léconomie, à une trajectoire démission sectorielle qui ne \nréagit que faiblement au signal transmis par la taxe  carbone. Les implications en termes de pertes de \nPIB et de prix du carbone associés à un objectif de stabilisation sont doubles. Dune part, la faible \nréactivité de ce secteur au signal prix conduit à une augmentation importante du prix du carbone",
+              "metadata": {
+                "title": "L'impact du changement technique endogène sur les politiques climatiques",
+                "hal_id": "tel-00489258",
+                "authors": "['Olivier Sassi']",
+                "version": "v0",
+                "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+                "source_url": "https://hal.science/tel-00489258",
+                "chunk_order": 1202,
+                "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+                "document_type": "THESE",
+                "publication_date": "2008-11-21",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "les enjeux économiques liés au secteur des transports"
+              }
+            }
+          },
+          {
+            "id": "f2d74b3",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 723,
+              "end": 732
+            },
+            "payload": {
+              "id": "f2d74b32-7a22-582d-8dd0-599c17462b53",
+              "document_id": "e35504f5-4edd-58f5-8b59-7be0771edef8",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique\n\nText: 12 et les gains defficacité énergétique sont \nlimités à 25% par rapport à 2010 au maximum. \nLévolution de la consommation dénergie dans ce \nsecteur exprime simultanément les progrès tech-\nnologiques, les reports modaux (notamment celui \ndu fret terrestre sur le rail) et les modifications \nstructurelles du secteur, attribuables à lévolution \ndu poids relatif des matières acheminées dans \nchacun de ses sous-secteurs.\nDans Imaclim-R France, la demande detranspor tde\nmarchandises est la somme des demandes de trans -\nport de marchandises de chaque secteur productif. \nLe volume de transport de fret est directement lié aux modes de consommation et à la structure de léconomie (économie orientée vers la production \nde services ou de biens industriels). En revanche, le \nvolume de fret est peu sensible aux prix de lénergie, \nles choix modaux étant davantage dictés par les \npossibilités logistiques et lorganisation de la chaîne \ndapprovisionnement. Lampleur des incertitudes",
+              "metadata": {
+                "title": "Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique",
+                "hal_id": "halshs-00797980",
+                "authors": [
+                  "Ruben Bibas",
+                  "Sandrine Mathy",
+                  "Meike Fink"
+                ],
+                "version": "v0",
+                "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique. 2012. ⟨halshs-00797980⟩",
+                "source_url": "https://hal.science/halshs-00797980",
+                "chunk_order": 117,
+                "description": "Cet article trouve son origine dans un double constat : le déficit d'acceptabilité des politiques climatiques d'une part et le déficit de crédibilité, de légitimité et d'appropriation des scénarios de réduction d'émission de gaz à effet de serre d'autre part. Pour répondre à ces limites, nous avons élaboré, au travers d'une concertation associant une cinquantaine de parties prenantes et une cinquantaine d'experts sectoriels, un processus de co-construction d'un scénario \" acceptable \" de réduction des émissions de CO2. Les parties prenantes ont sélectionné les politiques et les mesures qu'ils considèrent comme acceptables. Celles-ci ont également contribué largement à la méthodologie d'élaboration du scénario par la définition d'un cahier des charges qui inclut la nécessaire transparence des données, des tests de sensibilité et la nécessité d'expliciter certains types d'impacts économiques et financiers nécessaires à l'évaluation des trajectoires facteur 4. L'ensemble des politiques considérées comme acceptables est intégré dans le modèle technico-économique Imaclim-R France. Cette plateforme de modélisation adaptée au dialogue entre modélisateurs et partie prenantes ou experts, évalue les impacts sociaux, économiques et financiers de politiques climatiques. Cet exercice de co-construction de scénario fondé sur la concertation alimentant les paramètres d'un modèle technico-économique, fournit une preuve méthodologique par l'exemple qu'un tel processus peut être mis en place. Le scénario reposant sur les politiques et mesures que les parties prenantes considèrent comme acceptables permet de réduire de 68% les émissions de CO2 en 2050 par rapport à 1990, résultat proche de l'objectif de Facteur 4 (soit 75%). Les mesures de réduction des émissions, dont la plus emblématique est la taxe carbone, sont bénéfiques pour l'emploi et la croissance économique, sauf à court terme. Elles permettent en outre de réduire rapidement et durablement le budget des ménages dédié aux services énergétiques. Enfin, le bilan financier agrégé des mesures s'avère positif dès le début de la période. Ce résultat constitue un socle solide sur lequel construire l'acceptabilité des trajectoires Facteur 4.",
+                "document_type": "REPORT",
+                "publication_date": "2012-03-01",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "les enjeux économiques liés au secteur des transports"
+              }
+            }
+          },
+          {
+            "id": "f2d74b3",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1070,
+              "end": 1079
+            },
+            "payload": null
+          },
+          {
+            "id": "1b5696e",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1447,
+              "end": 1456
+            },
+            "payload": {
+              "id": "1b5696e5-bf6a-5b1f-a2a7-69d3ab6dd7a2",
+              "document_id": "70410a40-c8d8-585c-87a4-c8f6e2ecc9f7",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016098765432098764,
+              "text": "Document Title: Les actions locales dans la transition postcarbone: Une simulation des effets macroéconomiques\n\nText: forte hausse des prix pour compenser la croissance des besoins de mobilité induits par leffet \nrichesse au fur et à mesure de laccroissement des revenus.  \nFace à ces constats , il apparaît  nécessaire denvisager des politiques plus spécifiques \nau secteur des transports que l a tarification globale du carbone afin datteindre des objectifs \nsignificatifs de réduction des émissions. Pour cela, il sagit dintroduire dans l analyse l es \ndéterminan ts  hors prix  de lénergie  des activités de transport et notamment le rôle de \nlorganisation spatiale de lactivité économique et des lieux de résidence, qui sarticule autour de grandes métropoles où se concentrent à la fois la population, la production et les \ninvestissements et où vit environ la moitié de la population mondiale (80% en France).  \nCette organisation de léconomie en pôles urbains est un déterminant essentiel de la \ndemande de transport, à la fois entre les villes et à lintérieur des villes. Les grandes",
+              "metadata": {
+                "title": "Les actions locales dans la transition postcarbone: Une simulation des effets macroéconomiques",
+                "hal_id": "hal-00799222",
+                "authors": [
+                  "P. C. Allio",
+                  "H. Waisman",
+                  "Jean Charles Hourcade"
+                ],
+                "version": "v0",
+                "citation": "P. C. Allio, H. Waisman, Jean Charles Hourcade. Les actions locales dans la transition postcarbone: Une simulation des effets macroéconomiques. Futuribles, 2013, 392, pp.61-76. ⟨hal-00799222⟩",
+                "source_url": "https://hal.science/hal-00799222",
+                "chunk_order": 21,
+                "description": "Ce papier analyse le rôle de politiques menées à l'échelle locale pour accompagner la transition post-carbone en complément des mesures globales conventionnellement envisagées. De telles mesures sont particulièrement justifiées pour contrôler les émissions liées au transport en permettant un contrôle des besoins de mobilité et du report modal. L'analyse de ces effets est menée via un cadre de modélisation innovant permettant de représenter de façon cohérente les trajectoires économiques de long terme et les dynamiques urbaines sous-jacentes. Cet outil est utilisé sur la France pour quantifier les scénarios prospectifs définis dans le cadre du programme \" Repenser les villes dans une société post-carbone \", copiloté par la mission prospective du CGDD - MEEDDM et le Service Économie et Prospective de l'ADEME. Ils permettent de démontrer l'importance de la distribution des investissements à l'échelle locale sur la nature de la transition post-carbone, que ce soit en termes de dynamiques locales (forme des villes, coûts urbains) ou des tendances nationales (PIB, émissions de carbone). Cette étude permet de mettre en avant trois dimensions cruciales à l'échelle locale pour la transition post-carbone : les effets d'agglomération et les liens entre productivité et densité ; l'articulation entre différents niveaux de gouvernance pour combiner mesures locales et globales ; l'hétérogénéité du tempo de l'action qui force à penser le tuilage temporel des mesures à court-terme et long-terme.",
+                "document_type": "ART",
+                "publication_date": "2013-01-10",
+                "semantic_rank": 4,
+                "full_text_rank": 200,
+                "associated_query": "les enjeux économiques liés au secteur des transports"
+              }
+            }
+          },
+          {
+            "id": "b79a57f",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1811,
+              "end": 1820
+            },
+            "payload": {
+              "id": "b79a57f2-6ed5-5b36-a2e1-117ee0dd1261",
+              "document_id": "e847732e-ff95-5bd3-8789-3ffa42c30a51",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01503448275862069,
+              "text": "Document Title: Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique\n\nText: d'équipement de ces trois catégories . En  particu lier, les questions énergétiques \ndépenden t larg ement des formes urbaines (c onditionnement de l'air , transp ort...), pour  \nlesquelles on peut imaginer d es transformati on profondes, mais d'autan t plus coûteuses \nqu'elles seron t rapides. En outre, le secteur  des transports es t celui qui soulève le plus \nde questions : il est l' un des secteurs les plus  émetteurs  et l'un de ceux qui croissent le \nplus vite. Son évolution prov oque des innova tions de pro duits qui modifient peu la \nstructure des modalités de déplacem ent, tandis qu' elle induit par les  politique s \npubliques des innovations de s ystème (in termodalité, d éveloppement des tr ansports en \ncommun), de potentiel important mais supposant de profondes tran sformations \nmacroéconomiques qui les  ha ndicapent fortement. Enfin, les modifications  \ntechno logiques  radicales dans certains secteurs structurants  pour l' économ ie peuven t",
+              "metadata": {
+                "title": "Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique",
+                "hal_id": "tel-00003504",
+                "authors": "['Frédéric Ghersi']",
+                "version": "v0",
+                "citation": "Frédéric Ghersi. Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique. Economies et finances. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2003. Français. ⟨NNT : ⟩. ⟨tel-00003504⟩",
+                "source_url": "https://hal.science/tel-00003504",
+                "chunk_order": 300,
+                "description": "Les travaux présentés dans cette thèse portent sur l'évaluation des coûts macro-économiques de politiques climatiques nationales et mondiales. Ils reposent sur une mise en relation innovante des prospectives énergétique et macroéconomique, dont l'objectif est d'assurer la représentation fidèle, dans la modélisation macroéconomique, des élasticités du système énergétique mises en lumière par l'analyse technico-économique. Ils opèrent aussi un questionnement critique des études analytiques ayant conclu à l'improbabilité d'un dividende économique net de réformes fiscales environnementales, en démontrant que le signe ultime de l'effet prix général d'une réforme « écofiscale » est dépendant des structures de production et de consommation préexistant à la réforme, ainsi que de leur réactivité au signal-prix. Ils soulignent enfin le rôle prépondérant du changement technique induit et de ses modalités—éviction de l'investissement de productivité générale éventuellement corrigée par une diffusion du progrès technique spécifique—sur l'obtention d'un second dividende.",
+                "document_type": "THESE",
+                "publication_date": "2003-04-01",
+                "semantic_rank": 8,
+                "full_text_rank": 200,
+                "associated_query": "les enjeux économiques liés au secteur des transports"
+              }
+            }
+          },
+          {
+            "id": "5b8359c",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2137,
+              "end": 2146
+            },
+            "payload": {
+              "id": "5b8359cc-659d-5e74-a434-bbfdcd491ea1",
+              "document_id": "e35504f5-4edd-58f5-8b59-7be0771edef8",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.014555555555555556,
+              "text": "Document Title: Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique\n\nText: denviron 15% sous leffet de la crise économique de 2009, il a tendance à retrouver lentement son niveau davant crise.\nobjectif\nsclimatique\nse\nténer\ngétiques :\nLa législation française assigne plusieurs objectifs \nau secteur des transports :\n*La réduction de 20% des émissions de gaz à effet \nde serre dici 2020 par rapport à 2005 (année \nde référence).\n*Linstauration dune écotaxe sur le transport de \nmarchandises par poids-lourds (prévue en 2011 mais reportée).\n*Laugmentation de 14% à 25% en 2022 du trafic \nassuré par les modes de transport autres que \nlair et la route. Lobjectif intermédiaire fixé pour 2012 correspondait à un accroissement de 25% \npar rapport à 2007, mais sa réalisation a été \nfortement compromise par la diminution de cette \npart modale depuis 2007.\n*La construction de 2 000 km de voies ferrées à \ngrande vitesse dici 2020.\n*La baisse de 50% de la consommation dénergie \ndu transport aérien par personne et par kilomètre \ndici 2020. \nII.représentation dusect eurdes\ntranspor\ntsdansImaclim- r",
+              "metadata": {
+                "title": "Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique",
+                "hal_id": "halshs-00797980",
+                "authors": [
+                  "Ruben Bibas",
+                  "Sandrine Mathy",
+                  "Meike Fink"
+                ],
+                "version": "v0",
+                "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique. 2012. ⟨halshs-00797980⟩",
+                "source_url": "https://hal.science/halshs-00797980",
+                "chunk_order": 108,
+                "description": "Cet article trouve son origine dans un double constat : le déficit d'acceptabilité des politiques climatiques d'une part et le déficit de crédibilité, de légitimité et d'appropriation des scénarios de réduction d'émission de gaz à effet de serre d'autre part. Pour répondre à ces limites, nous avons élaboré, au travers d'une concertation associant une cinquantaine de parties prenantes et une cinquantaine d'experts sectoriels, un processus de co-construction d'un scénario \" acceptable \" de réduction des émissions de CO2. Les parties prenantes ont sélectionné les politiques et les mesures qu'ils considèrent comme acceptables. Celles-ci ont également contribué largement à la méthodologie d'élaboration du scénario par la définition d'un cahier des charges qui inclut la nécessaire transparence des données, des tests de sensibilité et la nécessité d'expliciter certains types d'impacts économiques et financiers nécessaires à l'évaluation des trajectoires facteur 4. L'ensemble des politiques considérées comme acceptables est intégré dans le modèle technico-économique Imaclim-R France. Cette plateforme de modélisation adaptée au dialogue entre modélisateurs et partie prenantes ou experts, évalue les impacts sociaux, économiques et financiers de politiques climatiques. Cet exercice de co-construction de scénario fondé sur la concertation alimentant les paramètres d'un modèle technico-économique, fournit une preuve méthodologique par l'exemple qu'un tel processus peut être mis en place. Le scénario reposant sur les politiques et mesures que les parties prenantes considèrent comme acceptables permet de réduire de 68% les émissions de CO2 en 2050 par rapport à 1990, résultat proche de l'objectif de Facteur 4 (soit 75%). Les mesures de réduction des émissions, dont la plus emblématique est la taxe carbone, sont bénéfiques pour l'emploi et la croissance économique, sauf à court terme. Elles permettent en outre de réduire rapidement et durablement le budget des ménages dédié aux services énergétiques. Enfin, le bilan financier agrégé des mesures s'avère positif dès le début de la période. Ce résultat constitue un socle solide sur lequel construire l'acceptabilité des trajectoires Facteur 4.",
+                "document_type": "REPORT",
+                "publication_date": "2012-03-01",
+                "semantic_rank": 10,
+                "full_text_rank": 200,
+                "associated_query": "les enjeux économiques liés au secteur des transports"
+              }
+            }
+          },
+          {
+            "id": "7244ed7",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2419,
+              "end": 2428
+            },
+            "payload": {
+              "id": "7244ed7c-ff68-5db1-8ca8-03f33cd91349",
+              "document_id": "47947309-7693-57b7-a615-dd31a6bccc56",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.0147909604519774,
+              "text": "Document Title: Les modèles intégrés économie-climat : quels usages pour quelles décisions ?\n\nText: investissements sur ces  trois secteurs il faudrait rajouter 20% de financements pour change r les \nprocédés  industriels8. Ce fait est mécon nu parce que les tableaux présentés dans les rapports \ncomportent très souvent des colonnes  transport  ,  habitat   ou  industrie   alors que  les chiffres \naffichés ne portent que sur les investissements en efficacité énergétique. Les m odèles multisector iels \nhybride s captent les impacts des interdépendances sectorielles sur la formation des prix, la \ncompétitivité et le niveau de production , ce qui est déjà important, mais pas les dynamiques \néconomiques spécifiques  de ces secteurs , ce qui peut conduire à des erreurs de diagnostic9. \nAinsi, l es transports  sont  soumis aux  dynamiques de mobilité et doccupation du territoire, elles -\nmême s déterminées  par les prix du foncier et de limmobilier  et par des choix publics dinfrastructures \nurbaines et daménag ement du territoire, au moins autant que par les prix des carburants  (Lampin et",
+              "metadata": {
+                "title": "Les modèles intégrés économie-climat : quels usages pour quelles décisions ?",
+                "hal_id": "hal-03506990",
+                "authors": "['Jean-Charles Hourcade', 'Peter Tankov', 'Stéphane Voisin', 'F. Ghersi', 'Julien Lefèvre']",
+                "version": "v0",
+                "citation": "Jean-Charles Hourcade, Peter Tankov, Stéphane Voisin, F. Ghersi, Julien Lefèvre. Les modèles intégrés économie-climat : quels usages pour quelles décisions ?. Opinions & Débats, 2021, 23, pp.16-42. ⟨hal-03506990⟩",
+                "source_url": "https://hal.science/hal-03506990",
+                "chunk_order": 68,
+                "description": "Même si la communication et les débats publics sur le changement climatique restent surtout alimentés par les modèles climatiques répertoriés par le Groupe I du Groupement Intergouvernemental d’Experts sur l’évolution du Climat (GIEC), c’est dès 1990 que des modèles furent construits pour cerner les conditions technologiques et économiques des trajectoires de contrôle des émissions de gaz à effet de serre (GES). Ces modèles furent analysés dès 1995 par le Groupe III du GIEC (GIEC, 1995) puis, sous le vocable de Integrated Assessment Models (IAM), mobilisèrent une communauté scientifique implantée dans des dizaines de pays, y compris des pays en développement. À l’origine utilisés pour éclairer des questions d’économie publique (tempo de l’action, prix du carbone, impacts des politiques climatiques sur la croissance, l’emploi et la distribution des revenus), les IAM font l’objet, depuis quelques années, de demandes croissantes de la part d’acteurs économiques et financiers à la recherche de prospectives pour éclairer leurs choix technologiques (véhicule électrique, hydrogène, éoliennes, bio-carburants) ou la composition de leurs portefeuilles financiers. Témoin de cet intérêt, la récente étude du Shift Project pour l’Association Française des Entreprises Privées sur les scénarios énergie climat, révèle la difficulté d’appréhender les IAM de manière pertinente pour des observateurs privés de guide de lecture1. Les IAM sont une jungle peuplée de ‘tribus’ et nous vous proposerons d’abord un détour sur leur histoire pour éviter que l’explosion des demandes d’expertise par des acteurs économiques pressés d’intégrer les objectifs de l’Accord de Paris ne conduise à des malentendus. Ces malentendus ont des conséquences sur la ‘carte mentale’ qui structure la délibération publique et les prises de décision. Nous discuterons ensuite des conditions méthodologiques d’usage des IAM pour les différentes questions que se posent les milieux financiers, et des conditions de leur ‘bonne gouvernance’.",
+                "document_type": "ART",
+                "publication_date": "2021-09-01",
+                "semantic_rank": 9,
+                "full_text_rank": 200,
+                "associated_query": "les enjeux économiques liés au secteur des transports"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "04e47d5a-d929-5b75-9500-b40b688496e2",
+            "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: tout de même attractifs du fait (i ) de laugmentation de la rich esse des ménages qui conduit à une \nélévation de la valeur quils donnent à leur temps et  (ii) de la présence dun réseau dinfrastructures \ntrès développé. Comme pour la consommation de tr ansport de fret, nous re trouvons un effet de \nvolume significatif qui compense partiellement les gain s defficacité effectués sur les véhicules et la \nréduction du contenu carbone des carburants liée à une utilisation importante de la biomasse. \n \nPar conséquent, ces dynamiques spécifiques associ ées au secteur des transports conduisent, \ncontrairement aux autres secteurs de léconomie, à une trajectoire démission sectorielle qui ne \nréagit que faiblement au signal transmis par la taxe  carbone. Les implications en termes de pertes de \nPIB et de prix du carbone associés à un objectif de stabilisation sont doubles. Dune part, la faible \nréactivité de ce secteur au signal prix conduit à une augmentation importante du prix du carbone",
+            "metadata": {
+              "title": "L'impact du changement technique endogène sur les politiques climatiques",
+              "hal_id": "tel-00489258",
+              "authors": "['Olivier Sassi']",
+              "version": "v0",
+              "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+              "source_url": "https://hal.science/tel-00489258",
+              "chunk_order": 1202,
+              "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+              "document_type": "THESE",
+              "publication_date": "2008-11-21",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux économiques liés au secteur des transports"
+            }
+          },
+          {
+            "id": "f2d74b32-7a22-582d-8dd0-599c17462b53",
+            "document_id": "e35504f5-4edd-58f5-8b59-7be0771edef8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique\n\nText: 12 et les gains defficacité énergétique sont \nlimités à 25% par rapport à 2010 au maximum. \nLévolution de la consommation dénergie dans ce \nsecteur exprime simultanément les progrès tech-\nnologiques, les reports modaux (notamment celui \ndu fret terrestre sur le rail) et les modifications \nstructurelles du secteur, attribuables à lévolution \ndu poids relatif des matières acheminées dans \nchacun de ses sous-secteurs.\nDans Imaclim-R France, la demande detranspor tde\nmarchandises est la somme des demandes de trans -\nport de marchandises de chaque secteur productif. \nLe volume de transport de fret est directement lié aux modes de consommation et à la structure de léconomie (économie orientée vers la production \nde services ou de biens industriels). En revanche, le \nvolume de fret est peu sensible aux prix de lénergie, \nles choix modaux étant davantage dictés par les \npossibilités logistiques et lorganisation de la chaîne \ndapprovisionnement. Lampleur des incertitudes",
+            "metadata": {
+              "title": "Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique",
+              "hal_id": "halshs-00797980",
+              "authors": [
+                "Ruben Bibas",
+                "Sandrine Mathy",
+                "Meike Fink"
+              ],
+              "version": "v0",
+              "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique. 2012. ⟨halshs-00797980⟩",
+              "source_url": "https://hal.science/halshs-00797980",
+              "chunk_order": 117,
+              "description": "Cet article trouve son origine dans un double constat : le déficit d'acceptabilité des politiques climatiques d'une part et le déficit de crédibilité, de légitimité et d'appropriation des scénarios de réduction d'émission de gaz à effet de serre d'autre part. Pour répondre à ces limites, nous avons élaboré, au travers d'une concertation associant une cinquantaine de parties prenantes et une cinquantaine d'experts sectoriels, un processus de co-construction d'un scénario \" acceptable \" de réduction des émissions de CO2. Les parties prenantes ont sélectionné les politiques et les mesures qu'ils considèrent comme acceptables. Celles-ci ont également contribué largement à la méthodologie d'élaboration du scénario par la définition d'un cahier des charges qui inclut la nécessaire transparence des données, des tests de sensibilité et la nécessité d'expliciter certains types d'impacts économiques et financiers nécessaires à l'évaluation des trajectoires facteur 4. L'ensemble des politiques considérées comme acceptables est intégré dans le modèle technico-économique Imaclim-R France. Cette plateforme de modélisation adaptée au dialogue entre modélisateurs et partie prenantes ou experts, évalue les impacts sociaux, économiques et financiers de politiques climatiques. Cet exercice de co-construction de scénario fondé sur la concertation alimentant les paramètres d'un modèle technico-économique, fournit une preuve méthodologique par l'exemple qu'un tel processus peut être mis en place. Le scénario reposant sur les politiques et mesures que les parties prenantes considèrent comme acceptables permet de réduire de 68% les émissions de CO2 en 2050 par rapport à 1990, résultat proche de l'objectif de Facteur 4 (soit 75%). Les mesures de réduction des émissions, dont la plus emblématique est la taxe carbone, sont bénéfiques pour l'emploi et la croissance économique, sauf à court terme. Elles permettent en outre de réduire rapidement et durablement le budget des ménages dédié aux services énergétiques. Enfin, le bilan financier agrégé des mesures s'avère positif dès le début de la période. Ce résultat constitue un socle solide sur lequel construire l'acceptabilité des trajectoires Facteur 4.",
+              "document_type": "REPORT",
+              "publication_date": "2012-03-01",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux économiques liés au secteur des transports"
+            }
+          },
+          {
+            "id": "1330e8e9-b4d7-5b81-a956-a813ec32514b",
+            "document_id": "48669e50-2daa-5e96-9fdc-88f103f4500a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Trajectoires de décarbonation profonde du transport de marchandises en France\n\nText: de la demande.\nUn rapide panorama des travaux antérieurs sur la dé -\ncarbonation du transport de marchandises montre que \ncertaines composantes des évolutions du secteur sont ra -\nrement analysées et explorées, alors quelles constituent \ndes déterminants importants des émissions du secteur \net des leviers potentiellement clés pour envisager des \npolitiques datténuation ambitieuses. On peut penser \nen particulier aux aspects liés aux futurs possibles de \nla demande de transport de marchandises et à lavenir \ndu système multimodal de transport des marchandises, \nainsi que leurs articulations avec les transformations \ntechnologiques. Par ailleurs, les documents publics sur la \ntrajectoire proposée par la SNBC pour le transport de fret \nne révèlent pas suffisamment de détails sur les détermi -\nnants et conditions associées à ces transformations pour comprendre la trajectoire de transformations, lampleur \ndes évolutions nécessaires et les actions à prendre dès",
+            "metadata": {
+              "title": "Trajectoires de décarbonation profonde du transport de marchandises en France",
+              "hal_id": "hal-02865268",
+              "authors": [
+                "Yann Briand",
+                "Johannes Svensson",
+                "Martin Koning",
+                "François Combes",
+                "Gwenaelle Lamy",
+                "Prabodh Pourouchottamin",
+                "Jean-Michel Cayla",
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Yann Briand, Johannes Svensson, Martin Koning, François Combes, Gwenaelle Lamy, et al.. Trajectoires de décarbonation profonde du transport de marchandises en France. [Rapport de recherche] IFSTTAR - Institut Français des Sciences et Technologies des Transports, de l'Aménagement et des Réseaux. 2019, 48 p. ⟨hal-02865268⟩",
+              "source_url": "https://hal.science/hal-02865268",
+              "chunk_order": 21,
+              "description": "Ce document constitue le « rapport descriptif » des scénarios de décarbonation profonde du transport de marchandises en France à l&apos;horizon 2050. Il s&apos;adresse aux différents acteurs de la société qui souhaiteraient découvrir deux histoires cohérentes des principales transformations (sociétales, organisationnelles, technologiques et politiques) menant à la décarbonation de ce secteur ainsi que leurs effets sur un ensemble de dimensions comme le nombre de tonnes transportées, la part du rail, les circulations des véhicules routiers, la demande d&apos;énergie finale ou la place des différents vecteurs énergétiques. Il sera prochainement complété par un « rapport technique » détaillant les hypothèses sous-jacentes prises en compte.",
+              "document_type": "REPORT",
+              "publication_date": "2019-01-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux économiques liés au secteur des transports"
+            }
+          },
+          {
+            "id": "1b5696e5-bf6a-5b1f-a2a7-69d3ab6dd7a2",
+            "document_id": "70410a40-c8d8-585c-87a4-c8f6e2ecc9f7",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Les actions locales dans la transition postcarbone: Une simulation des effets macroéconomiques\n\nText: forte hausse des prix pour compenser la croissance des besoins de mobilité induits par leffet \nrichesse au fur et à mesure de laccroissement des revenus.  \nFace à ces constats , il apparaît  nécessaire denvisager des politiques plus spécifiques \nau secteur des transports que l a tarification globale du carbone afin datteindre des objectifs \nsignificatifs de réduction des émissions. Pour cela, il sagit dintroduire dans l analyse l es \ndéterminan ts  hors prix  de lénergie  des activités de transport et notamment le rôle de \nlorganisation spatiale de lactivité économique et des lieux de résidence, qui sarticule autour de grandes métropoles où se concentrent à la fois la population, la production et les \ninvestissements et où vit environ la moitié de la population mondiale (80% en France).  \nCette organisation de léconomie en pôles urbains est un déterminant essentiel de la \ndemande de transport, à la fois entre les villes et à lintérieur des villes. Les grandes",
+            "metadata": {
+              "title": "Les actions locales dans la transition postcarbone: Une simulation des effets macroéconomiques",
+              "hal_id": "hal-00799222",
+              "authors": [
+                "P. C. Allio",
+                "H. Waisman",
+                "Jean Charles Hourcade"
+              ],
+              "version": "v0",
+              "citation": "P. C. Allio, H. Waisman, Jean Charles Hourcade. Les actions locales dans la transition postcarbone: Une simulation des effets macroéconomiques. Futuribles, 2013, 392, pp.61-76. ⟨hal-00799222⟩",
+              "source_url": "https://hal.science/hal-00799222",
+              "chunk_order": 21,
+              "description": "Ce papier analyse le rôle de politiques menées à l'échelle locale pour accompagner la transition post-carbone en complément des mesures globales conventionnellement envisagées. De telles mesures sont particulièrement justifiées pour contrôler les émissions liées au transport en permettant un contrôle des besoins de mobilité et du report modal. L'analyse de ces effets est menée via un cadre de modélisation innovant permettant de représenter de façon cohérente les trajectoires économiques de long terme et les dynamiques urbaines sous-jacentes. Cet outil est utilisé sur la France pour quantifier les scénarios prospectifs définis dans le cadre du programme \" Repenser les villes dans une société post-carbone \", copiloté par la mission prospective du CGDD - MEEDDM et le Service Économie et Prospective de l'ADEME. Ils permettent de démontrer l'importance de la distribution des investissements à l'échelle locale sur la nature de la transition post-carbone, que ce soit en termes de dynamiques locales (forme des villes, coûts urbains) ou des tendances nationales (PIB, émissions de carbone). Cette étude permet de mettre en avant trois dimensions cruciales à l'échelle locale pour la transition post-carbone : les effets d'agglomération et les liens entre productivité et densité ; l'articulation entre différents niveaux de gouvernance pour combiner mesures locales et globales ; l'hétérogénéité du tempo de l'action qui force à penser le tuilage temporel des mesures à court-terme et long-terme.",
+              "document_type": "ART",
+              "publication_date": "2013-01-10",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux économiques liés au secteur des transports"
+            }
+          },
+          {
+            "id": "66870c21-56ce-5ae9-b4b1-21f1c9111240",
+            "document_id": "48669e50-2daa-5e96-9fdc-88f103f4500a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Trajectoires de décarbonation profonde du transport de marchandises en France\n\nText: la demande de transport de marchandises et à lavenir \ndu système multimodal de transport des marchandises, \nainsi que leurs articulations avec les transformations \ntechnologiques. Par ailleurs, les documents publics sur la \ntrajectoire proposée par la SNBC pour le transport de fret \nne révèlent pas suffisamment de détails sur les détermi -\nnants et conditions associées à ces transformations pour comprendre la trajectoire de transformations, lampleur \ndes évolutions nécessaires et les actions à prendre dès \naujourdhui par les différents acteurs (chargeurs, trans -\nporteurs, autorités, consommateurs). Lexplicitation de \nces variables pourrait également permettre de construire \nune analyse comparée de lensemble des possibles et de \nleurs incertitudes pour les confronter aux ambitions de \nlobjectif de  neutralité carbone .\nÉconomie des transports et environnement\nAfin de comprendre les effets de nos scénarios sur le \nfutur du secteur de transport de marchandises en France",
+            "metadata": {
+              "title": "Trajectoires de décarbonation profonde du transport de marchandises en France",
+              "hal_id": "hal-02865268",
+              "authors": [
+                "Yann Briand",
+                "Johannes Svensson",
+                "Martin Koning",
+                "François Combes",
+                "Gwenaelle Lamy",
+                "Prabodh Pourouchottamin",
+                "Jean-Michel Cayla",
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Yann Briand, Johannes Svensson, Martin Koning, François Combes, Gwenaelle Lamy, et al.. Trajectoires de décarbonation profonde du transport de marchandises en France. [Rapport de recherche] IFSTTAR - Institut Français des Sciences et Technologies des Transports, de l'Aménagement et des Réseaux. 2019, 48 p. ⟨hal-02865268⟩",
+              "source_url": "https://hal.science/hal-02865268",
+              "chunk_order": 22,
+              "description": "Ce document constitue le « rapport descriptif » des scénarios de décarbonation profonde du transport de marchandises en France à l&apos;horizon 2050. Il s&apos;adresse aux différents acteurs de la société qui souhaiteraient découvrir deux histoires cohérentes des principales transformations (sociétales, organisationnelles, technologiques et politiques) menant à la décarbonation de ce secteur ainsi que leurs effets sur un ensemble de dimensions comme le nombre de tonnes transportées, la part du rail, les circulations des véhicules routiers, la demande d&apos;énergie finale ou la place des différents vecteurs énergétiques. Il sera prochainement complété par un « rapport technique » détaillant les hypothèses sous-jacentes prises en compte.",
+              "document_type": "REPORT",
+              "publication_date": "2019-01-01",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux économiques liés au secteur des transports"
+            }
+          },
+          {
+            "id": "2d4b346e-c1cf-5a66-b71e-cc870d69eeca",
+            "document_id": "48669e50-2daa-5e96-9fdc-88f103f4500a",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Trajectoires de décarbonation profonde du transport de marchandises en France\n\nText: aujourdhui par les différents acteurs (chargeurs, trans -\nporteurs, autorités, consommateurs). Lexplicitation de \nces variables pourrait également permettre de construire \nune analyse comparée de lensemble des possibles et de \nleurs incertitudes pour les confronter aux ambitions de \nlobjectif de  neutralité carbone .\nÉconomie des transports et environnement\nAfin de comprendre les effets de nos scénarios sur le \nfutur du secteur de transport de marchandises en France \net sur sa décarbonation, il est utile de revenir sur son \nfonctionnement et sur ses interactions avec les chaînes \nlogistiques.\nLe transport de marchandises, qui nest jamais une fin \nen soi, dépend du contexte dans lequel il sinscrit et \nconditionne le fonctionnement des chaînes logistiques, \ncelles-ci ayant pour fonction doffrir aux clients un ni -\nveau de service correspondant à leurs préférences, à un \ncoût acceptable. Le niveau de service est multidimen -\nsionnel : rapidité de livraison, fiabilité des horaires, lieu",
+            "metadata": {
+              "title": "Trajectoires de décarbonation profonde du transport de marchandises en France",
+              "hal_id": "hal-02865268",
+              "authors": [
+                "Yann Briand",
+                "Johannes Svensson",
+                "Martin Koning",
+                "François Combes",
+                "Gwenaelle Lamy",
+                "Prabodh Pourouchottamin",
+                "Jean-Michel Cayla",
+                "Julien Lefevre"
+              ],
+              "version": "v0",
+              "citation": "Yann Briand, Johannes Svensson, Martin Koning, François Combes, Gwenaelle Lamy, et al.. Trajectoires de décarbonation profonde du transport de marchandises en France. [Rapport de recherche] IFSTTAR - Institut Français des Sciences et Technologies des Transports, de l'Aménagement et des Réseaux. 2019, 48 p. ⟨hal-02865268⟩",
+              "source_url": "https://hal.science/hal-02865268",
+              "chunk_order": 23,
+              "description": "Ce document constitue le « rapport descriptif » des scénarios de décarbonation profonde du transport de marchandises en France à l&apos;horizon 2050. Il s&apos;adresse aux différents acteurs de la société qui souhaiteraient découvrir deux histoires cohérentes des principales transformations (sociétales, organisationnelles, technologiques et politiques) menant à la décarbonation de ce secteur ainsi que leurs effets sur un ensemble de dimensions comme le nombre de tonnes transportées, la part du rail, les circulations des véhicules routiers, la demande d&apos;énergie finale ou la place des différents vecteurs énergétiques. Il sera prochainement complété par un « rapport technique » détaillant les hypothèses sous-jacentes prises en compte.",
+              "document_type": "REPORT",
+              "publication_date": "2019-01-01",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux économiques liés au secteur des transports"
+            }
+          },
+          {
+            "id": "a1a4f4f4-64d0-524a-8d27-4644c773e28b",
+            "document_id": "e35504f5-4edd-58f5-8b59-7be0771edef8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique\n\nText: le rail dont la part modale atteint 20% et (iv) dune \npénétration des agrocarburants à hauteur de 12%.Au total, les émissions de CO 2 du secteur des trans -\nports (personnes et marchandises) chutent de 60% \nentre 2010 et 2050, la consommation dénergie \nfinale de 41%. \nV.coûtsde sin vestissements e t\ndespolitique\nsdans les\necteur \ndestr\nansports\nLes mesures fiscales appliquées aux transports \nexercent un effet positif sur les finances de lÉtat, \nexception faite de la taxe intérieure de consomma-\ntion sur les produits pétroliers, dont le produit enre-\ngistre un recul significatif avec le temps (de 10% en \n2020, 25% en 2030 et environ 50% en 2050). Le \ntaux de la taxe restant inchangé, la diminution des \nrecettes est intégralement imputable au déclin de la consommation de produits pétroliers importés. \nLes investissements dans les infrastructures \nseffectuent pour leur part à périmètre financier \nconstant, seule leur répartition modale étant affec-\ntée jusquen 2030. Les 6 milliards deuros soustraits",
+            "metadata": {
+              "title": "Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique",
+              "hal_id": "halshs-00797980",
+              "authors": [
+                "Ruben Bibas",
+                "Sandrine Mathy",
+                "Meike Fink"
+              ],
+              "version": "v0",
+              "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique. 2012. ⟨halshs-00797980⟩",
+              "source_url": "https://hal.science/halshs-00797980",
+              "chunk_order": 143,
+              "description": "Cet article trouve son origine dans un double constat : le déficit d'acceptabilité des politiques climatiques d'une part et le déficit de crédibilité, de légitimité et d'appropriation des scénarios de réduction d'émission de gaz à effet de serre d'autre part. Pour répondre à ces limites, nous avons élaboré, au travers d'une concertation associant une cinquantaine de parties prenantes et une cinquantaine d'experts sectoriels, un processus de co-construction d'un scénario \" acceptable \" de réduction des émissions de CO2. Les parties prenantes ont sélectionné les politiques et les mesures qu'ils considèrent comme acceptables. Celles-ci ont également contribué largement à la méthodologie d'élaboration du scénario par la définition d'un cahier des charges qui inclut la nécessaire transparence des données, des tests de sensibilité et la nécessité d'expliciter certains types d'impacts économiques et financiers nécessaires à l'évaluation des trajectoires facteur 4. L'ensemble des politiques considérées comme acceptables est intégré dans le modèle technico-économique Imaclim-R France. Cette plateforme de modélisation adaptée au dialogue entre modélisateurs et partie prenantes ou experts, évalue les impacts sociaux, économiques et financiers de politiques climatiques. Cet exercice de co-construction de scénario fondé sur la concertation alimentant les paramètres d'un modèle technico-économique, fournit une preuve méthodologique par l'exemple qu'un tel processus peut être mis en place. Le scénario reposant sur les politiques et mesures que les parties prenantes considèrent comme acceptables permet de réduire de 68% les émissions de CO2 en 2050 par rapport à 1990, résultat proche de l'objectif de Facteur 4 (soit 75%). Les mesures de réduction des émissions, dont la plus emblématique est la taxe carbone, sont bénéfiques pour l'emploi et la croissance économique, sauf à court terme. Elles permettent en outre de réduire rapidement et durablement le budget des ménages dédié aux services énergétiques. Enfin, le bilan financier agrégé des mesures s'avère positif dès le début de la période. Ce résultat constitue un socle solide sur lequel construire l'acceptabilité des trajectoires Facteur 4.",
+              "document_type": "REPORT",
+              "publication_date": "2012-03-01",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux économiques liés au secteur des transports"
+            }
+          },
+          {
+            "id": "b79a57f2-6ed5-5b36-a2e1-117ee0dd1261",
+            "document_id": "e847732e-ff95-5bd3-8789-3ffa42c30a51",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique\n\nText: d'équipement de ces trois catégories . En  particu lier, les questions énergétiques \ndépenden t larg ement des formes urbaines (c onditionnement de l'air , transp ort...), pour  \nlesquelles on peut imaginer d es transformati on profondes, mais d'autan t plus coûteuses \nqu'elles seron t rapides. En outre, le secteur  des transports es t celui qui soulève le plus \nde questions : il est l' un des secteurs les plus  émetteurs  et l'un de ceux qui croissent le \nplus vite. Son évolution prov oque des innova tions de pro duits qui modifient peu la \nstructure des modalités de déplacem ent, tandis qu' elle induit par les  politique s \npubliques des innovations de s ystème (in termodalité, d éveloppement des tr ansports en \ncommun), de potentiel important mais supposant de profondes tran sformations \nmacroéconomiques qui les  ha ndicapent fortement. Enfin, les modifications  \ntechno logiques  radicales dans certains secteurs structurants  pour l' économ ie peuven t",
+            "metadata": {
+              "title": "Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique",
+              "hal_id": "tel-00003504",
+              "authors": "['Frédéric Ghersi']",
+              "version": "v0",
+              "citation": "Frédéric Ghersi. Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique. Economies et finances. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2003. Français. ⟨NNT : ⟩. ⟨tel-00003504⟩",
+              "source_url": "https://hal.science/tel-00003504",
+              "chunk_order": 300,
+              "description": "Les travaux présentés dans cette thèse portent sur l'évaluation des coûts macro-économiques de politiques climatiques nationales et mondiales. Ils reposent sur une mise en relation innovante des prospectives énergétique et macroéconomique, dont l'objectif est d'assurer la représentation fidèle, dans la modélisation macroéconomique, des élasticités du système énergétique mises en lumière par l'analyse technico-économique. Ils opèrent aussi un questionnement critique des études analytiques ayant conclu à l'improbabilité d'un dividende économique net de réformes fiscales environnementales, en démontrant que le signe ultime de l'effet prix général d'une réforme « écofiscale » est dépendant des structures de production et de consommation préexistant à la réforme, ainsi que de leur réactivité au signal-prix. Ils soulignent enfin le rôle prépondérant du changement technique induit et de ses modalités—éviction de l'investissement de productivité générale éventuellement corrigée par une diffusion du progrès technique spécifique—sur l'obtention d'un second dividende.",
+              "document_type": "THESE",
+              "publication_date": "2003-04-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux économiques liés au secteur des transports"
+            }
+          },
+          {
+            "id": "7244ed7c-ff68-5db1-8ca8-03f33cd91349",
+            "document_id": "47947309-7693-57b7-a615-dd31a6bccc56",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: Les modèles intégrés économie-climat : quels usages pour quelles décisions ?\n\nText: investissements sur ces  trois secteurs il faudrait rajouter 20% de financements pour change r les \nprocédés  industriels8. Ce fait est mécon nu parce que les tableaux présentés dans les rapports \ncomportent très souvent des colonnes  transport  ,  habitat   ou  industrie   alors que  les chiffres \naffichés ne portent que sur les investissements en efficacité énergétique. Les m odèles multisector iels \nhybride s captent les impacts des interdépendances sectorielles sur la formation des prix, la \ncompétitivité et le niveau de production , ce qui est déjà important, mais pas les dynamiques \néconomiques spécifiques  de ces secteurs , ce qui peut conduire à des erreurs de diagnostic9. \nAinsi, l es transports  sont  soumis aux  dynamiques de mobilité et doccupation du territoire, elles -\nmême s déterminées  par les prix du foncier et de limmobilier  et par des choix publics dinfrastructures \nurbaines et daménag ement du territoire, au moins autant que par les prix des carburants  (Lampin et",
+            "metadata": {
+              "title": "Les modèles intégrés économie-climat : quels usages pour quelles décisions ?",
+              "hal_id": "hal-03506990",
+              "authors": "['Jean-Charles Hourcade', 'Peter Tankov', 'Stéphane Voisin', 'F. Ghersi', 'Julien Lefèvre']",
+              "version": "v0",
+              "citation": "Jean-Charles Hourcade, Peter Tankov, Stéphane Voisin, F. Ghersi, Julien Lefèvre. Les modèles intégrés économie-climat : quels usages pour quelles décisions ?. Opinions & Débats, 2021, 23, pp.16-42. ⟨hal-03506990⟩",
+              "source_url": "https://hal.science/hal-03506990",
+              "chunk_order": 68,
+              "description": "Même si la communication et les débats publics sur le changement climatique restent surtout alimentés par les modèles climatiques répertoriés par le Groupe I du Groupement Intergouvernemental d’Experts sur l’évolution du Climat (GIEC), c’est dès 1990 que des modèles furent construits pour cerner les conditions technologiques et économiques des trajectoires de contrôle des émissions de gaz à effet de serre (GES). Ces modèles furent analysés dès 1995 par le Groupe III du GIEC (GIEC, 1995) puis, sous le vocable de Integrated Assessment Models (IAM), mobilisèrent une communauté scientifique implantée dans des dizaines de pays, y compris des pays en développement. À l’origine utilisés pour éclairer des questions d’économie publique (tempo de l’action, prix du carbone, impacts des politiques climatiques sur la croissance, l’emploi et la distribution des revenus), les IAM font l’objet, depuis quelques années, de demandes croissantes de la part d’acteurs économiques et financiers à la recherche de prospectives pour éclairer leurs choix technologiques (véhicule électrique, hydrogène, éoliennes, bio-carburants) ou la composition de leurs portefeuilles financiers. Témoin de cet intérêt, la récente étude du Shift Project pour l’Association Française des Entreprises Privées sur les scénarios énergie climat, révèle la difficulté d’appréhender les IAM de manière pertinente pour des observateurs privés de guide de lecture1. Les IAM sont une jungle peuplée de ‘tribus’ et nous vous proposerons d’abord un détour sur leur histoire pour éviter que l’explosion des demandes d’expertise par des acteurs économiques pressés d’intégrer les objectifs de l’Accord de Paris ne conduise à des malentendus. Ces malentendus ont des conséquences sur la ‘carte mentale’ qui structure la délibération publique et les prises de décision. Nous discuterons ensuite des conditions méthodologiques d’usage des IAM pour les différentes questions que se posent les milieux financiers, et des conditions de leur ‘bonne gouvernance’.",
+              "document_type": "ART",
+              "publication_date": "2021-09-01",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux économiques liés au secteur des transports"
+            }
+          },
+          {
+            "id": "5b8359cc-659d-5e74-a434-bbfdcd491ea1",
+            "document_id": "e35504f5-4edd-58f5-8b59-7be0771edef8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique\n\nText: denviron 15% sous leffet de la crise économique de 2009, il a tendance à retrouver lentement son niveau davant crise.\nobjectif\nsclimatique\nse\nténer\ngétiques :\nLa législation française assigne plusieurs objectifs \nau secteur des transports :\n*La réduction de 20% des émissions de gaz à effet \nde serre dici 2020 par rapport à 2005 (année \nde référence).\n*Linstauration dune écotaxe sur le transport de \nmarchandises par poids-lourds (prévue en 2011 mais reportée).\n*Laugmentation de 14% à 25% en 2022 du trafic \nassuré par les modes de transport autres que \nlair et la route. Lobjectif intermédiaire fixé pour 2012 correspondait à un accroissement de 25% \npar rapport à 2007, mais sa réalisation a été \nfortement compromise par la diminution de cette \npart modale depuis 2007.\n*La construction de 2 000 km de voies ferrées à \ngrande vitesse dici 2020.\n*La baisse de 50% de la consommation dénergie \ndu transport aérien par personne et par kilomètre \ndici 2020. \nII.représentation dusect eurdes\ntranspor\ntsdansImaclim- r",
+            "metadata": {
+              "title": "Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique",
+              "hal_id": "halshs-00797980",
+              "authors": [
+                "Ruben Bibas",
+                "Sandrine Mathy",
+                "Meike Fink"
+              ],
+              "version": "v0",
+              "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. Un scénario bas carbone \"acceptable\" pour la France: Élaboration participative et analyse macroéconomique. 2012. ⟨halshs-00797980⟩",
+              "source_url": "https://hal.science/halshs-00797980",
+              "chunk_order": 108,
+              "description": "Cet article trouve son origine dans un double constat : le déficit d'acceptabilité des politiques climatiques d'une part et le déficit de crédibilité, de légitimité et d'appropriation des scénarios de réduction d'émission de gaz à effet de serre d'autre part. Pour répondre à ces limites, nous avons élaboré, au travers d'une concertation associant une cinquantaine de parties prenantes et une cinquantaine d'experts sectoriels, un processus de co-construction d'un scénario \" acceptable \" de réduction des émissions de CO2. Les parties prenantes ont sélectionné les politiques et les mesures qu'ils considèrent comme acceptables. Celles-ci ont également contribué largement à la méthodologie d'élaboration du scénario par la définition d'un cahier des charges qui inclut la nécessaire transparence des données, des tests de sensibilité et la nécessité d'expliciter certains types d'impacts économiques et financiers nécessaires à l'évaluation des trajectoires facteur 4. L'ensemble des politiques considérées comme acceptables est intégré dans le modèle technico-économique Imaclim-R France. Cette plateforme de modélisation adaptée au dialogue entre modélisateurs et partie prenantes ou experts, évalue les impacts sociaux, économiques et financiers de politiques climatiques. Cet exercice de co-construction de scénario fondé sur la concertation alimentant les paramètres d'un modèle technico-économique, fournit une preuve méthodologique par l'exemple qu'un tel processus peut être mis en place. Le scénario reposant sur les politiques et mesures que les parties prenantes considèrent comme acceptables permet de réduire de 68% les émissions de CO2 en 2050 par rapport à 1990, résultat proche de l'objectif de Facteur 4 (soit 75%). Les mesures de réduction des émissions, dont la plus emblématique est la taxe carbone, sont bénéfiques pour l'emploi et la croissance économique, sauf à court terme. Elles permettent en outre de réduire rapidement et durablement le budget des ménages dédié aux services énergétiques. Enfin, le bilan financier agrégé des mesures s'avère positif dès le début de la période. Ce résultat constitue un socle solide sur lequel construire l'acceptabilité des trajectoires Facteur 4.",
+              "document_type": "REPORT",
+              "publication_date": "2012-03-01",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "les enjeux économiques liés au secteur des transports"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2719,
+            "total_tokens": 2719
+          }
+        }
+      },
+      "duration": 3466
+    },
+    "retrievalTime": 1884,
+    "generationTime": 3466,
+    "timestamp": "2025-07-16T16:26:23.434Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-16T16:26:23.690676+00:00",
+    "server_version": "1.0.0"
+  }
+}

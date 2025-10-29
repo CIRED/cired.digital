@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1753114240935_1p5k13q3b1n456c1k",
+  "timestamp": "20250721T161051623Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1753114251594_jevsevu",
+    "query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "Hanoi has just announced that it will ban diesel and petrol motorcycles from July 2026, with the hope of reducing air pollution in the city. People criticised this policy since lots of people's livelihoods depend on the two-wheelers, and infrastructure for a wide adoption of electric vehicles in Hanoi is limited. \n\nIs the time for implementing this policy too rushed? What and how long does it take for Hanoi to develop infrastructure and other supporting mechanisms for this transition?",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "86.238.242.220",
+    "forwarded_for": "86.238.242.220",
+    "received_at": "2025-07-21T16:10:51.656892+00:00",
+    "server_version": "1.0.0"
+  }
+}

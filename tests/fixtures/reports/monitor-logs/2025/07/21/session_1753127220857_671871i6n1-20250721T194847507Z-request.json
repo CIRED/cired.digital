@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1753127220857_671871i6n1e523z3i",
+  "timestamp": "20250721T194847507Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1753127327498_7wagkp1",
+    "query": "quels sont les publications du CIRED qui portent sur le prix du carbone ?",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "quels sont les publications du CIRED qui portent sur le prix du carbone ?",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "88.174.231.29",
+    "forwarded_for": "88.174.231.29",
+    "received_at": "2025-07-21T19:48:47.262895+00:00",
+    "server_version": "1.0.0"
+  }
+}

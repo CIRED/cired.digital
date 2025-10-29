@@ -1,0 +1,545 @@
+{
+  "sessionId": "session_1752242018876_4k42466s2k5u3p405a",
+  "timestamp": "20250711T135401307Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752242033909_zpnmp1p",
+    "response": {
+      "results": {
+        "generated_answer": "La consommation des ménages a des impacts macroéconomiques significatifs, comme le montrent plusieurs études et rapports. Voici quelques points clés tirés des documents fournis :\n\n1. **Impact sur le PIB et la dette publique** : Une fiscalité carbone, par exemple, peut avoir un impact positif sur le PIB et la réduction de la dette publique, mais cela dépend aussi de la manière dont les recettes de la taxe sont recyclées. [f3bfc92]\n\n2. **Effets redistributifs** : Les politiques climatiques, comme une taxe carbone, peuvent avoir des effets redistributifs. Par exemple, l'énergie pèse plus dans le budget des ménages à bas revenu que dans celui des ménages à haut revenu, ce qui peut entraîner des inquiétudes sur l'équité de ces politiques. [f3bfc92]\n\n3. **Consommation effective des ménages** : L'impact macroéconomique d'une fiscalité carbone sur la consommation des ménages peut varier en fonction des hypothèses technologiques. Un optimisme accru sur la décarbonisation de la production peut améliorer significativement la consommation effective des ménages. [134f739]\n\n4. **Effets contradictoires** : L'évolution des prix de l'agrégat composite (équivalent à un indice général des prix hors énergie) est la résultante de plusieurs effets contradictoires. Par exemple, l'effet de relance par la consommation induit par la hausse de l'emploi est limité par l'augmentation des dépenses d'énergie des ménages. [ba63679]\n\n5. **Impact à court et long terme** : Les impacts économiques des transitions énergétiques peuvent être légèrement défavorables à court terme, en raison du décalage entre les coûts des politiques et leurs bénéfices. Cependant, à moyen et long terme, ces impacts sont positifs en matière de croissance et d'emploi, grâce à la baisse des importations d'énergie, aux économies d'énergie libérant le pouvoir d'achat des ménages, et à la baisse du coût du travail permis par une taxe carbone. [6b3a532]\n\n6. **Pouvoir d'achat et consommation** : La variation du volume de consommation de chaque bien résulte de la combinaison de la modification des parts de budget allouées à chaque poste de dépense, de la variation du prix du bien et du changement du pouvoir d'achat des ménages. [fa54b36]\n\n7. **Double dividende** : Il existe des possibilités de double dividende au sens fort, mais celui-ci est toujours quantitativement modéré en raison des rétroactions dues aux effets d'équilibre général. Le mécanisme vertueux déclenché par l'augmentation de l'intensité en travail de la production peut avoir un impact sur la consommation des ménages. [b4bf850]\n\nCes points montrent que la consommation des ménages est influencée par divers facteurs macroéconomiques, notamment les politiques fiscales et climatiques, les changements technologiques, et les dynamiques du marché.",
+        "citations": [
+          {
+            "id": "f3bfc92",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 424,
+              "end": 433
+            },
+            "payload": {
+              "id": "f3bfc92b-f878-568c-8e8b-ffc32e3ed765",
+              "document_id": "8a0349b0-3a72-5657-834a-3748506ed952",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017156862745098037,
+              "text": "Document Title: Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES\n\nText: 61III. La fiscalité carbone, ses moda lités et les enjeux déquité57 \nLe fait quune taxe carbone puisse avoir un impact  positif sur les indicateurs macroéconomiques \ncomme le PIB, la réduction de la dette publique ou la consommation des ménages, nempêche pas de \ngrandes inquiétudes sur ses effets distributifs. Ces inquiétudes sont nourries de la perception que \nlénergie pèse plus dans le budget des ménages à bas revenu que dans celui des ménages à haut \nrevenu58. Mais de même que limpact macroéconom ique des fiscalités carbone dépend de façon \ncruciale de la modalité de recyclage du produit de la  taxe, on peut se demander si tel nest pas le cas \npour les effets redistributifs. \nLa question du partage équitable du fardeau comme des bénéfices de politiques climatiques \nrenvoie de fait à deux problèmes légèrement distincts.  Le premier porte sur la distribution des revenus \nstricto sensu  : ces politiques auront-elles un impact régressi f ou, au contraire, contribueront-elles à",
+              "metadata": {
+                "title": "Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES",
+                "hal_id": "halshs-00458205",
+                "authors": [
+                  "Frédéric Ghersi",
+                  "Emmanuel Combet",
+                  "Jean Charles Hourcade",
+                  "Camille Thubin"
+                ],
+                "version": "v0",
+                "citation": "Frédéric Ghersi, Emmanuel Combet, Jean Charles Hourcade, Camille Thubin. Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES. 2010. ⟨halshs-00458205⟩",
+                "source_url": "https://hal.science/halshs-00458205",
+                "chunk_order": 316,
+                "description": "Cette étude offre une vision d'ensemble des enjeux de mise en oeuvre et d'évolution d'une fiscalité carbone en France. Elle s'applique à ne pas dissocier son évaluation des grands défis économiques et sociaux à venir et montre qu'un recours à la taxation du carbone offre sur le long terme plus de marges de manoeuvre qu'elle n'en supprime. Sans aller jusqu'aux détails précis de sa mise en ouvre, elle vise à clarifier les mécanismes mis en jeu et à apprécier, pour un même ensemble de critères, les impacts chiffrés de plusieurs dispositifs. Il apparaît que les dispositifs qui offrent le plus de marge de manoeuvre pour concilier les objectifs de climat, croissance, emploi, distribution des revenus et compétitivité des entreprises, combinent deux modes de redistribution du produit de la taxe carbone : d'un côté, en finançant des mesures compensatoires pour les populations et les activités les plus impactées, de l'autre, comme ressource alternative au financement des retraites pour contenir la hausse future des cotisations sociales. La conclusion majeure est que, sans une telle réforme, qui engage la négociation sociale au-delà des seuls enjeux climatiques, il sera difficile, au cours du prochain demi-siècle, de réaliser un découplage drastique entre émissions de gaz à effet de serre et croissance.",
+                "document_type": "OTHER",
+                "publication_date": "2010-01-04",
+                "semantic_rank": 10,
+                "full_text_rank": 1,
+                "associated_query": "les impacts macroéconomiques de la consommation des ménages"
+              }
+            }
+          },
+          {
+            "id": "f3bfc92",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 744,
+              "end": 753
+            },
+            "payload": null
+          },
+          {
+            "id": "134f739",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1066,
+              "end": 1075
+            },
+            "payload": {
+              "id": "134f7398-3b99-5a1c-a2bf-c4be51fbb503",
+              "document_id": "8a0349b0-3a72-5657-834a-3748506ed952",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017033542976939202,
+              "text": "Document Title: Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES\n\nText: laquelle est prélevée la taxe carbone conduit à un amenuisement de ce double dividende.  \nPour comprendre les liens entre hypothèses t echnologiques et impact macroéconomique dune \nfiscalité carbone, nous supposerons dans un premie r temps des variations des potentiels de \ndécarbonisation des seuls systèmes de production, puis  de ces mêmes potentiels pour les ménages, à \nchaque fois sous loption de ratio  constant de la dette publique au  PIB (RDPC). Nous adopterons deux \nhypothèses contrastées : dune part un doublement du potentiel ultime de décarbonisation et de la sensibilité de la réalisation de ce potentiel aux prix de lénergie, dautre part  une rigidité absolue des \ntechnologies de production et dusage final des énergies. \nUn plus grand optimisme sur la décarbonisa tion de la production induit une amélioration \nsignificative de limpact sur la consommation e ffective des ménages, qui progresse fortementde",
+              "metadata": {
+                "title": "Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES",
+                "hal_id": "halshs-00458205",
+                "authors": [
+                  "Frédéric Ghersi",
+                  "Emmanuel Combet",
+                  "Jean Charles Hourcade",
+                  "Camille Thubin"
+                ],
+                "version": "v0",
+                "citation": "Frédéric Ghersi, Emmanuel Combet, Jean Charles Hourcade, Camille Thubin. Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES. 2010. ⟨halshs-00458205⟩",
+                "source_url": "https://hal.science/halshs-00458205",
+                "chunk_order": 252,
+                "description": "Cette étude offre une vision d'ensemble des enjeux de mise en oeuvre et d'évolution d'une fiscalité carbone en France. Elle s'applique à ne pas dissocier son évaluation des grands défis économiques et sociaux à venir et montre qu'un recours à la taxation du carbone offre sur le long terme plus de marges de manoeuvre qu'elle n'en supprime. Sans aller jusqu'aux détails précis de sa mise en ouvre, elle vise à clarifier les mécanismes mis en jeu et à apprécier, pour un même ensemble de critères, les impacts chiffrés de plusieurs dispositifs. Il apparaît que les dispositifs qui offrent le plus de marge de manoeuvre pour concilier les objectifs de climat, croissance, emploi, distribution des revenus et compétitivité des entreprises, combinent deux modes de redistribution du produit de la taxe carbone : d'un côté, en finançant des mesures compensatoires pour les populations et les activités les plus impactées, de l'autre, comme ressource alternative au financement des retraites pour contenir la hausse future des cotisations sociales. La conclusion majeure est que, sans une telle réforme, qui engage la négociation sociale au-delà des seuls enjeux climatiques, il sera difficile, au cours du prochain demi-siècle, de réaliser un découplage drastique entre émissions de gaz à effet de serre et croissance.",
+                "document_type": "OTHER",
+                "publication_date": "2010-01-04",
+                "semantic_rank": 10,
+                "full_text_rank": 3,
+                "associated_query": "les impacts macroéconomiques de la consommation des ménages"
+              }
+            }
+          },
+          {
+            "id": "ba63679",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1414,
+              "end": 1423
+            },
+            "payload": {
+              "id": "ba63679e-6107-5740-87ea-ce4b96c3e760",
+              "document_id": "9fd96c1c-eb2a-58ad-ad91-145f847285f7",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Marché international du carbone et double-dividende : antinomie ou synergie ?\n\nText: Tout d'abord, l'effet de relance par la consommation induit par la hausse \nde l'emploi est principalement limité par l'augmentation des dépenses \nd'énergie des ménages  : à partir d'un certain niveau de taxe, l'élasticité -\nprix diminuant , la baisse de la demande d'énergie des ménages n'est \nplus assez forte pour compenser l'augmentation de son prix, de sorte que \nleur consommation hors énergie finit par décroître  ; \n ensuite, l'évolution des prix de l'agrégat composite (équivalent à un \nindice  général des prix hors énergie) est en fait la résultante de plusieurs \neffets contradictoires  :",
+              "metadata": {
+                "title": "Marché international du carbone et double-dividende : antinomie ou synergie ?",
+                "hal_id": "halshs-00009844",
+                "authors": [
+                  "Frédéric Ghersi",
+                  "Jean Charles Hourcade",
+                  "Philippe Quirion"
+                ],
+                "version": "v0",
+                "citation": "Frédéric Ghersi, Jean Charles Hourcade, Philippe Quirion. Marché international du carboneet double-dividende : antinomie ou synergie ?. Revue Française d'Economie, 2001, 16 (2), pp.149-177. ⟨halshs-00009844⟩",
+                "source_url": "https://hal.science/halshs-00009844",
+                "chunk_order": 29,
+                "description": "Le propos de cet article est de vérifier dans quelle mesure l'existence d'un marché international de permis d'émission de gaz à effet de serre (GES) influe-t'elle sur les possibilités nationales de double dividende (environnemental et économique) par transfert de charge fiscale de l'emploi vers les émissions de GES. Les combinaisons proposées de systèmes nationaux de permis et de taxes - étudiées à l'aide d'un modèle d'équilibre général calculable IMACLIM appliqué à l'économie française - sont mises au point en tenant particulièrement compte de l'économie politique de la discussion, soit de leur acceptabilité et de leur crédibilité dans un cadre réel. On montre en définitive qu'un scénario combinant une taxe-carbone appliquée à l'ensemble de l'économie hors industries grandes consommatrices d'énergie, et l'accès à un marché international du carbone pour ces dernières, est à même de conserver l'essentiel du double dividende d'une taxe sur le carbone sans exemptions, tout en étant politiquement plus acceptable",
+                "document_type": "ART",
+                "publication_date": "2001-01-01",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "les impacts macroéconomiques de la consommation des ménages"
+              }
+            }
+          },
+          {
+            "id": "6b3a532",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1913,
+              "end": 1922
+            },
+            "payload": {
+              "id": "6b3a5325-10ca-5b5c-9725-8fce46cd37cb",
+              "document_id": "0173471c-755c-589f-b9b6-9684b59653aa",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016919191919191917,
+              "text": "Document Title: Transitions énergétiques en France: Enseignements d'exercices de prospective\n\nText: énergie . Le F4 devi ent alors envisageable en mettant en jeu des réductions de consommations \ndénergie et des offr es peu carbonées qui vont au -delà des mesures à coût négatif.  \nLe bilan macroéconomique change selon les modalités de la transition mais est positif à \nmoyen et long terme en mat ière de croissance et demploi , ceci en raison de la synergie entre \ntrois mécan ismes  : baisse des importations dénergie, économies dénergie libérant le pouvoir \ndachat des ménages en biens et services non énergétiques, baisse du coût du travail permis par \nune taxe carbone . En revanche, l es impacts économiques peuvent être légèremen t défavorab les \nà court terme , en raison du décalage entre les coûts des politiques et leurs bénéfices. De \npossibles tensions peuvent en résulter avec certaines  couches sociales  et des  secteurs \nindustriels intensifs  en énergies et exposé s à la concurrence internationale.  Laccompagnement",
+              "metadata": {
+                "title": "Transitions énergétiques en France: Enseignements d'exercices de prospective",
+                "hal_id": "halshs-00849948",
+                "authors": "['Ruben Bibas', 'Jean Charles Hourcade']",
+                "version": "v0",
+                "citation": "Ruben Bibas, Jean Charles Hourcade. Transitions énergétiques en France: Enseignements d'exercices de prospective. 2013. ⟨halshs-00849948⟩",
+                "source_url": "https://hal.science/halshs-00849948",
+                "chunk_order": 159,
+                "description": "Le modèle d'équilibre général Imaclim-R France est utilisé pour examiner différentes stratégies de transition énergétique menant à une trajectoire 'Facteur 4'. Le bilan macroéconomique d'un jeu d'hypothèses sur les conditions techniques de l'offre et la demande d'énergie varie fortement selon qu'il est inséré ou non dans un ensemble de mesures qui ne ressortissent pas du seul domaine des politiques énergétiques : politiques fiscales pour éviter la propagation des surcoûts de l'énergie dans l'appareil de production, négociation sociale et salariale pour gérer le recyclage du produit d'une taxe carbone, réforme des structures de financement, politiques industrielles et de formation aux nouveaux métiers, politiques d'infrastructures et changement comportementaux. Nous montrons ensuite comment une politique de financement baissant le coefficient risque des investissements 'bas carbone' permettrait, en améliorant la crédibilité des politiques publiques, de réduire les craintes qui expliquent la frilosité des acteurs économiques et de déclencher une réorientation des investissements plus rapide vers des équipements sobres en énergie. Le bilan macroéconomique change selon les modalités de la transition mais est positif à moyen et long terme en matière de croissance et d'emploi, ceci en raison de la synergie entre trois mécanismes : baisse des importations d'énergie, économies d'énergie libérant le pouvoir d'achat des ménages en biens et services non énergétiques, baisse du coût du travail permis par une taxe carbone. L'accompagnement économique de la transition est décisif pour passer d'un bilan légèrement négatif à court terme à un bilan positif, ce afin de donner le 'grain à moudre' nécessaire pour réduire ces tensions. L'enjeu est un 'effet crédibilité' venant de la conduite cohérente de politiques de prix et de financement guidant les anticipations des acteurs dans un contexte défavorable. Quant au dossier nucléaire, nous faisons apparaître une grande différence entre un nucléaire contraint par des exigences accrues 'de précaution' et une sortie volontariste à l'horizon 2050 avec interdiction de construction de nouvelles centrales. Cette dernière hypothèse suppose, pour respecter le F4, un développement important et précoce du CCS et conduit à un retard de croissance de 4,5 ans sur 40 ans compte non tenu des coûts de reconversion, et, en sens inverse, de changements profonds des comportements et des structures économiques. Des scénarios 'nucléaire de précaution' limitent sa place autour de 40% du mix énergétique à 2050 et permettent de reculer une décision de sortie ou de nouveau déploiement qui pourra être prise plus tard \" en meilleure connaissance de cause \". L'enjeu, aujourd'hui est de se mettre en position de la prendre avec un fort consensus national autour non seulement du choix technologique ultime, quel qu'il soit, mais aussi des politiques économiques et sociales cohérentes avec ce choix.",
+                "document_type": "UNDEFINED",
+                "publication_date": "2013-07-01",
+                "semantic_rank": 10,
+                "full_text_rank": 5,
+                "associated_query": "les impacts macroéconomiques de la consommation des ménages"
+              }
+            }
+          },
+          {
+            "id": "fa54b36",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2201,
+              "end": 2210
+            },
+            "payload": {
+              "id": "fa54b363-72be-5828-b4ec-4b7879d543cb",
+              "document_id": "545cdec1-9c35-541e-bd90-eee4435696e8",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01638993710691824,
+              "text": "Document Title: Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable »\n\nText: autres consommations. La variation du volume de consommation de chacun des bien s résulte ainsi \nde la combinaison de la modification des parts de budget allouées à chaque  poste de dépense, de la \nvariation du prix du bien et du changement du pouvoir d'achat  des ménages.  \n(ii) une modification de la compétitivité des biens nationaux et donc du commerce international . \nUne augmentation des  prix de production relative aux prix internationaux conduit à une perte de \ncompétitivité, à moins d'exportations et plus d'importations, et donc à une baisse de la production  \ndomestique . \nDes boucles de r étroaction sajoutent à ces effets directs  : \n(i) leffet de la variation de la production et des prix de vente sur les revenus nominaux et réels des \nménages.  Une variation d e la production induit une modifi cation des revenus des  ménages via la \nvariation du  volume des s alaires et la variation des profits  des entreprises reversés  aux ménages .",
+              "metadata": {
+                "doi": "10.3406/ecop.2016.8200",
+                "title": "Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable »",
+                "hal_id": "hal-01426322",
+                "authors": [
+                  "Ruben Bibas",
+                  "Sandrine Mathy",
+                  "Meike Fink"
+                ],
+                "version": "v0",
+                "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable ». Economie et Prévision, 2016, 208-209, pp.77-104. ⟨10.3406/ecop.2016.8200⟩. ⟨hal-01426322⟩",
+                "source_url": "https://doi.org/10.3406/ecop.2016.8200",
+                "chunk_order": 39,
+                "description": "La définition des technologies à mobiliser et des politiques à mettre en œuvre pour atteindre l'objectif de division par quatre des émissions de gaz à effet de serre suscite de vifs débats. En ce sens, la réalisation d’un exercice de scénarisation peut permettre d'objectiver l’ensemble des conséquences économiques et sociales d’une trajectoire et ainsi ouvrir le débat sur les visions compatibles avec les objectifs climatiques et énergétiques. Cet article décrit le processus d'élaboration participative par une trentaine de parties prenantes ( issues du secteur privé, du secteur public et de l’Etat, des ONG, des associations de consommateurs, des syndicats, des banques ou des collectivités territoriales) d'un scénario bas carbone pour la France. Les mesures considérées comme acceptables par les parties prenantes sont intégrées dans le modèle technico-économique Imaclim-R France, afin d’évaluer leurs impacts sur les émissions de CO2 et sur l'économie. Le scénario issu de cette concertation atteint une réduction des émissions de CO2 de 68% en 2050, par rapport à 1990, ce qui se rapproche de l’objectif de Facteur 4. Les mesures de réduction des émissions, dont la plus emblématique est la taxe carbone, sont bénéfiques pour l'emploi et la croissance économique, sauf à court terme où le défaut d’anticipation des acteurs ne leur permet pas de se préparer à l’instauration d’une taxe carbone. Les mesures permettent en outre de réduire rapidement et durablement le budget des ménages dédié aux services énergétiques, ainsi que la facture énergétique et la compétitivité industrielle est renforcée.",
+                "document_type": "ART",
+                "publication_date": "2016-01-01",
+                "semantic_rank": 3,
+                "full_text_rank": 200,
+                "associated_query": "les impacts macroéconomiques de la consommation des ménages"
+              }
+            }
+          },
+          {
+            "id": "b4bf850",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2562,
+              "end": 2571
+            },
+            "payload": {
+              "id": "b4bf850b-4c48-5e4d-8be1-cc01dbca53ab",
+              "document_id": "e847732e-ff95-5bd3-8789-3ffa42c30a51",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015818181818181818,
+              "text": "Document Title: Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique\n\nText: direct sur les coûts de produc tion et sur le pouvoir d 'achat réel des ménages, et n 'a \nqu'un impact tr ès indirect sur l'évolution de la consommation unitair e de tr avail ( via \nl'impact du pr ix du bien composite qui intervient d ans la form ation  du prix  de \nl'énerg ie). C'es t ce qui expliqu e que l a variation du coefficient d'éviction n 'affecte qu e \nmarginalement l' emploi alors qu' il modifi e très sensiblement la courbe de \nconsommation des mé nages (g raphiques VI .5 et VI.6 ). \nEn défin itive, on peut consid érer com me robustes les conclusions su ivantes dans le cas \nde l'économie f rançaise :  \n il exist e des p ossibilités de double divid ende au sens fort, m ais celui-ci est  \ntoujours quantitativ ement modéré en rais on des rétroactio ns dues aux effets \nd'équ ilibre gén éral. Le m écanisme vertueux décl enché p ar l'augm entation de \nl'intensité en travail de la produc tion (co mbinaison de  choix techniques",
+              "metadata": {
+                "title": "Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique",
+                "hal_id": "tel-00003504",
+                "authors": "['Frédéric Ghersi']",
+                "version": "v0",
+                "citation": "Frédéric Ghersi. Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique. Economies et finances. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2003. Français. ⟨NNT : ⟩. ⟨tel-00003504⟩",
+                "source_url": "https://hal.science/tel-00003504",
+                "chunk_order": 537,
+                "description": "Les travaux présentés dans cette thèse portent sur l'évaluation des coûts macro-économiques de politiques climatiques nationales et mondiales. Ils reposent sur une mise en relation innovante des prospectives énergétique et macroéconomique, dont l'objectif est d'assurer la représentation fidèle, dans la modélisation macroéconomique, des élasticités du système énergétique mises en lumière par l'analyse technico-économique. Ils opèrent aussi un questionnement critique des études analytiques ayant conclu à l'improbabilité d'un dividende économique net de réformes fiscales environnementales, en démontrant que le signe ultime de l'effet prix général d'une réforme « écofiscale » est dépendant des structures de production et de consommation préexistant à la réforme, ainsi que de leur réactivité au signal-prix. Ils soulignent enfin le rôle prépondérant du changement technique induit et de ses modalités—éviction de l'investissement de productivité générale éventuellement corrigée par une diffusion du progrès technique spécifique—sur l'obtention d'un second dividende.",
+                "document_type": "THESE",
+                "publication_date": "2003-04-01",
+                "semantic_rank": 5,
+                "full_text_rank": 200,
+                "associated_query": "les impacts macroéconomiques de la consommation des ménages"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "f3bfc92b-f878-568c-8e8b-ffc32e3ed765",
+            "document_id": "8a0349b0-3a72-5657-834a-3748506ed952",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017156862745098037,
+            "text": "Document Title: Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES\n\nText: 61III. La fiscalité carbone, ses moda lités et les enjeux déquité57 \nLe fait quune taxe carbone puisse avoir un impact  positif sur les indicateurs macroéconomiques \ncomme le PIB, la réduction de la dette publique ou la consommation des ménages, nempêche pas de \ngrandes inquiétudes sur ses effets distributifs. Ces inquiétudes sont nourries de la perception que \nlénergie pèse plus dans le budget des ménages à bas revenu que dans celui des ménages à haut \nrevenu58. Mais de même que limpact macroéconom ique des fiscalités carbone dépend de façon \ncruciale de la modalité de recyclage du produit de la  taxe, on peut se demander si tel nest pas le cas \npour les effets redistributifs. \nLa question du partage équitable du fardeau comme des bénéfices de politiques climatiques \nrenvoie de fait à deux problèmes légèrement distincts.  Le premier porte sur la distribution des revenus \nstricto sensu  : ces politiques auront-elles un impact régressi f ou, au contraire, contribueront-elles à",
+            "metadata": {
+              "title": "Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES",
+              "hal_id": "halshs-00458205",
+              "authors": [
+                "Frédéric Ghersi",
+                "Emmanuel Combet",
+                "Jean Charles Hourcade",
+                "Camille Thubin"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Ghersi, Emmanuel Combet, Jean Charles Hourcade, Camille Thubin. Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES. 2010. ⟨halshs-00458205⟩",
+              "source_url": "https://hal.science/halshs-00458205",
+              "chunk_order": 316,
+              "description": "Cette étude offre une vision d'ensemble des enjeux de mise en oeuvre et d'évolution d'une fiscalité carbone en France. Elle s'applique à ne pas dissocier son évaluation des grands défis économiques et sociaux à venir et montre qu'un recours à la taxation du carbone offre sur le long terme plus de marges de manoeuvre qu'elle n'en supprime. Sans aller jusqu'aux détails précis de sa mise en ouvre, elle vise à clarifier les mécanismes mis en jeu et à apprécier, pour un même ensemble de critères, les impacts chiffrés de plusieurs dispositifs. Il apparaît que les dispositifs qui offrent le plus de marge de manoeuvre pour concilier les objectifs de climat, croissance, emploi, distribution des revenus et compétitivité des entreprises, combinent deux modes de redistribution du produit de la taxe carbone : d'un côté, en finançant des mesures compensatoires pour les populations et les activités les plus impactées, de l'autre, comme ressource alternative au financement des retraites pour contenir la hausse future des cotisations sociales. La conclusion majeure est que, sans une telle réforme, qui engage la négociation sociale au-delà des seuls enjeux climatiques, il sera difficile, au cours du prochain demi-siècle, de réaliser un découplage drastique entre émissions de gaz à effet de serre et croissance.",
+              "document_type": "OTHER",
+              "publication_date": "2010-01-04",
+              "semantic_rank": 10,
+              "full_text_rank": 1,
+              "associated_query": "les impacts macroéconomiques de la consommation des ménages"
+            }
+          },
+          {
+            "id": "f20d3f0f-ea76-5171-843e-ccb741e76bf2",
+            "document_id": "9a52494c-ac18-55fd-a24c-baf9ded41bdb",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017094017094017092,
+            "text": "Document Title: L'impact du changement technique endogène sur les politiques climatiques\n\nText: réside simultanément dans : (i) des c hoix de développement et des politiques \ndinfrastructures orientés vers le mode routie r qui contraignent la marge de manœuvre du \nsystème économique en général vis-à-vis dune réduction éventuelle de la consommation de \ntransport, (ii) un impact macroéconomique de laugmentation des prix qui reste faible chez \nles régions fortement consommatrices (Fi gure 31) et qui garantit une poursuite de \nlaugmentation générale du re venu des ménages, (iii) une mutation technologique lente \nmais non négligeable vers des équipements pl us efficaces et moins dépendants de la \nconsommation de carburants pétroliers qui pe rmet de limiter laugmentation du prix final \ndes services énergétiques.  \n \nCe type de dynamique, qui lie le change ment technique, la vitesse dapparition des \ncontraintes géologiques et la rigidité de la de mande, peut être inversée en cas dapparition de \nfrictions au moment de la mise en production d es carburants synthétiques. En effet, nous avons,",
+            "metadata": {
+              "title": "L'impact du changement technique endogène sur les politiques climatiques",
+              "hal_id": "tel-00489258",
+              "authors": "['Olivier Sassi']",
+              "version": "v0",
+              "citation": "Olivier Sassi. L'impact du changement technique endogène sur les politiques climatiques. Economies et finances. Université Paris-Est, 2008. Français. ⟨NNT : 2008PEST0278⟩. ⟨tel-00489258⟩",
+              "source_url": "https://hal.science/tel-00489258",
+              "chunk_order": 875,
+              "description": "Cette thèse porte sur la modélisation économique des politiques de réduction des émissions de gaz à effet de serre. Nous explorons, avec un modèle hybride, les conséquences du passage d'une économie du changement climatique sous tendue par une vision exogène du progrès technique à un cadre où il est induit par l'ensemble des signaux économiques. Les résultats soulignent les risques de bifurcation vers des trajectoires de référence très intensives en carbone. Les scénarios avec politiques climatiques démontrent l'existence d'un écart entre l'optimisme qui était attaché à l'induction du progrès technique par les politiques climatiques et les résultats que nous obtenons. Cette thèse propose enfin de concevoir les politiques climatiques plus comme une articulation de mesures spécifiques que comme le déploiement d'un unique signal prix. Nous démontrons qu'une mise en cohérence des politiques d'infrastructures de transport avec l'objectif climatique permet de réduire fortement son coût",
+              "document_type": "THESE",
+              "publication_date": "2008-11-21",
+              "semantic_rank": 10,
+              "full_text_rank": 2,
+              "associated_query": "les impacts macroéconomiques de la consommation des ménages"
+            }
+          },
+          {
+            "id": "134f7398-3b99-5a1c-a2bf-c4be51fbb503",
+            "document_id": "8a0349b0-3a72-5657-834a-3748506ed952",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017033542976939202,
+            "text": "Document Title: Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES\n\nText: laquelle est prélevée la taxe carbone conduit à un amenuisement de ce double dividende.  \nPour comprendre les liens entre hypothèses t echnologiques et impact macroéconomique dune \nfiscalité carbone, nous supposerons dans un premie r temps des variations des potentiels de \ndécarbonisation des seuls systèmes de production, puis  de ces mêmes potentiels pour les ménages, à \nchaque fois sous loption de ratio  constant de la dette publique au  PIB (RDPC). Nous adopterons deux \nhypothèses contrastées : dune part un doublement du potentiel ultime de décarbonisation et de la sensibilité de la réalisation de ce potentiel aux prix de lénergie, dautre part  une rigidité absolue des \ntechnologies de production et dusage final des énergies. \nUn plus grand optimisme sur la décarbonisa tion de la production induit une amélioration \nsignificative de limpact sur la consommation e ffective des ménages, qui progresse fortementde",
+            "metadata": {
+              "title": "Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES",
+              "hal_id": "halshs-00458205",
+              "authors": [
+                "Frédéric Ghersi",
+                "Emmanuel Combet",
+                "Jean Charles Hourcade",
+                "Camille Thubin"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Ghersi, Emmanuel Combet, Jean Charles Hourcade, Camille Thubin. Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES. 2010. ⟨halshs-00458205⟩",
+              "source_url": "https://hal.science/halshs-00458205",
+              "chunk_order": 252,
+              "description": "Cette étude offre une vision d'ensemble des enjeux de mise en oeuvre et d'évolution d'une fiscalité carbone en France. Elle s'applique à ne pas dissocier son évaluation des grands défis économiques et sociaux à venir et montre qu'un recours à la taxation du carbone offre sur le long terme plus de marges de manoeuvre qu'elle n'en supprime. Sans aller jusqu'aux détails précis de sa mise en ouvre, elle vise à clarifier les mécanismes mis en jeu et à apprécier, pour un même ensemble de critères, les impacts chiffrés de plusieurs dispositifs. Il apparaît que les dispositifs qui offrent le plus de marge de manoeuvre pour concilier les objectifs de climat, croissance, emploi, distribution des revenus et compétitivité des entreprises, combinent deux modes de redistribution du produit de la taxe carbone : d'un côté, en finançant des mesures compensatoires pour les populations et les activités les plus impactées, de l'autre, comme ressource alternative au financement des retraites pour contenir la hausse future des cotisations sociales. La conclusion majeure est que, sans une telle réforme, qui engage la négociation sociale au-delà des seuls enjeux climatiques, il sera difficile, au cours du prochain demi-siècle, de réaliser un découplage drastique entre émissions de gaz à effet de serre et croissance.",
+              "document_type": "OTHER",
+              "publication_date": "2010-01-04",
+              "semantic_rank": 10,
+              "full_text_rank": 3,
+              "associated_query": "les impacts macroéconomiques de la consommation des ménages"
+            }
+          },
+          {
+            "id": "ba63679e-6107-5740-87ea-ce4b96c3e760",
+            "document_id": "9fd96c1c-eb2a-58ad-ad91-145f847285f7",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Marché international du carbone et double-dividende : antinomie ou synergie ?\n\nText: Tout d'abord, l'effet de relance par la consommation induit par la hausse \nde l'emploi est principalement limité par l'augmentation des dépenses \nd'énergie des ménages  : à partir d'un certain niveau de taxe, l'élasticité -\nprix diminuant , la baisse de la demande d'énergie des ménages n'est \nplus assez forte pour compenser l'augmentation de son prix, de sorte que \nleur consommation hors énergie finit par décroître  ; \n ensuite, l'évolution des prix de l'agrégat composite (équivalent à un \nindice  général des prix hors énergie) est en fait la résultante de plusieurs \neffets contradictoires  :",
+            "metadata": {
+              "title": "Marché international du carbone et double-dividende : antinomie ou synergie ?",
+              "hal_id": "halshs-00009844",
+              "authors": [
+                "Frédéric Ghersi",
+                "Jean Charles Hourcade",
+                "Philippe Quirion"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Ghersi, Jean Charles Hourcade, Philippe Quirion. Marché international du carboneet double-dividende : antinomie ou synergie ?. Revue Française d'Economie, 2001, 16 (2), pp.149-177. ⟨halshs-00009844⟩",
+              "source_url": "https://hal.science/halshs-00009844",
+              "chunk_order": 29,
+              "description": "Le propos de cet article est de vérifier dans quelle mesure l'existence d'un marché international de permis d'émission de gaz à effet de serre (GES) influe-t'elle sur les possibilités nationales de double dividende (environnemental et économique) par transfert de charge fiscale de l'emploi vers les émissions de GES. Les combinaisons proposées de systèmes nationaux de permis et de taxes - étudiées à l'aide d'un modèle d'équilibre général calculable IMACLIM appliqué à l'économie française - sont mises au point en tenant particulièrement compte de l'économie politique de la discussion, soit de leur acceptabilité et de leur crédibilité dans un cadre réel. On montre en définitive qu'un scénario combinant une taxe-carbone appliquée à l'ensemble de l'économie hors industries grandes consommatrices d'énergie, et l'accès à un marché international du carbone pour ces dernières, est à même de conserver l'essentiel du double dividende d'une taxe sur le carbone sans exemptions, tout en étant politiquement plus acceptable",
+              "document_type": "ART",
+              "publication_date": "2001-01-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "les impacts macroéconomiques de la consommation des ménages"
+            }
+          },
+          {
+            "id": "a3988506-0505-5567-8736-d2d05a7d23fa",
+            "document_id": "8a0349b0-3a72-5657-834a-3748506ed952",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016975308641975308,
+            "text": "Document Title: Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES\n\nText: de ces gains defficacité énergétique dans les us ages finaux, en faisant lhypothèse simplificatrice \nquils croissent linéairement avec la taxe  carbone pour atteindre 5% à 400/tCO\n2. Nous avons fait \ncette hypothèse volontairement conservatrice pour tenir compte de linertie des équipements. \nUne vision synoptique des impacts macroéconomiques dune fiscalité carbone pour plusieurs \nniveaux de taxes (Figure 8) permet tout dabord de confirmer ce que nous avons déjà vu, à savoir la \ncorrélation inverse, entre augmentation du produit intéri eur brut et évolution de la dette publique. En \nfait, lécart entre les évolutions du PIB et celles de la consommation des ménages est faible quand on \nraisonne à ratio de dette publique constant (RDPC), significatif à pression fiscale constante (PFC) et \ntrès élevé à taux constants des fiscalités autres que ta xe carbone et cotisations sociales (AFC). Dans ce \ndernier cas, cest à partir de 50/tCO 2 que la consommation effective des ménages décroît rapidement",
+            "metadata": {
+              "title": "Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES",
+              "hal_id": "halshs-00458205",
+              "authors": [
+                "Frédéric Ghersi",
+                "Emmanuel Combet",
+                "Jean Charles Hourcade",
+                "Camille Thubin"
+              ],
+              "version": "v0",
+              "citation": "Frédéric Ghersi, Emmanuel Combet, Jean Charles Hourcade, Camille Thubin. Économie d'une fiscalité carbone en France - Rapport d'étude réalisée avec le soutien de l'ADEME et de la CFDT‐IRES. 2010. ⟨halshs-00458205⟩",
+              "source_url": "https://hal.science/halshs-00458205",
+              "chunk_order": 228,
+              "description": "Cette étude offre une vision d'ensemble des enjeux de mise en oeuvre et d'évolution d'une fiscalité carbone en France. Elle s'applique à ne pas dissocier son évaluation des grands défis économiques et sociaux à venir et montre qu'un recours à la taxation du carbone offre sur le long terme plus de marges de manoeuvre qu'elle n'en supprime. Sans aller jusqu'aux détails précis de sa mise en ouvre, elle vise à clarifier les mécanismes mis en jeu et à apprécier, pour un même ensemble de critères, les impacts chiffrés de plusieurs dispositifs. Il apparaît que les dispositifs qui offrent le plus de marge de manoeuvre pour concilier les objectifs de climat, croissance, emploi, distribution des revenus et compétitivité des entreprises, combinent deux modes de redistribution du produit de la taxe carbone : d'un côté, en finançant des mesures compensatoires pour les populations et les activités les plus impactées, de l'autre, comme ressource alternative au financement des retraites pour contenir la hausse future des cotisations sociales. La conclusion majeure est que, sans une telle réforme, qui engage la négociation sociale au-delà des seuls enjeux climatiques, il sera difficile, au cours du prochain demi-siècle, de réaliser un découplage drastique entre émissions de gaz à effet de serre et croissance.",
+              "document_type": "OTHER",
+              "publication_date": "2010-01-04",
+              "semantic_rank": 10,
+              "full_text_rank": 4,
+              "associated_query": "les impacts macroéconomiques de la consommation des ménages"
+            }
+          },
+          {
+            "id": "6b3a5325-10ca-5b5c-9725-8fce46cd37cb",
+            "document_id": "0173471c-755c-589f-b9b6-9684b59653aa",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016919191919191917,
+            "text": "Document Title: Transitions énergétiques en France: Enseignements d'exercices de prospective\n\nText: énergie . Le F4 devi ent alors envisageable en mettant en jeu des réductions de consommations \ndénergie et des offr es peu carbonées qui vont au -delà des mesures à coût négatif.  \nLe bilan macroéconomique change selon les modalités de la transition mais est positif à \nmoyen et long terme en mat ière de croissance et demploi , ceci en raison de la synergie entre \ntrois mécan ismes  : baisse des importations dénergie, économies dénergie libérant le pouvoir \ndachat des ménages en biens et services non énergétiques, baisse du coût du travail permis par \nune taxe carbone . En revanche, l es impacts économiques peuvent être légèremen t défavorab les \nà court terme , en raison du décalage entre les coûts des politiques et leurs bénéfices. De \npossibles tensions peuvent en résulter avec certaines  couches sociales  et des  secteurs \nindustriels intensifs  en énergies et exposé s à la concurrence internationale.  Laccompagnement",
+            "metadata": {
+              "title": "Transitions énergétiques en France: Enseignements d'exercices de prospective",
+              "hal_id": "halshs-00849948",
+              "authors": "['Ruben Bibas', 'Jean Charles Hourcade']",
+              "version": "v0",
+              "citation": "Ruben Bibas, Jean Charles Hourcade. Transitions énergétiques en France: Enseignements d'exercices de prospective. 2013. ⟨halshs-00849948⟩",
+              "source_url": "https://hal.science/halshs-00849948",
+              "chunk_order": 159,
+              "description": "Le modèle d'équilibre général Imaclim-R France est utilisé pour examiner différentes stratégies de transition énergétique menant à une trajectoire 'Facteur 4'. Le bilan macroéconomique d'un jeu d'hypothèses sur les conditions techniques de l'offre et la demande d'énergie varie fortement selon qu'il est inséré ou non dans un ensemble de mesures qui ne ressortissent pas du seul domaine des politiques énergétiques : politiques fiscales pour éviter la propagation des surcoûts de l'énergie dans l'appareil de production, négociation sociale et salariale pour gérer le recyclage du produit d'une taxe carbone, réforme des structures de financement, politiques industrielles et de formation aux nouveaux métiers, politiques d'infrastructures et changement comportementaux. Nous montrons ensuite comment une politique de financement baissant le coefficient risque des investissements 'bas carbone' permettrait, en améliorant la crédibilité des politiques publiques, de réduire les craintes qui expliquent la frilosité des acteurs économiques et de déclencher une réorientation des investissements plus rapide vers des équipements sobres en énergie. Le bilan macroéconomique change selon les modalités de la transition mais est positif à moyen et long terme en matière de croissance et d'emploi, ceci en raison de la synergie entre trois mécanismes : baisse des importations d'énergie, économies d'énergie libérant le pouvoir d'achat des ménages en biens et services non énergétiques, baisse du coût du travail permis par une taxe carbone. L'accompagnement économique de la transition est décisif pour passer d'un bilan légèrement négatif à court terme à un bilan positif, ce afin de donner le 'grain à moudre' nécessaire pour réduire ces tensions. L'enjeu est un 'effet crédibilité' venant de la conduite cohérente de politiques de prix et de financement guidant les anticipations des acteurs dans un contexte défavorable. Quant au dossier nucléaire, nous faisons apparaître une grande différence entre un nucléaire contraint par des exigences accrues 'de précaution' et une sortie volontariste à l'horizon 2050 avec interdiction de construction de nouvelles centrales. Cette dernière hypothèse suppose, pour respecter le F4, un développement important et précoce du CCS et conduit à un retard de croissance de 4,5 ans sur 40 ans compte non tenu des coûts de reconversion, et, en sens inverse, de changements profonds des comportements et des structures économiques. Des scénarios 'nucléaire de précaution' limitent sa place autour de 40% du mix énergétique à 2050 et permettent de reculer une décision de sortie ou de nouveau déploiement qui pourra être prise plus tard \" en meilleure connaissance de cause \". L'enjeu, aujourd'hui est de se mettre en position de la prendre avec un fort consensus national autour non seulement du choix technologique ultime, quel qu'il soit, mais aussi des politiques économiques et sociales cohérentes avec ce choix.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-07-01",
+              "semantic_rank": 10,
+              "full_text_rank": 5,
+              "associated_query": "les impacts macroéconomiques de la consommation des ménages"
+            }
+          },
+          {
+            "id": "1f85d45a-e32b-50e9-b4fa-9c78a86345d3",
+            "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: linfluence de ces modalités transite par linte rmédiaire dune ou plusieurs autres variables ( i.e. la réforme a un effet dépressif \nsur lactivité puisquelle entame le pouvoir dachat des ménages en alourdissant leur facture énergétique) ; enfin, une boucle de \nrétroaction advient lorsquun effet indirect met en jeu plusieur s fois une ou plusieurs variables, modifiant ainsi les première s \ninfluences directes ou indirectes (cest le cas des allège ments de cotisations sociales qui se voient modulés par les \nadministrations publiques car la réforme modi fie le niveau dactivité et, par suite, le niveau de recettes et dépenses publique s ; \nun ajustement de ces allègements est alors requis pour  respecter la contrainte de neutralité budgétaire). \n47 Pour faciliter la lecture nous ne rapportons  que lévolution de la consommation com posite des ménages. Il sagit dun indicate ur médiocre",
+            "metadata": {
+              "title": "Fiscalité carbone et progrès social. Application au cas français",
+              "hal_id": "tel-00813550",
+              "authors": [
+                "Emmanuel Combet"
+              ],
+              "version": "v0",
+              "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+              "source_url": "https://hal.science/tel-00813550",
+              "chunk_order": 988,
+              "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+              "document_type": "THESE",
+              "publication_date": "2013-04-09",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "les impacts macroéconomiques de la consommation des ménages"
+            }
+          },
+          {
+            "id": "fa54b363-72be-5828-b4ec-4b7879d543cb",
+            "document_id": "545cdec1-9c35-541e-bd90-eee4435696e8",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable »\n\nText: autres consommations. La variation du volume de consommation de chacun des bien s résulte ainsi \nde la combinaison de la modification des parts de budget allouées à chaque  poste de dépense, de la \nvariation du prix du bien et du changement du pouvoir d'achat  des ménages.  \n(ii) une modification de la compétitivité des biens nationaux et donc du commerce international . \nUne augmentation des  prix de production relative aux prix internationaux conduit à une perte de \ncompétitivité, à moins d'exportations et plus d'importations, et donc à une baisse de la production  \ndomestique . \nDes boucles de r étroaction sajoutent à ces effets directs  : \n(i) leffet de la variation de la production et des prix de vente sur les revenus nominaux et réels des \nménages.  Une variation d e la production induit une modifi cation des revenus des  ménages via la \nvariation du  volume des s alaires et la variation des profits  des entreprises reversés  aux ménages .",
+            "metadata": {
+              "doi": "10.3406/ecop.2016.8200",
+              "title": "Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable »",
+              "hal_id": "hal-01426322",
+              "authors": [
+                "Ruben Bibas",
+                "Sandrine Mathy",
+                "Meike Fink"
+              ],
+              "version": "v0",
+              "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. Elaboration et analyse macroéconomique d'un scénario bas carbone « acceptable ». Economie et Prévision, 2016, 208-209, pp.77-104. ⟨10.3406/ecop.2016.8200⟩. ⟨hal-01426322⟩",
+              "source_url": "https://doi.org/10.3406/ecop.2016.8200",
+              "chunk_order": 39,
+              "description": "La définition des technologies à mobiliser et des politiques à mettre en œuvre pour atteindre l'objectif de division par quatre des émissions de gaz à effet de serre suscite de vifs débats. En ce sens, la réalisation d’un exercice de scénarisation peut permettre d'objectiver l’ensemble des conséquences économiques et sociales d’une trajectoire et ainsi ouvrir le débat sur les visions compatibles avec les objectifs climatiques et énergétiques. Cet article décrit le processus d'élaboration participative par une trentaine de parties prenantes ( issues du secteur privé, du secteur public et de l’Etat, des ONG, des associations de consommateurs, des syndicats, des banques ou des collectivités territoriales) d'un scénario bas carbone pour la France. Les mesures considérées comme acceptables par les parties prenantes sont intégrées dans le modèle technico-économique Imaclim-R France, afin d’évaluer leurs impacts sur les émissions de CO2 et sur l'économie. Le scénario issu de cette concertation atteint une réduction des émissions de CO2 de 68% en 2050, par rapport à 1990, ce qui se rapproche de l’objectif de Facteur 4. Les mesures de réduction des émissions, dont la plus emblématique est la taxe carbone, sont bénéfiques pour l'emploi et la croissance économique, sauf à court terme où le défaut d’anticipation des acteurs ne leur permet pas de se préparer à l’instauration d’une taxe carbone. Les mesures permettent en outre de réduire rapidement et durablement le budget des ménages dédié aux services énergétiques, ainsi que la facture énergétique et la compétitivité industrielle est renforcée.",
+              "document_type": "ART",
+              "publication_date": "2016-01-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "les impacts macroéconomiques de la consommation des ménages"
+            }
+          },
+          {
+            "id": "4eb51a27-b107-55a4-8015-7c00b8cbf35b",
+            "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: influences directes ou indirectes (cest le cas des allège ments de cotisations sociales qui se voient modulés par les \nadministrations publiques car la réforme modi fie le niveau dactivité et, par suite, le niveau de recettes et dépenses publique s ; \nun ajustement de ces allègements est alors requis pour  respecter la contrainte de neutralité budgétaire). \n47 Pour faciliter la lecture nous ne rapportons  que lévolution de la consommation com posite des ménages. Il sagit dun indicate ur médiocre \nde leur bien-être mais qui donne une mesure simple et directe de  leffet de relance ou de dépre ssion de la demande intérieure. Nous \nintroduirons et discuterons des indicateurs pl us proches de la notion de bien-être plus  loin (chapitre 7). On tentera de résist er pour linstant au \nréflexe dutiliser la consommation de bien composite comme un mar queur du niveau de vie des ménage s  tout en gardant à lespri t que,",
+            "metadata": {
+              "title": "Fiscalité carbone et progrès social. Application au cas français",
+              "hal_id": "tel-00813550",
+              "authors": [
+                "Emmanuel Combet"
+              ],
+              "version": "v0",
+              "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+              "source_url": "https://hal.science/tel-00813550",
+              "chunk_order": 989,
+              "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+              "document_type": "THESE",
+              "publication_date": "2013-04-09",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "les impacts macroéconomiques de la consommation des ménages"
+            }
+          },
+          {
+            "id": "b4bf850b-4c48-5e4d-8be1-cc01dbca53ab",
+            "document_id": "e847732e-ff95-5bd3-8789-3ffa42c30a51",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique\n\nText: direct sur les coûts de produc tion et sur le pouvoir d 'achat réel des ménages, et n 'a \nqu'un impact tr ès indirect sur l'évolution de la consommation unitair e de tr avail ( via \nl'impact du pr ix du bien composite qui intervient d ans la form ation  du prix  de \nl'énerg ie). C'es t ce qui expliqu e que l a variation du coefficient d'éviction n 'affecte qu e \nmarginalement l' emploi alors qu' il modifi e très sensiblement la courbe de \nconsommation des mé nages (g raphiques VI .5 et VI.6 ). \nEn défin itive, on peut consid érer com me robustes les conclusions su ivantes dans le cas \nde l'économie f rançaise :  \n il exist e des p ossibilités de double divid ende au sens fort, m ais celui-ci est  \ntoujours quantitativ ement modéré en rais on des rétroactio ns dues aux effets \nd'équ ilibre gén éral. Le m écanisme vertueux décl enché p ar l'augm entation de \nl'intensité en travail de la produc tion (co mbinaison de  choix techniques",
+            "metadata": {
+              "title": "Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique",
+              "hal_id": "tel-00003504",
+              "authors": "['Frédéric Ghersi']",
+              "version": "v0",
+              "citation": "Frédéric Ghersi. Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique. Economies et finances. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2003. Français. ⟨NNT : ⟩. ⟨tel-00003504⟩",
+              "source_url": "https://hal.science/tel-00003504",
+              "chunk_order": 537,
+              "description": "Les travaux présentés dans cette thèse portent sur l'évaluation des coûts macro-économiques de politiques climatiques nationales et mondiales. Ils reposent sur une mise en relation innovante des prospectives énergétique et macroéconomique, dont l'objectif est d'assurer la représentation fidèle, dans la modélisation macroéconomique, des élasticités du système énergétique mises en lumière par l'analyse technico-économique. Ils opèrent aussi un questionnement critique des études analytiques ayant conclu à l'improbabilité d'un dividende économique net de réformes fiscales environnementales, en démontrant que le signe ultime de l'effet prix général d'une réforme « écofiscale » est dépendant des structures de production et de consommation préexistant à la réforme, ainsi que de leur réactivité au signal-prix. Ils soulignent enfin le rôle prépondérant du changement technique induit et de ses modalités—éviction de l'investissement de productivité générale éventuellement corrigée par une diffusion du progrès technique spécifique—sur l'obtention d'un second dividende.",
+              "document_type": "THESE",
+              "publication_date": "2003-04-01",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "les impacts macroéconomiques de la consommation des ménages"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2788,
+            "total_tokens": 2788
+          }
+        }
+      },
+      "duration": 5684
+    },
+    "retrievalTime": 1704,
+    "generationTime": 5684,
+    "timestamp": "2025-07-11T13:54:01.307Z"
+  },
+  "server_context": {
+    "client_ip": "93.5.218.62",
+    "forwarded_for": "93.5.218.62",
+    "received_at": "2025-07-11T13:54:01.449685+00:00",
+    "server_version": "1.0.0"
+  }
+}

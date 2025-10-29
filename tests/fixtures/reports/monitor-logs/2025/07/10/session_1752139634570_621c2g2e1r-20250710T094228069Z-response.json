@@ -1,0 +1,578 @@
+{
+  "sessionId": "session_1752139634570_621c2g2e1r2x6v47y",
+  "timestamp": "20250710T094228069Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752140537164_3e5igr0",
+    "response": {
+      "results": {
+        "generated_answer": "L'économétrie est une discipline qui combine l'économie et les statistiques pour analyser des données économiques et tester des hypothèses économiques. Voici quelques références pertinentes issues des résultats de recherche fournis :\n\n1. **Économétrie: méthode et applications** - Un livre de Bruno Crépon et Nicolas Jacquemand qui traite des méthodes et applications en économétrie [95bdb1b], [7ac437e].\n\n2. **Économétrie appliquée** - Julie Subervie, économiste à l'INRAE, travaille en économétrie appliquée, sur l'économie du développement et l'économie de l'environnement [7097b51].\n\n3. **Études économétriques** - Plusieurs études mentionnées utilisent des méthodes économétriques pour analyser des données spécifiques, comme l'étude sur les subventions et le free-ridership dans le cadre des crédits d'impôt pour l'isolation des logements en France [95bdb1b], [7ac437e].\n\n4. **Analyse économétrique** - Un document discute de l'utilisation de l'économétrie pour déterminer l'effet d'éviction des investissements énergétiques sur la productivité générale [b936e58], [bcfb63b].\n\n5. **Économétrie dans les services d'eau** - L'économétrie est également mentionnée comme une discipline importante pour l'analyse des services d'eau, notamment en ce qui concerne le financement, la tarification et la rentabilité [63dd56f], [f9af418].\n\nCes références montrent l'importance de l'économétrie dans divers domaines de l'économie et des sciences sociales.",
+        "citations": [
+          {
+            "id": "95bdb1b",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 383,
+              "end": 392
+            },
+            "payload": {
+              "id": "95bdb1b9-a791-5787-8ab5-1ea469e16c5f",
+              "document_id": "0335d39e-357e-5b00-9e47-cbe9e93d66c7",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017033542976939202,
+              "text": "Document Title: Heavy subsidization reduces free-ridership : Evidence from an econometric study of the French dwelling insulation tax credit\n\nText: 32 References \n \nAlberini, Anna, Andrea Bigano, and Marco Boeri. 2013.  Looking for Free-Riding: Energy Efficiency \nIncentives and Italian Homeowners . SSRN Scholarly Paper ID 2243427. Rochester, NY: Social \nScience Research Nandwork.  \nCohen, François, Marine Grémont, Benoît Tinandti, andand Shailendra Mudgal. 2012.  AND AT DE L ART SUR \nLEFF AND D AUBAINE DANS LES POLITIQUES ENVIRONNEMENTALES  . Study by BIO Intelligence \nService S.A.S. for ADEME.  \nCrépon, Bruno, and Nicolas Jacquemand. 2010. Économétrie: méthode and applications . De Boeck. \nDubin, Jeffrey A, and Steven E Henson. 1988.  The distributional effects of the Federal Energy Tax Act . \nResources and Energy  10 (3): 191 212.  \nGrösche, Pander, Christoph M. Schmidt, and Colin Vance. 2009.  Identifying Free-Riding in Energy-\nConservation Programs Using Revealed Preference Data . SSRN Scholarly Paper ID 1375365. \nRochester, NY: Social Science Research Nand work.",
+              "metadata": {
+                "title": "Heavy subsidization reduces free-ridership : Evidence from an econometric study of the French dwelling insulation tax credit",
+                "hal_id": "hal-00866445",
+                "authors": [
+                  "Marie-Laure Nauleau"
+                ],
+                "version": "v0",
+                "citation": "Marie-Laure Nauleau. Heavy subsidization reduces free-ridership : Evidence from an econometric study of the French dwelling insulation tax credit. 2013. ⟨hal-00866445⟩",
+                "source_url": "https://hal.science/hal-00866445",
+                "chunk_order": 131,
+                "description": "This econometric study assesses the efficiency of the tax credit implemented in France in 2005 on dwelling retrofitting investments. A before-after estimation is performed at the extensive and intensive margins on micro data over 2001-2011, focusing on insulation measures (windows, walls, roofs, floor, ceilings). After 2-years of latency with no significant effect, the tax credit has had an increasing significant positive effect at both margins between 2007 and 2010, with a decrease in 2011, in line with the tax credit rate evolutions. Focusing on opaque surfaces insulation, the positive effect only started in 2009, when a reform included labor cost in the tax credit base for these retrofitting measures. The percentage of subsidized households that would have invested even in the absence of the subsidy decreases from 79% in 2007 to 43% in 2010. The annual additional private investment in retrofitting generated by 1€ of public expenses was estimated at 3.4€ on average (standard deviation : 2.4) between 2007 and 2010.",
+                "document_type": "UNDEFINED",
+                "publication_date": "2013-07-01",
+                "semantic_rank": 10,
+                "full_text_rank": 3,
+                "associated_query": "économétrie"
+              }
+            }
+          },
+          {
+            "id": "7ac437e",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 394,
+              "end": 403
+            },
+            "payload": {
+              "id": "7ac437e6-c77a-5a86-8b36-851b225468c7",
+              "document_id": "0335d39e-357e-5b00-9e47-cbe9e93d66c7",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016975308641975308,
+              "text": "Document Title: Heavy subsidization reduces free-ridership : Evidence from an econometric study of the French dwelling insulation tax credit\n\nText: Service S.A.S. for ADEME.  \nCrépon, Bruno, and Nicolas Jacquemand. 2010. Économétrie: méthode and applications . De Boeck. \nDubin, Jeffrey A, and Steven E Henson. 1988.  The distributional effects of the Federal Energy Tax Act . \nResources and Energy  10 (3): 191 212.  \nGrösche, Pander, Christoph M. Schmidt, and Colin Vance. 2009.  Identifying Free-Riding in Energy-\nConservation Programs Using Revealed Preference Data . SSRN Scholarly Paper ID 1375365. \nRochester, NY: Social Science Research Nand work.  \nGrösche, Pander, and Colin Vance. 2009.  Willingness to Pay for Energy Conservation and Free-Ridership on \nSubsidization: Evidence from Germany . Energy Journal  30 (2): 135 153.  \nHassandt, Kevin A., and Gilbert E. Mandcalf. 1995.  Energy tax credits and residential conservation \ninvestment: Evidence from panel data . Journal of Public Economics  57 (2): 201 217.  \nIn Numeri-ADEME. 2012.  Marchés, emplois and enjeu énergétique des ac tivités liées à lamélioration de",
+              "metadata": {
+                "title": "Heavy subsidization reduces free-ridership : Evidence from an econometric study of the French dwelling insulation tax credit",
+                "hal_id": "hal-00866445",
+                "authors": [
+                  "Marie-Laure Nauleau"
+                ],
+                "version": "v0",
+                "citation": "Marie-Laure Nauleau. Heavy subsidization reduces free-ridership : Evidence from an econometric study of the French dwelling insulation tax credit. 2013. ⟨hal-00866445⟩",
+                "source_url": "https://hal.science/hal-00866445",
+                "chunk_order": 132,
+                "description": "This econometric study assesses the efficiency of the tax credit implemented in France in 2005 on dwelling retrofitting investments. A before-after estimation is performed at the extensive and intensive margins on micro data over 2001-2011, focusing on insulation measures (windows, walls, roofs, floor, ceilings). After 2-years of latency with no significant effect, the tax credit has had an increasing significant positive effect at both margins between 2007 and 2010, with a decrease in 2011, in line with the tax credit rate evolutions. Focusing on opaque surfaces insulation, the positive effect only started in 2009, when a reform included labor cost in the tax credit base for these retrofitting measures. The percentage of subsidized households that would have invested even in the absence of the subsidy decreases from 79% in 2007 to 43% in 2010. The annual additional private investment in retrofitting generated by 1€ of public expenses was estimated at 3.4€ on average (standard deviation : 2.4) between 2007 and 2010.",
+                "document_type": "UNDEFINED",
+                "publication_date": "2013-07-01",
+                "semantic_rank": 10,
+                "full_text_rank": 4,
+                "associated_query": "économétrie"
+              }
+            }
+          },
+          {
+            "id": "7097b51",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 576,
+              "end": 585
+            },
+            "payload": {
+              "id": "7097b519-dd8a-5007-93b2-801bb5f798c9",
+              "document_id": "e46577d4-62b8-594a-bd76-0a49666ab513",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016919191919191917,
+              "text": "Document Title: Le warrantage, un dispositif pour améliorer la sécurité alimentaire en Afrique subsaharienne\n\nText: et à la stratégie; ainsi que les rédacteur.rice.s en chef de Perspective .Issoufou Porgo est ingénieur zootechnicien et Secrétaire permanent à \nla Confédération paysanne du Faso (https://cpf-bf.org/). Il travaille sur \nlaccès des producteurs agricoles burkinabé aux marchés agricoles.\nissouporgo@yahoo.fr\nJulie Subervie est économiste à lINRAE (Institut national de recherche \npour lagriculture, lalimentation et lenvironnement, France,  \nhttps://www.inrae.fr/) à lUmr CEE-M (Centre déconomie de lenvi -\nronnemental - Montpellier, http://www.cee-m.fr/fr/). Elle travaille en \néconométrie appliquée, sur léconomie du développement et léconomie \nde lenvironnement.\njulie.subervie@inrae.fr\nRaphaël Soubeyran est économiste à lINRAE à lUmr CEE-M. Il travaille \nsur la théorie des organisations, léconomie politique, léconomie du \ndéveloppement et léconomie des ressources.\nraphael.soubeyran@inrae.fr",
+              "metadata": {
+                "doi": "10.19182/perspective/37141",
+                "title": "Le warrantage, un dispositif pour améliorer la sécurité alimentaire en Afrique subsaharienne",
+                "hal_id": "cirad-04094506",
+                "authors": [
+                  "Tristan Le Cotty",
+                  "Élodie Maître D’hôtel",
+                  "Issoufou Porgo",
+                  "Julie Subervie",
+                  "Raphaël Soubeyran"
+                ],
+                "version": "v0",
+                "citation": "Tristan Le Cotty, Élodie Maître D’hôtel, Issoufou Porgo, Julie Subervie, Raphaël Soubeyran. Le warrantage, un dispositif pour améliorer la sécurité alimentaire en Afrique subsaharienne. Perspective, 2023, 61, pp.1-4. ⟨10.19182/perspective/37141⟩. ⟨cirad-04094506⟩",
+                "source_url": "https://doi.org/10.19182/perspective/37141",
+                "chunk_order": 49,
+                "description": "Le warrantage se développe actuellement dans plusieurs pays du Sahel. C’est un dispositif de crédit-stockage mis en place par une organisation d’agriculteurs et une institution financière. Il consiste à stocker quelques mois une partie des céréales après la récolte dans un entrepôt en échange d’un crédit individuel. Sans ce crédit, les agriculteurs tendent à vendre leurs céréales dès la récolte pour rembourser les dettes ou subvenir à leurs besoins. Conséquence : les familles ont par la suite du mal à assurer la soudure, période de transition entre l’épuisement des stocks et la nouvelle récolte, et à investir dans leurs systèmes de production agricole. L’évaluation d’impact menée dans l’Ouest du Burkina Faso montre que le warrantage accroît la disponibilité alimentaire en période de soudure et qu’il renforce l’investissement et la production agricoles. Pour que son développement s’accélère, il est nécessaire de satisfaire trois conditions : disposer d’infrastructures de stockage adaptées, assurer la qualité des produits stockés, et établir des relations de confiance étroites entre institutions financières, organisations de producteurs et commerçants. Cette dernière condition est mise à mal par l’extension des conflits armés au Sahel.",
+                "document_type": "ART",
+                "publication_date": "2023-01-01",
+                "semantic_rank": 10,
+                "full_text_rank": 5,
+                "associated_query": "économétrie"
+              }
+            }
+          },
+          {
+            "id": "95bdb1b",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 855,
+              "end": 864
+            },
+            "payload": null
+          },
+          {
+            "id": "7ac437e",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 866,
+              "end": 875
+            },
+            "payload": null
+          },
+          {
+            "id": "b936e58",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1060,
+              "end": 1069
+            },
+            "payload": {
+              "id": "b936e586-a5fd-5323-93dd-004942da7a40",
+              "document_id": "e847732e-ff95-5bd3-8789-3ffa42c30a51",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016865079365079364,
+              "text": "Document Title: Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique\n\nText: sur de s pré misses simple s :  \n on considère u n taux de for mation brut e de capi tal fixe cons tant, ce q ui à \nrevenu d isponible donn é détermine le niv eau total de FBCF Qk;  \n on soustrait à cette FBCF totale  les investiss ements d' offre QkE et de dema nde \nQkEi (consommations interm édiaires) et QkEc (consommations des ménages)  \nspécifiqu ement énergétiques, pour obtenir  une FBCF de pr oductivité gén érale, \nqui détermine un coefficient de progrès tech nique hicksien Φ selon un exercic e \nd'économétrie détaillé en ann exe IV.1 . \nL'effet d 'éviction ainsi repr ésenté peut être tempéré par le jeu d'une variable de \ncontrôle, le taux τév, repr ésentan t la mesure des  investisse ments spécifiquement \nénergétiques sans inciden ce su r la productivité  génér ale : un taux de 1 sign ifie un eff et \nd'éviction com plet où  la perte de produ ctivité, liée à un e moindre inno vation , est \nproportionnelle à la baisse de la FBCF no n énergétique; une valeur in férieur e à 1",
+              "metadata": {
+                "title": "Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique",
+                "hal_id": "tel-00003504",
+                "authors": "['Frédéric Ghersi']",
+                "version": "v0",
+                "citation": "Frédéric Ghersi. Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique. Economies et finances. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2003. Français. ⟨NNT : ⟩. ⟨tel-00003504⟩",
+                "source_url": "https://hal.science/tel-00003504",
+                "chunk_order": 390,
+                "description": "Les travaux présentés dans cette thèse portent sur l'évaluation des coûts macro-économiques de politiques climatiques nationales et mondiales. Ils reposent sur une mise en relation innovante des prospectives énergétique et macroéconomique, dont l'objectif est d'assurer la représentation fidèle, dans la modélisation macroéconomique, des élasticités du système énergétique mises en lumière par l'analyse technico-économique. Ils opèrent aussi un questionnement critique des études analytiques ayant conclu à l'improbabilité d'un dividende économique net de réformes fiscales environnementales, en démontrant que le signe ultime de l'effet prix général d'une réforme « écofiscale » est dépendant des structures de production et de consommation préexistant à la réforme, ainsi que de leur réactivité au signal-prix. Ils soulignent enfin le rôle prépondérant du changement technique induit et de ses modalités—éviction de l'investissement de productivité générale éventuellement corrigée par une diffusion du progrès technique spécifique—sur l'obtention d'un second dividende.",
+                "document_type": "THESE",
+                "publication_date": "2003-04-01",
+                "semantic_rank": 10,
+                "full_text_rank": 6,
+                "associated_query": "économétrie"
+              }
+            }
+          },
+          {
+            "id": "bcfb63b",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1071,
+              "end": 1080
+            },
+            "payload": {
+              "id": "bcfb63b6-76ee-502a-9a4a-38fdfbb28c99",
+              "document_id": "e847732e-ff95-5bd3-8789-3ffa42c30a51",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016812865497076022,
+              "text": "Document Title: Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique\n\nText: d'économétrie détaillé en ann exe IV.1 . \nL'effet d 'éviction ainsi repr ésenté peut être tempéré par le jeu d'une variable de \ncontrôle, le taux τév, repr ésentan t la mesure des  investisse ments spécifiquement \nénergétiques sans inciden ce su r la productivité  génér ale : un taux de 1 sign ifie un eff et \nd'éviction com plet où  la perte de produ ctivité, liée à un e moindre inno vation , est \nproportionnelle à la baisse de la FBCF no n énergétique; une valeur in férieur e à 1 \nsuppose qu' une mesure des i nvestissements énergétiques bénéficient au progrès \ntechnique général par des externalités posit ives (phénomène de spill over). \nII.3.3. Représent ation des saturations de l'effic acité \ndynamique des signaux prix \nNous avons souligné précédemment que l' ordre de grandeu r des contraintes carbone  \njustifié es par l e nive au d 'alerte scien tifique climatique implique  des coûts marginaux \nnon néglig eables. La modélis ation d e ces co ntraintes se doit donc d e représenter d es",
+              "metadata": {
+                "title": "Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique",
+                "hal_id": "tel-00003504",
+                "authors": "['Frédéric Ghersi']",
+                "version": "v0",
+                "citation": "Frédéric Ghersi. Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique. Economies et finances. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2003. Français. ⟨NNT : ⟩. ⟨tel-00003504⟩",
+                "source_url": "https://hal.science/tel-00003504",
+                "chunk_order": 391,
+                "description": "Les travaux présentés dans cette thèse portent sur l'évaluation des coûts macro-économiques de politiques climatiques nationales et mondiales. Ils reposent sur une mise en relation innovante des prospectives énergétique et macroéconomique, dont l'objectif est d'assurer la représentation fidèle, dans la modélisation macroéconomique, des élasticités du système énergétique mises en lumière par l'analyse technico-économique. Ils opèrent aussi un questionnement critique des études analytiques ayant conclu à l'improbabilité d'un dividende économique net de réformes fiscales environnementales, en démontrant que le signe ultime de l'effet prix général d'une réforme « écofiscale » est dépendant des structures de production et de consommation préexistant à la réforme, ainsi que de leur réactivité au signal-prix. Ils soulignent enfin le rôle prépondérant du changement technique induit et de ses modalités—éviction de l'investissement de productivité générale éventuellement corrigée par une diffusion du progrès technique spécifique—sur l'obtention d'un second dividende.",
+                "document_type": "THESE",
+                "publication_date": "2003-04-01",
+                "semantic_rank": 10,
+                "full_text_rank": 7,
+                "associated_query": "économétrie"
+              }
+            }
+          },
+          {
+            "id": "63dd56f",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1313,
+              "end": 1322
+            },
+            "payload": {
+              "id": "63dd56f4-82cd-548a-ae7d-9afa573d1541",
+              "document_id": "c59df36b-595d-510c-87b2-aadef7c4d5e3",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016762452107279693,
+              "text": "Document Title: Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain\n\nText: nature ou en sciences des techniques : \" chaque discipline a ses propres perspectives sur ce  concept \" \n(FABER, et al., 2005). Il en est de même pour le dév eloppement durable des services deau, qui \nest aussi abordé par différentes approches disciplin aires (DESTANDEAU, 2004 ; MATE, 2002). \nTableau 1 : Exemples dentrées disciplinaires sur l e développement durable des services d'eau (source : auteur) \nDisciplines Exemples dobjets étudiés \nSciences de gestion Mode de gestion public/privé, p erformance, régulation, contrôle de gestion \nÉconomie Financement du service, tarification, rent abilité, économétrie \nPsychologie Symbolique, perception de la nature et de l'avenir, comportement individuel \nDroit Cadre légal, droit à leau (accès au service) , droit de leau (ressource en eau) \nScience politique Politiques publiques, gouvernemen t et gouvernance, idéologies, géopolitique \nSociologie Action collective, institutions, pouvoir , instruments de gouvernance \nSciences de",
+              "metadata": {
+                "title": "Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain",
+                "hal_id": "tel-01150236",
+                "authors": [
+                  "Julien Souriau"
+                ],
+                "version": "v0",
+                "citation": "Julien Souriau. Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain. Science politique. AgroParisTech, 2014. Français. ⟨NNT : 2014AGPT0052⟩. ⟨tel-01150236v3⟩",
+                "source_url": "https://hal.science/tel-01150236",
+                "chunk_order": 56,
+                "description": "Le service public d’eau de Paris est indéniablement développé… mais est-il durable ? Comment évaluer et améliorer cette durabilité ? C’est à cette question que nous proposons d’apporter une réponse scientifique. Cette thèse doctorale étudie les stratégies de développement des services publics d’eau et leur durabilité, avec pour principal cas d’étude Paris. En moins de deux siècles, ce service d’eau est passé d’une situation archaïque à la configuration sociotechnique actuelle, et nous souhaitons comprendre dans quelle mesure cette action collective pourra être prolongée – ou pas – à l'avenir. La première partie de cette thèse discute le cadre méthodologique et théorique mobilisé pour étudier ce qui 'gouverne' le développement et la durabilité du service public d’eau à Paris. C’est ce cadre d’analyse général qui est appliqué dans les parties suivantes de cette thèse, pour analyser le temps long : passé, présent et futur. Premièrement, pour comprendre la durabilité du développement passé. Nous expliquons comment un service public d’eau a pu historiquement être développé et perdurer à Paris jusqu'à ce jour. Pour cela, nous étudions les dynamiques à la fois écologiques, techniques, économiques, institutionnelles et politiques de ce développement, afin d'en identifier les principaux moteurs et les limites. Deuxièmement, pour évaluer la durabilité du développement présent. Nous étudions dans quelle mesure les politiques contemporaines (ex : politiques de RSE) changent quelque chose aux configurations, dynamiques et trajectoires héritées du passé. Si les politiques de développement durable actuelles permettent plusieurs améliorations, diverses résistances les rendent marginales ou marginalisées, malgré le consensus en leur faveur. Troisièmement, pour prévoir la durabilité du développement futur. Nous analysons les principales conséquences des projets officiels prévus (ex : Grand Paris de l’eau). En complément, nous proposons une étude prospective de divers scénarios encore possibles à l’avenir, afin de discuter des cheminements qui y mènent et de leurs conséquences, notamment face à la baisse de la demande d’eau observée depuis 1990. L'objectif de cette thèse est autant d'améliorer la compréhension de la notion de durabilité, que de proposer des outils opérationnels pour définir, mener et évaluer des politiques de service public d'eau durables à l’avenir.",
+                "document_type": "THESE",
+                "publication_date": "2014-11-04",
+                "semantic_rank": 10,
+                "full_text_rank": 8,
+                "associated_query": "économétrie"
+              }
+            }
+          },
+          {
+            "id": "f9af418",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1324,
+              "end": 1333
+            },
+            "payload": {
+              "id": "f9af418c-5d16-585a-acb3-ff5afa4e57ef",
+              "document_id": "c59df36b-595d-510c-87b2-aadef7c4d5e3",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016713747645951033,
+              "text": "Document Title: Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain\n\nText: Économie Financement du service, tarification, rent abilité, économétrie \nPsychologie Symbolique, perception de la nature et de l'avenir, comportement individuel \nDroit Cadre légal, droit à leau (accès au service) , droit de leau (ressource en eau) \nScience politique Politiques publiques, gouvernemen t et gouvernance, idéologies, géopolitique \nSociologie Action collective, institutions, pouvoir , instruments de gouvernance \nSciences de \nlingénieur Hydraulique, dimensionnement du réseau, technologie s, investissements \nPhysique Résistance des matériaux, mécaniques des f luides, climat, hydrogéologie \nBiologie Qualité de leau, méthodes de potabilisati on, bactériologie \nMalgré la diversité des entrées disciplinaires poss ibles, la question du développement durable des \nservices d'eau était initialement surtout abordée par  les sciences de l'ingénieur et de la nature. \nToutefois, cette tendance a évolué, et depuis quelques ann ées \" une réévaluation radicale du",
+              "metadata": {
+                "title": "Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain",
+                "hal_id": "tel-01150236",
+                "authors": [
+                  "Julien Souriau"
+                ],
+                "version": "v0",
+                "citation": "Julien Souriau. Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain. Science politique. AgroParisTech, 2014. Français. ⟨NNT : 2014AGPT0052⟩. ⟨tel-01150236v3⟩",
+                "source_url": "https://hal.science/tel-01150236",
+                "chunk_order": 57,
+                "description": "Le service public d’eau de Paris est indéniablement développé… mais est-il durable ? Comment évaluer et améliorer cette durabilité ? C’est à cette question que nous proposons d’apporter une réponse scientifique. Cette thèse doctorale étudie les stratégies de développement des services publics d’eau et leur durabilité, avec pour principal cas d’étude Paris. En moins de deux siècles, ce service d’eau est passé d’une situation archaïque à la configuration sociotechnique actuelle, et nous souhaitons comprendre dans quelle mesure cette action collective pourra être prolongée – ou pas – à l'avenir. La première partie de cette thèse discute le cadre méthodologique et théorique mobilisé pour étudier ce qui 'gouverne' le développement et la durabilité du service public d’eau à Paris. C’est ce cadre d’analyse général qui est appliqué dans les parties suivantes de cette thèse, pour analyser le temps long : passé, présent et futur. Premièrement, pour comprendre la durabilité du développement passé. Nous expliquons comment un service public d’eau a pu historiquement être développé et perdurer à Paris jusqu'à ce jour. Pour cela, nous étudions les dynamiques à la fois écologiques, techniques, économiques, institutionnelles et politiques de ce développement, afin d'en identifier les principaux moteurs et les limites. Deuxièmement, pour évaluer la durabilité du développement présent. Nous étudions dans quelle mesure les politiques contemporaines (ex : politiques de RSE) changent quelque chose aux configurations, dynamiques et trajectoires héritées du passé. Si les politiques de développement durable actuelles permettent plusieurs améliorations, diverses résistances les rendent marginales ou marginalisées, malgré le consensus en leur faveur. Troisièmement, pour prévoir la durabilité du développement futur. Nous analysons les principales conséquences des projets officiels prévus (ex : Grand Paris de l’eau). En complément, nous proposons une étude prospective de divers scénarios encore possibles à l’avenir, afin de discuter des cheminements qui y mènent et de leurs conséquences, notamment face à la baisse de la demande d’eau observée depuis 1990. L'objectif de cette thèse est autant d'améliorer la compréhension de la notion de durabilité, que de proposer des outils opérationnels pour définir, mener et évaluer des politiques de service public d'eau durables à l’avenir.",
+                "document_type": "THESE",
+                "publication_date": "2014-11-04",
+                "semantic_rank": 10,
+                "full_text_rank": 9,
+                "associated_query": "économétrie"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "054bbddf-7f41-5b26-8ee0-b55af4b33ba0",
+            "document_id": "ce522ce8-7367-5ebf-a529-366d7a7a744e",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017156862745098037,
+            "text": "Document Title: Dommages et intérêt de la spéculation\n\nText: tels profits seraient impossibles.  \n Cela dépend des propriétés du processus aléatoire (Xt) étudié et en \nparticulier vis -à-vis de quelles filtrations il est une martingale. Si c'est le cas \npour sa filtration naturelle, il est soumis aux lois mathématiques des \nmartingales et quelle que soit la stratégie non -anticipative , l'espérance de gain \nsur un horizon borné sera nulle (théorème d'arrêt de Doob). S'il est une \nmartingale par rapport à la filtration de (Xt) et (Yt), l'espérance de gain restera \nnulle même si on utilise dans sa stratégie non -anticipante les valeurs de Yt qui \npeut être corrélé avec Xt. \n Le langage de l'information est utilisé couramment par les \nmathématiciens pour parler de sigma -algèbre s et de la façon dont elles sont \nengendrées. Mais comment cette information -filtration reflète -t-elle la réalité \néconomiqu e ? On ne sait pas. Les statistiques et l'économétrie  ne fournissent \npas des sigma -algèbres. Comment se modifie -t-elle lorsqu'on apprend que la",
+            "metadata": {
+              "title": "Dommages et intérêt de la spéculation",
+              "hal_id": "halshs-00823520",
+              "authors": [
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Nicolas Bouleau. Dommages et intérêt de la spéculation. 2013. ⟨halshs-00823520⟩",
+              "source_url": "https://hal.science/halshs-00823520",
+              "chunk_order": 152,
+              "description": "Si on pense qu'une partie hautement mathématisée de la littérature économique, publiée dans les grandes revues, et abondamment citée, est néanmoins fausse, on peut se détourner en considérant que cette partie n'est pas convaincante et ne mérite pas d'être traitée dans les manuels ni les cours. Mais quand on voit que néanmoins elle est encore et encore amplement reprise et sert d'argument pour justifier des pratiques contestables grâce au fait qu'elle est très mathématique, on finit par se convaincre qu'il faut vraiment faire la complète clarté sur cette question. C'est cette voie qui est suivie ici. Cette monographie est un démontage rigoureux de la notion d'efficience des marchés pour un lecteur non spécialiste mais exigeant. La démarche consiste à refaire le trajet intellectuel derrière l'ambition de cette notion d'être un pont entre la bonne allocation des ressources et certaines situations mathématiques. Le verdict de cette enquête porte à réfléchir sur les conséquences de la finance de marché sur l'environnement.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-05-17",
+              "semantic_rank": 10,
+              "full_text_rank": 1,
+              "associated_query": "économétrie"
+            }
+          },
+          {
+            "id": "9ebfefda-62ee-55eb-8029-0cbad84ad769",
+            "document_id": "ce522ce8-7367-5ebf-a529-366d7a7a744e",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017094017094017092,
+            "text": "Document Title: Dommages et intérêt de la spéculation\n\nText: nulle même si on utilise dans sa stratégie non -anticipante les valeurs de Yt qui \npeut être corrélé avec Xt. \n Le langage de l'information est utilisé couramment par les \nmathématiciens pour parler de sigma -algèbre s et de la façon dont elles sont \nengendrées. Mais comment cette information -filtration reflète -t-elle la réalité \néconomiqu e ? On ne sait pas. Les statistiques et l'économétrie  ne fournissent \npas des sigma -algèbres. Comment se modifie -t-elle lorsqu'on apprend que la \nFed a changé son taux directeur ou que la Chine a acheté des terrains \nagricoles ou métallifères en Afrique  ? Nou s retrouvons la question \nphilosophique évoquée plus haut. \"Information\" ressemble à \"connaissance\", \nc'en est un mannequin, ici nous avons un tel mannequin grâce aux filtrations \nde processus aléatoires, et la question de nourrir  de sens ce mannequin reste \nentière. Si je suis initié, comment ma sigma -algèbre Ht  reflète -t-elle ce que je",
+            "metadata": {
+              "title": "Dommages et intérêt de la spéculation",
+              "hal_id": "halshs-00823520",
+              "authors": [
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Nicolas Bouleau. Dommages et intérêt de la spéculation. 2013. ⟨halshs-00823520⟩",
+              "source_url": "https://hal.science/halshs-00823520",
+              "chunk_order": 153,
+              "description": "Si on pense qu'une partie hautement mathématisée de la littérature économique, publiée dans les grandes revues, et abondamment citée, est néanmoins fausse, on peut se détourner en considérant que cette partie n'est pas convaincante et ne mérite pas d'être traitée dans les manuels ni les cours. Mais quand on voit que néanmoins elle est encore et encore amplement reprise et sert d'argument pour justifier des pratiques contestables grâce au fait qu'elle est très mathématique, on finit par se convaincre qu'il faut vraiment faire la complète clarté sur cette question. C'est cette voie qui est suivie ici. Cette monographie est un démontage rigoureux de la notion d'efficience des marchés pour un lecteur non spécialiste mais exigeant. La démarche consiste à refaire le trajet intellectuel derrière l'ambition de cette notion d'être un pont entre la bonne allocation des ressources et certaines situations mathématiques. Le verdict de cette enquête porte à réfléchir sur les conséquences de la finance de marché sur l'environnement.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-05-17",
+              "semantic_rank": 10,
+              "full_text_rank": 2,
+              "associated_query": "économétrie"
+            }
+          },
+          {
+            "id": "95bdb1b9-a791-5787-8ab5-1ea469e16c5f",
+            "document_id": "0335d39e-357e-5b00-9e47-cbe9e93d66c7",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017033542976939202,
+            "text": "Document Title: Heavy subsidization reduces free-ridership : Evidence from an econometric study of the French dwelling insulation tax credit\n\nText: 32 References \n \nAlberini, Anna, Andrea Bigano, and Marco Boeri. 2013.  Looking for Free-Riding: Energy Efficiency \nIncentives and Italian Homeowners . SSRN Scholarly Paper ID 2243427. Rochester, NY: Social \nScience Research Nandwork.  \nCohen, François, Marine Grémont, Benoît Tinandti, andand Shailendra Mudgal. 2012.  AND AT DE L ART SUR \nLEFF AND D AUBAINE DANS LES POLITIQUES ENVIRONNEMENTALES  . Study by BIO Intelligence \nService S.A.S. for ADEME.  \nCrépon, Bruno, and Nicolas Jacquemand. 2010. Économétrie: méthode and applications . De Boeck. \nDubin, Jeffrey A, and Steven E Henson. 1988.  The distributional effects of the Federal Energy Tax Act . \nResources and Energy  10 (3): 191 212.  \nGrösche, Pander, Christoph M. Schmidt, and Colin Vance. 2009.  Identifying Free-Riding in Energy-\nConservation Programs Using Revealed Preference Data . SSRN Scholarly Paper ID 1375365. \nRochester, NY: Social Science Research Nand work.",
+            "metadata": {
+              "title": "Heavy subsidization reduces free-ridership : Evidence from an econometric study of the French dwelling insulation tax credit",
+              "hal_id": "hal-00866445",
+              "authors": [
+                "Marie-Laure Nauleau"
+              ],
+              "version": "v0",
+              "citation": "Marie-Laure Nauleau. Heavy subsidization reduces free-ridership : Evidence from an econometric study of the French dwelling insulation tax credit. 2013. ⟨hal-00866445⟩",
+              "source_url": "https://hal.science/hal-00866445",
+              "chunk_order": 131,
+              "description": "This econometric study assesses the efficiency of the tax credit implemented in France in 2005 on dwelling retrofitting investments. A before-after estimation is performed at the extensive and intensive margins on micro data over 2001-2011, focusing on insulation measures (windows, walls, roofs, floor, ceilings). After 2-years of latency with no significant effect, the tax credit has had an increasing significant positive effect at both margins between 2007 and 2010, with a decrease in 2011, in line with the tax credit rate evolutions. Focusing on opaque surfaces insulation, the positive effect only started in 2009, when a reform included labor cost in the tax credit base for these retrofitting measures. The percentage of subsidized households that would have invested even in the absence of the subsidy decreases from 79% in 2007 to 43% in 2010. The annual additional private investment in retrofitting generated by 1€ of public expenses was estimated at 3.4€ on average (standard deviation : 2.4) between 2007 and 2010.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-07-01",
+              "semantic_rank": 10,
+              "full_text_rank": 3,
+              "associated_query": "économétrie"
+            }
+          },
+          {
+            "id": "272db62f-e22a-5461-9e31-7b0066bd0a13",
+            "document_id": "54701a6e-9587-5e17-9ff5-ae4604056fde",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Fiscalité carbone et progrès social. Application au cas français\n\nText: caractérisent lesmodèlesmacroéconomiques. Leurslimitesviennentdelafaçondontest\ntraditionnellement représentée etestiméelaréponsedessystèmes techniques àuneévolution du\nprixrelatifdesintrants(lespossibilités desubstitution desintrantsdanslaproduction). \nLecontenuphysiquedeléconomie napparaît pasexplicitement, ilesttraitépar\nsubrogation (Samuelson, 1962),cestàdireenreprésentant dunefaçonsynthétique des\nrelationsdecomplémentarité/substituabilité entredesagrégatsdintrants lecapitalproductif, le\ntravailet,dunefaçonsimilaire,lesautresconsommations intermédiaires commelénergieau\nmoyendefonctionsdeproduction agrégéesaulieudunedescription technicoéconomique explicite\ndesdifférents procédés(GhersietHourcade, 2006).Siceprincipedunedescription synthétique des\ntechniques aumoyendunefonctiondeproduction agrégéenestpasremisencause,lhypothèse \ndunefonctionimmuable laété,toutcommesonestimation àpartirdedonnéesmonétaires tirées\ndelobservation dupasséetsansaucunrecoursauxgrandeurs physiques (AyresetWarr,2009).",
+            "metadata": {
+              "title": "Fiscalité carbone et progrès social. Application au cas français",
+              "hal_id": "tel-00813550",
+              "authors": [
+                "Emmanuel Combet"
+              ],
+              "version": "v0",
+              "citation": "Emmanuel Combet. Fiscalité carbone et progrès social. Application au cas français. Economies et finances. École des Hautes Études en Sciences Sociales (EHESS), 2013. Français. ⟨NNT : ⟩. ⟨tel-00813550⟩",
+              "source_url": "https://hal.science/tel-00813550",
+              "chunk_order": 335,
+              "description": "La thèse revisite les débats sur les conséquences socioéconomiques et le choix des modalités d'une fiscalité carbone. Un diagnostic est d'abord tiré de l'examen d'un échec français (la taxe carbone de N. Sarkozy, 2009-2010). Il distingue les problèmes d'acceptabilité politique, des limites de l'analyse économique pour définir les dispositifs. Il souligne l'importance de la discussion sur l'usage des recettes de la taxe, car ce point cristallise les difficultés politiques et conditionne la cohérence économique et juridique du projet au regard des objectifs recherchés (environnement, équité, compétitivité). Il montre que les outils d'analyse peuvent être améliorés pour accompagner cette discussion. Un outil de simulation numérique est ensuite proposé et construit. Il permet de comparer les performances de dispositifs sur divers indicateurs (émissions de CO2, activité, emploi, inégalités, pauvreté, endettement), de décrire plusieurs points de vue sur le fonctionnement de l'économie (actuelle et future), et de lier dans une démarche prospective le dossier climatique aux autres dossiers de réforme des prélèvements obligatoires (maîtrise des déficits, financement des retraites). L'outil est enfin utilisé pour revisiter les controverses, clarifier les arbitrages et identifier les meilleures pistes de compromis. Il apparaît qu'une fiscalité carbone peut offrir des co-bénéfices socioéconomiques (pour l'activité et l'emploi, la réduction des inégalités, la maîtrise des déficits). Mais cela n'est pas automatique, des choix politiques sensibles doivent être faits ; ces dernier portent, au-delà du seul dossier 'climat', sur la gestion d'une réforme générale des finances publiques.",
+              "document_type": "THESE",
+              "publication_date": "2013-04-09",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "économétrie"
+            }
+          },
+          {
+            "id": "7ac437e6-c77a-5a86-8b36-851b225468c7",
+            "document_id": "0335d39e-357e-5b00-9e47-cbe9e93d66c7",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016975308641975308,
+            "text": "Document Title: Heavy subsidization reduces free-ridership : Evidence from an econometric study of the French dwelling insulation tax credit\n\nText: Service S.A.S. for ADEME.  \nCrépon, Bruno, and Nicolas Jacquemand. 2010. Économétrie: méthode and applications . De Boeck. \nDubin, Jeffrey A, and Steven E Henson. 1988.  The distributional effects of the Federal Energy Tax Act . \nResources and Energy  10 (3): 191 212.  \nGrösche, Pander, Christoph M. Schmidt, and Colin Vance. 2009.  Identifying Free-Riding in Energy-\nConservation Programs Using Revealed Preference Data . SSRN Scholarly Paper ID 1375365. \nRochester, NY: Social Science Research Nand work.  \nGrösche, Pander, and Colin Vance. 2009.  Willingness to Pay for Energy Conservation and Free-Ridership on \nSubsidization: Evidence from Germany . Energy Journal  30 (2): 135 153.  \nHassandt, Kevin A., and Gilbert E. Mandcalf. 1995.  Energy tax credits and residential conservation \ninvestment: Evidence from panel data . Journal of Public Economics  57 (2): 201 217.  \nIn Numeri-ADEME. 2012.  Marchés, emplois and enjeu énergétique des ac tivités liées à lamélioration de",
+            "metadata": {
+              "title": "Heavy subsidization reduces free-ridership : Evidence from an econometric study of the French dwelling insulation tax credit",
+              "hal_id": "hal-00866445",
+              "authors": [
+                "Marie-Laure Nauleau"
+              ],
+              "version": "v0",
+              "citation": "Marie-Laure Nauleau. Heavy subsidization reduces free-ridership : Evidence from an econometric study of the French dwelling insulation tax credit. 2013. ⟨hal-00866445⟩",
+              "source_url": "https://hal.science/hal-00866445",
+              "chunk_order": 132,
+              "description": "This econometric study assesses the efficiency of the tax credit implemented in France in 2005 on dwelling retrofitting investments. A before-after estimation is performed at the extensive and intensive margins on micro data over 2001-2011, focusing on insulation measures (windows, walls, roofs, floor, ceilings). After 2-years of latency with no significant effect, the tax credit has had an increasing significant positive effect at both margins between 2007 and 2010, with a decrease in 2011, in line with the tax credit rate evolutions. Focusing on opaque surfaces insulation, the positive effect only started in 2009, when a reform included labor cost in the tax credit base for these retrofitting measures. The percentage of subsidized households that would have invested even in the absence of the subsidy decreases from 79% in 2007 to 43% in 2010. The annual additional private investment in retrofitting generated by 1€ of public expenses was estimated at 3.4€ on average (standard deviation : 2.4) between 2007 and 2010.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-07-01",
+              "semantic_rank": 10,
+              "full_text_rank": 4,
+              "associated_query": "économétrie"
+            }
+          },
+          {
+            "id": "7097b519-dd8a-5007-93b2-801bb5f798c9",
+            "document_id": "e46577d4-62b8-594a-bd76-0a49666ab513",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016919191919191917,
+            "text": "Document Title: Le warrantage, un dispositif pour améliorer la sécurité alimentaire en Afrique subsaharienne\n\nText: et à la stratégie; ainsi que les rédacteur.rice.s en chef de Perspective .Issoufou Porgo est ingénieur zootechnicien et Secrétaire permanent à \nla Confédération paysanne du Faso (https://cpf-bf.org/). Il travaille sur \nlaccès des producteurs agricoles burkinabé aux marchés agricoles.\nissouporgo@yahoo.fr\nJulie Subervie est économiste à lINRAE (Institut national de recherche \npour lagriculture, lalimentation et lenvironnement, France,  \nhttps://www.inrae.fr/) à lUmr CEE-M (Centre déconomie de lenvi -\nronnemental - Montpellier, http://www.cee-m.fr/fr/). Elle travaille en \néconométrie appliquée, sur léconomie du développement et léconomie \nde lenvironnement.\njulie.subervie@inrae.fr\nRaphaël Soubeyran est économiste à lINRAE à lUmr CEE-M. Il travaille \nsur la théorie des organisations, léconomie politique, léconomie du \ndéveloppement et léconomie des ressources.\nraphael.soubeyran@inrae.fr",
+            "metadata": {
+              "doi": "10.19182/perspective/37141",
+              "title": "Le warrantage, un dispositif pour améliorer la sécurité alimentaire en Afrique subsaharienne",
+              "hal_id": "cirad-04094506",
+              "authors": [
+                "Tristan Le Cotty",
+                "Élodie Maître D’hôtel",
+                "Issoufou Porgo",
+                "Julie Subervie",
+                "Raphaël Soubeyran"
+              ],
+              "version": "v0",
+              "citation": "Tristan Le Cotty, Élodie Maître D’hôtel, Issoufou Porgo, Julie Subervie, Raphaël Soubeyran. Le warrantage, un dispositif pour améliorer la sécurité alimentaire en Afrique subsaharienne. Perspective, 2023, 61, pp.1-4. ⟨10.19182/perspective/37141⟩. ⟨cirad-04094506⟩",
+              "source_url": "https://doi.org/10.19182/perspective/37141",
+              "chunk_order": 49,
+              "description": "Le warrantage se développe actuellement dans plusieurs pays du Sahel. C’est un dispositif de crédit-stockage mis en place par une organisation d’agriculteurs et une institution financière. Il consiste à stocker quelques mois une partie des céréales après la récolte dans un entrepôt en échange d’un crédit individuel. Sans ce crédit, les agriculteurs tendent à vendre leurs céréales dès la récolte pour rembourser les dettes ou subvenir à leurs besoins. Conséquence : les familles ont par la suite du mal à assurer la soudure, période de transition entre l’épuisement des stocks et la nouvelle récolte, et à investir dans leurs systèmes de production agricole. L’évaluation d’impact menée dans l’Ouest du Burkina Faso montre que le warrantage accroît la disponibilité alimentaire en période de soudure et qu’il renforce l’investissement et la production agricoles. Pour que son développement s’accélère, il est nécessaire de satisfaire trois conditions : disposer d’infrastructures de stockage adaptées, assurer la qualité des produits stockés, et établir des relations de confiance étroites entre institutions financières, organisations de producteurs et commerçants. Cette dernière condition est mise à mal par l’extension des conflits armés au Sahel.",
+              "document_type": "ART",
+              "publication_date": "2023-01-01",
+              "semantic_rank": 10,
+              "full_text_rank": 5,
+              "associated_query": "économétrie"
+            }
+          },
+          {
+            "id": "b936e586-a5fd-5323-93dd-004942da7a40",
+            "document_id": "e847732e-ff95-5bd3-8789-3ffa42c30a51",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016865079365079364,
+            "text": "Document Title: Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique\n\nText: sur de s pré misses simple s :  \n on considère u n taux de for mation brut e de capi tal fixe cons tant, ce q ui à \nrevenu d isponible donn é détermine le niv eau total de FBCF Qk;  \n on soustrait à cette FBCF totale  les investiss ements d' offre QkE et de dema nde \nQkEi (consommations interm édiaires) et QkEc (consommations des ménages)  \nspécifiqu ement énergétiques, pour obtenir  une FBCF de pr oductivité gén érale, \nqui détermine un coefficient de progrès tech nique hicksien Φ selon un exercic e \nd'économétrie détaillé en ann exe IV.1 . \nL'effet d 'éviction ainsi repr ésenté peut être tempéré par le jeu d'une variable de \ncontrôle, le taux τév, repr ésentan t la mesure des  investisse ments spécifiquement \nénergétiques sans inciden ce su r la productivité  génér ale : un taux de 1 sign ifie un eff et \nd'éviction com plet où  la perte de produ ctivité, liée à un e moindre inno vation , est \nproportionnelle à la baisse de la FBCF no n énergétique; une valeur in férieur e à 1",
+            "metadata": {
+              "title": "Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique",
+              "hal_id": "tel-00003504",
+              "authors": "['Frédéric Ghersi']",
+              "version": "v0",
+              "citation": "Frédéric Ghersi. Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique. Economies et finances. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2003. Français. ⟨NNT : ⟩. ⟨tel-00003504⟩",
+              "source_url": "https://hal.science/tel-00003504",
+              "chunk_order": 390,
+              "description": "Les travaux présentés dans cette thèse portent sur l'évaluation des coûts macro-économiques de politiques climatiques nationales et mondiales. Ils reposent sur une mise en relation innovante des prospectives énergétique et macroéconomique, dont l'objectif est d'assurer la représentation fidèle, dans la modélisation macroéconomique, des élasticités du système énergétique mises en lumière par l'analyse technico-économique. Ils opèrent aussi un questionnement critique des études analytiques ayant conclu à l'improbabilité d'un dividende économique net de réformes fiscales environnementales, en démontrant que le signe ultime de l'effet prix général d'une réforme « écofiscale » est dépendant des structures de production et de consommation préexistant à la réforme, ainsi que de leur réactivité au signal-prix. Ils soulignent enfin le rôle prépondérant du changement technique induit et de ses modalités—éviction de l'investissement de productivité générale éventuellement corrigée par une diffusion du progrès technique spécifique—sur l'obtention d'un second dividende.",
+              "document_type": "THESE",
+              "publication_date": "2003-04-01",
+              "semantic_rank": 10,
+              "full_text_rank": 6,
+              "associated_query": "économétrie"
+            }
+          },
+          {
+            "id": "bcfb63b6-76ee-502a-9a4a-38fdfbb28c99",
+            "document_id": "e847732e-ff95-5bd3-8789-3ffa42c30a51",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016812865497076022,
+            "text": "Document Title: Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique\n\nText: d'économétrie détaillé en ann exe IV.1 . \nL'effet d 'éviction ainsi repr ésenté peut être tempéré par le jeu d'une variable de \ncontrôle, le taux τév, repr ésentan t la mesure des  investisse ments spécifiquement \nénergétiques sans inciden ce su r la productivité  génér ale : un taux de 1 sign ifie un eff et \nd'éviction com plet où  la perte de produ ctivité, liée à un e moindre inno vation , est \nproportionnelle à la baisse de la FBCF no n énergétique; une valeur in férieur e à 1 \nsuppose qu' une mesure des i nvestissements énergétiques bénéficient au progrès \ntechnique général par des externalités posit ives (phénomène de spill over). \nII.3.3. Représent ation des saturations de l'effic acité \ndynamique des signaux prix \nNous avons souligné précédemment que l' ordre de grandeu r des contraintes carbone  \njustifié es par l e nive au d 'alerte scien tifique climatique implique  des coûts marginaux \nnon néglig eables. La modélis ation d e ces co ntraintes se doit donc d e représenter d es",
+            "metadata": {
+              "title": "Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique",
+              "hal_id": "tel-00003504",
+              "authors": "['Frédéric Ghersi']",
+              "version": "v0",
+              "citation": "Frédéric Ghersi. Changement technique et double dividende d'écotaxes. Un essai sur la confluence des prospectives énergétique et macro-économique. Economies et finances. Ecole des Hautes Etudes en Sciences Sociales (EHESS), 2003. Français. ⟨NNT : ⟩. ⟨tel-00003504⟩",
+              "source_url": "https://hal.science/tel-00003504",
+              "chunk_order": 391,
+              "description": "Les travaux présentés dans cette thèse portent sur l'évaluation des coûts macro-économiques de politiques climatiques nationales et mondiales. Ils reposent sur une mise en relation innovante des prospectives énergétique et macroéconomique, dont l'objectif est d'assurer la représentation fidèle, dans la modélisation macroéconomique, des élasticités du système énergétique mises en lumière par l'analyse technico-économique. Ils opèrent aussi un questionnement critique des études analytiques ayant conclu à l'improbabilité d'un dividende économique net de réformes fiscales environnementales, en démontrant que le signe ultime de l'effet prix général d'une réforme « écofiscale » est dépendant des structures de production et de consommation préexistant à la réforme, ainsi que de leur réactivité au signal-prix. Ils soulignent enfin le rôle prépondérant du changement technique induit et de ses modalités—éviction de l'investissement de productivité générale éventuellement corrigée par une diffusion du progrès technique spécifique—sur l'obtention d'un second dividende.",
+              "document_type": "THESE",
+              "publication_date": "2003-04-01",
+              "semantic_rank": 10,
+              "full_text_rank": 7,
+              "associated_query": "économétrie"
+            }
+          },
+          {
+            "id": "63dd56f4-82cd-548a-ae7d-9afa573d1541",
+            "document_id": "c59df36b-595d-510c-87b2-aadef7c4d5e3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016762452107279693,
+            "text": "Document Title: Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain\n\nText: nature ou en sciences des techniques : \" chaque discipline a ses propres perspectives sur ce  concept \" \n(FABER, et al., 2005). Il en est de même pour le dév eloppement durable des services deau, qui \nest aussi abordé par différentes approches disciplin aires (DESTANDEAU, 2004 ; MATE, 2002). \nTableau 1 : Exemples dentrées disciplinaires sur l e développement durable des services d'eau (source : auteur) \nDisciplines Exemples dobjets étudiés \nSciences de gestion Mode de gestion public/privé, p erformance, régulation, contrôle de gestion \nÉconomie Financement du service, tarification, rent abilité, économétrie \nPsychologie Symbolique, perception de la nature et de l'avenir, comportement individuel \nDroit Cadre légal, droit à leau (accès au service) , droit de leau (ressource en eau) \nScience politique Politiques publiques, gouvernemen t et gouvernance, idéologies, géopolitique \nSociologie Action collective, institutions, pouvoir , instruments de gouvernance \nSciences de",
+            "metadata": {
+              "title": "Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain",
+              "hal_id": "tel-01150236",
+              "authors": [
+                "Julien Souriau"
+              ],
+              "version": "v0",
+              "citation": "Julien Souriau. Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain. Science politique. AgroParisTech, 2014. Français. ⟨NNT : 2014AGPT0052⟩. ⟨tel-01150236v3⟩",
+              "source_url": "https://hal.science/tel-01150236",
+              "chunk_order": 56,
+              "description": "Le service public d’eau de Paris est indéniablement développé… mais est-il durable ? Comment évaluer et améliorer cette durabilité ? C’est à cette question que nous proposons d’apporter une réponse scientifique. Cette thèse doctorale étudie les stratégies de développement des services publics d’eau et leur durabilité, avec pour principal cas d’étude Paris. En moins de deux siècles, ce service d’eau est passé d’une situation archaïque à la configuration sociotechnique actuelle, et nous souhaitons comprendre dans quelle mesure cette action collective pourra être prolongée – ou pas – à l'avenir. La première partie de cette thèse discute le cadre méthodologique et théorique mobilisé pour étudier ce qui 'gouverne' le développement et la durabilité du service public d’eau à Paris. C’est ce cadre d’analyse général qui est appliqué dans les parties suivantes de cette thèse, pour analyser le temps long : passé, présent et futur. Premièrement, pour comprendre la durabilité du développement passé. Nous expliquons comment un service public d’eau a pu historiquement être développé et perdurer à Paris jusqu'à ce jour. Pour cela, nous étudions les dynamiques à la fois écologiques, techniques, économiques, institutionnelles et politiques de ce développement, afin d'en identifier les principaux moteurs et les limites. Deuxièmement, pour évaluer la durabilité du développement présent. Nous étudions dans quelle mesure les politiques contemporaines (ex : politiques de RSE) changent quelque chose aux configurations, dynamiques et trajectoires héritées du passé. Si les politiques de développement durable actuelles permettent plusieurs améliorations, diverses résistances les rendent marginales ou marginalisées, malgré le consensus en leur faveur. Troisièmement, pour prévoir la durabilité du développement futur. Nous analysons les principales conséquences des projets officiels prévus (ex : Grand Paris de l’eau). En complément, nous proposons une étude prospective de divers scénarios encore possibles à l’avenir, afin de discuter des cheminements qui y mènent et de leurs conséquences, notamment face à la baisse de la demande d’eau observée depuis 1990. L'objectif de cette thèse est autant d'améliorer la compréhension de la notion de durabilité, que de proposer des outils opérationnels pour définir, mener et évaluer des politiques de service public d'eau durables à l’avenir.",
+              "document_type": "THESE",
+              "publication_date": "2014-11-04",
+              "semantic_rank": 10,
+              "full_text_rank": 8,
+              "associated_query": "économétrie"
+            }
+          },
+          {
+            "id": "f9af418c-5d16-585a-acb3-ff5afa4e57ef",
+            "document_id": "c59df36b-595d-510c-87b2-aadef7c4d5e3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016713747645951033,
+            "text": "Document Title: Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain\n\nText: Économie Financement du service, tarification, rent abilité, économétrie \nPsychologie Symbolique, perception de la nature et de l'avenir, comportement individuel \nDroit Cadre légal, droit à leau (accès au service) , droit de leau (ressource en eau) \nScience politique Politiques publiques, gouvernemen t et gouvernance, idéologies, géopolitique \nSociologie Action collective, institutions, pouvoir , instruments de gouvernance \nSciences de \nlingénieur Hydraulique, dimensionnement du réseau, technologie s, investissements \nPhysique Résistance des matériaux, mécaniques des f luides, climat, hydrogéologie \nBiologie Qualité de leau, méthodes de potabilisati on, bactériologie \nMalgré la diversité des entrées disciplinaires poss ibles, la question du développement durable des \nservices d'eau était initialement surtout abordée par  les sciences de l'ingénieur et de la nature. \nToutefois, cette tendance a évolué, et depuis quelques ann ées \" une réévaluation radicale du",
+            "metadata": {
+              "title": "Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain",
+              "hal_id": "tel-01150236",
+              "authors": [
+                "Julien Souriau"
+              ],
+              "version": "v0",
+              "citation": "Julien Souriau. Stratégies durables pour un service public d'eau à Paris. Analyser et gérer les politiques d'hier, d'aujourd'hui et de demain. Science politique. AgroParisTech, 2014. Français. ⟨NNT : 2014AGPT0052⟩. ⟨tel-01150236v3⟩",
+              "source_url": "https://hal.science/tel-01150236",
+              "chunk_order": 57,
+              "description": "Le service public d’eau de Paris est indéniablement développé… mais est-il durable ? Comment évaluer et améliorer cette durabilité ? C’est à cette question que nous proposons d’apporter une réponse scientifique. Cette thèse doctorale étudie les stratégies de développement des services publics d’eau et leur durabilité, avec pour principal cas d’étude Paris. En moins de deux siècles, ce service d’eau est passé d’une situation archaïque à la configuration sociotechnique actuelle, et nous souhaitons comprendre dans quelle mesure cette action collective pourra être prolongée – ou pas – à l'avenir. La première partie de cette thèse discute le cadre méthodologique et théorique mobilisé pour étudier ce qui 'gouverne' le développement et la durabilité du service public d’eau à Paris. C’est ce cadre d’analyse général qui est appliqué dans les parties suivantes de cette thèse, pour analyser le temps long : passé, présent et futur. Premièrement, pour comprendre la durabilité du développement passé. Nous expliquons comment un service public d’eau a pu historiquement être développé et perdurer à Paris jusqu'à ce jour. Pour cela, nous étudions les dynamiques à la fois écologiques, techniques, économiques, institutionnelles et politiques de ce développement, afin d'en identifier les principaux moteurs et les limites. Deuxièmement, pour évaluer la durabilité du développement présent. Nous étudions dans quelle mesure les politiques contemporaines (ex : politiques de RSE) changent quelque chose aux configurations, dynamiques et trajectoires héritées du passé. Si les politiques de développement durable actuelles permettent plusieurs améliorations, diverses résistances les rendent marginales ou marginalisées, malgré le consensus en leur faveur. Troisièmement, pour prévoir la durabilité du développement futur. Nous analysons les principales conséquences des projets officiels prévus (ex : Grand Paris de l’eau). En complément, nous proposons une étude prospective de divers scénarios encore possibles à l’avenir, afin de discuter des cheminements qui y mènent et de leurs conséquences, notamment face à la baisse de la demande d’eau observée depuis 1990. L'objectif de cette thèse est autant d'améliorer la compréhension de la notion de durabilité, que de proposer des outils opérationnels pour définir, mener et évaluer des politiques de service public d'eau durables à l’avenir.",
+              "document_type": "THESE",
+              "publication_date": "2014-11-04",
+              "semantic_rank": 10,
+              "full_text_rank": 9,
+              "associated_query": "économétrie"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1450,
+            "total_tokens": 1450
+          }
+        }
+      },
+      "duration": 3026
+    },
+    "retrievalTime": 7858,
+    "generationTime": 3026,
+    "timestamp": "2025-07-10T09:42:28.069Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T09:42:30.186523+00:00",
+    "server_version": "1.0.0"
+  }
+}

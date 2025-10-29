@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752142205977_5g266e5q1c1p5r5s2t",
+  "timestamp": "20250710T101025036Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752142225001_6fdqrf8",
+    "query": "Comment préparer un bon mémoire ?>´",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "Comment préparer un bon mémoire ?>´",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "193.51.112.3",
+    "forwarded_for": "193.51.112.3",
+    "received_at": "2025-07-10T10:10:25.061556+00:00",
+    "server_version": "1.0.0"
+  }
+}

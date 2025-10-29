@@ -1,0 +1,42 @@
+{
+  "sessionId": "session_1752136209338_3y5p1b31n6c1m5r3n",
+  "timestamp": "20250710T083023794Z",
+  "eventType": "request",
+  "payload": {
+    "queryId": "query_1752136223792_v4twcda",
+    "query": "présente de le modèle res-IRF",
+    "settings": {
+      "r2rURL": "http://r2r-api.cired.digital",
+      "model": "mistral/mistral-small-latest",
+      "temperature": 0.2,
+      "maxTokens": 1024,
+      "chunkLimit": 10,
+      "searchStrategy": "vanilla",
+      "includeWebSearch": false
+    },
+    "requestBody": {
+      "query": "présente de le modèle res-IRF",
+      "search_mode": "custom",
+      "search_settings": {
+        "use_semantic_search": true,
+        "use_hybrid_search": true,
+        "search_strategy": "vanilla",
+        "limit": 10
+      },
+      "rag_generation_config": {
+        "model": "mistral/mistral-small-latest",
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "include_title_if_available": true,
+      "include_web_search": false
+    }
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T08:30:23.804928+00:00",
+    "server_version": "1.0.0"
+  }
+}

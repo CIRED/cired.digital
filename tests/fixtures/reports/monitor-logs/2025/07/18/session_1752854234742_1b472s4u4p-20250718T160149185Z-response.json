@@ -1,0 +1,605 @@
+{
+  "sessionId": "session_1752854234742_1b472s4u4p5b1k282x",
+  "timestamp": "20250718T160149185Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752854503654_lqkizy0",
+    "response": {
+      "results": {
+        "generated_answer": "The macroeconomic impacts of transition scenarios, particularly those related to deep decarbonization and low-carbon transitions, are multifaceted and can be observed across various sectors and economic indicators. Here are some key points derived from the provided context:\n\n1. **Increased Production Costs and Competitiveness Losses**:\n   - Transition scenarios often lead to higher production costs due to increased capital costs and energy prices. For instance, deep decarbonization scenarios (DD) show higher production costs (+34%) and significantly higher electricity prices (+2027%), which can result in competitiveness losses and lower net exports [dad2053].\n\n2. **Sectoral Impacts**:\n   - Deep energy transitions have indirect and induced economic impacts across different sectors. The energy sector, for example, may experience a lower total output but higher value-added due to the development of high value-added industries [b791cfb].\n\n3. **National Debt**:\n   - Transition scenarios can lead to a slight increase in national debt. For example, in deep decarbonization scenarios, the national debt reaches +0.6ptsGDP and +1.6ptsGDP in 2050 in DD1 and DD2 scenarios respectively compared to the Nationally Determined Contributions (NDC) scenario [dad2053].\n\n4. **Macroeconomic Costs and Growth Impact**:\n   - The macroeconomic cost of a deep decarbonization pathway can be relatively small, such as a lag of less than one year of growth in 2050 compared to a Business-As-Usual (BAU) scenario. However, this can be offset by significant health benefits from reduced air pollution [e6bb4e2].\n\n5. **Structural Change and Socio-Economic Disparities**:\n   - Transition scenarios can lead to structural changes in the economy, affecting different regions and sectors differently. These changes can result in socio-economic disparities and require careful management to ensure equitable outcomes [8e53ab4].\n\n6. **Financial Risks and Stress Tests**:\n   - Transition scenarios also generate financial risks, known as transition risks, which can impact the financial sector. Climate stress-tests are used to assess the impact of adverse but plausible macroeconomic scenarios on financial portfolios [b6bef05].\n\n7. **Energy Prices and Efficiency**:\n   - Improvements in energy efficiency and the electrification of personal mobility can reduce the costs of decarbonization to households in the long term by phasing out costly oil products. This can mitigate the investment costs of the low-carbon transition and lead to barely changed average energy prices for firms [e6bb4e2].\n\n8. **Global and Regional Context**:\n   - The global context and assumptions about climate policies, technical change, and consumption styles play a crucial role in determining the macroeconomic impacts of transition scenarios. For example, the absence of a global climate agreement can lead to different economic outcomes compared to scenarios with coordinated climate policies [2a127d7].\n\nIn summary, transition scenarios have wide-ranging macroeconomic impacts, affecting production costs, national debt, economic growth, structural change, financial risks, and energy prices. These impacts need to be carefully managed to ensure a sustainable and equitable transition to a low-carbon economy.",
+        "citations": [
+          {
+            "id": "dad2053",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 657,
+              "end": 666
+            },
+            "payload": {
+              "id": "dad2053f-986c-5236-8460-95170c11f26e",
+              "document_id": "20c434f3-5cb0-5991-b193-c5a7fa18de90",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01788785689714482,
+              "text": "Document Title: The multi-level economic impacts of deep decarbonization strategies for the energy system\n\nText: higher production costs (+34%) due to higher average capital costs (45%) and higher energy prices (+2027% including 2641% higher \nelectricity prices) despite 1012% lower mean energy intensity of pro-\nduction. Furthermore, the higher production costs of domestic industries \nhave more pronounced relative impacts on the trade balance as a result \nof competitiveness losses: mean annual net exports are 710% lower in \nthe DD scenarios than in the NDC scenario. Finally, the mean annual \nnegative impacts on final consumption and trade are slightly more \npronounced in DD2 than DD1 scenario mainly because of higher do-\nmestic prices due to higher electricity prices. \nEventually, the national debt slightly increases in DD scenarios: it \nreaches +0.6ptsGDP and +1.6ptsGDP in 2050 in DD1 and DD2 scenarios \nrespectively compared to NDC. \n4.2.4. Indirect and induced sectoral impacts \nBeyond the energy sector and overall macroeconomic effects, deep \nenergy transitions have indirect and induced economic impacts across",
+              "metadata": {
+                "doi": "10.1016/j.enpol.2021.112423",
+                "title": "The multi-level economic impacts of deep decarbonization strategies for the energy system",
+                "hal_id": "hal-03663085",
+                "authors": "['Gaëlle Le Treut', 'Julien Lefevre', 'Francisco Lallana', 'Gonzalo Bravo']",
+                "version": "v0",
+                "citation": "Gaëlle Le Treut, Julien Lefevre, Francisco Lallana, Gonzalo Bravo. The multi-level economic impacts of deep decarbonization strategies for the energy system. Energy Policy, 2021, 156, pp.112423. ⟨10.1016/j.enpol.2021.112423⟩. ⟨hal-03663085⟩",
+                "source_url": "https://doi.org/10.1016/j.enpol.2021.112423",
+                "chunk_order": 91,
+                "description": "To cap global warming below 2 • C, countries are urged to upscale their climate commitments and develop national deep decarbonization (DD) strategies for the energy system. But, fast and deep transformations will have wide-ranging economic implications at the macroeconomic level, in energy industries, and also in other sectors. Such impacts need to be understood by policy-makers. This paper develops an original integrated approach based on loading consolidated energy pathways into a multi-sector economy-wide model to assess within a consistent framework the multi-level economic impacts of the DD strategies. The method is applied to Argentina and gives representative insights into the global challenge to move towards a low-carbon economy. Our results show key multi-level impacts of shifting from a 'reference' to a DD pathway by 2050. In energy industries, value-added and employment shift from fossil fuel to low-carbon power industries. Aggregated GDP and welfare impacts are limited but incremental investments are significant at the macroeconomic level, with indirect and induced impacts across the economy. It includes net job creations in upstream industries that supply low-carbon infrastructures, but also risks of job losses in exposed sectors. Eventually, our approach highlights enabling conditions and possible block points to lift to trigger the transition.",
+                "document_type": "ART",
+                "publication_date": "2021-07-01",
+                "semantic_rank": 7,
+                "full_text_rank": 1,
+                "associated_query": "macroeconomic impacts of transition scenarios"
+              }
+            }
+          },
+          {
+            "id": "b791cfb",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 937,
+              "end": 946
+            },
+            "payload": {
+              "id": "b791cfb2-5ebc-5cec-8b26-bffd114cd4ef",
+              "document_id": "20c434f3-5cb0-5991-b193-c5a7fa18de90",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.018181818181818184,
+              "text": "Document Title: The multi-level economic impacts of deep decarbonization strategies for the energy system\n\nText: pronounced in DD2 than DD1 scenario mainly because of higher do-\nmestic prices due to higher electricity prices. \nEventually, the national debt slightly increases in DD scenarios: it \nreaches +0.6ptsGDP and +1.6ptsGDP in 2050 in DD1 and DD2 scenarios \nrespectively compared to NDC. \n4.2.4. Indirect and induced sectoral impacts \nBeyond the energy sector and overall macroeconomic effects, deep \nenergy transitions have indirect and induced economic impacts across \neconomic sectors. \nFig. 8 shows that sectoral impacts are very heterogeneous and can be \nvery different from the economy average. First of all, the total output \n(Fig. 8a) of the energy sector is sizably lower in the DD scenarios (20/\n28%) in compliance with the lower energy demand - but with a higher \nabsolute value-added thanks to the development of high value-added \nFig. 5.Shares of the different energy industries out of the total value-added of the energy sector.",
+              "metadata": {
+                "doi": "10.1016/j.enpol.2021.112423",
+                "title": "The multi-level economic impacts of deep decarbonization strategies for the energy system",
+                "hal_id": "hal-03663085",
+                "authors": "['Gaëlle Le Treut', 'Julien Lefevre', 'Francisco Lallana', 'Gonzalo Bravo']",
+                "version": "v0",
+                "citation": "Gaëlle Le Treut, Julien Lefevre, Francisco Lallana, Gonzalo Bravo. The multi-level economic impacts of deep decarbonization strategies for the energy system. Energy Policy, 2021, 156, pp.112423. ⟨10.1016/j.enpol.2021.112423⟩. ⟨hal-03663085⟩",
+                "source_url": "https://doi.org/10.1016/j.enpol.2021.112423",
+                "chunk_order": 92,
+                "description": "To cap global warming below 2 • C, countries are urged to upscale their climate commitments and develop national deep decarbonization (DD) strategies for the energy system. But, fast and deep transformations will have wide-ranging economic implications at the macroeconomic level, in energy industries, and also in other sectors. Such impacts need to be understood by policy-makers. This paper develops an original integrated approach based on loading consolidated energy pathways into a multi-sector economy-wide model to assess within a consistent framework the multi-level economic impacts of the DD strategies. The method is applied to Argentina and gives representative insights into the global challenge to move towards a low-carbon economy. Our results show key multi-level impacts of shifting from a 'reference' to a DD pathway by 2050. In energy industries, value-added and employment shift from fossil fuel to low-carbon power industries. Aggregated GDP and welfare impacts are limited but incremental investments are significant at the macroeconomic level, with indirect and induced impacts across the economy. It includes net job creations in upstream industries that supply low-carbon infrastructures, but also risks of job losses in exposed sectors. Eventually, our approach highlights enabling conditions and possible block points to lift to trigger the transition.",
+                "document_type": "ART",
+                "publication_date": "2021-07-01",
+                "semantic_rank": 5,
+                "full_text_rank": 5,
+                "associated_query": "macroeconomic impacts of transition scenarios"
+              }
+            }
+          },
+          {
+            "id": "dad2053",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1258,
+              "end": 1267
+            },
+            "payload": null
+          },
+          {
+            "id": "e6bb4e2",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1591,
+              "end": 1600
+            },
+            "payload": {
+              "id": "e6bb4e2a-560f-50b9-9f49-6dc2010c0a0f",
+              "document_id": "4230581f-2ef3-526b-bb4e-59bedf1a66ed",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017094017094017092,
+              "text": "Document Title: The economic impact of a deep decarbonisation pathway for China: a hybrid model analysis through bottom-up and top-down linking\n\nText: against the macroeconomic impact s of low-carbon transition , particularly their costs in terms \nof increased value -added intensity of production . They also demonstrate how the electrification \nof personal mobility allows cutting down the costs of decarbonisation to households in the \nlonger term by gradually phasing -out costly (imported) oil products c onsumptions.  \nAdditionally, improvement s of energy efficiency will lead to the reduction of fossil -fuel \ndemand and hence to  a lower price for fossil fuel s, especially coal.  The combination of those \ntwo effects lead s to barely changed average energy price s for firms, which mitigates the \ninvestment costs of the low -carbon transition . \nCompared with BAU, our DDP scenario consequently shows a small macroeconomic cost, \nequal to a lag of less than one year of growth in 2050.  Taking into account the large expected \nhealth benefit s from reduced air pollut ion could therefore turn the scenario comparison in",
+              "metadata": {
+                "doi": "10.1007/s11027-021-09979-w",
+                "title": "The economic impact of a deep decarbonisation pathway for China: a hybrid model analysis through bottom-up and top-down linking",
+                "hal_id": "hal-03897206",
+                "authors": [
+                  "Xin Su",
+                  "Frédéric Ghersi",
+                  "Fei Teng",
+                  "Gaëlle Le Treut",
+                  "Meicong Liang"
+                ],
+                "version": "v0",
+                "citation": "Xin Su, Frédéric Ghersi, Fei Teng, Gaëlle Le Treut, Meicong Liang. The economic impact of a deep decarbonisation pathway for China: a hybrid model analysis through bottom-up and top-down linking. Mitigation and Adaptation Strategies for Global Change, 2022, 27 (1), pp.11. ⟨10.1007/s11027-021-09979-w⟩. ⟨hal-03897206⟩",
+                "source_url": "https://doi.org/10.1007/s11027-021-09979-w",
+                "chunk_order": 99,
+                "description": "Designing mid-century low-emission development strategies is crucial to guiding long-term mitigation pathways at national levels. The cost of low-carbon transition is one of the key concerns in deep decarbonisation pathways (DDPs). In this study, we estimate the macroeconomic cost of a deep decarbonisation pathway for China, by integrating an energysystems optimization model with an economic model through hard linking. Our results show that deep decarbonisation increases the energy expenses of households in the mid-run through, especially, the higher cost of power and its substitution to coal; but not those of firms, who benefit from lower coal prices caused by the reduction of coal demand and reduce costly oil products consumptions early on. Energy-efficiency improvements therefore lead to a decrease of firms' total energy costs, which allows partially compensating the crowding-out effect of low-carbon investment on general productive capital. Compared to business-as-usual, our DDP 2 scenario consequently comes at a small macroeconomic cost, equal to a lag of less than one year of growth in 2050.",
+                "document_type": "ART",
+                "publication_date": "2022-01-01",
+                "semantic_rank": 10,
+                "full_text_rank": 2,
+                "associated_query": "macroeconomic impacts of transition scenarios"
+              }
+            }
+          },
+          {
+            "id": "8e53ab4",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1901,
+              "end": 1910
+            },
+            "payload": {
+              "id": "8e53ab43-2314-58c1-a994-5a93cb477de3",
+              "document_id": "2a124886-eced-56dd-b89e-4d7f783bb92e",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017033542976939202,
+              "text": "Document Title: Structural change and socio-economic disparities in a net zero transition\n\nText: Regional coverage 71 countries and \nregions 46 countries and \nregions 12 countries and \nregions \nTable 1. Overview of the key macroeconomic model similarities and differences. 317 \n3.3 Study design  318 \nTo explore possible ranges, levels, and directions of structural change impacts in a low-carbon 319 \ntransition, we develop baseline and global net zero  emission  scenarios for the macroeconomic 320 \nmodels mentioned above. The baseline only includes currently implemented energy and climate 321 \npolicies without intensification in the future (see Lefèvre et al., 2022 for more detail on structural 322 \nchange in a baseline scenario). Net zero scenarios show the impact of ambitious climate and energy 323 \npolicies on economic structural change up to 2050. 324 \nThe scenarios are compliant with an end of century carbon budget of between 600-700 GtCO 2 and 325 \nreach global net zero emissions between 2060-2065. We consider this to be in line with the Paris 326",
+              "metadata": {
+                "doi": "10.1080/09535314.2024.2371306",
+                "title": "Structural change and socio-economic disparities in a net zero transition",
+                "hal_id": "hal-04824037",
+                "authors": [
+                  "Cormac Lynch",
+                  "Yeliz Simsek",
+                  "Jean-Francois Mercure",
+                  "Panagiotis Fragkos",
+                  "Julien Lefèvre",
+                  "Thomas Le Gallic",
+                  "Kostas Fragkiadakis",
+                  "Leonidas Paroussos",
+                  "Dimitris Fragkiadakis",
+                  "Florian Leblanc",
+                  "Femke Nijsse"
+                ],
+                "version": "v0",
+                "citation": "Cormac Lynch, Yeliz Simsek, Jean-Francois Mercure, Panagiotis Fragkos, Julien Lefèvre, et al.. Structural change and socio-economic disparities in a net zero transition. Economic Systems Research, 2024, 36 (4), pp.607-629. ⟨10.1080/09535314.2024.2371306⟩. ⟨hal-04824037⟩",
+                "source_url": "https://doi.org/10.1080/09535314.2024.2371306",
+                "chunk_order": 60,
+                "description": "A net zero transition is likely to generate substantial and irreversible economic transformation. High-carbon industries and their related occupations will disappear, while new low-carbon industries and occupations will be created. In the aggregate, the impact of the transition on GDP and employment is commonly projected to be relatively moderate. However, such estimates hide drastic distributional issues that are sectorally and regionally concentrated. We use three sectorally detailed and regionally disaggregated macroeconomic models to explore the possible levels and impacts of structural change in a well below 2°C scenario. In addition to the expected decline in the carbon-intensive industries, we observe secondary impacts, particularly in the services sectors, that vary significantly between models. The risks entailed with structural change involve worsening economic disparity and societal division that could exacerbate existing socioeconomic and political polarisation. Impact assessments of decarbonisation should consider such distributional issues to avoid post-industrial decline and widening socioeconomic inequalities.",
+                "document_type": "ART",
+                "publication_date": "2024-01-01",
+                "semantic_rank": 10,
+                "full_text_rank": 3,
+                "associated_query": "macroeconomic impacts of transition scenarios"
+              }
+            }
+          },
+          {
+            "id": "b6bef05",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2201,
+              "end": 2210
+            },
+            "payload": {
+              "id": "b6bef05f-5648-54f6-a94d-f6c662d7ee00",
+              "document_id": "d0585e77-16a9-5cbd-899e-9f99c5d5b7c3",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016762452107279693,
+              "text": "Document Title: Optimal business model adaptation plan for a company under a transition scenario\n\nText: transition generates the so-called transition risks as described by M. Carney (see [Car15]):\n\"the financial risks which could result from the process of adjustment towards a lower-carbon\neconomy\". The question of the impact of climate risks on the financial sphere has been well-\nstudied thanks to a close collaboration between financial regulators and academia [GKL+19,\nADCG+20, BDN18], with papers dating as far as 2009 [LBR09]. The creation of the Network\nFor Greening the Financial System (NGFS) in 2017 has confirmed the interest of the financial\nauthorities in this matter, notably through its conception of several energy transition scenarios\n[NfGtFS19, BGL+22]. This has impulsed the launch of a new type of financial risks assessment\nexercise: Climate Stress-Tests [BoE19, AdCPedR20].\nBanks and insurers are well familiar with stress tests, which consist of assessing the impact of\nadverse but plausible short-term macroeconomic scenarios on banks or insurers portfolios, in",
+              "metadata": {
+                "title": "Optimal business model adaptation plan for a company under a transition scenario",
+                "hal_id": "hal-04682824",
+                "authors": [
+                  "Elisa Ndiaye",
+                  "Antoine Bezat",
+                  "Emmanuel Gobet",
+                  "Céline Guivarch",
+                  "Ying Jiao"
+                ],
+                "version": "v0",
+                "citation": "Elisa Ndiaye, Antoine Bezat, Emmanuel Gobet, Céline Guivarch, Ying Jiao. Optimal business model adaptation plan for a company under a transition scenario. 2024. ⟨hal-04682824⟩",
+                "source_url": "https://hal.science/hal-04682824",
+                "chunk_order": 8,
+                "description": "Tackling climate change is one of the biggest challenges of today. Limiting climate change translates to drastically cutting carbon emissions to net zero as soon as possible. More and more commitments have been made by various authorities and companies to mitigate their GHG emissions accordingly, notably the Paris Agreement in 2015 that sets the ’well-below 2°C’ target. These energy targets generate the so-called ’transition risks’ and has impulsed a new type of financial risks assessment exercise: Climate Stress-Tests. However, the tools for these Stress-Tests remain limited. We propose a model that accounts for companies’ business model evolution in a given transition scenario for credit risk stress testing. Our model represents a single firm’s business model employing probabilistic modeling. We use stochastic control to derive the company’s intensity reduction strategy, as well as the resulting sales revenues and total emissions. We solve the minimization program using a numerical resolution method that we call Backward Sampling. We find that the intensity reduction strategy that would consist in following the same decrease rate as the sector inflates the company’s costs (up to 15.7% more expensive than the optimal strategy). Moreover, we show that investing the same amount as the total carbon cost paid at a given date is limited by its lack of a forward-looking feature, making it unable to provide a buffer for future carbon shocks in a disorderly transition scenario.",
+                "document_type": "UNDEFINED",
+                "publication_date": "2024-08-31",
+                "semantic_rank": 10,
+                "full_text_rank": 8,
+                "associated_query": "macroeconomic impacts of transition scenarios"
+              }
+            }
+          },
+          {
+            "id": "e6bb4e2",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 2568,
+              "end": 2577
+            },
+            "payload": null
+          },
+          {
+            "id": "2a127d7",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 2958,
+              "end": 2967
+            },
+            "payload": {
+              "id": "2a127d74-39e0-5858-bb8f-ba4205576981",
+              "document_id": "773cc30e-7b9c-518a-80af-3be001455167",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: An \"acceptable\" low carbon scenario for France: Participatory scenario design and economic assessment\n\nText: Macroeconomic \nimpacts & scenario results\nI. Global c ontext andw orld\nvisions\nthe scenarios global context sets up the \nframework for the study. This global vision \nanswers the following questions. What outcome for \ninternational climate negotiations? How abruptly \nwill the Peak-Oil shock western economies? What orientation for technical change? What consump-\ntion styles will prevail? For developed economies? \nFor emerging economies?\nThe assumptions we made are the following. \nConsumption styles in Europe and in France are \nconsidered to remain material-intensive. We have \nnot considered in this scenario any change in \nconsumption styles or consumers preferences. \nA decoupling of growth and resources use will be further investigated in section 4. In the scenario \npresented here, no global climate agreement is \nreached  ; climate policies coordination only exists \nat the EU level. This situation leads to a world with",
+              "metadata": {
+                "title": "An \"acceptable\" low carbon scenario for France: Participatory scenario design and economic assessment",
+                "hal_id": "halshs-00797976",
+                "authors": [
+                  "Ruben Bibas",
+                  "Sandrine Mathy",
+                  "Meike Fink"
+                ],
+                "version": "v0",
+                "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. An \"acceptable\" low carbon scenario for France: Participatory scenario design and economic assessment. 2012. ⟨halshs-00797976⟩",
+                "source_url": "https://hal.science/halshs-00797976",
+                "chunk_order": 174,
+                "description": "The implementation of climate policies is often hindered by a lack of acceptability as well as the lack of long-term vision of stakeholders. Mitigation scenarios exercises allow the debate; however the scenario design process lacks transparency and stakeholders' (and citizens') involvement, which leads to a lack of credibility, legitimacy and ownership of mitigation scenarios. This paper presents a process for the collaborative design of an \"acceptable\" mitigation scenario through a public dialogue involving fifty stakeholders. Stakeholders selected the mitigation policies and measures they deemed acceptable. They significantly contributed to the development of the scenario methodology as well, by defining its specifications including data transparency, sensitivity analysis and the need to clarify certain types of economic and financial impacts for the evaluation of Factor 4 scenarios. The acceptable policies were integrated into the hybrid CGE model Imaclim-R France. This modeling platform, designed for the dialogue between modelers, stakeholders and experts, evaluates the social, economic and financial impact of climate policies. This attempt at a methodology exemplifies a collaborative scenario design, thereby proving that such a process can be implemented. The scenario based on the measures that stakeholders deemed acceptable reduce CO2 emissions by 68% by 2050 compared to 1990, which is a result close to the target of the Factor 4 (75%). The measures to reduce emissions are beneficial for employment and economic growth, except in the short term. They can also reduce rapidly and permanently the households' budget dedicated to energy services. Finally, the financial assessment of measures is positive throughout the period. This result is a solid foundation on which to build the acceptability of mitigation trajectories. Beyond the scenario, the methodological innovation offers the means to increase the involvement of stakeholders in decision-making.",
+                "document_type": "REPORT",
+                "publication_date": "2012-03-01",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "macroeconomic impacts of transition scenarios"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "b791cfb2-5ebc-5cec-8b26-bffd114cd4ef",
+            "document_id": "20c434f3-5cb0-5991-b193-c5a7fa18de90",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.018181818181818184,
+            "text": "Document Title: The multi-level economic impacts of deep decarbonization strategies for the energy system\n\nText: pronounced in DD2 than DD1 scenario mainly because of higher do-\nmestic prices due to higher electricity prices. \nEventually, the national debt slightly increases in DD scenarios: it \nreaches +0.6ptsGDP and +1.6ptsGDP in 2050 in DD1 and DD2 scenarios \nrespectively compared to NDC. \n4.2.4. Indirect and induced sectoral impacts \nBeyond the energy sector and overall macroeconomic effects, deep \nenergy transitions have indirect and induced economic impacts across \neconomic sectors. \nFig. 8 shows that sectoral impacts are very heterogeneous and can be \nvery different from the economy average. First of all, the total output \n(Fig. 8a) of the energy sector is sizably lower in the DD scenarios (20/\n28%) in compliance with the lower energy demand - but with a higher \nabsolute value-added thanks to the development of high value-added \nFig. 5.Shares of the different energy industries out of the total value-added of the energy sector.",
+            "metadata": {
+              "doi": "10.1016/j.enpol.2021.112423",
+              "title": "The multi-level economic impacts of deep decarbonization strategies for the energy system",
+              "hal_id": "hal-03663085",
+              "authors": "['Gaëlle Le Treut', 'Julien Lefevre', 'Francisco Lallana', 'Gonzalo Bravo']",
+              "version": "v0",
+              "citation": "Gaëlle Le Treut, Julien Lefevre, Francisco Lallana, Gonzalo Bravo. The multi-level economic impacts of deep decarbonization strategies for the energy system. Energy Policy, 2021, 156, pp.112423. ⟨10.1016/j.enpol.2021.112423⟩. ⟨hal-03663085⟩",
+              "source_url": "https://doi.org/10.1016/j.enpol.2021.112423",
+              "chunk_order": 92,
+              "description": "To cap global warming below 2 • C, countries are urged to upscale their climate commitments and develop national deep decarbonization (DD) strategies for the energy system. But, fast and deep transformations will have wide-ranging economic implications at the macroeconomic level, in energy industries, and also in other sectors. Such impacts need to be understood by policy-makers. This paper develops an original integrated approach based on loading consolidated energy pathways into a multi-sector economy-wide model to assess within a consistent framework the multi-level economic impacts of the DD strategies. The method is applied to Argentina and gives representative insights into the global challenge to move towards a low-carbon economy. Our results show key multi-level impacts of shifting from a 'reference' to a DD pathway by 2050. In energy industries, value-added and employment shift from fossil fuel to low-carbon power industries. Aggregated GDP and welfare impacts are limited but incremental investments are significant at the macroeconomic level, with indirect and induced impacts across the economy. It includes net job creations in upstream industries that supply low-carbon infrastructures, but also risks of job losses in exposed sectors. Eventually, our approach highlights enabling conditions and possible block points to lift to trigger the transition.",
+              "document_type": "ART",
+              "publication_date": "2021-07-01",
+              "semantic_rank": 5,
+              "full_text_rank": 5,
+              "associated_query": "macroeconomic impacts of transition scenarios"
+            }
+          },
+          {
+            "id": "dad2053f-986c-5236-8460-95170c11f26e",
+            "document_id": "20c434f3-5cb0-5991-b193-c5a7fa18de90",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01788785689714482,
+            "text": "Document Title: The multi-level economic impacts of deep decarbonization strategies for the energy system\n\nText: higher production costs (+34%) due to higher average capital costs (45%) and higher energy prices (+2027% including 2641% higher \nelectricity prices) despite 1012% lower mean energy intensity of pro-\nduction. Furthermore, the higher production costs of domestic industries \nhave more pronounced relative impacts on the trade balance as a result \nof competitiveness losses: mean annual net exports are 710% lower in \nthe DD scenarios than in the NDC scenario. Finally, the mean annual \nnegative impacts on final consumption and trade are slightly more \npronounced in DD2 than DD1 scenario mainly because of higher do-\nmestic prices due to higher electricity prices. \nEventually, the national debt slightly increases in DD scenarios: it \nreaches +0.6ptsGDP and +1.6ptsGDP in 2050 in DD1 and DD2 scenarios \nrespectively compared to NDC. \n4.2.4. Indirect and induced sectoral impacts \nBeyond the energy sector and overall macroeconomic effects, deep \nenergy transitions have indirect and induced economic impacts across",
+            "metadata": {
+              "doi": "10.1016/j.enpol.2021.112423",
+              "title": "The multi-level economic impacts of deep decarbonization strategies for the energy system",
+              "hal_id": "hal-03663085",
+              "authors": "['Gaëlle Le Treut', 'Julien Lefevre', 'Francisco Lallana', 'Gonzalo Bravo']",
+              "version": "v0",
+              "citation": "Gaëlle Le Treut, Julien Lefevre, Francisco Lallana, Gonzalo Bravo. The multi-level economic impacts of deep decarbonization strategies for the energy system. Energy Policy, 2021, 156, pp.112423. ⟨10.1016/j.enpol.2021.112423⟩. ⟨hal-03663085⟩",
+              "source_url": "https://doi.org/10.1016/j.enpol.2021.112423",
+              "chunk_order": 91,
+              "description": "To cap global warming below 2 • C, countries are urged to upscale their climate commitments and develop national deep decarbonization (DD) strategies for the energy system. But, fast and deep transformations will have wide-ranging economic implications at the macroeconomic level, in energy industries, and also in other sectors. Such impacts need to be understood by policy-makers. This paper develops an original integrated approach based on loading consolidated energy pathways into a multi-sector economy-wide model to assess within a consistent framework the multi-level economic impacts of the DD strategies. The method is applied to Argentina and gives representative insights into the global challenge to move towards a low-carbon economy. Our results show key multi-level impacts of shifting from a 'reference' to a DD pathway by 2050. In energy industries, value-added and employment shift from fossil fuel to low-carbon power industries. Aggregated GDP and welfare impacts are limited but incremental investments are significant at the macroeconomic level, with indirect and induced impacts across the economy. It includes net job creations in upstream industries that supply low-carbon infrastructures, but also risks of job losses in exposed sectors. Eventually, our approach highlights enabling conditions and possible block points to lift to trigger the transition.",
+              "document_type": "ART",
+              "publication_date": "2021-07-01",
+              "semantic_rank": 7,
+              "full_text_rank": 1,
+              "associated_query": "macroeconomic impacts of transition scenarios"
+            }
+          },
+          {
+            "id": "e6bb4e2a-560f-50b9-9f49-6dc2010c0a0f",
+            "document_id": "4230581f-2ef3-526b-bb4e-59bedf1a66ed",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017094017094017092,
+            "text": "Document Title: The economic impact of a deep decarbonisation pathway for China: a hybrid model analysis through bottom-up and top-down linking\n\nText: against the macroeconomic impact s of low-carbon transition , particularly their costs in terms \nof increased value -added intensity of production . They also demonstrate how the electrification \nof personal mobility allows cutting down the costs of decarbonisation to households in the \nlonger term by gradually phasing -out costly (imported) oil products c onsumptions.  \nAdditionally, improvement s of energy efficiency will lead to the reduction of fossil -fuel \ndemand and hence to  a lower price for fossil fuel s, especially coal.  The combination of those \ntwo effects lead s to barely changed average energy price s for firms, which mitigates the \ninvestment costs of the low -carbon transition . \nCompared with BAU, our DDP scenario consequently shows a small macroeconomic cost, \nequal to a lag of less than one year of growth in 2050.  Taking into account the large expected \nhealth benefit s from reduced air pollut ion could therefore turn the scenario comparison in",
+            "metadata": {
+              "doi": "10.1007/s11027-021-09979-w",
+              "title": "The economic impact of a deep decarbonisation pathway for China: a hybrid model analysis through bottom-up and top-down linking",
+              "hal_id": "hal-03897206",
+              "authors": [
+                "Xin Su",
+                "Frédéric Ghersi",
+                "Fei Teng",
+                "Gaëlle Le Treut",
+                "Meicong Liang"
+              ],
+              "version": "v0",
+              "citation": "Xin Su, Frédéric Ghersi, Fei Teng, Gaëlle Le Treut, Meicong Liang. The economic impact of a deep decarbonisation pathway for China: a hybrid model analysis through bottom-up and top-down linking. Mitigation and Adaptation Strategies for Global Change, 2022, 27 (1), pp.11. ⟨10.1007/s11027-021-09979-w⟩. ⟨hal-03897206⟩",
+              "source_url": "https://doi.org/10.1007/s11027-021-09979-w",
+              "chunk_order": 99,
+              "description": "Designing mid-century low-emission development strategies is crucial to guiding long-term mitigation pathways at national levels. The cost of low-carbon transition is one of the key concerns in deep decarbonisation pathways (DDPs). In this study, we estimate the macroeconomic cost of a deep decarbonisation pathway for China, by integrating an energysystems optimization model with an economic model through hard linking. Our results show that deep decarbonisation increases the energy expenses of households in the mid-run through, especially, the higher cost of power and its substitution to coal; but not those of firms, who benefit from lower coal prices caused by the reduction of coal demand and reduce costly oil products consumptions early on. Energy-efficiency improvements therefore lead to a decrease of firms' total energy costs, which allows partially compensating the crowding-out effect of low-carbon investment on general productive capital. Compared to business-as-usual, our DDP 2 scenario consequently comes at a small macroeconomic cost, equal to a lag of less than one year of growth in 2050.",
+              "document_type": "ART",
+              "publication_date": "2022-01-01",
+              "semantic_rank": 10,
+              "full_text_rank": 2,
+              "associated_query": "macroeconomic impacts of transition scenarios"
+            }
+          },
+          {
+            "id": "8e53ab43-2314-58c1-a994-5a93cb477de3",
+            "document_id": "2a124886-eced-56dd-b89e-4d7f783bb92e",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017033542976939202,
+            "text": "Document Title: Structural change and socio-economic disparities in a net zero transition\n\nText: Regional coverage 71 countries and \nregions 46 countries and \nregions 12 countries and \nregions \nTable 1. Overview of the key macroeconomic model similarities and differences. 317 \n3.3 Study design  318 \nTo explore possible ranges, levels, and directions of structural change impacts in a low-carbon 319 \ntransition, we develop baseline and global net zero  emission  scenarios for the macroeconomic 320 \nmodels mentioned above. The baseline only includes currently implemented energy and climate 321 \npolicies without intensification in the future (see Lefèvre et al., 2022 for more detail on structural 322 \nchange in a baseline scenario). Net zero scenarios show the impact of ambitious climate and energy 323 \npolicies on economic structural change up to 2050. 324 \nThe scenarios are compliant with an end of century carbon budget of between 600-700 GtCO 2 and 325 \nreach global net zero emissions between 2060-2065. We consider this to be in line with the Paris 326",
+            "metadata": {
+              "doi": "10.1080/09535314.2024.2371306",
+              "title": "Structural change and socio-economic disparities in a net zero transition",
+              "hal_id": "hal-04824037",
+              "authors": [
+                "Cormac Lynch",
+                "Yeliz Simsek",
+                "Jean-Francois Mercure",
+                "Panagiotis Fragkos",
+                "Julien Lefèvre",
+                "Thomas Le Gallic",
+                "Kostas Fragkiadakis",
+                "Leonidas Paroussos",
+                "Dimitris Fragkiadakis",
+                "Florian Leblanc",
+                "Femke Nijsse"
+              ],
+              "version": "v0",
+              "citation": "Cormac Lynch, Yeliz Simsek, Jean-Francois Mercure, Panagiotis Fragkos, Julien Lefèvre, et al.. Structural change and socio-economic disparities in a net zero transition. Economic Systems Research, 2024, 36 (4), pp.607-629. ⟨10.1080/09535314.2024.2371306⟩. ⟨hal-04824037⟩",
+              "source_url": "https://doi.org/10.1080/09535314.2024.2371306",
+              "chunk_order": 60,
+              "description": "A net zero transition is likely to generate substantial and irreversible economic transformation. High-carbon industries and their related occupations will disappear, while new low-carbon industries and occupations will be created. In the aggregate, the impact of the transition on GDP and employment is commonly projected to be relatively moderate. However, such estimates hide drastic distributional issues that are sectorally and regionally concentrated. We use three sectorally detailed and regionally disaggregated macroeconomic models to explore the possible levels and impacts of structural change in a well below 2°C scenario. In addition to the expected decline in the carbon-intensive industries, we observe secondary impacts, particularly in the services sectors, that vary significantly between models. The risks entailed with structural change involve worsening economic disparity and societal division that could exacerbate existing socioeconomic and political polarisation. Impact assessments of decarbonisation should consider such distributional issues to avoid post-industrial decline and widening socioeconomic inequalities.",
+              "document_type": "ART",
+              "publication_date": "2024-01-01",
+              "semantic_rank": 10,
+              "full_text_rank": 3,
+              "associated_query": "macroeconomic impacts of transition scenarios"
+            }
+          },
+          {
+            "id": "2a127d74-39e0-5858-bb8f-ba4205576981",
+            "document_id": "773cc30e-7b9c-518a-80af-3be001455167",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: An \"acceptable\" low carbon scenario for France: Participatory scenario design and economic assessment\n\nText: Macroeconomic \nimpacts & scenario results\nI. Global c ontext andw orld\nvisions\nthe scenarios global context sets up the \nframework for the study. This global vision \nanswers the following questions. What outcome for \ninternational climate negotiations? How abruptly \nwill the Peak-Oil shock western economies? What orientation for technical change? What consump-\ntion styles will prevail? For developed economies? \nFor emerging economies?\nThe assumptions we made are the following. \nConsumption styles in Europe and in France are \nconsidered to remain material-intensive. We have \nnot considered in this scenario any change in \nconsumption styles or consumers preferences. \nA decoupling of growth and resources use will be further investigated in section 4. In the scenario \npresented here, no global climate agreement is \nreached  ; climate policies coordination only exists \nat the EU level. This situation leads to a world with",
+            "metadata": {
+              "title": "An \"acceptable\" low carbon scenario for France: Participatory scenario design and economic assessment",
+              "hal_id": "halshs-00797976",
+              "authors": [
+                "Ruben Bibas",
+                "Sandrine Mathy",
+                "Meike Fink"
+              ],
+              "version": "v0",
+              "citation": "Ruben Bibas, Sandrine Mathy, Meike Fink. An \"acceptable\" low carbon scenario for France: Participatory scenario design and economic assessment. 2012. ⟨halshs-00797976⟩",
+              "source_url": "https://hal.science/halshs-00797976",
+              "chunk_order": 174,
+              "description": "The implementation of climate policies is often hindered by a lack of acceptability as well as the lack of long-term vision of stakeholders. Mitigation scenarios exercises allow the debate; however the scenario design process lacks transparency and stakeholders' (and citizens') involvement, which leads to a lack of credibility, legitimacy and ownership of mitigation scenarios. This paper presents a process for the collaborative design of an \"acceptable\" mitigation scenario through a public dialogue involving fifty stakeholders. Stakeholders selected the mitigation policies and measures they deemed acceptable. They significantly contributed to the development of the scenario methodology as well, by defining its specifications including data transparency, sensitivity analysis and the need to clarify certain types of economic and financial impacts for the evaluation of Factor 4 scenarios. The acceptable policies were integrated into the hybrid CGE model Imaclim-R France. This modeling platform, designed for the dialogue between modelers, stakeholders and experts, evaluates the social, economic and financial impact of climate policies. This attempt at a methodology exemplifies a collaborative scenario design, thereby proving that such a process can be implemented. The scenario based on the measures that stakeholders deemed acceptable reduce CO2 emissions by 68% by 2050 compared to 1990, which is a result close to the target of the Factor 4 (75%). The measures to reduce emissions are beneficial for employment and economic growth, except in the short term. They can also reduce rapidly and permanently the households' budget dedicated to energy services. Finally, the financial assessment of measures is positive throughout the period. This result is a solid foundation on which to build the acceptability of mitigation trajectories. Beyond the scenario, the methodological innovation offers the means to increase the involvement of stakeholders in decision-making.",
+              "document_type": "REPORT",
+              "publication_date": "2012-03-01",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "macroeconomic impacts of transition scenarios"
+            }
+          },
+          {
+            "id": "83e8cb20-afb3-5103-8cce-cb13cf90d47d",
+            "document_id": "d0585e77-16a9-5cbd-899e-9f99c5d5b7c3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016975308641975308,
+            "text": "Document Title: Optimal business model adaptation plan for a company under a transition scenario\n\nText: authorities in this matter, notably through its conception of several energy transition scenarios\n[NfGtFS19, BGL+22]. This has impulsed the launch of a new type of financial risks assessment\nexercise: Climate Stress-Tests [BoE19, AdCPedR20].\nBanks and insurers are well familiar with stress tests, which consist of assessing the impact of\nadverse but plausible short-term macroeconomic scenarios on banks or insurers portfolios, in\nparticular, their credit portfolios. However, the tools used for these frequent risk management\npractices remain limited. [HRTK19] explain why traditional stress tests are not appropriate\nfor capturing the impact of a delayed and sudden energy transition, which is the case that\ngenerates the most transition risk.\nTop-down climate stress tests of the Euro Area banking sector have already been conducted\n[BMM+17, GHK+21, Bor20] and show that major Euro Area banks could suffer a loss of up\n2",
+            "metadata": {
+              "title": "Optimal business model adaptation plan for a company under a transition scenario",
+              "hal_id": "hal-04682824",
+              "authors": [
+                "Elisa Ndiaye",
+                "Antoine Bezat",
+                "Emmanuel Gobet",
+                "Céline Guivarch",
+                "Ying Jiao"
+              ],
+              "version": "v0",
+              "citation": "Elisa Ndiaye, Antoine Bezat, Emmanuel Gobet, Céline Guivarch, Ying Jiao. Optimal business model adaptation plan for a company under a transition scenario. 2024. ⟨hal-04682824⟩",
+              "source_url": "https://hal.science/hal-04682824",
+              "chunk_order": 9,
+              "description": "Tackling climate change is one of the biggest challenges of today. Limiting climate change translates to drastically cutting carbon emissions to net zero as soon as possible. More and more commitments have been made by various authorities and companies to mitigate their GHG emissions accordingly, notably the Paris Agreement in 2015 that sets the ’well-below 2°C’ target. These energy targets generate the so-called ’transition risks’ and has impulsed a new type of financial risks assessment exercise: Climate Stress-Tests. However, the tools for these Stress-Tests remain limited. We propose a model that accounts for companies’ business model evolution in a given transition scenario for credit risk stress testing. Our model represents a single firm’s business model employing probabilistic modeling. We use stochastic control to derive the company’s intensity reduction strategy, as well as the resulting sales revenues and total emissions. We solve the minimization program using a numerical resolution method that we call Backward Sampling. We find that the intensity reduction strategy that would consist in following the same decrease rate as the sector inflates the company’s costs (up to 15.7% more expensive than the optimal strategy). Moreover, we show that investing the same amount as the total carbon cost paid at a given date is limited by its lack of a forward-looking feature, making it unable to provide a buffer for future carbon shocks in a disorderly transition scenario.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2024-08-31",
+              "semantic_rank": 10,
+              "full_text_rank": 4,
+              "associated_query": "macroeconomic impacts of transition scenarios"
+            }
+          },
+          {
+            "id": "98280692-a57a-5c32-b30d-df88f89033dd",
+            "document_id": "6b8d810b-c193-52de-9149-2e88a70342d2",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016865079365079364,
+            "text": "Document Title: Global socio-economic and climate change mitigation scenarios through the lens of structural change\n\nText: policy with the simulation-based integrated assessment model E3ME-FTT-GENIE. Energy \nStrategy Rev. 20, 195208. \nMercure, J.-F., Pollitt, H., Viñuales, J.E., Edwards, N.R., Holden, P.B., Chewpreecha, U., \nSalas, P., Sognnaes, I., Lam, A., Knobloch, F., 2018b. Macroeconomic impact of stranded \nfossil fuel assets. Nat. Clim. Change 8, 588593. \nMillward-Hopkins, J., Steinberger, J.K., Rao, N.D., Oswald, Y., 2020. Providing decent living \nwith minimum energy: A global scenario. Glob. Environ. Change 65, 102168. \nNieto, J., Carpintero, Ó., Miguel, L.J., de Blas, I., 2020. Macroeconomic modelling under \nenergy constraints: Global low carbon transition scenarios. Energy Policy 137, 111090. \nONeill, B.C., Kriegler, E., Ebi, K.L., Kemp-Benedict, E., Riahi, K., Rothman, D.S., van \nRuijven, B.J., van Vuuren, D.P., Birkmann, J., Kok, K., Levy, M., Solecki, W., 2017. The roads \nahead: Narratives for shared socioeconomic pathways describing world futures in the 21st",
+            "metadata": {
+              "doi": "10.1016/j.gloenvcha.2022.102510",
+              "title": "Global socio-economic and climate change mitigation scenarios through the lens of structural change",
+              "hal_id": "hal-03622209",
+              "authors": [
+                "Julien Lefevre",
+                "Thomas Le Gallic",
+                "Panagiotis Fragkos",
+                "Jean-François Mercure",
+                "Yeliz Simsek",
+                "Leonidas Paroussos"
+              ],
+              "version": "v0",
+              "citation": "Julien Lefevre, Thomas Le Gallic, Panagiotis Fragkos, Jean-François Mercure, Yeliz Simsek, et al.. Global socio-economic and climate change mitigation scenarios through the lens of structural change. Global Environmental Change, 2022, 74, pp.102510. ⟨10.1016/j.gloenvcha.2022.102510⟩. ⟨hal-03622209⟩",
+              "source_url": "https://doi.org/10.1016/j.gloenvcha.2022.102510",
+              "chunk_order": 119,
+              "description": "This paper analyses structural change in the economy as a key but largely unexplored aspect of global socioeconomic and climate change mitigation scenarios. Structural change can actually drive energy and land use as much as economic growth and influence mitigation opportunities and barriers. Conversely, stringent climate policy is bound to induce specific structural and socioeconomic transformations that are still insufficiently understood. We introduce Multi-Sectoral Integrated Assessment Models as main tools to capture the key drivers of structural change and we conduct a multi-model study to assess main structural effectschanges of the sectoral composition and intensity of trade of global and regional economiesin a baseline and 2°C policy scenario by 2050. First, the range of baseline projections across models, for which we identify the main drivers, illustrates the uncertainty on future economic pathways-in emerging economies especially-and inform on plausible alternative futures with implications for energy use and emissions. Second, in all models, climate policy in the 2°C scenario imposes only a second-order impact on the economic structure at the macrosectoral level-agriculture, manufacturing and services-compared to changes modelled in the baseline. However, this hides more radical changes for individual industries-within the energy sector especially. The study, which adopts a top-down framing of global structural change, represents a starting point to kick-start a conversation and propose a new research agenda seeking to improve understanding of the structural change effects in socioeconomic and mitigation scenarios, and better inform policy assessments.",
+              "document_type": "ART",
+              "publication_date": "2022-01-01",
+              "semantic_rank": 10,
+              "full_text_rank": 6,
+              "associated_query": "macroeconomic impacts of transition scenarios"
+            }
+          },
+          {
+            "id": "927f24a3-0302-5eaf-8113-2975d4b0b971",
+            "document_id": "58bad051-1dd7-5818-823b-60d9bb679a77",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016812865497076022,
+            "text": "Document Title: Exploring the possibility space: Taking stock of the diverse capabilities and gaps in integrated assessment models\n\nText: 25Napp T, Bernie D, Thomas R, Lowe J, Hawkes A and Gambhir A. 2017. Exploring the Feasibility of Low-Carbon \nScenarios Using Historical Energy Transitions Analysis. Energies 10(1), 116.\nNieto J, Carpintero Ó, Miguel L J and de Blas I 2020 Macroeconomic modelling under energy constraints: \nGlobal low carbon transition scenarios Energy Policy 137\nOtto, S.A.C., Gernaat, D.E.H.J., Isaac, M., Lucas, P.L., van Sluisveld, M.A.E., van den Berg, M., van Vliet, J., van \nVuuren, D.P., 2015. Impact of fragmented emission reduction regimes on the energy market and on CO2 \nemissions related to land use: A case study with China and the European Union as first movers. Technological \nForecasting and Social Change 90, Part A, 220229. https://doi.org/10.1016/j.techfore.2014.01.015\nParkinson S, Krey V, Huppmann D, Kahil T, McCollum D, Fricko O, Byers E, Gidden MJ, Mayor B and Khan Z. \n2019. Balancing clean water-climate change mitigation trade-offs. Environmental Research Letters 14(1), \n014009.",
+            "metadata": {
+              "doi": "10.1088/1748-9326/abe5d8",
+              "title": "Exploring the possibility space: Taking stock of the diverse capabilities and gaps in integrated assessment models",
+              "hal_id": "hal-03142411",
+              "authors": [
+                "Ilkka Keppo",
+                "Isabela Butnar",
+                "Nicolas Bauer",
+                "Matteo Caspani",
+                "Oreane Edelenbosch",
+                "Johannes Emmerling",
+                "Panagiotis Fragkos",
+                "Céline Guivarch",
+                "Mathijs Harmsen",
+                "Julien Lefevre",
+                "Thomas Le Gallic",
+                "Marian Leimbach",
+                "Will Mcdowall",
+                "Jean-Francois Mercure",
+                "Roberto Schaeffer",
+                "Evelina Trutnevyte",
+                "Fabian Wagner"
+              ],
+              "version": "v0",
+              "citation": "Ilkka Keppo, Isabela Butnar, Nicolas Bauer, Matteo Caspani, Oreane Edelenbosch, et al.. Exploring the possibility space: Taking stock of the diverse capabilities and gaps in integrated assessment models. Environmental Research Letters, 2021, 16 (5), ⟨10.1088/1748-9326/abe5d8⟩. ⟨hal-03142411⟩",
+              "source_url": "https://doi.org/10.1088/1748-9326/abe5d8",
+              "chunk_order": 210,
+              "description": "Integrated Assessment Models (IAMs) have emerged as key tools for building and assessing long term climate mitigation scenarios. Due to their central role in the recent IPCC assessments, and international climate policy analyses more generally, and the high uncertainties related to future projections, IAMs have been critically assessed by scholars from different fields receiving various critiques ranging from adequacy of their methods to how their results are used and communicated. Although IAMs are conceptually diverse and evolved in very different directions, they tend to be criticized under the umbrella of \"IAMs\". Here we first briefly summarise the IAM landscape and how models differ from each other. We then proceed to discuss six prominent critiques emerging from the recent literature, reflect and respond to them in the light of IAM diversity and ongoing work and suggest ways forward. The six critiques relate to (1) representation of heterogeneous actors in the models, (2) modelling of technology diffusion and dynamics, (3) representation of capital markets, (4) energy-economy feedbacks, (5) policy scenarios, and (6) interpretation and use of model results.",
+              "document_type": "ART",
+              "publication_date": "2021-02-12",
+              "semantic_rank": 10,
+              "full_text_rank": 7,
+              "associated_query": "macroeconomic impacts of transition scenarios"
+            }
+          },
+          {
+            "id": "b6bef05f-5648-54f6-a94d-f6c662d7ee00",
+            "document_id": "d0585e77-16a9-5cbd-899e-9f99c5d5b7c3",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016762452107279693,
+            "text": "Document Title: Optimal business model adaptation plan for a company under a transition scenario\n\nText: transition generates the so-called transition risks as described by M. Carney (see [Car15]):\n\"the financial risks which could result from the process of adjustment towards a lower-carbon\neconomy\". The question of the impact of climate risks on the financial sphere has been well-\nstudied thanks to a close collaboration between financial regulators and academia [GKL+19,\nADCG+20, BDN18], with papers dating as far as 2009 [LBR09]. The creation of the Network\nFor Greening the Financial System (NGFS) in 2017 has confirmed the interest of the financial\nauthorities in this matter, notably through its conception of several energy transition scenarios\n[NfGtFS19, BGL+22]. This has impulsed the launch of a new type of financial risks assessment\nexercise: Climate Stress-Tests [BoE19, AdCPedR20].\nBanks and insurers are well familiar with stress tests, which consist of assessing the impact of\nadverse but plausible short-term macroeconomic scenarios on banks or insurers portfolios, in",
+            "metadata": {
+              "title": "Optimal business model adaptation plan for a company under a transition scenario",
+              "hal_id": "hal-04682824",
+              "authors": [
+                "Elisa Ndiaye",
+                "Antoine Bezat",
+                "Emmanuel Gobet",
+                "Céline Guivarch",
+                "Ying Jiao"
+              ],
+              "version": "v0",
+              "citation": "Elisa Ndiaye, Antoine Bezat, Emmanuel Gobet, Céline Guivarch, Ying Jiao. Optimal business model adaptation plan for a company under a transition scenario. 2024. ⟨hal-04682824⟩",
+              "source_url": "https://hal.science/hal-04682824",
+              "chunk_order": 8,
+              "description": "Tackling climate change is one of the biggest challenges of today. Limiting climate change translates to drastically cutting carbon emissions to net zero as soon as possible. More and more commitments have been made by various authorities and companies to mitigate their GHG emissions accordingly, notably the Paris Agreement in 2015 that sets the ’well-below 2°C’ target. These energy targets generate the so-called ’transition risks’ and has impulsed a new type of financial risks assessment exercise: Climate Stress-Tests. However, the tools for these Stress-Tests remain limited. We propose a model that accounts for companies’ business model evolution in a given transition scenario for credit risk stress testing. Our model represents a single firm’s business model employing probabilistic modeling. We use stochastic control to derive the company’s intensity reduction strategy, as well as the resulting sales revenues and total emissions. We solve the minimization program using a numerical resolution method that we call Backward Sampling. We find that the intensity reduction strategy that would consist in following the same decrease rate as the sector inflates the company’s costs (up to 15.7% more expensive than the optimal strategy). Moreover, we show that investing the same amount as the total carbon cost paid at a given date is limited by its lack of a forward-looking feature, making it unable to provide a buffer for future carbon shocks in a disorderly transition scenario.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2024-08-31",
+              "semantic_rank": 10,
+              "full_text_rank": 8,
+              "associated_query": "macroeconomic impacts of transition scenarios"
+            }
+          },
+          {
+            "id": "7064002a-c167-5d3d-8e43-422ec0136e5d",
+            "document_id": "f8098a53-3cbe-5102-a7aa-e3e31ff20b4f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016713747645951033,
+            "text": "Document Title: Accounting for national and corporate ecological debt, a steering tool towards a sustainable economy\n\nText: walking, in which case it's no longer a question of avoidance, but of impact. On the contrary, \nrestorati on and prevention are not confusing, because the entire expense is for the capital. Of course, \nthere are borderline cases, but it is the role of the accountant or statistician who records real data to \nmake choices about these cases. This is a routine opera tion for these professions, which are governed \nby ethical principles and recognised practice (see the chapter on 'Classifying and coding' in Desrosières, \n2010) .  \nFinally, the move to the national level represents a further leap forward in the form of a statistical \nsummary of all the ecological debts. The fact that opportunity costs have been excluded means that it \nis no longer necessary to draw up very difficult meso and macroeconomic transition scenarios. This \nwas a stumbling block considered insurmountable by the SEEA experts of the 1990s (Brouwer et al.,",
+            "metadata": {
+              "title": "Accounting for national and corporate ecological debt, a steering tool towards a sustainable economy",
+              "hal_id": "tel-04440300",
+              "authors": "['Clément Surun']",
+              "version": "v0",
+              "citation": "Clément Surun. Accounting for national and corporate ecological debt, a steering tool towards a sustainable economy. Economics and Finance. Université Paris Saclay, AgroParisTech, 2023. English. ⟨NNT : ⟩. ⟨tel-04440300⟩",
+              "source_url": "https://hal.science/tel-04440300",
+              "chunk_order": 1823,
+              "description": "Despite many advances, the ecological and climate crises remain challenges that are less well managed by public authorities than purely economic issues. Although still largely structuring to support public power in dealing with these latter issues, national accounting has encountered limitations (criticism of GDP as an obsolete indicator for measuring wealth, difficulties in the face of trade globalisation) which have weakened its scope as a planning tool. The failure to take account of environmental issues is one of the limitations often mentioned. To date, none of the proposals for integrating the environment into national accounting has yet managed to establish itself as a tool to support decision-making. Lack of legitimacy, relative disconnection from public policies, framing according to the principles of weak sustainability or a high degree of modelling are all reasons that weaken, for example, the new wealth indicators, genuine savings or the UN System of Economic and Environmental Accounts. The objective of this thesis is to equip public action with a national accounting system that allows for an ecological transition. We will try to show why and how articulating ecological debts and claims from the corporate to the national level can create an adequate tool for representation and discussion. This work is based on forays into the history of French national economic accounting to understand why an articulation between national and organisational levels was put in place. This legacy serves as a benchmark to question the opportunities for a similar environmental accounting extension. Two biodiversity-related policies are discussed: the management of aquatic environments and terrestrial biodiversity. Furthermore, because the quantification of the environment (particularly in monetary terms) is controversial, we analyse accounting conventions and the underlying management model (implicit or explicit) together. This work highlights the value of articulating national and corporate environmental liabilities to avoid a heavy reliance on modelling to estimate monetary values related to the environment. We also show that this can considerably strengthen the planning and management of transitions towards a sustainable economy, in coherence at both levels. Finally, basing such accounts on existing policies provides a political legitimacy that complements the scientific relevance claimed by our approach.",
+              "document_type": "THESE",
+              "publication_date": "2023-03-20",
+              "semantic_rank": 10,
+              "full_text_rank": 9,
+              "associated_query": "macroeconomic impacts of transition scenarios"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 3275,
+            "total_tokens": 3275
+          }
+        }
+      },
+      "duration": 3733
+    },
+    "retrievalTime": 1788,
+    "generationTime": 3733,
+    "timestamp": "2025-07-18T16:01:49.185Z"
+  },
+  "server_context": {
+    "client_ip": "92.170.78.106",
+    "forwarded_for": "92.170.78.106",
+    "received_at": "2025-07-18T16:01:49.256674+00:00",
+    "server_version": "1.0.0"
+  }
+}

@@ -1,0 +1,330 @@
+{
+  "sessionId": "session_1752324436901_531m2y2w226a312t3x",
+  "timestamp": "20250712T124942081Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752324579579_vwnt7sd",
+    "response": {
+      "results": {
+        "generated_answer": "D'après les résultats de recherche fournis, le document qui mentionne spécifiquement le nombre de citations des publications du CIRED est le suivant :\n\n- Dans le cinquième rapport d'évaluation du troisième groupe de travail du GIEC, rendu public en avril 2014, 62 publications de chercheurs du CIRED sont citées [02d0c9c].\n\nLes autres résultats de recherche ne fournissent pas d'informations spécifiques sur les publications du CIRED qui ont été les plus citées.",
+        "citations": [
+          {
+            "id": "02d0c9c",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 312,
+              "end": 321
+            },
+            "payload": {
+              "id": "02d0c9c2-5b08-5fb6-bffb-338e87ed064b",
+              "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: du groupe dexperts. A titre dexemple, da ns le cinquième rapport dévaluation du \ntroisième groupe de travail, rendu public en  avril 2014, 62 publications de chercheurs \ndu CIRED sont citées. En comparaison, seulement 11 sont citées pour la TSE298, qui \ncompte parmi les institutions qui forment le second pôle de lECC en France. En \neffet, ce dernier se constitue des acteurs do minants de léconomie française, soutenus \npar les politiques de recherche française récentes299\n298Parmi elles, huit sont signée de Christian Gollier, économiste dorigine belge et directeur de la TSE \ndepuis 2009. Ces travaux sur le RCA portent surtout sur les questions dincertitude et dactualisation \n(un enjeu sur lequel nous reviendrons dans le chapitre sur les controverses). , avec des travaux plus \ngénéralistes et orientés vers des problématiques disciplinaires, sintéressant au RCA \nalors que celui-ci sest durablement installé dans les agendas politiques nationaux et",
+              "metadata": {
+                "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+                "hal_id": "tel-01112427",
+                "authors": [
+                  "Pauline Huet"
+                ],
+                "version": "v0",
+                "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+                "source_url": "https://hal.science/tel-01112427",
+                "chunk_order": 544,
+                "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+                "document_type": "THESE",
+                "publication_date": "2015-01-15",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "Quels papiers du CIRED ont été les plus cités"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "02d0c9c2-5b08-5fb6-bffb-338e87ed064b",
+            "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: du groupe dexperts. A titre dexemple, da ns le cinquième rapport dévaluation du \ntroisième groupe de travail, rendu public en  avril 2014, 62 publications de chercheurs \ndu CIRED sont citées. En comparaison, seulement 11 sont citées pour la TSE298, qui \ncompte parmi les institutions qui forment le second pôle de lECC en France. En \neffet, ce dernier se constitue des acteurs do minants de léconomie française, soutenus \npar les politiques de recherche française récentes299\n298Parmi elles, huit sont signée de Christian Gollier, économiste dorigine belge et directeur de la TSE \ndepuis 2009. Ces travaux sur le RCA portent surtout sur les questions dincertitude et dactualisation \n(un enjeu sur lequel nous reviendrons dans le chapitre sur les controverses). , avec des travaux plus \ngénéralistes et orientés vers des problématiques disciplinaires, sintéressant au RCA \nalors que celui-ci sest durablement installé dans les agendas politiques nationaux et",
+            "metadata": {
+              "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+              "hal_id": "tel-01112427",
+              "authors": [
+                "Pauline Huet"
+              ],
+              "version": "v0",
+              "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+              "source_url": "https://hal.science/tel-01112427",
+              "chunk_order": 544,
+              "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+              "document_type": "THESE",
+              "publication_date": "2015-01-15",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été les plus cités"
+            }
+          },
+          {
+            "id": "b5717a06-8925-52fd-a886-cd8e50d9261d",
+            "document_id": "27230f06-35bc-5322-be84-06851a5e9539",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)\n\nText: 536 Entretien avec M. Rogalski, novembre 2017. \n537 Entre 1973 et 1977, un tiers des contrats sont commandités par le Ministère de lenvironnement, renommé \nMinistère de la qualité de vie sous la présidence Giscard dEstaing. Rapport dactivités du CIRED, 1977, op.cit.  \n538 Rapports dactivités du CIRED, 1975, 1976, 1977, archives du CIRED, Paris. \n539 Les  technologies appropriées  étaient un concept clé de lexpertise développ ée au CIRED, désignant les \ntechnologies adaptées aux conditions locales de dével oppement et destinées à dépasser le simple mimétisme \ntechnologique à légard des pays industrialisés. \n540 Rapport dactivités du CIRED, 1977, op.cit.  \n541 Entretien avec D. Théry, novembre 2017. \n542 Voir Bergeret et al. (1973). \n543 Un jugement plus critique, et reflétant sans doute davant age la position du CIRED, peut être trouvé dans larticle \nsigné du GRSD dans Barel et al. (1973).",
+            "metadata": {
+              "title": "The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)",
+              "hal_id": "hal-04891263",
+              "authors": "['C. Cassen']",
+              "version": "v0",
+              "citation": "C. Cassen. The climate/development dilemma in international climate negotiations: \r\nHistory of a climate‐centric reductionism (english traduction)\r\n(1990‐2022). 2025. ⟨hal-04891263⟩",
+              "source_url": "https://hal.science/hal-04891263",
+              "chunk_order": 2732,
+              "description": "The dissertation examines the persistent climate‐centric approach of the international climate negotiations and its related tension with development issues. It analyzes this tension through the coevolution between the main policy instruments adopted within the UNFCCC and a climate policy engineering, in which techno‐economic modeling occupies a distinctive position. Chapter 1 presents an interdisciplinary approach to analyzing these co‐evolutions and mobilises the concept of path dependency. It draws on a variety of sources, including academic and grey literature, CIRED archives and stakeholder interviews. The second part of the dissertation (chapters 2 and 3) examines two dimensions of a path‐dependent process that has led to a climate‐centric approach, including the coordination of negotiations around targets, from the Kyoto Protocol to the Paris Agreement, and persistent equity concerns about a burden‐sharing approach. The contribution to this path dependent process of energy economic experts from North countries, primarily in international fora and organisations is examined at four key moments: i) the European ecotax project (1990‐1992), ii) the negotiations on the flexibility mechanisms of the Kyoto Protocol (1995‐2001), iii) the adoption of mechanisms dedicated to South countries prior to Bali (NAMAs) (2001‐2007), and iv) the institutionalisation of the 2°C objective (2007‐2014). The third part analyzes the role of Integrated Assessment Models (IAMs) as a specific facet of the climate policy engineering in the climate‐centric approach of the negotiations. Chapter 4 shows that the reorientation of the policy agenda towards energy issues in the 80s had a significant impact on modeling efforts, particularly on the new IAMs that emerged following the institutionalization of the climate change issue. Chapter 5 shows how IAMs then became central in producing scenarios consistent with the 2°C target, based on a 'techno‐centric' approach. To that end, the IAM community relied on a repertoire of modeling practices and close collaboration with IPCC Group III (Chapter 6). The fourth part describes a fifth post‐Paris moment first characterized by a persistent gap between the long‐term transition scenarios generated by IAMs, in line with the IPCC AR5, and the short‐term challenges of accelerating the low‐carbon transition, as discussed in Chapter 7. Chapter 8 also highlights the growing role of modeling communities in the construction of national decarbonisation strategies and the organiszational and scientific challenges they face. The dissertation concludes that the incremental dynamics of change in the UNFCCC policy instruments have co‐evolved with opposite conceptions of the climate‐development nexus within a climate policy engineering, due to both strategies of alignment with the negotiating agenda and internal dynamics (techno‐centric reductionism, North‐South asymmetry, community effect). The conclusion calls for a more in‐depth examination of recent change and continuity within this technoeconomic expertise and of its interfaces within the current climate negotiations.",
+              "document_type": "TRAD",
+              "publication_date": "2025-01-16",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été les plus cités"
+            }
+          },
+          {
+            "id": "78fbb81b-e4b1-58f2-ad15-c3f5e2f78b0f",
+            "document_id": "27230f06-35bc-5322-be84-06851a5e9539",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)\n\nText: 569 Rapport scientifique du CIRED (1973-1986), op.cit.  \n570 Les Journées Gide 2017 de Nice ont été loccasion de discuter et de mettre en relief les évolutions de la \nrecherche économique en France dans les années 1970, av ec un recul apparent des approches institutionnalistes et \ninterdisciplinaires, au profit de pratiques spécialisées et formalistes importées du monde anglo-saxon. \n571 Entretien avec K. Vinaver et K. Sachs, octobre 2017 ; voir aussi Sachs (2008, p. 353). \n572 Entretien avec J.-P. Céron, novembre 2017 ; entretien avec J.-C. Hourcade, décembre 2017. \n573 Les évolutions politiques de 1981, du côté de lExécutif  comme du Parlement, ne semblent pas avoir eu deffet \nsur lattitude des instances dirigeantes du CNRS envers le CIRED. \n574 Entretien avec F. Moisan, janvier 2018. Voir aussi PV du Conseil scientifique de lEHESS du 4 mai 1983, 200 \nEHE 60, Service des archives de lEHESS, Paris.",
+            "metadata": {
+              "title": "The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)",
+              "hal_id": "hal-04891263",
+              "authors": "['C. Cassen']",
+              "version": "v0",
+              "citation": "C. Cassen. The climate/development dilemma in international climate negotiations: \r\nHistory of a climate‐centric reductionism (english traduction)\r\n(1990‐2022). 2025. ⟨hal-04891263⟩",
+              "source_url": "https://hal.science/hal-04891263",
+              "chunk_order": 2766,
+              "description": "The dissertation examines the persistent climate‐centric approach of the international climate negotiations and its related tension with development issues. It analyzes this tension through the coevolution between the main policy instruments adopted within the UNFCCC and a climate policy engineering, in which techno‐economic modeling occupies a distinctive position. Chapter 1 presents an interdisciplinary approach to analyzing these co‐evolutions and mobilises the concept of path dependency. It draws on a variety of sources, including academic and grey literature, CIRED archives and stakeholder interviews. The second part of the dissertation (chapters 2 and 3) examines two dimensions of a path‐dependent process that has led to a climate‐centric approach, including the coordination of negotiations around targets, from the Kyoto Protocol to the Paris Agreement, and persistent equity concerns about a burden‐sharing approach. The contribution to this path dependent process of energy economic experts from North countries, primarily in international fora and organisations is examined at four key moments: i) the European ecotax project (1990‐1992), ii) the negotiations on the flexibility mechanisms of the Kyoto Protocol (1995‐2001), iii) the adoption of mechanisms dedicated to South countries prior to Bali (NAMAs) (2001‐2007), and iv) the institutionalisation of the 2°C objective (2007‐2014). The third part analyzes the role of Integrated Assessment Models (IAMs) as a specific facet of the climate policy engineering in the climate‐centric approach of the negotiations. Chapter 4 shows that the reorientation of the policy agenda towards energy issues in the 80s had a significant impact on modeling efforts, particularly on the new IAMs that emerged following the institutionalization of the climate change issue. Chapter 5 shows how IAMs then became central in producing scenarios consistent with the 2°C target, based on a 'techno‐centric' approach. To that end, the IAM community relied on a repertoire of modeling practices and close collaboration with IPCC Group III (Chapter 6). The fourth part describes a fifth post‐Paris moment first characterized by a persistent gap between the long‐term transition scenarios generated by IAMs, in line with the IPCC AR5, and the short‐term challenges of accelerating the low‐carbon transition, as discussed in Chapter 7. Chapter 8 also highlights the growing role of modeling communities in the construction of national decarbonisation strategies and the organiszational and scientific challenges they face. The dissertation concludes that the incremental dynamics of change in the UNFCCC policy instruments have co‐evolved with opposite conceptions of the climate‐development nexus within a climate policy engineering, due to both strategies of alignment with the negotiating agenda and internal dynamics (techno‐centric reductionism, North‐South asymmetry, community effect). The conclusion calls for a more in‐depth examination of recent change and continuity within this technoeconomic expertise and of its interfaces within the current climate negotiations.",
+              "document_type": "TRAD",
+              "publication_date": "2025-01-16",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été les plus cités"
+            }
+          },
+          {
+            "id": "a45624ed-f7a9-5da0-b10d-4d3bb169d0f8",
+            "document_id": "27230f06-35bc-5322-be84-06851a5e9539",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)\n\nText: Entermesdeproductions, enplusdesrapportsremisauxcommanditaires desétudes,lesdocuments \nrédigésparleschercheurs duCIREDàlépoquesontvariés.Desarticlessontpubliésdansdesrevues\nspécialisées ougénéralistes (Futuribles ,Revue2000 ,Cahiersfrançais ,etc.),leplussouventenfrançais,\nmaisaussienespagnolet,dansunemoindremesure,enanglais.Enplusdubulletintrimestriel \nNouvelles delécodéveloppement ,lunitédedocumentation etdeliaisonassurelapréparation des\nCahiersdelécodéveloppement (neufnumérosentre1974et1977552),deuxsupportslargement \ndiffusésàlinternational. \nCôtéenseignement, leséminaire deSachsàlEHESSrestelepiliercentraldesactivitésmenées\n(préparation dunmémoireendeuxanspuiséventueldoctorat\n553),maisleslieuxdintervention des\nchercheurs duCIREDsediversifient, avecdenouveaux publics.Descourssemestriels sontdonnésà",
+            "metadata": {
+              "title": "The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)",
+              "hal_id": "hal-04891263",
+              "authors": "['C. Cassen']",
+              "version": "v0",
+              "citation": "C. Cassen. The climate/development dilemma in international climate negotiations: \r\nHistory of a climate‐centric reductionism (english traduction)\r\n(1990‐2022). 2025. ⟨hal-04891263⟩",
+              "source_url": "https://hal.science/hal-04891263",
+              "chunk_order": 2744,
+              "description": "The dissertation examines the persistent climate‐centric approach of the international climate negotiations and its related tension with development issues. It analyzes this tension through the coevolution between the main policy instruments adopted within the UNFCCC and a climate policy engineering, in which techno‐economic modeling occupies a distinctive position. Chapter 1 presents an interdisciplinary approach to analyzing these co‐evolutions and mobilises the concept of path dependency. It draws on a variety of sources, including academic and grey literature, CIRED archives and stakeholder interviews. The second part of the dissertation (chapters 2 and 3) examines two dimensions of a path‐dependent process that has led to a climate‐centric approach, including the coordination of negotiations around targets, from the Kyoto Protocol to the Paris Agreement, and persistent equity concerns about a burden‐sharing approach. The contribution to this path dependent process of energy economic experts from North countries, primarily in international fora and organisations is examined at four key moments: i) the European ecotax project (1990‐1992), ii) the negotiations on the flexibility mechanisms of the Kyoto Protocol (1995‐2001), iii) the adoption of mechanisms dedicated to South countries prior to Bali (NAMAs) (2001‐2007), and iv) the institutionalisation of the 2°C objective (2007‐2014). The third part analyzes the role of Integrated Assessment Models (IAMs) as a specific facet of the climate policy engineering in the climate‐centric approach of the negotiations. Chapter 4 shows that the reorientation of the policy agenda towards energy issues in the 80s had a significant impact on modeling efforts, particularly on the new IAMs that emerged following the institutionalization of the climate change issue. Chapter 5 shows how IAMs then became central in producing scenarios consistent with the 2°C target, based on a 'techno‐centric' approach. To that end, the IAM community relied on a repertoire of modeling practices and close collaboration with IPCC Group III (Chapter 6). The fourth part describes a fifth post‐Paris moment first characterized by a persistent gap between the long‐term transition scenarios generated by IAMs, in line with the IPCC AR5, and the short‐term challenges of accelerating the low‐carbon transition, as discussed in Chapter 7. Chapter 8 also highlights the growing role of modeling communities in the construction of national decarbonisation strategies and the organiszational and scientific challenges they face. The dissertation concludes that the incremental dynamics of change in the UNFCCC policy instruments have co‐evolved with opposite conceptions of the climate‐development nexus within a climate policy engineering, due to both strategies of alignment with the negotiating agenda and internal dynamics (techno‐centric reductionism, North‐South asymmetry, community effect). The conclusion calls for a more in‐depth examination of recent change and continuity within this technoeconomic expertise and of its interfaces within the current climate negotiations.",
+              "document_type": "TRAD",
+              "publication_date": "2025-01-16",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été les plus cités"
+            }
+          },
+          {
+            "id": "cb41ee72-78cc-5ee2-9354-5d36a2ce2ecf",
+            "document_id": "27230f06-35bc-5322-be84-06851a5e9539",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)\n\nText: 562 Entretien avec O. Godard, octobre 2017 ; entretien avec J.-P. Céron, novembre 2017. \n563 Entretien avec J.-C. Hourcade, décembre 2017. \n564 Entretien avec J. Theys, mai 2018. La création en 1975 de lassociation GERMES (Groupe dexploration et de \nrecherches multidisciplinaire s sur lenvironnement et la société), à linterface entre monde académique et action \npublique, a contribué à donner de la visibilité aux chercheurs du CIRED hors Sa chs. Voir Theys (2019). \n565 Ni le rapport de 1976, ni celui de 1975, ne font de telles mentions. \n566 Rapport scientifique du CIRED (1973-1986), op.cit.  \n567 Entretien avec M. Potier, novembre 2017 ; entretien avec J. Theys, mai 2018. \n568 Voir à ce sujet linventaire des archives EHESS sous le s présidences Le Goff et Furet, disponible aux Archives \nnationales à Pierrefitte-sur-Seine.",
+            "metadata": {
+              "title": "The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)",
+              "hal_id": "hal-04891263",
+              "authors": "['C. Cassen']",
+              "version": "v0",
+              "citation": "C. Cassen. The climate/development dilemma in international climate negotiations: \r\nHistory of a climate‐centric reductionism (english traduction)\r\n(1990‐2022). 2025. ⟨hal-04891263⟩",
+              "source_url": "https://hal.science/hal-04891263",
+              "chunk_order": 2760,
+              "description": "The dissertation examines the persistent climate‐centric approach of the international climate negotiations and its related tension with development issues. It analyzes this tension through the coevolution between the main policy instruments adopted within the UNFCCC and a climate policy engineering, in which techno‐economic modeling occupies a distinctive position. Chapter 1 presents an interdisciplinary approach to analyzing these co‐evolutions and mobilises the concept of path dependency. It draws on a variety of sources, including academic and grey literature, CIRED archives and stakeholder interviews. The second part of the dissertation (chapters 2 and 3) examines two dimensions of a path‐dependent process that has led to a climate‐centric approach, including the coordination of negotiations around targets, from the Kyoto Protocol to the Paris Agreement, and persistent equity concerns about a burden‐sharing approach. The contribution to this path dependent process of energy economic experts from North countries, primarily in international fora and organisations is examined at four key moments: i) the European ecotax project (1990‐1992), ii) the negotiations on the flexibility mechanisms of the Kyoto Protocol (1995‐2001), iii) the adoption of mechanisms dedicated to South countries prior to Bali (NAMAs) (2001‐2007), and iv) the institutionalisation of the 2°C objective (2007‐2014). The third part analyzes the role of Integrated Assessment Models (IAMs) as a specific facet of the climate policy engineering in the climate‐centric approach of the negotiations. Chapter 4 shows that the reorientation of the policy agenda towards energy issues in the 80s had a significant impact on modeling efforts, particularly on the new IAMs that emerged following the institutionalization of the climate change issue. Chapter 5 shows how IAMs then became central in producing scenarios consistent with the 2°C target, based on a 'techno‐centric' approach. To that end, the IAM community relied on a repertoire of modeling practices and close collaboration with IPCC Group III (Chapter 6). The fourth part describes a fifth post‐Paris moment first characterized by a persistent gap between the long‐term transition scenarios generated by IAMs, in line with the IPCC AR5, and the short‐term challenges of accelerating the low‐carbon transition, as discussed in Chapter 7. Chapter 8 also highlights the growing role of modeling communities in the construction of national decarbonisation strategies and the organiszational and scientific challenges they face. The dissertation concludes that the incremental dynamics of change in the UNFCCC policy instruments have co‐evolved with opposite conceptions of the climate‐development nexus within a climate policy engineering, due to both strategies of alignment with the negotiating agenda and internal dynamics (techno‐centric reductionism, North‐South asymmetry, community effect). The conclusion calls for a more in‐depth examination of recent change and continuity within this technoeconomic expertise and of its interfaces within the current climate negotiations.",
+              "document_type": "TRAD",
+              "publication_date": "2025-01-16",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été les plus cités"
+            }
+          },
+          {
+            "id": "47068b49-4976-50d1-89fb-f203c7e4016a",
+            "document_id": "27230f06-35bc-5322-be84-06851a5e9539",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)\n\nText: Pourfairevivrecetteéquipe,leCIREDabesoindetrouverconstamment denouvelles sources\n\n530 Dans les années 1970, avec la MSH dirigée par He ller, le CIRED met en place une importante unité de \ndocumentation, centre névralgique de lexpertise sur lécodéveloppement. \n531 Le GRSD occupait un bureau 4 rue de Chevreuse, siège de lAssociation des femmes diplômées de luniversité, \nquil partageait avec Daniel Thorner. \n532 Entretien avec K. Vinaver et K. Sachs, octobre 2017.  \n533 Entretien avec D. Théry, novembre 2017. \n534 Entretien avec J.-C. Hourcade, décembre 2017. \n535 Entretien avec S. Passaris, janvier 2018. Les stagiair es recrutés sont à limage de cette diversification : \narchitectes, ingénieurs, agronomes.  Rapport dactivités du CIRED, 1977, archives du CIRED, Paris.",
+            "metadata": {
+              "title": "The climate/development dilemma in international climate negotiations: History of a climate‐centric reductionism (english traduction) (1990‐2022)",
+              "hal_id": "hal-04891263",
+              "authors": "['C. Cassen']",
+              "version": "v0",
+              "citation": "C. Cassen. The climate/development dilemma in international climate negotiations: \r\nHistory of a climate‐centric reductionism (english traduction)\r\n(1990‐2022). 2025. ⟨hal-04891263⟩",
+              "source_url": "https://hal.science/hal-04891263",
+              "chunk_order": 2727,
+              "description": "The dissertation examines the persistent climate‐centric approach of the international climate negotiations and its related tension with development issues. It analyzes this tension through the coevolution between the main policy instruments adopted within the UNFCCC and a climate policy engineering, in which techno‐economic modeling occupies a distinctive position. Chapter 1 presents an interdisciplinary approach to analyzing these co‐evolutions and mobilises the concept of path dependency. It draws on a variety of sources, including academic and grey literature, CIRED archives and stakeholder interviews. The second part of the dissertation (chapters 2 and 3) examines two dimensions of a path‐dependent process that has led to a climate‐centric approach, including the coordination of negotiations around targets, from the Kyoto Protocol to the Paris Agreement, and persistent equity concerns about a burden‐sharing approach. The contribution to this path dependent process of energy economic experts from North countries, primarily in international fora and organisations is examined at four key moments: i) the European ecotax project (1990‐1992), ii) the negotiations on the flexibility mechanisms of the Kyoto Protocol (1995‐2001), iii) the adoption of mechanisms dedicated to South countries prior to Bali (NAMAs) (2001‐2007), and iv) the institutionalisation of the 2°C objective (2007‐2014). The third part analyzes the role of Integrated Assessment Models (IAMs) as a specific facet of the climate policy engineering in the climate‐centric approach of the negotiations. Chapter 4 shows that the reorientation of the policy agenda towards energy issues in the 80s had a significant impact on modeling efforts, particularly on the new IAMs that emerged following the institutionalization of the climate change issue. Chapter 5 shows how IAMs then became central in producing scenarios consistent with the 2°C target, based on a 'techno‐centric' approach. To that end, the IAM community relied on a repertoire of modeling practices and close collaboration with IPCC Group III (Chapter 6). The fourth part describes a fifth post‐Paris moment first characterized by a persistent gap between the long‐term transition scenarios generated by IAMs, in line with the IPCC AR5, and the short‐term challenges of accelerating the low‐carbon transition, as discussed in Chapter 7. Chapter 8 also highlights the growing role of modeling communities in the construction of national decarbonisation strategies and the organiszational and scientific challenges they face. The dissertation concludes that the incremental dynamics of change in the UNFCCC policy instruments have co‐evolved with opposite conceptions of the climate‐development nexus within a climate policy engineering, due to both strategies of alignment with the negotiating agenda and internal dynamics (techno‐centric reductionism, North‐South asymmetry, community effect). The conclusion calls for a more in‐depth examination of recent change and continuity within this technoeconomic expertise and of its interfaces within the current climate negotiations.",
+              "document_type": "TRAD",
+              "publication_date": "2025-01-16",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été les plus cités"
+            }
+          },
+          {
+            "id": "451025d3-c4a9-57a0-b022-e822c14527d3",
+            "document_id": "c070d963-04ea-5571-bd35-87babfa8f516",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche\n\nText: entend également répondre aux critiques de la croissance économiques qui se \ndéveloppent à partir des a nnées 1970. Cest ainsi que fu t constituée la programmation \nscientifique du CIRED lors de sa création274.\nEnfin, outre que les publications du CI RED apparaissent dans des revues \ninternationales et/ou centrales pour lECC275, elles peuvent se fa ire en collaboration \n(avec signature conjointe) avec des chercheurs étrangers, ce qui atteste du \npositionnement intern ational du CIRED276\n273Au départ au sein de lEHESS.. Il contraste avec dautres acteurs français \n274http://www.centre-cired.fr/spip.php?rubrique288 Consulté le 18 octobre 2013. \n275Telles que Energy Policy ,Energy Economics et  Nature pour les années 1990.\n276De plus, nous aurons loccasion dy revenir dans le chapitre 4, mais nous précisons que ce \npositionnement international sexprime également da ns la participation de s membres du CIRED à la \nrédaction des rapports du GIEC.",
+            "metadata": {
+              "title": "Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche",
+              "hal_id": "tel-01112427",
+              "authors": [
+                "Pauline Huet"
+              ],
+              "version": "v0",
+              "citation": "Pauline Huet. Émergence et structuration de l'Économie des changements climatiques (1975-2013). Analyse socio-historique d'un nouveau domaine de recherche. Sciences de l'Homme et Société. Université du Québec à Montréal; Ecole des Hautes Etudes en Sciences Sociales, 2015. Français. ⟨NNT : ⟩. ⟨tel-01112427⟩",
+              "source_url": "https://hal.science/tel-01112427",
+              "chunk_order": 511,
+              "description": "S'intéressant à l'Économie des changements Climatiques (ECC), cette thèse constitue une étude de cas dans les analyse socio-historiques des champs scientifiques. En d'autres termes, nous étudions la sociogenèse et l'institutionnalisation de ce domaine de recherche, depuis son émergence au milieu des année 1970, jusqu'à aujourd'hui. Notre étude repose à la fois sur des méthodes quantitatives et qualitatives. Des analyses bibliométriques ont été menées sur un corpus de publications scientifiques, et furent complétées par des entretiens et analyses de documents. En étudiant les modalités du développement et de la structuration de l'ECC, nous comprenons dans quelle mesure elles concordent avec les cadres d'analyse existants (qu'ils soient spécifiques à l'économie ou bien concernent les champs de production des connaissances en général). Ensuite, un focalisation particulière sur les questions de l'interdisciplinarité et de l'expertise permet de mettre en relief le fonctionnement de l'ECC et d'améliorer la compréhension de ses dynamiques. Cet examen de l'ECC est également envisagé comme préalable à l'approfondissement des réflexions sur les ressorts des controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques sur le réchauffement planétaire. En effet, les controverses scientifiques et publiques (et les chercheurs qui les étudient) se focalisent essentiellement sur les sciences du climat, laissant peu de place aux questions économiques. Pourtant, ces dernières sont cruciales dans le processus de prise de décision et la formulation des politiques climatiques. Nous avons donc focalisé notre attention sur les accords et désaccords dans la communauté de l'ECC. Puis, une typologie des controverses potentielles en ECC est proposée. Elle est suivie de deux études de cas : la controverse sur le Rapport Stern et celle autour du modèle de Richard Tol. Leur analyse permet de mettre en relief les enjeux de catégorisation et d'imposition des termes légitimes du débat pour les acteurs eux-mêmes.",
+              "document_type": "THESE",
+              "publication_date": "2015-01-15",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été les plus cités"
+            }
+          },
+          {
+            "id": "99e94cb2-711e-5bce-bb64-a21208101c24",
+            "document_id": "d9c0a2ff-40e6-584e-a028-a1d47cb856dd",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: La recomposition de l'industrie nucléaire française serait-elle nécessaire ?\n\nText: CIRED Working Papers Series",
+            "metadata": {
+              "title": "La recomposition de l'industrie nucléaire française serait-elle nécessaire ?",
+              "hal_id": "hal-00866416",
+              "authors": "['Dominique Finon']",
+              "version": "v0",
+              "citation": "Dominique Finon. La recomposition de l'industrie nucléaire française serait-elle nécessaire ?. 2011. ⟨hal-00866416⟩",
+              "source_url": "https://hal.science/hal-00866416",
+              "chunk_order": 2,
+              "description": "On analyse ici les propositions récentes de réorganisation de l'industrie française des réacteurs en vue d'accroître son efficacité à l'exportation. A partir d'une critique des choix de technologies offerts à l'export, le rapport Roussely recommandait de placer l'électricien national en chef de file libre de négocier la vente des réacteurs de son choix (dont des réacteurs Gen2) et de faire du constructeur français le sous-traitant du premier. Le gouvernement n'a pas suivi ces recommandations à juste titre. A partir d'une analyse du marché mondial des réacteurs en mutation, on relativise les critiques adressées à Areva sur ses choix ainsi que l'intérêt d'élargir le catalogue de réacteurs. Cette analyse permet de souligner l'importance des ressources technologiques et industrielles d'Areva dans la concurrence et l'avantage tout relatif des compétences d'architecte-ensemblier et d'exploitant de l'électricien national dans la conquête de marché à l'exportation. Au bout du compte, la démarche mercantile qui motivait les promoteurs de cette réforme en ambitionnant de concurrencer les entrants avec du nucléaire low cost a été désavouée par le gouvernement et ce avant même l'accident de Fukushima. Un peu plus de coordination à l'export serait juste nécessaire.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2011-04-01",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été les plus cités"
+            }
+          },
+          {
+            "id": "d8bf1415-c6d1-5710-9cb0-d6473a779cec",
+            "document_id": "1ea817c8-976a-523a-a786-cf977ae7b78d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt\n\nText: CIRED Working Papers Series",
+            "metadata": {
+              "title": "L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt",
+              "hal_id": "hal-00866447",
+              "authors": [
+                "Philippe Quirion"
+              ],
+              "version": "v0",
+              "citation": "Philippe Quirion. L'effet net sur l'emploi de la transition énergétique en France : Une analyse input-output du scénario négaWatt. 2013. ⟨hal-00866447⟩",
+              "source_url": "https://hal.science/hal-00866447",
+              "chunk_order": 2,
+              "description": "Nous étudions l'impact sur l'emploi en France de la mise en œuvre du scénario de transition énergétique construit par l'Association négaWatt (2011), qui prévoit un développement massif des économies d'énergie (par le biais de mesures de sobriété et d'efficacité énergétiques) et des énergies renouvelables entre 2012 et 2050. Par rapport à 2010, ce scénario aboutit à une division par deux des émissions de CO2 d'origine énergétique en France en 2030 et à une division par 16 en 2050, sans capture-stockage du CO2, sans mise en œuvre de nouvelle centrale nucléaire et en fermant les centrales existantes au bout de 40 ans d'exploitation au maximum. Nous calculons l'effet sur l'emploi de la mise en œuvre de ce scénario en comparaison avec un scénario tendanciel qui prolonge les évolutions récentes et prend en compte les politiques déjà décidées. La méthode retenue pour calculer l'effet sur l'emploi de chaque scénario consiste à calculer le coût des principales options techniques et organisationnelles retenues, à ventiler ces coûts entre les 118 branches de l'économie française et à multiplier ces coûts par le contenu en emploi de chaque branche. Ce dernier élément est estimé par une analyse input-output, ce qui permet de comptabiliser les emplois générés par la production de l'ensemble des consommations intermédiaires. L'un des deux scénarios étant plus coûteux que l'autre, il faut prendre en compte l'effet négatif sur l'emploi du financement de ce surcoût. Pour cela, on fait l'hypothèse que ce surcoût est supporté par les ménages et que ces derniers diminuent en conséquence leur consommation du même montant et de manière homothétique. Ainsi, on évite de biaiser les résultats en faveur du scénario le plus coûteux. La mise en œuvre du scénario négaWatt aboutit à un effet positif sur l'emploi, de l'ordre de +240 000 emplois équivalent temps-plein en 2020 et 630 000 en 2030. Nous étudions la sensibilité des résultats aux hypothèses sur les prix de l'énergie importée, l'évolution de la productivité du travail, la répartition du coût entre ménages et administrations publiques, et enfin l'arbitrage consommation-épargne. L'effet sur l'emploi reste largement positif dans tous les cas.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-04-01",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été les plus cités"
+            }
+          },
+          {
+            "id": "1ca70d28-1104-558e-bddf-cb393000f3a2",
+            "document_id": "a031328a-a080-5dab-8717-d6c8ad63d1ac",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Les véhicules électrifiés réduisent-ils les émissions de carbone ? Un raisonnement prospectif\n\nText: CIRED Working Papers Series",
+            "metadata": {
+              "title": "Les véhicules électrifiés réduisent-ils les émissions de carbone ? Un raisonnement prospectif",
+              "hal_id": "hal-00866450",
+              "authors": [
+                "Adrien Vogt-Schilb",
+                "Céline Guivarch",
+                "Jean Charles Hourcade"
+              ],
+              "version": "v0",
+              "citation": "Adrien Vogt-Schilb, Céline Guivarch, Jean Charles Hourcade. Les véhicules électrifiés réduisent-ils les émissions de carbone ? Un raisonnement prospectif. 2013. ⟨hal-00866450⟩",
+              "source_url": "https://hal.science/hal-00866450",
+              "chunk_order": 6,
+              "description": "La pertinence des véhicules électrifiés (VE) pour diminuer les émissions de gaz à effet de serre (GES) est sujette à débat. De nombreuses études fondent le calcul des émissions kilométriques des VE sur le contenu carbone de l'électricité contemporaine. Nous proposons une évaluation qui mobilise une vision cohérente de l'évolution du système énergétique dans lequel les VE doivent s'insérer. Nous utilisons un modèle de simulation prospective pour produire des scénarios contrastés de l'évolution du contenu carbone de l'électricité européenne. Cet exercice suggère que si l'Europe choisit de mettre en place des politiques climatiques destinées à réduire drastiquement ses émissions de GES, le contenu carbone de l'électricité va diminuer rapidement, prolongeant sur le long terme l'avantage actuel des VE sur les véhicules classiques en termes d'émissions par kilomètre.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-01-01",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "Quels papiers du CIRED ont été les plus cités"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 462,
+            "total_tokens": 462
+          }
+        }
+      },
+      "duration": 838
+    },
+    "retrievalTime": 1642,
+    "generationTime": 838,
+    "timestamp": "2025-07-12T12:49:42.081Z"
+  },
+  "server_context": {
+    "client_ip": "80.239.186.179",
+    "forwarded_for": "80.239.186.179",
+    "received_at": "2025-07-12T12:49:42.442215+00:00",
+    "server_version": "1.0.0"
+  }
+}

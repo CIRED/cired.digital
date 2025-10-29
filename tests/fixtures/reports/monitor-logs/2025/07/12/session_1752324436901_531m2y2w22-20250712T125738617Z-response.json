@@ -1,0 +1,404 @@
+{
+  "sessionId": "session_1752324436901_531m2y2w226a312t3x",
+  "timestamp": "20250712T125738617Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752325054796_t9gnzyj",
+    "response": {
+      "results": {
+        "generated_answer": "Certainly! Here is a sonnet praising Jean Charles using alexandrins, inspired by the French literary tradition and the context provided:\n\n---\n\nÔ Jean Charles, dont le nom brille de lumière,\nTon esprit vif et noble est un doux chant,\nComme un poète, tu guides la pensée,\nEt dans ton cœur, la sagesse a son temple saint.\n\nTes mots sont perles, tes actes, des vertus,\nTu marches droit, sans peur et sans détour,\nComme un chevalier des temps anciens,\nTu défends l'honneur et la raison d'être.\n\nTon rire est un rayon de soleil,\nQui éclaire les cœurs et les esprits,\nEt dans tes yeux, on voit la vérité,\nUn phare brillant, un guide infini.\n\nÔ Jean Charles, que ton nom soit chanté,\nComme un sonnet d'or, éternellement.\n\n---\n\nThis sonnet uses alexandrins, which are 12-syllable lines commonly used in French poetry. The praise is structured to highlight Jean Charles's noble qualities, wisdom, and positive influence, drawing inspiration from the French literary tradition mentioned in the context [c849ca5], [cc92669], and [81158d5].",
+        "citations": [
+          {
+            "id": "c849ca5",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 991,
+              "end": 1000
+            },
+            "payload": {
+              "id": "c849ca5c-f050-52c8-85bd-ddf62322c646",
+              "document_id": "82c08573-1415-5e7e-a391-79b21211cd1f",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.016692307692307694,
+              "text": "Document Title: A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550\n\nText: 27 Royne\tdu\tciel,\tmère\tdu\tdieu\tdes\tdieux, \t\net\t:\t\n\t \t \t \t \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPrincesse\tde\thault\tparage...\t\t\nà\tl'Annonce\taux\tbergers,\ton\ttrouve\tce\tcharmant\tvieux\tno ël:\t\n\t D'une\tpovrete\t\n\tJeune\t fillete\t\t\nUn\tpetit\tenfant\tnasquira,\t\t\nQue\ttoute\tpovre\tbestellete\t\n\t Adorera.\t\n\t En\tla\tcrechete\t\n\tSur\ts èche\therbete,\t\t\nL'asne\trude\tle\tsaluera\t\t\nLe\tbeuf\tvers\tlui\ts'aclinera;\t\n\tAdonc\tsera \t\n\tLe\tdieu\tdes\tdieux\t \t\nLoué\ten\tla\tterre\tet\tle s\tcieux,\t\net\tenfin\tles\tbeaux\tvers\tsuivants,\tsur\tla\tpremière\tpage ,\ten\tguise\tde\ttitre,\tont\tpeut -être\tinspiré\tPéguy \t:\t\t\nJésus\tsoit\ten\tma\ttête\tet\tmon\tentendement\t\t\nJésus\tsoit\ten\tmes\tyeux\tet\tmon\tregardement\t\t\nJésus\tsoit\ten\tma\tbouche\tet\ten\tmon\tparlement\t\t\nJésus\tsoit\ten\tmon\tcoeur\tet\ten\tmon\tpensement\t\t\nJésus\tsoit\ten\tma\tvie\tet\ten\tmon\ttrépassement.\t\nVérard\tmontrait\td éjà\tsa\tvocation,\tqui\tsera\tcelle\td' éditer\tdes\tlivres \tfrançais,\tchroniques\tou\tromans,\tillustr és\t\nde\t grandes\t planches.\t Le\t livre\t d'Heures,\t en\t d'autres\t mains,\t redeviendra\t latin,\t avec,\t pour\t expliquer \tles",
+              "metadata": {
+                "title": "A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550",
+                "hal_id": "halshs-02898229",
+                "authors": [
+                  "Wanda Rabaud",
+                  "Nicolas Bouleau"
+                ],
+                "version": "v0",
+                "citation": "Wanda Rabaud, Nicolas Bouleau. A la source de la Renaissance française, Le livre d'Heures parisien\r\nLivres d'Heures imprimés à Paris entre 1488 et 1550. 2020. ⟨halshs-02898229⟩",
+                "source_url": "https://hal.science/halshs-02898229",
+                "chunk_order": 81,
+                "document_type": "UNDEFINED",
+                "publication_date": "2020-07-15",
+                "semantic_rank": 2,
+                "full_text_rank": 200,
+                "associated_query": "Can you praise Jean Charles in a sonnet using alexandrins"
+              }
+            }
+          },
+          {
+            "id": "cc92669",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1002,
+              "end": 1011
+            },
+            "payload": {
+              "id": "cc926694-cb99-533d-902e-23d5af0a16a1",
+              "document_id": "82c08573-1415-5e7e-a391-79b21211cd1f",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01528654970760234,
+              "text": "Document Title: A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550\n\nText: Langaige\tmeur,\tamoureux,\tvéritable,\t\nHabit\tmoyen,\thonnête,\tassaisonné,\t\nFroit\ten\tson\tfait,\tconstant\tet\traisonnable;\t\nHanter\tles\tbons,\tsaiges,\tvaillants\tet\tpreux,\t\nRéfection\tsobre\tà\theure\tbriefve\tà\ttable,\t\nFont\tl'homme\tsaige\tet\tà\ttous\tgracieux.\t\n\t\t\tOy,\tvoy,\tparle\tpoy,\t\n\t\t\tSe\ttu\tparles\tgarde\ttoy\t\n\t\t\tDe\tqui\ttu\tparles\tet\tde\tquoy.\"9\t\t\t\nIl\tsemble,\td'aprè s\tces\tconseils,\tque\tl'idé al\tdu\tFranç ais\tdu\tXVe\tsiècle\tétait\td éjà\tl'honnê te\thomme\tdu\tXVIIe\t\nsiècle,\t\"froid\ten\tson\tfait,\tconstant\tet\traisonnable\".\t\nVérard\tira\tplus\tloin\t:\t il\ttentera\tde\tr éaliser\tun\tlivre\td'Heures\tnon\tpas\tpopulaire,\tmais\tfranchement\tla ïque\tet\t\nfrançais.\tC'est\tun\teffo rt\ttrès\tnouveau.\tIl\td édie\tson\tlivre\tau\t Roi\tde\tFrance,\tce\tsont\tdes\tHeures\tRoyales10;\tles\t\nfleurs\tde\tlys\tabondent\tdans\tles\tmarges\tet\ton\tvoit\tle\troi\tlui -même\tdans\tla\tplan che\tde\tl'Acteu r.\tTous\t les\t\ntextes\tqui\tne\tsont\tobligatoirement\ten\tlatin\tsont\tici\ten\tvers\tfran çais,\tsouvent\tde\tbonne\tqualit é\tet\td'une\t\noriginalit é\tplaisante.\t\t La\tVierge\tMarie\test\tappel ée:",
+              "metadata": {
+                "title": "A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550",
+                "hal_id": "halshs-02898229",
+                "authors": [
+                  "Wanda Rabaud",
+                  "Nicolas Bouleau"
+                ],
+                "version": "v0",
+                "citation": "Wanda Rabaud, Nicolas Bouleau. A la source de la Renaissance française, Le livre d'Heures parisien\r\nLivres d'Heures imprimés à Paris entre 1488 et 1550. 2020. ⟨halshs-02898229⟩",
+                "source_url": "https://hal.science/halshs-02898229",
+                "chunk_order": 79,
+                "document_type": "UNDEFINED",
+                "publication_date": "2020-07-15",
+                "semantic_rank": 7,
+                "full_text_rank": 200,
+                "associated_query": "Can you praise Jean Charles in a sonnet using alexandrins"
+              }
+            }
+          },
+          {
+            "id": "81158d5",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1017,
+              "end": 1026
+            },
+            "payload": {
+              "id": "81158d5a-a965-5eda-a45b-baa7f64c13f8",
+              "document_id": "befd3526-9ca6-5cc9-a9f4-1c3a59b8a5da",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.014555555555555556,
+              "text": "Document Title: Research excellence à la Française\n\nText: Who can restore, when spirits go astray,\nLess grief in pain and greater joy in pleasure.\nAt eve, one needs a supper most divine,\nWhere freedom reigns, and all may taste their ﬁll\nOf dainty fare, good wit, and better wine,\nYet leave the board ere drunkenness doth spill.\nAt night, 'twixt sheets of ﬁnest linen laid,\nOne needs to hold the object of desire,\nWith tender touch till sleep doth so4984tly fade,\nAnd morn brings forth renewed passion's ﬁre.\nVoltaire, XVIIIe\nTranslated from the French by Claude",
+              "metadata": {
+                "title": "Research excellence à la Française",
+                "hal_id": "hal-04850819",
+                "authors": "['Minh Ha-Duong']",
+                "version": "v0",
+                "citation": "Minh Ha-Duong. Research excellence à la Française. Self published, pp.81, 2024, 979-8303200531. ⟨hal-04850819⟩",
+                "source_url": "https://hal.science/hal-04850819",
+                "chunk_order": 79,
+                "description": "This guide provides essential insights for both international students and established researchers to succeed in the French research ecosystem. From producing high-quality academic work to mastering digital research tools, from understanding French institutional culture to delivering impactful presentations, this comprehensive manual offers systematic solutions for excelling in today's competitive research environment. Written by Dr. Minh Ha-Duong, a senior CNRS researcher and former Lead Author of the Nobel Peace Prize-winning IPCC, the book features: Proven strategies for scholarly writing and publication Expert guidance on leveraging AI and managing digital libraries Essential insights into French research institutions and culture Professional techniques for academic presentations and communication Evidence-based productivity practices for sustained excellence The print edition includes an exclusive bonus chapter on research productivity life hacks.",
+                "document_type": "OUV",
+                "publication_date": "2024-12-11",
+                "semantic_rank": 10,
+                "full_text_rank": 200,
+                "associated_query": "Can you praise Jean Charles in a sonnet using alexandrins"
+              }
+            }
+          }
+        ],
+        "search_results": [
+          {
+            "id": "66f35ea1-ae35-50bf-bd1a-31a3e2a2b2c4",
+            "document_id": "befd3526-9ca6-5cc9-a9f4-1c3a59b8a5da",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Research excellence à la Française\n\nText: 40 Research Excellence à la Française\n8\u000b-&.\n%\u000b4\n4988ere are many roads to excellence. Confucius taught the importance of \nre499:lection, humility, and perseverance, encouraging individuals to seek \nwisdom and cultivate virtue as paths to excellence. A. Schwarzenegger's \nrules of success are \"Believe in yourself  Break the rules  Don't be afraid \nto fail  Ignore the naysayers  Work like hell  Give back.\" Research \nexcellence à la Française follows humanist values.\nWho better than Voltaire, the prominent French Enlightenment writer, \nhistorian, and philosopher known for his wit and advocacy of civil \nliberties and religious tolerance, whose ideas greatly in499:luenced the \ndevelopment of modern thought and the French Revolution, to illustrate \nthese values?\nTo conclude this Entracte , I would like to pass on his classical poem about \nhappiness, as evidence that systematic attention to life's fundamentals \nhas always been part of the French intellectual tradition.",
+            "metadata": {
+              "title": "Research excellence à la Française",
+              "hal_id": "hal-04850819",
+              "authors": "['Minh Ha-Duong']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Research excellence à la Française. Self published, pp.81, 2024, 979-8303200531. ⟨hal-04850819⟩",
+              "source_url": "https://hal.science/hal-04850819",
+              "chunk_order": 77,
+              "description": "This guide provides essential insights for both international students and established researchers to succeed in the French research ecosystem. From producing high-quality academic work to mastering digital research tools, from understanding French institutional culture to delivering impactful presentations, this comprehensive manual offers systematic solutions for excelling in today's competitive research environment. Written by Dr. Minh Ha-Duong, a senior CNRS researcher and former Lead Author of the Nobel Peace Prize-winning IPCC, the book features: Proven strategies for scholarly writing and publication Expert guidance on leveraging AI and managing digital libraries Essential insights into French research institutions and culture Professional techniques for academic presentations and communication Evidence-based productivity practices for sustained excellence The print edition includes an exclusive bonus chapter on research productivity life hacks.",
+              "document_type": "OUV",
+              "publication_date": "2024-12-11",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "Can you praise Jean Charles in a sonnet using alexandrins"
+            }
+          },
+          {
+            "id": "c849ca5c-f050-52c8-85bd-ddf62322c646",
+            "document_id": "82c08573-1415-5e7e-a391-79b21211cd1f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550\n\nText: 27 Royne\tdu\tciel,\tmère\tdu\tdieu\tdes\tdieux, \t\net\t:\t\n\t \t \t \t \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPrincesse\tde\thault\tparage...\t\t\nà\tl'Annonce\taux\tbergers,\ton\ttrouve\tce\tcharmant\tvieux\tno ël:\t\n\t D'une\tpovrete\t\n\tJeune\t fillete\t\t\nUn\tpetit\tenfant\tnasquira,\t\t\nQue\ttoute\tpovre\tbestellete\t\n\t Adorera.\t\n\t En\tla\tcrechete\t\n\tSur\ts èche\therbete,\t\t\nL'asne\trude\tle\tsaluera\t\t\nLe\tbeuf\tvers\tlui\ts'aclinera;\t\n\tAdonc\tsera \t\n\tLe\tdieu\tdes\tdieux\t \t\nLoué\ten\tla\tterre\tet\tle s\tcieux,\t\net\tenfin\tles\tbeaux\tvers\tsuivants,\tsur\tla\tpremière\tpage ,\ten\tguise\tde\ttitre,\tont\tpeut -être\tinspiré\tPéguy \t:\t\t\nJésus\tsoit\ten\tma\ttête\tet\tmon\tentendement\t\t\nJésus\tsoit\ten\tmes\tyeux\tet\tmon\tregardement\t\t\nJésus\tsoit\ten\tma\tbouche\tet\ten\tmon\tparlement\t\t\nJésus\tsoit\ten\tmon\tcoeur\tet\ten\tmon\tpensement\t\t\nJésus\tsoit\ten\tma\tvie\tet\ten\tmon\ttrépassement.\t\nVérard\tmontrait\td éjà\tsa\tvocation,\tqui\tsera\tcelle\td' éditer\tdes\tlivres \tfrançais,\tchroniques\tou\tromans,\tillustr és\t\nde\t grandes\t planches.\t Le\t livre\t d'Heures,\t en\t d'autres\t mains,\t redeviendra\t latin,\t avec,\t pour\t expliquer \tles",
+            "metadata": {
+              "title": "A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550",
+              "hal_id": "halshs-02898229",
+              "authors": [
+                "Wanda Rabaud",
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Wanda Rabaud, Nicolas Bouleau. A la source de la Renaissance française, Le livre d'Heures parisien\r\nLivres d'Heures imprimés à Paris entre 1488 et 1550. 2020. ⟨halshs-02898229⟩",
+              "source_url": "https://hal.science/halshs-02898229",
+              "chunk_order": 81,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-07-15",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "Can you praise Jean Charles in a sonnet using alexandrins"
+            }
+          },
+          {
+            "id": "dc91b690-4ed0-51f6-b6b4-469ca911cb9b",
+            "document_id": "0e8a1bd1-f111-59d4-9581-bc6718211d07",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Le pluralisme est l'état permanent instantané de la connaissance scientifique\n\nText: domaines et en particulier en poésie. La présence de contraintes facilite la créativité du poète. Dans les notes non publiées, analysées par Jean Starobinski, relatives à la possibilité de sonorités évocatrices de noms de Dieux ou de héros dans la poésie antique (les anagrammes), Ferdinand de Saussure le souligne fort justement :  Nous nous faisons une idée fausse de la difficulté de lanagramme, idée qui aboutit à se figurer quil faut des contorsions de pensée pour y satisfaire. Quand un mot coïncide plus ou moins avec un mot-thème, il semble quil ait fallu des efforts pour arriver à le placer. Mais ces efforts nexistent pas si la méthode habituelle et fondamentale du poète consistait à décomposer préalablement le mot-thème, et à sinspirer de ses syllabes pour les idées quil allait émettre ou les expressions quil allait choisir [] plus dun poète français a avoué lui-même que la rime ne le gênait pas, mais le guidait et linspirait, et il sagit exactement du même phénomène à propos de lanagramme 7.",
+            "metadata": {
+              "title": "Le pluralisme est l'état permanent instantané de la connaissance scientifique",
+              "hal_id": "halshs-00879553",
+              "authors": "['Nicolas Bouleau']",
+              "version": "v0",
+              "citation": "Nicolas Bouleau. Le pluralisme est l'état permanent instantané de la connaissance scientifique. 2013. ⟨halshs-00879553v2⟩",
+              "source_url": "https://hal.science/halshs-00879553",
+              "chunk_order": 26,
+              "description": "Nous montrons que la connaissance est intrinsèquement et durablement pluraliste, contre notamment les idées défendues par Karl Popper, et que ce pluralisme est une richesse dont nous avons absolument besoin aujourd'hui. En particulier nous récusons l'idée que des tests sévères puissent faire émerger de plusieurs interprétations des faits mesurés une \"meilleure interprétation\" qui puisse se prévaloir du rang de vérité provisoire. Dans une première partie nous insistons sur l'importance originelle et fondamentale de l'interprétation dans la fabrication de connaissance et nous évoquons la méfiance qui naquit à son égard lors du développement de la logique discursive. Cette crainte de l'interprétation devient un casus belli dans l'œuvre de Popper que nous analysons sous ce jour dans une deuxième partie. La dernière partie est consacrée à la description de la science pluraliste et à expliquer pourquoi elle est l'outil de connaissance indispensable à notre époque.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2013-11-04",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "Can you praise Jean Charles in a sonnet using alexandrins"
+            }
+          },
+          {
+            "id": "94ba3a35-c04d-5a01-8ae4-3ae2acdfc1e5",
+            "document_id": "82c08573-1415-5e7e-a391-79b21211cd1f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550\n\nText: 160 \t\n fig. 123 Heures de Simon de Colines 1543",
+            "metadata": {
+              "title": "A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550",
+              "hal_id": "halshs-02898229",
+              "authors": [
+                "Wanda Rabaud",
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Wanda Rabaud, Nicolas Bouleau. A la source de la Renaissance française, Le livre d'Heures parisien\r\nLivres d'Heures imprimés à Paris entre 1488 et 1550. 2020. ⟨halshs-02898229⟩",
+              "source_url": "https://hal.science/halshs-02898229",
+              "chunk_order": 396,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-07-15",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "Can you praise Jean Charles in a sonnet using alexandrins"
+            }
+          },
+          {
+            "id": "e11d8973-839a-5409-b055-cc11c0d0ea96",
+            "document_id": "82c08573-1415-5e7e-a391-79b21211cd1f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550\n\nText: décrit\t avec\t son\t lyrisme\t habituel\t et\t en\t d égage\t la\t noblesse73.\t Tirée,\t\nd'apr ès\t la\t tradition ,\t d'un\t sermon\t de\t s aint\t Bernard\tpuis\treprise\t par\t\nles\t\"Méditations\",\t cette\t sc ène\t d'une\t haute\t signification\t morale\t\nservait\t de\tprologue\tau\tMyst ère\tde\tJean\tMichel.\tIl\ts'agit\tdu\tproc ès\tde\t\nl'homm e.\tLa\tJustice\tet\tla\tV érité\tsont\tses\taccusateurs,\tla\tMis éricorde\t\net\t la \tPaix\t ses\t avocats.\t Chacun\t parle\t à\t son\t tour.\t Finalemen t\t\nl'intervention\t divine,\t la\t révélation\t du\t Sauveur\t qui\t va\t naître, \tles\t\nréconcilie\t pour\t le\t plus\t grand\t bien\t de\t l'homme, \tla\t Justice\t et\t la\t\nMiséricorde\t s'embrassent,\t ainsi\t que\t la\t Vérité\t et\t la\t Paix .\tNous\t\ntrouvons\tun\treflet\tde\tce\tthème \tdans\tles\tHeures\tRoyales\tde\tV érard\t\n(I490)\t (fig.\t102) ,\toù\tle\tprocès\test\tjoint\tà\tl'Annonciation. \tOr\tHardouyn\t\nreprend\t en\t 1505\t cette\t image\t traditionnelle\t et\t il\t fai t\t des\t quatre\t\nvertus\t des\t dames\t trè s\télégantes\tqui\t se\t prom ènent\t dans\t un\t jardin",
+            "metadata": {
+              "title": "A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550",
+              "hal_id": "halshs-02898229",
+              "authors": [
+                "Wanda Rabaud",
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Wanda Rabaud, Nicolas Bouleau. A la source de la Renaissance française, Le livre d'Heures parisien\r\nLivres d'Heures imprimés à Paris entre 1488 et 1550. 2020. ⟨halshs-02898229⟩",
+              "source_url": "https://hal.science/halshs-02898229",
+              "chunk_order": 351,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-07-15",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "Can you praise Jean Charles in a sonnet using alexandrins"
+            }
+          },
+          {
+            "id": "8f3792ba-2627-5bae-801a-1e52b68eaf3c",
+            "document_id": "82c08573-1415-5e7e-a391-79b21211cd1f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550\n\nText: 1527\t exub érantes,\t puis\t en\t 1529 ,\tles\tpremi ères\t (les\t autres\t ne\t sont\t pas\t dignes\t de\t lui ),\tsont\t d'une\t\nminutieuse\t perfection.\t Le\t triomphe\t de\t la\t Vierge\t au\t contraire\t est\t plutôt\t lâ ché.\t Il\t semble\t que\t ce\t soit\t la\t\ngravure\tsouple \tet\thabile\td'un\tdessin\tjuste\tesquiss é.\t\nTout\t cela\t est\t conciliable.\t Geoffroy\t Tory \tn'est\t pas\t un\t simple\t artisan\t qui,\t comme\t les\t graveurs\t de\t\nfig. 115 Triomphe de la Vierge, Mallard 1542",
+            "metadata": {
+              "title": "A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550",
+              "hal_id": "halshs-02898229",
+              "authors": [
+                "Wanda Rabaud",
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Wanda Rabaud, Nicolas Bouleau. A la source de la Renaissance française, Le livre d'Heures parisien\r\nLivres d'Heures imprimés à Paris entre 1488 et 1550. 2020. ⟨halshs-02898229⟩",
+              "source_url": "https://hal.science/halshs-02898229",
+              "chunk_order": 377,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-07-15",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "Can you praise Jean Charles in a sonnet using alexandrins"
+            }
+          },
+          {
+            "id": "cc926694-cb99-533d-902e-23d5af0a16a1",
+            "document_id": "82c08573-1415-5e7e-a391-79b21211cd1f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550\n\nText: Langaige\tmeur,\tamoureux,\tvéritable,\t\nHabit\tmoyen,\thonnête,\tassaisonné,\t\nFroit\ten\tson\tfait,\tconstant\tet\traisonnable;\t\nHanter\tles\tbons,\tsaiges,\tvaillants\tet\tpreux,\t\nRéfection\tsobre\tà\theure\tbriefve\tà\ttable,\t\nFont\tl'homme\tsaige\tet\tà\ttous\tgracieux.\t\n\t\t\tOy,\tvoy,\tparle\tpoy,\t\n\t\t\tSe\ttu\tparles\tgarde\ttoy\t\n\t\t\tDe\tqui\ttu\tparles\tet\tde\tquoy.\"9\t\t\t\nIl\tsemble,\td'aprè s\tces\tconseils,\tque\tl'idé al\tdu\tFranç ais\tdu\tXVe\tsiècle\tétait\td éjà\tl'honnê te\thomme\tdu\tXVIIe\t\nsiècle,\t\"froid\ten\tson\tfait,\tconstant\tet\traisonnable\".\t\nVérard\tira\tplus\tloin\t:\t il\ttentera\tde\tr éaliser\tun\tlivre\td'Heures\tnon\tpas\tpopulaire,\tmais\tfranchement\tla ïque\tet\t\nfrançais.\tC'est\tun\teffo rt\ttrès\tnouveau.\tIl\td édie\tson\tlivre\tau\t Roi\tde\tFrance,\tce\tsont\tdes\tHeures\tRoyales10;\tles\t\nfleurs\tde\tlys\tabondent\tdans\tles\tmarges\tet\ton\tvoit\tle\troi\tlui -même\tdans\tla\tplan che\tde\tl'Acteu r.\tTous\t les\t\ntextes\tqui\tne\tsont\tobligatoirement\ten\tlatin\tsont\tici\ten\tvers\tfran çais,\tsouvent\tde\tbonne\tqualit é\tet\td'une\t\noriginalit é\tplaisante.\t\t La\tVierge\tMarie\test\tappel ée:",
+            "metadata": {
+              "title": "A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550",
+              "hal_id": "halshs-02898229",
+              "authors": [
+                "Wanda Rabaud",
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Wanda Rabaud, Nicolas Bouleau. A la source de la Renaissance française, Le livre d'Heures parisien\r\nLivres d'Heures imprimés à Paris entre 1488 et 1550. 2020. ⟨halshs-02898229⟩",
+              "source_url": "https://hal.science/halshs-02898229",
+              "chunk_order": 79,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-07-15",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "Can you praise Jean Charles in a sonnet using alexandrins"
+            }
+          },
+          {
+            "id": "7223a88f-bb3a-577d-9855-f62c5974feef",
+            "document_id": "e5a5fc0d-677d-56ba-9256-375157b1ff41",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01503448275862069,
+            "text": "Document Title: Modéliser la crise de la biodiversité : les rôles de l'espace et des comportements stratégiques dans la modélisation bioéconomique\n\nText: games; Alexis, for navigating through life and seemlessly switching directions;\nLazare, for being the Nick to our home for 2 years; Ambre, for being so ener-\ngetic; Morgane, for your kindness and energy to see the world; Malena, for being\nslightly crazy, the kindest and supportive ; Robinson, for always being there,\nstylish, guiding and listening; Maria, for your energy and optimism ; Paul, for\nexploring the world and still choosing to undertake a PhD; Augustin A. for your\nrelentless effort to becoming a better version of yourself; Augustin L. for being\nthe next climate grey eminence and the long nights across Paris; Eloïse, for your\nvii",
+            "metadata": {
+              "title": "Modéliser la crise de la biodiversité : les rôles de l'espace et des comportements stratégiques dans la modélisation bioéconomique",
+              "hal_id": "tel-04995999",
+              "authors": [
+                "Simon Jean"
+              ],
+              "version": "v0",
+              "citation": "Simon Jean. Modéliser la crise de la biodiversité : les rôles de l'espace et des comportements stratégiques dans la modélisation bioéconomique. Economies et finances. Université Paris-Saclay, 2024. Français. ⟨NNT : 2024UPASB065⟩. ⟨tel-04995999⟩",
+              "source_url": "https://hal.science/tel-04995999",
+              "chunk_order": 33,
+              "description": "La biodiversité mondiale subit des pressions croissantes dues aux activités humaines : perte d'habitats, surexploitation des ressources, changements climatiques, introduction d'espèces invasives. Ces menaces affectent non seulement la diversité des espèces, mais aussi les services écosystémiques essentiels. Les politiques de conservation, malgré les initiatives internationales et nationales, ont des performances mitigées. Comment mieux concevoir des politiques pour freiner l'effondrement de la biodiversité tout en prenant en compte les enjeux économiques ? Comment intégrer l'analyse économique à l'espace de la biodiversité? Comment intégrer les interactions entre agents stratégiques autour de la biodiversité ?Cette thèse modélise la perte et fragmentation de l'habitat ainsi que la surexploitation (ou le sous contrôle) des espèces en utilisant une approche bioéconomique, qui combine l'économie d'une part et l'écologie des populations et des paysages d'autre part. Elle met l'accent sur le rôle de l'espace et les interactions stratégiques, afin d'orienter les politiques publiques dans divers écosystèmes.Le premier chapitre passe en revue la littérature bioéconomique sur les systèmes socio-écologiques terrestres, et identifie deux grands paradigmes : l'optimisation économique des ressources et la conservation de la biodiversité dans des paysages aménagés. Il expose les défis méthodologiques de la modélisation bioéconomique pour mieux saisir la crise de la biodiversité, et apporter des pistes de solutions.Le deuxième chapitre développe un modèle de gestion des paysages forestiers confrontés au dilemme entre conservation et réduction des risques d'incendie. En utilisant la théorie des graphes, il définit une frontière de production entre ces objectifs sous contrainte budgétaire et caractérise les localisation des opérations de traitement des combustibles optimales, ainsi que les paysages qui en découlent.Le troisième chapitre traite de la gestion des espèces nuisibles en intégrant l'usage de clôtures écologiques. Le modèle explore comment ces barrières limitent la propagation d'espèces nuisibles dans un réseau de parcelles, en intégrant des coûts de contrôle hétérogènes. Il considère la question des externalités spatiales, et de la gestion des opportunités d'arbitrage spatiales. Il propose une analyse de la connectivité des paysages comme décision politique, et souligne l'importance d'une gestion différenciée selon les caractéristiques locale et le temps.Le quatrième chapitre analyse l'exploitation du Totoaba macdonaldi, un poisson en danger critique à cause du braconnage d'un cartel. Il revisite un modèle bioéconomique et analyse les conséquences d'un monopole vertical sur le totoaba. Il montre ensuite que l'aquaculture peut réduire la pression sur les populations sauvages, contrairement à l'idée que celle-ci intensifie l'exploitation. L'élevage de totoaba stabilise les populations et réduit les incitations au braconnage, avec des implications importantes pour la conservation.En conclusion, cette thèse propose des développements dans la modélisation bioéconomique, en prenant en compte l'espace et les comportements stratégiques, pour analyser la crise de la biodiversité, ouvrant la voie à des politiques publiques plus efficaces conciliant conservation et développement économique.",
+              "document_type": "THESE",
+              "publication_date": "2024-11-26",
+              "semantic_rank": 8,
+              "full_text_rank": 200,
+              "associated_query": "Can you praise Jean Charles in a sonnet using alexandrins"
+            }
+          },
+          {
+            "id": "58c217e8-a727-52ad-aa35-6260a7c393a7",
+            "document_id": "82c08573-1415-5e7e-a391-79b21211cd1f",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.0147909604519774,
+            "text": "Document Title: A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550\n\nText: 68 fleurs\tet\tles\toiseaux\tde\tDu\tP ré,\tet\tinscrits\tdans\tla\tcomposition\tde\tla\tpag e\tcomme\tune\tdentelle\tdans\tson\t\nréseau \t(fig.\t46,\t47).\tPeu\timporte\tque\tce\tsoit\tdes\tbergers,\tdes\tchasseurs\tdans\tles\tbois\ttr ès\tobjectivement\t\nrendus,\tou\tles\tm êmes\tbergers\tjouant\t avec\tles\tacanthes,\tou\tdes\tguerriers\tmyt hologiques,\tdes\tcentaures,\t\ndes\téléphants...,\tle\tstyle\t à\tla\tfois\taigu\t et\tornemental\tunifie\ttout\tcela. \t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\nfig. 46-47 Heures de \nVostre 1498 (M.540)",
+            "metadata": {
+              "title": "A la source de la Renaissance française, Le livre d'Heures parisien Livres d'Heures imprimés à Paris entre 1488 et 1550",
+              "hal_id": "halshs-02898229",
+              "authors": [
+                "Wanda Rabaud",
+                "Nicolas Bouleau"
+              ],
+              "version": "v0",
+              "citation": "Wanda Rabaud, Nicolas Bouleau. A la source de la Renaissance française, Le livre d'Heures parisien\r\nLivres d'Heures imprimés à Paris entre 1488 et 1550. 2020. ⟨halshs-02898229⟩",
+              "source_url": "https://hal.science/halshs-02898229",
+              "chunk_order": 195,
+              "document_type": "UNDEFINED",
+              "publication_date": "2020-07-15",
+              "semantic_rank": 9,
+              "full_text_rank": 200,
+              "associated_query": "Can you praise Jean Charles in a sonnet using alexandrins"
+            }
+          },
+          {
+            "id": "81158d5a-a965-5eda-a45b-baa7f64c13f8",
+            "document_id": "befd3526-9ca6-5cc9-a9f4-1c3a59b8a5da",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.014555555555555556,
+            "text": "Document Title: Research excellence à la Française\n\nText: Who can restore, when spirits go astray,\nLess grief in pain and greater joy in pleasure.\nAt eve, one needs a supper most divine,\nWhere freedom reigns, and all may taste their ﬁll\nOf dainty fare, good wit, and better wine,\nYet leave the board ere drunkenness doth spill.\nAt night, 'twixt sheets of ﬁnest linen laid,\nOne needs to hold the object of desire,\nWith tender touch till sleep doth so4984tly fade,\nAnd morn brings forth renewed passion's ﬁre.\nVoltaire, XVIIIe\nTranslated from the French by Claude",
+            "metadata": {
+              "title": "Research excellence à la Française",
+              "hal_id": "hal-04850819",
+              "authors": "['Minh Ha-Duong']",
+              "version": "v0",
+              "citation": "Minh Ha-Duong. Research excellence à la Française. Self published, pp.81, 2024, 979-8303200531. ⟨hal-04850819⟩",
+              "source_url": "https://hal.science/hal-04850819",
+              "chunk_order": 79,
+              "description": "This guide provides essential insights for both international students and established researchers to succeed in the French research ecosystem. From producing high-quality academic work to mastering digital research tools, from understanding French institutional culture to delivering impactful presentations, this comprehensive manual offers systematic solutions for excelling in today's competitive research environment. Written by Dr. Minh Ha-Duong, a senior CNRS researcher and former Lead Author of the Nobel Peace Prize-winning IPCC, the book features: Proven strategies for scholarly writing and publication Expert guidance on leveraging AI and managing digital libraries Essential insights into French research institutions and culture Professional techniques for academic presentations and communication Evidence-based productivity practices for sustained excellence The print edition includes an exclusive bonus chapter on research productivity life hacks.",
+              "document_type": "OUV",
+              "publication_date": "2024-12-11",
+              "semantic_rank": 10,
+              "full_text_rank": 200,
+              "associated_query": "Can you praise Jean Charles in a sonnet using alexandrins"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 1027,
+            "total_tokens": 1027
+          }
+        }
+      },
+      "duration": 2413
+    },
+    "retrievalTime": 1403,
+    "generationTime": 2413,
+    "timestamp": "2025-07-12T12:57:38.616Z"
+  },
+  "server_context": {
+    "client_ip": "80.239.186.181",
+    "forwarded_for": "80.239.186.181",
+    "received_at": "2025-07-12T12:57:39.132082+00:00",
+    "server_version": "1.0.0"
+  }
+}

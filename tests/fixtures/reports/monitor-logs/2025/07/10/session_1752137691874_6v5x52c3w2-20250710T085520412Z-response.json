@@ -1,0 +1,584 @@
+{
+  "sessionId": "session_1752137691874_6v5x52c3w29583f4u",
+  "timestamp": "20250710T085520412Z",
+  "eventType": "response",
+  "payload": {
+    "queryId": "query_1752137713315_vc3iqeg",
+    "response": {
+      "results": {
+        "generated_answer": "Le modèle Res-IRF est un outil de modélisation développé pour évaluer la demande d'énergie dans le secteur résidentiel en France. Voici une présentation synthétique de ce modèle basée sur les informations disponibles :\n\n1. **Objectif et Contexte** :\n   - Res-IRF est conçu pour intégrer les déterminants technologiques et économiques propres à la consommation résidentielle d'énergie [98ea0ae].\n   - Il est utilisé pour évaluer l'impact des politiques de maîtrise de la demande d'énergie (MDE) dans le bâtiment résidentiel [9a92b8a].\n\n2. **Caractéristiques et Fonctionnalités** :\n   - Le modèle intègre une description fine de la performance énergétique du parc de logements, basée sur les étiquettes énergie du diagnostic de performance énergétique (DPE) pour les consommations d'électricité, gaz naturel, fioul domestique et bois-énergie pour le chauffage [5c5aecd].\n   - Il représente le parc de bâtiments résidentiels, ses caractéristiques thermiques, et la dynamique de construction, ainsi que les décisions de rénovation thermique des bâtiments existants [846c6c2].\n   - Res-IRF simule la demande d'énergie pour le chauffage dans le secteur résidentiel en France, combinant une description détaillée de la performance énergétique des logements et des caractéristiques socio-économiques des ménages qui les occupent [625f922].\n\n3. **Structure et Données** :\n   - Le modèle est paramétré à partir des données de l'enquête Phébus, qui croise les données socio-économiques des ménages avec l'efficacité énergétique de leur logement [625f922].\n   - Il couvre les résidences principales en France métropolitaine, soit 23,9 millions de logements [625f922].\n\n4. **Utilisation et Applications** :\n   - Res-IRF peut être utilisé de manière autonome ou couplé de façon récursive au modèle d'équilibre général IMACLIM-R, adapté à l'économie française [43f4bf3].\n   - Il est utilisé pour évaluer l'impact de diverses politiques de réduction de la demande d'énergie, telles que la taxe carbone, le crédit d'impôt pour la transition énergétique, les certificats d'économies d'énergie, l'éco-prêt à taux zéro, la TVA à taux réduit, et la réglementation thermique 2020 [5c5aecd].\n\n5. **Développement et Références** :\n   - Le modèle a été développé au CIRED (Centre International de Recherche sur l'Environnement et le Développement) depuis 2008 [5c5aecd].\n   - Des descriptions exhaustives de Res-IRF peuvent être trouvées dans des publications telles que Giraudet et al. (2012) et Branger et al. (2015) [625f922].\n\nEn résumé, Res-IRF est un outil hybride qui combine des approches bottom-up et macroéconomiques pour évaluer la demande d'énergie dans le secteur résidentiel, en tenant compte des dynamiques technologiques et comportementales.",
+        "citations": [
+          {
+            "id": "98ea0ae",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 384,
+              "end": 393
+            },
+            "payload": {
+              "id": "98ea0ae7-5a58-5d9c-b7a0-9278df489dbe",
+              "document_id": "ce1b1abd-64ab-54e3-9136-893b3ff1851c",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017156862745098037,
+              "text": "Document Title: Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie\n\nText: peuvent se produire lorsquils sont mis en place simultanément. Cette étude se concentre sur la consommation de chauffage, qui représente les deux tiers de lénergie consommée dans le logement et qui est le principal usage impacté par les politiques de MDE.  Les résultats sont fondés sur des simulations réalisées à laide du modèle Res-IRF30, conçu pour intégrer les déterminants technologiques et économiques propres à la consommation résidentielle dénergie, en lien avec le modèle d'équilibre général IMACLIM-R développé au CIRED. Le rapport détude est organisé de la façon suivante. Le chapitre 1 rappelle le contexte actuel et passé de la MDE. Le chapitre 2 présente les grandes lignes du modèle Res-IRF et discute la projection de référence. Le chapitre 3 analyse les simulations au cas par cas des différents instruments de MDE.  Le chapitre 4 compare lefficacité de différents bouquets de mesures existantes et supplémentaires. Le chapitre 5 discute ces résultats et lapport potentiel dautres mesures. En conclusion",
+              "metadata": {
+                "title": "Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie",
+                "hal_id": "hal-00799740",
+                "authors": [
+                  "Louis-Gaëtan Giraudet",
+                  "Céline Guivarch",
+                  "Philippe Quirion",
+                  "L. Penot-Antoniou"
+                ],
+                "version": "v0",
+                "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion, L. Penot-Antoniou. Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie. Études et documents - Numéro 58, 2011, pp.78. ⟨hal-00799740⟩",
+                "source_url": "https://hal.science/hal-00799740",
+                "chunk_order": 232,
+                "description": "La France s'est engagée à réduire les consommations d'énergie du parc des bâtiments existants de 38 % en 2020 par rapport à 2008, objectif \" Grenelle -38 % \", et à diviser les émissions de CO2 par quatre en 2050 par rapport à 1990, objectif \" Facteur 4 \". Pour atteindre ces objectifs, le Grenelle de l'environnement a mis en avant un certain nombre de leviers réglementaires et incitatifs. Cette étude, réalisée par le CIRED pour le compte du CGDD, a pour objectif d'analyser l'impact de ces différents instruments sur la consommation d'énergie pour le chauffage. Mesures existantes (crédit d'impôt développement durable, éco-prêt à taux zéro, réglementation thermique) et mesures supplémentaires (obligation de rénovation, contribution climat énergie) sont évaluées grâce au modèle Res-IRF du CIRED. Ce modèle prend en compte l'efficacité énergétique des logements et leur évolution dans le temps sous l'effet de rénovations ; il modélise également de façon originale les comportements de chauffage des ménages. Les premières simulations suggèrent que les politiques considérées ne suffisent pas à atteindre les objectifs ambitieux fixés par la France. Ces résultats sont sensibles aux hypothèses retenues. En introduisant des hypothèses plus optimistes (ex : prix des rénovations plus faible) et en prenant en compte des facteurs complémentaires au modèle (ex : bois), un travail de ré-estimation sur la base du modèle du CIRED a permis d'obtenir des résultats plus proches des objectifs du Grenelle.",
+                "document_type": "REPORT",
+                "publication_date": "2011-11-01",
+                "semantic_rank": 10,
+                "full_text_rank": 1,
+                "associated_query": "présente le modèle Res-IRF"
+              }
+            }
+          },
+          {
+            "id": "9a92b8a",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 523,
+              "end": 532
+            },
+            "payload": {
+              "id": "9a92b8ad-6703-571f-9182-7c3fe63f21ef",
+              "document_id": "ce1b1abd-64ab-54e3-9136-893b3ff1851c",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017094017094017092,
+              "text": "Document Title: Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie\n\nText: développé au CIRED. Le rapport détude est organisé de la façon suivante. Le chapitre 1 rappelle le contexte actuel et passé de la MDE. Le chapitre 2 présente les grandes lignes du modèle Res-IRF et discute la projection de référence. Le chapitre 3 analyse les simulations au cas par cas des différents instruments de MDE.  Le chapitre 4 compare lefficacité de différents bouquets de mesures existantes et supplémentaires. Le chapitre 5 discute ces résultats et lapport potentiel dautres mesures. En conclusion figurent des recommandations daction publique pour la MDE.  1. La maîtrise de la demande dé1. La maîtrise de la demande dé1. La maîtrise de la demande dé1. La maîtrise de la demande dénergie dans le bâtiment résidentielnergie dans le bâtiment résidentielnergie dans le bâtiment résidentielnergie dans le bâtiment résidentiel    : : : : tendances passées et enjeux futurstendances passées et enjeux futurstendances passées et enjeux futurstendances passées et enjeux futurs     1.1 Impact des mesures de MDE de",
+              "metadata": {
+                "title": "Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie",
+                "hal_id": "hal-00799740",
+                "authors": [
+                  "Louis-Gaëtan Giraudet",
+                  "Céline Guivarch",
+                  "Philippe Quirion",
+                  "L. Penot-Antoniou"
+                ],
+                "version": "v0",
+                "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion, L. Penot-Antoniou. Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie. Études et documents - Numéro 58, 2011, pp.78. ⟨hal-00799740⟩",
+                "source_url": "https://hal.science/hal-00799740",
+                "chunk_order": 233,
+                "description": "La France s'est engagée à réduire les consommations d'énergie du parc des bâtiments existants de 38 % en 2020 par rapport à 2008, objectif \" Grenelle -38 % \", et à diviser les émissions de CO2 par quatre en 2050 par rapport à 1990, objectif \" Facteur 4 \". Pour atteindre ces objectifs, le Grenelle de l'environnement a mis en avant un certain nombre de leviers réglementaires et incitatifs. Cette étude, réalisée par le CIRED pour le compte du CGDD, a pour objectif d'analyser l'impact de ces différents instruments sur la consommation d'énergie pour le chauffage. Mesures existantes (crédit d'impôt développement durable, éco-prêt à taux zéro, réglementation thermique) et mesures supplémentaires (obligation de rénovation, contribution climat énergie) sont évaluées grâce au modèle Res-IRF du CIRED. Ce modèle prend en compte l'efficacité énergétique des logements et leur évolution dans le temps sous l'effet de rénovations ; il modélise également de façon originale les comportements de chauffage des ménages. Les premières simulations suggèrent que les politiques considérées ne suffisent pas à atteindre les objectifs ambitieux fixés par la France. Ces résultats sont sensibles aux hypothèses retenues. En introduisant des hypothèses plus optimistes (ex : prix des rénovations plus faible) et en prenant en compte des facteurs complémentaires au modèle (ex : bois), un travail de ré-estimation sur la base du modèle du CIRED a permis d'obtenir des résultats plus proches des objectifs du Grenelle.",
+                "document_type": "REPORT",
+                "publication_date": "2011-11-01",
+                "semantic_rank": 10,
+                "full_text_rank": 2,
+                "associated_query": "présente le modèle Res-IRF"
+              }
+            }
+          },
+          {
+            "id": "5c5aecd",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 858,
+              "end": 867
+            },
+            "payload": {
+              "id": "5c5aecd0-7e97-5d56-b743-e1ffd759315a",
+              "document_id": "f8244ee2-795c-5600-b1d3-92b65d1b1cd2",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.017033542976939202,
+              "text": "Document Title: Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel\n\nText: 4 \n Synthé sé  \nLa présente étude évalue limpact entre 2012 et 2050 des principales politiques damélioration \nénergétique du parc de logement s privés et sociaux en France. Elle utilise Res-IRF, modèle de prospective \nde la demande dénergie pour le chauffage  développé au CIRED depuis 2008 . Lévaluation porte sur les \npolitiques suivantes  : taxe carbone (TC), crédit dimpôt pour la transition énergétique (CITE), certificats \ndéconomies dénergie (CEE), éco -prêt à taux zéro (EPTZ), TVA à taux réduit (TVAr) et réglementation \nthermique 2020 (RT 2020) . \nCadre de modélisation  \nLe modèle Res -IRF intègre une description fine de la performance énergétique du parc de logements  \nbasée sur les étiquettes énergie du diagno stic de performance énergétique (DPE)  pour les \nconsommations délectricité, gaz naturel, fioul domestique et bois -énergie  pour le chauffage   et des \ncaractéristiques des ménages  différenciés par type dhabitat, niveau de revenu et statut doccupation.",
+              "metadata": {
+                "title": "Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel",
+                "hal_id": "hal-01955954",
+                "authors": [
+                  "Louis-Gaëtan Giraudet",
+                  "Cyril Bourgeois",
+                  "Philippe Quirion",
+                  "David Glotin"
+                ],
+                "version": "v0",
+                "citation": "Louis-Gaëtan Giraudet, Cyril Bourgeois, Philippe Quirion, David Glotin. Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel. [Rapport de recherche] CIRED CNRS; ecole des ponts paristech. 2018. ⟨hal-01955954v2⟩",
+                "source_url": "https://hal.science/hal-01955954",
+                "chunk_order": 11,
+                "document_type": "REPORT",
+                "publication_date": "2018-12-21",
+                "semantic_rank": 10,
+                "full_text_rank": 3,
+                "associated_query": "présente le modèle Res-IRF"
+              }
+            }
+          },
+          {
+            "id": "846c6c2",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1061,
+              "end": 1070
+            },
+            "payload": {
+              "id": "846c6c2e-9ecb-5984-9158-28569f3bfff6",
+              "document_id": "0198f54d-ce47-5088-986a-8d223b1b338c",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01700653594771242,
+              "text": "Document Title: Incertitudes et inerties au coeur de la question climatique: Explorations numériques en économie du changement climatique\n\nText: et comportementales caractérisant ce secteur  (Fragnière et al., 2016) . Le modèle Res -IRF vise à pallier \ncette limitation. Il représente : (i) le parc de bâtiments résidentiel, ses caractéristiques thermiques, et la \ndynamique de construction, (ii) les décisions de rénovation thermique des bâtiments existants, (iii) \nlajustement de lutilisation des équipements de chauffage suite à une rénov ation thermique dun \nbâtiment  (effet rebond  direct16). Il est calibré  sur le parc de bâtiments résidentiels français de 2008.  \nNotons que les projections que nous avons réalisées c onfirme nt que la question centrale est bien la \nrénovation du capital existant  : plus de 60% des m2 de 2050 existent déjà aujourdhui.  \n \n \nGiraudet et al. (2012)  décrit le modèle Res -IRF, un modèle hybride développé pour évaluer la \ndemande dénergie future du  secteur résidentiel en France . Ce modèle a les caractéristiques suivantes  :",
+              "metadata": {
+                "title": "Incertitudes et inerties au coeur de la question climatique: Explorations numériques en économie du changement climatique",
+                "hal_id": "tel-01654151",
+                "authors": "['Céline Guivarch']",
+                "version": "v0",
+                "citation": "Céline Guivarch. Incertitudes et inerties au coeur de la question climatique: Explorations numériques en économie du changement climatique. Economies et finances. Université Paris Est, 2017. ⟨tel-01654151⟩",
+                "source_url": "https://hal.science/tel-01654151",
+                "chunk_order": 186,
+                "description": "Mes travaux s’intéressent à la question du changement climatique, défi majeur posé à nos sociétés, qui porte à une échelle et une complexité sans précédent la question des politiques publiques. Le climat est un bien public global, mais il y existe une grande hétérogénéité des coûts et des bénéfices. De plus, c’est une question qui implique le très long-terme, et de nombreuses irréversibilités et incertitudes. Les causes du changement climatique, ainsi que les solutions face aux défis qu’il pose, impliquent l’ensemble des aspects de nos modes de vie, concernent tous les secteurs économiques, et nécessitent de penser les interactions entre des systèmes complexes socio-économiques, techniques et naturels. J’aborde cette question du changement climatique à travers l’économie de l’environnement et des ressources (économie du changement climatique, et économie de l’énergie puisque l’énergie représente une grande partie des émissions de gaz à effet de serre), ainsi que des travaux multidisciplinaires en lien avec modélisation du climat et du cycle du carbone, ou mobilisant les mathématiques appliquées, la recherche opérationnelle, ou les sciences de l’environnement. Mes travaux sont publiés pour une partie dans des journaux d’économie, pour une autre dans des revues interdisciplinaires telles que Climatic Change, Global Environmental Change, Climate Policy ou Nature Communications. Il me semble en effet que ce lien avec d’autres disciplines est nécessaire pour répondre à des questions à teneur économique in fine mais pour lesquelles la compréhension de mécanismes physiques est clé pour poser correctement la question et représenter de façon pertinente les mécanismes, ou pour construire et tirer parti de résultats de modèles reposant sur de nombreuses équations et paramètres car représentant des systèmes complexes. La plupart de mes travaux sont de nature appliquée, et s’appuient sur des modèles numériques. Les modèles sont pris comme une heuristique, un cadre à penser, pour tenter d’analyser les interactions dans un système complexe, de dégager une vision globale et systémique, et de faire ressortir des résultats quantifiés robustes ou les déterminants principaux des incertitudes, dans une démarche prospective. Le bilan qui suit présente mes travaux qui se rattachent à deux grandes questions transversales (et à leur intersection) : celle de l’irréversibilité et des inerties, et celle des incertitudes. Ainsi, le bilan n’est pas exhaustif et exclut un certain nombre de travaux, sur des sujets connexes, tels que la précarité énergétique par exemple.",
+                "document_type": "HDR",
+                "publication_date": "2017-04-19",
+                "semantic_rank": 1,
+                "full_text_rank": 200,
+                "associated_query": "présente le modèle Res-IRF"
+              }
+            }
+          },
+          {
+            "id": "625f922",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1321,
+              "end": 1330
+            },
+            "payload": {
+              "id": "625f922a-62ca-55a3-9ccb-93c704fa371e",
+              "document_id": "d8aa785e-ed6d-57ef-a422-cc3664819e0d",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.01638993710691824,
+              "text": "Document Title: Efficacité économique et effets distributifs de long-terme des politiques de rénovation énergétique des logements\n\nText: 6 \n 2 Le modèle  Res-IRF 3.0 en bref  \nLe modèle Res-IRF simule la demande dénergie pour le chauffage dans le secteur résidentiel en France . \nIl combine une description détaillée de la performance énergétique des logements et des \ncaractéristiques socio -économiques des ménages qui les occupent.  La dernière version du modèle ( 3.0) \nintègre une segmentation des ménages par niveau de revenu.  \n2.1 Structure  et données  \nLe modèle est décrit en détail dans Giraudet et al. (2012) et Branger et al . (2015). La section ci -dessous \ndonne un aperçu des processus clés et détaille les développements qui n'ont pas été inclus dans les \nréférences déjà publiées.  \nLe parc de logements est paramétré à partir des données de  lenquête Phébus , qui croise les données \nsocio -économiques des ménages avec lefficacité  énergétique de  leur logement. Le  périmètre du modèle \ncouvre les résidences principales en France métropolitaine, soit 23,9 millions de logements. Ce parc est",
+              "metadata": {
+                "doi": "10.3917/ecop1.217.0044",
+                "title": "Efficacité économique et effets distributifs de long-terme des politiques de rénovation énergétique des logements",
+                "hal_id": "hal-03100351",
+                "authors": "['Louis-Gaëtan Giraudet', 'Cyril Bourgeois', 'Philippe Quirion']",
+                "version": "v0",
+                "citation": "Louis-Gaëtan Giraudet, Cyril Bourgeois, Philippe Quirion. Efficacité économique et effets distributifs de long-terme des politiques de rénovation énergétique des logements. Economie et Prévision, 2020, ⟨10.3917/ecop1.217.0044⟩. ⟨hal-03100351⟩",
+                "source_url": "https://doi.org/10.3917/ecop1.217.0044",
+                "chunk_order": 27,
+                "description": "Cet article évalue l'impact entre 2012 et 2050 des principales politiques d'amélioration énergétique du parc de logements privés et sociaux en France. Cette étude utilise le modèle technico-économique Res-IRF, qui simule l'évolution de la demande d'énergie pour le chauffage des logements sous l'effet de la construction neuve et de la rénovation énergétique des logements.",
+                "document_type": "ART",
+                "publication_date": "2020-01-01",
+                "semantic_rank": 3,
+                "full_text_rank": 200,
+                "associated_query": "présente le modèle Res-IRF"
+              }
+            }
+          },
+          {
+            "id": "625f922",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1534,
+              "end": 1543
+            },
+            "payload": null
+          },
+          {
+            "id": "625f922",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 1645,
+              "end": 1654
+            },
+            "payload": null
+          },
+          {
+            "id": "43f4bf3",
+            "object": "citation",
+            "is_new": true,
+            "span": {
+              "start": 1845,
+              "end": 1854
+            },
+            "payload": {
+              "id": "43f4bf32-cff9-56a4-b371-ba979476133d",
+              "document_id": "ff96cb05-8dab-5c25-9bda-53cf508d2490",
+              "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+              "collection_ids": [
+                "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+              ],
+              "score": 0.015818181818181818,
+              "text": "Document Title: Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle\n\nText: 86 \n Daprès la définition introduite plus haut, Res-IRF peut être qualifié d hybride au sens de  modèle \nbottom-up  enrichi sur le plan microéconomique . A ce titre, il se rapproche du modèle CI MS \n(Canadian Integrated Modeling System ), développé à lUniversité Simon Fraser de Vancouver au \nCanada (Jaccard et Dennis, 2006).  \n1.1.2  Bouclage macroéconomique avec le modèle déquilibre général IMACLIM-R \nLe module Res-IRF peut être utilisé de façon autonome à partir de scénarios exog ènes de croissance \ndémographique, dévolution du revenu disponible réel des ménages et de prix des énergies. Dans les \nsimulations qui suivent, il est couplé de façon récursive au modèle déquilibre général IMACLIM-R  \nadapté à léconomie française , représentée comme une petite économie ouverte. Conformément à \nla définition dintroduction, c e couplage constitue un deuxième niveau dhybridation.  \nA chaque année n, l'équilibre général détermine les prix des énergies et le revenu des ménages. Ces",
+              "metadata": {
+                "title": "Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle",
+                "hal_id": "tel-00599374",
+                "authors": [
+                  "Louis-Gaëtan Giraudet"
+                ],
+                "version": "v0",
+                "citation": "Louis-Gaëtan Giraudet. Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle. Economies et finances. Université Paris-Est, 2011. Français. ⟨NNT : 2011PEST1139⟩. ⟨tel-00599374v2⟩",
+                "source_url": "https://hal.science/tel-00599374",
+                "chunk_order": 416,
+                "description": "Cette thèse évalue l'efficacité de différentes formes de taxes, subventions et réglementations mises en place pour corriger les défaillances de marché qui s'opposent aux économies d'énergie. Elle mobilise plusieurs approches, selon un degré de complexité croissant. Dans un premier temps, un modèle microéconomique standard est développé pour comparer les performances statiques des différents instruments. Dans un deuxième temps, la représentation des comportements des consommateurs est approfondie dans un modèle de prospective de la consommation d'énergie pour le chauffage des ménages français, qui permet d'identifier les mécanismes dynamiques par lesquels les instruments peuvent corriger les principales défaillances de marché. Dans un troisième temps, une évaluation empirique des dispositifs de « certificats blancs » – obligations échangeables d'économies d'énergie imposées aux opérateurs énergétiques – est menée à partir d'une comparaison des expériences britannique, italienne et française, en intégrant les institutions dans l'analyse. Le croisement de ces différentes approches montre que : (i) les taxes sur l'énergie, qui encouragent à la fois l'investissement dans l'efficacité énergétique et la sobriété des comportements, sont particulièrement efficaces ; (ii) les réglementations sur l'efficacité énergétique ont un impact significatif sur la diffusion des technologies efficaces ; (iii) les subventions à l'efficacité énergétique génèrent un effet rebond important ; (iv) en fonction de l'environnement institutionnel dans lequel ils s'insèrent, les « certificats blancs » combinent les propriétés de ces instruments. Appliquée en France au secteur du bâtiment résidentiel, la combinaison la plus efficace de ces instruments ne permet pas d'atteindre les objectifs d'économies d'énergie définis dans le cadre du Grenelle de l'environnement",
+                "document_type": "THESE",
+                "publication_date": "2011-03-28",
+                "semantic_rank": 5,
+                "full_text_rank": 200,
+                "associated_query": "présente le modèle Res-IRF"
+              }
+            }
+          },
+          {
+            "id": "5c5aecd",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 2158,
+              "end": 2167
+            },
+            "payload": null
+          },
+          {
+            "id": "5c5aecd",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 2335,
+              "end": 2344
+            },
+            "payload": null
+          },
+          {
+            "id": "625f922",
+            "object": "citation",
+            "is_new": false,
+            "span": {
+              "start": 2494,
+              "end": 2503
+            },
+            "payload": null
+          }
+        ],
+        "search_results": [
+          {
+            "id": "98ea0ae7-5a58-5d9c-b7a0-9278df489dbe",
+            "document_id": "ce1b1abd-64ab-54e3-9136-893b3ff1851c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017156862745098037,
+            "text": "Document Title: Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie\n\nText: peuvent se produire lorsquils sont mis en place simultanément. Cette étude se concentre sur la consommation de chauffage, qui représente les deux tiers de lénergie consommée dans le logement et qui est le principal usage impacté par les politiques de MDE.  Les résultats sont fondés sur des simulations réalisées à laide du modèle Res-IRF30, conçu pour intégrer les déterminants technologiques et économiques propres à la consommation résidentielle dénergie, en lien avec le modèle d'équilibre général IMACLIM-R développé au CIRED. Le rapport détude est organisé de la façon suivante. Le chapitre 1 rappelle le contexte actuel et passé de la MDE. Le chapitre 2 présente les grandes lignes du modèle Res-IRF et discute la projection de référence. Le chapitre 3 analyse les simulations au cas par cas des différents instruments de MDE.  Le chapitre 4 compare lefficacité de différents bouquets de mesures existantes et supplémentaires. Le chapitre 5 discute ces résultats et lapport potentiel dautres mesures. En conclusion",
+            "metadata": {
+              "title": "Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie",
+              "hal_id": "hal-00799740",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Céline Guivarch",
+                "Philippe Quirion",
+                "L. Penot-Antoniou"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion, L. Penot-Antoniou. Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie. Études et documents - Numéro 58, 2011, pp.78. ⟨hal-00799740⟩",
+              "source_url": "https://hal.science/hal-00799740",
+              "chunk_order": 232,
+              "description": "La France s'est engagée à réduire les consommations d'énergie du parc des bâtiments existants de 38 % en 2020 par rapport à 2008, objectif \" Grenelle -38 % \", et à diviser les émissions de CO2 par quatre en 2050 par rapport à 1990, objectif \" Facteur 4 \". Pour atteindre ces objectifs, le Grenelle de l'environnement a mis en avant un certain nombre de leviers réglementaires et incitatifs. Cette étude, réalisée par le CIRED pour le compte du CGDD, a pour objectif d'analyser l'impact de ces différents instruments sur la consommation d'énergie pour le chauffage. Mesures existantes (crédit d'impôt développement durable, éco-prêt à taux zéro, réglementation thermique) et mesures supplémentaires (obligation de rénovation, contribution climat énergie) sont évaluées grâce au modèle Res-IRF du CIRED. Ce modèle prend en compte l'efficacité énergétique des logements et leur évolution dans le temps sous l'effet de rénovations ; il modélise également de façon originale les comportements de chauffage des ménages. Les premières simulations suggèrent que les politiques considérées ne suffisent pas à atteindre les objectifs ambitieux fixés par la France. Ces résultats sont sensibles aux hypothèses retenues. En introduisant des hypothèses plus optimistes (ex : prix des rénovations plus faible) et en prenant en compte des facteurs complémentaires au modèle (ex : bois), un travail de ré-estimation sur la base du modèle du CIRED a permis d'obtenir des résultats plus proches des objectifs du Grenelle.",
+              "document_type": "REPORT",
+              "publication_date": "2011-11-01",
+              "semantic_rank": 10,
+              "full_text_rank": 1,
+              "associated_query": "présente le modèle Res-IRF"
+            }
+          },
+          {
+            "id": "9a92b8ad-6703-571f-9182-7c3fe63f21ef",
+            "document_id": "ce1b1abd-64ab-54e3-9136-893b3ff1851c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017094017094017092,
+            "text": "Document Title: Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie\n\nText: développé au CIRED. Le rapport détude est organisé de la façon suivante. Le chapitre 1 rappelle le contexte actuel et passé de la MDE. Le chapitre 2 présente les grandes lignes du modèle Res-IRF et discute la projection de référence. Le chapitre 3 analyse les simulations au cas par cas des différents instruments de MDE.  Le chapitre 4 compare lefficacité de différents bouquets de mesures existantes et supplémentaires. Le chapitre 5 discute ces résultats et lapport potentiel dautres mesures. En conclusion figurent des recommandations daction publique pour la MDE.  1. La maîtrise de la demande dé1. La maîtrise de la demande dé1. La maîtrise de la demande dé1. La maîtrise de la demande dénergie dans le bâtiment résidentielnergie dans le bâtiment résidentielnergie dans le bâtiment résidentielnergie dans le bâtiment résidentiel    : : : : tendances passées et enjeux futurstendances passées et enjeux futurstendances passées et enjeux futurstendances passées et enjeux futurs     1.1 Impact des mesures de MDE de",
+            "metadata": {
+              "title": "Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie",
+              "hal_id": "hal-00799740",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Céline Guivarch",
+                "Philippe Quirion",
+                "L. Penot-Antoniou"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion, L. Penot-Antoniou. Evaluation des mesures du Grenelle de l'Environnement sur le parc de logements - Rapport pour le Conseil Général du Développement Durable, ministère de l'Ecologie. Études et documents - Numéro 58, 2011, pp.78. ⟨hal-00799740⟩",
+              "source_url": "https://hal.science/hal-00799740",
+              "chunk_order": 233,
+              "description": "La France s'est engagée à réduire les consommations d'énergie du parc des bâtiments existants de 38 % en 2020 par rapport à 2008, objectif \" Grenelle -38 % \", et à diviser les émissions de CO2 par quatre en 2050 par rapport à 1990, objectif \" Facteur 4 \". Pour atteindre ces objectifs, le Grenelle de l'environnement a mis en avant un certain nombre de leviers réglementaires et incitatifs. Cette étude, réalisée par le CIRED pour le compte du CGDD, a pour objectif d'analyser l'impact de ces différents instruments sur la consommation d'énergie pour le chauffage. Mesures existantes (crédit d'impôt développement durable, éco-prêt à taux zéro, réglementation thermique) et mesures supplémentaires (obligation de rénovation, contribution climat énergie) sont évaluées grâce au modèle Res-IRF du CIRED. Ce modèle prend en compte l'efficacité énergétique des logements et leur évolution dans le temps sous l'effet de rénovations ; il modélise également de façon originale les comportements de chauffage des ménages. Les premières simulations suggèrent que les politiques considérées ne suffisent pas à atteindre les objectifs ambitieux fixés par la France. Ces résultats sont sensibles aux hypothèses retenues. En introduisant des hypothèses plus optimistes (ex : prix des rénovations plus faible) et en prenant en compte des facteurs complémentaires au modèle (ex : bois), un travail de ré-estimation sur la base du modèle du CIRED a permis d'obtenir des résultats plus proches des objectifs du Grenelle.",
+              "document_type": "REPORT",
+              "publication_date": "2011-11-01",
+              "semantic_rank": 10,
+              "full_text_rank": 2,
+              "associated_query": "présente le modèle Res-IRF"
+            }
+          },
+          {
+            "id": "5c5aecd0-7e97-5d56-b743-e1ffd759315a",
+            "document_id": "f8244ee2-795c-5600-b1d3-92b65d1b1cd2",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.017033542976939202,
+            "text": "Document Title: Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel\n\nText: 4 \n Synthé sé  \nLa présente étude évalue limpact entre 2012 et 2050 des principales politiques damélioration \nénergétique du parc de logement s privés et sociaux en France. Elle utilise Res-IRF, modèle de prospective \nde la demande dénergie pour le chauffage  développé au CIRED depuis 2008 . Lévaluation porte sur les \npolitiques suivantes  : taxe carbone (TC), crédit dimpôt pour la transition énergétique (CITE), certificats \ndéconomies dénergie (CEE), éco -prêt à taux zéro (EPTZ), TVA à taux réduit (TVAr) et réglementation \nthermique 2020 (RT 2020) . \nCadre de modélisation  \nLe modèle Res -IRF intègre une description fine de la performance énergétique du parc de logements  \nbasée sur les étiquettes énergie du diagno stic de performance énergétique (DPE)  pour les \nconsommations délectricité, gaz naturel, fioul domestique et bois -énergie  pour le chauffage   et des \ncaractéristiques des ménages  différenciés par type dhabitat, niveau de revenu et statut doccupation.",
+            "metadata": {
+              "title": "Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel",
+              "hal_id": "hal-01955954",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Cyril Bourgeois",
+                "Philippe Quirion",
+                "David Glotin"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Cyril Bourgeois, Philippe Quirion, David Glotin. Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel. [Rapport de recherche] CIRED CNRS; ecole des ponts paristech. 2018. ⟨hal-01955954v2⟩",
+              "source_url": "https://hal.science/hal-01955954",
+              "chunk_order": 11,
+              "document_type": "REPORT",
+              "publication_date": "2018-12-21",
+              "semantic_rank": 10,
+              "full_text_rank": 3,
+              "associated_query": "présente le modèle Res-IRF"
+            }
+          },
+          {
+            "id": "846c6c2e-9ecb-5984-9158-28569f3bfff6",
+            "document_id": "0198f54d-ce47-5088-986a-8d223b1b338c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01700653594771242,
+            "text": "Document Title: Incertitudes et inerties au coeur de la question climatique: Explorations numériques en économie du changement climatique\n\nText: et comportementales caractérisant ce secteur  (Fragnière et al., 2016) . Le modèle Res -IRF vise à pallier \ncette limitation. Il représente : (i) le parc de bâtiments résidentiel, ses caractéristiques thermiques, et la \ndynamique de construction, (ii) les décisions de rénovation thermique des bâtiments existants, (iii) \nlajustement de lutilisation des équipements de chauffage suite à une rénov ation thermique dun \nbâtiment  (effet rebond  direct16). Il est calibré  sur le parc de bâtiments résidentiels français de 2008.  \nNotons que les projections que nous avons réalisées c onfirme nt que la question centrale est bien la \nrénovation du capital existant  : plus de 60% des m2 de 2050 existent déjà aujourdhui.  \n \n \nGiraudet et al. (2012)  décrit le modèle Res -IRF, un modèle hybride développé pour évaluer la \ndemande dénergie future du  secteur résidentiel en France . Ce modèle a les caractéristiques suivantes  :",
+            "metadata": {
+              "title": "Incertitudes et inerties au coeur de la question climatique: Explorations numériques en économie du changement climatique",
+              "hal_id": "tel-01654151",
+              "authors": "['Céline Guivarch']",
+              "version": "v0",
+              "citation": "Céline Guivarch. Incertitudes et inerties au coeur de la question climatique: Explorations numériques en économie du changement climatique. Economies et finances. Université Paris Est, 2017. ⟨tel-01654151⟩",
+              "source_url": "https://hal.science/tel-01654151",
+              "chunk_order": 186,
+              "description": "Mes travaux s’intéressent à la question du changement climatique, défi majeur posé à nos sociétés, qui porte à une échelle et une complexité sans précédent la question des politiques publiques. Le climat est un bien public global, mais il y existe une grande hétérogénéité des coûts et des bénéfices. De plus, c’est une question qui implique le très long-terme, et de nombreuses irréversibilités et incertitudes. Les causes du changement climatique, ainsi que les solutions face aux défis qu’il pose, impliquent l’ensemble des aspects de nos modes de vie, concernent tous les secteurs économiques, et nécessitent de penser les interactions entre des systèmes complexes socio-économiques, techniques et naturels. J’aborde cette question du changement climatique à travers l’économie de l’environnement et des ressources (économie du changement climatique, et économie de l’énergie puisque l’énergie représente une grande partie des émissions de gaz à effet de serre), ainsi que des travaux multidisciplinaires en lien avec modélisation du climat et du cycle du carbone, ou mobilisant les mathématiques appliquées, la recherche opérationnelle, ou les sciences de l’environnement. Mes travaux sont publiés pour une partie dans des journaux d’économie, pour une autre dans des revues interdisciplinaires telles que Climatic Change, Global Environmental Change, Climate Policy ou Nature Communications. Il me semble en effet que ce lien avec d’autres disciplines est nécessaire pour répondre à des questions à teneur économique in fine mais pour lesquelles la compréhension de mécanismes physiques est clé pour poser correctement la question et représenter de façon pertinente les mécanismes, ou pour construire et tirer parti de résultats de modèles reposant sur de nombreuses équations et paramètres car représentant des systèmes complexes. La plupart de mes travaux sont de nature appliquée, et s’appuient sur des modèles numériques. Les modèles sont pris comme une heuristique, un cadre à penser, pour tenter d’analyser les interactions dans un système complexe, de dégager une vision globale et systémique, et de faire ressortir des résultats quantifiés robustes ou les déterminants principaux des incertitudes, dans une démarche prospective. Le bilan qui suit présente mes travaux qui se rattachent à deux grandes questions transversales (et à leur intersection) : celle de l’irréversibilité et des inerties, et celle des incertitudes. Ainsi, le bilan n’est pas exhaustif et exclut un certain nombre de travaux, sur des sujets connexes, tels que la précarité énergétique par exemple.",
+              "document_type": "HDR",
+              "publication_date": "2017-04-19",
+              "semantic_rank": 1,
+              "full_text_rank": 200,
+              "associated_query": "présente le modèle Res-IRF"
+            }
+          },
+          {
+            "id": "b7afa9cd-91a9-58b8-a947-bd0398478209",
+            "document_id": "f8244ee2-795c-5600-b1d3-92b65d1b1cd2",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016692307692307694,
+            "text": "Document Title: Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel\n\nText: 7 \n Table des matières  \n1 Contexte de létude  ................................ ................................ ................................ .............................  12 \n1.1 Vue densemble du modèle Res -IRF ................................ ................................ ............................  13 \n1.2 Données utilisées  ................................ ................................ ................................ ........................  13 \n1.3 Objectifs et politiques évalués  ................................ ................................ ................................ .... 15 \n2 Paramétrage de Res -IRF 3.0  ................................ ................................ ................................ ................  15 \n2.1 Parc de logements  ................................ ................................ ................................ .......................  15",
+            "metadata": {
+              "title": "Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel",
+              "hal_id": "hal-01955954",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Cyril Bourgeois",
+                "Philippe Quirion",
+                "David Glotin"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Cyril Bourgeois, Philippe Quirion, David Glotin. Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel. [Rapport de recherche] CIRED CNRS; ecole des ponts paristech. 2018. ⟨hal-01955954v2⟩",
+              "source_url": "https://hal.science/hal-01955954",
+              "chunk_order": 25,
+              "document_type": "REPORT",
+              "publication_date": "2018-12-21",
+              "semantic_rank": 2,
+              "full_text_rank": 200,
+              "associated_query": "présente le modèle Res-IRF"
+            }
+          },
+          {
+            "id": "625f922a-62ca-55a3-9ccb-93c704fa371e",
+            "document_id": "d8aa785e-ed6d-57ef-a422-cc3664819e0d",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01638993710691824,
+            "text": "Document Title: Efficacité économique et effets distributifs de long-terme des politiques de rénovation énergétique des logements\n\nText: 6 \n 2 Le modèle  Res-IRF 3.0 en bref  \nLe modèle Res-IRF simule la demande dénergie pour le chauffage dans le secteur résidentiel en France . \nIl combine une description détaillée de la performance énergétique des logements et des \ncaractéristiques socio -économiques des ménages qui les occupent.  La dernière version du modèle ( 3.0) \nintègre une segmentation des ménages par niveau de revenu.  \n2.1 Structure  et données  \nLe modèle est décrit en détail dans Giraudet et al. (2012) et Branger et al . (2015). La section ci -dessous \ndonne un aperçu des processus clés et détaille les développements qui n'ont pas été inclus dans les \nréférences déjà publiées.  \nLe parc de logements est paramétré à partir des données de  lenquête Phébus , qui croise les données \nsocio -économiques des ménages avec lefficacité  énergétique de  leur logement. Le  périmètre du modèle \ncouvre les résidences principales en France métropolitaine, soit 23,9 millions de logements. Ce parc est",
+            "metadata": {
+              "doi": "10.3917/ecop1.217.0044",
+              "title": "Efficacité économique et effets distributifs de long-terme des politiques de rénovation énergétique des logements",
+              "hal_id": "hal-03100351",
+              "authors": "['Louis-Gaëtan Giraudet', 'Cyril Bourgeois', 'Philippe Quirion']",
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Cyril Bourgeois, Philippe Quirion. Efficacité économique et effets distributifs de long-terme des politiques de rénovation énergétique des logements. Economie et Prévision, 2020, ⟨10.3917/ecop1.217.0044⟩. ⟨hal-03100351⟩",
+              "source_url": "https://doi.org/10.3917/ecop1.217.0044",
+              "chunk_order": 27,
+              "description": "Cet article évalue l'impact entre 2012 et 2050 des principales politiques d'amélioration énergétique du parc de logements privés et sociaux en France. Cette étude utilise le modèle technico-économique Res-IRF, qui simule l'évolution de la demande d'énergie pour le chauffage des logements sous l'effet de la construction neuve et de la rénovation énergétique des logements.",
+              "document_type": "ART",
+              "publication_date": "2020-01-01",
+              "semantic_rank": 3,
+              "full_text_rank": 200,
+              "associated_query": "présente le modèle Res-IRF"
+            }
+          },
+          {
+            "id": "dfa2ca1d-c037-55d6-9c34-acfdc78c5e6a",
+            "document_id": "09264d1f-963e-5db4-af42-4b0a46324546",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.016098765432098764,
+            "text": "Document Title: Comparing and combining energy saving policies : Will proposed residential sector policies meet French official targets ?\n\nText: convE EESSE\n (1) \n                                                           \n3 Res-IRF stands for the residential module of IMACLIM -R France . IMACLIM is a general equilibrium  framework \ndeveloped at CIRED. IMACLIM -R is a hybrid model linking recursively IMACLIM general equilibrium to \ntechnological simulation modules. The national version of IMACLIM -R represents France as a small open \neconomy. Exhaustive descriptions of IMACLIM -R and Res -IRF can be found in Sassi et al.  (2010) and Giraudet et \nal. (201 1), respectively. Key parameters of Res -IRF are outlined in annex  1, table A1 .",
+            "metadata": {
+              "title": "Comparing and combining energy saving policies : Will proposed residential sector policies meet French official targets ?",
+              "hal_id": "hal-00866424",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Céline Guivarch",
+                "Philippe Quirion"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Céline Guivarch, Philippe Quirion. Comparing and combining energy saving policies : Will proposed residential sector policies meet French official targets ?. 2011. ⟨hal-00866424⟩",
+              "source_url": "https://hal.science/hal-00866424",
+              "chunk_order": 23,
+              "description": "This paper assesses the impact of French policies for residential space-heating energy consumption, both enacted (tax credits for the purchase of energy efficient durables, soft loans for retrofitting actions, stringent building codes) and anticipated (carbon tax, retrofitting obligation). It uses a hybrid energy-economy model incorporating specific features of energy conservation, notably the rebound effect and some \"barriers\" to energy efficiency such as split incentives and imperfect information. Forward-looking simulations show that (i) stand-alone policies improve the energy efficiency of the building stock but, with the exception of carbon tax, generate a rebound effect ; (ii) interactions among instruments are roughly additive ; (iii) a combination of all policies fails to meet Government conservation targets.",
+              "document_type": "UNDEFINED",
+              "publication_date": "2011-07-01",
+              "semantic_rank": 4,
+              "full_text_rank": 200,
+              "associated_query": "présente le modèle Res-IRF"
+            }
+          },
+          {
+            "id": "43f4bf32-cff9-56a4-b371-ba979476133d",
+            "document_id": "ff96cb05-8dab-5c25-9bda-53cf508d2490",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015818181818181818,
+            "text": "Document Title: Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle\n\nText: 86 \n Daprès la définition introduite plus haut, Res-IRF peut être qualifié d hybride au sens de  modèle \nbottom-up  enrichi sur le plan microéconomique . A ce titre, il se rapproche du modèle CI MS \n(Canadian Integrated Modeling System ), développé à lUniversité Simon Fraser de Vancouver au \nCanada (Jaccard et Dennis, 2006).  \n1.1.2  Bouclage macroéconomique avec le modèle déquilibre général IMACLIM-R \nLe module Res-IRF peut être utilisé de façon autonome à partir de scénarios exog ènes de croissance \ndémographique, dévolution du revenu disponible réel des ménages et de prix des énergies. Dans les \nsimulations qui suivent, il est couplé de façon récursive au modèle déquilibre général IMACLIM-R  \nadapté à léconomie française , représentée comme une petite économie ouverte. Conformément à \nla définition dintroduction, c e couplage constitue un deuxième niveau dhybridation.  \nA chaque année n, l'équilibre général détermine les prix des énergies et le revenu des ménages. Ces",
+            "metadata": {
+              "title": "Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle",
+              "hal_id": "tel-00599374",
+              "authors": [
+                "Louis-Gaëtan Giraudet"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet. Les instruments économiques de maîtrise de l'énergie : une évaluation multidimensionnelle. Economies et finances. Université Paris-Est, 2011. Français. ⟨NNT : 2011PEST1139⟩. ⟨tel-00599374v2⟩",
+              "source_url": "https://hal.science/tel-00599374",
+              "chunk_order": 416,
+              "description": "Cette thèse évalue l'efficacité de différentes formes de taxes, subventions et réglementations mises en place pour corriger les défaillances de marché qui s'opposent aux économies d'énergie. Elle mobilise plusieurs approches, selon un degré de complexité croissant. Dans un premier temps, un modèle microéconomique standard est développé pour comparer les performances statiques des différents instruments. Dans un deuxième temps, la représentation des comportements des consommateurs est approfondie dans un modèle de prospective de la consommation d'énergie pour le chauffage des ménages français, qui permet d'identifier les mécanismes dynamiques par lesquels les instruments peuvent corriger les principales défaillances de marché. Dans un troisième temps, une évaluation empirique des dispositifs de « certificats blancs » – obligations échangeables d'économies d'énergie imposées aux opérateurs énergétiques – est menée à partir d'une comparaison des expériences britannique, italienne et française, en intégrant les institutions dans l'analyse. Le croisement de ces différentes approches montre que : (i) les taxes sur l'énergie, qui encouragent à la fois l'investissement dans l'efficacité énergétique et la sobriété des comportements, sont particulièrement efficaces ; (ii) les réglementations sur l'efficacité énergétique ont un impact significatif sur la diffusion des technologies efficaces ; (iii) les subventions à l'efficacité énergétique génèrent un effet rebond important ; (iv) en fonction de l'environnement institutionnel dans lequel ils s'insèrent, les « certificats blancs » combinent les propriétés de ces instruments. Appliquée en France au secteur du bâtiment résidentiel, la combinaison la plus efficace de ces instruments ne permet pas d'atteindre les objectifs d'économies d'énergie définis dans le cadre du Grenelle de l'environnement",
+              "document_type": "THESE",
+              "publication_date": "2011-03-28",
+              "semantic_rank": 5,
+              "full_text_rank": 200,
+              "associated_query": "présente le modèle Res-IRF"
+            }
+          },
+          {
+            "id": "1117db10-853b-5387-85a7-3ba1c96e2fd4",
+            "document_id": "f8244ee2-795c-5600-b1d3-92b65d1b1cd2",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.015547619047619046,
+            "text": "Document Title: Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel\n\nText: finaux nengagent que les chercheurs du CIRED qui lont réalisée . \n                                                           \n1 Le sigle Res -IRF désigne le module Résidentiel dIMACLIM -R France, modèle déquilibre général également \ndéveloppé au CIRED. Res -IRF est ici utilisé indépendamment dIMACLIM -R France. Pour un couplage des deux \nmodèles, voir Mathy et al. (2015).  \n2 http://www.statistiques.developpement -durable.gouv.fr/sources -methodes/enquete -\nnomenclature/1541/0/enquete -performance -lhabitat -equipements -besoins -usages.html",
+            "metadata": {
+              "title": "Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel",
+              "hal_id": "hal-01955954",
+              "authors": [
+                "Louis-Gaëtan Giraudet",
+                "Cyril Bourgeois",
+                "Philippe Quirion",
+                "David Glotin"
+              ],
+              "version": "v0",
+              "citation": "Louis-Gaëtan Giraudet, Cyril Bourgeois, Philippe Quirion, David Glotin. Evaluation prospective des politiques de réduction de la demande d'énergie pour le chauffage résidentiel. [Rapport de recherche] CIRED CNRS; ecole des ponts paristech. 2018. ⟨hal-01955954v2⟩",
+              "source_url": "https://hal.science/hal-01955954",
+              "chunk_order": 52,
+              "document_type": "REPORT",
+              "publication_date": "2018-12-21",
+              "semantic_rank": 6,
+              "full_text_rank": 200,
+              "associated_query": "présente le modèle Res-IRF"
+            }
+          },
+          {
+            "id": "4734362a-e427-5a08-89c8-04a023d100a7",
+            "document_id": "0198f54d-ce47-5088-986a-8d223b1b338c",
+            "owner_id": "7b8515c6-e9bf-5e32-adde-c7470b9a5383",
+            "collection_ids": [
+              "6215d3cf-511c-5126-ab05-5eb5aafdde0c"
+            ],
+            "score": 0.01528654970760234,
+            "text": "Document Title: Incertitudes et inerties au coeur de la question climatique: Explorations numériques en économie du changement climatique\n\nText: sappuient sur le modèle Res -IRF (qui représente le sect eur résidentiel dans le modèle Imaclim -R \nFrance) qui a été développé pour r eprésenter et quantifier leffet des b arrières à lefficacité énergétique  \net évaluer ex ante  les instruments de politique et leur superposition . \nBien que le secteur résidentiel soit  reconnu comme un des secteurs avec un potentiel important \ndamélioration de lefficacité énergétique et de réduction des émissions de GES, sa représentation dans \nles modèles de prospective est souvent limitée dans sa représentation des dynamiques technolo giques \net comportementales caractérisant ce secteur  (Fragnière et al., 2016) . Le modèle Res -IRF vise à pallier \ncette limitation. Il représente : (i) le parc de bâtiments résidentiel, ses caractéristiques thermiques, et la \ndynamique de construction, (ii) les décisions de rénovation thermique des bâtiments existants, (iii) \nlajustement de lutilisation des équipements de chauffage suite à une rénov ation thermique dun",
+            "metadata": {
+              "title": "Incertitudes et inerties au coeur de la question climatique: Explorations numériques en économie du changement climatique",
+              "hal_id": "tel-01654151",
+              "authors": "['Céline Guivarch']",
+              "version": "v0",
+              "citation": "Céline Guivarch. Incertitudes et inerties au coeur de la question climatique: Explorations numériques en économie du changement climatique. Economies et finances. Université Paris Est, 2017. ⟨tel-01654151⟩",
+              "source_url": "https://hal.science/tel-01654151",
+              "chunk_order": 185,
+              "description": "Mes travaux s’intéressent à la question du changement climatique, défi majeur posé à nos sociétés, qui porte à une échelle et une complexité sans précédent la question des politiques publiques. Le climat est un bien public global, mais il y existe une grande hétérogénéité des coûts et des bénéfices. De plus, c’est une question qui implique le très long-terme, et de nombreuses irréversibilités et incertitudes. Les causes du changement climatique, ainsi que les solutions face aux défis qu’il pose, impliquent l’ensemble des aspects de nos modes de vie, concernent tous les secteurs économiques, et nécessitent de penser les interactions entre des systèmes complexes socio-économiques, techniques et naturels. J’aborde cette question du changement climatique à travers l’économie de l’environnement et des ressources (économie du changement climatique, et économie de l’énergie puisque l’énergie représente une grande partie des émissions de gaz à effet de serre), ainsi que des travaux multidisciplinaires en lien avec modélisation du climat et du cycle du carbone, ou mobilisant les mathématiques appliquées, la recherche opérationnelle, ou les sciences de l’environnement. Mes travaux sont publiés pour une partie dans des journaux d’économie, pour une autre dans des revues interdisciplinaires telles que Climatic Change, Global Environmental Change, Climate Policy ou Nature Communications. Il me semble en effet que ce lien avec d’autres disciplines est nécessaire pour répondre à des questions à teneur économique in fine mais pour lesquelles la compréhension de mécanismes physiques est clé pour poser correctement la question et représenter de façon pertinente les mécanismes, ou pour construire et tirer parti de résultats de modèles reposant sur de nombreuses équations et paramètres car représentant des systèmes complexes. La plupart de mes travaux sont de nature appliquée, et s’appuient sur des modèles numériques. Les modèles sont pris comme une heuristique, un cadre à penser, pour tenter d’analyser les interactions dans un système complexe, de dégager une vision globale et systémique, et de faire ressortir des résultats quantifiés robustes ou les déterminants principaux des incertitudes, dans une démarche prospective. Le bilan qui suit présente mes travaux qui se rattachent à deux grandes questions transversales (et à leur intersection) : celle de l’irréversibilité et des inerties, et celle des incertitudes. Ainsi, le bilan n’est pas exhaustif et exclut un certain nombre de travaux, sur des sujets connexes, tels que la précarité énergétique par exemple.",
+              "document_type": "HDR",
+              "publication_date": "2017-04-19",
+              "semantic_rank": 7,
+              "full_text_rank": 200,
+              "associated_query": "présente le modèle Res-IRF"
+            }
+          }
+        ],
+        "metadata": {
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 2732,
+            "total_tokens": 2732
+          }
+        }
+      },
+      "duration": 3401
+    },
+    "retrievalTime": 3689,
+    "generationTime": 3401,
+    "timestamp": "2025-07-10T08:55:20.412Z"
+  },
+  "server_context": {
+    "client_ip": "193.51.120.250",
+    "forwarded_for": "193.51.120.250",
+    "received_at": "2025-07-10T08:55:20.548451+00:00",
+    "server_version": "1.0.0"
+  }
+}
