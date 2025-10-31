@@ -87,16 +87,28 @@ def plot_session_activity_timeline(
     )  # Public beta launch with September newsletter
 
     # Add shaded regions for phases
-    ax1.axvspan(min_date, alpha_end, alpha=0.1, color="green", label="Alpha Phase")
+    ax1.axvspan(
+        min_date,
+        alpha_end.to_pydatetime(),
+        alpha=0.1,
+        color="green",
+        label="Alpha Phase",
+    )
 
     ax1.axvspan(
-        alpha_end,
-        beta_closed_end,
+        alpha_end.to_pydatetime(),
+        beta_closed_end.to_pydatetime(),
         alpha=0.1,
         color="orange",
         label="Beta Closed",
     )
-    ax1.axvspan(beta_closed_end, max_date, alpha=0.1, color="blue", label="Beta Open")
+    ax1.axvspan(
+        beta_closed_end.to_pydatetime(),
+        max_date.to_pydatetime(),
+        alpha=0.1,
+        color="blue",
+        label="Beta Open",
+    )
 
     # Label each shaded phase region
     alpha_mid = min_date + (alpha_end - min_date) / 2
