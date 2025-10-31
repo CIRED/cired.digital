@@ -5,10 +5,17 @@ A dual-axis line chart shows the number of sessions and requests over time.
 Shaded regions indicate different project phases (Alpha, Beta closed, Beta open).
 """
 
+from datetime import datetime
+
 import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 import pandas as pd
 from logloader import events_df
+
+
+def date2num_typed(d: datetime) -> float:
+    """Cast a datetime as a float explicitly."""
+    return float(mdates.date2num(d))
 
 
 def plot_session_activity_timeline(
@@ -88,23 +95,23 @@ def plot_session_activity_timeline(
 
     # Add shaded regions for phases
     ax1.axvspan(
-        mdates.date2num(min_date),
-        mdates.date2num(alpha_end),
+        date2num_typed(min_date),
+        date2num_typed(alpha_end),
         alpha=0.1,
         color="green",
         label="Alpha Phase",
     )
 
     ax1.axvspan(
-        mdates.date2num(alpha_end),
-        mdates.date2num(beta_closed_end),
+        date2num_typed(alpha_end),
+        date2num_typed(beta_closed_end),
         alpha=0.1,
         color="orange",
         label="Beta Closed",
     )
     ax1.axvspan(
-        mdates.date2num(beta_closed_end),
-        mdates.date2num(max_date),
+        date2num_typed(beta_closed_end),
+        date2num_typed(max_date),
         alpha=0.1,
         color="blue",
         label="Beta Open",
