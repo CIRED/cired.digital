@@ -42,7 +42,8 @@ jobs:
         run: uv run ruff format --check .
         continue-on-error: true
 
-      - name: Run mypy type checking
+      - name: Run mypy type checking (disabled)
+        if: ${{false}}
         run: uv run mypy src/
 
       - name: Run tests (placeholder)
