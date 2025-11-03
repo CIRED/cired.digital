@@ -12,38 +12,44 @@ Usage:
 import glob
 import json
 import os
+from pathlib import Path
 from typing import Any
 
 import pandas as pd
 
-DEFAULT_BASE_PATH = "../../reports/monitor-logs"
+DEFAULT_BASE_PATH = Path(__file__).resolve().parents[2] / "reports" / "monitor-logs"
 DEFAULT_MIN_DATE = "20250705"
 
 
+def _resolve_base_path(base_path: str | Path | None) -> Path:
+    """Resolve the base path for monitor logs."""
+    base = Path(base_path) if base_path is not None else Path(DEFAULT_BASE_PATH)
+    resolved = base.resolve()
+    print(f"Using monitor logs base path: {resolved}")
+    if not resolved.exists():
+        print(
+            f"Warning: base path does not exist: {resolved} (will scan but expect 0 files)"
+        )
+    return resolved
+
+
 def load_all_log_files(
-    base_path: str = DEFAULT_BASE_PATH, min_date: str = DEFAULT_MIN_DATE
+    base_path: str | Path | None = None, min_date: str = DEFAULT_MIN_DATE
 ) -> list[dict[str, Any]]:
     """
     Load all JSON files from the log directory structure.
 
-    Handles the recursive YYYY/MM/DD/ folder structure.
-    Each JSON file contains: sessionId, timestamp, eventType, payload, server_context.
-
-    Args:
-        base_path: Path to monitor-logs directory
-        min_date: Only load files from this date onwards (format: YYYYMMDD, e.g., '20250705')
-
-    Returns:
-        list: List of event dictionaries
-
+    If base_path is None, uses DEFAULT_BASE_PATH resolved relative to this module.
     """
+    resolved_base = _resolve_base_path(base_path)
+
     all_events: list[dict[str, Any]] = []
     file_count = 0
     error_count = 0
     skipped_count = 0
 
-    # Use glob to find all JSON files recursively
-    json_pattern = os.path.join(base_path, "**/*.json")
+    # Use glob to find all JSON files recursively (path resolved against resolved_base)
+    json_pattern = str(resolved_base / "**" / "*.json")
     json_files = glob.glob(json_pattern, recursive=True)
 
     print(f"Found {len(json_files)} JSON files total")
@@ -74,7 +80,14 @@ def load_all_log_files(
 
             # Validate required fields
             if all(
-                key in event_data for key in ["sessionId", "timestamp", "eventType"]
+                key in event_data
+                for key in [
+                    "sessionId",
+                    "timestamp",
+                    "eventType",
+                    "payload",
+                    "server_context",
+                ]
             ):
                 all_events.append(event_data)
                 file_count += 1
@@ -146,6 +159,19 @@ def augment_dataframe(events_df: pd.DataFrame) -> None:
         payload["query"] if etype == "request" else None
         for etype, payload in zip(events_df["eventType"], events_df["payload"])
     ]
+    # Rename "visibilityChange" events to "visibilityOn" or "visibilityOff"
+    events_df["eventType"] = [
+        (
+            "visibilityOn"
+            if etype == "visibilityChange"
+            and payload.get("visibilityState") == "visible"
+            else "visibilityOff"
+            if etype == "visibilityChange"
+            and payload.get("visibilityState") == "hidden"
+            else etype
+        )
+        for etype, payload in zip(events_df["eventType"], events_df["payload"])
+    ]
 
 
 def create_sessions_list(events_df: pd.DataFrame) -> list[dict[str, Any]]:
@@ -190,7 +216,7 @@ events_df = create_events_dataframe(all_events)
 # Augment DataFrame with additional features
 if not events_df.empty:
     augment_dataframe(events_df)
-    print("DataFrame augmented with query_text column")
+    print("DataFrame augmented with query column and renamed visibility events")
 
 # Create sessions DataFrame
 sessions = create_sessions_list(events_df)
