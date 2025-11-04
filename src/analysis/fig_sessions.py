@@ -10,7 +10,7 @@ from typing import Any
 
 import matplotlib.pyplot as plt
 import networkx as nx
-from logloader import sessions  # Import sessions from logloader module
+from logloader import sessions
 
 
 def plot_session_event_type_transitions(
