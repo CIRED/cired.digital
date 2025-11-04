@@ -7,15 +7,16 @@ Shaded regions indicate different project phases (Alpha, Beta closed, Beta open)
 
 from datetime import datetime
 
-import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 import pandas as pd
 from logloader import events_df
+from matplotlib.dates import date2num
 
 
-def date2num_typed(d: datetime) -> float:
-    """Cast a datetime as a float explicitly."""
-    return float(mdates.date2num(d))
+def date2float(d: datetime) -> float:
+    """Cast a datetime as a native float instead of a numpy.float64."""
+    result = date2num(d)
+    return float(result)
 
 
 def plot_session_activity_timeline(
@@ -95,23 +96,23 @@ def plot_session_activity_timeline(
 
     # Add shaded regions for phases
     ax1.axvspan(
-        date2num_typed(min_date),
-        date2num_typed(alpha_end),
+        date2float(min_date),
+        date2float(alpha_end),
         alpha=0.1,
         color="green",
         label="Alpha Phase",
     )
 
     ax1.axvspan(
-        date2num_typed(alpha_end),
-        date2num_typed(beta_closed_end),
+        date2float(alpha_end),
+        date2float(beta_closed_end),
         alpha=0.1,
         color="orange",
         label="Beta Closed",
     )
     ax1.axvspan(
-        date2num_typed(beta_closed_end),
-        date2num_typed(max_date),
+        date2float(beta_closed_end),
+        date2float(max_date),
         alpha=0.1,
         color="blue",
         label="Beta Open",
@@ -141,7 +142,7 @@ def plot_session_activity_timeline(
 
     # 1) vertical markers (no legend labels to keep legend clean)
     for x, color in [(alpha_end, "green"), (beta_closed_end, "orange")]:
-        ax1.axvline(x.to_pydatetime(), linestyle="--", lw=1, color=color, zorder=3)
+        ax1.axvline(date2float(x), linestyle="--", lw=1, color=color, zorder=3)
 
     # 2) rotated labels anchored near the bottom (works well if you set ylim bottom to -4)
     ymin, ymax = ax1.get_ylim()
@@ -151,7 +152,7 @@ def plot_session_activity_timeline(
     ]:
         ax1.annotate(
             text,
-            xy=(x.to_pydatetime(), ymax),  # anchor at top edge
+            xy=(date2float(x), ymax),  # anchor at top edge
             xytext=(6, -6),  # small offset into the plot
             textcoords="offset points",
             rotation=0,
@@ -179,7 +180,6 @@ def plot_session_activity_timeline(
     ax1.legend(lines, labels, loc="upper right", bbox_to_anchor=(0.98, 0.98))
 
     # Format x-axis
-    ax1.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m-%d"))
     plt.setp(ax1.xaxis.get_majorticklabels(), rotation=45, ha="right")
 
     plt.tight_layout()

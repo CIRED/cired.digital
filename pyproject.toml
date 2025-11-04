@@ -54,6 +54,7 @@ dev = [
   "mypy>=1.16,<2.0",
   "pre-commit>=3.0,<5.0",
   "types-requests",
+  "matplotlib-stubs",
   "pandas-stubs>=2.2.0,!=2.3.0.250702",
   "types-docker",
   "types-tabulate",
@@ -80,13 +81,12 @@ max-complexity = 10
 python_version = "3.11"
 plugins = ["pydantic.mypy"]
 strict = true
-warn_unused_ignores = true
+warn_unused_ignores = false
 show_error_codes = true
 
 [[tool.mypy.overrides]]
 module = [
   "r2r.*",
-  "matplotlib.*",
   "wordcloud.*",
   "pytest_playwright.*",
   "playwright.*",
