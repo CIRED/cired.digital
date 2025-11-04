@@ -154,6 +154,13 @@ def augment_dataframe(events_df: pd.DataFrame) -> None:
         events_df: DataFrame to modify in place
 
     """
+    # The client IP from the server_context
+    events_df["ip"] = [context["client_ip"] for context in events_df["server_context"]]
+    # The user agent from payload for "sessionStart" event types
+    events_df["ua"] = [
+        payload["userAgent"] if etype == "sessionStart" else None
+        for etype, payload in zip(events_df["eventType"], events_df["payload"])
+    ]
     # The query text for "request" event types
     events_df["query"] = [
         payload["query"] if etype == "request" else None
@@ -189,6 +196,8 @@ def create_sessions_list(events_df: pd.DataFrame) -> list[dict[str, Any]]:
     for session_id, group in events_df.groupby("sessionId"):
         session_dict: dict[str, Any] = {
             "sessionId": session_id,
+            "ip": group["ip"].iloc[0],
+            "ua": group["ua"].iloc[0],
             "start_time": group["timestamp"].min(),
             "end_time": group["timestamp"].max(),
             "event_count": len(group),
