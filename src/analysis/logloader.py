@@ -16,7 +16,7 @@ from pathlib import Path
 from typing import Any
 
 import pandas as pd
-from ipclassifier import classify
+from classifier import classify_ip, classify_ua
 
 DEFAULT_BASE_PATH = Path(__file__).resolve().parents[2] / "reports" / "monitor-logs"
 DEFAULT_MIN_DATE = "20250705"
@@ -158,11 +158,15 @@ def augment_dataframe(events_df: pd.DataFrame) -> None:
     # The client IP from the server_context
     events_df["ip"] = [context["client_ip"] for context in events_df["server_context"]]
     # The origin label classified from the IP
-    events_df["origin"] = [classify(ip) for ip in events_df["ip"]]
+    events_df["origin"] = [classify_ip(ip) for ip in events_df["ip"]]
     # The user agent from payload for "sessionStart" event types
     events_df["ua"] = [
         payload["userAgent"] if etype == "sessionStart" else None
         for etype, payload in zip(events_df["eventType"], events_df["payload"])
+    ]
+    # The classified user agent label
+    events_df["ua_class"] = [
+        classify_ua(ua) if ua is not None else "??" for ua in events_df["ua"]
     ]
     # The query text for "request" event types
     events_df["query"] = [
@@ -200,7 +204,9 @@ def create_sessions_list(events_df: pd.DataFrame) -> list[dict[str, Any]]:
         session_dict: dict[str, Any] = {
             "sessionId": session_id,
             "ip": group["ip"].iloc[0],
+            "origin": group["origin"].iloc[0],
             "ua": group["ua"].iloc[0],
+            "ua_class": group["ua_class"].iloc[0],
             "start_time": group["timestamp"].min(),
             "end_time": group["timestamp"].max(),
             "event_count": len(group),

@@ -5,7 +5,8 @@ This module classifies client IP (CIRED/RENATER/research,
 French residential, bots, etc.)
 
 Exports:
-- classify(ip): Identify an IP's origin/bot category.
+- classify_ip(ip): Identify an IP's origin/bot category.
+- classify_ua(ua): Identify a user agent's browser/device category.
 """
 
 import ipaddress
@@ -31,7 +32,7 @@ RENATER_PREFIXES = [
 ]
 
 
-def is_cired(ip: str) -> bool:
+def _is_cired(ip: str) -> bool:
     """
     Return True if the IP belongs to one of the CIRED subnets.
 
@@ -50,7 +51,7 @@ def _quick_label_from_prefix(ip: str) -> str | None:
 
     Returns a label when a quick decision is possible, otherwise None.
     """
-    if is_cired(ip):
+    if _is_cired(ip):
         return "CIRED (CIRAD)"
     if any(ip.startswith(prefix) for prefix in RENATER_PREFIXES):
         return "Recherche"
@@ -107,7 +108,7 @@ def _label_from_host(host: str, ip: str) -> str | None:
     return None
 
 
-def classify(ip: str) -> str:
+def classify_ip(ip: str) -> str:
     """
     Classify a client IP into an origin/bot category.
 
@@ -130,3 +131,42 @@ def classify(ip: str) -> str:
 
     print(host)
     return "Unidentified"
+
+
+def classify_ua(ua: str) -> str:
+    """
+    Classify a user agent string into browser/device categories.
+
+    Args:
+        ua (str): The user agent string to classify.
+
+    Returns:
+        str: A classification string indicating the browser/device type.
+             Possible return values:
+             - "edge": Microsoft Edge browser
+             - "chrome-mobile": Chrome browser on mobile device
+             - "chrome-desktop": Chrome browser on desktop
+             - "firefox": Firefox browser
+             - "safari-desktop": Safari browser on macOS
+             - "iphone": iPhone device
+             - "other": Any user agent that doesn't match the above patterns
+
+    Note:
+        Classification is based on string pattern matching in the user agent.
+        The function checks patterns in order, so more specific patterns
+        (like chrome-mobile) are checked before general ones (like chrome-desktop).
+
+    """
+    if "Edg/" in ua:
+        return "edge"
+    if "Chrome/" in ua and "Mobile" in ua:
+        return "chrome-mobile"
+    if "Chrome/" in ua:
+        return "chrome-desktop"
+    if "Firefox/" in ua:
+        return "firefox"
+    if "Safari/" in ua and "Mac OS X" in ua:
+        return "safari-desktop"
+    if "iPhone" in ua:
+        return "iphone"
+    return "other"
