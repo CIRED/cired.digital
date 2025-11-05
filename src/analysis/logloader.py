@@ -16,6 +16,7 @@ from pathlib import Path
 from typing import Any
 
 import pandas as pd
+from ipclassifier import classify
 
 DEFAULT_BASE_PATH = Path(__file__).resolve().parents[2] / "reports" / "monitor-logs"
 DEFAULT_MIN_DATE = "20250705"
@@ -156,6 +157,8 @@ def augment_dataframe(events_df: pd.DataFrame) -> None:
     """
     # The client IP from the server_context
     events_df["ip"] = [context["client_ip"] for context in events_df["server_context"]]
+    # The origin label classified from the IP
+    events_df["origin"] = [classify(ip) for ip in events_df["ip"]]
     # The user agent from payload for "sessionStart" event types
     events_df["ua"] = [
         payload["userAgent"] if etype == "sessionStart" else None
