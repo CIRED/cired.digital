@@ -1,0 +1,60 @@
+Analyzing articles from: ../../reports/monitor-logs
+Found 411 article files
+
+================================================================================
+ARTICLE GENERATION SUMMARY
+================================================================================
+
+Total articles analyzed: 411
+Date range: 2025-06-23 13:24:31.959000 to 2025-10-09 09:02:00.995000
+
+--- Content Statistics ---
+Total words generated: 79,766
+Average words per article: 194.1
+Median words per article: 174
+Min/Max words: 6 / 886
+
+--- Citations ---
+Total citations: 2,509
+Average citations per article: 6.1
+Median citations per article: 5
+Total unique documents cited: 1,144
+Average documents per article: 2.8
+Median documents per article: 2
+
+--- Token Counts ---
+Total input tokens: 411,082.0
+Average input tokens per article: 1065.0
+Total output tokens: 404,312.0
+Average output tokens per article: 1047.4
+
+--- Costs ---
+Total LLM cost: 27.92 cents ($0.28)
+Average LLM cost per article: 0.07 cents
+Total self-hosting cost: 180.27 cents ($1.80)
+Average self-hosting cost per article: 0.47 cents
+Total combined cost: 208.19 cents ($2.08)
+Average total cost per article: 0.51 cents
+
+--- Timing ---
+Total generation time: 2163.3 seconds (36.1 minutes)
+Average generation time: 5.60 seconds
+Median generation time: 4.79 seconds
+
+--- Top 10 Longest Articles ---
+                                                       query  word_count  num_documents  completion_tokens  total_cost_cents
+Smart grid implementation represents a crucial advancemen...         886              1             3264.0              0.28
+Hanoi has just announced that it will ban diesel and petr...         571              6             3899.0              1.81
+                                                 oil markets         471              4             3635.0              0.53
+WP5 will assess externalities such as CO₂ emissions, job ...         467              6             3231.0              0.22
+        explain Uncertainty in digital soil mapping products         426              1             3068.0              0.28
+les impacts économiques liés aux investissements pour la ...         423              6             3108.0              0.29
+            Digging into the Costs of Urban Soil Restoration         408              2             3080.0              0.28
+Smart Grid Implementation: Economic, Technical, Environme...         407              7             3304.0              0.23
+                     Raconte moi une histoire sur la tunisie         404              3             2698.0              1.00
+  Quelles sont les idées principales défendues par le GICC ?         394              1              629.0              0.59
+
+================================================================================
+Detailed results written to: ../../reports/article_analysis.csv
+Columns: session_id, query_id, datetime, query, word_count, num_citations, num_documents, prompt_tokens, completion_tokens, llm_cost_cents, self_hosting_cost_cents, total_cost_cents, generation_time_sec, source_file
+================================================================================

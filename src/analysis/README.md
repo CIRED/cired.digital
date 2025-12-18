@@ -60,6 +60,20 @@ Edit `src/analysis/analysis_config.yaml` to adjust:
 - Exclusion rules for dev/test traffic
 - Display options and chart selections
 
+### Anonymize Logs for Redistribution
+
+Produce an anonymized dataset suitable for sharing (drops IPs, headers, user agent, sessionId; skips `userProfile` events; preserves timestamps, queries, responses):
+
+```bash
+uv run python src/analysis/anonymize_monitor_logs.py \
+  --input reports/monitor-logs \
+  --output reports/monitor-logs-anon \
+  --limit 0 \
+  --zip
+```
+
+Use `--dry-run` to preview and `--limit N` to process a subset. Output includes `METADATA.json`, `SCHEMA.md`, `CHECKSUMS.sha256`, and an optional zip archive stored in `reports/`.
+
 ## Running the Dashboard
 
 ### Basic Usage

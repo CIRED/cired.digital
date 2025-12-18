@@ -1,0 +1,55 @@
+Analyzing token usage from: ../../reports/monitor-logs
+Found 394 response files
+
+================================================================================
+TOKEN USAGE SUMMARY
+================================================================================
+
+Total queries analyzed: 394
+Date range: 2025-06-23 13:24:31 to 2025-10-09 09:02:00
+
+--- Token Counts ---
+Total input tokens: 0
+Total output tokens: 373,530
+Total tokens: 0
+
+Average input tokens per query: nan
+Average output tokens per query: 948.0
+Average total tokens per query: nan
+
+Median input tokens: nan
+Median output tokens: 772
+
+--- Timing ---
+Average retrieval time: 1289 ms
+Average generation time: 1525 ms
+Average total time: 2814 ms
+
+--- By Model ---
+                               queries input_sum  ... total_avg  time_ms
+model                                             ...                   
+deepseek/deepseek-reasoner           1         0  ...       NaN  62622.0
+mistral/mistral-medium-latest       11         0  ...       NaN  14484.4
+mistral/mistral-small-latest       110         0  ...       NaN   7101.5
+openai/gpt-4.1                       1         0  ...       NaN  11434.0
+unknown                            271         0  ...       NaN    347.5
+
+[5 rows x 8 columns]
+
+--- Top 10 Queries by Output Tokens ---
+                                                       query                        model prompt_tokens  completion_tokens total_tokens  total_time_ms
+raconte une histoire sur la rénovation énergétique des lo... mistral/mistral-small-latest          None               3363         None        13219.0
+                             Transition challenge in Vietnam mistral/mistral-small-latest          None               3308         None         4690.0
+               macroeconomic impacts of transition scenarios mistral/mistral-small-latest          None               3275         None         5521.0
+            Digging into the Costs of Urban Soil Restoration                      unknown          None               3080         None         6372.0
+        explain Uncertainty in digital soil mapping products                      unknown          None               3068         None            0.0
+What can you say about the ability of IMACLIM to provide ... mistral/mistral-small-latest          None               3031         None         7927.0
+les enjeux macroéconomiques des scénarios de transition é... mistral/mistral-small-latest          None               3001         None         5914.0
+            Digging into the Costs of Urban Soil Restoration                      unknown          None               2941         None        20800.0
+            Digging into the Costs of Urban Soil Restoration                      unknown          None               2874         None        25321.0
+                                  Comment sauver le climat ?                      unknown          None               2865         None            0.0
+
+================================================================================
+Detailed results written to: ../../reports/token_analysis.csv
+Columns: session_id, query_id, timestamp, datetime, query, model, prompt_tokens, completion_tokens, total_tokens, retrieval_time_ms, generation_time_ms, total_time_ms, source_file
+================================================================================
