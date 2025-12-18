@@ -11,6 +11,7 @@ Usage:
 
 import argparse
 import json
+from collections.abc import Callable
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -155,7 +156,7 @@ def analyze_tokens(logs_root: Path) -> pd.DataFrame:
     return df
 
 
-def print_summary(df: pd.DataFrame) -> None:
+def print_summary(df: pd.DataFrame) -> None:  # noqa: C901
     """Print summary statistics of token usage."""
     if df.empty:
         print("No data to summarize")
@@ -201,7 +202,9 @@ def print_summary(df: pd.DataFrame) -> None:
 
     if "model" in df.columns and df["model"].notna().any():
         print("\n--- By Model ---")
-        agg_dict = {"query_id": "count"}
+        agg_dict: dict[str, str | list[str | Callable[..., Any]]] = {
+            "query_id": "count"
+        }
 
         # Only include columns that have non-NA values
         if df["prompt_tokens"].notna().any():
@@ -233,8 +236,88 @@ def print_summary(df: pd.DataFrame) -> None:
         print(top_queries.to_string(index=False, max_colwidth=60))
 
 
+def compute_monthly_summary(df: pd.DataFrame) -> pd.DataFrame:
+    """Compute monthly aggregates for token usage."""
+    if df.empty or "datetime" not in df.columns:
+        return pd.DataFrame()
+
+    dfx = df[df["datetime"].notna()].copy()
+    if dfx.empty:
+        return pd.DataFrame()
+
+    dfx["month"] = dfx["datetime"].dt.to_period("M").astype(str)
+
+    agg: dict[str, str | list[str | Callable[..., Any]]] = {
+        "query_id": "count",
+        # Only aggregate if values exist; pandas will handle NA by skipping
+        "completion_tokens": ["sum", "mean", "median"],
+        "retrieval_time_ms": "mean",
+        "generation_time_ms": "mean",
+        "total_time_ms": ["mean", "sum"],
+    }
+    # Include prompt/total tokens if present (not NA)
+    if dfx["prompt_tokens"].notna().any():
+        agg["prompt_tokens"] = ["sum", "mean", "median"]
+    if dfx["total_tokens"].notna().any():
+        agg["total_tokens"] = ["sum", "mean", "median"]
+
+    monthly = dfx.groupby("month").agg(agg)
+    # Flatten MultiIndex columns
+    monthly.columns = [
+        c if isinstance(c, str) else f"{c[0]}_{c[1]}" for c in monthly.columns
+    ]
+    # Normalize queries column name
+    if "query_id_count" in monthly.columns:
+        monthly = monthly.rename(columns={"query_id_count": "queries"})
+    elif "query_id" in monthly.columns:
+        monthly = monthly.rename(columns={"query_id": "queries"})
+    monthly = monthly.reset_index()
+    return monthly
+
+
+def print_monthly_summary(
+    monthly: pd.DataFrame, months_filter: list[str] | None = None
+) -> None:
+    """Pretty-print monthly token usage summary, optionally filtering to specific months (YYYY-MM)."""
+    if monthly.empty:
+        print("\nNo monthly data available")
+        return
+
+    dfm = monthly.copy()
+    if months_filter:
+        dfm = dfm[dfm["month"].isin(months_filter)]
+        if dfm.empty:
+            print("\nNo data for selected months")
+            return
+
+    print("\n--- Monthly Token Usage (selected) ---")
+    cols = [
+        "month",
+        "queries",
+        # guard for columns that may not exist
+    ]
+    for candidate in [
+        "completion_tokens_sum",
+        "completion_tokens_mean",
+        "completion_tokens_median",
+        "total_time_ms_sum",
+        "total_time_ms_mean",
+    ]:
+        if candidate in dfm.columns:
+            cols.append(candidate)
+    # Optional prompt/total tokens
+    for candidate in [
+        "prompt_tokens_sum",
+        "total_tokens_sum",
+    ]:
+        if candidate in dfm.columns:
+            cols.append(candidate)
+
+    print(dfm[cols].to_string(index=False))
+
+
 def main() -> None:
-    """Main entry point."""
+    """Run the token usage analysis CLI."""
     parser = argparse.ArgumentParser(
         description="Analyze token usage from monitor logs"
     )
@@ -269,6 +352,13 @@ def main() -> None:
     # Print summary
     print_summary(df)
 
+    # Monthly summary and optional CSV
+    monthly = compute_monthly_summary(df)
+    # Print only for July–October if present
+    print_monthly_summary(
+        monthly, months_filter=["2025-07", "2025-08", "2025-09", "2025-10"]
+    )
+
     # Write CSV
     if not args.summary_only:
         df.to_csv(args.out, index=False)
@@ -276,6 +366,14 @@ def main() -> None:
         print(f"Detailed results written to: {args.out}")
         print(f"Columns: {', '.join(df.columns)}")
         print(f"{'=' * 80}")
+        # Write monthly CSV next to main output
+        try:
+            monthly_out = Path(args.out).with_name(Path(args.out).stem + "_monthly.csv")
+            if not monthly.empty:
+                monthly.to_csv(monthly_out, index=False)
+                print(f"Monthly summary written to: {monthly_out}")
+        except Exception as e:
+            print(f"Failed to write monthly CSV: {e}")
 
 
 if __name__ == "__main__":

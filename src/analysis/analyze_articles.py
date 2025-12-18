@@ -33,7 +33,7 @@ def extract_stats_from_html(html_content: str) -> dict[str, Any]:
         Dictionary with extracted statistics
 
     """
-    stats = {
+    stats: dict[str, int | float | None] = {
         "prompt_tokens": None,
         "completion_tokens": None,
         "llm_cost_cents": None,
@@ -218,7 +218,7 @@ def analyze_articles(logs_root: Path) -> pd.DataFrame:
     return df
 
 
-def print_summary(df: pd.DataFrame) -> None:
+def print_summary(df: pd.DataFrame) -> None:  # noqa: C901
     """Print summary statistics of article generation."""
     if df.empty:
         print("No data to summarize")
@@ -311,8 +311,126 @@ def print_summary(df: pd.DataFrame) -> None:
         print(top_articles.to_string(index=False, max_colwidth=60))
 
 
+def compute_monthly_summary(df: pd.DataFrame) -> pd.DataFrame:  # noqa: C901
+    """Compute monthly aggregates for article analysis."""
+    if df.empty or "datetime" not in df.columns:
+        return pd.DataFrame()
+
+    dfx = df[df["datetime"].notna()].copy()
+    if dfx.empty:
+        return pd.DataFrame()
+
+    dfx["month"] = dfx["datetime"].dt.to_period("M").astype(str)
+
+    agg: dict[str, Any] = {
+        "query_id": "count",
+        "word_count": ["sum", "mean", "median"],
+        "num_citations": ["sum", "mean", "median"],
+        "num_documents": ["sum", "mean", "median"],
+        "completion_tokens": ["sum", "mean", "median"],
+        "llm_cost_cents": ["sum", "mean"],
+        "self_hosting_cost_cents": ["sum", "mean"],
+        "total_cost_cents": ["sum", "mean"],
+        "generation_time_sec": ["sum", "mean", "median"],
+    }
+    if dfx["prompt_tokens"].notna().any():
+        agg["prompt_tokens"] = ["sum", "mean", "median"]
+
+    monthly = dfx.groupby("month").agg(agg)
+    monthly.columns = [
+        c if isinstance(c, str) else f"{c[0]}_{c[1]}" for c in monthly.columns
+    ]
+    monthly = monthly.rename(columns={"query_id": "articles"}).reset_index()
+    # Reduce excessive decimal digits for readability with per-column precision
+    float_cols = monthly.select_dtypes(include=["float64", "float32"]).columns
+    if len(float_cols) > 0:
+        # Default rounding: 2 decimals
+        monthly[float_cols] = monthly[float_cols].round(2)
+
+        # Increase precision for mean cost columns to avoid 0.0
+        for col in [
+            "llm_cost_cents_mean",
+            "self_hosting_cost_cents_mean",
+            "total_cost_cents_mean",
+        ]:
+            if col in monthly.columns:
+                monthly[col] = monthly[col].round(3)
+
+        # Times: keep 2 decimals for means, 1 for sums where appropriate
+        for col in [
+            "generation_time_sec_mean",
+            "generation_time_sec_median",
+        ]:
+            if col in monthly.columns:
+                monthly[col] = monthly[col].round(2)
+        if "generation_time_sec_sum" in monthly.columns:
+            monthly["generation_time_sec_sum"] = monthly[
+                "generation_time_sec_sum"
+            ].round(1)
+
+    # Avoid misleading 0.0 values: set certain zeros to None (NA)
+    # If prompt tokens are not available for the month, replace 0.0 aggregates by NA
+    pt_cols = [
+        "prompt_tokens_sum",
+        "prompt_tokens_mean",
+        "prompt_tokens_median",
+    ]
+    if "prompt_tokens_sum" in monthly.columns:
+        zero_pt_mask = monthly["prompt_tokens_sum"].fillna(0) == 0
+        for col in pt_cols:
+            if col in monthly.columns:
+                monthly.loc[zero_pt_mask, col] = None
+        # Replace remaining None/NaN with literal 'NA' for clarity
+        for col in pt_cols:
+            if col in monthly.columns:
+                monthly[col] = monthly[col].astype(object)
+                monthly[col] = monthly[col].where(monthly[col].notna(), "NA")
+
+    # For very small mean costs that round to 0.0, show NA instead of 0.0
+    cost_mean_cols = [
+        "llm_cost_cents_mean",
+        "self_hosting_cost_cents_mean",
+        "total_cost_cents_mean",
+    ]
+    for col in cost_mean_cols:
+        if col in monthly.columns:
+            monthly.loc[monthly[col] == 0, col] = None
+    return monthly
+
+
+def print_monthly_summary(
+    monthly: pd.DataFrame, months_filter: list[str] | None = None
+) -> None:
+    """Pretty-print monthly article summary, optionally filtering to specific months (YYYY-MM)."""
+    if monthly.empty:
+        print("\nNo monthly article data available")
+        return
+
+    dfm = monthly.copy()
+    if months_filter:
+        dfm = dfm[dfm["month"].isin(months_filter)]
+        if dfm.empty:
+            print("\nNo article data for selected months")
+            return
+
+    print("\n--- Monthly Article Summary (selected) ---")
+    cols = [
+        "month",
+        "articles",
+        "word_count_sum",
+        "word_count_mean",
+        "num_citations_sum",
+        "num_documents_sum",
+        "completion_tokens_sum",
+        "total_cost_cents_sum",
+        "generation_time_sec_sum",
+    ]
+    existing = [c for c in cols if c in dfm.columns]
+    print(dfm[existing].to_string(index=False))
+
+
 def main() -> None:
-    """Main entry point."""
+    """Run the article analysis CLI."""
     parser = argparse.ArgumentParser(
         description="Analyze article generation from monitor logs"
     )
@@ -347,6 +465,12 @@ def main() -> None:
     # Print summary
     print_summary(df)
 
+    # Monthly summary and optional CSV
+    monthly = compute_monthly_summary(df)
+    print_monthly_summary(
+        monthly, months_filter=["2025-07", "2025-08", "2025-09", "2025-10"]
+    )
+
     # Write CSV
     if not args.summary_only:
         df.to_csv(args.out, index=False)
@@ -354,6 +478,14 @@ def main() -> None:
         print(f"Detailed results written to: {args.out}")
         print(f"Columns: {', '.join(df.columns)}")
         print(f"{'=' * 80}")
+        # Write monthly CSV next to main output
+        try:
+            monthly_out = Path(args.out).with_name(Path(args.out).stem + "_monthly.csv")
+            if not monthly.empty:
+                monthly.to_csv(monthly_out, index=False)
+                print(f"Monthly summary written to: {monthly_out}")
+        except Exception as e:
+            print(f"Failed to write monthly CSV: {e}")
 
 
 if __name__ == "__main__":
