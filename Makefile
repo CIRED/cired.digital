@@ -35,12 +35,20 @@ CSVS := \
 	$(REPORT_DIR)/article_analysis.csv \
 	$(REPORT_DIR)/article_analysis_monthly.csv
 
+STATS := \
+	$(REPORT_DIR)/describe_events_summary.txt \
+	$(REPORT_DIR)/describe_sessions_summary.txt
 
-.PHONY: figures csv clean-figures clean-csv
+
+.PHONY: figures csv stats analysis clean-figures clean-csv clean-stats
 
 figures: $(FIGURES)
 
 csv: $(CSVS)
+
+stats: $(STATS)
+
+analysis: figures csv stats
 
 $(REPORT_DIR):
 	mkdir -p $@
@@ -81,8 +89,17 @@ $(REPORT_DIR)/article_analysis.csv: $(SRC_ANALYSIS)/tabulate_articles.py | $(REP
 $(REPORT_DIR)/article_analysis_monthly.csv: $(REPORT_DIR)/article_analysis.csv
 	@test -f $@
 
+$(REPORT_DIR)/describe_events_summary.txt: $(SRC_ANALYSIS)/describe_events.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
+	$(RUNPY) $(SRC_ANALYSIS)/describe_events.py > $@
+
+$(REPORT_DIR)/describe_sessions_summary.txt: $(SRC_ANALYSIS)/describe_sessions.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
+	$(RUNPY) $(SRC_ANALYSIS)/describe_sessions.py > $@
+
 clean-figures:
 	rm -f $(FIGURES)
 
 clean-csv:
 	rm -f $(CSVS)
+
+clean-stats:
+	rm -f $(STATS)
