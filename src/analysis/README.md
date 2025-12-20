@@ -1,240 +1,166 @@
-# CIRED.digital Beta Dashboard
+# CIRED.digital Usage Analysis
 
-Interactive analytics dashboard for analyzing CIRED.digital beta usage data (July-September 2025).
+Toolkit for analyzing CIRED.digital application usage from monitor logs.
 
 ## Overview
 
-The beta dashboard provides comprehensive analytics for the CIRED.digital chatbot beta period, including:
+This directory contains scripts to analyze user interactions with the CIRED.digital chatbot, generating:
 
-- **Executive Dashboard**: High-level KPIs and metrics
-- **Traffic & Engagement**: Session patterns, visit length/depth, conversion funnels
-- **Query Intelligence**: Query analysis, top terms, zero-result queries
-- **Content Performance**: Publication views, co-access patterns
+- **Figures**: Visualizations of session activity, visitor origins, and event transitions
+- **CSV tables**: Query analysis, token usage, and article access statistics
+- **Summary statistics**: Descriptive stats on events and sessions
 
 ## Architecture
 
-The analysis system consists of three components:
+The analysis system uses a simple, transparent architecture:
 
-1. **Data Normalization** (`analyze_monitor_logs.py`): Processes raw JSON monitor logs into normalized CSV/Parquet
-2. **Configuration** (`analysis_config.yaml`): Defines time windows, exclusion rules, and display options
-3. **Dashboard App** (`beta_dashboard_app.py`): Interactive Streamlit application for data exploration
+1. **Data loader** ([`logloader.py`](logloader.py "logloader.py")): Loads raw JSON monitor logs and provides two clean abstractions:
+   - `events_df`: pandas DataFrame of all events with normalized fields
+   - `sessions`: List of session dictionaries with grouped events
+
+2. **Analysis scripts**: Specialized scripts that import from `logloader` and produce outputs:
+   - `fig_*.py` — Generate PNG visualizations
+   - `tabulate_*.py` — Generate CSV tables
+   - `describe_*.py` — Generate text summaries
+
+3. **Makefile integration**: All active scripts are orchestrated via `make` targets with proper dependency tracking
+
+## Quick Start
+
+### Generate All Analysis Outputs
+
+```bash
+cd cired.digital
+make analysis
+```
+
+This runs all figure generation, table creation, and descriptive statistics. Outputs go to `reports/analysis/`.
+
+### Individual Targets
+
+```bash
+make figures  # Generate all PNG visualizations
+make csv      # Generate all CSV tables
+make stats    # Generate descriptive statistics summaries
+```
 
 ## Prerequisites
 
-Ensure you have the required dependencies installed:
-
 ```bash
-cd ~/repos/cired.digital
-source .venv/bin/activate
+cd cired.digital
 uv sync --group dev
 ```
 
-The dashboard requires:
-- Python 3.11+
-- streamlit >= 1.28.0
-- plotly >= 5.0.0
-- pandas
-- pyarrow
+Requires Python 3.11+ with pandas, matplotlib, and standard scientific Python libraries.
 
-## Data Preparation
+## Scripts Reference
 
-### Step 1: Normalize Monitor Logs
+### Data Loading
 
-If you have raw JSON monitor logs in `reports/monitor-logs/`, normalize them first:
+**[`logloader.py`](logloader.py "logloader.py")**: Core module that loads monitor logs from `reports/monitor-logs/`
+- Exports: `events_df` (DataFrame), `sessions` (list of dicts)
+- Used by all other analysis scripts
+- No direct execution needed
 
+### Figure Generation
+
+**[`fig_activity.py`](fig_activity.py "fig_activity.py")**: Session activity timeline
+→ `reports/analysis/viz1_session_activity_timeline.png`
+
+**[`fig_provenance.py`](fig_provenance.py "fig_provenance.py")**: Visitor origin analysis
+→ `reports/analysis/visitors_origin.png`
+
+**[`fig_sessions.py`](fig_sessions.py "fig_sessions.py")**: Event type transition diagrams
+→ `reports/analysis/session_event_type_transitions.png`
+→ `reports/analysis/session_event_type_transitions_simplified.png`
+
+### CSV Table Generation
+
+**[`tabulate_queries.py`](tabulate_queries.py "tabulate_queries.py")**: Query analysis
+→ `reports/analysis/Queries.csv`
+→ `reports/analysis/UniqueQueries.csv`
+
+**[`tabulate_tokens.py`](tabulate_tokens.py "tabulate_tokens.py")**: Token usage statistics
+→ `reports/analysis/token_analysis.csv`
+→ `reports/analysis/token_analysis_monthly.csv`
+
+**[`tabulate_articles.py`](tabulate_articles.py "tabulate_articles.py")**: Article access patterns
+→ `reports/analysis/article_analysis.csv`
+→ `reports/analysis/article_analysis_monthly.csv`
+
+### Descriptive Statistics
+
+**[`describe_events.py`](describe_events.py "describe_events.py")**: Event-level summary statistics
+→ `reports/analysis/describe_events_summary.txt`
+
+**[`describe_sessions.py`](describe_sessions.py "describe_sessions.py")**: Session-level summary statistics
+→ `reports/analysis/describe_sessions_summary.txt`
+
+Can also be run directly for quick inspection:
 ```bash
-python src/analysis/analyze_monitor_logs.py reports/monitor-logs \
-    --schema src/monitor/models.py \
-    --out data/prepared/monitor_analysis
+cd src/analysis
+uv run python describe_events.py
+uv run python describe_sessions.py
 ```
 
-This creates:
-- `data/prepared/monitor_analysis.csv` - Normalized event data
-- `data/prepared/monitor_analysis.parquet` - Fast-loading binary format
-- `data/prepared/monitor_analysis.md` - Quick summary statistics
+### Utilities
 
-### Step 2: Review Configuration
+**[`classifier.py`](classifier.py "classifier.py")**: IP geolocation and user-agent classification
+Used by other scripts to identify bots, categorize visitors by location/browser
 
-Edit `src/analysis/analysis_config.yaml` to adjust:
-- Time window (default: 2025-07-01 to 2025-09-30)
-- Exclusion rules for dev/test traffic
-- Display options and chart selections
+**[`anonymize_monitor_logs.py`](anonymize_monitor_logs.py "anonymize_monitor_logs.py")**: Anonymize logs for redistribution
 
-### Anonymize Logs for Redistribution
-
-Produce an anonymized dataset suitable for sharing (drops IPs, headers, user agent, sessionId; skips `userProfile` events; preserves timestamps, queries, responses):
+Removes sensitive data (IPs, user agents, session IDs) while preserving query/response content:
 
 ```bash
 uv run python src/analysis/anonymize_monitor_logs.py \
   --input reports/monitor-logs \
   --output reports/monitor-logs-anon \
-  --limit 0 \
   --zip
 ```
 
-Use `--dry-run` to preview and `--limit N` to process a subset. Output includes `METADATA.json`, `SCHEMA.md`, `CHECKSUMS.sha256`, and an optional zip archive stored in `reports/`.
+Options:
+- `--dry-run`: Preview without writing
+- `--limit N`: Process only N files
+- `--zip`: Create compressed archive in `reports/`
 
-## Running the Dashboard
+Output includes: `METADATA.json`, `SCHEMA.md`, `CHECKSUMS.sha256`
 
-### Basic Usage
+## Makefile Details
 
-```bash
-cd ~/repos/cired.digital
-source .venv/bin/activate
-streamlit run src/analysis/beta_dashboard_app.py -- \
-    --config src/analysis/analysis_config.yaml \
-    --csv data/prepared/monitor_analysis.parquet
-```
+### MPLBACKEND Environment Variable
 
-The dashboard will open in your browser at `http://localhost:8501`
+`MPLBACKEND` selects the Matplotlib rendering backend:
+- `Agg` (Makefile default): Non-interactive, headless backend for reliable PNG generation in CI/servers
+- Interactive backends (`QtAgg`, `TkAgg`): Require GUI/display
 
-## Generating Figures (Makefile)
-
-The repository includes a Makefile target to regenerate static figures into `reports/analysis/`:
-
-```bash
-cd cired.digital
-make figures
-```
-
-### What `MPLBACKEND` is for
-
-`MPLBACKEND` is an environment variable used by Matplotlib to select the rendering backend.
-
-- `Agg` (the Makefile default) is a non-interactive, headless backend that writes PNGs reliably in CI/servers/containers.
-- Interactive backends (e.g. `QtAgg`, `TkAgg`) may require a GUI/display.
-
-You can override it when running `make`:
-
+Override when needed:
 ```bash
 make MPLBACKEND=QtAgg figures
 ```
 
-### Command-Line Options
+### Cleaning Outputs
 
 ```bash
-streamlit run src/analysis/beta_dashboard_app.py -- \
-    --config <path-to-config.yaml> \
-    --csv <path-to-data-file>
+make clean-figures  # Remove generated PNG files
+make clean-csv      # Remove generated CSV files
+make clean-stats    # Remove generated summary text files
 ```
 
-- `--config`: Path to configuration YAML (default: `src/analysis/analysis_config.yaml`)
-- `--csv`: Path to data file, supports CSV or Parquet (default: `data/prepared/monitor_analysis.parquet`)
+## Adding New Analysis Scripts
 
-## Dashboard Features
-
-### Executive Dashboard
-
-Key performance indicators:
-- Unique sessions count
-- Total queries submitted
-- Query success rate (% of query sessions receiving responses)
-- Average session duration
-- Feedback rate (feedback per 100 sessions)
-- Average events per session
-- Daily sessions time series
-- Top 10 publications by investigation
-
-### Traffic & Engagement
-
-Session behavior analysis:
-- **Visit Length Distribution**: Histogram of session durations (<1 min, 1-3 min, etc.)
-- **Visit Depth Distribution**: Histogram of events per session (0-2, 3-5, etc.)
-- **Conversion Funnel**: User journey from sessions → queries → investigations → requests
-
-### Query Intelligence
-
-Query analysis tools:
-- **Query Explorer**: Searchable table of all queries with timestamps and response status
-- **Top Queries**: Most frequently asked questions
-- **Zero-Result Queries**: Queries that didn't receive responses
-
-### Content Performance
-
-Publication analytics:
-- **Top Publications**: Most viewed publications by HAL ID
-- **Co-Access Analysis**: Publications frequently viewed together in the same session
-
-## Filters and Controls
-
-The sidebar provides filtering options:
-- **Include spillover sessions**: Include/exclude sessions that started in beta but have events outside the time window
-- **Event counts**: Shows data reduction at each filtering stage
-
-## Data Export
-
-Use the sidebar "Download Filtered Data (CSV)" button to export the currently filtered dataset for further analysis.
-
-## Configuration Reference
-
-### Time Window
-
-```yaml
-time:
-  timezone: Europe/Paris
-  start: 2025-07-01
-  end: 2025-09-30
-  include_spillover_sessions: true
-```
-
-### Exclusion Rules
-
-```yaml
-exclusions:
-  exclude_bots: true
-  dev_session_prefixes:
-    - "dev_"
-    - "test_"
-  source_file_regex_any:
-    - "/dev/"
-    - "/tests?/"
-  query_regex_any:
-    - "^(?i)test$"
-    - "(?i)lorem"
-    - "(?i)foo|bar|asdf|qwerty"
-  payload_useragent_regex_any:
-    - "(?i)bot|crawler|spider|monitor|uptime"
-  max_events_per_hour_without_requests: 120
-```
-
-## Troubleshooting
-
-### Dashboard won't start
-
-Ensure dependencies are installed:
-```bash
-source .venv/bin/activate
-uv pip install streamlit plotly
-```
-
-### Data file not found
-
-Verify the data file path:
-```bash
-ls -lh data/prepared/monitor_analysis.parquet
-```
-
-If missing, run the normalization script first (see Data Preparation above).
-
-### Empty visualizations
-
-Check the time window in `analysis_config.yaml` matches your data's timestamp range. The dashboard filters events to the beta period (July-September 2025) by default.
-
-### Performance issues
-
-For large datasets (>100k events):
-- Use Parquet format instead of CSV (faster loading)
-- Reduce the time window in the config
-- Apply stricter exclusion rules
-
-## Design Documentation
-
-For detailed design specifications, see:
-- `CIRED_digital_beta_dashboard_spec.md` - Complete dashboard specification
-- `analysis_config.yaml` - Configuration schema and options
+1. Create your script in `src/analysis/` (e.g., `fig_newviz.py`)
+2. Import from `logloader`: `from logloader import events_df, sessions`
+3. Add output file to appropriate Makefile variable (`FIGURES`, `CSVS`, or `STATS`)
+4. Add target with dependencies:
+   ```makefile
+   $(REPORT_DIR)/new_output.png: $(SRC_ANALYSIS)/fig_newviz.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
+       MPLBACKEND=$(MPLBACKEND) $(RUNPY) $(SRC_ANALYSIS)/fig_newviz.py
+       @test -f $@
+   ```
 
 ## Maintainer
 
 Minh Ha-Duong <minh.ha-duong@cnrs.fr>
 
-Last updated: October 2025
+Last updated: December 2025
