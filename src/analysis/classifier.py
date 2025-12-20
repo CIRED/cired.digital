@@ -9,8 +9,12 @@ Exports:
 - classify_ua(ua): Identify a user agent's browser/device category.
 """
 
+import atexit
 import ipaddress
+import json
+import os
 import socket
+from pathlib import Path
 
 CIRED_SUBNETS = [
     ipaddress.ip_network("193.51.120.0/24"),
@@ -30,6 +34,90 @@ RENATER_PREFIXES = [
     "134.157.",  # Sorbonne/UPMC (RENATER-MNT)
     "194.199.",  # Many edu nets via RENATER (incl. Mines networks)
 ]
+
+
+_PTR_NEGATIVE_SENTINEL = "__NO_PTR__"
+_PTR_CACHE_MAX = 5000
+_ptr_cache_dirty = False
+
+
+def _default_ptr_cache_path() -> Path:
+    return (
+        Path(__file__).resolve().parents[2] / "reports" / "analysis" / "ptr_cache.json"
+    )
+
+
+def _ptr_cache_path() -> Path:
+    override = os.getenv("CIRED_PTR_CACHE_PATH")
+    return Path(override) if override else _default_ptr_cache_path()
+
+
+def _load_ptr_cache() -> dict[str, str]:
+    path = _ptr_cache_path()
+    try:
+        if not path.exists():
+            return {}
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(data, dict):
+            return {str(k): str(v) for k, v in data.items()}
+    except Exception:
+        # Cache is best-effort; ignore corruption or read errors.
+        return {}
+    return {}
+
+
+_PTR_CACHE: dict[str, str] = _load_ptr_cache()
+
+
+def _save_ptr_cache() -> None:
+    global _ptr_cache_dirty
+    if not _ptr_cache_dirty:
+        return
+
+    path = _ptr_cache_path()
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+
+        # Keep the cache small (insertion order is preserved in Python 3.7+).
+        while len(_PTR_CACHE) > _PTR_CACHE_MAX:
+            _PTR_CACHE.pop(next(iter(_PTR_CACHE)))
+
+        tmp = path.with_suffix(path.suffix + ".tmp")
+        tmp.write_text(json.dumps(_PTR_CACHE, indent=2), encoding="utf-8")
+        tmp.replace(path)
+        _ptr_cache_dirty = False
+    except Exception:
+        # Best-effort; never break classification on cache write issues.
+        return
+
+
+atexit.register(_save_ptr_cache)
+
+
+def _get_ptr_host(ip: str) -> tuple[str | None, bool]:
+    """
+    Resolve PTR hostname with a small persistent cache.
+
+    Returns:
+        (host, did_lookup): host is the PTR hostname (or None); did_lookup is True
+        only when a network PTR lookup was attempted.
+
+    """
+    global _ptr_cache_dirty
+
+    cached = _PTR_CACHE.get(ip)
+    if cached is not None:
+        return (None if cached == _PTR_NEGATIVE_SENTINEL else cached), False
+
+    try:
+        host, _, _ = socket.gethostbyaddr(ip)
+        _PTR_CACHE[ip] = host
+        _ptr_cache_dirty = True
+        return host, True
+    except Exception:
+        _PTR_CACHE[ip] = _PTR_NEGATIVE_SENTINEL
+        _ptr_cache_dirty = True
+        return None, True
 
 
 def _is_cired(ip: str) -> bool:
@@ -119,10 +207,11 @@ def classify_ip(ip: str) -> str:
     if quick is not None:
         return quick
 
-    try:
-        host, _, _ = socket.gethostbyaddr(ip)
-    except Exception:
-        print(f"PTR fail for {ip}")
+    host, did_lookup = _get_ptr_host(ip)
+    if host is None:
+        # Don't spam logs on repeated runs: cached failures are silent.
+        if did_lookup:
+            print(f"PTR fail for {ip}")
         return "Unidentified"
 
     label = _label_from_host(host, ip)
