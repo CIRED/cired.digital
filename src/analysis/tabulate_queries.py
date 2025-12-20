@@ -10,11 +10,25 @@ Tabulate queries.
 Minh Ha-Duong, CNRS, 2025-11
 """
 
+from pathlib import Path
+
 import pandas as pd
-from logloader import sessions
 
 
-def build_all_queries_df() -> pd.DataFrame:
+def _reports_analysis_dir() -> Path:
+    return Path(__file__).resolve().parents[2] / "reports" / "analysis"
+
+
+def _resolve_output_path(path: str) -> Path:
+    p = Path(path)
+    if p.is_absolute():
+        return p
+    if p.parent == Path("."):
+        return _reports_analysis_dir() / p.name
+    return p
+
+
+def build_all_queries_df(sessions: list[dict[str, object]]) -> pd.DataFrame:
     """
     Extract all user queries from sessions and enrich with origin.
 
@@ -23,17 +37,28 @@ def build_all_queries_df() -> pd.DataFrame:
     """
     records = []
     for s in sessions:
-        origin = s.get("origin", "??")
-        ua_class = s.get("ua_class", "??")
+        origin = str(s.get("origin", "??"))
+        ua_class = str(s.get("ua_class", "??"))
         order = 0
-        for e in s["events"]:
-            if e["eventType"] == "request":
+        events = s.get("events", [])
+        if not isinstance(events, list):
+            continue
+
+        for e in events:
+            if not isinstance(e, dict):
+                continue
+            if e.get("eventType") == "request":
                 order += 1
+                payload = e.get("payload", {})
+                if not isinstance(payload, dict):
+                    payload = {}
+                ts_raw = e.get("timestamp")
+                ts_str = "" if ts_raw is None else str(ts_raw)
                 records.append(
                     {
-                        "query": e["payload"].get("query", ""),
+                        "query": payload.get("query", ""),
                         "order": order,
-                        "timestamp": pd.to_datetime(e["timestamp"]),
+                        "timestamp": pd.to_datetime(ts_str, errors="coerce"),
                         "origin": origin,
                         "browser": ua_class,
                     }
@@ -44,13 +69,20 @@ def build_all_queries_df() -> pd.DataFrame:
 
 def main() -> None:
     """Generate Queries.csv and UniqueQueries.csv from monitor logs."""
-    all_queries = build_all_queries_df()
+    # Lazy import to avoid loading monitor logs on module import
+    from logloader import sessions
+
+    all_queries = build_all_queries_df(sessions)
     print(f"Total queries extracted: {len(all_queries)}")
-    all_queries.to_csv("Queries.csv", index=False)
+    out_all = _resolve_output_path("Queries.csv")
+    out_all.parent.mkdir(parents=True, exist_ok=True)
+    all_queries.to_csv(out_all, index=False)
 
     unique_queries = all_queries["query"].value_counts().reset_index()
     unique_queries = unique_queries.rename(columns={"index": "query", "query": "count"})
-    unique_queries.to_csv("UniqueQueries.csv", index=False)
+    out_unique = _resolve_output_path("UniqueQueries.csv")
+    out_unique.parent.mkdir(parents=True, exist_ok=True)
+    unique_queries.to_csv(out_unique, index=False)
 
 
 if __name__ == "__main__":

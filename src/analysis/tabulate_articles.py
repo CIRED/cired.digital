@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-analyze_articles.py — Analyze article generation logs.
+tabulate_articles.py — Analyze article generation logs.
 
 This script extracts and analyzes article generation data including:
 - Reported LLM costs and self-hosting costs
@@ -8,7 +8,7 @@ This script extracts and analyzes article generation data including:
 - Number of cited documents
 
 Usage:
-    python analyze_articles.py /path/to/monitor-logs --out article_analysis.csv
+    python tabulate_articles.py /path/to/monitor-logs --out article_analysis.csv
 """
 
 import argparse
@@ -20,6 +20,18 @@ from typing import Any
 
 import pandas as pd
 from bs4 import BeautifulSoup
+
+
+def _reports_analysis_dir() -> Path:
+    return Path(__file__).resolve().parents[2] / "reports" / "analysis"
+
+
+def _resolve_output_path(path: Path) -> Path:
+    if path.is_absolute():
+        return path
+    if path.parent == Path("."):
+        return _reports_analysis_dir() / path.name
+    return path
 
 
 def extract_stats_from_html(html_content: str) -> dict[str, Any]:
@@ -451,6 +463,8 @@ def main() -> None:
 
     args = parser.parse_args()
 
+    args.out = _resolve_output_path(args.out)
+
     if not args.logs_root.exists():
         print(f"Error: {args.logs_root} does not exist")
         return
@@ -473,6 +487,7 @@ def main() -> None:
 
     # Write CSV
     if not args.summary_only:
+        args.out.parent.mkdir(parents=True, exist_ok=True)
         df.to_csv(args.out, index=False)
         print(f"\n{'=' * 80}")
         print(f"Detailed results written to: {args.out}")

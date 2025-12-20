@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-analyze_token_usage.py — Analyze token counts from monitor logs.
+tabulate_tokens.py — Analyze token counts from monitor logs.
 
 This script extracts and analyzes token usage (input/output) per query,
 including model, timing information, and costs.
 
 Usage:
-    python analyze_token_usage.py /path/to/monitor-logs --out token_analysis.csv
+    python tabulate_tokens.py /path/to/monitor-logs --out token_analysis.csv
 """
 
 import argparse
@@ -17,6 +17,18 @@ from pathlib import Path
 from typing import Any
 
 import pandas as pd
+
+
+def _reports_analysis_dir() -> Path:
+    return Path(__file__).resolve().parents[2] / "reports" / "analysis"
+
+
+def _resolve_output_path(path: Path) -> Path:
+    if path.is_absolute():
+        return path
+    if path.parent == Path("."):
+        return _reports_analysis_dir() / path.name
+    return path
 
 
 def extract_token_info(response_file: Path) -> dict[str, Any] | None:
@@ -338,6 +350,8 @@ def main() -> None:
 
     args = parser.parse_args()
 
+    args.out = _resolve_output_path(args.out)
+
     if not args.logs_root.exists():
         print(f"Error: {args.logs_root} does not exist")
         return
@@ -361,6 +375,7 @@ def main() -> None:
 
     # Write CSV
     if not args.summary_only:
+        args.out.parent.mkdir(parents=True, exist_ok=True)
         df.to_csv(args.out, index=False)
         print(f"\n{'=' * 80}")
         print(f"Detailed results written to: {args.out}")

@@ -19,6 +19,7 @@ MPLBACKEND ?= Agg
 PROJECT_ROOT := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
 SRC_ANALYSIS := $(PROJECT_ROOT)/src/analysis
 REPORT_DIR := $(PROJECT_ROOT)/reports/analysis
+LOGS_ROOT ?= $(PROJECT_ROOT)/reports/monitor-logs
 
 FIGURES := \
 	$(REPORT_DIR)/viz1_session_activity_timeline.png \
@@ -26,9 +27,20 @@ FIGURES := \
 	$(REPORT_DIR)/session_event_type_transitions.png \
 	$(REPORT_DIR)/session_event_type_transitions_simplified.png
 
-.PHONY: figures clean-figures
+CSVS := \
+	$(REPORT_DIR)/Queries.csv \
+	$(REPORT_DIR)/UniqueQueries.csv \
+	$(REPORT_DIR)/token_analysis.csv \
+	$(REPORT_DIR)/token_analysis_monthly.csv \
+	$(REPORT_DIR)/article_analysis.csv \
+	$(REPORT_DIR)/article_analysis_monthly.csv
+
+
+.PHONY: figures csv clean-figures clean-csv
 
 figures: $(FIGURES)
+
+csv: $(CSVS)
 
 $(REPORT_DIR):
 	mkdir -p $@
@@ -48,5 +60,29 @@ $(REPORT_DIR)/session_event_type_transitions.png: $(SRC_ANALYSIS)/fig_sessions.p
 $(REPORT_DIR)/session_event_type_transitions_simplified.png: $(REPORT_DIR)/session_event_type_transitions.png
 	@test -f $@
 
+$(REPORT_DIR)/Queries.csv: $(SRC_ANALYSIS)/tabulate_queries.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
+	$(RUNPY) $(SRC_ANALYSIS)/tabulate_queries.py
+	@test -f $@
+
+$(REPORT_DIR)/UniqueQueries.csv: $(REPORT_DIR)/Queries.csv
+	@test -f $@
+
+$(REPORT_DIR)/token_analysis.csv: $(SRC_ANALYSIS)/tabulate_tokens.py | $(REPORT_DIR)
+	$(RUNPY) $(SRC_ANALYSIS)/tabulate_tokens.py $(LOGS_ROOT) --out $@
+	@test -f $@
+
+$(REPORT_DIR)/token_analysis_monthly.csv: $(REPORT_DIR)/token_analysis.csv
+	@test -f $@
+
+$(REPORT_DIR)/article_analysis.csv: $(SRC_ANALYSIS)/tabulate_articles.py | $(REPORT_DIR)
+	$(RUNPY) $(SRC_ANALYSIS)/tabulate_articles.py $(LOGS_ROOT) --out $@
+	@test -f $@
+
+$(REPORT_DIR)/article_analysis_monthly.csv: $(REPORT_DIR)/article_analysis.csv
+	@test -f $@
+
 clean-figures:
 	rm -f $(FIGURES)
+
+clean-csv:
+	rm -f $(CSVS)
