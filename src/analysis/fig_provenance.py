@@ -15,9 +15,23 @@ Usage:
     plot_visitors_origin_pie(sessions, "visitors_origin.png")
 """
 
+from pathlib import Path
 from typing import Any
 
 import matplotlib.pyplot as plt
+
+
+def _reports_analysis_dir() -> Path:
+    return Path(__file__).resolve().parents[2] / "reports" / "analysis"
+
+
+def _resolve_save_path(save_path: str) -> Path:
+    p = Path(save_path)
+    if p.is_absolute():
+        return p
+    if p.parent == Path("."):
+        return _reports_analysis_dir() / p.name
+    return p
 
 
 def plot_visitors_origin_pie(
@@ -55,7 +69,12 @@ def plot_visitors_origin_pie(
     )
 
     if save_path:
-        fig.savefig(save_path, dpi=300, bbox_inches="tight")
+        out_path = _resolve_save_path(save_path)
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        fig.savefig(out_path, dpi=300, bbox_inches="tight")
+        plt.close(fig)
+        return
+
     plt.show()
 
 

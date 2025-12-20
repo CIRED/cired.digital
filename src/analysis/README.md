@@ -88,6 +88,28 @@ streamlit run src/analysis/beta_dashboard_app.py -- \
 
 The dashboard will open in your browser at `http://localhost:8501`
 
+## Generating Figures (Makefile)
+
+The repository includes a Makefile target to regenerate static figures into `reports/analysis/`:
+
+```bash
+cd cired.digital
+make figures
+```
+
+### What `MPLBACKEND` is for
+
+`MPLBACKEND` is an environment variable used by Matplotlib to select the rendering backend.
+
+- `Agg` (the Makefile default) is a non-interactive, headless backend that writes PNGs reliably in CI/servers/containers.
+- Interactive backends (e.g. `QtAgg`, `TkAgg`) may require a GUI/display.
+
+You can override it when running `make`:
+
+```bash
+make MPLBACKEND=QtAgg figures
+```
+
 ### Command-Line Options
 
 ```bash
