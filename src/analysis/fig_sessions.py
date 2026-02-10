@@ -6,11 +6,24 @@ Session visualizations.
 Minh Ha-Duong, CNRS, 2025-11
 """
 
+from pathlib import Path
 from typing import Any
 
 import matplotlib.pyplot as plt
 import networkx as nx
-from logloader import sessions
+
+
+def _reports_analysis_dir() -> Path:
+    return Path(__file__).resolve().parents[2] / "reports" / "analysis"
+
+
+def _resolve_save_path(save_path: str) -> Path:
+    p = Path(save_path)
+    if p.is_absolute():
+        return p
+    if p.parent == Path("."):
+        return _reports_analysis_dir() / p.name
+    return p
 
 
 def plot_session_event_type_transitions(
@@ -93,7 +106,12 @@ def plot_session_event_type_transitions(
     )
     plt.title("CIRED.digital user journeys, beta phase (summer 2025)")
     if save_path:
-        plt.savefig(save_path, dpi=300, bbox_inches="tight")
+        out_path = _resolve_save_path(save_path)
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        plt.savefig(out_path, dpi=300, bbox_inches="tight")
+        plt.close()
+        return
+
     plt.show()
     plt.close()
 
@@ -141,9 +159,12 @@ def simplify(session: dict[str, Any]) -> dict[str, Any]:
 
 
 if __name__ == "__main__":
-    plot_session_event_type_transitions(sessions, "session_event_type_transitions.png")
+    # Lazy import to avoid side effects on import
+    from logloader import sessions as _sessions
 
-    sessions = [simplify(session) for session in sessions]
+    plot_session_event_type_transitions(_sessions, "session_event_type_transitions.png")
+
+    _sessions = [simplify(session) for session in _sessions]
     plot_session_event_type_transitions(
-        sessions, "session_event_type_transitions_simplified.png"
+        _sessions, "session_event_type_transitions_simplified.png"
     )

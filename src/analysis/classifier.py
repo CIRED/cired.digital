@@ -1,0 +1,261 @@
+"""
+Classify IP addresses.
+
+This module classifies client IP (CIRED/RENATER/research,
+French residential, bots, etc.)
+
+Exports:
+- classify_ip(ip): Identify an IP's origin/bot category.
+- classify_ua(ua): Identify a user agent's browser/device category.
+"""
+
+import atexit
+import ipaddress
+import json
+import os
+import socket
+from pathlib import Path
+
+CIRED_SUBNETS = [
+    ipaddress.ip_network("193.51.120.0/24"),
+    ipaddress.ip_network("10.0.0.0/8"),
+    ipaddress.ip_network("172.16.0.0/12"),
+    ipaddress.ip_network("192.168.0.0/16"),
+]
+
+RENATER_PREFIXES = [
+    "193.51.",
+    "194.214.",
+    "194.254.",
+    "195.83.",
+    "195.98.224.",
+    "144.204.",
+    "129.104.",  # École Polytechnique (RENATER-MNT)
+    "134.157.",  # Sorbonne/UPMC (RENATER-MNT)
+    "194.199.",  # Many edu nets via RENATER (incl. Mines networks)
+]
+
+
+_PTR_NEGATIVE_SENTINEL = "__NO_PTR__"
+_PTR_CACHE_MAX = 5000
+_ptr_cache_dirty = False
+
+
+def _default_ptr_cache_path() -> Path:
+    return (
+        Path(__file__).resolve().parents[2] / "reports" / "analysis" / "ptr_cache.json"
+    )
+
+
+def _ptr_cache_path() -> Path:
+    override = os.getenv("CIRED_PTR_CACHE_PATH")
+    return Path(override) if override else _default_ptr_cache_path()
+
+
+def _load_ptr_cache() -> dict[str, str]:
+    path = _ptr_cache_path()
+    try:
+        if not path.exists():
+            return {}
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(data, dict):
+            return {str(k): str(v) for k, v in data.items()}
+    except Exception:
+        # Cache is best-effort; ignore corruption or read errors.
+        return {}
+    return {}
+
+
+_PTR_CACHE: dict[str, str] = _load_ptr_cache()
+
+
+def _save_ptr_cache() -> None:
+    global _ptr_cache_dirty
+    if not _ptr_cache_dirty:
+        return
+
+    path = _ptr_cache_path()
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+
+        # Keep the cache small (insertion order is preserved in Python 3.7+).
+        while len(_PTR_CACHE) > _PTR_CACHE_MAX:
+            _PTR_CACHE.pop(next(iter(_PTR_CACHE)))
+
+        tmp = path.with_suffix(path.suffix + ".tmp")
+        tmp.write_text(json.dumps(_PTR_CACHE, indent=2), encoding="utf-8")
+        tmp.replace(path)
+        _ptr_cache_dirty = False
+    except Exception:
+        # Best-effort; never break classification on cache write issues.
+        return
+
+
+atexit.register(_save_ptr_cache)
+
+
+def _get_ptr_host(ip: str) -> tuple[str | None, bool]:
+    """
+    Resolve PTR hostname with a small persistent cache.
+
+    Returns:
+        (host, did_lookup): host is the PTR hostname (or None); did_lookup is True
+        only when a network PTR lookup was attempted.
+
+    """
+    global _ptr_cache_dirty
+
+    cached = _PTR_CACHE.get(ip)
+    if cached is not None:
+        return (None if cached == _PTR_NEGATIVE_SENTINEL else cached), False
+
+    try:
+        host, _, _ = socket.gethostbyaddr(ip)
+        _PTR_CACHE[ip] = host
+        _ptr_cache_dirty = True
+        return host, True
+    except Exception:
+        _PTR_CACHE[ip] = _PTR_NEGATIVE_SENTINEL
+        _ptr_cache_dirty = True
+        return None, True
+
+
+def _is_cired(ip: str) -> bool:
+    """
+    Return True if the IP belongs to one of the CIRED subnets.
+
+    Gracefully handles invalid IP strings by returning False.
+    """
+    try:
+        ipobj = ipaddress.ip_address(ip)
+        return any(ipobj in net for net in CIRED_SUBNETS)
+    except ValueError:
+        return False
+
+
+def _quick_label_from_prefix(ip: str) -> str | None:
+    """
+    Fast classification using simple CIDR/prefix matches.
+
+    Returns a label when a quick decision is possible, otherwise None.
+    """
+    if _is_cired(ip):
+        return "CIRED (CIRAD)"
+    if any(ip.startswith(prefix) for prefix in RENATER_PREFIXES):
+        return "Recherche"
+    if ip.startswith("66.249."):
+        return "googlebot"
+    if ip.startswith("40.77."):
+        return "other bot"
+    if ip.startswith("118.70."):
+        return "Vietnam"
+    return None
+
+
+def _label_from_host(host: str, ip: str) -> str | None:
+    """
+    Classification based on reverse DNS hostname content.
+
+    Expects that the PTR lookup already succeeded and `host` is available.
+    """
+    if host == "doudou":
+        return "CIRED (CIRAD)"
+    if "cirad" in host:
+        return "CIRED (CIRAD)"
+    if any(sub in host for sub in ("cnrs", "sorbonne", "agro", "enpc")):
+        return "Recherche"
+    if host.endswith(
+        (
+            ".bbox.fr",
+            ".wanadoo.fr",
+            ".orangecustomers.net",
+            ".proxad.net",
+            ".sfr.net",
+            ".coucou-networks.fr",
+        )
+    ):
+        return "French Residential"
+    if host.endswith(".vn"):
+        return "Vietnam"
+
+    # Bots with forward-confirmation
+    if host.endswith((".googlebot.com", ".google.com")):
+        expected = socket.gethostbyname(host)
+        return "googlebot" if expected == ip else None
+    if host.endswith(
+        (
+            ".search.msn.com",
+            "dataproviderbot.com",
+            "amazonaws.com",
+            "googleusercontent.com",
+        )
+    ):
+        expected = socket.gethostbyname(host)
+        return "other bot" if expected == ip else None
+
+    return None
+
+
+def classify_ip(ip: str) -> str:
+    """
+    Classify a client IP into an origin/bot category.
+
+    Return values include: "CIRED (CIRAD)", "Recherche", "French Residential",
+    "Vietnam", "googlebot", "other bot", "Unidentified" or None when unsure.
+    """
+    quick = _quick_label_from_prefix(ip)
+    if quick is not None:
+        return quick
+
+    host, did_lookup = _get_ptr_host(ip)
+    if host is None:
+        # Don't spam logs on repeated runs: cached failures are silent.
+        if did_lookup:
+            print(f"PTR fail for {ip}")
+        return "Unidentified"
+
+    label = _label_from_host(host, ip)
+    if label is not None:
+        return label
+
+    print(host)
+    return "Unidentified"
+
+
+def classify_ua(ua: str) -> str:
+    """
+    Classify a user agent string into browser/device categories.
+
+    Args:
+        ua (str): The user agent string to classify.
+
+    Returns:
+        str: A classification string indicating the browser/device type.
+             Possible return values:
+             - "edge": Microsoft Edge browser
+             - "chrome-mobile": Chrome browser on mobile device
+             - "chrome-desktop": Chrome browser on desktop
+             - "firefox": Firefox browser
+             - "safari-desktop": Safari browser on macOS
+             - "iphone": iPhone device
+             - "other": Any user agent that doesn't match the above patterns
+
+    Note:
+        Classification is based on string pattern matching in the user agent.
+        The function checks patterns in order, so more specific patterns
+        (like chrome-mobile) are checked before general ones (like chrome-desktop).
+
+    """
+    if "Edg/" in ua:
+        return "edge"
+    if "Chrome/" in ua and "Mobile" in ua:
+        return "chrome-mobile"
+    if "Chrome/" in ua:
+        return "chrome-desktop"
+    if "Firefox/" in ua:
+        return "firefox"
+    if "Safari/" in ua and "Mac OS X" in ua:
+        return "safari-desktop"
+    if "iPhone" in ua:
+        return "iphone"
+    return "other"
