@@ -6,11 +6,24 @@ Shaded regions indicate different project phases (Alpha, Beta closed, Beta open)
 """
 
 from datetime import datetime
+from pathlib import Path
 
 import matplotlib.pyplot as plt
 import pandas as pd
-from logloader import events_df
 from matplotlib.dates import date2num
+
+
+def _reports_analysis_dir() -> Path:
+    return Path(__file__).resolve().parents[2] / "reports" / "analysis"
+
+
+def _resolve_save_path(save_path: str) -> Path:
+    p = Path(save_path)
+    if p.is_absolute():
+        return p
+    if p.parent == Path("."):
+        return _reports_analysis_dir() / p.name
+    return p
 
 
 def date2float(d: datetime) -> float:
@@ -185,11 +198,19 @@ def plot_session_activity_timeline(
     plt.tight_layout()
 
     if save_path:
-        plt.savefig(save_path, dpi=300, bbox_inches="tight")
+        out_path = _resolve_save_path(save_path)
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        plt.savefig(out_path, dpi=300, bbox_inches="tight")
+        plt.close()
+        return
 
     plt.show()
 
 
-plot_session_activity_timeline(
-    events_df, save_path="viz1_session_activity_timeline.png"
-)
+if __name__ == "__main__":
+    # Lazy import to avoid side effects on import
+    from logloader import events_df as _events_df
+
+    plot_session_activity_timeline(
+        _events_df, save_path="viz1_session_activity_timeline.png"
+    )
