@@ -65,22 +65,22 @@ $(REPORT_DIR):
 	mkdir -p $@
 
 $(REPORT_DIR)/viz1_session_activity_timeline.png: $(SRC_ANALYSIS)/fig_activity.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
-	MPLBACKEND=$(MPLBACKEND) $(RUNPY) $(SRC_ANALYSIS)/fig_activity.py
+	LOGS_ROOT=$(LOGS_ROOT) MPLBACKEND=$(MPLBACKEND) $(RUNPY) $(SRC_ANALYSIS)/fig_activity.py
 	@test -f $@
 
 $(REPORT_DIR)/visitors_origin.png: $(SRC_ANALYSIS)/fig_provenance.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
-	MPLBACKEND=$(MPLBACKEND) $(RUNPY) $(SRC_ANALYSIS)/fig_provenance.py
+	LOGS_ROOT=$(LOGS_ROOT) MPLBACKEND=$(MPLBACKEND) $(RUNPY) $(SRC_ANALYSIS)/fig_provenance.py
 	@test -f $@
 
 $(REPORT_DIR)/session_event_type_transitions.png: $(SRC_ANALYSIS)/fig_sessions.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
-	MPLBACKEND=$(MPLBACKEND) $(RUNPY) $(SRC_ANALYSIS)/fig_sessions.py
+	LOGS_ROOT=$(LOGS_ROOT) MPLBACKEND=$(MPLBACKEND) $(RUNPY) $(SRC_ANALYSIS)/fig_sessions.py
 	@test -f $@
 
 $(REPORT_DIR)/session_event_type_transitions_simplified.png: $(REPORT_DIR)/session_event_type_transitions.png
 	@test -f $@
 
 $(REPORT_DIR)/Queries.csv: $(SRC_ANALYSIS)/tabulate_queries.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
-	$(RUNPY) $(SRC_ANALYSIS)/tabulate_queries.py
+	LOGS_ROOT=$(LOGS_ROOT) $(RUNPY) $(SRC_ANALYSIS)/tabulate_queries.py
 	@test -f $@
 
 $(REPORT_DIR)/UniqueQueries.csv: $(REPORT_DIR)/Queries.csv
@@ -101,10 +101,10 @@ $(REPORT_DIR)/article_analysis_monthly.csv: $(REPORT_DIR)/article_analysis.csv
 	@test -f $@
 
 $(REPORT_DIR)/describe_events_summary.txt: $(SRC_ANALYSIS)/describe_events.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
-	$(RUNPY) $(SRC_ANALYSIS)/describe_events.py > $@
+	LOGS_ROOT=$(LOGS_ROOT) $(RUNPY) $(SRC_ANALYSIS)/describe_events.py > $@
 
 $(REPORT_DIR)/describe_sessions_summary.txt: $(SRC_ANALYSIS)/describe_sessions.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
-	$(RUNPY) $(SRC_ANALYSIS)/describe_sessions.py > $@
+	LOGS_ROOT=$(LOGS_ROOT) $(RUNPY) $(SRC_ANALYSIS)/describe_sessions.py > $@
 
 dataset:
 	rm -rf $(ANON_DIR)

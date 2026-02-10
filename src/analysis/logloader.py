@@ -18,7 +18,12 @@ from typing import Any
 import pandas as pd
 from classifier import classify_ip, classify_ua
 
-DEFAULT_BASE_PATH = Path(__file__).resolve().parents[2] / "reports" / "monitor-logs"
+DEFAULT_BASE_PATH = Path(
+    os.environ.get(
+        "LOGS_ROOT",
+        str(Path(__file__).resolve().parents[2] / "reports" / "monitor-logs"),
+    )
+)
 DEFAULT_MIN_DATE = "20250705"
 
 
@@ -159,18 +164,22 @@ def augment_dataframe(events_df: pd.DataFrame) -> None:
     event_types: list[str] = events_df["eventType"].tolist()
     payloads: list[dict[str, Any]] = events_df["payload"].tolist()
 
-    # The client IP from the server_context
+    # The client IP from the server_context (empty for anonymized data)
     ip_values: list[str] = [ctx.get("client_ip", "") for ctx in server_contexts]
     events_df["ip"] = ip_values
-    # The origin label classified from the IP
-    events_df["origin"] = [classify_ip(ip) for ip in ip_values]
+    # The origin label: use pre-computed if available, otherwise classify from IP
+    events_df["origin"] = [
+        ctx.get("origin") or classify_ip(ip)
+        for ctx, ip in zip(server_contexts, ip_values)
+    ]
     # The user agent from payload for "sessionStart" event types
     ua_values: list[str | None] = [
         payload.get("userAgent") if etype == "sessionStart" else None
         for etype, payload in zip(event_types, payloads)
     ]
     events_df["ua"] = ua_values
-    # The classified user agent label
+    # The classified user agent label: if ua is already a class label (anonymized),
+    # classify_ua will return it as-is or map it; for raw ua strings it classifies.
     events_df["ua_class"] = [
         classify_ua(ua) if ua is not None else "??" for ua in ua_values
     ]

@@ -4,7 +4,11 @@ anonymize_monitor_logs.py — Create an anonymized, redistributable copy of moni
 
 What it does:
 - Recursively walks an input monitor-logs tree (default: reports/monitor-logs/)
-- Drops PII and identifiers: removes server_context, sessionId, userAgent, headers, profile
+- Replaces PII with anonymized derived fields:
+  - sessionId → deterministic anonymous IDs (anon_0001, anon_0002, …)
+  - server_context → {origin: <geographic classification>} (IP removed)
+  - payload.userAgent → device class label on sessionStart events
+- Drops payload.headers, payload.profile
 - Skips userProfile events entirely
 - Preserves analysis value: keeps eventType, timestamp, payload.query/response and other non-PII fields
 - Writes sanitized JSON files to an output tree mirroring YYYY/MM/DD
@@ -19,7 +23,7 @@ Usage:
       --zip
 
 Notes:
-- This tool is intentionally dependency-light (stdlib only).
+- Requires classifier.py (sibling module) for IP/UA classification.
 - Timestamps are preserved as-is when present; otherwise, fallback to filename or file mtime.
 - Filenames in the anonymized dataset do not carry session identifiers.
 
@@ -38,6 +42,10 @@ from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
+
+# Ensure sibling modules are importable
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from classifier import classify_ip, classify_ua
 
 # Matches original filenames like:
 #   session_<key>-20250708T131401123Z-request.json
@@ -108,17 +116,37 @@ def is_user_profile_event(event_type: str) -> bool:
     return event_type == "userProfile"
 
 
-REDACT_PAYLOAD_KEYS = {"userAgent", "headers", "profile"}
+REDACT_PAYLOAD_KEYS = {"headers", "profile"}
 
 
-def redact_document(doc: dict[str, Any]) -> dict[str, Any]:
-    """Remove PII from document: server_context, sessionId, and sensitive payload keys."""
-    # Copy shallowly to avoid mutating input
+def redact_document(doc: dict[str, Any], anon_session_id: str) -> dict[str, Any]:
+    """
+    Replace PII with anonymized derived fields.
+
+    - sessionId → deterministic anonymous ID
+    - server_context → {"origin": <classified>}  (IP removed)
+    - payload.userAgent → classified label on sessionStart events
+    - payload.headers, payload.profile → dropped
+    """
     red: dict[str, Any] = {
         k: v for k, v in doc.items() if k not in {"server_context", "sessionId"}
     }
+    # Anonymized session identifier
+    red["sessionId"] = anon_session_id
+
+    # Replace server_context with origin classification only
+    ctx = doc.get("server_context", {})
+    client_ip = ctx.get("client_ip", "") if isinstance(ctx, dict) else ""
+    red["server_context"] = {"origin": classify_ip(client_ip)}
+
+    # Process payload
     payload = red.get("payload")
     if isinstance(payload, dict):
+        # Replace userAgent with classification on sessionStart events
+        ua = payload.pop("userAgent", None)
+        if ua and doc.get("eventType") == "sessionStart":
+            payload["userAgent"] = classify_ua(ua)
+        # Drop remaining PII keys
         for k in list(payload.keys()):
             if k in REDACT_PAYLOAD_KEYS:
                 payload.pop(k, None)
@@ -177,7 +205,7 @@ def write_metadata(
         "created_at": finished_at,
         "started_at": started_at,
         "version": 1,
-        "notes": "Anonymized dataset with PII removed: server_context, sessionId, userAgent, headers, profile. userProfile events omitted.",
+        "notes": "Anonymized dataset: sessionId replaced with anon IDs, server_context replaced with origin classification, userAgent replaced with device class. headers/profile dropped. userProfile events omitted.",
         "stats": {
             "total_files_seen": stats.total_files,
             "processed_files": stats.processed,
@@ -186,8 +214,18 @@ def write_metadata(
             "wrote_files": stats.wrote_files,
         },
         "schema": {
-            "root_keys": ["timestamp", "eventType", "payload"],
-            "dropped_root_keys": ["server_context", "sessionId"],
+            "root_keys": [
+                "timestamp",
+                "eventType",
+                "sessionId",
+                "server_context",
+                "payload",
+            ],
+            "anonymized_fields": {
+                "sessionId": "replaced with anon_NNNN",
+                "server_context": "replaced with {origin: <classification>}",
+                "payload.userAgent": "replaced with device class on sessionStart",
+            },
             "dropped_payload_keys": sorted(REDACT_PAYLOAD_KEYS),
         },
         "license": {
@@ -219,9 +257,11 @@ def write_schema_doc(out_root: Path) -> None:
         "Each JSON file contains:\n",
         "- `timestamp` (string, ISO 8601, Z)\n",
         "- `eventType` (string)\n",
-        "- `payload` (object; userAgent/headers/profile omitted if originally present)\n",
+        "- `sessionId` (string, anonymized: `anon_NNNN`)\n",
+        "- `server_context` (object: `{origin: <classification>}`, IP removed)\n",
+        "- `payload` (object; headers/profile dropped,"
+        " userAgent replaced with device class on sessionStart)\n",
         "\n",
-        "Removed fields: `server_context`, `sessionId`.\n",
         "Omitted events: `userProfile`.\n",
         "\n",
         "Filenames: `<timestamp>-<eventType>-<seq>.json` grouped under `YYYY/MM/DD/`.\n",
@@ -274,15 +314,18 @@ YYYY/MM/DD/            Event files grouped by date
 Each file contains:
 - `timestamp` (string, ISO 8601 UTC)
 - `eventType` (string)
+- `sessionId` (string, anonymized: `anon_NNNN`)
+- `server_context` (object: `{{"origin": "<classification>"}}`, IP address removed)
 - `payload` (object, content varies by event type)
 
 ## Anonymization
 
-The following fields were **removed** to protect user privacy:
-- `server_context` (IP address, request headers)
-- `sessionId` (session identifier)
-- `payload.userAgent`, `payload.headers`, `payload.profile`
-- All `userProfile` events (dropped entirely)
+The following transformations protect user privacy while preserving analytical value:
+- `sessionId` — replaced with deterministic anonymous IDs (`anon_0001`, …)
+- `server_context` — IP address replaced with geographic/org classification only
+- `payload.userAgent` — replaced with device class (e.g. "Desktop") on sessionStart events
+- `payload.headers`, `payload.profile` — dropped entirely
+- All `userProfile` events — dropped entirely
 
 Query text and response content are preserved for research purposes.
 
@@ -332,6 +375,8 @@ def anonymize_tree(
     """Walk input tree, redact and output anonymized events; return stats."""
     stats = RedactionStats()
     seq_by_dir: dict[Path, int] = {}
+    session_id_map: dict[str, str] = {}
+    session_counter = 0
 
     for src in iter_json_files(in_root):
         stats.total_files += 1
@@ -362,7 +407,13 @@ def anonymize_tree(
                 .replace("+00:00", "Z")
             )
 
-        red = redact_document(doc)
+        # Assign a stable anonymous session ID
+        orig_sid = doc.get("sessionId", key_f or "unknown")
+        if orig_sid not in session_id_map:
+            session_counter += 1
+            session_id_map[orig_sid] = f"anon_{session_counter:04d}"
+
+        red = redact_document(doc, session_id_map[orig_sid])
         red["eventType"] = event_type  # ensure consistent typing
         red["timestamp"] = ts  # ensure normalized
 
