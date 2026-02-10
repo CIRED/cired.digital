@@ -16,6 +16,7 @@ from pathlib import Path
 from typing import Any
 
 import pandas as pd
+from classifier import classify_ip, classify_ua
 
 DEFAULT_BASE_PATH = Path(__file__).resolve().parents[2] / "reports" / "monitor-logs"
 DEFAULT_MIN_DATE = "20250705"
@@ -154,20 +155,33 @@ def augment_dataframe(events_df: pd.DataFrame) -> None:
         events_df: DataFrame to modify in place
 
     """
+    server_contexts: list[dict[str, Any]] = events_df["server_context"].tolist()
+    event_types: list[str] = events_df["eventType"].tolist()
+    payloads: list[dict[str, Any]] = events_df["payload"].tolist()
+
     # The client IP from the server_context
-    events_df["ip"] = [context["client_ip"] for context in events_df["server_context"]]
+    ip_values: list[str] = [ctx.get("client_ip", "") for ctx in server_contexts]
+    events_df["ip"] = ip_values
+    # The origin label classified from the IP
+    events_df["origin"] = [classify_ip(ip) for ip in ip_values]
     # The user agent from payload for "sessionStart" event types
-    events_df["ua"] = [
-        payload["userAgent"] if etype == "sessionStart" else None
-        for etype, payload in zip(events_df["eventType"], events_df["payload"])
+    ua_values: list[str | None] = [
+        payload.get("userAgent") if etype == "sessionStart" else None
+        for etype, payload in zip(event_types, payloads)
+    ]
+    events_df["ua"] = ua_values
+    # The classified user agent label
+    events_df["ua_class"] = [
+        classify_ua(ua) if ua is not None else "??" for ua in ua_values
     ]
     # The query text for "request" event types
-    events_df["query"] = [
-        payload["query"] if etype == "request" else None
-        for etype, payload in zip(events_df["eventType"], events_df["payload"])
+    query_values: list[str | None] = [
+        payload.get("query") if etype == "request" else None
+        for etype, payload in zip(event_types, payloads)
     ]
+    events_df["query"] = query_values
     # Rename "visibilityChange" events to "visibilityOn" or "visibilityOff"
-    events_df["eventType"] = [
+    normalized_event_types: list[str] = [
         (
             "visibilityOn"
             if etype == "visibilityChange"
@@ -177,8 +191,9 @@ def augment_dataframe(events_df: pd.DataFrame) -> None:
             and payload.get("visibilityState") == "hidden"
             else etype
         )
-        for etype, payload in zip(events_df["eventType"], events_df["payload"])
+        for etype, payload in zip(event_types, payloads)
     ]
+    events_df["eventType"] = normalized_event_types
 
 
 def create_sessions_list(events_df: pd.DataFrame) -> list[dict[str, Any]]:
@@ -197,7 +212,9 @@ def create_sessions_list(events_df: pd.DataFrame) -> list[dict[str, Any]]:
         session_dict: dict[str, Any] = {
             "sessionId": session_id,
             "ip": group["ip"].iloc[0],
+            "origin": group["origin"].iloc[0],
             "ua": group["ua"].iloc[0],
+            "ua_class": group["ua_class"].iloc[0],
             "start_time": group["timestamp"].min(),
             "end_time": group["timestamp"].max(),
             "event_count": len(group),
