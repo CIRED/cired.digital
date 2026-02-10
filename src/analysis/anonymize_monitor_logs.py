@@ -229,6 +229,82 @@ def write_schema_doc(out_root: Path) -> None:
     (out_root / "SCHEMA.md").write_text("".join(lines), encoding="utf-8")
 
 
+def write_readme(out_root: Path, stats: RedactionStats) -> None:
+    """Write README.md describing the dataset for standalone distribution (e.g. Zenodo)."""
+    text = f"""\
+# CIRED.digital user interaction logs (anonymized)
+
+Anonymized event logs from [CIRED.digital](https://cired.digital), a conversational
+assistant for exploring the scientific publications of
+[CIRED](https://www.centre-cired.fr) hosted on [HAL](https://hal.science).
+
+## Coverage
+
+- **Period**: June 23 – October 9, 2025
+- **Events**: {stats.wrote_files} anonymized JSON files
+- **Source files processed**: {stats.total_files} (of which {stats.skipped_user_profile} userProfile events omitted,
+  {stats.parse_errors} parse errors)
+
+## Structure
+
+```
+README.md              This file
+METADATA.json          Dataset version, stats, schema, license
+SCHEMA.md              JSON field documentation
+LICENSE-DATASET.txt    CC BY 4.0 terms
+CHECKSUMS.sha256       SHA-256 integrity checksums
+YYYY/MM/DD/            Event files grouped by date
+  <timestamp>-<eventType>-<seq>.json
+```
+
+### Event types
+
+| eventType         | Description                              |
+|-------------------|------------------------------------------|
+| sessionStart      | User opens the application               |
+| request           | User submits a query                     |
+| response          | System returns RAG results               |
+| article           | System generates a synthesized article   |
+| feedback          | User gives thumbs up/down                |
+| btnClick          | UI button interaction                    |
+| visibilityChange  | Browser tab shown/hidden                 |
+
+### JSON schema
+
+Each file contains:
+- `timestamp` (string, ISO 8601 UTC)
+- `eventType` (string)
+- `payload` (object, content varies by event type)
+
+## Anonymization
+
+The following fields were **removed** to protect user privacy:
+- `server_context` (IP address, request headers)
+- `sessionId` (session identifier)
+- `payload.userAgent`, `payload.headers`, `payload.profile`
+- All `userProfile` events (dropped entirely)
+
+Query text and response content are preserved for research purposes.
+
+## License
+
+This dataset is released under the
+[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+license.
+
+## Citation
+
+> Ha-Duong, M. (2025). CIRED.digital user interaction logs (anonymized) [Dataset].
+> https://doi.org/FIXME
+
+## Contact
+
+Minh Ha-Duong <minh.ha-duong@cnrs.fr>
+CIRED — Centre international de recherche sur l'environnement et le développement
+"""
+    (out_root / "README.md").write_text(text, encoding="utf-8")
+
+
 def generate_checksums(out_root: Path) -> None:
     """Generate CHECKSUMS.sha256 file for all JSON outputs."""
     entries: list[tuple[str, str]] = []
@@ -358,6 +434,7 @@ def main() -> None:
 
     write_schema_doc(out_root)
     write_license(out_root)
+    write_readme(out_root, stats)
     write_metadata(
         out_root,
         stats,

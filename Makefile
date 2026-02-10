@@ -48,7 +48,10 @@ REFERENCE_FIGURES := \
 	session_event_type_transitions.png \
 	session_event_type_transitions_simplified.png
 
-.PHONY: figures csv stats analysis clean-figures clean-csv clean-stats test
+ANON_DIR := $(PROJECT_ROOT)/reports/monitor-logs-anon
+ANON_ZIP := $(PROJECT_ROOT)/reports/monitor-logs-anon_$(shell date -u +%Y%m%d).zip
+
+.PHONY: figures csv stats analysis dataset clean-figures clean-csv clean-stats test
 
 figures: $(FIGURES)
 
@@ -102,6 +105,12 @@ $(REPORT_DIR)/describe_events_summary.txt: $(SRC_ANALYSIS)/describe_events.py $(
 
 $(REPORT_DIR)/describe_sessions_summary.txt: $(SRC_ANALYSIS)/describe_sessions.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
 	$(RUNPY) $(SRC_ANALYSIS)/describe_sessions.py > $@
+
+dataset:
+	rm -rf $(ANON_DIR)
+	$(RUNPY) $(SRC_ANALYSIS)/anonymize_monitor_logs.py \
+		--input $(LOGS_ROOT) --output $(ANON_DIR) --zip
+	@echo "Dataset archive: $$(ls $(PROJECT_ROOT)/reports/monitor-logs-anon_*.zip)"
 
 test: analysis
 	@fail=0; \
