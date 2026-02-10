@@ -48,7 +48,10 @@ REFERENCE_FIGURES := \
 	session_event_type_transitions.png \
 	session_event_type_transitions_simplified.png
 
-.PHONY: figures csv stats analysis clean-figures clean-csv clean-stats test
+ANON_DIR := $(PROJECT_ROOT)/reports/monitor-logs-anon
+ANON_ZIP := $(PROJECT_ROOT)/reports/monitor-logs-anon_$(shell date -u +%Y%m%d).zip
+
+.PHONY: figures csv stats analysis dataset clean-figures clean-csv clean-stats test
 
 figures: $(FIGURES)
 
@@ -62,22 +65,22 @@ $(REPORT_DIR):
 	mkdir -p $@
 
 $(REPORT_DIR)/viz1_session_activity_timeline.png: $(SRC_ANALYSIS)/fig_activity.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
-	MPLBACKEND=$(MPLBACKEND) $(RUNPY) $(SRC_ANALYSIS)/fig_activity.py
+	LOGS_ROOT=$(LOGS_ROOT) MPLBACKEND=$(MPLBACKEND) $(RUNPY) $(SRC_ANALYSIS)/fig_activity.py
 	@test -f $@
 
 $(REPORT_DIR)/visitors_origin.png: $(SRC_ANALYSIS)/fig_provenance.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
-	MPLBACKEND=$(MPLBACKEND) $(RUNPY) $(SRC_ANALYSIS)/fig_provenance.py
+	LOGS_ROOT=$(LOGS_ROOT) MPLBACKEND=$(MPLBACKEND) $(RUNPY) $(SRC_ANALYSIS)/fig_provenance.py
 	@test -f $@
 
 $(REPORT_DIR)/session_event_type_transitions.png: $(SRC_ANALYSIS)/fig_sessions.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
-	MPLBACKEND=$(MPLBACKEND) $(RUNPY) $(SRC_ANALYSIS)/fig_sessions.py
+	LOGS_ROOT=$(LOGS_ROOT) MPLBACKEND=$(MPLBACKEND) $(RUNPY) $(SRC_ANALYSIS)/fig_sessions.py
 	@test -f $@
 
 $(REPORT_DIR)/session_event_type_transitions_simplified.png: $(REPORT_DIR)/session_event_type_transitions.png
 	@test -f $@
 
 $(REPORT_DIR)/Queries.csv: $(SRC_ANALYSIS)/tabulate_queries.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
-	$(RUNPY) $(SRC_ANALYSIS)/tabulate_queries.py
+	LOGS_ROOT=$(LOGS_ROOT) $(RUNPY) $(SRC_ANALYSIS)/tabulate_queries.py
 	@test -f $@
 
 $(REPORT_DIR)/UniqueQueries.csv: $(REPORT_DIR)/Queries.csv
@@ -98,10 +101,16 @@ $(REPORT_DIR)/article_analysis_monthly.csv: $(REPORT_DIR)/article_analysis.csv
 	@test -f $@
 
 $(REPORT_DIR)/describe_events_summary.txt: $(SRC_ANALYSIS)/describe_events.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
-	$(RUNPY) $(SRC_ANALYSIS)/describe_events.py > $@
+	LOGS_ROOT=$(LOGS_ROOT) $(RUNPY) $(SRC_ANALYSIS)/describe_events.py > $@
 
 $(REPORT_DIR)/describe_sessions_summary.txt: $(SRC_ANALYSIS)/describe_sessions.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
-	$(RUNPY) $(SRC_ANALYSIS)/describe_sessions.py > $@
+	LOGS_ROOT=$(LOGS_ROOT) $(RUNPY) $(SRC_ANALYSIS)/describe_sessions.py > $@
+
+dataset:
+	rm -rf $(ANON_DIR)
+	$(RUNPY) $(SRC_ANALYSIS)/anonymize_monitor_logs.py \
+		--input $(LOGS_ROOT) --output $(ANON_DIR) --zip
+	@echo "Dataset archive: $$(ls $(PROJECT_ROOT)/reports/monitor-logs-anon_*.zip)"
 
 test: analysis
 	@fail=0; \

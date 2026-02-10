@@ -122,7 +122,7 @@ def find_corresponding_request(response_file: Path, query_id: str) -> Path | Non
     parent_dir = response_file.parent
 
     # Try to find request file with the same query ID in the name or content
-    for request_file in parent_dir.glob("*-request.json"):
+    for request_file in parent_dir.glob("*-request*.json"):
         try:
             data = json.loads(request_file.read_text(encoding="utf-8"))
             if data.get("payload", {}).get("queryId") == query_id:
@@ -147,7 +147,7 @@ def analyze_tokens(logs_root: Path) -> pd.DataFrame:
     records = []
 
     # Find all response files
-    response_files = list(logs_root.rglob("*-response.json"))
+    response_files = list(logs_root.rglob("*-response*.json"))
     print(f"Found {len(response_files)} response files")
 
     for response_file in response_files:
