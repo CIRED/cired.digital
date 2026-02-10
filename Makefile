@@ -40,7 +40,15 @@ STATS := \
 	$(REPORT_DIR)/describe_sessions_summary.txt
 
 
-.PHONY: figures csv stats analysis clean-figures clean-csv clean-stats
+REFERENCE_DIR ?= $(HOME)/CNRS/papiers/sent/CIRED.digital final report/fig
+
+REFERENCE_FIGURES := \
+	viz1_session_activity_timeline.png \
+	visitors_origin.png \
+	session_event_type_transitions.png \
+	session_event_type_transitions_simplified.png
+
+.PHONY: figures csv stats analysis clean-figures clean-csv clean-stats test
 
 figures: $(FIGURES)
 
@@ -94,6 +102,17 @@ $(REPORT_DIR)/describe_events_summary.txt: $(SRC_ANALYSIS)/describe_events.py $(
 
 $(REPORT_DIR)/describe_sessions_summary.txt: $(SRC_ANALYSIS)/describe_sessions.py $(SRC_ANALYSIS)/logloader.py | $(REPORT_DIR)
 	$(RUNPY) $(SRC_ANALYSIS)/describe_sessions.py > $@
+
+test: analysis
+	@fail=0; \
+	for f in $(REFERENCE_FIGURES); do \
+		if cmp -s "$(REFERENCE_DIR)/$$f" "$(REPORT_DIR)/$$f"; then \
+			echo "PASS $$f"; \
+		else \
+			echo "FAIL $$f"; fail=1; \
+		fi; \
+	done; \
+	[ $$fail -eq 0 ] && echo "All regression tests passed." || { echo "Regression test(s) failed."; exit 1; }
 
 clean-figures:
 	rm -f $(FIGURES)
