@@ -209,7 +209,7 @@ def analyze_articles(logs_root: Path) -> pd.DataFrame:
     records = []
 
     # Find all article files
-    article_files = list(logs_root.rglob("*-article.json"))
+    article_files = list(logs_root.rglob("*-article*.json"))
     print(f"Found {len(article_files)} article files")
 
     for article_file in article_files:

@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "CIRED.digital: conversational assistant for CIRED publications"
+message: "If you use this software or dataset, please cite it as below."
+type: software
+authors:
+  - family-names: Ha-Duong
+    given-names: Minh
+    email: minh.ha-duong@cnrs.fr
+    orcid: "https://orcid.org/0000-0003-0940-1357"
+    affiliation: "CIRED, CNRS"
+repository-code: "https://github.com/CIRED/cired.digital"
+url: "https://cired.digital"
+license: CECILL-2.1
+date-released: "2025-10-09"
+keywords:
+  - RAG
+  - scientific-publications
+  - chatbot
+  - open-science
+  - HAL
