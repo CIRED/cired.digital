@@ -39,7 +39,7 @@ dependencies = [
   "plotly>=5.0.0",
   "jupyterlab>=4.4.10",
   "duckdb>=1.0.0",
-  "ibis-framework>=8.0.0",
+  "ibis-framework>=12.0.0",
   "polars>=1.0.0",
 ]
 
