@@ -43,10 +43,8 @@ dependencies = [
   "polars>=1.0.0",
 ]
 
-# Note: Ubuntu distro version of `ruff`, `pytest`, `mypy` tend to be old.
-# Rather install the latest version in `.local/bin/` with
-#    `pipx install ruff pytest mypy pre-commit`
-#
+# Dev tools (ruff, mypy, pytest, pre-commit) are managed by uv.
+# Run with: uv run ruff check, uv run mypy, uv run pytest
 [dependency-groups]
 dev = [
   "ruff>=0.11.12,<1.0.0",
