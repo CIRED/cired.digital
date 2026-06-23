@@ -49,6 +49,28 @@ this will do a remote git pull, restart and validate.
    ./validate.sh --remote
    ```
 
+## Rotating secrets and API keys
+
+Edit the relevant file in `secrets/env/` (e.g. `r2r-full.env`), push it, then
+**recreate** the affected container:
+
+```bash
+./push_secrets.sh
+./up.sh --remote          # recreates containers, re-reading env_file
+```
+
+- Write each secret as a real assignment: `OPENAI_API_KEY=sk-proj-...`. A bare
+  value with no `VAR=` prefix leaves the variable undefined.
+- **`docker restart` does NOT pick up a changed key.** It bounces the process
+  with the environment baked in at container *creation*. Only `up.sh --remote`
+  (i.e. `docker compose up -d --force-recreate <service>`) re-reads `env_file`.
+- Verify the swap with a **novel** query, not a repeated one: R2R caches query
+  embeddings, so a repeated query can return 200 from cache and hide a bad key.
+  Confirm the loaded key without printing it:
+  ```bash
+  docker exec cidir2r-r2r-1 sh -c 'printf %s "$OPENAI_API_KEY" | tail -c 4'
+  ```
+
 ## Backuping and updating the corpus Data
 
 1. Create a snapshot locally:
