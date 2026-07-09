@@ -1,0 +1,11 @@
+# Regenerable build outputs — rebuild with `make slides` (quarto -> beamer).
+# The .qmd source and slides-assets/ figures are tracked (durable handoff state);
+# the rendered PDF and the keep-tex intermediate are not.
+*.pdf
+*.tex
+*.log
+*.aux
+*.nav
+*.out
+*.snm
+*.toc
