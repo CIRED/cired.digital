@@ -82,11 +82,9 @@ Le reste = « voici la méthode, et ce qu'elle vaut ».
 - Tolère l'imprécision de la formulation
 - Rend une **réponse synthétique**
 - Agrège plusieurs sources, cite
-- Rate... et parfois invente
+- Rate... et peut inventer
 ::::
 :::::
-
-. . .
 
 \begin{center}
 \small Deux moteurs d'accès au \emph{même} corpus. Comprendre le RAG, c'est voir HAL --- en sémantique.
@@ -97,22 +95,51 @@ C'est LE cadrage pour ce public de fouille de texte : positionner le RAG comme
 un mode d'accès complémentaire, pas un remplaçant. Assumer le « invente » d'emblée.
 :::
 
-# 3 — Le RAG : récupérer, ancrer, citer
+# 3 — Le RAG : découper, plonger, récupérer, générer
 
-## Cirdi : un RAG sur la collection HAL du CIRED
+## Qu'est-ce que le RAG ?
 
+\textbf{R}etrieval-\textbf{A}ugmented \textbf{G}eneration : au lieu de répondre « de mémoire », le modèle **va d'abord chercher** dans le corpus, puis rédige à partir de ce qu'il a trouvé.
+
+\vspace{0.6em}
 \begin{center}
-\includegraphics[width=0.9\linewidth]{slides-assets/hal-header.png}
+\begin{tikzpicture}[font=\scriptsize,
+  b/.style={draw, rounded corners, minimum width=17mm, minimum height=7mm, align=center},
+  s/.style={draw, rounded corners, minimum width=17mm, minimum height=7mm, align=center, fill=black!6}]
+  \node[s] (corpus) at (0,1.15) {Corpus\\HAL};
+  \node[b] (chunk)  at (2.4,1.15) {Découpage};
+  \node[b] (embed)  at (4.8,1.15) {Plongement};
+  \node[s] (index)  at (7.3,1.15) {Index\\vectoriel};
+  \draw[->] (corpus)--(chunk);
+  \draw[->] (chunk)--(embed);
+  \draw[->] (embed)--(index);
+  \node[s] (q)   at (0,0)   {Question};
+  \node[b] (ret) at (2.4,0) {Récupération};
+  \node[b] (gen) at (4.8,0) {Génération};
+  \node[s] (ans) at (7.3,0) {Réponse\\sourcée};
+  \draw[->] (q)--(ret);
+  \draw[->] (index)--(ret);
+  \draw[->] (ret)--(gen);
+  \draw[->] (gen)--(ans);
+\end{tikzpicture}
 \end{center}
 
-\small Le corpus vit dans HAL. Cirdi y ajoute un accès en trois temps :
+\small Le corpus vient de HAL ; Cirdi ajoute cet accès --- **open source**, réplicable sur toute collection HAL.
 
-1. **Récupération** --- embeddings → passages pertinents
-2. **Génération ancrée** --- réponse fondée sur ces passages
-3. **Citation** --- sources HAL tracées
+## Les concepts clés
+
+\small
+
+**Découpage (chunking)** --- ici, délégué au moteur (**R2R**) : découpage **par longueur** (segments de taille fixe, avec chevauchement).
 
 \smallskip
-**Open source**, réplicable sur toute collection HAL.
+**Plongement (embedding)** --- projeter chaque passage, et la question, en vecteur. Proximité des vecteurs $\approx$ proximité de sens.
+
+\smallskip
+**Récupération (retrieval)** --- ramener les passages les plus proches de la question. **Dense** : proximité des plongements (le sens). **BM25** : recouvrement de mots-clés (le score lexical des moteurs de recherche classiques). Ici, recherche **mixte** = les deux combinées.
+
+\smallskip
+**Génération** --- le LLM rédige une réponse **ancrée** dans ces passages, et **cite** ses sources.
 
 ::: {.notes}
 Une slide sur l'architecture, pas plus. Insister sur « ancrée » et « citation » :
@@ -121,21 +148,33 @@ c'est ce qui distingue d'un chatbot généraliste.
 
 # 4 — Corpus et découpage sont des choix de méthode
 
-## Du PDF au passage indexable
+## Nos choix --- et ce qu'on aurait pu faire de plus
 
-- **Corpus** : publications CIRED déposées dans HAL --- texte intégral préféré au PDF, enrichi des métadonnées
-- **Découpage** : passages indexés par embeddings (le choix de granularité pèse sur la qualité)
-- **Hébergement modeste** : serveur dédié, `mistral-small` dominant, Ollama via Huma-Num
-- **Journaux d'usage** anonymisés dès la collecte (RGPD), rapport d'analyse **Quarto reproductible**
+\begin{center}
+\small
+\begin{tabular}{@{}lP{3.2cm}P{5.4cm}@{}}
+\toprule
+\textbf{Dimension} & \textbf{Notre choix} & \textbf{Aller plus loin / mieux} \\
+\midrule
+Corpus            & HAL, texte intégral & + archives, + revues sous péage \\
+Découpage         & longueur fixe       & découpage structuré (sections) \\
+Hébergement       & commercial          & Huma-Num, ou interne au labo \\
+Suivi des usages  & RGPD prudent        & opt-in, ou activé par défaut \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\small Des choix volontairement **prudents et minimaux** --- assumés, et extensibles.
 
 ::: {.notes}
-Le retour d'expérience honnête : les choix de corpus et de découpage sont des
-choix de méthode, pas des détails techniques. C'est ce que ce public veut entendre.
+Retour d'expérience honnête : chaque ligne est un choix de méthode, pas un détail
+technique. On a systématiquement pris l'option conservatrice ; la colonne de droite
+dit où l'on gagnerait en couverture, en qualité, ou en richesse des données.
 :::
 
-# 5 — La synthèse agrège et trace ses sources
+# 5 — Exemples d'usage
 
-## Ce que la synthèse apporte --- et où elle cite
+## Types de requêtes : la synthèse thématique domine
 
 ::::: {.columns}
 :::: {.column width="54%"}
@@ -144,14 +183,15 @@ choix de méthode, pas des détails techniques. C'est ce que ce public veut ente
 :::: {.column width="42%"}
 \vspace{0.8em}
 
-Le type de requête **dominant** : la **synthèse thématique**, loin devant la recherche de publication.
+Les questions posées se rangent en catégories :
+
+- **Synthèse thématique** --- la plus fréquente, de loin
+- Recherche de publication
+- Question de méthode
+- Étude de cas, test de limites, recommandation…
 
 \medskip
-La synthèse :
-
-- **agrège** plusieurs papiers
-- **reformule** dans les termes de la question
-- **trace** chaque affirmation vers sa source
+On vient surtout **faire le point sur un sujet**, pas seulement retrouver un document.
 ::::
 :::::
 
@@ -212,8 +252,6 @@ Renvoyer les curieux vers les annexes coûts.
 - **Réutilisable** : chaîne RAG + instrumentation RGPD + rapport Quarto reproductible
 - **Réplicable** : Cirdi tourne sur n'importe quelle collection HAL
 - Code ouvert : \texttt{github.com/MinhHaDuong/cired.digital}
-
-. . .
 
 \begin{center}
 \large HAL donne l'accès \emph{lexical}. Le pas suivant :\\
