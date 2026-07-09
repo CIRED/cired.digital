@@ -58,6 +58,8 @@ Accès **sémantique** : \url{http://cired.digital/}
 ::: {.notes}
 Démo LIVE (secours = cette capture). Poser UNE question précise sur une publi CIRED,
 montrer la réponse ET les sources HAL citées. 90 secondes.
+Bridge vers §2 : « ce que vous venez de voir a deux moitiés --- HAL et Cirdi ; c'est
+le sujet de la slide suivante ». Évite le blanc si la démo va vite ou échoue.
 Le reste = « voici la méthode, et ce qu'elle vaut ».
 :::
 
@@ -99,7 +101,7 @@ un mode d'accès complémentaire, pas un remplaçant. Assumer le « invente » d
 
 ## Qu'est-ce que le RAG ?
 
-\textbf{R}etrieval-\textbf{A}ugmented \textbf{G}eneration : au lieu de répondre « de mémoire », le modèle **va d'abord chercher** dans le corpus, puis rédige à partir de ce qu'il a trouvé.
+Au lieu de répondre « de mémoire », le modèle **va d'abord chercher** dans le corpus, puis rédige à partir de ce qu'il a trouvé --- c'est le **RAG** (*Retrieval-Augmented Generation*).
 
 \vspace{0.6em}
 \begin{center}
@@ -109,7 +111,7 @@ un mode d'accès complémentaire, pas un remplaçant. Assumer le « invente » d
   \node[s] (corpus) at (0,1.15) {Corpus\\HAL};
   \node[b] (chunk)  at (2.4,1.15) {Découpage};
   \node[b] (embed)  at (4.8,1.15) {Plongement};
-  \node[s] (index)  at (7.3,1.15) {Index\\vectoriel};
+  \node[s] (index)  at (7.3,1.15) {Index\\dense + lexical};
   \draw[->] (corpus)--(chunk);
   \draw[->] (chunk)--(embed);
   \draw[->] (embed)--(index);
@@ -130,10 +132,10 @@ un mode d'accès complémentaire, pas un remplaçant. Assumer le « invente » d
 
 \small
 
-**Découpage (chunking)** --- ici, délégué au moteur (**R2R**) : découpage **par longueur** (segments de taille fixe, avec chevauchement).
+**Découpage (chunking)** --- ici, délégué au moteur (**R2R**, moteur RAG open source) : découpage **par longueur** (segments de taille fixe, avec chevauchement).
 
 \smallskip
-**Plongement (embedding)** --- projeter chaque passage, et la question, en vecteur. Proximité des vecteurs $\approx$ proximité de sens.
+**Plongement (embedding)** --- projeter chaque passage, et la question, en vecteur. Proximité des vecteurs $\approx$ proximité de sens (indice imparfait, dépend du modèle).
 
 \smallskip
 **Récupération (retrieval)** --- ramener les passages les plus proches de la question. **Dense** : proximité des plongements (le sens). **BM25** : recouvrement de mots-clés (le score lexical des moteurs de recherche classiques). Ici, recherche **mixte** = les deux combinées.
@@ -142,8 +144,12 @@ un mode d'accès complémentaire, pas un remplaçant. Assumer le « invente » d
 **Génération** --- le LLM rédige une réponse **ancrée** dans ces passages, et **cite** ses sources.
 
 ::: {.notes}
-Une slide sur l'architecture, pas plus. Insister sur « ancrée » et « citation » :
-c'est ce qui distingue d'un chatbot généraliste.
+Une slide sur l'architecture. Insister sur « ancrée » et « citation » : c'est ce
+qui distingue d'un chatbot généraliste.
+Réserve pour le Q&A : la fusion dense+BM25 combine les rangs (type RRF / pondération) ;
+un reranking (cross-encoder) peut affiner les passages — selon la config R2R. Le choix
+du modèle de plongement (multilingue vs français) pèse sur la qualité. Métriques d'éval
+possibles : groundedness / faithfulness, précision-rappel du contexte (type RAGAS).
 :::
 
 # 4 — Corpus et découpage sont des choix de méthode
@@ -154,12 +160,12 @@ c'est ce qui distingue d'un chatbot généraliste.
 \small
 \begin{tabular}{@{}lP{3.2cm}P{5.4cm}@{}}
 \toprule
-\textbf{Dimension} & \textbf{Notre choix} & \textbf{Aller plus loin / mieux} \\
+\textbf{Dimension} & \textbf{Notre choix} & \textbf{Aller plus loin} \\
 \midrule
 Corpus            & HAL, texte intégral & + archives, + revues sous péage \\
 Découpage         & longueur fixe       & découpage structuré (sections) \\
 Hébergement       & commercial          & Huma-Num, ou interne au labo \\
-Suivi des usages  & RGPD prudent        & opt-in, ou activé par défaut \\
+Suivi des usages  & RGPD prudent        & opt-in / défaut ($-$ de vie privée) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -195,6 +201,9 @@ On vient surtout **faire le point sur un sujet**, pas seulement retrouver un doc
 ::::
 :::::
 
+\smallskip
+\small\emph{Lecture indicative : phase bêta, ${\approx}$ 190 requêtes, public restreint --- non représentatif d'un usage en production.}
+
 ::: {.notes}
 Montrer un exemple réel en live si possible. Le point clé : la traçabilité rend
 la synthèse vérifiable — sans elle, ce serait inutilisable en recherche.
@@ -204,65 +213,48 @@ la synthèse vérifiable — sans elle, ce serait inutilisable en recherche.
 
 ## Ce qu'un RAG ne garantit pas
 
-- **Hallucination bornée, pas nulle** --- l'ancrage réduit sans supprimer
+- **Hallucination** --- l'ancrage la réduit sans la supprimer (*combien ? reste à mesurer*)
 - **Biais de couverture** --- seul existe ce qui est dans HAL, en texte intégral
-- **Dépendance** aux embeddings et au découpage --- deux réglages, deux résultats
-- **Non-reproductibilité du modèle** --- même question, réponse variable
-- **Évaluation difficile** --- jeu de questions test + évaluateur automatique de la chaîne
+- **Dépendance** aux plongements et au découpage --- deux réglages, deux résultats
+- **Réponse non reproductible** --- même question, réponse variable ; le *protocole de mesure*, lui, l'est
+- **Évaluation** --- encore à mener : jeu de questions test + évaluateur automatique *à venir*
 
 ::: {.notes}
-Public SHS = valorise la lucidité méthodologique. Ne pas survendre. La ligne
-« évaluation difficile » ouvre naturellement sur la discussion.
+Public SHS = valorise la lucidité méthodologique. Ne pas survendre. Bien distinguer
+reproductible (le protocole, les mesures) de non reproductible (la réponse ponctuelle) :
+c'est le piège du discutant. « hallucination bornée » et « ancrée » sont des intentions
+de conception, pas des résultats mesurés — l'évaluation reste à mener. La ligne
+« évaluation » ouvre sur la discussion.
 :::
 
-# 7 — Un dispositif réel, et mesuré : usages et coûts
-
-## Usages et coûts, en bref
-
-::::: {.columns}
-:::: {.column width="58%"}
-![](slides-assets/viz1_session_activity_timeline.png)
-::::
-:::: {.column width="40%"}
-\vspace{0.4em}
-
-- Dispositif **instrumenté** : événements anonymisés, rapport reproductible
-- Coûts **étonnamment bas** à cette échelle :
-  \medskip
-
-  \begin{center}
-  \textbf{1,71 M tokens Mistral $\;\to\;$ 0,32 €}
-  \end{center}
-::::
-:::::
-
-\begin{center}
-\small Détails chiffrés en annexe.
-\end{center}
-
-::: {.notes}
-Bloc court : prouver que c'est un dispositif réel, mesuré, pas une maquette.
-Renvoyer les curieux vers les annexes coûts.
-:::
-
-# 8 — Le pas suivant : l'accès sémantique dans HAL
+# 7 — Vers un accès sémantique dans HAL
 
 ## Une méthode, et le code
 
 - **Réutilisable** : chaîne RAG + instrumentation RGPD + rapport Quarto reproductible
 - **Réplicable** : Cirdi tourne sur n'importe quelle collection HAL
+- **Enjeu SHS** : une couche de médiation qui rend les travaux du labo plus accessibles
 - Code ouvert : \texttt{github.com/MinhHaDuong/cired.digital}
 
+\smallskip
+\small Dispositif réel et **mesuré** : 1,71 M tokens Mistral (prod) $\to$ **0,32 €** ; \textasciitilde{}25 M tokens OpenAI en phase dev. Détails en annexe.
+
 \begin{center}
-\large HAL donne l'accès \emph{lexical}. Le pas suivant :\\
-\textbf{y intégrer l'accès sémantique}.
+\large HAL donne l'accès \emph{lexical}.\\
+Et si HAL offrait aussi l'accès \textbf{sémantique} ?
 
 \medskip
-Merci --- questions ?
+\small\emph{Reste à traiter : gouvernance, responsabilité éditoriale, échelle.}
+
+\medskip
+\large Merci --- questions ?
 \end{center}
 
 ::: {.notes}
-Fermer sur la méthode et l'ouverture SHS, pas sur l'outil.
+Fermer sur la méthode et l'ouverture SHS. Le take-home est une invitation, pas une
+feuille de route : nommer les obstacles (gouvernance CCSD/INIST, responsabilité pour
+une infrastructure nationale, échelle HAL >> corpus labo) désamorce le discutant.
+Coûts : Mistral = config de production (le chiffre pertinent) ; OpenAI = phase dev.
 :::
 
 ```{=latex}
@@ -342,11 +334,19 @@ une **grammaire d'usage** --- poser, relancer, abandonner.
 \includegraphics[height=0.74\textheight]{slides-assets/visitors_origin.png}
 \end{center}
 
+## Activité dans le temps
+
+\begin{center}
+\includegraphics[width=0.92\linewidth]{slides-assets/viz1_session_activity_timeline.png}
+\end{center}
+
+\small Sessions et requêtes par jour --- les pics suivent la diffusion (présentation CIRED, newsletter). Phase bêta.
+
 ## Évaluer la chaîne RAG
 
 - **Jeu de questions test** construit depuis les questions fréquentes du site du labo
-- **Évaluateur automatique** de réponses
-- **Évaluateur global** de la chaîne RAG (récupération + génération)
+- **Évaluateur automatique** de réponses (un second LLM note *groundedness / faithfulness*)
+- **Évaluateur global** de la chaîne RAG (récupération + génération) --- métriques type RAGAS
 - Observabilité : scores, analyse fine des questions posées
 
 ::: {.notes}
@@ -365,8 +365,9 @@ avec un public de méthodologues.
 
 - Événements captés : `request`, `response`, `feedback`, `visibilityChange`
 - **Anonymisation dès la collecte** : hash de session, pas d'identifiant, minimisation
+- **Limite assumée** : le *texte* des requêtes peut rester ré-identifiant --- filtrage avant dépôt ouvert (L3)
 - Rétention limitée, finalité déclarée (étude des usages)
-- Le journal anonymisé est le **matériau d'enquête** --- et il est déposé (L3)
+- Le journal anonymisé est le **matériau d'enquête** --- déposé en entrepôt ouvert (L3)
 
 ::: {.notes}
 Mesurer l'usage sans surveiller l'usager : le compromis que ce public discutera.
