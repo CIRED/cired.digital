@@ -131,3 +131,21 @@ clean-csv:
 
 clean-stats:
 	rm -f $(STATS)
+
+# --- Slides (MeSSH26) ---------------------------------------------------------
+# Quarto -> Beamer (metropolis). Writing-side build: consumes committed figures
+# in slides/slides-assets only, no data pipeline, no uv. To refresh those
+# figures from logs, run `make figures` and copy the wanted PNGs into
+# slides/slides-assets.
+SLIDES_QMD := $(PROJECT_ROOT)/slides/slides-messh.qmd
+SLIDES_PDF := $(PROJECT_ROOT)/slides/slides-messh.pdf
+SLIDES_ASSETS := $(wildcard $(PROJECT_ROOT)/slides/slides-assets/*)
+
+.PHONY: slides clean-slides
+slides: $(SLIDES_PDF)
+
+$(SLIDES_PDF): $(SLIDES_QMD) $(SLIDES_ASSETS)
+	cd $(PROJECT_ROOT)/slides && quarto render slides-messh.qmd --to beamer
+
+clean-slides:
+	rm -f $(SLIDES_PDF)
