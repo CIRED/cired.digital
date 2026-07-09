@@ -1,0 +1,335 @@
+---
+title: "De la recherche par mots-clés à la synthèse sémantique"
+subtitle: "Retour d'expérience sur un dispositif RAG en sciences humaines et sociales"
+author: "Minh Ha-Duong --- CNRS, CIRED"
+lang: fr
+format:
+  beamer:
+    theme: metropolis
+    aspectratio: 169
+    pdf-engine: xelatex
+    fig-align: center
+    keep-tex: true
+    header-includes: |
+      \setbeamertemplate{caption}{\raggedright\insertcaption\par}
+      \setbeamerfont{footnote}{size=\tiny}
+      \usepackage{array}
+      \usepackage{booktabs}
+      \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+      \titlegraphic{%
+        \begin{tikzpicture}[remember picture,overlay]
+          \node[anchor=north west,font=\footnotesize] at ([xshift=0.8cm,yshift=-0.7cm]current page.north west)
+            {Méthodes pour les sciences sociales et les humanités (MeSSH26) --- Aubervilliers, 9--10 juillet 2026};
+          \node[anchor=north east] at ([xshift=-0.7cm,yshift=-0.55cm]current page.north east)
+            {\includegraphics[height=1.5cm]{slides-assets/logo-cired.png}};
+          \node[anchor=south] at ([yshift=0.25cm]current page.south)
+            {\includegraphics[width=0.78\paperwidth]{slides-assets/bandeau-tutelles.png}};
+        \end{tikzpicture}%
+      }
+---
+
+## Plan
+
+\tableofcontents
+
+# 1 — Cirdi : une question, une réponse sourcée
+
+## Cirdi, en direct
+
+::::: {.columns}
+:::: {.column width="54%"}
+![](slides-assets/cirdi-demo.png)
+::::
+:::: {.column width="42%"}
+\vspace{0.8em}
+
+**1199 publications** du CIRED indexées.
+
+Une question en langage naturel --- une **réponse synthétique et sourcée** dans HAL.
+
+\medskip
+Accès **lexical** : \url{https://hal.science/CIRED}
+
+\smallskip
+Accès **sémantique** : \url{http://cired.digital/}
+::::
+:::::
+
+::: {.notes}
+Démo LIVE (secours = cette capture). Poser UNE question précise sur une publi CIRED,
+montrer la réponse ET les sources HAL citées. 90 secondes.
+Le reste = « voici la méthode, et ce qu'elle vaut ».
+:::
+
+# 2 — HAL en lexical, Cirdi en sémantique : même corpus
+
+## Mots-clés, ou langage naturel ?
+
+::::: {.columns}
+:::: {.column width="48%"}
+**Accès lexical --- c'est déjà HAL**
+(mots-clés, booléen, textométrie)
+
+- Il faut *connaître* les bons termes
+- Rend une **liste de documents**
+- Précis, transparent, reproductible
+- Rate ce qui est dit *autrement*
+::::
+:::: {.column width="48%"}
+**Accès sémantique --- c'est Cirdi**
+(question en langage naturel, RAG)
+
+- Tolère l'imprécision de la formulation
+- Rend une **réponse synthétique**
+- Agrège plusieurs sources, cite
+- Rate... et parfois invente
+::::
+:::::
+
+. . .
+
+\begin{center}
+\small Deux moteurs d'accès au \emph{même} corpus. Comprendre le RAG, c'est voir HAL --- en sémantique.
+\end{center}
+
+::: {.notes}
+C'est LE cadrage pour ce public de fouille de texte : positionner le RAG comme
+un mode d'accès complémentaire, pas un remplaçant. Assumer le « invente » d'emblée.
+:::
+
+# 3 — Le RAG : récupérer, ancrer, citer
+
+## Cirdi : un RAG sur la collection HAL du CIRED
+
+\begin{center}
+\includegraphics[width=0.9\linewidth]{slides-assets/hal-header.png}
+\end{center}
+
+\small Le corpus vit dans HAL. Cirdi y ajoute un accès en trois temps :
+
+1. **Récupération** --- embeddings → passages pertinents
+2. **Génération ancrée** --- réponse fondée sur ces passages
+3. **Citation** --- sources HAL tracées
+
+\smallskip
+**Open source**, réplicable sur toute collection HAL.
+
+::: {.notes}
+Une slide sur l'architecture, pas plus. Insister sur « ancrée » et « citation » :
+c'est ce qui distingue d'un chatbot généraliste.
+:::
+
+# 4 — Corpus et découpage sont des choix de méthode
+
+## Du PDF au passage indexable
+
+- **Corpus** : publications CIRED déposées dans HAL --- texte intégral préféré au PDF, enrichi des métadonnées
+- **Découpage** : passages indexés par embeddings (le choix de granularité pèse sur la qualité)
+- **Hébergement modeste** : serveur dédié, `mistral-small` dominant, Ollama via Huma-Num
+- **Journaux d'usage** anonymisés dès la collecte (RGPD), rapport d'analyse **Quarto reproductible**
+
+::: {.notes}
+Le retour d'expérience honnête : les choix de corpus et de découpage sont des
+choix de méthode, pas des détails techniques. C'est ce que ce public veut entendre.
+:::
+
+# 5 — La synthèse agrège et trace ses sources
+
+## Ce que la synthèse apporte --- et où elle cite
+
+::::: {.columns}
+:::: {.column width="54%"}
+![](slides-assets/query_type.png)
+::::
+:::: {.column width="42%"}
+\vspace{0.8em}
+
+Le type de requête **dominant** : la **synthèse thématique**, loin devant la recherche de publication.
+
+\medskip
+La synthèse :
+
+- **agrège** plusieurs papiers
+- **reformule** dans les termes de la question
+- **trace** chaque affirmation vers sa source
+::::
+:::::
+
+::: {.notes}
+Montrer un exemple réel en live si possible. Le point clé : la traçabilité rend
+la synthèse vérifiable — sans elle, ce serait inutilisable en recherche.
+:::
+
+# 6 — Un RAG ne garantit ni exactitude ni reproductibilité
+
+## Ce qu'un RAG ne garantit pas
+
+- **Hallucination bornée, pas nulle** --- l'ancrage réduit sans supprimer
+- **Biais de couverture** --- seul existe ce qui est dans HAL, en texte intégral
+- **Dépendance** aux embeddings et au découpage --- deux réglages, deux résultats
+- **Non-reproductibilité du modèle** --- même question, réponse variable
+- **Évaluation difficile** --- jeu de questions test + évaluateur automatique de la chaîne
+
+::: {.notes}
+Public SHS = valorise la lucidité méthodologique. Ne pas survendre. La ligne
+« évaluation difficile » ouvre naturellement sur la discussion.
+:::
+
+# 7 — Un dispositif réel, et mesuré : usages et coûts
+
+## Usages et coûts, en bref
+
+::::: {.columns}
+:::: {.column width="58%"}
+![](slides-assets/viz1_session_activity_timeline.png)
+::::
+:::: {.column width="40%"}
+\vspace{0.4em}
+
+- Dispositif **instrumenté** : événements anonymisés, rapport reproductible
+- Coûts **étonnamment bas** à cette échelle :
+  \medskip
+
+  \begin{center}
+  \textbf{1,71 M tokens Mistral $\;\to\;$ 0,32 €}
+  \end{center}
+::::
+:::::
+
+\begin{center}
+\small Détails chiffrés en annexe.
+\end{center}
+
+::: {.notes}
+Bloc court : prouver que c'est un dispositif réel, mesuré, pas une maquette.
+Renvoyer les curieux vers les annexes coûts.
+:::
+
+# 8 — Le pas suivant : l'accès sémantique dans HAL
+
+## Une méthode, et le code
+
+- **Réutilisable** : chaîne RAG + instrumentation RGPD + rapport Quarto reproductible
+- **Réplicable** : Cirdi tourne sur n'importe quelle collection HAL
+- Code ouvert : \texttt{github.com/MinhHaDuong/cired.digital}
+
+. . .
+
+\begin{center}
+\large HAL donne l'accès \emph{lexical}. Le pas suivant :\\
+\textbf{y intégrer l'accès sémantique}.
+
+\medskip
+Merci --- questions ?
+\end{center}
+
+::: {.notes}
+Fermer sur la méthode et l'ouverture SHS, pas sur l'outil.
+:::
+
+```{=latex}
+\appendix
+```
+
+# Annexes
+
+## Coûts mesurés --- volumes et facture
+
+Mesure empirique (factures / tableaux de bord fournisseurs), mi-2025 :
+
+| Fournisseur | Tokens        | Période   | Coût facturé            |
+|-------------|--------------:|-----------|-------------------------|
+| OpenAI      | ~25,1 M       | juin–oct  | projet, non nul         |
+| Mistral     | 1,71 M        | juin–nov  | **0,32 €**              |
+
+\medskip
+
+Record de frugalité : **1,3 M tokens pour 0,23 €** (Mistral, juillet).
+Plusieurs mois : usage non nul, **coût facturé nul** (seuils / crédits fournisseurs).
+
+::: {.notes}
+Le « coût nul malgré usage » est un piège méthodologique : la facture réelle est
+dominée par des seuils, pas par le tarif au token.
+:::
+
+## Coûts --- ce qu'on en apprend
+
+1. **Coûts très bas** à petite/moyenne échelle --- factures dominées par seuils et crédits
+2. **L'input domine** --- ratios entrée/sortie de 6:1 à 10:1
+3. **Le volume prime sur le choix de modèle** --- l'usage se concentre sur les petits modèles ; les gros restent marginaux
+4. **Le tarif catalogue prédit mal le coût réel** --- seule la mesure empirique est crédible
+
+::: {.notes}
+Message pour un décideur : ne pas extrapoler depuis les prix affichés. Mesurer.
+:::
+
+## Usage OpenAI par modèle (juin–oct 2025)
+
+| Modèle         | Requêtes | Tokens entrée | Tokens sortie |
+|----------------|---------:|--------------:|--------------:|
+| o4-mini        |      761 |    11,8 M     |     1,08 M    |
+| gpt-4.1-mini   |      797 |     7,74 M    |     0,24 M    |
+| gpt-4o-mini    |      667 |     1,72 M    |     0,14 M    |
+| gpt-4.1-nano   |      510 |     1,53 M    |     0,03 M    |
+| gpt-4.1        |      561 |     0,53 M    |     0,06 M    |
+
+\medskip
+Forte concentration en **juin** ; l'usage de juillet chute de **deux ordres de grandeur**.
+
+## Coûts Mistral --- usage quotidien (juillet)
+
+\begin{center}
+\includegraphics[width=0.82\linewidth]{slides-assets/july_mistral_small_euros.png}
+\end{center}
+
+\small Coût journalier en euros --- `mistral-small-latest` (> 90 % des tokens). Pic à ~0,03 €/jour.
+
+## Comment on interroge --- parcours d'usage
+
+::::: {.columns}
+:::: {.column width="52%"}
+![](slides-assets/session_event_type_transitions_simplified.png)
+::::
+:::: {.column width="44%"}
+\vspace{0.5em}
+
+Transitions entre événements (`request`, `response`, `feedback`) :
+une **grammaire d'usage** --- poser, relancer, abandonner.
+::::
+:::::
+
+## Qui vient --- origine des visiteurs
+
+\begin{center}
+\includegraphics[height=0.74\textheight]{slides-assets/visitors_origin.png}
+\end{center}
+
+## Évaluer la chaîne RAG
+
+- **Jeu de questions test** construit depuis les questions fréquentes du site du labo
+- **Évaluateur automatique** de réponses
+- **Évaluateur global** de la chaîne RAG (récupération + génération)
+- Observabilité : scores, analyse fine des questions posées
+
+::: {.notes}
+L'évaluation reste le maillon faible et ouvert — bon point d'entrée pour la discussion
+avec un public de méthodologues.
+:::
+
+## Livrables du projet
+
+- **L1** --- Code source documenté, open source (GitHub)
+- **L2** --- Rapport méthodologique (choix techniques, éthiques)
+- **L3** --- Jeu de données d'interactions **anonymisées**, entrepôt ouvert
+- **L4** --- Rapport d'analyse des usages (performances, coûts € et CO₂)
+
+## Instrumentation & RGPD
+
+- Événements captés : `request`, `response`, `feedback`, `visibilityChange`
+- **Anonymisation dès la collecte** : hash de session, pas d'identifiant, minimisation
+- Rétention limitée, finalité déclarée (étude des usages)
+- Le journal anonymisé est le **matériau d'enquête** --- et il est déposé (L3)
+
+::: {.notes}
+Mesurer l'usage sans surveiller l'usager : le compromis que ce public discutera.
+:::
