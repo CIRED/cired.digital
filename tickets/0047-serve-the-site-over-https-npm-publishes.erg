@@ -1,0 +1,28 @@
+%erg 0.1
+Title: Serve the site over HTTPS: NPM publishes only 80/81, port 443 has no listener
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #267 (https://github.com/CIRED/cired.digital/issues/267), opened 2026-06-22 by MinhHaDuong, last updated 2026-06-22; labels: none. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+## Context
+On 2026-06-22, `http://cired.digital` returned 200, but `https://cired.digital` timed out — port 443 has no listener at all. The stack is HTTP-only by design:
+- `deploy/compose.yaml` nginx-proxy-manager service publishes only `80:80` and `81:81`; there is no `443:443` mapping and no TLS cert.
+- `src/frontend/settings.js` hardcodes `http://r2r-api.cired.digital` and `http://cirdi-api.cired.digital`.
+
+Host `ss` confirmed only `:80`/`:81` listen. This has been the case for the NPM container's full uptime. It now reads as 'site down' because browsers increasingly force HTTPS-First / auto-upgrade `http://` to `https://`, which then times out.
+
+## Actions
+- [ ] Add `443:443` to the nginx-proxy-manager ports in `deploy/compose.yaml`.
+- [ ] In NPM admin (port 81), add a Let's Encrypt cert + proxy hosts for `cired.digital`, `r2r-api.cired.digital`, `cirdi-api.cired.digital`, with HTTP→HTTPS redirect.
+- [ ] Flip the prod URLs in `src/frontend/settings.js` to `https://` (avoids mixed-content once the page is served over TLS).
+
+## Verification
+- [ ] `curl -I https://cired.digital` returns 200 with a valid cert.
+- [ ] A RAG query from the browser succeeds over HTTPS (no mixed-content block).

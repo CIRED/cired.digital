@@ -1,0 +1,180 @@
+%erg 0.1
+Title: Manage intake of oversized documents
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #39 (https://github.com/CIRED/cired.digital/issues/39), opened 2025-05-23 by MinhHaDuong, last updated 2025-06-05; labels: enhancement. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+19 documents are over 30MB and rejected by R2R defaults
+
+Look at them, and choose appropriately:
+- Increase R2R defaults (dangerous)
+- Split PDF
+- Compress PDF
+- Extract offline and upload just text
+
+## Comments on the issue
+
+### MinhHaDuong, 2025-05-28
+Here are several Python approaches to compress your PDF files:
+
+## Using PyPDF2/PyPDF4 (Basic compression):
+```python
+import PyPDF2
+import os
+
+def compress_pdf_pypdf(input_path, output_path):
+    with open(input_path, 'rb') as input_file:
+        pdf_reader = PyPDF2.PdfReader(input_file)
+        pdf_writer = PyPDF2.PdfWriter()
+        
+        for page in pdf_reader.pages:
+            page.compress_content_streams()  # Compress content
+            pdf_writer.add_page(page)
+        
+        with open(output_path, 'wb') as output_file:
+            pdf_writer.write(output_file)
+
+# Process all files
+pdf_files = [
+    "medihal_01918752.pdf", "hal_03461012.pdf", "tel_02426578.pdf",
+    # ... add all your files
+]
+
+for pdf_file in pdf_files:
+    if os.path.exists(pdf_file):
+        output_name = f"compressed_{pdf_file}"
+        compress_pdf_pypdf(pdf_file, output_name)
+        print(f"Compressed {pdf_file} -> {output_name}")
+```
+
+## Using subprocess to call Ghostscript:
+```python
+import subprocess
+import os
+import glob
+
+def compress_with_ghostscript(input_path, output_path, quality="/ebook"):
+    cmd = [
+        "gs",
+        "-sDEVICE=pdfwrite",
+        "-dCompatibilityLevel=1.4",
+        f"-dPDFSETTINGS={quality}",
+        "-dNOPAUSE",
+        "-dQUIET",
+        "-dBATCH",
+        f"-sOutputFile={output_path}",
+        input_path
+    ]
+    
+    try:
+        subprocess.run(cmd, check=True)
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"Error compressing {input_path}: {e}")
+        return False
+
+# Batch process all PDFs
+pdf_files = glob.glob("*.pdf")
+for pdf_file in pdf_files:
+    output_name = f"compressed_{pdf_file}"
+    if compress_with_ghostscript(pdf_file, output_name):
+        print(f"Successfully compressed {pdf_file}")
+```
+
+## Using pikepdf (Modern, powerful):
+```python
+import pikepdf
+import os
+
+def compress_with_pikepdf(input_path, output_path):
+    try:
+        with pikepdf.Pdf.open(input_path) as pdf:
+            pdf.save(output_path, 
+                    optimize_images=True,
+                    compress_streams=True,
+                    object_stream_mode=pikepdf.ObjectStreamMode.generate)
+        return True
+    except Exception as e:
+        print(f"Error with {input_path}: {e}")
+        return False
+
+# Process files
+files = ["medihal_01918752.pdf", "hal_03461012.pdf"]  # Add all your files
+for file in files:
+    output = f"compressed_{file}"
+    if compress_with_pikepdf(file, output):
+        print(f"Compressed {file}")
+```
+
+## Complete script with size comparison:
+```python
+import os
+import pikepdf
+from pathlib import Path
+
+def get_file_size_mb(filepath):
+    return os.path.getsize(filepath) / (1024 * 1024)
+
+def compress_pdf_batch(file_pattern="*.pdf"):
+    pdf_files = Path(".").glob(file_pattern)
+    
+    results = []
+    for pdf_file in pdf_files:
+        if pdf_file.name.startswith("compressed_"):
+            continue
+            
+        input_path = str(pdf_file)
+        output_path = f"compressed_{pdf_file.name}"
+        
+        original_size = get_file_size_mb(input_path)
+        
+        try:
+            with pikepdf.Pdf.open(input_path) as pdf:
+                pdf.save(output_path,
+                        optimize_images=True,
+                        compress_streams=True)
+            
+            compressed_size = get_file_size_mb(output_path)
+            compression_ratio = (1 - compressed_size/original_size) * 100
+            
+            results.append({
+                'file': pdf_file.name,
+                'original': f"{original_size:.1f}MB",
+                'compressed': f"{compressed_size:.1f}MB", 
+                'saved': f"{compression_ratio:.1f}%"
+            })
+            
+        except Exception as e:
+            print(f"Failed to compress {pdf_file.name}: {e}")
+    
+    return results
+
+# Run compression
+results = compress_pdf_batch()
+for result in results:
+    print(f"{result['file']}: {result['original']} -> {result['compressed']} ({result['saved']} saved)")
+```
+
+## Installation:
+```bash
+pip install PyPDF2 pikepdf
+```
+
+**pikepdf** is generally the most effective and preserves text well, while **PyPDF2** is simpler but less powerful. The **subprocess + Ghostscript** approach gives you the most control over compression settings.
+
+Which approach would you prefer to try first?
+
+### MinhHaDuong, 2025-05-28
+Reminder:
+- Once compressed, the file must go under processed/source/hal
+- The intake scripts will need modification to look there
+
+### MinhHaDuong, 2025-05-28
+We need a prepare.sh script that runs between download.sh and push.sh .

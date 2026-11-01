@@ -1,0 +1,20 @@
+%erg 0.1
+Title: Test Guide de démarrage functionality
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #211 (https://github.com/CIRED/cired.digital/issues/211), opened 2025-07-03 by MinhHaDuong, last updated 2025-07-03; labels: none. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+- Est ouvert au démarrage
+- Bouton GoInput met le focus sur le champ de saisie
+- Bouton Aide ouvre l'aide
+  -> Puis  Refermer l'aide met le step 3 en Fait
+ -> Puis  Bouton Réinitialiser le guide: guide visible, aucun fait
+- Bouton Profil ouvre le profil
+- Bouton Fermer et passer: ferme et met tout en fait

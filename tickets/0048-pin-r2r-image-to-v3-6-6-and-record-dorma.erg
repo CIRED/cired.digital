@@ -1,0 +1,29 @@
+%erg 0.1
+Title: Pin R2R image to v3.6.6 and record dormant-upstream sustainability risk
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #268 (https://github.com/CIRED/cired.digital/issues/268), opened 2026-06-22 by MinhHaDuong, last updated 2026-06-23; labels: none. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+## Context
+Investigation on 2026-06-22 of the R2R upstream (SciPhi):
+- Production runs **R2R v3.6.3** (image pulled ~Sep 2025); `deploy/compose.yaml` uses the moving tag `sciphiai/r2r:latest`.
+- Newest artifact that exists is **v3.6.6** (PyPI + Docker, 2025-08-17; added GPT-5 support). No GitHub Release was cut for it — the Releases page is frozen at v3.6.5 (2025-06-06).
+- Last commit to R2R `main`: **2025-11-07**, then nothing. The project is dormant.
+- Cause: the team (YC W2024, formerly SciPhi) rebranded to **Event Horizon Labs**, now 'an AI research lab automating all of investing' — a pivot off RAG. sciphi.ai marketing still claims active maintenance; the git/Docker/YC artifacts contradict it.
+
+Implication: Cirdi's retrieval engine has no upstream fixes or security patches coming.
+
+## Actions
+- [ ] Pin `sciphiai/r2r:v3.6.6` in `deploy/compose.yaml` (stops surprise `:latest` jumps; gets GPT-5 support + ~3 patch releases of fixes over current v3.6.3).
+- [ ] Treat v3.6.6 as the permanent upstream ceiling.
+- [ ] If Cirdi must outlive this dependency, open a separate spike to evaluate alternative self-hostable RAG engines.
+
+ ---
+**Update (2026-06-23):** the CIRED.digital technical report was finalized and delivered (archived in `papiers/sent/`, 2026-01) before this finding, so there is no live chapter to amend. The sustainability risk is tracked in this issue and in project memory; the costs-chapter action item is dropped.

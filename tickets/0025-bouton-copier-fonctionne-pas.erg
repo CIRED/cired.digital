@@ -1,0 +1,22 @@
+%erg 0.1
+Title: Bouton "Copier" fonctionne pas
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #170 (https://github.com/CIRED/cired.digital/issues/170), opened 2025-06-26 by MinhHaDuong, last updated 2025-07-02; labels: none. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+(empty)
+
+## Comments on the issue
+
+### Gullaliko, 2025-07-02
+I’ve reviewed the copy button functionality and identified that the Clipboard API may not work reliably across all browsers and platforms. I will prepare a PR that:
+
+Uses the Clipboard API when supported,
+Implements a  fallback method using document.execCommand('copy') for browsers where the Clipboard API is unavailable,

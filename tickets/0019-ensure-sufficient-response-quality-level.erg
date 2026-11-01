@@ -1,0 +1,18 @@
+%erg 0.1
+Title: Ensure sufficient response quality level
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #47 (https://github.com/CIRED/cired.digital/issues/47), opened 2025-05-23 by MinhHaDuong, last updated 2025-06-18; labels: none. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+We need to be able to score the performance of replies for a given set of prompt, model and documents.
+This entails 
+- having a list of test questions. 
+- a definition of what is a good answer, a quality checklist helps
+- an evaluator

@@ -1,0 +1,28 @@
+%erg 0.1
+Title: Use the already extracted text from Halvest where available
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #38 (https://github.com/CIRED/cired.digital/issues/38), opened 2025-05-23 by MinhHaDuong, last updated 2025-06-05; labels: enhancement, python. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+Assuming it is available and better, we can potentially save tokens and chunk better
+Verify if R2R allows to upload structured text.
+
+## Comments on the issue
+
+### MinhHaDuong, 2025-05-23
+from datasets import load_dataset
+# Load the HALvest dataset
+dataset = load_dataset("almanach/HALvest", "en")  # Also load French, Vietnamese...
+# Define the set of keys (halid) you want to filter by
+keys_to_filter = {"halid1", "halid2", "halid3"}  # Replace with actual CIRED keys from publications.json (only the docs with a fulltext available)
+# Filter the dataset based on the halid column
+filtered_dataset = dataset.filter(lambda example: example["halid"] in keys_to_filter)
+# Print the filtered dataset 
+print(filtered_dataset)
