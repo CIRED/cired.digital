@@ -7,6 +7,7 @@ Author: MinhHaDuong
 2026-11-01T12:59Z MinhHaDuong created
 2026-11-01T13:25Z MinhHaDuong absorbs 0048 (migrated issue: pin the R2R image); read it in tickets/closed/ for its history
 2026-11-01T13:25Z MinhHaDuong absorbs 0021 (migrated issue: clean RabbitMQ before snapshotting (still in compose.yaml)); read it in tickets/closed/ for its history
+2026-11-01T13:30Z MinhHaDuong ticket 0050 drops R2R and its companions: the R2R-specific parts (image pinning, Hatchet/RabbitMQ snapshot and restore) become moot; keep only what applies to the new stack
 
 --- body ---
 ## Context

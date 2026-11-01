@@ -1,0 +1,44 @@
+%erg 0.1
+Title: Rebuild the stack simple and efficient, without R2R
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:30Z MinhHaDuong created
+
+--- body ---
+## Context
+Author decision, 2026-11-01: rebuild the stack simple and efficient; drop R2R
+and its companions. deploy/compose.yaml runs about 16 services: r2r and
+r2r-dashboard, two Postgres (pgvector and Hatchet's), Hatchet (engine,
+dashboard, migration, setup, RabbitMQ), MinIO, Unstructured,
+graph_clustering, Nginx Proxy Manager, the monitor and the frontend. R2R is
+wired into src/intake (push.py, cull.py, verify.py), src/frontend (direct
+calls to /v3/retrieval/rag), the smoke tests, deploy/ops and pyproject.toml.
+
+Direction already decided elsewhere: internal service on inari (0013, Podman,
+no GPU, 71 GB RAM free), no personal data collection (0013), Albert for
+embeddings, retrieval or generation (0009), reranker (0012), CIRED archives
+read in place (0015), hardcopies catalogue (0014).
+
+## Imagine first
+One design note shared with 0009 (template: problem, situation, state of the
+art, alternatives, synthesis with costs, phased plan, double advisor review +
+KISS). Candidate shapes, simplest first:
+- A. Albert end to end: Albert collections hold the chunks, Albert search and
+  rerank retrieve, Albert generates; Cirdi is a static page plus a thin
+  proxy that holds the key. Nothing stateful on inari.
+- B. One small Python service (FastAPI or similar) with an embedded vector
+  store in a single file (SQLite with a vector extension, LanceDB or
+  DuckDB) on inari, Albert for embeddings, rerank and generation.
+- C. B with one Postgres + pgvector, only if B's store falls short.
+Judge on: services to run (target: one process plus Apache), lines of code,
+latency, cost, how intake and re-ingestion work, and what the solo maintainer
+must patch.
+
+## Exit criteria
+- [ ] Design note accepted, with the chosen shape and its measured numbers
+- [ ] New stack running on inari as at most one container or systemd service behind Apache; R2R, Hatchet, RabbitMQ, MinIO, Unstructured, graph_clustering, NPM and the monitor removed from compose and code
+- [ ] Intake rewritten against the new store (harvest, prepare, download, embed, prune), with ticket 0011's completeness check
+- [ ] Frontend calls the new endpoint; smoke tests and CI target the new stack (0006)
+- [ ] Tickets made moot by the rebuild closed with a pointer here (0007 R2R ops parts, 0017, 0018, 0024 and others found during the work)
