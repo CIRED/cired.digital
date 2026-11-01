@@ -6,6 +6,7 @@ Author: MinhHaDuong
 --- log ---
 2026-11-01T13:03Z MinhHaDuong created
 2026-11-01T13:28Z MinhHaDuong hosting candidate: inari.centre-cired.fr, measured 2026-11-01 (author over ssh from doudou): 32 cores, 124 GB RAM (71 GB available, 53 GB used by existing services), / 203 GB with 114 GB free, /home 96% full (9.7 GB free: do not use), no NVIDIA GPU, podman 5.8.5, no docker; CentOS Stream, Apache 2.4 with a valid TLS certificate, already serves the CIRED_numerisation archive PDFs (ticket 0015). Fits the R2R stack on podman (ticket 0040) with generation and embeddings through the remote Albert API; a self-hosted Albert (0009 option C) needs a GPU host instead. Open: who administers inari and the rules for running containers there.
+2026-11-01T13:30Z MinhHaDuong ticket 0050 rebuilds the stack small enough for inari (target: one process behind Apache)
 
 --- body ---
 ## Context
