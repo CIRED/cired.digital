@@ -1,0 +1,28 @@
+%erg 0.1
+Title: Add a reranker to retrieval (Albert)
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:01Z MinhHaDuong created
+
+--- body ---
+Blocked-by: 0009
+
+## Context
+Author request, 2026-11-01. Retrieval today returns the vector search's top
+chunks as they come (R2R, OpenAI embeddings); a reranker re-scores those
+candidates against the question before generation, which usually lifts
+answer quality and citation precision for a small latency cost. The author
+wants it served by Albert, in line with ticket 0009 (Albert for embeddings,
+retrieval and generation). To verify, not assumed: that Albert exposes a
+rerank endpoint and which model, and whether it can run in the self-hosted
+option of 0009.
+
+Blocked by 0009 because where the reranker plugs in depends on the chosen
+architecture (Albert end to end, Albert behind R2R, or self-hosted).
+
+## Exit criteria
+- [ ] Reranker wired into retrieval in the architecture chosen by 0009: retrieve N candidates, rerank, pass the top k to generation (N, k recorded)
+- [ ] Measured on the 0009 fixed question set: citation precision and answer quality with and without the reranker, and the added latency
+- [ ] Kept only if it improves quality at an acceptable latency; the decision and numbers recorded in this ticket
