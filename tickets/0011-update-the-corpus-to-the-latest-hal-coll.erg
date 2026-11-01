@@ -1,0 +1,19 @@
+%erg 0.1
+Title: Update the corpus to the latest HAL collection
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:00Z MinhHaDuong created
+
+--- body ---
+## Context
+Author request, 2026-11-01: refresh the RAG's document base from the current CIRED collection in HAL. The intake chain is src/intake/ (query HAL, prepare and deduplicate metadata, download, cull, verify, push to R2R). Astra's audit (report https://claude.ai/artifact/Vk51ZHGtmd2x7rea65yf33) found that src/intake/query.py:91 saves an interrupted HAL harvest as if it were complete (request errors break pagination; the 5000-record cap is not checked against HAL's total).
+
+Sequencing: ticket 0009 (switch to Albert) changes the embedding model and so requires a full re-ingestion; run this update in the same pass, or after 0009, so documents are embedded once.
+
+## Exit criteria
+- [ ] query.py compares the harvested count with HAL's reported total and refuses to save an incomplete catalogue (test with a simulated mid-pagination error)
+- [ ] New harvest of the CIRED collection; added, changed and withdrawn documents counted against the previous catalogue
+- [ ] New and changed documents downloaded, verified and ingested; withdrawn ones removed from R2R
+- [ ] Ingestion status checked (no failed documents left unexplained); corpus size and harvest date recorded in the README or a data note
