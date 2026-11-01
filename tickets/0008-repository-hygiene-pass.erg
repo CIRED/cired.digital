@@ -1,0 +1,17 @@
+%erg 0.1
+Title: Repository hygiene pass
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T12:59Z MinhHaDuong created
+
+--- body ---
+## Context
+Source: two-auditor review 2026-11-01 (Fable claude-fable-5-1, Astra gpt-6-astra) at 27660f5; report https://claude.ai/artifact/Vk51ZHGtmd2x7rea65yf33. Lines marked (checked) were re-read against the code by the session.
+README map stale (analytics/ and smoke-tests/ renamed), README and CONTRIBUTING point at MinhHaDuong/cired.digital, CONTRIBUTING uses .[dev], no licence line in README or pyproject; orphan templates/privacy.html at the root; 7 unused runtime deps (streamlit, plotly, jupyterlab, duckdb, ibis, polars, pyarrow); production host IP hard-coded in deploy/ops/common_config.sh:30; CITATION.cff date stale and no git tags.
+
+## Exit criteria
+- [ ] README map, URLs and contributor commands match the tree; licence stated
+- [ ] Orphan template deleted; unused deps moved to an analysis group or removed
+- [ ] Host IP moved to the untracked deploy env; first tag cut and CITATION updated

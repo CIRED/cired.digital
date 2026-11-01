@@ -1,0 +1,16 @@
+%erg 0.1
+Title: Fix HTML injection in citation rendering
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T12:59Z MinhHaDuong created
+
+--- body ---
+## Context
+Source: two-auditor review 2026-11-01 (Fable claude-fable-5-1, Astra gpt-6-astra) at 27660f5; report https://claude.ai/artifact/Vk51ZHGtmd2x7rea65yf33. Lines marked (checked) were re-read against the code by the session.
+src/frontend/citations.js:215 interpolates doc.title raw into an HTML string later assigned to innerHTML (content-manager.js:9) (checked); authors and DOI likewise. A crafted HAL title would run script in visitors' browsers.
+
+## Exit criteria
+- [ ] Citation title, authors and links built with DOM APIs (textContent, validated href), no raw interpolation into HTML
+- [ ] A test or fixture with a title like <img src=x onerror=...> renders as text
