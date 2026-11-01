@@ -1,0 +1,18 @@
+# Project configuration for git-erg.
+# Created by: erg init
+
+[labels]
+# Label vocabulary -- one per line. All labels suppress `erg ready` output.
+# Remove or add lines to fit your workflow.
+needs-human
+deferred
+
+[update]
+# Custom git remote (name or URL) that `erg sync` fetches from when --upstream
+# is absent. The source repository must publish its binary at tickets/erg,
+# regardless of this adopter's local ticket-store directory name.
+# Defaults to "origin" -- you update from where you cloned. Point it at upstream
+# only for a project-specific mirror or another custom source, e.g.:
+# url = company-erg-mirror
+# To import canonical git-erg, leave this unset and run `erg sync --upstream`;
+# that explicit path fetches only the source tip rather than its full history.
