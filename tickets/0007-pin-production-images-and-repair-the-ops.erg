@@ -1,0 +1,17 @@
+%erg 0.1
+Title: Pin production images and repair the ops scripts
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T12:59Z MinhHaDuong created
+
+--- body ---
+## Context
+Source: two-auditor review 2026-11-01 (Fable claude-fable-5-1, Astra gpt-6-astra) at 27660f5; report https://claude.ai/artifact/Vk51ZHGtmd2x7rea65yf33. Lines marked (checked) were re-read against the code by the session.
+compose.yaml runs r2r, postgres (x2) and nginx-proxy-manager on :latest; the monitor image pip-installs unpinned; CDN scripts have no integrity hash. Astra on deploy/ops: restore.sh:174 overlays archives on existing volumes; snapshot.sh:25 leaves services stopped on a failed backup; bootstrap.sh:109 denies outgoing traffic before apt and git clone, and line 179 is a leftover '// ...existing code...' placeholder (both checked); validate.sh:124 discards failure statuses; install.sh:47 and validate.sh use --extra dev on a dependency group; deploy.sh:18 resets the server checkout and deploys no fixed revision.
+
+## Exit criteria
+- [ ] Images pinned to tested tags or digests matching the client lock; monitor deps locked; CDN assets pinned with SRI or vendored
+- [ ] Restore into fresh volumes with rollback; snapshot restarts services on failure (trap)
+- [ ] bootstrap, install and validate run on a clean host and fail loudly; deploy.sh deploys a named commit

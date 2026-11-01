@@ -1,0 +1,17 @@
+%erg 0.1
+Title: Triage the 207 Dependabot alerts
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T12:59Z MinhHaDuong created
+
+--- body ---
+## Context
+Source: two-auditor review 2026-11-01 (Fable claude-fable-5-1, Astra gpt-6-astra) at 27660f5; report https://claude.ai/artifact/Vk51ZHGtmd2x7rea65yf33. Lines marked (checked) were re-read against the code by the session.
+GitHub reported 207 vulnerabilities on main at the 2026-11-01 push (9 critical, 112 high, 75 moderate, 11 low). Neither auditor could check CVEs offline. Two stale dependabot branches exist (actions/checkout-7, setup-python-7).
+
+## Exit criteria
+- [ ] The 9 critical alerts fixed or dismissed with a written reason
+- [ ] High alerts triaged: fixed, scheduled in a ticket, or dismissed with reason
+- [ ] Stale dependabot branches merged or closed

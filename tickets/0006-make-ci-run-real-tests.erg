@@ -1,0 +1,17 @@
+%erg 0.1
+Title: Make CI run real tests
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T12:59Z MinhHaDuong created
+
+--- body ---
+## Context
+Source: two-auditor review 2026-11-01 (Fable claude-fable-5-1, Astra gpt-6-astra) at 27660f5; report https://claude.ai/artifact/Vk51ZHGtmd2x7rea65yf33. Lines marked (checked) were re-read against the code by the session.
+.github/workflows/CI.yml: the test step only echoes success, mypy is disabled (if: false), ruff format runs with continue-on-error. Every existing test needs Docker or a live site. tests/test_api_keys.py:42 passes vacuously (reads a log file nothing writes); tests/e2e/test_chat.py swallows the answer wait.
+
+## Exit criteria
+- [ ] Docker-free unit tests for utils.sanitize, classifier, anonymiser, logloader run in CI and can fail
+- [ ] uv lock --check and a blocking format check in CI; mypy on src/monitor and src/analysis
+- [ ] The two vacuous tests assert what they claim

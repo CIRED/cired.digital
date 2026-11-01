@@ -1,0 +1,17 @@
+%erg 0.1
+Title: Harden the monitor endpoint
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T12:59Z MinhHaDuong created
+
+--- body ---
+## Context
+Source: two-auditor review 2026-11-01 (Fable claude-fable-5-1, Astra gpt-6-astra) at 27660f5; report https://claude.ai/artifact/Vk51ZHGtmd2x7rea65yf33. Lines marked (checked) were re-read against the code by the session.
+src/monitor/monitor.py: CORS allow_origins=["*"] with a 'restrict this in prod' comment, no body size or rate limit, arbitrary payload dicts, one file written per request, filenames from client fields truncated to 32 chars and opened with "w" (collisions overwrite).
+
+## Exit criteria
+- [ ] CORS restricted to the site origin; request body capped
+- [ ] Strict event schema; server-generated unique filenames opened exclusively
+- [ ] Rate limit at the proxy; retention policy for stored events
