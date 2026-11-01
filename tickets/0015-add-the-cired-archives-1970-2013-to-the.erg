@@ -7,6 +7,7 @@ Author: MinhHaDuong
 2026-11-01T13:04Z MinhHaDuong created
 2026-11-01T13:06Z MinhHaDuong companion ticket filed: MinhHaDuong/archiveCIRED tickets/0045 (export des archives pour Cirdi), PR 69 merged 2026-11-01
 2026-11-01T13:25Z MinhHaDuong absorbs 0044 (migrated issue: historical archive); read it in tickets/closed/ for its history
+2026-11-01T13:39Z MinhHaDuong the JETP-observer extractor bench (2026-10) had no scans: OCR quality on the 1970-2013 archive scans is unmeasured; measure it on a sample before ingesting
 
 --- body ---
 ## Context
