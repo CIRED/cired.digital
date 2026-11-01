@@ -5,6 +5,7 @@ Author: MinhHaDuong
 
 --- log ---
 2026-11-01T13:30Z MinhHaDuong created
+2026-11-01T13:39Z MinhHaDuong author and session, 2026-11-01: PDF extraction from the text layer (or Halvest text, 0016) plus Docling for structure, following the JETP-observer bench (ticket 2003 there, 15 extractors: on born-digital PDFs the text layer is the reliable verbatim source; vision readers alter digits silently); hybrid retrieval FTS/BM25 + vectors fused by RRF is standard in the embedded stores (LanceDB, SQLite FTS5 + sqlite-vec, DuckDB); option B (thin service + single-file index, Albert as model provider only) recommended; keep the existing thumbs up/down feedback (content-manager.js:130-170) but send it without session id, IP or profile
 
 --- body ---
 ## Context

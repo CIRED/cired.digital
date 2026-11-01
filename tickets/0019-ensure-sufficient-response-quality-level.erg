@@ -2,10 +2,13 @@
 Title: Ensure sufficient response quality level
 Created: 2026-11-01
 Author: MinhHaDuong
+Label: deferred
 
 --- log ---
 2026-11-01T13:16Z MinhHaDuong created
 2026-11-01T13:25Z MinhHaDuong review 2026-11-01: kept active; its question set is the evaluation basis for 0009 and 0012
+2026-11-01T13:39Z MinhHaDuong author decision 2026-11-01: no upfront evaluation; observe use instead through the existing anonymous thumbs up/down with comment, plus a 5-question smoke set with expected citations as a CI regression guard (ticket 0006)
+2026-11-01T13:39Z MinhHaDuong label deferred
 
 --- body ---
 ## Imported from GitHub
