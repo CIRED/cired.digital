@@ -1,0 +1,35 @@
+%erg 0.1
+Title: Add the CIRED Archives (1970-2013) to the collection
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:04Z MinhHaDuong created
+
+--- body ---
+## Context
+Author request, 2026-11-01. Bring the CIRED archives into the RAG's
+collection, next to the HAL publications. They are inventoried by the
+author's project archiveCIRED (github.com/MinhHaDuong/archiveCIRED, "Inventaire
+et archivage de la production scientifique du CIRED (1970-2013)"): about 1112
+logical documents over 1991 files (doc_index.json over file_index.json),
+catalogued in a private Zotero group. That project chose a private group to
+avoid triaging rights document by document, and matches records by
+identifier, never by title (titles repeat across distinct works).
+
+## Questions to settle first
+- Rights: which documents may be indexed and quoted; the archives were kept
+  private for a reason. Ticket 0013 (internal CIRED service, no public
+  access) changes what is acceptable; decide with it.
+- Source and format: export from archiveCIRED's index or its Zotero group
+  (metadata plus PDF), how many have usable text (scans need OCR).
+- Identity: dedupe against HAL by identifier (HAL id, DOI, Zotero key),
+  never by title; mark provenance so answers say "CIRED archives" vs "HAL".
+- Delivery between projects: archiveCIRED provides the export through its own
+  tickets/ (cross-project rule: a ticket there, never an edit from here).
+
+## Exit criteria
+- [ ] Rights decision recorded (which subset, internal-only or public), with ticket 0013
+- [ ] A companion ticket filed in archiveCIRED for the export, and the export received
+- [ ] Archive documents ingested with provenance metadata; OCR where needed; no duplicate of a HAL record (identifier match)
+- [ ] Answers cite archive documents distinctly from HAL; a test query on a known pre-2000 archive document finds it
