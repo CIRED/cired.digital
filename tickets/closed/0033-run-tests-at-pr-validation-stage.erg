@@ -2,9 +2,12 @@
 Title: Run tests at PR validation stage
 Created: 2026-11-01
 Author: MinhHaDuong
+Closed: duplicate of 0006
 
 --- log ---
 2026-11-01T13:16Z MinhHaDuong created
+2026-11-01T13:25Z MinhHaDuong review 2026-11-01: duplicate of 0006, which carries the audit evidence and exit criteria
+2026-11-01T13:25Z MinhHaDuong closed — duplicate of 0006
 
 --- body ---
 ## Imported from GitHub

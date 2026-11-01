@@ -5,6 +5,8 @@ Author: MinhHaDuong
 
 --- log ---
 2026-11-01T12:59Z MinhHaDuong created
+2026-11-01T13:25Z MinhHaDuong absorbs 0048 (migrated issue: pin the R2R image); read it in tickets/closed/ for its history
+2026-11-01T13:25Z MinhHaDuong absorbs 0021 (migrated issue: clean RabbitMQ before snapshotting (still in compose.yaml)); read it in tickets/closed/ for its history
 
 --- body ---
 ## Context
