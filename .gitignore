@@ -104,3 +104,7 @@ secrets.env
 !reports/.gitkeep
 !credentials/*.template
 .aider*
+
+# Raw monitor telemetry holds client IPs and user queries: never commit it.
+# Test fixtures must come from the anonymised zip.
+tests/fixtures/reports/monitor-logs/
