@@ -1,0 +1,19 @@
+%erg 0.1
+Title: Feat: Collections
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #142 (https://github.com/CIRED/cired.digital/issues/142), opened 2025-06-23 by MinhHaDuong, last updated 2025-06-25; labels: enhancement. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+- Include collection name in catalog
+- Push to named collection
+- Define a collection setting, populated by querying R2R on initialization, annotated with the number of documents
+- Use it for RAG query
+
+- Legacy: move current contents from Default to cired-hal

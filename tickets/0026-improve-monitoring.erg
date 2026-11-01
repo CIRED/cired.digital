@@ -1,0 +1,53 @@
+%erg 0.1
+Title: Improve monitoring
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #174 (https://github.com/CIRED/cired.digital/issues/174), opened 2025-06-28 by MinhHaDuong, last updated 2025-07-07; labels: none. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+- ~~Rename analytics/ to monitoring/~~ (PR #232)
+- Log request to and reply from R2R server-side. Avoids unnecessary round trip.
+- Log server metrics every 5s (see example below)
+- Log errors
+- Present monitoring dashboard
+- Answer research questions on usage, costs
+
+    async def collect_system_metrics(self):
+        return SystemMetrics(
+            timestamp=datetime.now(),
+            cpu_percent=psutil.cpu_percent(interval=1),
+            memory_used=psutil.virtual_memory().percent,
+            disk_usage=psutil.disk_usage('/').percent,
+            active_connections=len(psutil.net_connections())
+        )
+    
+    async def collect_docker_metrics(self):
+        client = docker.from_env()
+        metrics = {}
+        for container in client.containers.list():
+            stats = container.stats(stream=False)
+            metrics[container.name] = {
+                "cpu_usage": self._calculate_cpu_percent(stats),
+                "memory_usage": stats["memory_stats"]["usage"],
+                "network_io": stats["networks"]
+            }
+        return metrics
+    
+    async def collect_database_metrics(self):
+        conn = await asyncpg.connect(DATABASE_URL)
+        queries = [
+            "SELECT count(*) as active_connections FROM pg_stat_activity",
+            "SELECT schemaname,tablename,n_tup_ins,n_tup_upd,n_tup_del FROM pg_stat_user_tables",
+            "SELECT query,calls,total_time,mean_time FROM pg_stat_statements ORDER BY total_time DESC LIMIT 10"
+        ]
+        results = {}
+        for query in queries:
+            results[query] = await conn.fetch(query)
+        await conn.close()
+        return results

@@ -1,0 +1,164 @@
+%erg 0.1
+Title: Architect analytics pipeline
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #237 (https://github.com/CIRED/cired.digital/issues/237), opened 2025-07-28 by MinhHaDuong, last updated 2025-07-28; labels: none. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+Rsync distant reports/monitor-logs
+Ingest, using Jupyter (Python) as the data analysis framework (Pandas should work fast enough, otherwise Polars or Dask)
+Compute key metrics (see next comment)
+Produce visualisation (Plotly, see next next comment)
+write analysis
+
+## Comments on the issue
+
+### MinhHaDuong, 2025-07-28
+To understand what people are using the RAG app for, here are the key metrics Claude would recommend computing:
+
+Query Analysis & Intent:
+
+Most frequent user queries/questions (from userinput events)
+Query categories or topics (using keyword extraction or clustering)
+Query complexity (length, question types, technical vs. casual language)
+Follow-up question patterns within sessions
+
+Content Engagement:
+
+Which articles are most frequently retrieved and clicked (article + userclick events)
+Article relevance scores (if logged in response events)
+Time spent with articles visible (visibilitychange timing)
+Articles that generate follow-up questions
+
+User Behavior Patterns:
+
+Session duration and depth (number of queries per session)
+Common user journeys (sequence of queries and article interactions)
+Abandonment points (where users stop engaging)
+Return user behavior vs. new users
+
+System Performance Impact:
+
+Response times for different query types (request to response timing)
+Queries that don't lead to article clicks (potential relevance issues)
+Peak usage times and query volumes
+
+Success Indicators:
+
+Sessions with high engagement (multiple queries + article clicks)
+Query-to-click conversion rates
+Sessions ending with article engagement vs. abandonment
+
+### MinhHaDuong, 2025-07-28
+Here's what each metric should be visualized as and what insights it reveals:
+Query Analysis & Intent:
+Most frequent user queries
+
+Visualization: Horizontal bar chart (top 20-50 queries)
+What it shows: Primary use cases, common problems users are trying to solve, repetitive needs that could be addressed with better UX
+
+Query categories/topics
+
+Visualization: Treemap or sunburst chart
+What it shows: Distribution of subject areas, whether app serves diverse needs or is focused on specific domains
+
+Query complexity
+
+Visualization: Histogram of query length + box plot by complexity score
+What it shows: User sophistication level, whether people ask simple vs. complex questions, optimal response strategies needed
+
+Follow-up question patterns
+
+Visualization: Sankey diagram (query → follow-up → follow-up)
+What it shows: Whether initial responses satisfy users, common information gaps, iterative research patterns
+
+Content Engagement:
+Most retrieved/clicked articles
+
+Visualization: Horizontal bar chart with dual axis (retrievals vs clicks)
+What it shows: Content effectiveness, whether retrieved content actually gets consumed, content gaps
+
+Article relevance vs engagement
+
+Visualization: Scatter plot (relevance score x-axis, click rate y-axis, bubble size = frequency)
+What it shows: Whether your RAG system's relevance scoring matches actual user interest
+
+Time spent with articles
+
+Visualization: Box plot by article category + histogram of engagement time
+What it shows: Content quality, readability, whether articles actually help users vs just get clicked
+
+Query-to-article relationships
+
+Visualization: Network graph or chord diagram
+What it shows: Content clusters, whether certain articles serve multiple query types, content organization insights
+
+User Behavior Patterns:
+Session duration and depth
+
+Visualization: 2D histogram (duration x queries per session)
+What it shows: User engagement levels, whether app supports quick answers vs deep research, session value distribution
+
+User journey sequences
+
+Visualization: Flow diagram or sequential sunburst
+What it shows: Common usage patterns, drop-off points, successful vs unsuccessful session paths
+
+Abandonment points
+
+Visualization: Funnel chart with step-by-step conversion rates
+What it shows: Where users get frustrated, UX friction points, content quality issues
+
+System Performance Impact:
+Response times by query type
+
+Visualization: Box plot with query categories on x-axis
+What it shows: Which queries are computationally expensive, performance bottlenecks, user experience impact
+
+Queries without clicks
+
+Visualization: Stacked bar chart (clicked vs not clicked) by query characteristics
+What it shows: Relevance problems, content gaps, whether users find what they need
+
+Success Indicators:
+High engagement sessions
+
+Visualization: Scatter plot (queries per session vs time spent, colored by outcome)
+What it shows: What constitutes successful app usage, user satisfaction patterns
+
+Query-to-click conversion
+
+Visualization: Time series line chart with trend line
+What it shows: Whether your system is improving over time, seasonal patterns, A/B test results
+
+Each visualization directly answers "What are people using this app for?" by showing different facets of user intent, success, and satisfaction.
+
+### MinhHaDuong, 2025-07-28
+src/analytics/
+├── README.md                          # Setup instructions & usage guide
+├── requirements.txt                   # Python dependencies (pandas, plotly, etc.)
+├── config.py                          # Local paths, server configs
+├── notebooks/                         # Interactive Jupyter analysis
+│   ├── 01_data_exploration.ipynb     # Understand log structure
+│   ├── 02_usage_patterns.ipynb       # What people use the app for
+│   ├── 03_content_analysis.ipynb     # HAL publication engagement
+│   └── 04_performance_insights.ipynb # System optimization
+├── scripts/                           # Utility scripts
+│   ├── fetch_logs.py                 # Pull logs from production server
+│   ├── clean_data.py                 # Basic preprocessing
+│   └── generate_report.py            # Quick summary script
+├── src/                               # Reusable analysis modules
+│   ├── data_loader.py                # Parse JSON logs
+│   ├── metrics.py                    # Calculate key metrics
+│   ├── visualizations.py             # Chart functions
+│   └── utils.py                      # Helper functions
+└── data/                             # Local data (gitignored)
+    ├── raw/                          # Downloaded logs
+    ├── processed/                    # Cleaned data
+    └── cache/                        # Intermediate results

@@ -1,0 +1,33 @@
+%erg 0.1
+Title: CI: enforce uv.lock / pyproject.toml consistency with --locked
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #272 (https://github.com/CIRED/cired.digital/issues/272), opened 2026-06-23 by MinhHaDuong, last updated 2026-06-23; labels: none. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+## Problem
+
+CI (`.github/workflows/CI.yml`) installs deps with plain `uv sync --group dev`, which **re-resolves and silently updates** the lockfile in the ephemeral runner. It never runs `uv sync --locked` (or `uv lock --locked`), so a `pyproject.toml` whose floor exceeds the committed `uv.lock` version passes CI green while leaving `uv.lock` inconsistent on `main`.
+
+This was just observed: Dependabot PRs #261 (plotly), #263 (ibis-framework), #264 (pyarrow) raised lower bounds **above** the locked versions and touched only `pyproject.toml`. Each was CLEAN/MERGEABLE with green CI. Consolidated and lock-synced in #271, but nothing prevents recurrence.
+
+## Class shape
+
+Recurs on every future Dependabot floor bump that exceeds the lock. The lockfile is durable state; drift on `main` means a fresh `uv sync` silently rewrites `uv.lock` and dirties the tree.
+
+## Proposed guard (recommend both)
+
+1. **Add a consistency step** to the `lint` job, e.g. `uv lock --locked` — fails fast when `pyproject.toml` and `uv.lock` disagree. Lowest friction; catches drift.
+2. **Configure Dependabot to manage `uv.lock`** so floor bumps arrive lock-synced and never drift in the first place. Fixes at source; complements #1.
+
+Adding #1 means raw pyproject-only Dependabot PRs start failing CI until the lock is synced — the intended forcing function.
+
+## Acceptance
+- [ ] CI fails when `uv.lock` is inconsistent with `pyproject.toml`
+- [ ] (optional) Dependabot config updates `uv.lock` alongside `pyproject.toml`

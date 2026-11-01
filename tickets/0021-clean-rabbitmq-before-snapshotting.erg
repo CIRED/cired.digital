@@ -1,0 +1,41 @@
+%erg 0.1
+Title: Clean rabbitmq before snapshotting
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #104 (https://github.com/CIRED/cired.digital/issues/104), opened 2025-06-06 by MinhHaDuong, last updated 2025-06-26; labels: none. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+On restore I have
+dependency failed to start: container cidir2r-hatchet-rabbitmq-1 exited (1)
+
+Looking at the logs, Claude said:
+This is a RabbitMQ boot failure caused by a corrupted or missing log segment file. The key error is:
+Root Cause: missing_key,332,"/var/lib/rabbitmq/mnesia/rabbit@hatchet-rabbitmq/coordination/rabbit@hatchet-rabbitmq/RABBITLHIDHVWGVBMB/00000001.segment"
+The RabbitMQ metadata store (using Ra/Khepri for clustering) can't find a required segment file in its Raft log, which is preventing startup.
+
+He proposed to stop and Reset RabbitMQ Data (if data loss is acceptable) as a fix.
+
+We need to investigate and understand what really happens.
+
+## Comments on the issue
+
+### MinhHaDuong, 2025-06-26
+Simple idea:
+a/  Before snapshotting
+- Look at the hatchet's logs
+- Cleanly stop all project's containers including hatchett
+- Take them all down
+
+b/ To restore
+- Stop all project's containers
+- Remove all _hatchet_ volumes
+- Restore only the postgres_data volume
+
+We let hatchet rebuild its workqueue from scratch.
+This procedure can also be used when hatchet's state is corrupted.
