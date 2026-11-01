@@ -1,0 +1,31 @@
+%erg 0.1
+Title: Add a search in the CIRED hardcopies catalogue
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:03Z MinhHaDuong created
+
+--- body ---
+## Context
+Author request, 2026-11-01. Besides the HAL publications indexed by the RAG,
+Cirdi should let users search the CIRED library's catalogue of physical
+copies (books, reports, grey literature on paper), so an answer can point to
+"available on paper at CIRED, shelf X" when no digital full text exists.
+
+To find out, not assumed: where that catalogue lives (library software and
+OPAC, a shared spreadsheet, a union catalogue such as SUDOC), who maintains
+it, whether it has an API or an export, and how often it changes.
+
+## Approach to decide
+Metadata only (no full text): either query the catalogue live at answer time,
+or import a periodic export into a separate search index or collection
+(fits ticket 0009's architecture choice), and show catalogue hits in their
+own results block, distinct from cited HAL passages. With ticket 0013 (internal
+service) the catalogue can stay inside the lab network.
+
+## Exit criteria
+- [ ] Catalogue source, owner, access method and update rhythm identified and recorded here
+- [ ] Search over title, authors, year and keywords returns catalogue records with their location/shelf mark, shown apart from HAL citations
+- [ ] Refresh path documented (live query or scheduled import) and tested once
+- [ ] A test query for a known paper-only item finds it
