@@ -1,0 +1,41 @@
+%erg 0.1
+Title: Imagine Cirdi as a purely internal CIRED service, without personal data collection
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:03Z MinhHaDuong created
+
+--- body ---
+## Context
+Author request, 2026-11-01. Imagine running Cirdi as a purely internal
+service: hosted on a CIRED server, at a centre-cired.fr subdomain, reachable
+only from the lab (network or SSO to be decided), and drop all personal data
+collection.
+
+What exists today: a public VPS (deploy/ops/common_config.sh), a public site
+and API over HTTP (ticket 0004), and a monitor service (src/monitor/) that
+records client IPs, profiles and queries per event, plus analysis code
+(src/analysis/) and an anonymised dataset (reports/monitor-logs-anon_*.zip)
+built from those records (used for the usage analyses and the MeSSH26 talk).
+
+## Imagine first
+Design note (harness template: problem, situation from git, state of the art,
+alternatives, synthesis with costs, phased plan, double advisor review +
+KISS). Questions it must settle:
+- Hosting: which CIRED server, who administers it, backups; fit with the
+  self-hosted Albert option of ticket 0009 (GPU, latency).
+- Access: lab network only, VPN, or CNRS/lab SSO; whether any public demo
+  remains.
+- Data: remove the monitor service and the frontend telemetry entirely, or
+  keep aggregate counters with no identifiers; what this ends for the usage
+  research (the anonymised dataset stays as a closed historical series).
+- Effect on other tickets: 0001 (privacy notice becomes "no personal data"),
+  0004 (public HTTPS and spend cap shrink to internal TLS and quotas), 0005
+  (monitor hardening becomes monitor removal), 0007 (ops scripts retargeted
+  to the CIRED server).
+
+## Exit criteria
+- [ ] Design note accepted by the author, with the hosting, access and data choices and their costs
+- [ ] Tickets 0001, 0004, 0005 and 0007 updated or closed to match the decision
+- [ ] If adopted: service running on the CIRED server at its centre-cired.fr subdomain, unreachable from outside, with no personal data collected (checked by inspecting requests and server logs)
