@@ -5,12 +5,13 @@ Author: MinhHaDuong
 
 --- log ---
 2026-11-01T13:00Z MinhHaDuong created
+2026-11-01T13:13Z MinhHaDuong 2026-11-01 probe: host llm-tools-alpha.huma-num.fr answers 200 at its root, but every route under the token path (/, /api/tags, /v1/models) answers 404: the token is expired or revoked (author recalls it was emailed for an alpha service; no self-service page known). Rotation criterion met by evidence; history scrub rides with ticket 0001's rewrite.
 
 --- body ---
 ## Context
 deploy/user_configs/cidir2r.ollama.toml:33, tracked since 2025-06-17 (29b1ad6) in a public repository, carries an api_base URL for a Huma-Num LLM service whose path segment looks like an access token. Seen during the 2026-11-01 ticket writing; the value is not repeated here.
 
 ## Exit criteria
-- [ ] Token revoked or rotated at the service (or confirmed by Huma-Num not to be a credential)
+- [x] Token revoked or rotated at the service (or confirmed by Huma-Num not to be a credential): dead, 404 under the token path while the host answers 200 (2026-11-01)
 - [ ] URL removed from the tracked file; the template reads it from the untracked deploy env
 - [ ] Purged from history in the same filter-repo rewrite as ticket 0001 (expression replacement on that file)
