@@ -6,6 +6,8 @@ Author: MinhHaDuong
 --- log ---
 2026-11-01T13:00Z MinhHaDuong created
 2026-11-01T13:01Z MinhHaDuong amended by the author 2026-11-01: Albert for embeddings, retrieval and generation; consider a local Albert RAG endpoint for speed; design note first
+2026-11-01T13:25Z MinhHaDuong from closed 0048 (issue #268): the R2R upstream looks dormant; weigh this sustainability risk in alternative B (Albert behind R2R) vs A
+2026-11-01T13:25Z MinhHaDuong evaluation question set: ticket 0019 (response quality)
 
 --- body ---
 ## Context
