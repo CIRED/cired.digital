@@ -2,9 +2,12 @@
 Title: Rendre le word cloud interactif: clique sur un mot pour savoir ce qu on en dit.
 Created: 2026-11-01
 Author: MinhHaDuong
+Label: deferred
 
 --- log ---
 2026-11-01T13:16Z MinhHaDuong created
+2026-11-01T13:25Z MinhHaDuong label deferred
+2026-11-01T13:25Z MinhHaDuong review 2026-11-01: deferred UI nice-to-have; revisit once 0013 settles the service's future
 
 --- body ---
 ## Imported from GitHub

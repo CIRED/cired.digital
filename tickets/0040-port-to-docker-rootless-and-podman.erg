@@ -2,9 +2,11 @@
 Title: Port to docker rootless and podman
 Created: 2026-11-01
 Author: MinhHaDuong
+Blocked-by: 0013
 
 --- log ---
 2026-11-01T13:16Z MinhHaDuong created
+2026-11-01T13:25Z MinhHaDuong review 2026-11-01: blocked by 0013 (internal service without personal data); becomes hosting work if 0013 is adopted
 
 --- body ---
 ## Imported from GitHub

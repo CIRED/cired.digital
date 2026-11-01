@@ -2,9 +2,11 @@
 Title: Optimize chunking
 Created: 2026-11-01
 Author: MinhHaDuong
+Blocked-by: 0009
 
 --- log ---
 2026-11-01T13:16Z MinhHaDuong created
+2026-11-01T13:25Z MinhHaDuong review 2026-11-01: blocked by 0009 (Albert/R2R architecture decision)
 
 --- body ---
 ## Imported from GitHub
