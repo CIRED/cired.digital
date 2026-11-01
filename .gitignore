@@ -108,3 +108,6 @@ secrets.env
 # Raw monitor telemetry holds client IPs and user queries: never commit it.
 # Test fixtures must come from the anonymised zip.
 tests/fixtures/reports/monitor-logs/
+
+# Agent worktrees
+.claude/worktrees/
