@@ -1,0 +1,17 @@
+%erg 0.1
+Title: Serve HTTPS and cap AI spending server-side
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T12:59Z MinhHaDuong created
+
+--- body ---
+## Context
+Source: two-auditor review 2026-11-01 (Fable claude-fable-5-1, Astra gpt-6-astra) at 27660f5; report https://claude.ai/artifact/Vk51ZHGtmd2x7rea65yf33. Lines marked (checked) were re-read against the code by the session.
+Site and both APIs are HTTP only: settings.js:28,36 use http://, compose.yaml publishes 80 and admin port 81 on all interfaces, no 443. The browser calls R2R /v3/retrieval/rag directly with no key (query-processor.js:100), so any visitor or script can drive embedding and LLM spend (issues 266, 267).
+
+## Exit criteria
+- [ ] 443 served with a valid certificate, HTTP redirects, settings.js uses https
+- [ ] Port 81 reachable only from an admin network or tunnel
+- [ ] Per-IP rate limit and body cap on the R2R route at the proxy; hard budget alert at the model provider

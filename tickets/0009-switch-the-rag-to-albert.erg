@@ -1,0 +1,18 @@
+%erg 0.1
+Title: Switch the RAG to Albert
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:00Z MinhHaDuong created
+
+--- body ---
+## Context
+Author decision, 2026-11-01. Today the production R2R config (deploy/user_configs/cidir2r.toml) sets no LLM or embedding provider, so R2R uses its OpenAI defaults (OPENAI_API_KEY), and the frontend model list lives in src/frontend/settings.js (models, modelDefaults). deploy/user_configs/cidir2r.ollama.toml already shows the pattern for another OpenAI-compatible endpoint: [completion] provider = "litellm" with an api_base. Albert, the French state's OpenAI-compatible API, keeps queries and documents on sovereign infrastructure, which also answers part of ticket 0001 (provider transfer in the privacy notice) and moves the spending risk of ticket 0004 off the OpenAI bill.
+
+## Exit criteria
+- [ ] Completion and embedding both served by Albert through R2R's litellm provider (api_base and key from the untracked deploy env, never in the repo)
+- [ ] Re-ingestion with Albert embeddings completed and its cost/time recorded (embedding dimension change means a new vector index)
+- [ ] settings.js model list and defaults match the Albert models actually served; the cost estimator uses Albert's pricing or states it is free
+- [ ] A smoke test answers a known question with citations through Albert; answer quality compared with the OpenAI baseline on a few fixed questions
+- [ ] Privacy notice names Albert as the model provider
