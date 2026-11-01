@@ -1,0 +1,16 @@
+%erg 0.1
+Title: Enrich collection with published articles not in HAL
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #254 (https://github.com/CIRED/cired.digital/issues/254), opened 2025-11-05 by MinhHaDuong, last updated 2025-11-05; labels: none. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+Articles with fulltext available at search.istex.fr 
+
+https://search.istex.fr/fr-FR/results?searchMode=assisted&ast=%5B%7B%22id%22%3A0.32522618635883827%2C%22nodeType%22%3A%22group%22%2C%22root%22%3Atrue%2C%22nodes%22%3A%5B%7B%22id%22%3A0.07680693297947294%2C%22nodeType%22%3A%22node%22%2C%22partial%22%3Afalse%2C%22fieldType%22%3A%22text%22%2C%22field%22%3A%22author.affiliations%22%2C%22comparator%22%3A%22contains%22%2C%22value%22%3A%22CIRED%22%7D%5D%7D%5D&q=author.affiliations%3A%22CIRED%22

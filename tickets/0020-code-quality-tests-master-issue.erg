@@ -1,0 +1,32 @@
+%erg 0.1
+Title: Code quality - tests master issue
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #98 (https://github.com/CIRED/cired.digital/issues/98), opened 2025-06-05 by MinhHaDuong, last updated 2025-07-07; labels: none. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+We need to improve test coverage across the stack.
+
+## Tasks
+- [ ] Add unit tests for Python code in src/intake/
+- [ ] Add unittests for JavaScript code in src/frontend/
+- [ ] Add unittests for Python code in src/monitor/
+- [ ] Add unittests for Python code in src/analytics/
+- [ ] Add tests for Bash scripts in deploy/
+- [ ] Add e2e integration tests
+- [ ] Add security tests 
+
+## Tools
+- Python unit tests with pytest + coverage to measure progress
+- JS unit tests with jest using --coverage
+- e2e tests with playwright
+- Bash scripts tests with bats
+- See GitHub integrated tools for security
+
+TODO: Create sub-issues and add (#number) in the list

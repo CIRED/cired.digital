@@ -1,0 +1,19 @@
+%erg 0.1
+Title: Optimize chunking
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #40 (https://github.com/CIRED/cired.digital/issues/40), opened 2025-05-23 by MinhHaDuong, last updated 2025-06-05; labels: enhancement. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+Default behavior needs investigation:
+- Are there nonsense chunks ?
+- Do we chunk on chapters / sections / paragraphs ?
+- What do we do about images and tables ?
+
+Then optimize, depends on #47
