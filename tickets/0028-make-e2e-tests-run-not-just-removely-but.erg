@@ -1,0 +1,31 @@
+%erg 0.1
+Title: Make e2e tests run not just removely but also locally on dev, and on prod 
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #205 (https://github.com/CIRED/cired.digital/issues/205), opened 2025-07-02 by MinhHaDuong, last updated 2025-07-04; labels: none. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+- The BASE_URL variable works for e2e tests.
+- But the r2r stack smoke test must also target either  localhost:7272 or  r2r-api.cired.digital
+- Rename BASE_URL as TARGET ?
+
+## Comments on the issue
+
+### Gullaliko, 2025-07-02
+Thank you for highlighting this. To enable end-to-end tests(tests/smoke) to run not only remotely but also locally in development and in production environments, the following steps are necessary:
+
+1. Ensure that all required services and dependencies (e.g., backend API, databases) can be reliably started and accessed locally for development testing.
+
+2 .Provide clear setup instructions and/or automated scripts (such as Docker Compose) to facilitate local environment configuration.
+
+3. Parameterize test configurations to dynamically target the appropriate environment endpoints (dev, staging, production).
+
+4.Integrate e2e tests into the production deployment pipeline to validate production readiness.
+
+I will begin by verifying the current local setup and update  documentation to support running tests across all environments.

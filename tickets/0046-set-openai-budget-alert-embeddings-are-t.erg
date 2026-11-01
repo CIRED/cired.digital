@@ -1,0 +1,26 @@
+%erg 0.1
+Title: Set OpenAI budget alert: embeddings are the app's single billing point of failure
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #266 (https://github.com/CIRED/cired.digital/issues/266), opened 2026-06-22 by MinhHaDuong, last updated 2026-06-22; labels: none. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+## Context
+On 2026-06-22 Cirdi was down: every query returned HTTP 500. Root cause was an OpenAI `429 insufficient_quota` — the OpenAI account ran out of credit. R2R embeds every query with `openai/text-embedding-3-small` (the retrieval step), so an exhausted OpenAI quota 500s every request **even though generation runs on Mistral**. Health endpoint stayed `ok` throughout, which masked the cause.
+
+This is a single point of failure with no early warning, and it will recur.
+
+## Actions
+- [ ] On the OpenAI project behind `OPENAI_API_KEY`, set a monthly budget limit and a usage/balance alert email (well below the hard cap).
+- [ ] Document in `deploy/` that embeddings depend on OpenAI billing, distinct from the Mistral generation account.
+- [ ] Note: Anthropic offers no embeddings API, so Claude credit cannot cover this step.
+
+## Notes
+- Switching embedding providers is **not** a quick mitigation: the ~1199 stored vectors are tied to `text-embedding-3-small` and would need full re-embedding.
+- Overlaps with #234 (availability watch / SMS): a balance/usage alert is the upstream signal that #234's availability probe would otherwise only catch after users hit errors.

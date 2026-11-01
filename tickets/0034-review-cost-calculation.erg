@@ -1,0 +1,18 @@
+%erg 0.1
+Title: Review cost calculation
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #215 (https://github.com/CIRED/cired.digital/issues/215), opened 2025-07-03 by MinhHaDuong, last updated 2025-07-03; labels: none. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+Update since we now use the streaming API
+
+The cost comprizes two components:
+- Retrieval -> Depends on the R2R server time cost * duration for vanilla retrieval. For complex retrieval there are token costs too -- at this stage just estimate them.
+- Generation -> Depends on tokens in, tokens out and the LLM costs. Here we compare two options: actual API and hypothetical self-hosted.

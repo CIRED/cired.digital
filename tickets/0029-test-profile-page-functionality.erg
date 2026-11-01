@@ -1,0 +1,24 @@
+%erg 0.1
+Title: Test profile page functionality
+Created: 2026-11-01
+Author: MinhHaDuong
+
+--- log ---
+2026-11-01T13:16Z MinhHaDuong created
+
+--- body ---
+## Imported from GitHub
+Issue #210 (https://github.com/CIRED/cired.digital/issues/210), opened 2025-07-03 by MinhHaDuong, last updated 2025-07-03; labels: none. Migrated 2026-11-01 when tickets/ became the tracker; the issue was closed with a pointer here.
+
+## Original description
+- Profile open
+- Profile close
+- Profile "Enregister et fermer"
+- Profile "Effacer les données"
+  -> All Radio buttons reset
+  -> Aucune donnée de profil enregistrée appears
+  -> Ouvre le guide de démarrage rapide
+  -> Check localstorage is empty
+- Profile "Ouvrir le guide de démarrage rapide"
+ -> Guide ouvert
+ -> Profil fermé
