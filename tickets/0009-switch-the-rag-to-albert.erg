@@ -5,14 +5,43 @@ Author: MinhHaDuong
 
 --- log ---
 2026-11-01T13:00Z MinhHaDuong created
+2026-11-01T13:01Z MinhHaDuong amended by the author 2026-11-01: Albert for embeddings, retrieval and generation; consider a local Albert RAG endpoint for speed; design note first
 
 --- body ---
 ## Context
-Author decision, 2026-11-01. Today the production R2R config (deploy/user_configs/cidir2r.toml) sets no LLM or embedding provider, so R2R uses its OpenAI defaults (OPENAI_API_KEY), and the frontend model list lives in src/frontend/settings.js (models, modelDefaults). deploy/user_configs/cidir2r.ollama.toml already shows the pattern for another OpenAI-compatible endpoint: [completion] provider = "litellm" with an api_base. Albert, the French state's OpenAI-compatible API, keeps queries and documents on sovereign infrastructure, which also answers part of ticket 0001 (provider transfer in the privacy notice) and moves the spending risk of ticket 0004 off the OpenAI bill.
+Author decision, 2026-11-01, amended the same day: Albert serves the whole
+RAG, i.e. embeddings, retrieval and generation, not only the models behind
+R2R. Consider whether Albert's RAG endpoint can also run locally for speed.
+
+Today the production R2R config (deploy/user_configs/cidir2r.toml) sets no LLM
+or embedding provider, so R2R uses its OpenAI defaults; the frontend calls
+R2R's /v3/retrieval/rag directly (src/frontend/query-processor.js:100) and the
+model list lives in src/frontend/settings.js. Keeping data and queries on
+sovereign infrastructure also answers part of ticket 0001 (provider transfer
+in the privacy notice) and moves the spending risk of ticket 0004 off the
+OpenAI bill.
+
+To verify, not assumed: that Albert exposes document collections, search and
+RAG-style chat endpoints usable as a full replacement for R2R, and that its
+API stack is open source and self-hostable (models on a local GPU host such as
+padme) with acceptable latency.
+
+## Imagine first
+This changes the architecture, so it starts with a design note
+(conception/design-note-template.md in the harness: problem, situation from
+git, state of the art, alternatives, synthesis with costs, phased plan, double
+advisor review + KISS). Alternatives to compare at least:
+- A. Albert end to end (collections + search + generation) replacing R2R;
+- B. Albert models (embeddings + generation) behind R2R, R2R keeping retrieval;
+- C. A self-hosted Albert stack on a local GPU host, for latency, with the
+  public Albert service as fallback.
+Measure on a fixed question set: answer quality with citations, latency
+(first token and full answer), cost, and operational load (what the solo
+maintainer must run and patch).
 
 ## Exit criteria
-- [ ] Completion and embedding both served by Albert through R2R's litellm provider (api_base and key from the untracked deploy env, never in the repo)
-- [ ] Re-ingestion with Albert embeddings completed and its cost/time recorded (embedding dimension change means a new vector index)
-- [ ] settings.js model list and defaults match the Albert models actually served; the cost estimator uses Albert's pricing or states it is free
-- [ ] A smoke test answers a known question with citations through Albert; answer quality compared with the OpenAI baseline on a few fixed questions
-- [ ] Privacy notice names Albert as the model provider
+- [ ] Design note written with the three alternatives measured and a recommendation the author accepts
+- [ ] Chosen option deployed: embeddings, retrieval and generation all served as decided; keys and endpoints only in the untracked deploy env
+- [ ] Corpus re-ingested once under the new embeddings, together with ticket 0011
+- [ ] Frontend model list, cost estimator and privacy notice match what is served
+- [ ] Smoke test answers a known question with citations through the new path; quality compared with the OpenAI/R2R baseline
