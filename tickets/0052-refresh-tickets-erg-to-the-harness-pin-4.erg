@@ -1,0 +1,15 @@
+%erg 0.1
+Title: Refresh tickets/erg to the harness pin 4f2326e
+Created: 2026-11-09
+Author: MinhHaDuong
+
+--- log ---
+2026-11-09T19:08Z MinhHaDuong created
+
+--- body ---
+## Context
+Source: yawn/molt sweep 2026-11-09 at d980e16. The vendored tickets/erg (sha256 4776df5d…, committed in e1f2b80) differs from the harness pin in ~/.agents/scripts/erg-pin (rev 4f2326e, sha256 89952604…); the erg on PATH matches the pin. A stale vendored binary can report false violations on tickets using newer format. A sweep must not import a binary, so the refresh travels by its own merge request.
+
+## Exit criteria
+- [ ] tickets/erg replaced by the pinned build (sha256 matches scripts/erg-pin), in a dedicated merge request
+- [ ] `tickets/erg check` passes on the corpus after the refresh
