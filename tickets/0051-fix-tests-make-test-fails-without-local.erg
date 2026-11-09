@@ -1,0 +1,18 @@
+%erg 0.1
+Title: Fix tests: make test fails without local monitor logs
+Created: 2026-11-09
+Author: MinhHaDuong
+
+--- log ---
+2026-11-09T19:08Z MinhHaDuong created
+
+--- body ---
+## Context
+Source: yawn/molt sweep 2026-11-09 at d980e16. Observation; cause of the design gap not established beyond what follows.
+Reproduction, in a fresh worktree on origin/main: `make test` exits 2. The `analysis` prerequisite runs fig_activity.py; logloader.py finds no files under reports/monitor-logs (absent: raw telemetry was removed from git in d5c526b and is never committed), prints "WARNING: No events loaded, returning empty DataFrame", then create_sessions_list (logloader.py:220) raises KeyError: 'sessionId' on the empty frame.
+Even with logs present, the test compares against REFERENCE_DIR ($HOME/CNRS/papiers/sent/CIRED.digital final report/fig), which does not exist on this host either. So the target can only pass on a machine holding both private inputs.
+
+## Exit criteria
+- [ ] `make test` on a checkout without the private logs either runs on a committed or anonymised fixture (e.g. the monitor-logs-anon archive) or skips with an explicit message and exit 0, never a traceback
+- [ ] logloader handles an empty event set without KeyError
+- [ ] Reference figures live at a path the Makefile can reach from the repo (committed, LFS, or a documented override), or the regression is documented as author-machine-only
