@@ -2,9 +2,11 @@
 Title: Refresh tickets/erg to the harness pin 4f2326e
 Created: 2026-11-09
 Author: MinhHaDuong
+Closed: done: vendored erg matches the pin; erg check passes (52 tickets)
 
 --- log ---
 2026-11-09T19:08Z MinhHaDuong created
+2026-11-09T20:26Z MinhHaDuong closed — done: vendored erg matches the pin; erg check passes (52 tickets)
 
 --- body ---
 ## Context
