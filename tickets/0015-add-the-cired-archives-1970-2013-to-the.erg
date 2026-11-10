@@ -8,6 +8,7 @@ Author: MinhHaDuong
 2026-11-01T13:06Z MinhHaDuong companion ticket filed: MinhHaDuong/archiveCIRED tickets/0045 (export des archives pour Cirdi), PR 69 merged 2026-11-01
 2026-11-01T13:25Z MinhHaDuong absorbs 0044 (migrated issue: historical archive); read it in tickets/closed/ for its history
 2026-11-01T13:39Z MinhHaDuong the JETP-observer extractor bench (2026-10) had no scans: OCR quality on the 1970-2013 archive scans is unmeasured; measure it on a sample before ingesting
+2026-11-10T16:25Z MinhHaDuong export received from archiveCIRED (private repo MinhHaDuong/archiveCIRED, main debce60, ticket 0045): outputs/cirdi_export.json|csv (1017 records; LEESU fonds excluded, author 2026-11-10) + outputs/cirdi_ocr_list.csv (740 docs without a text layer to OCR). Full texts internal-only (pdf_path relative to the archive root, author 2026-11-09); public scope = make export-cirdi SCOPE=public, no pdf_path.
 
 --- body ---
 ## Context
